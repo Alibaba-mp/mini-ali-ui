@@ -1,7 +1,7 @@
 @import '../../style/mixins/hairline.less';
 
-@list-color: #888;
-@list-item-hover-color: #f8f8f8;
+// @list-color: #888;
+// @list-item-hover-color: #f8f8f8;
 
 .am-list {
   &-item {
@@ -11,10 +11,10 @@
     padding-left: 16px;
     font-size: 15px;
     line-height: 1.4;
-    color: @color-text-title;
+    color: #333;
     &-hover {
       // hover 样式
-      background-color: @list-item-hover-color;
+      background-color: #f8f8f8;
     }
   }
   &-prefix {
@@ -46,18 +46,18 @@
   }
   &-content {
     flex: 1;
-    color: @color-text-base;
+    color: #000;
     font-size: 17px;
     text-align: left;
   }
   &-extra {
     flex-basis: 36%;
-    color: @list-color;
+    color: #888;
     font-size: 16px;
     text-align: right;
   }
   &-brief {
-    color: @list-color;
+    color: #888;
     font-size: 14px;
   }
   &-wrap {
