@@ -4,10 +4,10 @@ Component({
     onClick: () => {},
     info: '',
   },
-  methods:{
+  methods: {
     onCardClick() {
       const { info, onClick } = this.props;
-      onClick({info});
+      onClick({ info });
     },
   },
-})
+});

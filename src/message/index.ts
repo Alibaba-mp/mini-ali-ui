@@ -1,8 +1,8 @@
 Component({
   props: {
-    className: "",
-    type: "success",
-    title: "",
+    className: '',
+    type: 'success',
+    title: '',
     onTapMain: () => {},
     onTapSub: () => {}
   },

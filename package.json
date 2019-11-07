@@ -7,7 +7,9 @@
     "url": "git@github.com:ant-mini-program/mini-antui.git"
   },
   "files": [
-    "es"
+    "dist",
+    "demo",
+    "src"
   ],
   "keywords": [
     "antui",

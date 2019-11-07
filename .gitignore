@@ -27,5 +27,5 @@ node_modules
 .entry
 /build/
 /lib/
-/es/
-/examples/es/
+demo/es/
+dist/
