@@ -2,8 +2,24 @@
 <view class="demo-item">
   <notice
     enableMarquee="{{true}}"
+    marqueeProps="{{marqueeProps}}"
+    showIcon="{{false}}">
+    Notice: The arrival time of incomes and transfers of Yu 'E Bao will be delayed during National Day.
+  </notice>
+</view>
+<view class="demo-item">
+  <notice
+    enableMarquee="{{true}}"
     marqueeProps="{{marqueeProps}}">
     Notice: The arrival time of incomes and transfers of Yu 'E Bao will be delayed during National Day.
+  </notice>
+</view>
+<view class="demo-item">
+  <notice
+    mode="link"
+    onClick="linkClick"
+    showIcon="{{false}}">
+    因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
   </notice>
 </view>
 <view class="demo-item">
