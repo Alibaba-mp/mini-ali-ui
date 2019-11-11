@@ -1,3 +1,6 @@
+// 设计标注的尺寸是 750px 下的 2x 尺寸，正常使用都需要除以 2
+@pixelSize: 0.5;
+
 // -------------------------------------------
 // 新的设计规范中的 token 定义
 //背景色
@@ -26,33 +29,33 @@
 @opacity-disabled: 0.4; //不透明度
 
 //字体字号
-@font-size-stress: 54px; //页面核心强调
-@font-size-title: 36px; //大标题
-@font-size-list: 34px; //列表
-@font-size-subtitle: 30px; //小标题
-@font-size-content: 26px; //常规内容
-@font-size-subcontent: 24px; //次常规内容
-@font-size-weak: 22px; //弱化内容和弱辅助文案
+@font-size-stress: 54px * @pixelSize; //页面核心强调
+@font-size-title: 36px * @pixelSize; //大标题
+@font-size-list: 34px * @pixelSize; //列表
+@font-size-subtitle: 30px * @pixelSize; //小标题
+@font-size-content: 26px * @pixelSize; //常规内容
+@font-size-subcontent: 24px * @pixelSize; //次常规内容
+@font-size-weak: 22px * @pixelSize; //弱化内容和弱辅助文案
 
 //数字(数字常规字号跟文字一样，以下为特殊场景使用)
 @font-family-alipay-number: DIN PRO;
-@font-size-amount-core: 110px; //核心大金额
-@font-size-amount-largenumber: 90px; //大数字金额
-@font-size-amount-large: 60px; //大金额
-@font-size-number-keyboard: 50px; //数字键盘
+@font-size-amount-core: 110px * @pixelSize; //核心大金额
+@font-size-amount-largenumber: 90px * @pixelSize; //大数字金额
+@font-size-amount-large: 60px * @pixelSize; //大金额
+@font-size-number-keyboard: 50px * @pixelSize; //数字键盘
 
 //行高
 @line-height-base: 1; // 单行行高
 @line-height-paragraph: 1.5; // 多行行高
 
 //圆角
-@corner-radius-sm: 4px; //小
-@corner-radius-md: 8px; //中
-@corner-radius-lg: 16px; //大
+@corner-radius-sm: 4px * @pixelSize; //小
+@corner-radius-md: 8px * @pixelSize; //中
+@corner-radius-lg: 16px * @pixelSize; //大
 @corner-radius-circle: 50%; //圆
 
 //尺寸
-@size-base: 8px; //基础
+@size-base: 8px * @pixelSize; //基础
 @size-0: 0;
 @size-1: @size-base * 1;
 @size-2: @size-base * 2;
@@ -77,18 +80,18 @@
 
 //间距
 //水平间距
-@h-spacing-standard: 16px; //标准
-@h-spacing-large: 24px; //大间距
+@h-spacing-standard: 16px * @pixelSize; //标准
+@h-spacing-large: 24px * @pixelSize; //大间距
 
 //垂直间距
-@v-spacing-standard: 16px; //标准
-@v-spacing-large: 24px; //大间距
+@v-spacing-standard: 16px * @pixelSize; //标准
+@v-spacing-large: 24px * @pixelSize; //大间距
 
 //边框尺寸
 @border-width-standard: 1px; //标注
 @border-width-thick: 2px; //粗
 
 //图标尺寸
-@icon-size-sm: 44px; //小
-@icon-size-md: 56px; //中
-@icon-size-lg: 60px; //大
+@icon-size-sm: 44px * @pixelSize; //小
+@icon-size-md: 56px * @pixelSize; //中
+@icon-size-lg: 60px * @pixelSize; //大
