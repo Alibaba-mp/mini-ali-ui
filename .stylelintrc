@@ -23,5 +23,13 @@
     value-list-max-empty-lines: null,
     unit-case: null,
     color-hex-case: null,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": [
+          "page"
+        ]
+      }
+    ],
   }
 }
