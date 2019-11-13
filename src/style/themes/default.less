@@ -1,8 +1,39 @@
+// 设计标注的尺寸是 750px 下的 2x 尺寸，正常使用都需要除以 2
+@pixelSize: 0.5;
+
 // -------------------------------------------
 // 新的设计规范中的 token 定义
+
+//业务色
+@color-brand-1:#1677FF; //品牌色
+@color-brand-2:#E7F1FF;
+@color-red-1:#F93A4A; //正红
+@color-red-2:#FFEEEF;
+@color-pink-1:#FF6565; //粉红
+@color-pink-2:#FFEEEE;
+@color-tangerine-1:#FF6010; //橘红
+@color-tangerine-2:#FFECE3;
+@color-orange-1:#FF8F1F; //橘黄
+@color-orange-2:#FFEFDF;
+@color-golden-1:#C19030; //金黄
+@color-golden-2:#FFF3D9;
+@color-golden-3:#FFF9ED;
+@color-pomonagreen-1:#0ABC80; //嫩绿
+@color-pomonagreen-2:#D4FFF1;
+@color-darkgreen-1:#00BFD0; //青绿
+@color-darkgreen-2:#DDFCFF;
+@color-skybule-1:#00B7F4; //天蓝
+@color-skybule-2:#E0F7FF;
+@color-royallight-1:#4876FF; //篮紫
+@color-royallight-2:#EBEFFF;
+@color-purple-1:#5260FF; //紫色
+@color-purple-2:#EDEEFF;
+@color-ironblack-1:#454955; //铁黑
+@color-ironblack-2:#F1F1F1;
+
 //背景色
-@color-fill-primary: #1677ff; //主色
-@color-fill-primary-light: #e7f1ff; //主色-浅
+@color-fill-primary: @color-brand-1; //主色
+@color-fill-primary-light: @color-brand-2; //主色-浅
 @color-fill-warning: #ff3b30; //警告色
 @color-fill-grey-base: #ccc; //灰阶基础
 @color-fill-grey-dark: #333; //灰阶-深
@@ -14,8 +45,8 @@
 @color-marketing-mask: rgba(0, 0, 0, 0.5); //营销蒙层
 
 //文字色
-@color-text-primary: #1677ff; //主色
-@color-text-primary-light: #e7f1ff; //主色-浅
+@color-text-primary: @color-brand-1; //主色
+@color-text-primary-light: @color-brand-2; //主色-浅
 @color-text-warning: #ff3b30; //警告色
 @color-text-title: #333; //主标题
 @color-text-subtitle: #999; //副标题
@@ -26,33 +57,33 @@
 @opacity-disabled: 0.4; //不透明度
 
 //字体字号
-@font-size-stress: 54px; //页面核心强调
-@font-size-title: 36px; //大标题
-@font-size-list: 34px; //列表
-@font-size-subtitle: 30px; //小标题
-@font-size-content: 26px; //常规内容
-@font-size-subcontent: 24px; //次常规内容
-@font-size-weak: 22px; //弱化内容和弱辅助文案
+@font-size-stress: 54px * @pixelSize; //页面核心强调
+@font-size-title: 36px * @pixelSize; //大标题
+@font-size-list: 34px * @pixelSize; //列表
+@font-size-subtitle: 30px * @pixelSize; //小标题
+@font-size-content: 26px * @pixelSize; //常规内容
+@font-size-subcontent: 24px * @pixelSize; //次常规内容
+@font-size-weak: 22px * @pixelSize; //弱化内容和弱辅助文案
 
 //数字(数字常规字号跟文字一样，以下为特殊场景使用)
 @font-family-alipay-number: DIN PRO;
-@font-size-amount-core: 110px; //核心大金额
-@font-size-amount-largenumber: 90px; //大数字金额
-@font-size-amount-large: 60px; //大金额
-@font-size-number-keyboard: 50px; //数字键盘
+@font-size-amount-core: 110px * @pixelSize; //核心大金额
+@font-size-amount-largenumber: 90px * @pixelSize; //大数字金额
+@font-size-amount-large: 60px * @pixelSize; //大金额
+@font-size-number-keyboard: 50px * @pixelSize; //数字键盘
 
 //行高
 @line-height-base: 1; // 单行行高
 @line-height-paragraph: 1.5; // 多行行高
 
 //圆角
-@corner-radius-sm: 4px; //小
-@corner-radius-md: 8px; //中
-@corner-radius-lg: 16px; //大
+@corner-radius-sm: 4px * @pixelSize; //小
+@corner-radius-md: 8px * @pixelSize; //中
+@corner-radius-lg: 16px * @pixelSize; //大
 @corner-radius-circle: 50%; //圆
 
 //尺寸
-@size-base: 8px; //基础
+@size-base: 8px * @pixelSize; //基础
 @size-0: 0;
 @size-1: @size-base * 1;
 @size-2: @size-base * 2;
@@ -77,18 +108,18 @@
 
 //间距
 //水平间距
-@h-spacing-standard: 16px; //标准
-@h-spacing-large: 24px; //大间距
+@h-spacing-standard: 16px * @pixelSize; //标准
+@h-spacing-large: 24px * @pixelSize; //大间距
 
 //垂直间距
-@v-spacing-standard: 16px; //标准
-@v-spacing-large: 24px; //大间距
+@v-spacing-standard: 16px * @pixelSize; //标准
+@v-spacing-large: 24px * @pixelSize; //大间距
 
 //边框尺寸
 @border-width-standard: 1px; //标注
 @border-width-thick: 2px; //粗
 
 //图标尺寸
-@icon-size-sm: 44px; //小
-@icon-size-md: 56px; //中
-@icon-size-lg: 60px; //大
+@icon-size-sm: 44px * @pixelSize; //小
+@icon-size-md: 56px * @pixelSize; //中
+@icon-size-lg: 60px * @pixelSize; //大
