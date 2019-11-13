@@ -5,31 +5,31 @@
 // 新的设计规范中的 token 定义
 
 //业务色
-@color-brand-1:#1677FF; //品牌色
-@color-brand-2:#E7F1FF;
-@color-red-1:#F93A4A; //正红
-@color-red-2:#FFEEEF;
-@color-pink-1:#FF6565; //粉红
-@color-pink-2:#FFEEEE;
-@color-tangerine-1:#FF6010; //橘红
-@color-tangerine-2:#FFECE3;
-@color-orange-1:#FF8F1F; //橘黄
-@color-orange-2:#FFEFDF;
-@color-golden-1:#C19030; //金黄
-@color-golden-2:#FFF3D9;
-@color-golden-3:#FFF9ED;
-@color-pomonagreen-1:#0ABC80; //嫩绿
-@color-pomonagreen-2:#D4FFF1;
-@color-darkgreen-1:#00BFD0; //青绿
-@color-darkgreen-2:#DDFCFF;
-@color-skybule-1:#00B7F4; //天蓝
-@color-skybule-2:#E0F7FF;
-@color-royallight-1:#4876FF; //篮紫
-@color-royallight-2:#EBEFFF;
-@color-purple-1:#5260FF; //紫色
-@color-purple-2:#EDEEFF;
-@color-ironblack-1:#454955; //铁黑
-@color-ironblack-2:#F1F1F1;
+@color-brand-1: #1677ff; //品牌色
+@color-brand-2: #e7f1ff;
+@color-red-1: #f93a4a; //正红
+@color-red-2: #ffeeef;
+@color-pink-1: #ff6565; //粉红
+@color-pink-2: #ffeeee;
+@color-tangerine-1: #ff6010; //橘红
+@color-tangerine-2: #ffece3;
+@color-orange-1: #ff8f1f; //橘黄
+@color-orange-2: #ffefdf;
+@color-golden-1: #c19030; //金黄
+@color-golden-2: #fff3d9;
+@color-golden-3: #fff9ed;
+@color-pomonagreen-1: #0abc80; //嫩绿
+@color-pomonagreen-2: #d4fff1;
+@color-darkgreen-1: #00bfd0; //青绿
+@color-darkgreen-2: #ddfcff;
+@color-skybule-1: #00b7f4; //天蓝
+@color-skybule-2: #e0f7ff;
+@color-royallight-1: #4876ff; //篮紫
+@color-royallight-2: #ebefff;
+@color-purple-1: #5260ff; //紫色
+@color-purple-2: #edeeff;
+@color-ironblack-1: #454955; //铁黑
+@color-ironblack-2: #f1f1f1;
 
 //背景色
 @color-fill-primary: @color-brand-1; //主色
@@ -123,3 +123,137 @@
 @icon-size-sm: 44px * @pixelSize; //小
 @icon-size-md: 56px * @pixelSize; //中
 @icon-size-lg: 60px * @pixelSize; //大
+
+:root,
+page {
+  /* 业务色 */
+  --am-color-brand-1: @color-brand-1;
+  --am-color-brand-2: @color-brand-2;
+  --am-color-red-1: @color-red-1;
+  --am-color-red-2: @color-red-2;
+  --am-color-pink-1: @color-pink-1;
+  --am-color-pink-2: @color-pink-2;
+  --am-color-tangerine-1: @color-tangerine-1;
+  --am-color-tangerine-2: @color-tangerine-2;
+  --am-color-orange-1: @color-orange-1;
+  --am-color-orange-2: @color-orange-2;
+  --am-color-golden-1: @color-golden-1;
+  --am-color-golden-2: @color-golden-2;
+  --am-color-golden-3: @color-golden-3;
+  --am-color-pomonagreen-1: @color-pomonagreen-1;
+  --am-color-pomonagreen-2: @color-pomonagreen-2;
+  --am-color-darkgreen-1: @color-darkgreen-1;
+  --am-color-darkgreen-2: @color-darkgreen-2;
+  --am-color-skybule-1: @color-skybule-1;
+  --am-color-skybule-2: @color-skybule-2;
+  --am-color-royallight-1: @color-royallight-1;
+  --am-color-royallight-2: @color-royallight-2;
+  --am-color-purple-1: @color-purple-1;
+  --am-color-purple-2: @color-purple-2;
+  --am-color-ironblack-1: @color-ironblack-1;
+  --am-color-ironblack-2: @color-ironblack-2;
+
+  /* 背景色 */
+  --am-color-fill-primary: @color-fill-primary;
+  --am-color-fill-primary-light: @color-fill-primary-light;
+  --am-color-fill-warning: @color-fill-warning;
+  --am-color-fill-grey-base: @color-fill-grey-base;
+  --am-color-fill-grey-dark: @color-fill-grey-dark;
+  --am-color-fill-grey-light: @color-fill-grey-light;
+  --am-color-fill-grey-inverse: @color-fill-grey-inverse;
+  --am-color-divider-line: @color-divider-line;
+  --am-color-divider-background: @color-divider-background;
+  --am-color-product-mask: @color-product-mask;
+  --am-color-marketing-mask: @color-marketing-mask;
+
+  /* 文字色 */
+  --am-color-text-primary: @color-text-primary;
+  --am-color-text-primary-light: @color-text-primary-light;
+  --am-color-text-warning: @color-text-warning;
+  --am-color-text-title: @color-text-title;
+  --am-color-text-subtitle: @color-text-subtitle;
+  --am-color-text-weak: @color-text-weak;
+  --am-color-text-base: @color-text-base;
+
+  /* 不透明度 */
+  --am-opacity-disabled: @opacity-disabled;
+
+  /* 字体字号 */
+  --am-font-size-stress: @font-size-stress;
+  --am-font-size-title: @font-size-title;
+  --am-font-size-list: @font-size-list;
+  --am-font-size-subtitle: @font-size-subtitle;
+  --am-font-size-content: @font-size-content;
+  --am-font-size-subcontent: @font-size-subcontent;
+  --am-font-size-weak: @font-size-weak;
+
+  /* 数字 */
+  --am-font-family-alipay-number: @font-family-alipay-number;
+  --am-font-size-amount-core: @font-size-amount-core;
+  --am-font-size-amount-largenumber: @font-size-amount-largenumber;
+  --am-font-size-amount-large: @font-size-amount-large;
+  --am-font-size-number-keyboard: @font-size-number-keyboard;
+
+  /* 行高 */
+  --am-line-height-base: @line-height-base;
+  --am-line-height-paragraph: @line-height-paragraph;
+
+  /* 圆角 */
+  --am-corner-radius-sm: @corner-radius-sm;
+  --am-corner-radius-md: @corner-radius-md;
+  --am-corner-radius-lg: @corner-radius-lg;
+  --am-corner-radius-circle: @corner-radius-circle;
+
+  /* 尺寸 */
+  --am-size-0: @size-0;
+  --am-size-1: @size-1;
+  --am-size-2: @size-2;
+  --am-size-3: @size-3;
+  --am-size-4: @size-4;
+  --am-size-5: @size-5;
+  --am-size-6: @size-6;
+  --am-size-7: @size-7;
+  --am-size-8: @size-8;
+  --am-size-9: @size-9;
+  --am-size-10: @size-10;
+  --am-size-11: @size-11;
+  --am-size-12: @size-12;
+  --am-size-13: @size-13;
+  --am-size-14: @size-14;
+  --am-size-15: @size-15;
+  --am-size-16: @size-16;
+  --am-size-17: @size-17;
+  --am-size-18: @size-18;
+  --am-size-19: @size-19;
+  --am-size-20: @size-20;
+
+  /* 水平间距 */
+  --am-h-spacing-standard: @h-spacing-standard;
+  --am-h-spacing-large: @h-spacing-large;
+
+  /* 垂直间距 */
+  --am-v-spacing-standard: @v-spacing-standard;
+  --am-v-spacing-large: @v-spacing-large;
+
+  /* 边框尺寸 */
+  --am-border-width-standard: @border-width-standard;
+  --am-border-width-thick: @border-width-thick;
+
+  /* 图标尺寸 */
+  --am-icon-size-sm: @icon-size-sm;
+  --am-icon-size-md: @icon-size-md;
+  --am-icon-size-lg: @icon-size-lg;
+
+  // 上述是全局变量，对于组件变量需要按照以下格式写注释
+  // /* component */
+  // /* type | description */
+  // - component 是组件名
+  // - type 是变量类型, 目前有 [color, font-size, line-height, corner-radius, size, spacing, border-width, icon-size]
+  // - description 是变量描述，用于在 Yan 平台展示
+  // @example
+  // /* button */
+  // /* corner-radius | 按钮圆角 */
+  // --am-button-corner-radius: var(--am-corner-radius-md);
+  // /* color | 按钮背景色 */
+  // --am-button-background: var(--am-color-fill-primary);
+}
