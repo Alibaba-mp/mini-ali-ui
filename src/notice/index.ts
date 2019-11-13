@@ -15,6 +15,8 @@ Component({
       trailing: 800,
       fps: 40,
     },
+    actionCls: '',
+    showIcon: 'true',
   },
   data: {
     animatedWidth: 0,
