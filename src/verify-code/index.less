@@ -1,11 +1,11 @@
 @import "../style/mixins/hairline.less";
 
-.am-input {
+.am-verify-code {
   &-item {
     display: flex;
     align-items: center;
-    background: #fff;
-    padding-left: 15px;
+    background: var(--am-verify-code-item-background);
+    padding-left: var(--am-verify-code-item-padding-left);
 
     .a-input-content {
       padding-left: 2px;
@@ -17,23 +17,25 @@
     flex: 1;
     display: flex;
     align-items: center;
-    padding-right: 15px;
-    min-height: 47px;
+    padding-right: var(--am-verify-code-line-padding-right);
+    min-height: var(--am-verify-code-line-min-height);
     overflow: hidden;
+    font-size: 17px;
   }
 
   &-label {
-    min-width: 80px;
+    min-width: var(--am-verify-code-label-min-width);
     margin-right: 2px;
-    color: #000;
+    color: var(--am-verify-code-label-color);
   }
 
   &-content {
     flex: 1;
     display: flex;
-    height: 33px;
+    // height: var(--am-verify-code-content-height);
     color: #000;
     text-align: left;
+    padding: 0;
   }
 
   &-content .a-input-wrap {
@@ -42,8 +44,8 @@
 
   &-clear {
     display: flex;
-    height: 33px;
-    width: 33px;
+    height: var(--am-verify-code-clear-size);
+    width: var(--am-verify-code-clear-size);
     justify-content: center;
     align-items: center;
   }
@@ -62,20 +64,20 @@
   }
 
   /* 最后一行 */
-  &-item.last .am-input-line-bottom::after {
+  &-item.last .am-verify-code-line-bottom::after {
     display: none;
   }
   &-action {
-    border-left: 1px solid #e0e0e0;
+    border-left: var(--am-verify-code-action-border-left);
     padding-left: 15px;
   }
   &-action.active {
-    color: var(--am-input-action-active-color);
+    color: var(--am-verify-code-action-active-color);
   }
   &-action.inactive {
-    color: var(--am-input-action-inactive-color);
+    color: var(--am-verify-code-action-inactive-color);
   }
   &-placeholder-base {
-    color: var(--am-input-placeholder-color);
+    color: var(--am-verify-code-placeholder-color);
   }
 }

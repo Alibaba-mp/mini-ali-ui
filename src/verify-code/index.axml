@@ -1,15 +1,34 @@
-<view class="am-input-item {{last ? 'last': ''}} {{className}}">
-  <view class="am-input-line">
-    <view class="am-input-label {{labelCls}}">
+<view class="am-verify-code-item {{last ? 'last': ''}} {{className}}">
+  <view class="am-verify-code-line">
+    <view class="am-verify-code-label {{labelCls}}">
       验证码
     </view>
-    <input enableNative="{{enableNative}}" sync-input="{{syncInput}}" class="am-input-content {{inputCls}}" value="{{value}}" name="{{name}}" type="{{type}}" password="{{password}}" placeholder="{{placeholder}}" placeholderClass="am-input-placeholder-base {{placeholderClass}}" placeholderStyle="{{placeholderStyle}}" disabled="{{disabled}}" maxlength="{{maxlength}}" focus="{{focus}}" onInput="onInput" onConfirm="onConfirm" onFocus="onFocus" onBlur="onBlur" />
-    <view class="am-input-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" onTap="onClear">
-      <icon size="18" type="clear" />
+    <input enableNative="{{enableNative}}" 
+      sync-input="{{syncInput}}" 
+      class="am-verify-code-content {{inputCls}}" 
+      value="{{value}}" 
+      name="{{name}}" 
+      type="{{type}}" 
+      password="{{password}}" 
+      placeholder="{{placeholder}}" 
+      placeholderClass="am-verify-code-placeholder-base {{placeholderClass}}" 
+      placeholderStyle="{{placeholderStyle}}" 
+      disabled="{{disabled}}" 
+      maxlength="{{maxlength}}" 
+      focus="{{focus}}" 
+      onInput="onInput" 
+      onConfirm="onConfirm" 
+      onFocus="onFocus" 
+      onBlur="onBlur" />
+    <view class="am-verify-code-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
+      onTap="onClear">
+      <icon size="18" 
+        type="clear" />
     </view>
-    <view class="am-input-action {{_actionActive ? 'active' : 'inactive'}}" onTap="onTapSend">{{
+    <view class="am-verify-code-action {{_actionActive ? 'active' : 'inactive'}}" 
+      onTap="onTapSend">{{
        _actionActive ? (actedBefore ? '重发验证码' : '发送验证码') : `${_countDown}秒后重试`
       }}</view>
-    <view class="am-input-line-bottom" />
+    <view class="am-verify-code-line-bottom" />
   </view>
 </view>
