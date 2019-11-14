@@ -1,4 +1,4 @@
-@import '../style/mixins/hairline.less';
+@import "../style/mixins/hairline.less";
 
 .am-input {
   &-item {
@@ -25,7 +25,7 @@
   &-label {
     min-width: 80px;
     margin-right: 2px;
-    color: #333;
+    color: #000;
   }
 
   &-content {
@@ -58,7 +58,7 @@
   }
 
   &-line-bottom {
-    .hairline('bottom');
+    .hairline("bottom");
   }
 
   /* 最后一行 */
@@ -70,12 +70,12 @@
     padding-left: 15px;
   }
   &-action.active {
-    color: @color-text-primary;
+    color: var(--am-input-action-active-color);
   }
   &-action.inactive {
-    color: @color-text-subtitle;
+    color: var(--am-input-action-inactive-color);
   }
   &-placeholder-base {
-    color: @color-text-weak;
+    color: var(--am-input-placeholder-color);
   }
 }
