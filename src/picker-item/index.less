@@ -4,8 +4,10 @@
   &-item {
     display: flex;
     align-items: center;
-    background: var(--am-picker-item-background);
-    padding-left: var(--am-picker-item-padding-left);
+    background: @color-fill-grey-inverse;
+    background: var(--am-picker-item-background, @color-fill-grey-inverse);
+    padding-left: @size-3;
+    padding-left: var(--am-picker-item-padding-left, @size-3);
   }
 
   &-line {
@@ -13,16 +15,21 @@
     flex: 1;
     display: flex;
     align-items: center;
-    padding-right: var(--am-picker-line-padding-right);
-    min-height: var(--am-picker-line-min-height);
+    padding-right: @size-3;
+    padding-right: var(--am-picker-line-padding-right, @size-3);
+    min-height: @size-12;
+    min-height: var(--am-picker-line-min-height, @size-12);
     overflow: hidden;
-    font-size: var(--am-picker-font-size);
+    font-size: @font-size-list;
+    font-size: var(--am-picker-font-size, @font-size-list);
   }
 
   &-label {
-    min-width: var(--am-picker-label-min-width);
+    min-width: @size-20;
+    min-width: var(--am-picker-label-min-width, @size-20);
     margin-right: 2px;
-    color: var(--am-picker-item-label-color);
+    color: @color-text-title;
+    color: var(--am-picker-item-label-color, @color-text-title);
   }
 
   &-wrapper {
@@ -38,7 +45,8 @@
     display: flex;
     align-items: center;
     // height: 33px;
-    color: #000;
+    color: @color-text-title;
+    color: var(--am-picker-item-label-color, @color-text-title);
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -62,11 +70,13 @@
   }
 
   &-content-placeholder {
-    color: var(--am-picker-item-placeholder-color);
+    color: @color-text-weak;
+    color: var(--am-picker-item-placeholder-color, @color-text-weak);
   }
 
   &-content-value {
-    color: var(--am-picker-content-value-color);
+    color: @color-text-title;
+    color: var(--am-picker-content-value-color, @color-text-title);
   }
 
   &-arrow {
