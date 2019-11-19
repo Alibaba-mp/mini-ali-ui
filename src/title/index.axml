@@ -1,7 +1,7 @@
 <view class="am-title {{hasLine?'am-title-line':''}} {{className}}">
   <view class="am-title-icon"
     style="{{iconURL?'background-image: url(' + iconURL + ');':''}}"
-    a:if="{{showIcon && iconURL !== ''}}"></view>
+    a:if="{{iconURL !== ''}}"></view>
   <view class="am-title-text">
     <slot></slot>
   </view>
