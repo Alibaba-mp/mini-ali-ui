@@ -145,6 +145,11 @@ Page({
       nameZN: '折叠',
       path: '/pages/collapse/index',
     },
+    {
+      name: 'Container',
+      nameZN: '容器',
+      path: '/pages/container/index',
+    },
     ],
   },
 });

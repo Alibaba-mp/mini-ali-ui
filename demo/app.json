@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/container/index",
     "pages/list/app",
     "pages/list/index",
     "pages/amount-input/index",
@@ -52,8 +53,9 @@
     "pages/message/waiting/index",
     "pages/message/warn/index",
     "pages/pagination/index",
-    "pages/collapse/index"
-  ],
+    "pages/collapse/index",
+    "pages/container/index"
+    ],
   "window": {
     "enableWK": "YES",
     "enableDSL": "YES",
