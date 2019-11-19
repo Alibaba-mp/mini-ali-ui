@@ -2,33 +2,13 @@
 
 .am-container {
   box-sizing: border-box;
-  display: flex;
-
-  & &-content & {
-    flex: 0 0 100%;
-    margin-top: @h-spacing-large;
-    margin-top: var(--am-container-padding-h, @h-spacing-large);
-    margin-left: 0;
-  }
-
-  & &:nth-child(1) {
-    margin-top: 0;
-  }
-
-  &-inner {
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: @corner-radius-lg;
-    border-radius: var(--am-container-corner-radius, @corner-radius-lg);
-    padding: @v-spacing-large @h-spacing-large;
-    padding: var(--am-container-padding-v, @v-spacing-large) var(--am-container-padding-h, @h-spacing-large);
-    background: @color-fill-grey-inverse;
-    background: var(--am-container-background, @color-fill-grey-inverse);
-    & & {
-      padding: 0;
-      margin: 0;
-    }
-  }
+  width: 100%;
+  border-radius: @corner-radius-lg;
+  border-radius: var(--am-container-corner-radius, @corner-radius-lg);
+  padding: @v-spacing-large @h-spacing-large;
+  padding: var(--am-container-padding-v, @v-spacing-large) var(--am-container-padding-h, @h-spacing-large);
+  background: @color-fill-grey-inverse;
+  background: var(--am-container-background, @color-fill-grey-inverse);
 
   &-content {
     display: flex;
@@ -44,5 +24,14 @@
     > :nth-child(1) {
       margin-left: 0;
     }
+  }
+
+/* 如果 container 嵌套，则重置margin及padding */
+  & &-content & {
+    flex: 0 0 100%;
+    margin-top: @h-spacing-large;
+    margin-top: var(--am-container-padding-h, @h-spacing-large);
+    margin-left: 0;
+    padding: 0;
   }
 }
