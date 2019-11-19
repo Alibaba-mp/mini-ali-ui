@@ -2,6 +2,6 @@
   "defaultTitle": "Container",
   "usingComponents": {
     "container": "../../es/container/index",
-    "calendar": "mini-antui/es/calendar/index"
+    "title": "../../es/title/index"
   }
 }

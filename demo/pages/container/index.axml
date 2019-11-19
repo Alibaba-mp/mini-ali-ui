@@ -5,16 +5,20 @@
   <container className="container-item">
     <view class="item">b1</view>
     <view class="item">b2</view>
+      <container className="container-item">
+    <view class="item">b1</view>
+    <view class="item">b2</view>
+  </container>
   </container>
   <container className="container-item">
-    <view slot="header" class="header">标题文案</view>
+    <title slot="header" hasLine="true" showIcon="true" xcxPath="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original">内部标题无操作</title>
     <view class="item">c1</view>
     <view class="item">c2</view>
     <view class="item">c3</view>
     <view slot="footer" class="footer">底部操作区</view>
   </container>
   <container className="container-item">
-    <view slot="header" class="header">滑动容器</view>
+    <title slot="header">滑动</title>
     <swiper indicator-dots="{{true}}" class="item">
       <block a:for="{{['#0abc80','#00b7f4']}}">
         <swiper-item>

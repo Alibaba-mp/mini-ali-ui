@@ -5,20 +5,13 @@
 }
 
 .container-item {
-  margin-top: 24rpx;
+  margin-bottom: 24rpx;
 }
 
-.header {
-  padding: 24rpx 0rpx 24rpx; 
-  border-bottom-width: 1rpx;
-  border-bottom-color: black;
-  border-bottom-style: solid;
-  font-size: 36rpx;
-}
 
 .footer {
-  padding: 0rpx 0rpx 24rpx; 
   color: #333;
+  margin-top: 24rpx;
 }
 
 .item {

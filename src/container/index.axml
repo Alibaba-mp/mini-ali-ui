@@ -1,9 +1,6 @@
 <view class="am-container">
   <view class="am-container-inner {{className}}">
     <slot name="header"></slot>
-    <!-- <scroll-view a:if="{{equant === false}}" scroll-x="{{true}}" class="am-container-content am-container-scroll-content" >
-      <slot class="test"></slot>
-    </scroll-view> -->
     <view class="am-container-content">
       <slot></slot>
     </view>
