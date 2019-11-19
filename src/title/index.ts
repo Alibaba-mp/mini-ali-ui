@@ -4,14 +4,22 @@ Component({
     hasLine: false,
     // title icon is not displayed by default
     showIcon: false,
-    // type: arrow、close、'';
+    // type: arrow、close、more、'';
     type: '',
     // if type="arrow", need to write path
     xcxPath: '',
+    onTypeTap: () => {},
   },
   data: {},
   didMount() {},
   didUpdate() {},
   didUnmount() {},
-  methods: {},
+  methods: {
+    onClick() {
+      const { type, onTypeTap } = this.props;
+      if ((type === 'arrow' || type === 'more' || type === 'close') && typeof onTypeTap === 'function') {
+        onTypeTap();
+      }
+    },
+  },
 });
