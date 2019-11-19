@@ -9,6 +9,7 @@
 | 属性名 | 描述 | 类型 | 默认值 |
 | ---- | ---- | ---- | ---- |
 | mode | 提示可选类型：`link`、`closable` | String | '' |
+| showIcon | 是否显示通告 icon | Boolean | true |
 | action | 提示显示文本 | String | '' |
 | actionCls | 提示显示文本自定义class | String | '' |
 | show | 是否显示通告栏 | Boolean| true |
@@ -22,7 +23,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "notice": "mini-antui/es/notice/index"
+    "notice": "mini-antui/dist/es/notice/index"
   }
 }
 ```

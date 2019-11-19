@@ -1,7 +1,7 @@
 Component({
   props: {
     type: '',
-    size: 23,
+    size: 27,
     color: '#333',
     className: '',
   },

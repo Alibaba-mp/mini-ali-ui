@@ -1,189 +1,963 @@
+@import (reference) "../style/themes/default.less";
+
 @font-face {
   font-family: "antui-icon";
-  src: url('https://gw.alipayobjects.com/os/basement_prod/9ca2fed3-8762-4faa-b075-3d6c9e852f6e.ttf?t=1550648587412') format('truetype');
+  src: url('https://gw.alipayobjects.com/os/basement_prod/b372b25a-a860-44fd-9df3-9b50570e0bab.ttf') format('truetype');
 }
-
-.am-icon {
+// ********** icon 使用说明 **********
+// 对于使用 mini-antui 组件：只需要引入 icon 组件后，axml 中使用 <am-icon type="{{item}}" /> 即可，item 所指为 qr、gift 等；
+// ----------
+// 对于组件开发人员需要引用 icon 时，在组件代码中先引入 icon，如下：
+// @import (reference, optional) "../am-icon_v2/index";
+// @import (css, optional) "../am-icon_v2/index.acss";
+// 然后在需要的位置引用 icon 的 mixin，如 title 组件中使用：
+// .fn_am-icon-arrow-right(--title-arrow-right-color, @color-text-weak);
+// 参数分别为：需要使用 CSS 自定义属性的变量名，以及引用自全局 token 变量名；
+// 两个参数都需要存在，除非不需要随着主题变换颜色，可直接使用：
+// .fn_am-icon-arrow-right();
+// 将作为默认的方式引入；
+// =============== am-icon 说明 ===============
+// 在 am-icon 中有字体大小和颜色是可以通过主题配置方式进行全局 icon 批量设置默认大小以及颜色；
+.fn_am-icon(@arrow-custom-color: --am-icon-color, @color: @color-text-weak) {
   /* stylelint-disable font-family-no-missing-generic-family-keyword */
   font-family: "antui-icon" !important;
-  font-size: 16px;
+  font-size: @font-size-list;
+  font-size: var(--am-icon-size, @font-size-list);
   font-style: normal;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: @color;
+  color: var(@arrow-custom-color, @color);
+}
+.am-icon {
+  .fn_am-icon();
 }
 
-.am-icon-arrow-down:before {
-  content: "\e62b";
+// qr
+.fn_am-icon-qr(@arrow-custom-color, @color) {
+  .am-icon-qr:before {
+    content: "\e602";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-qr(@arrow-custom-color: --amicon-qr, @color: @color-text-weak) when (default()) {
+  .am-icon-qr:before {
+    content: "\e602";
+  }
+}
+.fn_am-icon-qr();
 
-.am-icon-arrow-right:before {
-  content: "\e62c";
+// gift
+.fn_am-icon-gift(@arrow-custom-color, @color) {
+  .am-icon-gift:before {
+    content: "\e603";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-gift(@arrow-custom-color: --amicon-gift, @color: @color-text-weak) when (default()) {
+  .am-icon-gift:before {
+    content: "\e603";
+  }
+}
+.fn_am-icon-gift();
 
-.am-icon-charge:before {
-  content: "\e62d";
+// send
+.fn_am-icon-send(@arrow-custom-color, @color) {
+  .am-icon-send:before {
+    content: "\e604";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-send(@arrow-custom-color: --amicon-send, @color: @color-text-weak) when (default()) {
+  .am-icon-send:before {
+    content: "\e604";
+  }
+}
+.fn_am-icon-send();
 
-.am-icon-card:before {
-  content: "\e62e";
+// pic
+.fn_am-icon-pic(@arrow-custom-color, @color) {
+  .am-icon-pic:before {
+    content: "\e605";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-pic(@arrow-custom-color: --amicon-pic, @color: @color-text-weak) when (default()) {
+  .am-icon-pic:before {
+    content: "\e605";
+  }
+}
+.fn_am-icon-pic();
 
-.am-icon-arrow-left:before {
-  content: "\e62f";
+// add
+.fn_am-icon-add(@arrow-custom-color, @color) {
+  .am-icon-add:before {
+    content: "\e606";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-add(@arrow-custom-color: --amicon-add, @color: @color-text-weak) when (default()) {
+  .am-icon-add:before {
+    content: "\e606";
+  }
+}
+.fn_am-icon-add();
 
-.am-icon-circle:before {
-  content: "\e630";
+// file
+.fn_am-icon-file(@arrow-custom-color, @color) {
+  .am-icon-file:before {
+    content: "\e607";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-file(@arrow-custom-color: --amicon-file, @color: @color-text-weak) when (default()) {
+  .am-icon-file:before {
+    content: "\e607";
+  }
+}
+.fn_am-icon-file();
 
-.am-icon-close-o:before {
-  content: "\e631";
+// text
+.fn_am-icon-text(@arrow-custom-color, @color) {
+  .am-icon-text:before {
+    content: "\e608";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-text(@arrow-custom-color: --amicon-text, @color: @color-text-weak) when (default()) {
+  .am-icon-text:before {
+    content: "\e608";
+  }
+}
+.fn_am-icon-text();
 
-.am-icon-cross:before {
-  content: "\e632";
+// minus
+.fn_am-icon-minus(@arrow-custom-color, @color) {
+  .am-icon-minus:before {
+    content: "\e609";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-minus(@arrow-custom-color: --amicon-minus, @color: @color-text-weak) when (default()) {
+  .am-icon-minus:before {
+    content: "\e609";
+  }
+}
+.fn_am-icon-minus();
 
-.am-icon-delete:before {
-  content: "\e633";
+// collectMoney
+.fn_am-icon-collectMoney(@arrow-custom-color, @color) {
+  .am-icon-collectMoney:before {
+    content: "\e60a";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-collectMoney(@arrow-custom-color: --amicon-collectMoney, @color: @color-text-weak) when (default()) {
+  .am-icon-collectMoney:before {
+    content: "\e60a";
+  }
+}
+.fn_am-icon-collectMoney();
 
-.am-icon-close:before {
-  content: "\e634";
+// wallet
+.fn_am-icon-wallet(@arrow-custom-color, @color) {
+  .am-icon-wallet:before {
+    content: "\e60b";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-wallet(@arrow-custom-color: --amicon-wallet, @color: @color-text-weak) when (default()) {
+  .am-icon-wallet:before {
+    content: "\e60b";
+  }
+}
+.fn_am-icon-wallet();
 
-.am-icon-dislike-o:before {
-  content: "\e635";
+// scan
+.fn_am-icon-scan(@arrow-custom-color, @color) {
+  .am-icon-scan:before {
+    content: "\e60c";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-scan(@arrow-custom-color: --amicon-scan, @color: @color-text-weak) when (default()) {
+  .am-icon-scan:before {
+    content: "\e60c";
+  }
+}
+.fn_am-icon-scan();
 
-.am-icon-dislike:before {
-  content: "\e636";
+// receipt
+.fn_am-icon-receipt(@arrow-custom-color, @color) {
+  .am-icon-receipt:before {
+    content: "\e60d";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-receipt(@arrow-custom-color: --amicon-receipt, @color: @color-text-weak) when (default()) {
+  .am-icon-receipt:before {
+    content: "\e60d";
+  }
+}
+.fn_am-icon-receipt();
 
-.am-icon-heart-o:before {
-  content: "\e637";
+// down
+.fn_am-icon-down(@arrow-custom-color, @color) {
+  .am-icon-down:before {
+    content: "\e60e";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-down(@arrow-custom-color: --amicon-down, @color: @color-text-weak) when (default()) {
+  .am-icon-down:before {
+    content: "\e60e";
+  }
+}
+.fn_am-icon-down();
 
-.am-icon-download:before {
-  content: "\e638";
+// receipt1
+.fn_am-icon-receipt1(@arrow-custom-color, @color) {
+  .am-icon-receipt1:before {
+    content: "\e60f";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-receipt1(@arrow-custom-color: --amicon-receipt1, @color: @color-text-weak) when (default()) {
+  .am-icon-receipt1:before {
+    content: "\e60f";
+  }
+}
+.fn_am-icon-receipt1();
 
-.am-icon-heart:before {
-  content: "\e639";
+// trash
+.fn_am-icon-trash(@arrow-custom-color, @color) {
+  .am-icon-trash:before {
+    content: "\e610";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-trash(@arrow-custom-color: --amicon-trash, @color: @color-text-weak) when (default()) {
+  .am-icon-trash:before {
+    content: "\e610";
+  }
+}
+.fn_am-icon-trash();
 
-.am-icon-help-o:before {
-  content: "\e63a";
+// receipt2
+.fn_am-icon-receipt2(@arrow-custom-color, @color) {
+  .am-icon-receipt2:before {
+    content: "\e611";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-receipt2(@arrow-custom-color: --amicon-receipt2, @color: @color-text-weak) when (default()) {
+  .am-icon-receipt2:before {
+    content: "\e611";
+  }
+}
+.fn_am-icon-receipt2();
 
-.am-icon-friends:before {
-  content: "\e63b";
+// phonebook
+.fn_am-icon-phonebook(@arrow-custom-color, @color) {
+  .am-icon-phonebook:before {
+    content: "\e613";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-phonebook(@arrow-custom-color: --amicon-phonebook, @color: @color-text-weak) when (default()) {
+  .am-icon-phonebook:before {
+    content: "\e613";
+  }
+}
+.fn_am-icon-phonebook();
 
-.am-icon-info:before {
-  content: "\e63c";
+// scanning
+.fn_am-icon-scanning(@arrow-custom-color, @color) {
+  .am-icon-scanning:before {
+    content: "\e614";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-scanning(@arrow-custom-color: --amicon-scanning, @color: @color-text-weak) when (default()) {
+  .am-icon-scanning:before {
+    content: "\e614";
+  }
+}
+.fn_am-icon-scanning();
 
-.am-icon-like-o:before {
-  content: "\e63d";
+// content
+.fn_am-icon-content(@arrow-custom-color, @color) {
+  .am-icon-content:before {
+    content: "\e615";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-content(@arrow-custom-color: --amicon-content, @color: @color-text-weak) when (default()) {
+  .am-icon-content:before {
+    content: "\e615";
+  }
+}
+.fn_am-icon-content();
 
-.am-icon-help:before {
-  content: "\e63e";
+// home
+.fn_am-icon-home(@arrow-custom-color, @color) {
+  .am-icon-home:before {
+    content: "\e616";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-home(@arrow-custom-color: --amicon-home, @color: @color-text-weak) when (default()) {
+  .am-icon-home:before {
+    content: "\e616";
+  }
+}
+.fn_am-icon-home();
 
-.am-icon-location-o:before {
-  content: "\e63f";
+// refresh
+.fn_am-icon-refresh(@arrow-custom-color, @color) {
+  .am-icon-refresh:before {
+    content: "\e617";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-refresh(@arrow-custom-color: --amicon-refresh, @color: @color-text-weak) when (default()) {
+  .am-icon-refresh:before {
+    content: "\e617";
+  }
+}
+.fn_am-icon-refresh();
 
-.am-icon-location:before {
-  content: "\e640";
+// play
+.fn_am-icon-play(@arrow-custom-color, @color) {
+  .am-icon-play:before {
+    content: "\e618";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-play(@arrow-custom-color: --amicon-play, @color: @color-text-weak) when (default()) {
+  .am-icon-play:before {
+    content: "\e618";
+  }
+}
+.fn_am-icon-play();
 
-.am-icon-info-o:before {
-  content: "\e641";
+// warning
+.fn_am-icon-warning(@arrow-custom-color, @color) {
+  .am-icon-warning:before {
+    content: "\e619";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-warning(@arrow-custom-color: --amicon-warning, @color: @color-text-weak) when (default()) {
+  .am-icon-warning:before {
+    content: "\e619";
+  }
+}
+.fn_am-icon-warning();
 
-.am-icon-notice:before {
-  content: "\e642";
+// money
+.fn_am-icon-money(@arrow-custom-color, @color) {
+  .am-icon-money:before {
+    content: "\e61a";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-money(@arrow-custom-color: --amicon-money, @color: @color-text-weak) when (default()) {
+  .am-icon-money:before {
+    content: "\e61a";
+  }
+}
+.fn_am-icon-money();
 
-.am-icon-plus:before {
-  content: "\e643";
+// link
+.fn_am-icon-link(@arrow-custom-color, @color) {
+  .am-icon-link:before {
+    content: "\e61b";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-link(@arrow-custom-color: --amicon-link, @color: @color-text-weak) when (default()) {
+  .am-icon-link:before {
+    content: "\e61b";
+  }
+}
+.fn_am-icon-link();
 
-.am-icon-like:before {
-  content: "\e644";
+// zoomOut
+.fn_am-icon-zoomOut(@arrow-custom-color, @color) {
+  .am-icon-zoomOut:before {
+    content: "\e61c";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-zoomOut(@arrow-custom-color: --amicon-zoomOut, @color: @color-text-weak) when (default()) {
+  .am-icon-zoomOut:before {
+    content: "\e61c";
+  }
+}
+.fn_am-icon-zoomOut();
 
-.am-icon-qrcode:before {
-  content: "\e645";
+// koubei
+.fn_am-icon-koubei(@arrow-custom-color, @color) {
+  .am-icon-koubei:before {
+    content: "\e61d";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-koubei(@arrow-custom-color: --amicon-koubei, @color: @color-text-weak) when (default()) {
+  .am-icon-koubei:before {
+    content: "\e61d";
+  }
+}
+.fn_am-icon-koubei();
 
-.am-icon-reload:before {
-  content: "\e646";
+// location
+.fn_am-icon-location(@arrow-custom-color, @color) {
+  .am-icon-location:before {
+    content: "\e61e";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-location(@arrow-custom-color: --amicon-location, @color: @color-text-weak) when (default()) {
+  .am-icon-location:before {
+    content: "\e61e";
+  }
+}
+.fn_am-icon-location();
 
-.am-icon-scan:before {
-  content: "\e647";
+// font
+.fn_am-icon-font(@arrow-custom-color, @color) {
+  .am-icon-font:before {
+    content: "\e61f";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-font(@arrow-custom-color: --amicon-font, @color: @color-text-weak) when (default()) {
+  .am-icon-font:before {
+    content: "\e61f";
+  }
+}
+.fn_am-icon-font();
 
-.am-icon-money:before {
-  content: "\e648";
+// time
+.fn_am-icon-time(@arrow-custom-color, @color) {
+  .am-icon-time:before {
+    content: "\e620";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-time(@arrow-custom-color: --amicon-time, @color: @color-text-weak) when (default()) {
+  .am-icon-time:before {
+    content: "\e620";
+  }
+}
+.fn_am-icon-time();
 
-.am-icon-search:before {
-  content: "\e649";
+// chatAdd
+.fn_am-icon-chatAdd(@arrow-custom-color, @color) {
+  .am-icon-chatAdd:before {
+    content: "\e621";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-chatAdd(@arrow-custom-color: --amicon-chatAdd, @color: @color-text-weak) when (default()) {
+  .am-icon-chatAdd:before {
+    content: "\e621";
+  }
+}
+.fn_am-icon-chatAdd();
 
-.am-icon-setting:before {
-  content: "\e64a";
+// warn
+.fn_am-icon-warn(@arrow-custom-color, @color) {
+  .am-icon-warn:before {
+    content: "\e622";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-warn(@arrow-custom-color: --amicon-warn, @color: @color-text-weak) when (default()) {
+  .am-icon-warn:before {
+    content: "\e622";
+  }
+}
+.fn_am-icon-warn();
 
-.am-icon-share:before {
-  content: "\e64b";
+// help1
+.fn_am-icon-help1(@arrow-custom-color, @color) {
+  .am-icon-help1:before {
+    content: "\e624";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-help1(@arrow-custom-color: --amicon-help1, @color: @color-text-weak) when (default()) {
+  .am-icon-help1:before {
+    content: "\e624";
+  }
+}
+.fn_am-icon-help1();
 
-.am-icon-star-o:before {
-  content: "\e64c";
+// del
+.fn_am-icon-del(@arrow-custom-color, @color) {
+  .am-icon-del:before {
+    content: "\e625";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-del(@arrow-custom-color: --amicon-del, @color: @color-text-weak) when (default()) {
+  .am-icon-del:before {
+    content: "\e625";
+  }
+}
+.fn_am-icon-del();
 
-.am-icon-star:before {
-  content: "\e64d";
+// selected
+.fn_am-icon-selected(@arrow-custom-color, @color) {
+  .am-icon-selected:before {
+    content: "\e626";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-selected(@arrow-custom-color: --amicon-selected, @color: @color-text-weak) when (default()) {
+  .am-icon-selected:before {
+    content: "\e626";
+  }
+}
+.fn_am-icon-selected();
 
-.am-icon-success-o:before {
-  content: "\e64e";
+// search
+.fn_am-icon-search(@arrow-custom-color, @color) {
+  .am-icon-search:before {
+    content: "\e627";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-search(@arrow-custom-color: --amicon-search, @color: @color-text-weak) when (default()) {
+  .am-icon-search:before {
+    content: "\e627";
+  }
+}
+.fn_am-icon-search();
 
-.am-icon-wait-o:before {
-  content: "\e64f";
+// global
+.fn_am-icon-global(@arrow-custom-color, @color) {
+  .am-icon-global:before {
+    content: "\e628";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-global(@arrow-custom-color: --amicon-global, @color: @color-text-weak) when (default()) {
+  .am-icon-global:before {
+    content: "\e628";
+  }
+}
+.fn_am-icon-global();
 
-.am-icon-success:before {
-  content: "\e650";
+// chat
+.fn_am-icon-chat(@arrow-custom-color, @color) {
+  .am-icon-chat:before {
+    content: "\e629";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-chat(@arrow-custom-color: --amicon-chat, @color: @color-text-weak) when (default()) {
+  .am-icon-chat:before {
+    content: "\e629";
+  }
+}
+.fn_am-icon-chat();
 
-.am-icon-wait:before {
-  content: "\e651";
+// contacts
+.fn_am-icon-contacts(@arrow-custom-color, @color) {
+  .am-icon-contacts:before {
+    content: "\e62a";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-contacts(@arrow-custom-color: --amicon-contacts, @color: @color-text-weak) when (default()) {
+  .am-icon-contacts:before {
+    content: "\e62a";
+  }
+}
+.fn_am-icon-contacts();
 
-.am-icon-warning:before {
-  content: "\e652";
+// miniApp
+.fn_am-icon-miniApp(@arrow-custom-color, @color) {
+  .am-icon-miniApp:before {
+    content: "\e62b";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-miniApp(@arrow-custom-color: --amicon-miniApp, @color: @color-text-weak) when (default()) {
+  .am-icon-miniApp:before {
+    content: "\e62b";
+  }
+}
+.fn_am-icon-miniApp();
 
-.am-icon-warning-o:before {
-  content: "\e653";
+// help
+.fn_am-icon-help(@arrow-custom-color, @color) {
+  .am-icon-help:before {
+    content: "\e62d";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-help(@arrow-custom-color: --amicon-help, @color: @color-text-weak) when (default()) {
+  .am-icon-help:before {
+    content: "\e62d";
+  }
+}
+.fn_am-icon-help();
 
-.am-icon-zoom-in:before {
-  content: "\e654";
+// friendSetting
+.fn_am-icon-friendSetting(@arrow-custom-color, @color) {
+  .am-icon-friendSetting:before {
+    content: "\e62f";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-friendSetting(@arrow-custom-color: --amicon-friendSetting, @color: @color-text-weak) when (default()) {
+  .am-icon-friendSetting:before {
+    content: "\e62f";
+  }
+}
+.fn_am-icon-friendSetting();
 
-.am-icon-zoom-out:before {
-  content: "\e655";
+// setting
+.fn_am-icon-setting(@arrow-custom-color, @color) {
+  .am-icon-setting:before {
+    content: "\e630";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-setting(@arrow-custom-color: --amicon-setting, @color: @color-text-weak) when (default()) {
+  .am-icon-setting:before {
+    content: "\e630";
+  }
+}
+.fn_am-icon-setting();
 
-.am-icon-arrow-up:before {
-  content: "\e656";
+// like
+.fn_am-icon-like(@arrow-custom-color, @color) {
+  .am-icon-like:before {
+    content: "\e631";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
 }
+.fn_am-icon-like(@arrow-custom-color: --amicon-like, @color: @color-text-weak) when (default()) {
+  .am-icon-like:before {
+    content: "\e631";
+  }
+}
+.fn_am-icon-like();
+
+// ant
+.fn_am-icon-ant(@arrow-custom-color, @color) {
+  .am-icon-ant:before {
+    content: "\e632";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-ant(@arrow-custom-color: --amicon-ant, @color: @color-text-weak) when (default()) {
+  .am-icon-ant:before {
+    content: "\e632";
+  }
+}
+.fn_am-icon-ant();
+
+// alipay
+.fn_am-icon-alipay(@arrow-custom-color, @color) {
+  .am-icon-alipay:before {
+    content: "\e633";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-alipay(@arrow-custom-color: --amicon-alipay, @color: @color-text-weak) when (default()) {
+  .am-icon-alipay:before {
+    content: "\e633";
+  }
+}
+.fn_am-icon-alipay();
+
+// add1
+.fn_am-icon-add1(@arrow-custom-color, @color) {
+  .am-icon-add1:before {
+    content: "\e634";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-add1(@arrow-custom-color: --amicon-add1, @color: @color-text-weak) when (default()) {
+  .am-icon-add1:before {
+    content: "\e634";
+  }
+}
+.fn_am-icon-add1();
+
+// close
+.fn_am-icon-close(@arrow-custom-color, @color) {
+  .am-icon-close:before {
+    content: "\e635";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-close(@arrow-custom-color: --amicon-close, @color: @color-text-weak) when (default()) {
+  .am-icon-close:before {
+    content: "\e635";
+  }
+}
+.fn_am-icon-close();
+
+// more
+.fn_am-icon-more(@arrow-custom-color, @color) {
+  .am-icon-more:before {
+    content: "\e636";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-more(@arrow-custom-color: --amicon-more, @color: @color-text-weak) when (default()) {
+  .am-icon-more:before {
+    content: "\e636";
+  }
+}
+.fn_am-icon-more();
+
+// zoom
+.fn_am-icon-zoom(@arrow-custom-color, @color) {
+  .am-icon-zoom:before {
+    content: "\e637";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-zoom(@arrow-custom-color: --amicon-zoom, @color: @color-text-weak) when (default()) {
+  .am-icon-zoom:before {
+    content: "\e637";
+  }
+}
+.fn_am-icon-zoom();
+
+// wealth
+.fn_am-icon-wealth(@arrow-custom-color, @color) {
+  .am-icon-wealth:before {
+    content: "\e638";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-wealth(@arrow-custom-color: --amicon-wealth, @color: @color-text-weak) when (default()) {
+  .am-icon-wealth:before {
+    content: "\e638";
+  }
+}
+.fn_am-icon-wealth();
+
+// collect
+.fn_am-icon-collect(@arrow-custom-color, @color) {
+  .am-icon-collect:before {
+    content: "\e639";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-collect(@arrow-custom-color: --amicon-collect, @color: @color-text-weak) when (default()) {
+  .am-icon-collect:before {
+    content: "\e639";
+  }
+}
+.fn_am-icon-collect();
+
+// voice
+.fn_am-icon-voice(@arrow-custom-color, @color) {
+  .am-icon-voice:before {
+    content: "\e63a";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-voice(@arrow-custom-color: --amicon-voice, @color: @color-text-weak) when (default()) {
+  .am-icon-voice:before {
+    content: "\e63a";
+  }
+}
+.fn_am-icon-voice();
+
+// good
+.fn_am-icon-good(@arrow-custom-color, @color) {
+  .am-icon-good:before {
+    content: "\e63b";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-good(@arrow-custom-color: --amicon-good, @color: @color-text-weak) when (default()) {
+  .am-icon-good:before {
+    content: "\e63b";
+  }
+}
+.fn_am-icon-good();
+
+// mute
+.fn_am-icon-mute(@arrow-custom-color, @color) {
+  .am-icon-mute:before {
+    content: "\e63c";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-mute(@arrow-custom-color: --amicon-mute, @color: @color-text-weak) when (default()) {
+  .am-icon-mute:before {
+    content: "\e63c";
+  }
+}
+.fn_am-icon-mute();
+
+// pepole
+.fn_am-icon-pepole(@arrow-custom-color, @color) {
+  .am-icon-pepole:before {
+    content: "\e63d";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-pepole(@arrow-custom-color: --amicon-pepole, @color: @color-text-weak) when (default()) {
+  .am-icon-pepole:before {
+    content: "\e63d";
+  }
+}
+.fn_am-icon-pepole();
+
+// addFriends
+.fn_am-icon-addFriends(@arrow-custom-color, @color) {
+  .am-icon-addFriends:before {
+    content: "\e63e";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-addFriends(@arrow-custom-color: --amicon-addFriends, @color: @color-text-weak) when (default()) {
+  .am-icon-addFriends:before {
+    content: "\e63e";
+  }
+}
+.fn_am-icon-addFriends();
+
+// downland
+.fn_am-icon-downland(@arrow-custom-color, @color) {
+  .am-icon-downland:before {
+    content: "\e63f";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-downland(@arrow-custom-color: --amicon-downland, @color: @color-text-weak) when (default()) {
+  .am-icon-downland:before {
+    content: "\e63f";
+  }
+}
+.fn_am-icon-downland();
+
+// sad
+.fn_am-icon-sad(@arrow-custom-color, @color) {
+  .am-icon-sad:before {
+    content: "\e641";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-sad(@arrow-custom-color: --amicon-sad, @color: @color-text-weak) when (default()) {
+  .am-icon-sad:before {
+    content: "\e640";
+  }
+}
+.fn_am-icon-sad();
+
+// person
+.fn_am-icon-person(@arrow-custom-color, @color) {
+  .am-icon-person:before {
+    content: "\e641";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-person(@arrow-custom-color: --amicon-person, @color: @color-text-weak) when (default()) {
+  .am-icon-person:before {
+    content: "\e641";
+  }
+}
+.fn_am-icon-person();
+
+// arrow-left
+.fn_am-icon-arrow-left(@arrow-custom-color, @color) {
+  .am-icon-arrow-left:before {
+    content: "\e642";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-arrow-left(@arrow-custom-color: --amicon-arrow-left, @color: @color-text-weak) when (default()) {
+  .am-icon-arrow-left:before {
+    content: "\e642";
+  }
+}
+.fn_am-icon-arrow-left();
+
+// arrow-right
+.fn_am-icon-arrow-right(@arrow-custom-color, @color) {
+  .am-icon-arrow-right:before {
+    content: "\e643";
+    color: @color;
+    color: var(@arrow-custom-color, @color);
+  }
+}
+.fn_am-icon-arrow-right(@arrow-custom-color: --amicon-arrow-right, @color: @color-text-weak) when (default()) {
+  .am-icon-arrow-right:before {
+    content: "\e643";
+  }
+}
+.fn_am-icon-arrow-right();
