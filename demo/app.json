@@ -52,7 +52,8 @@
     "pages/message/waiting/index",
     "pages/message/warn/index",
     "pages/pagination/index",
-    "pages/collapse/index"
+    "pages/collapse/index",
+    "pages/title/index"
   ],
   "window": {
     "enableWK": "YES",

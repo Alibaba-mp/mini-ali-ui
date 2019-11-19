@@ -1,0 +1,37 @@
+@import (reference) "../style/themes/default.less";
+@import (reference, optional) "../am-icon/index";
+@import (css, optional) "../am-icon/index.acss";
+
+.am-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: @v-spacing-large;
+  &-line {
+    border-bottom: @border-width-standard solid @color-divider-line;
+  }
+  &-icon {
+    width: @size-6;
+    height: @size-6;
+    overflow: hidden;
+    margin-right: @h-spacing-standard;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  &-text {
+    flex: 1;
+    font-weight: bold;
+    font-size: @font-size-subtitle;
+    color: @color-text-title;
+  }
+  &-operation {
+    width: @size-6;
+    height: @size-6;
+    overflow: hidden;
+    text-align: center;
+    line-height: @size-6;
+    margin-left: @h-spacing-standard;
+  }
+  .fn_am-icon-arrow-right(--title-arrow-right-color, @color-text-weak);
+  .fn_am-icon-close(--title-close-color, @color-text-weak);
+}

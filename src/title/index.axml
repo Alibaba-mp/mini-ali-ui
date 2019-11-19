@@ -1,0 +1,9 @@
+<view class="am-title {{hasLine?'am-title-line':''}}">
+  <view class="am-title-icon"
+    style="{{xcxPath?'background-image: url(' + xcxPath + ');':''}}"
+    a:if="{{showIcon && xcxPath !== ''}}"></view>
+  <view class="am-title-text">
+    <slot></slot>
+  </view>
+  <view a:if="{{ type==='arrow' || type==='close' }}" class="am-title-operation am-icon am-icon-{{type === 'arrow'?type+'-right':type}}"></view>
+</view>

@@ -1,0 +1,6 @@
+.am-title {
+  padding-top: 24rpx;
+}
+.container {
+  padding: 24rpx;
+}

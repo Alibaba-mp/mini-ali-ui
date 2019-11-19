@@ -12,7 +12,7 @@ Page({
     },
     {
       name: 'AmIcon',
-      nameZN: '图标',
+      nameZN: '图标（新版的 icon 图标，老版本不再使用）',
       path: '/pages/am-icon/index',
     },
     {
@@ -144,6 +144,11 @@ Page({
       name: 'Collapse',
       nameZN: '折叠',
       path: '/pages/collapse/index',
+    },
+    {
+      name: 'Title',
+      nameZN: '模块标题',
+      path: '/pages/title/index',
     },
     ],
   },
