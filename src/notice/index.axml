@@ -1,5 +1,5 @@
 <view class="am-notice {{className}}" a:if="{{show}}" onTap="onNoticeTap">
-  <view class="am-notice-thumb" a:if="{{showIcon}}"></view>
+  <view class="am-notice-thumb am-icon am-icon-voice" a:if="{{showIcon}}"></view>
   <view class="am-notice-content am-notice-content-{{$id}}">
     <view
       a:if="{{canIUseTransitionEnd}}"
@@ -19,6 +19,6 @@
   </view>
   <view a:if="{{mode}}" class="am-notice-operation" onTap="onOperationTap">
     <view a:if="{{action !== ''}}" class="am-notice-operation-text {{actionCls}}" >{{action}}</view>
-    <view a:else class="am-notice-{{mode}}"></view>
+    <view a:else class="am-icon {{mode=='closable'?'am-icon-close':''}} {{mode=='link'?'am-icon-arrow-right':''}}"></view>
   </view>
 </view>
