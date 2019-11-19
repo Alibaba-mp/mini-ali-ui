@@ -9,6 +9,8 @@ Component({
     // if type="arrow", need to write path
     xcxPath: '',
     onTypeTap: () => {},
+    // developer can use class for style
+    className: '',
   },
   data: {},
   didMount() {},

@@ -1,4 +1,4 @@
-<view class="am-title {{hasLine?'am-title-line':''}}">
+<view class="am-title {{hasLine?'am-title-line':''}} {{className}}">
   <view class="am-title-icon"
     style="{{xcxPath?'background-image: url(' + xcxPath + ');':''}}"
     a:if="{{showIcon && xcxPath !== ''}}"></view>
