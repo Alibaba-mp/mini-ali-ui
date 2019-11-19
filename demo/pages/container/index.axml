@@ -5,10 +5,6 @@
   <container className="container-item">
     <view class="item">b1</view>
     <view class="item">b2</view>
-      <container className="container-item">
-    <view class="item">b1</view>
-    <view class="item">b2</view>
-  </container>
   </container>
   <container className="container-item">
     <title slot="header" hasLine="true" showIcon="true" xcxPath="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original">内部标题无操作</title>
