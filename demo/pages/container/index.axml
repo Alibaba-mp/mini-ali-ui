@@ -1,0 +1,26 @@
+<view className="container">
+  <container className="container-item">
+    <view class="item">a1</view>
+  </container>
+  <container className="container-item">
+    <view class="item">b1</view>
+    <view class="item">b2</view>
+  </container>
+  <container className="container-item">
+    <view slot="header" class="header">标题文案</view>
+    <view class="item">c1</view>
+    <view class="item">c2</view>
+    <view class="item">c3</view>
+    <view slot="footer" class="footer">底部操作区</view>
+  </container>
+  <container className="container-item">
+    <view slot="header" class="header">滑动容器</view>
+    <swiper indicator-dots="{{true}}" class="item">
+      <block a:for="{{['#0abc80','#00b7f4']}}">
+        <swiper-item>
+          <view style="background-color: {{item}};width:100%;height:300rpx;border-radius:16rpx;"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </container>
+</view>
