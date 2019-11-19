@@ -7,7 +7,7 @@ Component({
     // type: arrow、close、more、'';
     type: '',
     // if type="arrow", need to write path
-    xcxPath: '',
+    iconURL: '',
     onTypeTap: () => {},
     // developer can use class for style
     className: '',
