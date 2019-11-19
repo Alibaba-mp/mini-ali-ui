@@ -9,7 +9,13 @@
   align-items: center;
   padding-bottom: @v-spacing-large;
   padding-bottom: var(--am-title-paddingB, @v-spacing-large);
+  font-size: @font-size-subtitle;
+  font-size: var(--am-title-text-fontSize, @font-size-subtitle);
+  color: @color-text-title;
+  color: var(--am-title-text-color, @color-text-title);
   &-line {
+    margin-bottom: @v-spacing-large;
+    margin-bottom: var(--am-title-marginBottom, @v-spacing-large);
     border-bottom: @border-width-standard solid @color-divider-line;
     border-bottom: var(--am-title-borderWidth, @border-width-standard) solid var(--am-title-borderColor, @color-divider-line);
   }
@@ -31,10 +37,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: bold;
-    font-size: @font-size-subtitle;
-    font-size: var(--am-title-text-fontSize, @font-size-subtitle);
-    color: @color-text-title;
-    color: var(--am-title-text-color, @color-text-title);
   }
   &-operation {
     width: @size-6;

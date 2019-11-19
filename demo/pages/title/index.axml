@@ -34,4 +34,13 @@
   <title
   hasLine="true"
   >标题过长后的处理，标题单行展示。标题过长后的处理，标题单行展示。</title>
+
+  <title
+  hasLine="true"
+  className="changeColor"
+  showIcon="true"
+  xcxPath="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original"
+  type="arrow"
+  onTypeTap="titleGo"
+  >使用class修改样式</title>
 </view>
