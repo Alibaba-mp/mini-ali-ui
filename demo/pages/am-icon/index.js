@@ -63,6 +63,8 @@ Page({
       'wealth',
       'zoom',
       'zoomOut',
+      'eye-open',
+      'eye-close',
     ],
   },
 });
