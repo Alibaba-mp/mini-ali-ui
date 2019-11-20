@@ -50,6 +50,7 @@
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
+    padding: 0;
   }
 
   &-clear {
@@ -66,7 +67,8 @@
   }
 
   &-text {
-    padding-left: var(--am-picker-text-padding-left);
+    // padding-left: @size-2;
+    // padding-left: var(--am-picker-text-padding-left, @size-2);
   }
 
   &-content-placeholder {
