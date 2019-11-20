@@ -1,8 +1,4 @@
 @import (reference) "../style/themes/default.less";
-@import (reference, optional) "../am-icon/index";
-/* clean-css ignore:start */
-@import (css, optional) "../am-icon/index.acss";
-/* clean-css ignore:end */
 
 .am-title {
   display: flex;
@@ -50,7 +46,4 @@
     margin-left: @h-spacing-standard;
     margin-left: var(--am-title-operation-marginLeft, @h-spacing-standard);
   }
-  .fn_am-icon-arrow-right(--am-title-arrow-right-color, @color-text-weak);
-  .fn_am-icon-close(--am-title-close-color, @color-text-weak);
-  .fn_am-icon-more(--am-title-more-color, @color-text-weak);
 }

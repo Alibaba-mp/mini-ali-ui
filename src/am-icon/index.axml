@@ -1,4 +1,4 @@
 <text
   class="am-icon am-icon-{{type}} {{className}}"
-  style="font-size: {{size}}px; color:{{color}};">
+  style="font-size: {{size}}px; {{color?'color:' + color + '':''}};">
 </text>
