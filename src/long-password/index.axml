@@ -23,7 +23,11 @@
         type="clear" />
     </view>
     <view class="am-long-password-eye" 
-      onTap="onSwitchVisible">{{!visible ? '🕶': '👓'}}</view>
+      onTap="onSwitchVisible">
+      <am-icon type="{{!visible ? 'eye-close' : 'eye-open'}}" 
+        size="20" 
+        color="#1677ff"></am-icon>
+    </view>
     <view class="am-long-password-line-bottom" />
   </view>
 </view>
