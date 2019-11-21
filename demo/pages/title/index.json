@@ -1,6 +1,6 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "am-icon": "../../es/am-icon/index"
+    "title": "../../es/title/index"
   }
 }

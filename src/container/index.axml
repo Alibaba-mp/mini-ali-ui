@@ -1,0 +1,7 @@
+<view class="am-container {{className}}">
+  <slot name="header"></slot>
+  <view class="am-container-content">
+    <slot></slot>
+  </view>
+  <slot name="footer"></slot>
+</view>
