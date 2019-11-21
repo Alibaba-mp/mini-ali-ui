@@ -1,60 +1,91 @@
-@import '../style/themes/default.less';
-@import '../style/mixins/hairline.less';
+@import "../style/mixins/hairline.less";
 
 .am-amount {
   box-sizing: border-box;
   height: 173px;
   width: 100%;
   padding: 16px;
-  background: #fff;
+  background: @color-fill-grey-inverse;
+  background: var(--am-amount-background, @color-fill-grey-inverse);
+
+  .a-input-content {
+    /* stylelint-disable-next-line */
+    font-family: DIN Alternate;
+  }
+
+  .a-input {
+    padding: 0 5px;
+  }
 
   &-title {
-    height: 24px;
+    height: @size-6;
+    height: var(--am-amount-title-line-height, @size-6);
     line-height: 24px;
-    color: #333;
+    color: @color-text-title;
+    color: var(--am-amount-title-color, @color-text-title);
     font-size: 17px;
   }
 
   &-synthetic {
-    position: absolute;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     display: flex;
+    align-items: baseline;
   }
 
   &-input {
     box-sizing: content-box;
-    margin-top: 16px;
-    padding-bottom: 16px;
+    margin-top: @size-4;
+    margin-top: var(--am-amount-input-margin-top, @size-4);
+    padding-bottom: @size-4;
+    padding-bottom: var(--am-amount-input-padding-bottom, @size-4);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
-    height: 48px;
+    height: @size-12;
+    height: var(--am-amount-input-height, @size-12);
     position: relative;
-    line-height: 48px;
-    .hairline('bottom');
+    line-height: @size-12;
+    line-height: var(--am-amount-input-line-height, @size-12);
+    .hairline("bottom");
   }
 
   &-symbol {
     width: 18px;
     /* stylelint-disable font-family-no-missing-generic-family-keyword */
     font-family: PingFang SC;
-    font-size: 30px;
-    color: #333;
+    font-size: 24px;
+    line-height: 30px;
+    color: @color-text-title;
+    color: var(--am-amount-symbol-color, @color-text-title);
+    display: flex;
+    align-items: flex-end;
   }
 
   &-placeholder {
-    margin-left: 6px;
-    color: #ccc;
+    // margin-left: 6px;
+    color: @color-text-weak;
+    color: var(--am-amount-placeholder-color, @color-text-weak);
+    vertical-align: baseline;
+    // font-size: @font-size-subcontent;
+    // font-size: var(--am-amount-placeholder-font-size, @font-size-subcontent);
     font-size: 24px;
+    line-height: 30px;
+    font-family: PingFang SC;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    z-index: 0;
+    align-items: flex-end;
   }
 
   &-value {
-    padding: 0 0 0 24px;
     box-sizing: border-box;
     z-index: 2;
-    height: 48px;
-    line-height: 48px;
+    height: 100%;
     vertical-align: middle;
     background-color: transparent;
     font-size: 48px;

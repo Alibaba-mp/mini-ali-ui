@@ -1,6 +1,6 @@
 Page({
   data: {
-    value: 200,
+    // value: 200,
   },
   onInputClear() {
     this.setData({
