@@ -19,8 +19,8 @@
     flex: 1;
     display: flex;
     align-items: center;
-    padding-right: @size-3;
-    padding-right: var(--am-verify-code-line-padding-right, @size-3);
+    padding-right: @h-spacing-large;
+    padding-right: var(--am-verify-code-line-padding-right, @h-spacing-large);
     min-height: @size-12;
     min-height: var(--am-verify-code-line-min-height, @size-12);
     overflow: hidden;
@@ -52,10 +52,13 @@
 
   &-clear {
     display: flex;
-    height: @size-8;
-    height: var(--am-verify-code-clear-size, @size-8);
-    width: @size-8;
-    width: var(--am-verify-code-clear-size, @size-8);
+    // height: @size-8;
+    // height: var(--am-verify-code-clear-size, @size-8);
+    // width: @size-8;
+    // width: var(--am-verify-code-clear-size, @size-8);
+    // 这个长宽设置其实没有意义，所以就不开放给用户设置
+    height: 32px;
+    width: 32px;
     justify-content: center;
     align-items: center;
   }
@@ -78,10 +81,13 @@
     display: none;
   }
   &-action {
-    border-left: @border-width-standard solid @color-text-weak;
-    border-left: var(--am-verify-code-action-border-left, @border-width-standard solid @color-text-weak);
-    padding-left: @size-3;
-    padding-left: var(--am-verify-code-action-padding-left, @size-3);
+    border-left-width: @border-width-standard;
+    border-left-width: var(--am-verify-code-action-border-left-width, @border-width-standard);
+    border-left-style: solid;
+    border-left-color: @color-text-weak;
+    border-left-color: var(--am-verify-code-action-border-left-color, @color-text-weak);
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-verify-code-action-padding-left, @h-spacing-large);
   }
   &-action.active {
     color: @color-text-primary;
