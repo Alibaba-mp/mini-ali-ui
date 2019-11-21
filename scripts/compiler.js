@@ -13,6 +13,7 @@ const extTypes = ['ts', 'less', 'json', 'axml', 'sjs'];
 
 gulp.task('less', () => gulp.src(`${src}/**/*.less`)
   .pipe(less())
+  .on('error', e => console.error(e))
   .pipe(gulpif(isProduction, cleanCss()))
   .pipe(rename({
     extname: '.acss',
