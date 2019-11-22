@@ -13,6 +13,7 @@
   &-content {
     display: flex;
     flex-wrap: wrap;
+    // 设置子元素的 margin 以及 borderRadius
     > :nth-child(1n + 1) {
       flex-grow: 1;
       width: 0;
@@ -26,12 +27,43 @@
     }
   }
 
-/* 如果 container 嵌套，则重置margin及padding */
+  // 如果 container 嵌套，则重置margin及padding
   & &-content & {
     flex: 0 0 100%;
     margin-top: @h-spacing-large;
     margin-top: var(--am-container-padding-h, @h-spacing-large);
     margin-left: 0;
     padding: 0;
+  }
+
+  // 一个比较特殊的一拖二布局，用户设定主元素的高度和宽度，两个副元素的的高宽，随着主元素的高宽做相应调整
+  // 副元素的高度为 (主元素高度 - padding) / 2
+  // 副元素的宽度为 （100% - 主元素的宽度 - padding）
+  &-content-grid {
+    display: flex;
+    > :nth-child(1) {
+      width: 432rpx;
+      border-radius: @corner-radius-lg;
+      border-radius: var(--am-container-item-corner-radius, @corner-radius-lg);
+    }
+  }
+
+  &-content-grid-sub {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-left: @v-spacing-standard;
+    padding-left: var(--am-container-padding-item, @v-spacing-standard);
+    flex-grow: 1;
+    > :nth-child(1n + 1) {
+      flex-grow: 1;
+      margin-top: @v-spacing-standard;
+      margin-top: var(--am-container-padding-item, @v-spacing-standard);
+      border-radius: @corner-radius-lg;
+      border-radius: var(--am-container-item-corner-radius, @corner-radius-lg);
+    }
+    > :nth-child(1) {
+      margin-top: 0;
+    }
   }
 }

@@ -3,7 +3,7 @@ Component({
   data: {},
   props: {
     className: '',
-    equant: true,
+    type: 'line',
   },
   didMount() {},
   didUpdate() {},

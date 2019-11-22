@@ -8,7 +8,6 @@
   margin-bottom: 24rpx;
 }
 
-
 .footer {
   color: #333;
   margin-top: 24rpx;
@@ -18,4 +17,9 @@
   background: #eeeeee;
   text-align: center;
   height: 200rpx;
+}
+
+.grid-item {
+  background: #eeeeee;
+  text-align: center;
 }
