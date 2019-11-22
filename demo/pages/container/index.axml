@@ -23,4 +23,9 @@
       </block>
     </swiper>
   </container>
+  <container className="container-item" type="onewithtwo">
+    <view class="grid-item" style ="height: 300rpx;" slot="first">first</view>
+    <view class="grid-item" slot="second">second</view>
+    <view class="grid-item" slot="third">third</view>
+  </container>
 </view>
