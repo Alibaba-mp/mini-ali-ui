@@ -430,36 +430,64 @@ page {
   --am-short-password-item-border-color: var(--am-color-text-weak);
 
   /* amount-input */
-  /* placeholder-color | 暗提示字体颜色 */
+  /* spacing | 主体左右缩进 */
+  --am-amount-padding-horizontal: var(--am-color-text-weak);
+  /* spacing | 主体上下缩进 */
+  --am-amount-padding-vertical: var(--am-color-text-weak);
+  /* color | 暗提示字体颜色 */
   --am-amount-placeholder-color: var(--am-color-text-weak);
-  /* placeholder-font-size | 暗提示字体大小 */
+  /* font-size | 暗提示字体大小 */
   --am-amount-placeholder-font-size: var(--am-font-size-subcontent);
-  /* title-color | 金额输入框颜色 */
+  /* color | 金额输入框颜色 */
   --am-amount-title-color: var(--am-color-text-title);
-  /* title-height | 金额输入框高度 */
+  /* size | 金额输入框高度 */
   --am-amount-title-height: var(--am-size-6);
-  /* title-line-height | 金额输入框行高 */
+  /* size | 金额输入框行高 */
   --am-amount-title-line-height: var(--am-size-6);
-  /* padding-left | 输入框主体左侧缩进 */
-  --am-amount-padding-left: var(--am-size-3);
-  /* background | 输入框主体背景色 */
+  /* spacing | 输入框主体左侧缩进 */
+  --am-amount-padding-left: var(--am-h-spacing-large);
+  /* color | 输入框主体背景色 */
   --am-amount-background: var(--am-color-fill-grey-inverse);
-  /* input-margin-top | 输入框上方间隔 */
-  --am-amount-input-margin-top: var(--am-size-4);
-  /* input-padding-bottom | 输入框下方间隔 */
-  --am-amount-input-padding-bottom: var(--am-size-4);
-  /* input-height | 输入框高度 */
+  /* spacing | 输入框上方间距 */
+  --am-amount-input-margin-top: var(--am-v-spacing-large);
+  /* spacing | 输入框下方间距 */
+  --am-amount-input-padding-bottom: var(--am-v-spacing-standard);
+  /* size | 输入框高度 */
   --am-amount-input-height: var(--am-size-12);
-  /* input-line-height | 输入框高度 */
-  --am-amount-input-line-height: var(--am-size-12);
-  /* symbol-color | 输入框内容最小高度 */
+  /* line-height | 输入框高度 */
+  --am-amount-input-line-height: var(--am-line-height-base);
+  /* color | 人民币符号颜色 */
   --am-amount-symbol-color: var(--am-color-text-title);
-  /* content-height | 输入框用户输入区最小高度 */
-  --am-amount-content-height: var(--am-size-6);
-  /* clear-size | 输入框清除按钮大小 */
-  --am-amount-clear-size: var(--am-size-8);
   /* font-size | 输入框字体大小 */
   --am-amount-font-size: var(--am-font-size-list);
+  /* font-size | 输入框字体大小 */
+  --am-amount-symbol-font-size: var(--am-font-size-amount-large);
+  /* line-height | 输入框字体大小 */
+  --am-amount-symbol-line-height: var(--am-line-height-base);
+  /* spacing | 输入框左右间距 */
+  --am-amount-a-input-padding: var(--am-h-spacing-standard);
+  /* font-size | 输入框左右间距 */
+  --am-amount-placeholder-font-size: var(--am-font-size-amount-large);
+  /* spacing | footer上方缩进 */
+  --am-amount-footer-padding-top: var(--am-h-spacing-large);
+  /* line-height | footer行高 */
+  --am-amount-footer-line-height: var(--am-line-height-base);
+  /* line-height | extra行高 */
+  --am-amount-extra-line-height: var(--am-line-height-base);
+  /* color | extra字体颜色 */
+  --am-amount-extra-color: var(--am-color-text-subtitle);
+  /* font-size | extra字体大小 */
+  --am-amount-extra-font-size: var(--am-font-size-subtitle);
+  /* font-size | 按钮字体大小 */
+  --am-amount-btn-font-size: var(--am-font-size-subtitle);
+  /* color | 按钮字体颜色 */
+  --am-amount-btn-font-color: var(--am-color-text-primary);
+  /* line-height | 按钮行高 */
+  --am-amount-btn-line-height: var(--am-line-height-base);
+  /* line-height | 标题行高 */
+  --am-amount-title-line-height: var(--am-line-height-base);
+  /* font-size | 标题字体大小 */
+  --am-amount-title-font-size: var(--am-color-text-title);
 
   /* notice */
   /* size | 上下内间距 */

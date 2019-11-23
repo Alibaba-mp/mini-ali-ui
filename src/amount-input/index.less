@@ -2,28 +2,34 @@
 
 .am-amount {
   box-sizing: border-box;
-  height: 173px;
+  // height: 163px;
   width: 100%;
-  padding: 16px;
+  padding: @v-spacing-large @h-spacing-large;
+  padding: var(--am-amount-padding-vertical, @v-spacing-large) var(--am-amount-padding-horizontal, @h-spacing-large);
   background: @color-fill-grey-inverse;
   background: var(--am-amount-background, @color-fill-grey-inverse);
 
   .a-input-content {
     /* stylelint-disable-next-line */
-    font-family: DIN Alternate;
+    font-family: DIN Alternate; //TODO
+    // font-family: @font-family-alipay-number;
+    font-size: @font-size-amount-core;
+    line-height: @line-height-base;
   }
 
   .a-input {
-    padding: 0 5px;
+    padding: 0 @h-spacing-standard;
+    padding: 0 var(--am-amount-a-input-padding, @h-spacing-standard);
   }
 
   &-title {
     height: @size-6;
     height: var(--am-amount-title-line-height, @size-6);
-    line-height: 24px;
+    line-height: @line-height-base;
+    line-height: var(--am-amount-title-line-height, @line-height-base);
     color: @color-text-title;
     color: var(--am-amount-title-color, @color-text-title);
-    font-size: 17px;
+    font-size: var(--am-amount-title-font-size, @font-size-list);
   }
 
   &-synthetic {
@@ -36,18 +42,19 @@
 
   &-input {
     box-sizing: content-box;
-    margin-top: @size-4;
-    margin-top: var(--am-amount-input-margin-top, @size-4);
-    padding-bottom: @size-4;
-    padding-bottom: var(--am-amount-input-padding-bottom, @size-4);
+    margin-top: 32px;
+    // margin-top: var(--am-amount-input-margin-top, @v-spacing-large);
+    padding-bottom: @v-spacing-standard;
+    padding-bottom: var(--am-amount-input-padding-bottom, @v-spacing-standard);
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     width: 100%;
-    height: @size-12;
-    height: var(--am-amount-input-height, @size-12);
+    height: @size-13;
+    height: var(--am-amount-input-height, @size-13);
     position: relative;
-    line-height: @size-12;
-    line-height: var(--am-amount-input-line-height, @size-12);
+    font-size: @font-size-amount-core;
+    line-height: @line-height-base;
+    line-height: var(--am-amount-input-line-height, @line-height-paragraph);
     .hairline("bottom");
   }
 
@@ -55,8 +62,9 @@
     width: 18px;
     /* stylelint-disable font-family-no-missing-generic-family-keyword */
     font-family: PingFang SC;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: @font-size-amount-large;
+    font-size: var(--am-amount-symbol-font-size, @font-size-amount-large);
+    line-height: @line-height-base;
     color: @color-text-title;
     color: var(--am-amount-symbol-color, @color-text-title);
     display: flex;
@@ -68,10 +76,10 @@
     color: @color-text-weak;
     color: var(--am-amount-placeholder-color, @color-text-weak);
     vertical-align: baseline;
-    // font-size: @font-size-subcontent;
-    // font-size: var(--am-amount-placeholder-font-size, @font-size-subcontent);
-    font-size: 24px;
-    line-height: 30px;
+    font-size: @font-size-amount-large;
+    font-size: var(--am-amount-placeholder-font-size, @font-size-amount-large);
+    line-height: @line-height-base;
+    line-height: var(--am-amount-symbol-line-height, @line-height-base);
     font-family: PingFang SC;
     position: absolute;
     top: 0;
@@ -88,8 +96,7 @@
     height: 100%;
     vertical-align: middle;
     background-color: transparent;
-    font-size: 48px;
-    font-weight: 500;
+    font-weight: 250;
   }
 
   &-clear {
@@ -110,22 +117,31 @@
   }
 
   &-footer {
-    padding: 16px 0;
+    padding-top: @v-spacing-large;
+    padding-top: var(--am-amount-footer-padding-top, @v-spacing-large);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: @line-height-base;
+    line-height: var(--am-amount-footer-line-height, @line-height-base);
   }
 
   &-extra {
     flex: 1;
-    height: 20px;
-    line-height: 20px;
-    color: #999;
-    font-size: 14px;
+    line-height: @line-height-base;
+    line-height: var(--am-amount-extra-line-height, @line-height-base);
+    color: @color-text-subtitle;
+    color: var(--am-amount-extra-color, @color-text-subtitle);
+    font-size: @font-size-subtitle;
+    font-size: var(--am-amount-extra-font-size, @font-size-subtitle);
   }
 
   &-btn {
-    width: 120px;
-    text-align: right;
-    color: #108ee9;
-    font-size: 14px;
+    color: @color-text-primary;
+    color: var(--am-amount-btn-font-color, @color-text-primary);
+    line-height: @line-height-base;
+    line-height: var(--am-amount-btn-line-height, @line-height-base);
+    font-size: @font-size-subtitle;
+    font-size: var(--am-amount-btn-font-size, @font-size-subtitle);
   }
 }

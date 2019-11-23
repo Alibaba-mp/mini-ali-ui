@@ -24,7 +24,7 @@
     </view>
   </view>
   <view class="am-amount-footer">
-    <text class="am-amount-extra">{{extra}}</text>
+    <view class="am-amount-extra">{{extra}}</view>
     <view class="am-amount-btn" 
       onTap="onButtonClick">{{btnText}}</view>
   </view>
