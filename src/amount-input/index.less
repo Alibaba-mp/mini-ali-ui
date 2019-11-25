@@ -11,10 +11,13 @@
 
   .a-input-content {
     /* stylelint-disable-next-line */
-    font-family: DIN Alternate; //TODO
-    // font-family: @font-family-alipay-number;
-    font-size: @font-size-amount-core;
+    // font-family: DIN Alternate; //TODO
+    font-family: @font-family-alipay-number;
+    font-size: @font-size-amount-largenumber;
+    font-size: var(--am-amount-content-font-size, @font-size-amount-largenumber);
     line-height: @line-height-base;
+    line-height: var(--am-amount-content-line-height, @line-height-base);
+    font-weight: 500;
   }
 
   .a-input {
@@ -33,9 +36,6 @@
   }
 
   &-synthetic {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     display: flex;
     align-items: baseline;
   }
@@ -43,7 +43,6 @@
   &-input {
     box-sizing: content-box;
     margin-top: 32px;
-    // margin-top: var(--am-amount-input-margin-top, @v-spacing-large);
     padding-bottom: @v-spacing-standard;
     padding-bottom: var(--am-amount-input-padding-bottom, @v-spacing-standard);
     display: flex;
