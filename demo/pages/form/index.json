@@ -6,6 +6,6 @@
     "picker-item": "../../es/picker-item/index",
     "verify-code": "../../es/verify-code/index",
     "multi-liner": "../../es/multi-liner/index",
-    "long-password": "../../es/long-password/index",
+    "long-password": "../../es/long-password/index"
   }
 }
