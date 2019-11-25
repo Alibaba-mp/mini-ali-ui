@@ -9,8 +9,8 @@ Component({
     value: '',
     name: '',
     type: 'text',
-    password: false,
-    placeholder: '',
+    // password: false,
+    // placeholder: '',
     placeholderClass: '',
     placeholderStyle: '',
     disabled: false,
@@ -27,6 +27,7 @@ Component({
   },
   data: {
     _focus: false,
+    visible: false,
   },
   didMount() {
     this.setData({
@@ -59,6 +60,11 @@ Component({
     onClear(e) {
       const event = fmtEvent(this.props, e);
       this.props.onClear(event);
+    },
+    onSwitchVisible() {
+      this.setData({
+        visible: !this.data.visible,
+      });
     },
   },
 });

@@ -15,8 +15,9 @@ Component({
     placeholderStyle: '',
     disabled: false,
     maxlength: 140,
+    showCount: true,
+    autoHeight: false,
     focus: false,
-    clear: true, // 默认有清除功能
     syncInput: false,
     enableNative: false, // 兼容安卓input的输入bug
     onInput: () => {},

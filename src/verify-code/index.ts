@@ -10,7 +10,7 @@ Component({
     name: '',
     type: 'text',
     password: false,
-    placeholder: '',
+    placeholder: '请输入验证码',
     placeholderClass: '',
     placeholderStyle: '',
     disabled: false,
@@ -19,18 +19,27 @@ Component({
     clear: true, // 默认有清除功能
     syncInput: false,
     enableNative: false, // 兼容安卓input的输入bug
+    countDown: 60,
+    isInitialActive: true,
     onInput: () => {},
     onConfirm: () => {},
     onFocus: () => {},
     onBlur: () => {},
     onClear: () => {},
+    onSend: () => {},
   },
   data: {
     _focus: false,
+    _actionActive: true,
+    _countDown: 60,
+    resent: false,
   },
   didMount() {
     this.setData({
       _focus: this.props.focus,
+      _actionActive: this.props.isInitialActive,
+      _countDown: this.props.countDown,
+      actedBefore: false,
     });
   },
   methods: {
@@ -59,6 +68,28 @@ Component({
     onClear(e) {
       const event = fmtEvent(this.props, e);
       this.props.onClear(event);
+    },
+    onTapSend(e) {
+      this.setData({
+        _actionActive: false,
+      });
+      const timeout = setInterval(() => {
+        const subOne = this.data._countDown - 1;
+        this.setData({
+          _countDown: subOne,
+        });
+        if (subOne === 0) {
+          clearTimeout(timeout);
+          this.setData({
+            _actionActive: true,
+            resend: true,
+            _countDown: this.props.countDown,
+            actedBefore: true,
+          });
+        }
+      }, 1000);
+      const event = fmtEvent(this.props, e);
+      this.props.onSend(event);
     },
   },
 });
