@@ -1,14 +1,18 @@
 <import-sjs name="util" from="./util.sjs"/>
+
 <view class="am-tabs {{className}}">
   <view class="am-tabs-tab-bar-wrap">
-    <view class="am-tabs-bar">
+    <view class="am-tabs-bar" style="background-color: {{tabBarBackgroundColor}};">
       <view class="am-tabs-bar-content-wrap">
-        <view class="am-tabs-scroll-left"></view>
-        <view class="am-tabs-scroll-right"></view>
+        <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"></view>
+        <view a:if="{{showRightSadhow}}" class="am-tabs-scroll-right"></view>
         <scroll-view
           scroll-left="{{util.calcScrollLeft(windowWidth, tabWidth, activeTab)}}"
           scroll-x="{{true}}"
           scroll-with-animation="{{animation}}"
+          onScroll="showLeftShadow"
+          lower-threshold="10"
+          onScrollToLower="scrollDown"
           class="am-tabs-bar-content">
           <block a:for="{{tabs}}">
             <view
@@ -16,16 +20,14 @@
               key="tabs-item-{{index}}"
               onTap="handleTabClick"
               style="{{
-                backgroundColor: tabBarBackgroundColor,
                 color: index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor,
-                width: (tabs.length > 3 ? 0.25 : 1 / tabs.length) * 100 + '%',
               }}"
-              class="am-tabs-bar-tab {{tabBarCls}}">
-              <view class="am-tabs-bar-title {{ index === activeTab ? activeCls : '' }}" style="{{ borderBottomColor: index === activeTab ? tabBarUnderlineColor : '' }}">
-                <text>{{item.title}}</text>
+              class="am-tabs-bar-tab {{capsule?'am-tabs-bar-tab-capsule':''}} {{tabBarCls}}">
+              <view class="am-tabs-bar-title {{ index === activeTab ? activeCls : '' }} {{tabs.length - 1 === index?'am-tabs-bar-title__noMargin':''}}" style="{{ borderBottomColor: index === activeTab ? tabBarUnderlineColor : '' }}">
+                <text class="am-tabs-bar-tab-mainTitle">{{item.title}}</text>
                 <badge
                   className="am-tabs-bar-badge {{item.badgeType ? item.badgeType : ''}}"
-                  a:if="{{item.badgeType}}"
+                  a:if="{{capsule === false && item.badgeType}}"
                   dot="{{item.badgeType == 'dot'}}"
                   text="{{item.badgeText}}" />
               </view>
@@ -33,8 +35,10 @@
           </block>
         </scroll-view>
       </view>
-      <view class="am-tabs-plus-wrap {{showPlus ? 'show' : ''}}">
-        <view class="am-tabs-plus" onTap="handlePlusClick"></view>
+      <view
+      class="am-tabs-plus {{showPlus ? 'show' : ''}}"
+      onTap="handlePlusClick">
+        <am-icon type="add1" size="16"></am-icon>
       </view>
     </view>
     <block a:if="{{swipeable}}">

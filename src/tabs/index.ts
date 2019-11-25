@@ -3,17 +3,29 @@ const { windowWidth } = my.getSystemInfoSync();
 Component({
   props: {
     className: '',
+    // tabbar激活的 tab 样式 class
     activeCls: '',
-    tabBarUnderlineColor: '#108ee9', // 选中选项卡下划线颜色
-    tabBarActiveTextColor: '#108ee9', // 选中选项卡字体颜色
-    tabBarInactiveTextColor: '#333333', // 未选中选项卡字体颜色
-    tabBarBackgroundColor: '#ffffff', // 选项卡背景颜色
+    // tabbar的自定义样式class
+    tabBarCls: '',
+    // 选中选项卡下划线颜色
+    tabBarUnderlineColor: '#1677FF',
+    // 选中选项卡字体颜色
+    tabBarActiveTextColor: '#1677FF',
+    // 未选中选项卡字体颜色
+    tabBarInactiveTextColor: '#333333',
+    // 选项卡背景颜色
+    tabBarBackgroundColor: '#ffffff',
     showPlus: false,
+    // tabs 内容区是否可拖动，true 可拖动，内容区固定高度 false 不可拖动，内容区自适应高度
     swipeable: true,
-    activeTab: 0, // 当前激活tab
+    // 当前激活tab id
+    activeTab: 0,
     animation: true,
-    tabBarCls: '', // tabbar的自定义样式class
     duration: 500,
+    // 是否为胶囊形式 tab
+    capsule: false,
+    showLeftShadow: false,
+    showRightSadhow: true,
   },
   data: {
     windowWidth,
@@ -57,6 +69,22 @@ Component({
       if (this.props.onPlusClick) {
         this.props.onPlusClick();
       }
+    },
+    showLeftShadow(e) {
+      if (e.detail.scrollLeft > 0) {
+        this.setData({
+          showLeftShadow: true,
+        });
+      } else {
+        this.setData({
+          showLeftShadow: false,
+        });
+      }
+    },
+    scrollDown() {
+      this.setData({
+        showRightSadhow: false,
+      });
     },
   },
 });

@@ -4,7 +4,7 @@ Page({
       {
         title: '选项',
         badgeType: 'text',
-        badgeText: '6',
+        badgeText: '66',
       },
       {
         title: '选项二',
@@ -13,8 +13,11 @@ Page({
       { title: '3 Tab' },
       { title: '4 Tab' },
       { title: '5 Tab' },
+      { title: '3 Tab' },
+      { title: '4 Tab' },
+      { title: '15 Tab' },
     ],
-    activeTab: 2,
+    activeTab: 0,
   },
   handleTabClick({ index }) {
     this.setData({

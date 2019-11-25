@@ -1,4 +1,4 @@
-<view>
+<view style="padding: 12px;">
   <tabs
     tabs="{{tabs}}"
     showPlus="{{true}}"
