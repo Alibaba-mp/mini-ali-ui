@@ -37,12 +37,6 @@
       clear="{{true}}" 
       onInput="onItemInput" 
       onClear="onClear" />
-    <!-- <view class="title">6位密码框</view>
-    <short-password data-field="shortPassword" 
-      placeholder="" 
-      type="text" 
-      value="{{shortPassword}}" 
-      onInput="onItemInput" /> -->
     <view class="title">多行输入</view>
     <multi-liner data-field="area" 
       placeholder="字数统计↘" 

@@ -7,6 +7,5 @@
     "verify-code": "../../es/verify-code/index",
     "multi-liner": "../../es/multi-liner/index",
     "long-password": "../../es/long-password/index",
-    "short-password": "../../es/short-password/index"
   }
 }
