@@ -1,4 +1,4 @@
-@import '../../style/mixins/hairline.less';
+@import "../../style/mixins/hairline.less";
 
 // @list-color: #888;
 // @list-item-hover-color: #f8f8f8;
@@ -7,11 +7,12 @@
   &-item {
     display: flex;
     align-items: center;
-    background: #fff;
-    padding-left: 16px;
-    font-size: 15px;
-    line-height: 1.4;
-    color: #333;
+    background: @color-fill-grey-inverse;
+    background: var(--am-list-item-background, @color-fill-grey-inverse);
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-list-item-padding, @h-spacing-large);
+    color: @color-text-title;
+    color: var(--am-list-item-color, @color-text-title);
     &-hover {
       // hover 样式
       background-color: #f8f8f8;
@@ -31,12 +32,15 @@
     display: flex;
     align-items: center;
     align-self: stretch;
-    padding-right: 15px;
+    padding-right: @h-spacing-large;
+    padding-right: var(--am-list-item-padding, @h-spacing-large);
     min-height: 52px;
     overflow: hidden;
   }
-  &-content, &-extra {
-    line-height: 1.5;
+  &-content,
+  &-extra {
+    line-height: @line-height-paragraph;
+    line-height: var(--am-list-item-line-height, @line-height-paragraph);
     width: auto;
     padding-top: 7px;
     padding-bottom: 7px;
@@ -46,8 +50,8 @@
   }
   &-content {
     flex: 1;
-    color: #000;
-    font-size: 17px;
+    color: @color-text-title;
+    font-size: @font-size-list;
     text-align: left;
   }
   &-extra {
@@ -61,7 +65,8 @@
     font-size: 14px;
   }
   &-wrap {
-    .am-list-content, .am-list-extra {
+    .am-list-content,
+    .am-list-extra {
       white-space: normal;
       word-break: break-all;
     }
@@ -80,7 +85,7 @@
     }
   }
   &-line-bottom {
-    .hairline('bottom');
+    .hairline("bottom");
   }
   // 子元素垂直对齐
   &-top {
