@@ -1,11 +1,13 @@
-@import '../style/mixins/hairline.less';
+@import "../style/mixins/hairline.less";
 
 .am-picker {
   &-item {
     display: flex;
     align-items: center;
-    background: #fff;
-    padding-left: 15px;
+    background: @color-fill-grey-inverse;
+    background: var(--am-picker-background, @color-fill-grey-inverse);
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-picker-padding-left, @h-spacing-large);
   }
 
   &-line {
@@ -13,21 +15,28 @@
     flex: 1;
     display: flex;
     align-items: center;
-    padding-right: 15px;
-    min-height: 47px;
+    padding-right: @h-spacing-large;
+    padding-right: var(--am-picker-line-padding-right, @h-spacing-large);
+    min-height: @size-12;
+    min-height: var(--am-picker-line-min-height, @size-12);
     overflow: hidden;
+    font-size: @font-size-list;
+    font-size: var(--am-picker-font-size, @font-size-list);
   }
 
   &-label {
-    min-width: 80px;
+    min-width: @size-20;
+    min-width: var(--am-picker-label-min-width, @size-20);
     margin-right: 2px;
-    color: #333;
+    color: @color-text-title;
+    color: var(--am-picker-label-color, @color-text-title);
   }
 
   &-wrapper {
     display: flex;
     flex: 1;
-    height: 33px;
+    height: @size-6;
+    height: var(--am-picker-wrapper-height, @size-6);
     align-items: center;
     overflow: hidden;
   }
@@ -36,11 +45,12 @@
     flex: 1;
     display: flex;
     align-items: center;
-    height: 33px;
-    color: #000;
+    color: @color-text-title;
+    color: var(--am-picker-label-color, @color-text-title);
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
+    padding: 0;
   }
 
   &-clear {
@@ -48,7 +58,7 @@
   }
 
   &-line-bottom {
-    .hairline('bottom');
+    .hairline("bottom");
   }
 
   /* 最后一行 */
@@ -57,23 +67,28 @@
   }
 
   &-text {
-    padding-left: 8px;
+    // padding-left: @size-2;
+    // padding-left: var(--am-picker-text-padding-left, @size-2);
   }
 
   &-content-placeholder {
-    color: #ccc;
+    color: @color-text-weak;
+    color: var(--am-picker-placeholder-color, @color-text-weak);
   }
 
   &-content-value {
-    color: #333;
+    color: @color-text-title;
+    color: var(--am-picker-content-value-color, @color-text-title);
   }
 
   &-arrow {
     display: block;
-    width: 13px;
-    height: 13px;
+    width: @size-4;
+    width: var(--am-picker-arrow-size, @size-4);
+    height: @size-4;
+    height: var(--am-picker-arrow-size, @size-4);
     margin-left: 8px;
-    background-image: url('https://gw.alipayobjects.com/zos/rmsportal/nGMpTwTjtKMbOeeQIucS.png');
+    background-image: url("https://gw.alipayobjects.com/zos/rmsportal/nGMpTwTjtKMbOeeQIucS.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;

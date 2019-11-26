@@ -6,6 +6,7 @@
     "pages/am-icon/index",
     "pages/picker-item/index",
     "pages/input-item/index",
+    "pages/form/index",
     "pages/badge/index",
     "pages/card/index",
     "pages/calendar/index",
