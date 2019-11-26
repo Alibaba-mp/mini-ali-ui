@@ -5,29 +5,45 @@
     <view class="am-tabs-bar" style="background-color: {{tabBarBackgroundColor}};">
       <view class="am-tabs-bar-content-wrap">
         <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"></view>
-        <view a:if="{{showRightSadhow}}" class="am-tabs-scroll-right"></view>
+        <view class="am-tabs-scroll-right"></view>
         <scroll-view
-          scroll-left="{{util.calcScrollLeft(windowWidth, tabWidth, activeTab)}}"
+          scroll-left="{{viewScrollLeft - 24}}"
+          scroll-into-view="tabs-item-{{tabViewNum}}"
           scroll-x="{{true}}"
           scroll-with-animation="{{animation}}"
           onScroll="showLeftShadow"
-          lower-threshold="10"
-          onScrollToLower="scrollDown"
           class="am-tabs-bar-content">
           <block a:for="{{tabs}}">
             <view
+              id="tabs-item-{{index}}"
               data-index="{{index}}"
               key="tabs-item-{{index}}"
               onTap="handleTabClick"
-              style="{{
-                color: index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor,
-              }}"
-              class="am-tabs-bar-tab {{capsule?'am-tabs-bar-tab-capsule':''}} {{tabBarCls}}">
-              <view class="am-tabs-bar-title {{ index === activeTab ? activeCls : '' }} {{tabs.length - 1 === index?'am-tabs-bar-title__noMargin':''}}" style="{{ borderBottomColor: index === activeTab ? tabBarUnderlineColor : '' }}">
+              style="color: {{ !hasSubTitle && capsule?
+                (index === activeTab ? capsuleTabBarActiveTextColor: tabBarInactiveTextColor)
+                :
+                (index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor) }}"
+              class="am-tabs-bar-tab {{ !hasSubTitle && capsule?'am-tabs-bar-tab-capsule':''}} {{tabBarCls}}">
+              <view class="
+                am-tabs-bar-title
+                {{ hasSubTitle ? 'am-tabs-bar-title__hasSubTitle' : ''}}
+                {{ index === activeTab ? activeCls : '' }}
+                {{ !hasSubTitle && capsule?'am-tabs-bar-capsule-title':''}}
+                {{tabs.length - 1 === index?'am-tabs-bar-title__noMargin':''}}
+                " style="
+                  {{hasSubTitle?
+                    '':
+                  (!hasSubTitle && capsule?
+                  (index === activeTab ? 'background-color:' + tabBarUnderlineColor + ';' : '')
+                  :
+                  (index === activeTab ? 'border-bottom-color:' + tabBarUnderlineColor + ';' : '')) }}">
                 <text class="am-tabs-bar-tab-mainTitle">{{item.title}}</text>
+                <text class="am-tabs-bar-tab-subTitle" a:if="{{hasSubTitle && item.subTitle}}" style="
+                  {{index === activeTab ? 'background-color:' + tabBarUnderlineColor + '; color: ' + tabBarActiveSubTextColor + ';' : 'color: ' + tabBarSubTextColor + ';'}}
+                ">{{item.subTitle}}</text>
                 <badge
                   className="am-tabs-bar-badge {{item.badgeType ? item.badgeType : ''}}"
-                  a:if="{{capsule === false && item.badgeType}}"
+                  a:if="{{!capsule && item.badgeType}}"
                   dot="{{item.badgeType == 'dot'}}"
                   text="{{item.badgeText}}" />
               </view>
@@ -55,7 +71,7 @@
     </block>
     <block a:else>
       <view class="am-tabs-content-wrap {{util.compareVersion(version) >= 0 ? 'fix' : ''}}">
-        <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-activeTab * 100) + 'vw, 0, 0)' }}">
+        <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-activeTab * 100) + '%, 0, 0)' }}">
           <slot></slot>
         </view>
       </view>

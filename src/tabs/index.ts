@@ -11,8 +11,14 @@ Component({
     tabBarUnderlineColor: '#1677FF',
     // 选中选项卡字体颜色
     tabBarActiveTextColor: '#1677FF',
+    // 胶囊选中选项卡字体颜色
+    capsuleTabBarActiveTextColor: '#ffffff',
     // 未选中选项卡字体颜色
     tabBarInactiveTextColor: '#333333',
+    // 未选中描述字体颜色
+    tabBarSubTextColor: '#999999',
+    // 选中描述字体颜色
+    tabBarActiveSubTextColor: '#ffffff',
     // 选项卡背景颜色
     tabBarBackgroundColor: '#ffffff',
     showPlus: false,
@@ -24,18 +30,26 @@ Component({
     duration: 500,
     // 是否为胶囊形式 tab
     capsule: false,
-    showLeftShadow: false,
-    showRightSadhow: true,
+    // 是否有副标题
+    hasSubTitle: false,
   },
   data: {
     windowWidth,
     tabWidth: 0.25,
     autoplay: false,
     animation: false,
+    showLeftShadow: false,
     version: my.SDKVersion,
+    viewScrollLeft: 0,
+    tabViewNum: 0,
   },
   didMount() {
-    const { tabs, animation } = this.props;
+    const { tabs, animation, hasSubTitle } = this.props;
+    if (hasSubTitle) {
+      this.setData({
+        capsule: true,
+      });
+    }
     this.setData({
       tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
       animation,
@@ -54,12 +68,20 @@ Component({
     handleSwiperChange(e) {
       const { current } = e.detail;
 
+      this.setData({
+        tabViewNum: current,
+      });
+
       if (this.props.onChange) {
         this.props.onChange({ index: current });
       }
     },
     handleTabClick(e) {
       const { index } = e.target.dataset;
+
+      this.setData({
+        viewScrollLeft: e.currentTarget.offsetLeft,
+      });
 
       if (this.props.onTabClick) {
         this.props.onTabClick({ index });
@@ -80,11 +102,6 @@ Component({
           showLeftShadow: false,
         });
       }
-    },
-    scrollDown() {
-      this.setData({
-        showRightSadhow: false,
-      });
     },
   },
 });
