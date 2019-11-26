@@ -17,3 +17,8 @@
   top: 0;
   z-index: 2;
 }
+
+.am-list-brief {
+  color: #888;
+  font-size: 14px;
+}

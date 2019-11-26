@@ -5,6 +5,14 @@ Component({
     disabled: false,
     multipleLine: false,
     wrap: false,
+    type: 'normal', // 'normal' | 'capsule' | 'primary'
+  },
+  data: {
+    typeClassMap: {
+      normal: 'am-list-extra',
+      primary: 'am-list-primary',
+      capsule: 'am-list-capsule',
+    },
   },
   didMount() {
     this._updateDataSet();

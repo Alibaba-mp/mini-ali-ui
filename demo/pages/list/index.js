@@ -81,6 +81,16 @@ Page({
         title: '单行列表',
         extra: '详细信息',
       },
+      {
+        title: '单行列表',
+        extra: '+20.08',
+        type: 'primary',
+      },
+      {
+        title: '单行列表',
+        extra: '胶囊按钮',
+        type: 'capsule',
+      },
     ],
     items2: [
       {

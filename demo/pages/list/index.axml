@@ -12,6 +12,7 @@
 					index="{{index}}"
 					onClick="onItemClick"
 					key="items-{{index}}"
+					type="{{item.type}}"
 					last="{{index === (items.length - 1)}}"
 				>
 					{{item.title}}
