@@ -244,6 +244,13 @@ Page({
       '-- 已经到底了，加不了咯 --',
     ],
     maxList: 5,
+    switchVal: false,
+  },
+  onSwitchClick() {
+    console.log(this.data.switchVal);
+    this.setData({
+      switchVal: !this.data.switchVal,
+    });
   },
   onItemClick(ev) {
     my.alert({

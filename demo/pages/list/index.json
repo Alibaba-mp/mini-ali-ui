@@ -2,6 +2,7 @@
   "defaultTitle": "List",
   "usingComponents":{
     "list": "../../es/list/index",
-    "list-item": "../../es/list/list-item/index"
+    "list-item": "../../es/list/list-item/index",
+    "list-switch": "../../es/list/list-switch/index"
   }
 }

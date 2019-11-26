@@ -1,0 +1,19 @@
+<view class="am-list-switch-item am-list-switch-{{align}} {{multipleLine ? 'am-list-switch-multiple' : ''}} {{last ? 'last': ''}} {{className}}" 
+	hover-class="{{disabled ? '' : 'am-list-switch-item-hover'}}" 
+	data-index="{{index}}">
+	<view a:if={{$slots.prefix}} class="am-list-switch-prefix">
+		<slot name="prefix" />
+	</view>
+	<image a:if={{thumb}} class="am-list-switch-thumb" 
+		src="{{thumb}}" 
+		mode="scaleToFill" />
+	<view class="am-list-switch-line {{wrap ? 'am-list-switch-wrap' : ''}}">
+		<view class="am-list-switch-content">
+			<slot />
+		</view>
+		<view class="am-list-switch-scene {{value ? 'am-list-switch-scene-on' : ''}}" onTap="onItemTap" data-index="{{index}}">
+			<view class="am-list-switch-protagonist {{value ? 'am-list-switch-on' : 'am-list-switch-off'}}" data-index="{{index}}" />
+		</view>
+		<view class="am-list-switch-line-bottom" />
+	</view>
+</view>

@@ -4,7 +4,7 @@ Component({
     type: 'success',
     title: '',
     onTapMain: () => {},
-    onTapSub: () => {}
+    onTapSub: () => {},
   },
   methods: {
     tapMain() {
@@ -12,6 +12,6 @@ Component({
     },
     tapSub() {
       this.props.onTapSub();
-    }
-  }
+    },
+  },
 });
