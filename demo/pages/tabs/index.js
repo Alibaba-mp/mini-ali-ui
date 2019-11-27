@@ -5,7 +5,7 @@ Page({
         title: '选项',
         subTitle: '描述文案',
         badgeType: 'text',
-        badgeText: '66',
+        badgeText: '99+',
       },
       {
         title: '选项二',

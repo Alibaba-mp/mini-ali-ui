@@ -42,6 +42,7 @@ Component({
     version: my.SDKVersion,
     viewScrollLeft: 0,
     tabViewNum: 0,
+    hideRightShadow: false,
   },
   didMount() {
     const { tabs, animation, hasSubTitle } = this.props;

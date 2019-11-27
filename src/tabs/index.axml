@@ -4,8 +4,6 @@
   <view class="am-tabs-tab-bar-wrap">
     <view class="am-tabs-bar" style="background-color: {{tabBarBackgroundColor}};">
       <view class="am-tabs-bar-content-wrap">
-        <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"></view>
-        <view class="am-tabs-scroll-right"></view>
         <scroll-view
           scroll-left="{{viewScrollLeft - 24}}"
           scroll-into-view="tabs-item-{{tabViewNum}}"
@@ -13,6 +11,8 @@
           scroll-with-animation="{{animation}}"
           onScroll="showLeftShadow"
           class="am-tabs-bar-content">
+          <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"></view>
+          <view class="am-tabs-scroll-right"></view>
           <block a:for="{{tabs}}">
             <view
               id="tabs-item-{{index}}"

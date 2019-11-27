@@ -5,10 +5,10 @@
     onChange="handleTabChange"
     onPlusClick="handlePlusClick"
     activeTab="{{activeTab}}"
-    showPlus="{{false}}"
-    swipeable="{{true}}"
-    capsule="{{true}}"
-    hasSubTitle="{{true}}"
+    showPlus="{{true}}"
+    swipeable="{{false}}"
+    capsule="{{false}}"
+    hasSubTitle="{{false}}"
   >
     <block a:for="{{tabs}}">
       <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 0}}">
