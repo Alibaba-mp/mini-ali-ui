@@ -124,8 +124,7 @@
 @icon-size-md: 56px * @pixelSize; //中
 @icon-size-lg: 60px * @pixelSize; //大
 
-:root,
-page {
+:root {
   /* 业务色 */
   --am-color-brand-1: @color-brand-1;
   --am-color-brand-2: @color-brand-2;
@@ -472,8 +471,6 @@ page {
   --am-title-marginBottom: var(--am-v-spacing-large);
   /* size | 底边线尺寸 */
   --am-title-borderWidth: var(--am-border-width-standard);
-  /* color | 底边线颜色 */
-  --am-title-borderColor: var(--am-color-divider-line);
   /* font-size | 标题文字大小 */
   --am-title-text-fontSize: var(--am-font-size-subtitle);
   /* color | 标题文字颜色 */
@@ -512,4 +509,32 @@ page {
   --am-container-padding-h: var(--am-h-spacing-large);
   /* spacing | 容器元素间距 */
   --am-container-padding-item: var(--am-v-spacing-standard);
+
+  /* tabs */
+  /* size | tab 左右内间距 */
+  --am-tabs-padding: var(--am-h-spacing-large);
+  /* size | plus icon 左外边距 */
+  --am-tabs-plus-marginLeft: var(--am-h-spacing-large);
+  /* font-size | 标题文字大小 */
+  --am-tabs-fontSize: var(--am-font-size-list);
+  /* size | 胶囊上下内间距 */
+  --am-tabs-capsule-paddingV: var(--am-v-spacing-large);
+  /* size | 胶囊有外边距 */
+  --am-tabs-capsule-marginRight: var(--am-h-spacing-large);
+  /* size | 描述文字胶囊上下内间距 */
+  --am-tabs-subTitle-paddingH: var(--am-h-spacing-standard);
+  /* font-size | 描述文字大小 */
+  --am-tabs-subTitle-fontSize: var(--am-font-size-content);
+  /* size | 文字选项卡右外边距 */
+  --am-tabs-title-marginRight: calc(var(--am-h-spacing-large) * 2);
+  /* size | 文字选项卡上内边距 */
+  --am-tabs-title-paddingTop: var(--am-v-spacing-large);
+  /* size | 文字选项卡下内边距 */
+  --am-tabs-title-paddingBottom: var(--am-v-spacing-large);
+  /* size | 胶囊文字内边距 */
+  --am-tabs-title-capsule-padding: var(--am-h-spacing-large);
+  /* color | 未激活的胶囊文字背景色 */
+  --am-tabs-title-capsule-bgc: var(--am-color-fill-grey-light);
+  /* color | tabs 选项卡内容区域背景色 */
+  --am-tabs-content-bgc: var(--am-color-fill-grey-inverse);
 }
