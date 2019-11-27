@@ -1,0 +1,95 @@
+@import "../../style/mixins/hairline.less";
+
+// @list-color: #888;
+// @list-item-hover-color: #f8f8f8;
+
+.am-list-check {
+  &-item {
+    display: flex;
+    align-items: center;
+    background: @color-fill-grey-inverse;
+    background: var(--am-list-item-background, @color-fill-grey-inverse);
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-list-item-padding, @h-spacing-large);
+    padding-right: @h-spacing-large;
+    padding-right: var(--am-list-item-padding, @h-spacing-large);
+    min-height: @size-12;
+    min-height: var(--am-list-item-min-height, @size-12);
+    &-hover {
+      // hover 样式
+      background-color: #f8f8f8;
+    }
+  }
+  &-prefix {
+    margin-right: 16px;
+  }
+  &-thumb {
+    width: 30px; //设计稿里面没有含thumb
+    height: 30px;
+    margin-right: 16px;
+  }
+  &-line {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    overflow: hidden;
+  }
+  &-content {
+    line-height: @line-height-paragraph;
+    line-height: var(--am-list-item-line-height, @line-height-paragraph);
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-basis: 36%;
+    // text-align: right;
+    color: @color-text-title;
+    color: var(--am-list-item-content-color, @color-text-title);
+    font-size: @font-size-list;
+    font-size: var(--am-list-item-content-font-size, @font-size-list);
+    // text-align: left;
+  }
+  &-wrap {
+    .am-list-content,
+    .am-list-extra {
+      white-space: normal;
+      word-break: break-all;
+    }
+  }
+  &-line-bottom {
+    .hairline("bottom");
+  }
+  // 子元素垂直对齐
+  &-top {
+    .am-list-line {
+      align-items: flex-start;
+    }
+  }
+  &-middle {
+    .am-list-line {
+      align-items: center;
+    }
+  }
+  &-bottom {
+    .am-list-line {
+      align-items: flex-end;
+    }
+  }
+  // 多行
+  &-multiple {
+    .am-list-line {
+      padding: 6px 15px 6px 0;
+    }
+    .am-list-thumb {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  &-item.last {
+    .am-list-line-bottom::after {
+      display: none;
+    }
+  }
+}

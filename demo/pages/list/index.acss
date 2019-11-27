@@ -6,6 +6,7 @@
 }
 .dyt-list .am-list-brief {
   color: #909090;
+  font-size: 14px;
 }
 
 .dyt-list .am-list-extra {
@@ -16,9 +17,4 @@
   position: sticky;
   top: 0;
   z-index: 2;
-}
-
-.am-list-brief {
-  color: #888;
-  font-size: 14px;
 }

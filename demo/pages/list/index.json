@@ -3,6 +3,7 @@
   "usingComponents":{
     "list": "../../es/list/index",
     "list-item": "../../es/list/list-item/index",
-    "list-switch": "../../es/list/list-switch/index"
+    "list-switch": "../../es/list/list-switch/index",
+    "list-check": "../../es/list/list-check/index"
   }
 }

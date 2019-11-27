@@ -1,6 +1,5 @@
-<view>
+<view class="dyt-list">
 	<scroll-view style="height: 80vh;" 
-		
 		scroll-y onScrollToLower="onScrollToLower" 
 		enable-back-to-top="true">
 		<list>
@@ -30,6 +29,9 @@
 		<list-switch last="{{true}}" 
 			value="{{switchVal}}" 
 			onClick="onSwitchClick"> 单行开关 </list-switch>
+		<list-check last="{{true}}" 
+			value="{{switchVal}}" 
+			onClick="onSwitchClick"> 单行勾选 </list-check>
 		<list>
 			<view slot="header">
 				列表头部
