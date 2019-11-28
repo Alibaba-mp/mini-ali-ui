@@ -160,6 +160,7 @@ Page({
         thumb: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',
         title: '标题文字',
         brief: '描述信息',
+        arrow: true,
       },
       {
         thumb: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',

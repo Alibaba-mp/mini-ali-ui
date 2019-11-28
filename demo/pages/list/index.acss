@@ -9,10 +9,6 @@
   font-size: 14px;
 }
 
-.dyt-list .am-list-extra {
-  color: #000;
-}
-
 .am-list-sticky {
   position: sticky;
   top: 0;
