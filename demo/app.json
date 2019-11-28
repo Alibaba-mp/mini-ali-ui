@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/container/index",
     "pages/list/app",
     "pages/list/index",
     "pages/amount-input/index",
@@ -8,6 +7,7 @@
     "pages/picker-item/index",
     "pages/input-item/index",
     "pages/badge/index",
+    "pages/button/index",
     "pages/card/index",
     "pages/calendar/index",
     "pages/am-checkbox/index",
