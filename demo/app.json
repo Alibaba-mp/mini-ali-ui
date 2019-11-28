@@ -8,6 +8,7 @@
     "pages/input-item/index",
     "pages/form/index",
     "pages/badge/index",
+    "pages/button/index",
     "pages/card/index",
     "pages/calendar/index",
     "pages/am-checkbox/index",

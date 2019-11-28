@@ -40,7 +40,7 @@
 @color-fill-grey-light: #f5f5f5; //灰阶-浅
 @color-fill-grey-inverse: #fff; //灰阶-反色
 @color-divider-line: rgba(0, 0, 0, 0.08); //分割线
-@color-divider-background: rgba(0, 0, 0, 0.05); //分隔背景
+@color-divider-background: hsla(0, 0%, 0%, 0.05); //分隔背景
 @color-product-mask: rgba(0, 0, 0, 0.75); //产品蒙层
 @color-marketing-mask: rgba(0, 0, 0, 0.5); //营销蒙层
 
@@ -80,7 +80,7 @@
 @corner-radius-sm: 4px * @pixelSize; //小
 @corner-radius-md: 8px * @pixelSize; //中
 @corner-radius-lg: 16px * @pixelSize; //大
-@corner-radius-circle: 50%; //圆
+@corner-radius-circle: 50vh; //圆
 
 //尺寸
 @size-base: 8px * @pixelSize; //基础
@@ -509,6 +509,66 @@
   --am-container-padding-h: var(--am-h-spacing-large);
   /* spacing | 容器元素间距 */
   --am-container-padding-item: var(--am-v-spacing-standard);
+
+  /* button */
+  /* size | 按钮内间距 */
+  --am-button-padding: var(--am-size-3);
+  /* corner-radius  | 按钮圆角 */
+  --am-button-corner-radius: var(--am-corner-radius-md);
+  /* size | 双行按钮内间距 */
+  --am-button-doubleline-padding: var(--am-size-2);
+  /* font-size | 副标题字号 */
+  --am-button-subtitle-size: var(--am-font-size-subcontent);
+  /* color | 按钮边框宽度 */
+  --am-button-border-size: var(--am-border-width-standard);
+  /* opacity | disable状态不透明度 */
+  --am-button-disabled-opacity: var(--am-opacity-disabled);
+  /* color | 默认按钮文字色 */
+  --am-button-color: var(--am-color-fill-grey-dark);
+  /* color | 默认按钮背景色 */
+  --am-button-background: var(--am-color-fill-grey-inverse);
+  /* color | 默认按钮边框色 */
+  --am-button-border-color: var(--am-color-divider-line);
+  /* color |  primary按钮背景色 */
+  --am-button-primary-background: var(--am-color-fill-primary);
+  /* color |  primary按钮边框色 */
+  --am-button-primary-border-color: var(--am-color-fill-primary);
+  /* color |  primary按钮文字色 */
+  --am-button-primary-color: var(--am-color-text-base);
+  /* color |  ghost按钮边框色 */
+  --am-button-ghost-border-color: var(--am-color-fill-primary);
+  /* color |  ghost按钮文字色 */
+  --am-button-ghost-color: var(--am-color-text-primary);
+  /* color |  warn按钮背景色 */
+  --am-button-warn-background: var(--am-color-fill-warning);
+  /* color |  warn按钮边框色 */
+  --am-button-warn-border-color: var(--am-color-fill-warning);
+  /* color |  warn按钮文字色 */
+  --am-button-warn-color: var(--am-color-text-base);
+  /* color |  warn-ghost按钮边框色 */
+  --am-button-warn-ghost-border-color: var(--am-color-fill-warning);
+  /* color |  warn-ghost按钮文字色 */
+  --am-button-warn-ghost-color: var(--am-color-text-warning);
+  /* color |  light按钮背景色 */
+  --am-button-light-background: var(--am-color-brand-2);
+  /* color |  light按钮边框色 */
+  --am-button-light-border-color: var(--am-color-brand-2);
+  /* color |  light按钮文字色 */
+  --am-button-light-color: var(--am-color-text-primary);
+  /* color |  text按钮文字色 */
+  --am-button-text-color: var(--am-color-fill-primary);
+  /* size | 胶囊按钮圆角 */
+  --am-button-capsule-corner: var(--am-corner-radius-circle);
+  /* size | 胶囊按钮水平内间距 */
+  --am-button-capsule-padding-h: var(--am-size-3);
+  /* size | 胶囊按钮垂直内间距 */
+  --am-button-capsule-padding-v: var(--am-size-1);
+  /* font-size | 胶囊按钮大字号 */
+  --am-button-capsule-size-l: var(--am-font-size-subtitle);
+  /* font-size | 胶囊按钮中字号 */
+  --am-button-capsule-size-m: var(--am-font-size-content);
+  /* font-size | 胶囊按钮小字号 */
+  --am-button-capsule-size-s: var(--am-font-size-subcontent);
 
   /* tabs */
   /* size | tab 左右内间距 */
