@@ -1,9 +1,14 @@
 <view class="am-title {{hasLine?'am-title-line':''}} {{className}}">
   <view class="am-title-icon"
-    style="{{xcxPath?'background-image: url(' + xcxPath + ');':''}}"
-    a:if="{{showIcon && xcxPath !== ''}}"></view>
+    style="{{iconURL?'background-image: url(' + iconURL + ');':''}}"
+    a:if="{{iconURL !== ''}}"></view>
   <view class="am-title-text">
     <slot></slot>
+  </view>  
+  <view class="am-title-operation" a:if="{{ type==='arrow' || type==='close' || type==='more' }}" onTap="onClick">
+    <am-icon
+      type="{{type === 'arrow'?type+'-right':type}}"
+      size="17" color="#ccc"
+    ></am-icon>
   </view>
-  <view a:if="{{ type==='arrow' || type==='close' || type==='more' }}" class="am-title-operation am-icon am-icon-{{type === 'arrow'?type+'-right':type}}" onTap="onClick"></view>
 </view>

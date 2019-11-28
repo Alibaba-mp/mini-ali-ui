@@ -2,7 +2,7 @@ const banks = ['网商银行', '建设银行', '工商银行', '浦发银行'];
 
 Page({
   data: {
-    cardNo: '1234****',
+    inputValue: '内容',
     inputFocus: true,
     bank: '',
     name: '',

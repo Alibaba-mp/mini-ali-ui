@@ -161,6 +161,11 @@ Page({
         nameZN: '容器',
         path: '/pages/container/index',
       },
+      {
+        name: 'Form',
+        nameZN: '表单',
+        path: '/pages/form/index',
+      },
     ],
   },
 });

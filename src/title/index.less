@@ -1,8 +1,4 @@
 @import (reference) "../style/themes/default.less";
-@import (reference, optional) "../am-icon/index";
-/* clean-css ignore:start */
-@import (css, optional) "../am-icon/index.acss";
-/* clean-css ignore:end */
 
 .am-title {
   display: flex;
@@ -16,8 +12,8 @@
   &-line {
     margin-bottom: @v-spacing-large;
     margin-bottom: var(--am-title-marginBottom, @v-spacing-large);
-    border-bottom: @border-width-standard solid @color-divider-line;
-    border-bottom: var(--am-title-borderWidth, @border-width-standard) solid var(--am-title-borderColor, @color-divider-line);
+    border-bottom: @border-width-standard solid #e5e5e5;
+    border-bottom: var(--am-title-borderWidth, @border-width-standard) solid #e5e5e5;
   }
   &-icon {
     width: @size-6;
@@ -50,7 +46,4 @@
     margin-left: @h-spacing-standard;
     margin-left: var(--am-title-operation-marginLeft, @h-spacing-standard);
   }
-  .fn_am-icon-arrow-right(--am-title-arrow-right-color, @color-text-weak);
-  .fn_am-icon-close(--am-title-close-color, @color-text-weak);
-  .fn_am-icon-more(--am-title-more-color, @color-text-weak);
 }

@@ -1,8 +1,4 @@
 @import (reference) "../style/themes/default.less";
-@import (reference, optional) "../am-icon/index";
-/* clean-css ignore:start */
-@import (css, optional) "../am-icon/index.acss";
-/* clean-css ignore:end */
 
 .am-notice {
   display: flex;
@@ -48,9 +44,6 @@
     white-space: nowrap;
     vertical-align: middle;
   }
-  .fn_am-icon-voice(--am-notice-color, @color-tangerine-1);
-  .fn_am-icon-arrow-right(--am-notice-color, @color-tangerine-1);
-  .fn_am-icon-close(--am-notice-color, @color-tangerine-1);
   &-operation-text {
     color: @color-text-warning;
     color: var(--am-notice-operation-color, @color-text-warning);
