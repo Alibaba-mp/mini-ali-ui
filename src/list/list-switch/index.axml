@@ -1,5 +1,5 @@
 <view class="am-list-switch-item am-list-switch-{{align}} {{multipleLine ? 'am-list-switch-multiple' : ''}} {{last ? 'last': ''}} {{className}}" 
-	hover-class="{{disabled ? '' : 'am-list-switch-item-hover'}}" 
+	hover-classX="{{disabled ? '' : 'am-list-switch-item-hover'}}" 
 	data-index="{{index}}">
 	<view a:if={{$slots.prefix}} class="am-list-switch-prefix">
 		<slot name="prefix" />

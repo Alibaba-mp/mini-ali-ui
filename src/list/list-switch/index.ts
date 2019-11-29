@@ -24,11 +24,12 @@ Component({
       }
     },
     onItemTap(ev) {
-      const { onClick, disabled } = this.props;
+      const { onClick, disabled, value } = this.props;
       if (onClick && !disabled) {
         onClick({
           index: ev.target.dataset.index,
           target: { dataset: this.dataset },
+          detail: { value: !value },
         });
       }
     },

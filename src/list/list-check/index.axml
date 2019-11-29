@@ -12,6 +12,9 @@
 		<view class="am-list-check-content">
 			<slot />
 		</view>
+		<view>
+			<checkbox value="{{value}}" controlled />
+		</view>
 		<view class="am-list-check-line-bottom" />
 	</view>
 </view>

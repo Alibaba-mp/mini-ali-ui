@@ -1,23 +1,26 @@
-@import "../../style/mixins/hairline.less";
-
-// @list-color: #888;
-// @list-item-hover-color: #f8f8f8;
+@import '../../style/mixins/hairline.less';
 
 .am-list-check {
   &-item {
     display: flex;
     align-items: center;
     background: @color-fill-grey-inverse;
-    background: var(--am-list-item-background, @color-fill-grey-inverse);
+    background: var(--am-list-check-background, @color-fill-grey-inverse);
     padding-left: @h-spacing-large;
-    padding-left: var(--am-list-item-padding, @h-spacing-large);
+    padding-left: var(--am-list-check-padding, @h-spacing-large);
     padding-right: @h-spacing-large;
-    padding-right: var(--am-list-item-padding, @h-spacing-large);
+    padding-right: var(--am-list-check-padding, @h-spacing-large);
     min-height: @size-12;
-    min-height: var(--am-list-item-min-height, @size-12);
+    min-height: var(--am-list-check-min-height, @size-12);
     &-hover {
       // hover 样式
       background-color: #f8f8f8;
+    }
+    .a-icon-success_no_circle {
+      fill: @color-fill-primary;
+    }
+    .a-shared-checkbox {
+      border: 0;
     }
   }
   &-prefix {
@@ -35,20 +38,22 @@
     align-items: center;
     align-self: stretch;
     overflow: hidden;
+    justify-content: space-between;
   }
   &-content {
     line-height: @line-height-paragraph;
-    line-height: var(--am-list-item-line-height, @line-height-paragraph);
+    line-height: var(--am-list-check-line-height, @line-height-paragraph);
     width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    flex-basis: 36%;
+    // flex-basis: 36%;
+    flex-grow: 1;
     // text-align: right;
     color: @color-text-title;
-    color: var(--am-list-item-content-color, @color-text-title);
+    color: var(--am-list-check-content-color, @color-text-title);
     font-size: @font-size-list;
-    font-size: var(--am-list-item-content-font-size, @font-size-list);
+    font-size: var(--am-list-check-content-font-size, @font-size-list);
     // text-align: left;
   }
   &-wrap {
@@ -59,7 +64,7 @@
     }
   }
   &-line-bottom {
-    .hairline("bottom");
+    .hairline('bottom');
   }
   // 子元素垂直对齐
   &-top {
