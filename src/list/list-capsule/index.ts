@@ -6,6 +6,7 @@ Component({
     disabled: false,
     multipleLine: false,
     wrap: false,
+    capsuleContent: '',
   },
   didMount() {
     this._updateDataSet();

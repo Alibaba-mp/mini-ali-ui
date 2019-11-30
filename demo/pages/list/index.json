@@ -5,6 +5,7 @@
     "list-item": "../../es/list/list-item/index",
     "list-switch": "../../es/list/list-switch/index",
     "list-check": "../../es/list/list-check/index",
+    "list-capsule": "../../es/list/list-capsule/index",
     "alphabet": "../../es/list/alphabet/index"
   }
 }

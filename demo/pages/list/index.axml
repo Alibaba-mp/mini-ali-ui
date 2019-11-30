@@ -2,9 +2,6 @@
 	style="position: relative;">
 	<alphabet alphabet="{{[1, 2, 3]}}" />
 	<scroll-view style="height: 80vh;" 
-		
-		
-		
 		scroll-y onScrollToLower="onScrollToLower" 
 		enable-back-to-top="true">
 		<list>
@@ -17,6 +14,7 @@
 					onClick="onSwitchClick" 
 					value="{{switchValues[index]}}" 
 					key="items-{{index}}" 
+					lineTouchable="{{item.lineTouchable}}" 
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
 					<view class="am-list-brief">{{item.brief}}</view>
@@ -24,17 +22,26 @@
 				<list-check a:elif="{{item.actionType ==='check'}}" 
 					index="{{index}}" 
 					onClick="onCheckClick" 
-					value="{{switchValues[index]}}" 
+					value="{{checkValues[index]}}" 
 					key="items-{{index}}" 
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
 				</list-check>
+				<list-capsule a:elif="{{item.actionType ==='capsule'}}" 
+					index="{{index}}" 
+					onClick="onCheckClick" 
+					capsuleContent="{{item.capsuleContent}}"
+					key="items-{{index}}" l
+					last="{{index === (items.length - 1)}}">
+					{{item.title}}
+				</list-capsule>
 				<list-item a:else thumb="{{item.thumb}}" 
 					arrow="{{item.arrow}}" 
 					align="{{item.align}}" 
 					index="{{index}}" 
 					onClick="onItemClick" 
 					key="items-{{index}}" 
+					enforceExtra="{{item.enforceExtra}}" 
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
 					<view class="am-list-brief">{{item.brief}}</view>

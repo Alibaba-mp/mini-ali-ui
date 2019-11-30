@@ -79,28 +79,30 @@ Page({
   data: {
     items: [
       {
-        title: '单行列表',
+        title: '单行列表1',
         extra: '详细信息',
+        arrow: true,
       },
       {
-        title: '单行列表',
+        title: '单行列表2',
         extra: '+20.08',
+        arrow: true,
         enforceExtra: true,
       },
       {
-        title: '单行开关',
+        title: '单行开关3',
         actionType: 'switch',
-        // actionValue: true,
         index: 'switch',
+        lineTouchable: false,
       },
       {
-        title: '单行选项',
+        title: '单行选项4',
         actionType: 'check',
         // actionValue: false,
         index: 'check',
       },
       {
-        title: '单行列表',
+        title: '单行列表5',
         actionType: 'capsule',
         capsuleContent: '胶囊按钮',
       },

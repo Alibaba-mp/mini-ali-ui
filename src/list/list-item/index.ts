@@ -5,14 +5,8 @@ Component({
     disabled: false,
     multipleLine: false,
     wrap: false,
-    type: 'normal', // 'normal' | 'capsule' | 'primary'
-  },
-  data: {
-    typeClassMap: {
-      normal: 'am-list-extra',
-      primary: 'am-list-primary',
-      capsule: 'am-list-capsule',
-    },
+    // type: 'normal', // 'normal' | 'capsule' | 'primary'
+    enforceExtra: false,
   },
   didMount() {
     this._updateDataSet();
@@ -24,7 +18,7 @@ Component({
     _updateDataSet() {
       this.dataset = {};
       for (const key in this.props) {
-        if ((/data-/gi).test(key)) {
+        if (/data-/gi.test(key)) {
           this.dataset[key.replace(/data-/gi, '')] = this.props[key];
         }
       }

@@ -12,7 +12,7 @@
 		<view class="am-list-content">
 			<slot />
 		</view>
-		<view a:if={{$slots.extra}} class="{{typeClassMap[type]}}">
+		<view a:if={{$slots.extra}} class="{{enforceExtra ? 'am-list-primary' : 'am-list-extra'}}">
 			<slot name="extra" />
 		</view>
 		<view a:if={{arrow}} class="am-list-arrow" />

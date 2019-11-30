@@ -1,5 +1,6 @@
 <view class="am-list-switch-item am-list-switch-{{align}} {{multipleLine ? 'am-list-switch-multiple' : ''}} {{last ? 'last': ''}} {{className}}" 
-	hover-classX="{{disabled ? '' : 'am-list-switch-item-hover'}}" 
+	hover-class="{{!disabled && lineTouchable ? 'am-list-switch-item-hover' : ''}}" 
+	onTap="onTapLine" 
 	data-index="{{index}}">
 	<view a:if={{$slots.prefix}} class="am-list-switch-prefix">
 		<slot name="prefix" />
@@ -11,8 +12,11 @@
 		<view class="am-list-switch-content">
 			<slot />
 		</view>
-		<view class="am-list-switch-scene {{value ? 'am-list-switch-scene-on' : ''}}" onTap="onItemTap" data-index="{{index}}">
-			<view class="am-list-switch-protagonist {{value ? 'am-list-switch-on' : 'am-list-switch-off'}}" data-index="{{index}}" />
+		<view class="am-list-switch-scene {{value ? 'am-list-switch-scene-on' : ''}}" 
+			catchTouchStart="onItemTap" 
+			data-index="{{index}}">
+			<view class="am-list-switch-protagonist {{value ? 'am-list-switch-on' : 'am-list-switch-off'}}" 
+				data-index="{{index}}" />
 		</view>
 		<view class="am-list-switch-line-bottom" />
 	</view>
