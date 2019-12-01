@@ -1,6 +1,8 @@
 <view class="dyt-list" 
 	style="position: relative;">
-	<alphabet alphabet="{{[1, 2, 3]}}" />
+	<alphabet alphabet="{{alphabet}}" >
+		<!-- <view slot="prefix">🏄‍♀️</view> -->
+	</alphabet>
 	<scroll-view style="height: 80vh;" 
 		scroll-y onScrollToLower="onScrollToLower" 
 		enable-back-to-top="true">

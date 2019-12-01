@@ -1,0 +1,23 @@
+<view class="am-alphabet">
+	<view class="am-alphabet-item am-alphabet-{{align}} {{last ? 'last': ''}} {{className}}" 
+		data-index="{{index}}">
+		<view class="am-alphabet-content">
+			<view style="text-align: center;">
+				<slot name="prefix" />
+			</view>
+			<view a:for="{{alphabet}}" 
+				hover-class="am-alphabet-letter-chosen" 
+				data-index="{{index}}" 
+				onTap="onItemTap" 
+				onTouchStart="onTouchStart"
+				onTouchEnd="onTouchEnd"
+				class="am-alphabet-letter">
+				<view>{{ item }}</view>
+				<view class="am-alphabet-bubble" 
+					a:if="{{current === index}}">
+					<view>{{item}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

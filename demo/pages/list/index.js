@@ -272,6 +272,16 @@ Page({
     },
     checkValues: {},
   },
+  onLoad() {
+    const charCode = 65;
+    const charList = [];
+    for (let i = 0; i < 26; i++) {
+      charList.push(String.fromCharCode(charCode + i));
+    }
+    this.setData({
+      alphabet: charList,
+    });
+  },
   onItemClick(ev) {
     if (ev.detail && ev.index === 'check') {
       this.setData({
