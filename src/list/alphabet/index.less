@@ -51,10 +51,6 @@
   &-item {
     min-height: @size-12;
     min-height: var(--am-alphabet-min-height, @size-12);
-    &-hover {
-      // hover 样式
-      background-color: #f8f8f8;
-    }
   }
   &-line {
     position: relative;
@@ -76,12 +72,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     text-align: center;
-  }
-  &-primary {
-    color: @color-text-title;
-    color: var(--am-alphabet-content-color, @color-text-title);
-    font-size: @font-size-list;
-    font-size: var(--am-alphabet-content-font-size, @font-size-list);
   }
 
   &-wrap {
