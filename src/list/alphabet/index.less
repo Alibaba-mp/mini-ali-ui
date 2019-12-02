@@ -11,7 +11,7 @@
   &-letter {
     text-align: center;
     font-size: @font-size-weak;
-    font-size: var(--am-alphabet-letter-size, @font-size-weak);
+    font-size: var(--am-alphabet-letter-font-size, @font-size-weak);
     color: @color-text-subtitle;
     color: var(--am-alphabet-letter-color, @color-text-subtitle);
     height: @size-4;
@@ -33,14 +33,17 @@
   }
   &-bubble {
     color: @color-text-base;
+    color: var(--am-alphabet-bubble-color, @color-text-base);
     position: absolute;
     right: 40px;
     height: 47px;
     width: 47px;
     border-radius: @corner-radius-circle;
     background: @color-fill-grey-base;
+    background: var(--am-alphabet-bubble-background, @color-fill-grey-base);
     top: -17px;
     font-size: @font-size-stress;
+    font-size: var(--am-alphabet-bubble-font-size, @font-size-stress);
     display: flex;
     align-items: center;
     justify-content: center;

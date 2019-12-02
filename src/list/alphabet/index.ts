@@ -30,7 +30,7 @@ Component({
 
       if (onClick && !disabled) {
         onClick({
-          index: ev.target.dataset.index,
+          data: ev.target.dataset,
           target: { dataset: this.dataset },
         });
       }

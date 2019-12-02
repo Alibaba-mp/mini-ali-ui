@@ -334,4 +334,9 @@ Page({
       });
     }
   },
+  onAlphabetClick(ev) {
+    my.alert({
+      content: JSON.stringify(ev.data),
+    });
+  },
 });
