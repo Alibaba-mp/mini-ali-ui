@@ -1,3 +1,4 @@
+// list-switch必须是受控的
 Component({
   props: {
     className: '',
@@ -5,8 +6,10 @@ Component({
     disabled: false,
     multipleLine: false,
     wrap: false,
-    // type: 'normal', // 'normal' | 'capsule' | 'primary'
-    enforceExtra: false,
+    value: false,
+    disable: false,
+    lineTouchable: false, // 是否可以点击整行互动
+    index: undefined,
   },
   didMount() {
     this._updateDataSet();
@@ -23,13 +26,22 @@ Component({
         }
       }
     },
-    onItemTap(ev) {
-      const { onClick, disabled } = this.props;
+    onChange() {
+      const { onClick, disabled, value, index } = this.props;
       if (onClick && !disabled) {
         onClick({
-          index: ev.target.dataset.index,
+          index,
           target: { dataset: this.dataset },
+          detail: { value: !value },
         });
+      }
+    },
+    onItemTap() {
+      this.onChange();
+    },
+    onTapLine() {
+      if (this.props.lineTouchable) {
+        this.onChange();
       }
     },
   },

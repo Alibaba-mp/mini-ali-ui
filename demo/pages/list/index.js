@@ -1,6 +1,7 @@
 const newitems = [
   {
-    thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
+    thumb:
+      'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
     title: '固定到头部',
     arrow: true,
     sticky: true,
@@ -78,8 +79,32 @@ Page({
   data: {
     items: [
       {
-        title: '单行列表',
+        title: '单行列表1',
         extra: '详细信息',
+        arrow: true,
+      },
+      {
+        title: '单行列表2',
+        extra: '+20.08',
+        arrow: true,
+        enforceExtra: true,
+      },
+      {
+        title: '单行开关3',
+        actionType: 'switch',
+        index: 'switch',
+        lineTouchable: false,
+      },
+      {
+        title: '单行选项4',
+        actionType: 'check',
+        // actionValue: false,
+        index: 'check',
+      },
+      {
+        title: '单行列表5',
+        actionType: 'capsule',
+        capsuleContent: '胶囊按钮',
       },
     ],
     items2: [
@@ -150,6 +175,7 @@ Page({
         thumb: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',
         title: '标题文字',
         brief: '描述信息',
+        arrow: true,
       },
       {
         thumb: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',
@@ -162,7 +188,8 @@ Page({
     ],
     items5: [
       {
-        thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
+        thumb:
+          'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
         title: '固定到头部',
         brief: '描述信息',
         arrow: true,
@@ -179,12 +206,14 @@ Page({
         align: 'top',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
         align: 'bottom',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
         align: 'top',
       },
@@ -193,11 +222,13 @@ Page({
         arrow: true,
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
         align: 'top',
       },
@@ -206,11 +237,13 @@ Page({
         arrow: true,
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
         align: 'top',
       },
@@ -219,25 +252,66 @@ Page({
         arrow: true,
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
         align: 'middle',
       },
     ],
     loadMore: '',
-    loadContent: [
-      '马不停蹄加载更多数据中...',
-      '-- 已经到底了，加不了咯 --',
-    ],
+    loadContent: ['马不停蹄加载更多数据中...', '-- 已经到底了，加不了咯 --'],
     maxList: 5,
+    switchValues: {
+      // switch: true,
+      // check: false,
+    },
+    checkValues: {},
+  },
+  onLoad() {
+    const charCode = 65;
+    const charList = [];
+    for (let i = 0; i < 26; i++) {
+      charList.push(String.fromCharCode(charCode + i));
+    }
+    this.setData({
+      alphabet: charList,
+    });
   },
   onItemClick(ev) {
-    my.alert({
-      content: `点击了第${ev.index}行`,
+    if (ev.detail && ev.index === 'check') {
+      this.setData({
+        actionValues: {
+          ...this.data.actionValues,
+          [ev.index]: ev.detail.value,
+        },
+      });
+    } else {
+      my.alert({
+        content: `点击了第${ev.index}行`,
+      });
+    }
+  },
+  onSwitchClick(ev) {
+    // debugger;
+    this.setData({
+      switchValues: {
+        ...this.data.actionValues,
+        [ev.index]: ev.detail.value,
+      },
+    });
+  },
+  onCheckClick(ev) {
+    // debugger;
+    this.setData({
+      checkValues: {
+        ...this.data.actionValues,
+        [ev.index]: ev.detail.value,
+      },
     });
   },
   onScrollToLower() {
@@ -259,5 +333,10 @@ Page({
         loadMore: 'over',
       });
     }
+  },
+  onAlphabetClick(ev) {
+    my.alert({
+      content: JSON.stringify(ev.data),
+    });
   },
 });

@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Alphabet",
+  "usingComponents":{
+    "alphabet": "../../es/list/alphabet/index"
+  }
+}

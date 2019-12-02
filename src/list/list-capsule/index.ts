@@ -1,3 +1,4 @@
+// 必须是受控的
 Component({
   props: {
     className: '',
@@ -5,8 +6,7 @@ Component({
     disabled: false,
     multipleLine: false,
     wrap: false,
-    // type: 'normal', // 'normal' | 'capsule' | 'primary'
-    enforceExtra: false,
+    capsuleContent: '',
   },
   didMount() {
     this._updateDataSet();
@@ -24,11 +24,15 @@ Component({
       }
     },
     onItemTap(ev) {
-      const { onClick, disabled } = this.props;
+      const { onClick, disabled, value } = this.props;
       if (onClick && !disabled) {
         onClick({
           index: ev.target.dataset.index,
           target: { dataset: this.dataset },
+          detail: {
+            // ...(value !== undefined ? { value: !value } : {}),
+            value: !value,
+          },
         });
       }
     },

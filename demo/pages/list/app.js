@@ -17,6 +17,11 @@ Page({
         path: '/pages/am-icon/index',
       },
       {
+        name: 'Alphabet',
+        nameZN: '字母检索表',
+        path: '/pages/alphabet/index',
+      },
+      {
         name: 'Badge',
         nameZN: '徽标',
         path: '/pages/badge/index',

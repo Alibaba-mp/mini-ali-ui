@@ -5,8 +5,10 @@ Component({
     disabled: false,
     multipleLine: false,
     wrap: false,
-    // type: 'normal', // 'normal' | 'capsule' | 'primary'
-    enforceExtra: false,
+    alphabet: [],
+  },
+  data: {
+    current: -1,
   },
   didMount() {
     this._updateDataSet();
@@ -25,12 +27,26 @@ Component({
     },
     onItemTap(ev) {
       const { onClick, disabled } = this.props;
+
       if (onClick && !disabled) {
         onClick({
-          index: ev.target.dataset.index,
+          data: ev.target.dataset,
           target: { dataset: this.dataset },
         });
       }
+    },
+    onTouchStart(ev) {
+      const { disabled } = this.props;
+      if (!disabled) {
+        this.setData({
+          current: ev.target.dataset.index,
+        });
+      }
+    },
+    onTouchEnd() {
+      this.setData({
+        current: -1,
+      });
     },
   },
 });

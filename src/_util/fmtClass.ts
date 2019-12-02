@@ -1,5 +1,6 @@
 const hasOwn = {}.hasOwnProperty;
 
+/* eslint-disable no-continue, prefer-spread */
 export default function fmtClass(...args) {
   const classes = [];
 
