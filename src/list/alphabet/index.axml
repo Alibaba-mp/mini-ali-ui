@@ -14,6 +14,7 @@
 				data-index="{{index}}" 
 				data-item="{{item}}" 
 				onTap="onItemTap" 
+				onLongTap="onItemTap" 
 				onTouchStart="onTouchStart" 
 				onTouchEnd="onTouchEnd" 
 				class="am-alphabet-letter">
