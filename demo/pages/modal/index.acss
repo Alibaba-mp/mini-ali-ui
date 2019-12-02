@@ -1,0 +1,7 @@
+.deleteBtn {
+  color: #f93a4a;
+  font-weight: bolder;
+}
+.cancelBtn {
+  color: #ccc;
+}

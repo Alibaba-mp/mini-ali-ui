@@ -22,6 +22,11 @@ Page({
         path: '/pages/badge/index',
       },
       {
+        name: 'Button',
+        nameZN: '按钮',
+        path: '/pages/button/index',
+      },
+      {
         name: 'FaceDetection',
         nameZN: '人脸检测',
         path: '/pages/face-detection/index',
@@ -155,6 +160,11 @@ Page({
         name: 'Container',
         nameZN: '容器',
         path: '/pages/container/index',
+      },
+      {
+        name: 'Form',
+        nameZN: '表单',
+        path: '/pages/form/index',
       },
     ],
   },

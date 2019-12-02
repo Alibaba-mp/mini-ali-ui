@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Button",
+  "usingComponents": {
+    "button": "../../es/button/index",
+    "container": "../../es/container/index"
+  }
+}

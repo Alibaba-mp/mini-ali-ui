@@ -45,4 +45,9 @@ Page({
       },
     });
   },
+  onSend() {
+    my.alert({
+      title: 'verify code sent',
+    });
+  },
 });

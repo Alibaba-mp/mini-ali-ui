@@ -1,0 +1,24 @@
+<view class="am-multi-liner-item {{last ? 'last': ''}} {{className}}">
+  <view class="am-multi-liner-line">
+    <textarea enableNative="{{enableNative}}" 
+      sync-input="{{syncInput}}" 
+      class="am-multi-liner-content {{inputCls}}" 
+      value="{{value}}" 
+      name="{{name}}" 
+      type="{{type}}" 
+      password="{{password}}" 
+      placeholder="{{placeholder}}" 
+      placeholderClass="am-input-placeholder-base {{placeholderClass}}" 
+      placeholderStyle="{{placeholderStyle}}" 
+      disabled="{{disabled}}" 
+      maxlength="{{maxlength}}" 
+      show-count="{{showCount}}" 
+      auto-height="{{autoHeight}}" 
+      focus="{{focus}}" 
+      onInput="onInput" 
+      onConfirm="onConfirm" 
+      onFocus="onFocus" 
+      onBlur="onBlur" />
+  </view>
+  <view class="am-multi-liner-line-bottom" />
+</view>

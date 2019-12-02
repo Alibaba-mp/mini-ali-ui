@@ -1,16 +1,18 @@
-<view>
+<view style="padding: 12px;">
   <tabs
     tabs="{{tabs}}"
-    showPlus="{{true}}"
     onTabClick="handleTabClick"
     onChange="handleTabChange"
     onPlusClick="handlePlusClick"
     activeTab="{{activeTab}}"
+    showPlus="{{true}}"
     swipeable="{{false}}"
+    capsule="{{true}}"
+    hasSubTitle="{{true}}"
   >
     <block a:for="{{tabs}}">
-      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 1}}">
-        <view class="tab-content" style="height: 100px;">高度为 100px {{item.title}}</view>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 0}}">
+        <view class="tab-content" style="height: 300px;">高度为 300px {{item.title}}</view>
       </tab-content>
       <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 2}}">
         <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
@@ -18,6 +20,9 @@
       <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:else>
         <view class="tab-content">content of {{item.title}}</view>
       </tab-content>
+      <!-- <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}">
+        <view class="tab-content" style="height: 200px;">高度为 100px {{item.title}}</view>
+      </tab-content> -->
     </block>
   </tabs>
 </view>
