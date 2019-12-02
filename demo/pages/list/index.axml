@@ -1,8 +1,8 @@
 <view class="dyt-list" 
 	style="position: relative;">
-	<alphabet alphabet="{{alphabet}}" onClick="onAlphabetClick" >
+	<!-- <alphabet alphabet="{{alphabet}}" onClick="onAlphabetClick" >
 		<view slot="prefix"><icon size="{{11}}" type="success"/></view>
-	</alphabet>
+	</alphabet> -->
 	<scroll-view style="height: 80vh;" 
 		scroll-y onScrollToLower="onScrollToLower" 
 		enable-back-to-top="true">

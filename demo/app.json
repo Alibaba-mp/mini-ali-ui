@@ -54,7 +54,8 @@
     "pages/pagination/index",
     "pages/collapse/index",
     "pages/title/index",
-    "pages/container/index"
+    "pages/container/index",
+    "pages/alphabet/index"
   ],
   "window": {
     "enableWK": "YES",
