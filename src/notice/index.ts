@@ -6,9 +6,11 @@ Component({
     className: '',
     mode: '', // closable,link
     action: '', // 文本按钮
+    actionLeft: '', // 文本按钮
     show: true, // 是否显示
     enableMarquee: false, // 是否开启marquee
     onClick: () => { },
+    onClickLeft: () => { },
     marqueeProps: {
       loop: false,
       leading: 500,
@@ -17,6 +19,7 @@ Component({
     },
     actionCls: '',
     showIcon: 'true',
+    type: 'normal', // 通告栏类型： normal/error/active
   },
   data: {
     animatedWidth: 0,
@@ -153,16 +156,23 @@ Component({
     },
 
     onNoticeTap() {
-      const { mode, onClick } = this.props;
-      if (mode === 'link' && typeof onClick === 'function') {
+      const { mode, actionLeft, onClick } = this.props;
+      if (mode === 'link' && actionLeft === '' && typeof onClick === 'function') {
         onClick();
       }
     },
 
     onOperationTap() {
-      const { mode, onClick } = this.props;
-      if (mode === 'closable' && typeof onClick === 'function') {
+      const { mode, action, onClick } = this.props;
+      if ((mode || action !== '') && typeof onClick === 'function') {
         onClick();
+      }
+    },
+
+    onActionLeftTap() {
+      const { actionLeft, onClickLeft } = this.props;
+      if (actionLeft !== '' && typeof onClickLeft === 'function') {
+        onClickLeft();
       }
     },
   },

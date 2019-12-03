@@ -10,17 +10,72 @@
   color: var(--am-notice-color, @color-tangerine-1);
   background-color: @color-golden-3;
   background-color: var(--am-notice-bgc, @color-golden-3);
-  border: @border-width-standard solid @color-golden-2;
-  border: var(--am-notice-borderWidth, @border-width-standard) solid var(--am-notice-borderColor, @color-golden-2);
-  border-radius: @corner-radius-lg;
-  border-radius: var(--am-notice-borderRadius, @corner-radius-lg);
+  border-style: solid;
+  border-color: @color-golden-2;
+  border-color: var(--am-notice-borderColor, @color-golden-2);
+  border-width: @border-width-standard 0;
+  border-width: var(--am-notice-borderWidth, @border-width-standard) 0;
   box-sizing: border-box;
+  &-scroll-left,
+  &-scroll-right {
+    width: 22px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    background-size: 100%;
+    pointer-events: none;
+  }
+  &-scroll-left {
+    left: 0;
+    background: linear-gradient(to right, @color-golden-3, rgba(255, 255, 255, 0)) left no-repeat;
+    background: linear-gradient(to right, var(--am-notice-bgc, @color-golden-3), rgba(255, 255, 255, 0)) left no-repeat;
+  }
+  &-scroll-right {
+    right: 0;
+    background: linear-gradient(to left, @color-golden-3, rgba(255, 255, 255, 0)) left no-repeat;
+    background: linear-gradient(to left, var(--am-notice-bgc, @color-golden-3), rgba(255, 255, 255, 0)) left no-repeat;
+  }
+
+  &-error {
+    color: @color-text-base;
+    color: var(--am-notice-error-color, @color-text-base);
+    border-color: @color-golden-2;
+    border-color: var(--am-notice-error-borderColor, @color-golden-2);
+    background-color: @color-fill-warning;
+    background-color: var(--am-notice-error-bgc, @color-fill-warning);
+    &-scroll-left {
+      background: linear-gradient(to right, @color-fill-warning, rgba(255, 255, 255, 0)) left no-repeat;
+      background: linear-gradient(to right, var(--am-notice-error-bgc, @color-fill-warning), rgba(255, 255, 255, 0)) left no-repeat;
+    }
+    &-scroll-right {
+      background: linear-gradient(to left, @color-fill-warning, rgba(255, 255, 255, 0)) left no-repeat;
+      background: linear-gradient(to left, var(--am-notice-error-bgc, @color-fill-warning), rgba(255, 255, 255, 0)) left no-repeat;
+    }
+  }
+  &-active {
+    color: @color-text-primary;
+    color: var(--am-notice-active-color, @color-text-primary);
+    border-color: tint(@color-fill-primary, 72%);
+    border-color: var(--am-notice-active-borderColor, tint(@color-fill-primary, 72%));
+    background-color: tint(@color-fill-primary, 80%);
+    background-color: var(--am-notice-active-bgc, tint(@color-fill-primary, 80%));
+    &-scroll-left {
+      background: linear-gradient(to right, tint(@color-fill-primary, 80%), rgba(255, 255, 255, 0)) left no-repeat;
+      background: linear-gradient(to right, var(--am-notice-active-bgc, tint(@color-fill-primary, 80%)), rgba(255, 255, 255, 0)) left no-repeat;
+    }
+    &-scroll-right {
+      background: linear-gradient(to left, tint(@color-fill-primary, 80%), rgba(255, 255, 255, 0)) left no-repeat;
+      background: linear-gradient(to left, var(--am-notice-active-bgc, tint(@color-fill-primary, 80%)), rgba(255, 255, 255, 0)) left no-repeat;
+    }
+  }
   &-thumb {
     margin-right: @h-spacing-standard;
     margin-right: var(--am-notice-thumb-marginRight, @h-spacing-standard);
   }
 
   &-content {
+    position: relative;
     flex: 1;
     width: 100%;
     overflow: hidden;
@@ -32,10 +87,14 @@
   }
 
   &-operation {
+    display: flex;
     margin-left: @h-spacing-standard;
     margin-left: var(--am-notice-operation-marginLeft, @h-spacing-standard);
     font-size: @font-size-subtitle;
     font-size: var(--am-notice-operation-FontSize, @font-size-subtitle);
+    &-left {
+      margin-right: @h-spacing-standard;
+    }
   }
 
   &-marquee {
@@ -44,8 +103,8 @@
     white-space: nowrap;
     vertical-align: middle;
   }
-  &-operation-text {
-    color: @color-text-warning;
-    color: var(--am-notice-operation-color, @color-text-warning);
-  }
+  // &-operation-text {
+  //   color: @color-text-warning;
+  //   color: var(--am-notice-operation-color, @color-text-warning);
+  // }
 }
