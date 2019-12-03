@@ -7,6 +7,7 @@ Component({
     topImageSize: 'md',
     showClose: true,
     closeType: '0',
+    mask: true,
     buttonsLayout: 'horizontal',
     disableScroll: true,
   },
@@ -24,18 +25,21 @@ Component({
     }
   },
   methods: {
+    // footer点击
     _onModalClick() {
       const { onModalClick } = this.props;
       if (onModalClick) {
         onModalClick();
       }
     },
+    // buttons点击
     _onButtonClick(e) {
       const { onButtonClick } = this.props;
       if (onButtonClick) {
         onButtonClick(e);
       }
     },
+    // 关闭按钮点击
     _onModalClose() {
       const { onModalClose } = this.props;
       if (onModalClose) {
