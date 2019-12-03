@@ -1,5 +1,5 @@
 <view class="demo-title">NoticeBar 通告栏</view>
-<view class="demo-item">
+<!-- <view class="demo-item">
   <notice
     enableMarquee="{{true}}"
     marqueeProps="{{marqueeProps}}"
@@ -37,7 +37,66 @@
     show="{{closeShow}}">
     因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
   </notice>
+</view> -->
+<view class="demo-item">
+  <notice
+    marqueeProps="{{marqueeProps}}"
+    enableMarquee="{{true}}"
+    show="{{closeShow}}"
+    type="{{noticeType}}"
+    mode="{{noticeMode}}"
+    action="{{actionText}}"
+    onClick="actionClick"
+    actionLeft="{{actionLeftText}}"
+    onClickLeft="linkActionClick">
+    无限循环滚动的通告栏展示情况。文字不够继续添加文字凑数。
+  </notice>
 </view>
+<view class="demo-item">
+  <notice
+    enableMarquee="{{true}}"
+    show="{{closeShow}}"
+    type="{{noticeType}}"
+    mode="{{noticeMode}}"
+    action="{{actionText}}"
+    onClick="actionClick"
+    actionLeft="{{actionLeftText}}"
+    onClickLeft="linkActionClick">
+    滚动一次的通告栏展示情况。文字不够继续添加文字凑数。
+  </notice>
+</view>
+<view class="demo-item">
+  <notice
+    show="{{closeShow}}"
+    type="{{noticeType}}"
+    mode="{{noticeMode}}"
+    action="{{actionText}}"
+    onClick="actionClick"
+    actionLeft="{{actionLeftText}}"
+    onClickLeft="linkActionClick">
+    不滚动的通告栏展示情况。
+  </notice>
+</view>
+
+<view class="demo-title">type: </view>
+<radio-group class="radio-group" onChange="typeChange" name="type">
+  <label class="radio" a:for="{{type}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
+
+<view class="demo-title">mode: </view>
+<radio-group class="radio-group" onChange="modeChange" name="mode">
+  <label class="radio" a:for="{{mode}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
+<input placeholder="右边的文字" value="{{actionText?actionText:''}}" onInput="getRightText" />
+<input placeholder="左边的文字" a:if="{{actionText !== '' || noticeMode !== ''}}" onInput="getLeftText" />
+
+<!-- 
 <view class="demo-item">
   <notice
     mode="link"
@@ -56,3 +115,38 @@
     因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
   </notice>
 </view>
+
+<view class="demo-item">
+  <notice
+    mode="closable"
+    enableMarquee="{{true}}"
+    marqueeProps="{{marqueeProps}}"
+    onClick="closableClick"
+    type="error"
+    show="{{closeShow}}">
+    因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
+  </notice>
+</view>
+
+<view class="demo-item">
+  <notice
+    mode="closable"
+    enableMarquee="{{true}}"
+    marqueeProps="{{marqueeProps}}"
+    onClick="closableClick"
+    type="active"
+    show="{{closeShow}}">
+    因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
+  </notice>
+</view>
+
+
+<view class="demo-item">
+  <notice
+    mode="closable"
+    onClick="closableClick"
+    detailPath="pages/list/app"
+    >
+    因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
+  </notice>
+</view> -->

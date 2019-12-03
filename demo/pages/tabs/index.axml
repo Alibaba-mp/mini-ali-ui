@@ -7,7 +7,7 @@
     activeTab="{{activeTab}}"
     showPlus="{{true}}"
     swipeable="{{false}}"
-    capsule="{{false}}"
+    capsule="{{true}}"
     hasSubTitle="{{false}}"
   >
     <block a:for="{{tabs}}">

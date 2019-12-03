@@ -8,35 +8,66 @@ Page({
       trailing: 800,
       fps: 40,
     },
+    type: [
+      { name: 'normal', value: 'normal', checked: true },
+      { name: 'error', value: 'error' },
+      { name: 'active', value: 'active' },
+    ],
+    noticeType: 'normal',
+    mode: [
+      { name: '', value: '无', checked: true },
+      { name: 'link', value: '箭头' },
+      { name: 'closable', value: '关闭' },
+    ],
+    noticeMode: '',
+    actionText: '',
+    actionLeftText: '',
   },
-  linkClick() {
-    my.showToast({
-      content: '你点击了图标Link NoticeBar',
-      duration: 3000,
-    });
-  },
-  closableClick() {
+  getContent(e) {
     this.setData({
-      closeShow: false,
+      noticeContent: e.detail.value,
     });
-    my.showToast({
-      content: '你点击了图标close NoticeBar',
-      duration: 3000,
+  },
+  typeChange(e) {
+    this.setData({
+      noticeType: e.detail.value,
+    });
+  },
+  modeChange(e) {
+    this.setData({
+      noticeMode: e.detail.value,
+    });
+    if (e.detail.value !== '') {
+      this.setData({
+        actionText: '',
+      });
+    } else {
+      this.setData({
+        actionText: '',
+        actionLeftText: '',
+      });
+    }
+  },
+  getRightText(e) {
+    this.setData({
+      actionText: e.detail.value,
+    });
+  },
+  getLeftText(e) {
+    this.setData({
+      actionLeftText: e.detail.value,
     });
   },
   linkActionClick() {
     my.showToast({
-      content: '你点击了文本Link NoticeBar',
-      duration: 3000,
+      content: '左侧操作区被点击了',
+      duration: 1000,
     });
   },
-  closableActionClick() {
-    this.setData({
-      closeActionShow: false,
-    });
+  actionClick() {
     my.showToast({
-      content: '你点击了文本close NoticeBar',
-      duration: 3000,
+      content: '你点击了右侧操作区',
+      duration: 1000,
     });
   },
 });
