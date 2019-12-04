@@ -11,3 +11,7 @@
 .nomore-notice {
   color: #999;
 }
+.itemSize {
+  width: 30px;
+  height: 30px;
+}

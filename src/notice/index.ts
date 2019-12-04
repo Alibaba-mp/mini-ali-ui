@@ -17,9 +17,10 @@ Component({
       trailing: 800,
       fps: 40,
     },
-    actionCls: '',
-    showIcon: 'true',
+    capsuleItem: [],
+    showIcon: true,
     type: 'normal', // 通告栏类型： normal/error/active
+    capsule: false, // 是否为胶囊型通告栏
   },
   data: {
     animatedWidth: 0,
@@ -156,8 +157,8 @@ Component({
     },
 
     onNoticeTap() {
-      const { mode, actionLeft, onClick } = this.props;
-      if (mode === 'link' && actionLeft === '' && typeof onClick === 'function') {
+      const { capsule, mode, action, actionLeft, onClick } = this.props;
+      if ((capsule && typeof onClick === 'function') || (mode === 'link' && actionLeft === '' && action === '' && typeof onClick === 'function')) {
         onClick();
       }
     },

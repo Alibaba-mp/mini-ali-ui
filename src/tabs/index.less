@@ -29,12 +29,14 @@
 
   &-scroll-left {
     left: 0;
-    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0)) left no-repeat;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
   }
 
   &-scroll-right {
     right: 0;
-    background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0)) left no-repeat;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
   }
 
   &-bar-content {
