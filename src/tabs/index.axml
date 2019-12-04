@@ -11,8 +11,8 @@
           scroll-with-animation="{{animation}}"
           onScroll="showLeftShadow"
           class="am-tabs-bar-content">
-          <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"></view>
-          <view class="am-tabs-scroll-right"></view>
+          <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"  style="background-color: {{tabBarBackgroundColor}};"></view>
+          <view class="am-tabs-scroll-right"  style="background-color: {{tabBarBackgroundColor}};"></view>
           <block a:for="{{tabs}}">
             <view
               id="tabs-item-{{index}}"

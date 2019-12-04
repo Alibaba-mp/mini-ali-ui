@@ -1,4 +1,4 @@
-<view class="am-notice {{className}} {{type ==='normal'?'':'am-notice-'+type}}" a:if="{{show}}" onTap="onNoticeTap">
+<view class="am-notice {{className}} {{type ==='normal'?'':'am-notice-'+type}}" a:if="{{show && capsule !== true}}" onTap="onNoticeTap">
   <view class="am-notice-thumb" a:if="{{showIcon}}">
     <am-icon a:if="{{type === 'error'}}" type="help1" size="17"></am-icon>
     <am-icon a:else type="voice" size="17"></am-icon>
@@ -35,6 +35,18 @@
     </view>
     <view a:elif="{{mode=='link' && actionLeft !==''}}" onTap="onOperationTap">
       <am-icon type="arrow-right" size="17"></am-icon>
+    </view>
+  </view>
+</view>
+<view class="am-notice-capsule-wrap" a:elif="{{show && capsule}}" onTap="onNoticeTap">
+  <view class="am-notice am-notice-capsule {{className}} {{type ==='normal'?'':'am-notice-'+type}}">
+    <view class="am-notice-capsule-item" a:if="{{capsuleItem.length > 0}}">
+      <block a:for="{{capsuleItem}}">
+        <image a:if="{{index <= 2}}" src="{{item}}" class="am-notice-capsule-img" />
+      </block>
+    </view>
+    <view class="am-notice-capsule-content am-notice-content-{{$id}}">
+      <slot></slot>
     </view>
   </view>
 </view>

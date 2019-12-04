@@ -8,6 +8,25 @@ Page({
       trailing: 800,
       fps: 40,
     },
+    capsuleItem: [],
+    capsuleItemList: [
+      {
+        name: 'https://img.alicdn.com/tfs/TB1yTvnfQY2gK0jSZFgXXc5OFXa-145-145.png',
+        value: 'https://img.alicdn.com/tfs/TB1yTvnfQY2gK0jSZFgXXc5OFXa-145-145.png',
+      },
+      {
+        name: 'https://img.alicdn.com/tfs/TB1egTmfNz1gK0jSZSgXXavwpXa-145-145.png',
+        value: 'https://img.alicdn.com/tfs/TB1egTmfNz1gK0jSZSgXXavwpXa-145-145.png',
+      },
+      {
+        name: 'https://img.alicdn.com/tfs/TB1l36mfQP2gK0jSZPxXXacQpXa-145-145.png',
+        value: 'https://img.alicdn.com/tfs/TB1l36mfQP2gK0jSZPxXXacQpXa-145-145.png',
+      },
+      {
+        name: 'https://img.alicdn.com/tfs/TB1uCUdfND1gK0jSZFyXXciOVXa-151-164.png',
+        value: 'https://img.alicdn.com/tfs/TB1uCUdfND1gK0jSZFyXXciOVXa-151-164.png',
+      },
+    ],
     type: [
       { name: 'normal', value: 'normal', checked: true },
       { name: 'error', value: 'error' },
@@ -22,6 +41,11 @@ Page({
     noticeMode: '',
     actionText: '',
     actionLeftText: '',
+  },
+  capsuleItemChange(e) {
+    this.setData({
+      capsuleItem: e.detail.value,
+    });
   },
   getContent(e) {
     this.setData({
