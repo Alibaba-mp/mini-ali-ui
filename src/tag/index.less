@@ -1,0 +1,50 @@
+@import (reference) "../style/themes/default.less";
+
+.am-tag {
+  display: inline;
+  align-items: center;
+  padding: 1px 4px 2px;
+  // padding: 4px var(--am-tag-padding, @v-spacing-standard);
+  font-size: @font-size-subtitle;
+  font-size: var(--am-tag-text-fontSize, @font-size-subtitle);
+  color: @color-text-base;
+  color: var(--am-tag-text-color, @color-text-base);
+  border-radius: @corner-radius-sm;
+  &-bgBlue {
+    background: @color-fill-primary;
+    background: var(--am-tag-bg-Blue, @color-fill-primary);
+  }
+  &-bgOrange {
+    background: @color-orange-1;
+    background: var(--am-tag-bg-Blue, @color-orange-1);
+  }
+  &-bgGreen {
+    background: @color-pomonagreen-1;
+    background: var(--am-tag-bg-Blue, @color-pomonagreen-1);
+  }
+  &-bgRed {
+    background: @color-tangerine-1;
+    background: var(--am-tag-bg-Blue, @color-tangerine-1);
+  }
+  &-icon {
+    width: @size-6;
+    width: var(--am-tag-icon-width, @size-6);
+    height: @size-6;
+    height: var(--am-tag-icon-height, @size-6);
+    overflow: hidden;
+    margin-right: @h-spacing-standard;
+    margin-right: var(--am-tag-icon-marginRight, @h-spacing-standard);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  &-text {
+    flex: 1;
+    display: inline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: @font-size-subcontent;
+    font-size: var(--am-tag-text-font-size, @font-size-subcontent);
+  }
+}

@@ -1,0 +1,6 @@
+<view class="container">
+  <tag type="primary">标签</tag>
+  <tag type="warning">标签</tag>
+  <tag type="danger">标签</tag>
+  <tag type="success">标签</tag>
+</view>
