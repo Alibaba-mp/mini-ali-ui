@@ -18,6 +18,7 @@
 			<view class="am-list-switch-protagonist {{value ? 'am-list-switch-on' : 'am-list-switch-off'}}" 
 				data-index="{{index}}" />
 		</view>
+		<!-- <switch checked="{{value}}" /> -->
 		<view class="am-list-switch-line-bottom" />
 	</view>
 </view>
