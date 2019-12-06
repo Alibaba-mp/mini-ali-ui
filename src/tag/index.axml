@@ -1,14 +1,6 @@
-<view class="am-tag {{bgClass[color]}} {{className}}" onTap="onClick">
-  <view class="am-tag-icon "
-    style="{{iconURL?'background-image: url(' + iconURL + ');':''}}"
-    a:if="{{iconURL !== ''}}"></view>
-  <view class="am-tag-text">
+<view class="am-tag {{bgClass[type]}} {{className}} {{iconType ? iconClass[type]: 'am-tag-text-plain'}}" onTap="onClick">
+  <am-icon a:if="{{iconType}}" type="{{iconType}}" size="12" class="am-tag-icon"/>
+  <view class="am-tag-text ">
     <slot></slot>
   </view>  
-  <!-- <view class="am-tag-operation" a:if="{{ type==='arrow' || type==='close' || type==='more' }}" onTap="onClick">
-    <am-icon
-      type="{{type === 'arrow'?type+'-right':type}}"
-      size="17" color="#ccc"
-    ></am-icon>
-  </view> -->
 </view>

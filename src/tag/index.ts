@@ -6,6 +6,7 @@ Component({
     type: '',
     // if type="arrow", need to write path
     iconURL: '',
+    iconType: '',
     onActionTap: () => {},
     // developer can use class for style
     className: '',
@@ -14,10 +15,16 @@ Component({
   // TODO
   data: {
     bgClass: {
-      blue: 'am-tag-bgBlue',
-      orange: 'am-tag-bgOrange',
-      green: 'am-tag-bgGreen',
-      red: 'am-tag-bgRed',
+      primary: 'am-tag-bg-primary',
+      warning: 'am-tag-bg-warning',
+      success: 'am-tag-bg-success',
+      danger: 'am-tag-bg-danger',
+    },
+    iconClass: {
+      primary: 'am-tag-icon-primary',
+      warning: 'am-tag-icon-warning',
+      success: 'am-tag-icon-success',
+      danger: 'am-tag-icon-danger',
     },
   },
   didMount() {},

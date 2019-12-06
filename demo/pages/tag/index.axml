@@ -1,6 +1,17 @@
 <view class="container">
   <tag type="primary">标签</tag>
+  <view/>
   <tag type="warning">标签</tag>
+  <view/>
   <tag type="danger">标签</tag>
+  <view/>
   <tag type="success">标签</tag>
+  <view/>
+  <tag type="primary" iconType="addFriends">标签</tag>
+  <view/>
+  <tag type="warning" iconType="add">标签</tag>
+  <view/>
+  <tag type="danger" iconType="alipay">标签</tag>
+  <view/>
+  <tag type="success" iconType="ant">标签</tag>
 </view>

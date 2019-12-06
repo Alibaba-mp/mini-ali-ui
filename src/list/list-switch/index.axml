@@ -14,7 +14,9 @@
 		</view>
 		<view class="am-list-switch-scene {{value ? 'am-list-switch-scene-on' : ''}}" 
 			catchTouchStart="onItemTap" 
-			data-index="{{index}}">
+			data-index="{{index}}"
+			role="button"
+			aria-label="列表开关">
 			<view class="am-list-switch-protagonist {{value ? 'am-list-switch-on' : 'am-list-switch-off'}}" 
 				data-index="{{index}}" />
 		</view>
