@@ -26,8 +26,8 @@ flex-item 组件默认加上了样式flex:1,保证所有 item 平均分宽度, f
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "flex": "mini-antui/es/flex/index",
-    "flex-item": "mini-antui/es/flex/flex-item/index"
+    "flex": "mini-ali-ui/es/flex/index",
+    "flex-item": "mini-ali-ui/es/flex/flex-item/index"
   }
 }
 ```

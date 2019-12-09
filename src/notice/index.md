@@ -23,7 +23,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "notice": "mini-antui/dist/es/notice/index"
+    "notice": "mini-ali-ui/dist/es/notice/index"
   }
 }
 ```

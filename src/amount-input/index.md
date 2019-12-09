@@ -32,7 +32,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "amount-input": "mini-antui/es/amount-input/index"
+    "amount-input": "mini-ali-ui/es/amount-input/index"
   }
 }
 ```

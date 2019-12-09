@@ -1,10 +1,10 @@
 {
-  "name": "mini-antui",
+  "name": "mini-ali-ui",
   "version": "1.0.1",
   "description": "小程序版AntUI",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ant-mini-program/mini-antui.git"
+    "url": "git@github.com:ant-mini-program/mini-ali-ui.git"
   },
   "files": [
     "dist",
@@ -13,7 +13,9 @@
   ],
   "keywords": [
     "antui",
-    "mini-program"
+    "mini-program",
+    "mini-ali-ui",
+    "ali-ui"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -21,6 +23,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
+    "alipay-style": "^0.0.2",
     "eslint": "^5.16.0",
     "eslint-config-ali": "^3.1.0",
     "eslint-plugin-import": "^2.11.0",

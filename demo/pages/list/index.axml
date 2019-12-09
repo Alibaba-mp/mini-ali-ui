@@ -31,7 +31,7 @@
 				</list-check>
 				<list-capsule a:elif="{{item.actionType ==='capsule'}}" 
 					index="{{index}}" 
-					onClick="onCheckClick" 
+					onClick="onCapsuleClick" 
 					capsuleContent="{{item.capsuleContent}}"
 					key="items-{{index}}" l
 					last="{{index === (items.length - 1)}}">

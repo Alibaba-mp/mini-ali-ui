@@ -31,8 +31,8 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "filter": "mini-antui/es/filter/index",
-    "filter-item": "mini-antui/es/filter/filter-item/index"
+    "filter": "mini-ali-ui/es/filter/index",
+    "filter-item": "mini-ali-ui/es/filter/filter-item/index"
   }
 }
 ```

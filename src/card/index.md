@@ -22,7 +22,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "card": "mini-antui/es/card/index"
+    "card": "mini-ali-ui/es/card/index"
   }
 }
 ```

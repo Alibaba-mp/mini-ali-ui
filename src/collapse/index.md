@@ -26,8 +26,8 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "collapse": "mini-antui/es/collapse/index",
-    "collapse-item": "mini-antui/es/collapse/collapse-item/index"
+    "collapse": "mini-ali-ui/es/collapse/index",
+    "collapse-item": "mini-ali-ui/es/collapse/collapse-item/index"
   }
 }
 ```

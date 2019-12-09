@@ -32,7 +32,7 @@ items属性详细描述
 ```json
 {
   "usingComponents": {
-    "steps": "mini-antui/es/steps/index"
+    "steps": "mini-ali-ui/es/steps/index"
   }
 }
 ```

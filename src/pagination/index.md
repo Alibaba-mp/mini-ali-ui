@@ -22,7 +22,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "pagination": "mini-antui/es/pagination/index"
+    "pagination": "mini-ali-ui/es/pagination/index"
   }
 }
 ```
