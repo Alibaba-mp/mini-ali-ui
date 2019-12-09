@@ -4,7 +4,7 @@
 		<view class="am-modal {{className}}">
 			<view class="am-modal-content {{topImageSize === 'lg' ? 'am-modal-content--fill' : ''}}">
         <view a:if="{{topImage}}" class="am-modal-image am-modal-image-{{topImageSize}}">
-          <image src="{{topImage}}" />
+          <image class="am-modal-image-element" src="{{topImage}}" />
         </view>
         <view class="am-modal-header" a:if="{{$slots.header}}">
           <slot name="header" />
