@@ -1,6 +1,6 @@
-# Contributing to mini-antui
+# Contributing to mini-ali-ui
 
-The following is a set of guidelines for contributing to ``mini-antui``. Please spend several minutes in reading these guidelines before you create an issue or pull request.
+The following is a set of guidelines for contributing to ``mini-ali-ui``. Please spend several minutes in reading these guidelines before you create an issue or pull request.
 
 Anyway, these are just guidelines, not rules, use your best judgment and feel free to propose changes to this document in a pull request.
 
@@ -13,13 +13,13 @@ The following guidelines are about *How to avoid Homework Questions*.
 
 ### 1. Read the documentation.
 
-It sad but true that someone just glance(not read) [mini-antui's documentation](https://docs.alipay.com/mini/component-ext/overview-ext-common). Please read the documentation closely.
+It sad but true that someone just glance(not read) [mini-ali-ui's documentation](https://docs.alipay.com/mini/component-ext/overview-ext-common). Please read the documentation closely.
 
-### 2. Read the FAQ and search the issues list of mini-antui
+### 2. Read the FAQ and search the issues list of mini-ali-ui
 
 Your questions may be asked and solved by others. So please spend several minutes on searching. Remember [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), both code and questions.
 
-* [Issues list](https://github.com/ant-mini-program/mini-antui/issues)
+* [Issues list](https://github.com/ant-mini-program/mini-ali-ui/issues)
 
 ## Close your issue if it's solved
 
@@ -31,7 +31,7 @@ It would be helpful to provide a demo which can re-produce the bug 100%. Please 
 
 ## Tips about Feature Request
 
-If you believe that ``mini-antui`` should provide some features, but it does not. You could create an issue to discuss.
+If you believe that ``mini-ali-ui`` should provide some features, but it does not. You could create an issue to discuss.
 
 ## Tips about Pull Request
 

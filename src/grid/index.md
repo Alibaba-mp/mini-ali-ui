@@ -35,7 +35,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "grid": "mini-antui/es/grid/index"
+    "grid": "mini-ali-ui/es/grid/index"
   }
 }
 ```

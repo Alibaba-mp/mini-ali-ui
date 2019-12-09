@@ -6,4 +6,4 @@ If the current behavior is a bug, please provide the steps to reproduce and if p
 
 What is the expected behavior?
 
-Which versions of ``mini-antui``, and which version of ``Alipay`` are affected by this issue? Did this work in previous versions of ``mini-antui``?
+Which versions of ``mini-ali-ui``, and which version of ``Alipay`` are affected by this issue? Did this work in previous versions of ``mini-ali-ui``?

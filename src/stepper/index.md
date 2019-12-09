@@ -26,9 +26,9 @@
 {
   "defaultTitle": "Stepper",
   "usingComponents":{
-    "stepper": "mini-antui/es/stepper/index",
-    "list": "mini-antui/es/list/index",
-    "list-item": "mini-antui/es/list/list-item/index"
+    "stepper": "mini-ali-ui/es/stepper/index",
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index"
   }
 }
 ```

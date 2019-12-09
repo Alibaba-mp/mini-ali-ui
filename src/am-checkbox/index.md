@@ -20,9 +20,9 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "list": "mini-antui/es/list/index",
-    "list-item": "mini-antui/es/list/list-item/index",
-    "am-checkbox": "mini-antui/es/am-checkbox/index"
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "am-checkbox": "mini-ali-ui/es/am-checkbox/index"
   }
 }
 ```

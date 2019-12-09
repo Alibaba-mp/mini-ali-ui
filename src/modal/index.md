@@ -45,7 +45,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "modal": "mini-antui/dist/es/modal/index"
+    "modal": "mini-ali-ui/dist/es/modal/index"
   }
 }
 ```
