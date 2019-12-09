@@ -1,6 +1,5 @@
 <view class="am-tips-dialog am-tips-dialog-{{type}} {{className}}" a:if="{{show}}">
   <view class="am-tips-dialog-wrap">
-    <view class="am-tips-dialog-close" onTap="onCloseTap" a:if="{{type === 'rectangle'}}"></view>
     <view class="am-tips-dialog-icon" a:if="{{iconUrl}}">
       <image src="{{iconUrl}}" />
     </view>
@@ -9,6 +8,9 @@
     </view>
     <view class="am-tips-dialog-action">
       <slot name="operation" />
+    </view>
+    <view class="am-tips-dialog-close-container">
+      <view class="am-tips-dialog-close" onTap="onCloseTap" a:if="{{type === 'rectangle'}}"></view>
     </view>
   </view>
 </view>
