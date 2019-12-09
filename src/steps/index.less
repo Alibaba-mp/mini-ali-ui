@@ -1,4 +1,5 @@
 /* horizontal steps style */
+@import (reference) "../style/themes/default.less";
 
 .am-hor-steps {
   padding: 20px 50px 10px 50px;
@@ -18,11 +19,13 @@
   position: relative;
   margin: 6px 0;
   height: 2px;
-  background-color: #ccc;
+  background-color: @color-fill-grey-base;
+  background-color: var(--am-steps-bg-bottom-color, @color-fill-grey-base);
 }
 
 .am-hor-step-line.is-active {
-  background-color: #108ee9;
+  background-color: @color-fill-primary;
+  background-color: var(--am-steps-bg-color, @color-fill-primary);
 }
 
 .am-hor-step-line.is-last {
@@ -37,11 +40,13 @@
   height: 10px;
   transform: translate(-50%, -50%);
   border-radius: 999px;
-  background-color: #ccc;
+  background-color: @color-fill-grey-base;
+  background-color: var(--am-steps-bg-bottom-color, @color-fill-grey-base);
 }
 
 .am-hor-step-icon.is-active {
-  background-color: #108ee9;
+  background-color: @color-fill-primary;
+  background-color: var(--am-steps-bg-color, @color-fill-primary);
 }
 
 .am-hor-step-text {
@@ -94,7 +99,7 @@
   flex: 1;
 }
 
-/* 60px 是 am-vertical-step-text的margin-bottom的40px加上line的下移20px，保证line-top底部和右侧文字底布对齐*/
+/* 60px 是 am-vertical-step-text的margin-bottom的40px加上line的下移20px，保证line-top底部和右侧文字底布对齐 */
 .am-vertical-step-line-bottom {
   height: 30px;
   width: 2px;
@@ -157,7 +162,7 @@
 }
 
 .am-vertical-step-title.is-fail {
-  color: #F4333C;
+  color: #f4333c;
 }
 
 .am-vertical-step-description {
