@@ -1,19 +1,19 @@
-<view class="am-list-check-item am-list-check-{{align}} {{multipleLine ? 'am-list-check-multiple' : ''}} {{last ? 'last': ''}} {{className}}" 
-	hover-classX="{{disabled ? '' : 'am-list-check-item-hover'}}" 
+<view class="am-list-capsule-item am-list-capsule-{{align}} {{multipleLine ? 'am-list-capsule-multiple' : ''}} {{last ? 'last': ''}} {{className}}" 
+	hover-classX="{{disabled ? '' : 'am-list-capsule-item-hover'}}" 
 	data-index="{{index}}">
-	<view a:if={{$slots.prefix}} class="am-list-check-prefix">
+	<view a:if={{$slots.prefix}} class="am-list-capsule-prefix">
 		<slot name="prefix" />
 	</view>
-	<image a:if={{thumb}} class="am-list-check-thumb" 
+	<image a:if={{thumb}} class="am-list-capsule-thumb" 
 		src="{{thumb}}" 
 		mode="scaleToFill" />
-	<view class="am-list-check-line {{wrap ? 'am-list-check-wrap' : ''}}">
-		<view class="am-list-check-content">
+	<view class="am-list-capsule-line {{wrap ? 'am-list-capsule-wrap' : ''}}">
+		<view class="am-list-capsule-content">
 			<slot />
 		</view>
 		<view>
 			<button a:if="{{capsuleContent}}" shape="capsule" type="ghost" onTap="onItemTap" data-index="{{index}}">{{capsuleContent}}</button>
 		</view>
-		<view class="am-list-check-line-bottom" />
+		<view class="am-list-capsule-line-bottom" />
 	</view>
 </view>
