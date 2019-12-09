@@ -79,7 +79,7 @@ Component({
           _countDown: subOne,
         });
         if (subOne === 0) {
-          clearTimeout(timeout);
+          clearInterval(timeout);
           this.setData({
             _actionActive: true,
             resend: true,
