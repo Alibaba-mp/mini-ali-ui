@@ -52,3 +52,4 @@
   <view style="margin: 10px;" />
   <button type="primary" 
     onTap="onAutoFocus">聚焦</button>
+</view>
