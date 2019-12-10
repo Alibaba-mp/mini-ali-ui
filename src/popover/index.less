@@ -1,3 +1,5 @@
+@import (reference) "../style/themes/default.less";
+
 .am-popover {
   position: relative;
 }
@@ -14,18 +16,23 @@
 .am-popover-content {
   position: absolute;
   z-index: 100;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #333;
+  border-radius: @corner-radius-md;
+  border-radius: var(--am-popover-border-radius, @corner-radius-md);
+  font-size: @font-size-subtitle;
+  font-size: var(--am-popover-font-size, @font-size-subtitle);
+  color: @color-text-title;
+  color: var(--am-popover-font-color, @color-text-title);
 }
 .border-true {
   border: 1px solid #ddd;
 }
 .am-popover-inner {
   position: relative;
-  color: #000;
-  background-color: #fff;
-  border-radius: 3px;
+  // color: #000;
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-popover-bg-color, @color-fill-grey-inverse);
+  border-radius: @corner-radius-md;
+  border-radius: var(--am-popover-border-radius, @corner-radius-md);
 }
 /* popover position: top */
 .am-popover-placement-top {
@@ -96,7 +103,8 @@
   position: absolute;
   width: 7px;
   height: 7px;
-  background-color: #fff;
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-popover-arrow-color, @color-fill-grey-inverse);
   z-index: 0;
   /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.21); */
 }
