@@ -1,4 +1,4 @@
-@import '../../style/themes/default.less';
+@import (reference) '../../style/themes/default.less';
 
 .am-tips-plain-favorite {
   position: fixed;
@@ -24,6 +24,7 @@
 
   &-content {
     line-height: @line-height-paragraph;
+    line-height: var(--am-tips-plain-line-height, @line-height-paragraph);
     overflow: hidden;
     // height: 12px;
   }
