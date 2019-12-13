@@ -13,13 +13,14 @@
     <card thumb="{{thumb}}" 
       title="卡片标题3" 
       subTitle="副标题非必填3" 
-      onClick="onCardClick" 
+      onClick="toggle" 
       someProp="onCardClick"
       action="描述文字" 
       onActionClick="onActionClick"
-      extraAction="额外文字"
+      extraAction="点击卡片展开/收起"
       onExtraActionClick="onExtraActionClick"
       info="点击了第三个card" 
+      expand="{{expand3rd}}"
       bgImg="https://gw-office.alipayobjects.com/basement_prod/1113df72-ef2b-4da4-9dca-7c168dbca791.png"
       />
   </view>
