@@ -20,6 +20,7 @@
       extraAction="额外文字"
       onExtraActionClick="onExtraActionClick"
       info="点击了第三个card" 
+      bgImg="https://gw-office.alipayobjects.com/basement_prod/1113df72-ef2b-4da4-9dca-7c168dbca791.png"
       />
   </view>
   <view style="margin-top: 10px;" />
@@ -30,7 +31,7 @@
       onClick="onCardClick" 
       someProp="onCardClick"
       info="点击了第三个card" 
-      bgImg="https://gw-office.alipayobjects.com/basement_prod/592f7162-05eb-49a7-a868-7d9d426acf4b.png"
+      bgImg="https://gw-office.alipayobjects.com/basement_prod/1113df72-ef2b-4da4-9dca-7c168dbca791.png"
       expand
       />
   </view>

@@ -4,7 +4,7 @@ Page({
     footerImg: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
   },
   onCardClick(ev) {
-    my.showToast({
+    my.alert({
       content: ev.info,
     });
   },

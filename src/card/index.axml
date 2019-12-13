@@ -1,12 +1,12 @@
-<view class="am-card" 
-  hover-class="am-card-active" 
-  onTap="onCardClick">
+<view class="am-card">
   <!-- <image a:if="{{expand}}" class="am-card-background" src="{{bgImg}}" /> -->
   <view style="width: 100%;" 
     class="{{expand ? 'am-card-outter-container' : ''}}">
     <view class="am-card-container {{expand ? 'am-card-container-expanded' : ''}}">
       <view class="am-card-body {{expand ? 'am-card-body-expand' : ''}}" 
-        style="{{bgImg ? `background-image: url('${bgImg}');` : ''}}">
+        style="{{bgImg ? `background-image: url('${bgImg}');` : ''}}" 
+        onTap="onCardClick">
+        <view class="am-card-bg-mask" />
         <image src="{{thumb}}" 
           class="am-card-thumb" 
           mode="scaleToFill" />

@@ -11,9 +11,6 @@
   background-color: transparent;
   background-size: 100%;
   min-height: 85px;
-  &.am-card-active {
-    background: #d9d9d9;
-  }
   &-container {
     width: 100%;
     display: flex;
@@ -44,9 +41,27 @@
     min-height: 85px;
     box-sizing: border-box;
     background-color: #929292;
-    background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
+    position: relative;
+    background-size: 100%;
+  }
+  &-bg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: @corner-radius-lg;
+    border-radius: var(--am-card-border-radius, @corner-radius-lg);
+    width: 100%;
+    height: 100%;
+    background: rgb(101, 100, 100);
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(252, 252, 252, 0) 44%,
+        rgba(244, 244, 244, 0) 100%
+      );
   }
   &-body-expand {
     align-items: flex-start;
@@ -57,6 +72,7 @@
   &-content {
     flex: 1;
     min-width: 100px;
+    z-index: 1;
   }
   &-title {
     font-size: @font-size-title;
