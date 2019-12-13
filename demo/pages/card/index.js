@@ -8,4 +8,14 @@ Page({
       content: ev.info,
     });
   },
+  onActionClick() {
+    my.alert({
+      content: 'action clicked',
+    });
+  },
+  onExtraActionClick() {
+    my.alert({
+      content: 'extra action clicked',
+    });
+  },
 });

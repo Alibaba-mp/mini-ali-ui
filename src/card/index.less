@@ -1,65 +1,121 @@
-@import '../style/themes/default.less';
+@import (reference) '../style/themes/default.less';
 
 .am-card {
+  position: relative;
   display: flex;
-  background-color: #fff;
-  border-radius: 4px;
+  border-radius: @corner-radius-lg;
+  border-radius: var(--am-card-border-radius, @corner-radius-lg);
   margin: 6px 10px;
   align-items: center;
-  min-height: 81px;
   flex-direction: column;
-  padding: 0 16px;
+  background-color: transparent;
+  background-size: 100%;
+  min-height: 85px;
   &.am-card-active {
-    background: #D9D9D9;
+    background: #d9d9d9;
+  }
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  &-container-expanded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  &-outter-container {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    height: 0;
+    padding-top: 66%;
   }
   &-body {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 16px 0;
+    padding: 0 @h-spacing-large;
+    padding: 0 var(--am-card-padding, @h-spacing-large);
+    border-radius: @corner-radius-lg;
+    border-radius: var(--am-card-border-radius, @corner-radius-lg);
+    min-height: 85px;
+    box-sizing: border-box;
+    background-color: #929292;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+  &-body-expand {
+    align-items: flex-start;
+    padding-top: 20px;
+    background-color: transparent;
+    height: 100%;
   }
   &-content {
     flex: 1;
     min-width: 100px;
   }
   &-title {
-    font-size: 18px;
+    font-size: @font-size-title;
+    font-size: var(--am-card-title-size, @font-size-title);
     line-height: 25px;
-    color: #333;
-    margin-bottom: 4px;
+    color: @color-text-base;
+    color: var(--am-card-title-color, @color-text-base);
   }
   &-subtitle {
-    font-size: 14px;
-    line-height: 20px;
-    color: #999;
-    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+  &-subtitle-text {
+    font-size: @font-size-content;
+    line-height: 1.5;
+    color: @color-text-base;
+    color: var(--am-card-subtitle-colo, @color-text-base);
+    background: #0003;
+    border-radius: 3px;
+    padding: 1px 6px;
   }
   &-thumb {
-    margin-right: 10px;
+    margin-right: @h-spacing-large;
+    margin-right: var(--am-card-padding, @h-spacing-large);
     width: 48px;
     height: 48px;
-    border-radius: 2px;
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-card-thumb-border-radius, @corner-radius-circle);
+    border-width: @border-width-thick;
+    border-width: var(--am-card-thumb-border-width, @border-width-thick);
+    border-color: @color-fill-grey-inverse;
+    border-color: var(--am-card-thumb-border-color, @color-fill-grey-inverse);
+    border-style: solid;
   }
   &-arrow {
     width: 13px;
     height: 13px;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAYAAAC+aNwHAAAAkElEQVR4AWJwL/BhAJRWByYAgkAUhmdpkDZxlJZqD9UpXCPyBUTEga9+4IkI94F1XaWUTdH+a67inPOhjP2OgD+IFoTcm1GY3khrbfGAGFG6kBmAkPCw1rq6iBYb0VkEzJD+hHQWAz6iJBtQdP8YiQEbUQNiAF0BP0T+Gnkj8VbmHxMq5gOFjzQ+VPlYxz+WEyrVzhdMcxADAAAAAElFTkSuQmCC") center center no-repeat;
-    background-size: 8px 13px;
   }
   &-footer {
     display: flex;
     width: 100%;
     align-items: center;
-    border-top: 1rpx solid #eee;
-    padding: 10px 0;
-    margin: -4px 0 0;
+    justify-content: space-around;
     font-size: 14px;
     line-height: 20px;
-    color: #999;
-    image {
-      width: 14px;
-      height: 14px;
-      margin-right: 4px;
-    }
+    color: @color-text-title;
+    color: var(--am-card-action-color, @color-text-title);
+    background: @color-fill-grey-inverse;
+    background: var(--am-card-footer-color, @color-fill-grey-inverse);
+    box-sizing: border-box;
+    padding: @h-spacing-large;
+    padding: var(--am-card-padding, @h-spacing-large);
+    border-radius: 0 0 @corner-radius-lg @corner-radius-lg;
+    border-radius: 0 0 var(--am-card-border-radius, @corner-radius-lg) var(--am-card-border-radius, @corner-radius-lg);
+    border-top: @corner-radius-lg solid @color-fill-grey-inverse;
+    border-top:
+      var(--am-card-border-radius, @corner-radius-lg) solid
+      var(--am-card-footer-color, @color-fill-grey-inverse);
+    margin-top: -(@corner-radius-lg);
+    margin-top: calc(var(--am-card-border-radius, @corner-radius-lg) * -1);
+    z-index: 1;
   }
 }
