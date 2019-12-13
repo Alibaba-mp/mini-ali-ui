@@ -66,11 +66,11 @@ Page({
         nameZN: 'Tabs',
         path: '/pages/tabs/index',
       },
-      // {
-      //   name: 'VTabs',
-      //   nameZN: 'VTabs',
-      //   path: '/pages/vtabs/index',
-      // },
+      {
+        name: 'VTabs',
+        nameZN: 'VTabs',
+        path: '/pages/vtabs/index',
+      },
       // {
       //   name: 'Stepper',
       //   nameZN: 'Stepper',

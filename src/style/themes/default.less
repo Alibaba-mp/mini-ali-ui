@@ -219,8 +219,6 @@
   --am-notice-active-bgc: tint(@color-fill-primary, 80%);
   /* color | 活动通告栏边框色 */
   --am-notice-active-borderColor: tint(@color-fill-primary, 72%);
-  // /* corner-radius | 圆角 */
-  // --am-notice-borderRadius: var(--am-corner-radius-lg);
   /* size | icon 右外边距 */
   --am-notice-thumb-marginRight: var(--am-h-spacing-standard);
   /* font-size | 文字大小 */
@@ -253,6 +251,8 @@
   --am-title-marginBottom: var(--am-v-spacing-large);
   /* size | 底边线尺寸 */
   --am-title-borderWidth: var(--am-border-width-standard);
+  /* color | 底边线颜色 */
+  --am-title-borderColor: var(--am-color-divider-line);
   /* font-size | 标题文字大小 */
   --am-title-text-fontSize: var(--am-font-size-subtitle);
   /* color | 标题文字颜色 */
@@ -478,6 +478,8 @@
   --am-tabs-capsule-paddingV: var(--am-v-spacing-large);
   /* size | 胶囊有外边距 */
   --am-tabs-capsule-marginRight: var(--am-h-spacing-large);
+  /* size | 描述文字胶囊由边距 */
+  --am-tabs-subTitle-marginRight: var(--am-size-4);
   /* size | 描述文字胶囊上下内间距 */
   --am-tabs-subTitle-paddingH: var(--am-h-spacing-standard);
   /* font-size | 描述文字大小 */
@@ -485,7 +487,7 @@
   /* line-height | 描述文字行高 */
   --am-tabs-subTitle-lineHeght: var(--am-line-height-paragraph);
   /* size | 文字选项卡右外边距 */
-  --am-tabs-title-marginRight: calc(var(--am-h-spacing-large) * 2);
+  --am-tabs-title-marginRight: var(--am-size-6);
   /* size | 文字选项卡上内边距 */
   --am-tabs-title-paddingTop: var(--am-v-spacing-large);
   /* size | 文字选项卡下内边距 */
@@ -496,6 +498,14 @@
   --am-tabs-title-capsule-bgc: var(--am-color-fill-grey-light);
   /* color | tabs 选项卡内容区域背景色 */
   --am-tabs-content-bgc: var(--am-color-fill-grey-inverse);
+  /* size | 胶囊 tab 中的数字左间距 */
+  --am-tabs-number-marginLeft: var(--am-size-1);
+  /* font-size | 胶囊 tab 中的数字大小 */
+  --am-tabs-number-fontSize: var(--am-font-size-content);
+  /* color | 胶囊 tab 中的数字默认颜色 */
+  --am-tabs-number-color: var(--am-color-text-subtitle);
+  /* color | 胶囊 tab 中的数字激活状态颜色 */
+  --am-tabs-number-color__active: var(--am-color-text-base);
 
   /* modal */
   /* size | 标题字体大小 */

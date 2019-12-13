@@ -23,7 +23,7 @@
                 (index === activeTab ? capsuleTabBarActiveTextColor: tabBarInactiveTextColor)
                 :
                 (index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor) }}"
-              class="am-tabs-bar-tab {{ !hasSubTitle && capsule?'am-tabs-bar-tab-capsule':''}} {{tabBarCls}}">
+              class="am-tabs-bar-tab {{ !hasSubTitle && capsule?'am-tabs-bar-tab-capsule':''}} {{ hasSubTitle?'am-tabs-bar-tab__hasSubTitle':''}} {{tabBarCls}}">
               <view class="
                 am-tabs-bar-title
                 {{ hasSubTitle ? 'am-tabs-bar-title__hasSubTitle' : ''}}
@@ -38,14 +38,15 @@
                   :
                   (index === activeTab ? 'border-bottom-color:' + tabBarUnderlineColor + ';' : '')) }}">
                 <text class="am-tabs-bar-tab-mainTitle">{{item.title}}</text>
+                <text a:if="{{!hasSubTitle && capsule && item.number}}" class="am-tabs-bar-tab-number {{ index === activeTab ?'am-tabs-bar-tab-number_active':''}}">({{item.number}})</text>
                 <text class="am-tabs-bar-tab-subTitle" a:if="{{hasSubTitle && item.subTitle}}" style="
                   {{index === activeTab ? 'background-color:' + tabBarUnderlineColor + '; color: ' + tabBarActiveSubTextColor + ';' : 'color: ' + tabBarSubTextColor + ';'}}
                 ">{{item.subTitle}}</text>
-                <badge
+                <!-- <badge
                   className="am-tabs-bar-badge {{item.badgeType ? item.badgeType : ''}}"
                   a:if="{{!capsule && item.badgeType}}"
                   dot="{{item.badgeType == 'dot'}}"
-                  text="{{item.badgeText}}" />
+                  text="{{item.badgeText}}" /> -->
               </view>
             </view>
           </block>

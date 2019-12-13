@@ -51,3 +51,11 @@
     <text class="radio-text">{{item.value}}</text>
   </label>
 </radio-group>
+
+<view class="demo-title">tabs选项数量: </view>
+<radio-group class="radio-group" onChange="tabsNumberChange" name="tabsNumber">
+  <label class="radio" a:for="{{tabsNumber}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
