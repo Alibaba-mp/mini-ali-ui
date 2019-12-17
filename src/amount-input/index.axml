@@ -1,7 +1,6 @@
 <view class="am-amount {{className}}">
   <view class="am-amount-title">{{title}}</view>
-  <view class="am-amount-input" 
-    styleX="align-items: {{value ? 'baseline':'flex-end'}}">
+  <view class="am-amount-input">
     <view class="am-amount-symbol">¥</view>
     <input controlled="{{true}}" 
       type="{{type === 'digit' ? 'digit' : 'number'}}" 
@@ -20,7 +19,6 @@
       onTap="onClearTap">
       <icon class="am-amount-clear-icon" 
         type="clear" 
-        data-id="clear"
         size="22" />
     </view>
   </view>
