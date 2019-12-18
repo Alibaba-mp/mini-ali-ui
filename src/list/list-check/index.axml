@@ -5,17 +5,26 @@
 	<view a:if={{$slots.prefix}} class="am-list-check-prefix">
 		<slot name="prefix" />
 	</view>
-	<image a:if={{thumb}} class="am-list-check-thumb" 
-		src="{{thumb}}" 
-		mode="scaleToFill" />
 	<view class="am-list-check-line {{wrap ? 'am-list-check-wrap' : ''}}">
 		<view class="am-list-check-content">
-			<slot />
+			<view>
+				<image a:if={{thumb}} class="am-list-check-thumb" 
+					src="{{thumb}}" 
+					mode="scaleToFill" />
+				<view>
+					<slot />
+				</view>
+				<view a:if="{{brief}}" 
+					class="am-list-brief">{{brief}}</view>
+			</view>
 		</view>
 		<view>
 			<checkbox checked="{{value}}" 
+				
+				
+				
 				controlled />
-		</view>
-		<view class="am-list-check-line-bottom" />
-	</view>
 </view>
+<view class="am-list-check-line-bottom" />
+		</view>
+	</view>

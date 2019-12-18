@@ -4,7 +4,7 @@
 .dyt-list .am-list-item-thumb {
   border-radius: 5px;
 }
-.dyt-list .am-list-brief {
+.dyt-list .am-list-briefX {
   color: #909090;
   font-size: 14px;
 }
