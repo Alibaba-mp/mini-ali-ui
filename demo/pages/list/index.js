@@ -272,6 +272,7 @@ Page({
       // check: false,
     },
     checkValues: {},
+    thumbUrl: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',
   },
   onLoad() {
     const charCode = 65;

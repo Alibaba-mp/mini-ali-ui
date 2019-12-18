@@ -6,18 +6,17 @@
 		<slot name="prefix" />
 	</view>
 	<view class="am-list-switch-line {{wrap ? 'am-list-switch-wrap' : ''}}">
+		<image a:if={{thumb}} class="am-list-switch-thumb" 
+			src="{{thumb}}" 
+			mode="scaleToFill" />
 		<view class="am-list-switch-content">
 			<view>
-				<image a:if={{thumb}} class="am-list-switch-thumb" 
-					src="{{thumb}}" 
-					mode="scaleToFill" />
-				<view>
-					<slot />
-				</view>
-				<view a:if="{{brief}}" 
-					class="am-list-brief">{{brief}}</view>
+				<slot />
 			</view>
+			<view a:if="{{brief}}" 
+				class="am-list-brief">{{brief}}</view>
 		</view>
+
 		<view class="am-list-switch-scene {{value ? 'am-list-switch-scene-on' : ''}}" 
 			catchTouchStart="onItemTap" 
 			data-index="{{index}}">
