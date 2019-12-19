@@ -6,7 +6,7 @@
       <view class="am-card-body {{expand ? 'am-card-body-expand' : ''}}" 
         style="{{bgImg ? `background-image: url('${bgImg}');` : ''}}" 
         onTap="onCardClick">
-        <view class="am-card-bg-mask" />
+        <!-- <view class="am-card-bg-mask" /> -->
         <image src="{{thumb}}" 
           class="am-card-thumb" 
           mode="scaleToFill" />

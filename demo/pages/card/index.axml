@@ -17,7 +17,7 @@
       someProp="onCardClick"
       action="描述文字" 
       onActionClick="onActionClick"
-      extraAction="点击卡片展开/收起"
+      extraAction="点击卡片展开/收起↑"
       onExtraActionClick="onExtraActionClick"
       info="点击了第三个card" 
       expand="{{expand3rd}}"
