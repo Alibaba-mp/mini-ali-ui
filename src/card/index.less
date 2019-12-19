@@ -39,8 +39,8 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 0 @h-spacing-large;
-    padding: 0 var(--am-card-padding, @h-spacing-large);
+    padding: 19px @h-spacing-large;
+    padding: 19px var(--am-card-padding, @h-spacing-large);
     border-radius: @corner-radius-lg;
     border-radius: var(--am-card-border-radius, @corner-radius-lg);
     min-height: 85px;
@@ -70,9 +70,14 @@
   }
   &-body-expand {
     align-items: flex-start;
-    padding-top: 19px;
+    // padding-top: 19px;
     background-color: transparent;
     height: 100%;
+  }
+  &-content-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
   }
   &-content {
     flex: 1;

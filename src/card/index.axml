@@ -7,14 +7,16 @@
         style="{{bgImg ? `background-image: url('${bgImg}');` : ''}}" 
         onTap="onCardClick">
         <!-- <view class="am-card-bg-mask" /> -->
-        <image src="{{thumb}}" 
-          class="am-card-thumb" 
-          mode="scaleToFill" />
-        <view class="am-card-content">
-          <view class="am-card-title">{{title}}</view>
-          <view a:if="{{subTitle}}" 
-            class="am-card-subtitle">
-            <text class="am-card-subtitle-text">{{subTitle}}</text>
+        <view class="am-card-content-wrapper">
+          <image src="{{thumb}}" 
+            class="am-card-thumb" 
+            mode="scaleToFill" />
+          <view class="am-card-content">
+            <view class="am-card-title">{{title}}</view>
+            <view a:if="{{subTitle}}" 
+              class="am-card-subtitle">
+              <text class="am-card-subtitle-text">{{subTitle}}</text>
+            </view>
           </view>
         </view>
       </view>

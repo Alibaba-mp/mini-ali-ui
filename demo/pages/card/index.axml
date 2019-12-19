@@ -21,7 +21,7 @@
       onExtraActionClick="onExtraActionClick"
       info="点击了第三个card" 
       expand="{{expand3rd}}"
-      bgImg="https://gw-office.alipayobjects.com/basement_prod/447b6703-0cc9-4bce-b772-c7886a4ee09d.jpg"
+      bgImg="https://gw-office.alipayobjects.com/basement_prod/e8d22c8e-20f6-4bbd-a3ae-7be615e98b33.jpg"
       />
   </view>
   <view style="margin-top: 10px;" />
@@ -32,7 +32,7 @@
       onClick="onCardClick" 
       someProp="onCardClick"
       info="点击了第三个card" 
-      bgImg="https://gw-office.alipayobjects.com/basement_prod/447b6703-0cc9-4bce-b772-c7886a4ee09d.jpg"
+      bgImg="https://gw-office.alipayobjects.com/basement_prod/e8d22c8e-20f6-4bbd-a3ae-7be615e98b33.jpg"
       expand
       />
   </view>
