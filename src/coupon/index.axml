@@ -1,0 +1,29 @@
+<view class="am-coupon">
+  <view class="am-coupon-container">
+    <view class="am-coupon-thumb">
+      <view class="am-coupon-thumb-image"/>
+    </view>
+    <view class="am-coupon-divider">
+      <view class="am-coupon-divider-upper-hole" />
+      <view class="am-coupon-divider-middle-blank">
+        <view class="am-coupon-divider-dashed-line" />
+      </view>
+      <view class="am-coupon-divider-lower-hole" />
+    </view>
+    <view class="am-coupon-content">
+      <view class="am-coupon-content-text">
+        <view class="am-coupon-content-text-title">
+          {{title}}
+        </view>
+        <view class="am-coupon-content-text-subtitle">
+          {{subtitle}}
+        </view>
+      </view>
+      <view class="am-coupon-content-action">
+        <view class="am-coupon-content-action-slot">
+          <slot />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
