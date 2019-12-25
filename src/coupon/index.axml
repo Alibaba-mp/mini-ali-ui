@@ -1,7 +1,9 @@
 <view class="am-coupon">
   <view class="am-coupon-container">
     <view class="am-coupon-thumb">
-      <view class="am-coupon-thumb-image"/>
+      <image class="am-coupon-thumb-image" 
+        src="{{thumb}}" 
+        mode="scaleToFill" />
     </view>
     <view class="am-coupon-divider">
       <view class="am-coupon-divider-upper-hole" />
@@ -20,9 +22,9 @@
         </view>
       </view>
       <view class="am-coupon-content-action">
-        <view class="am-coupon-content-action-slot">
-          <slot />
-        </view>
+        <!-- <view class="am-coupon-content-action-slot"> -->
+        <slot name="action" />
+        <!-- </view> -->
       </view>
     </view>
   </view>

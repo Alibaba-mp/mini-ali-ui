@@ -11,9 +11,13 @@
 		<view class="am-list-capsule-content">
 			<slot />
 		</view>
-		<view>
-			<button a:if="{{capsuleContent}}" shape="capsule" type="ghost" onTap="onItemTap" data-index="{{index}}">{{capsuleContent}}</button>
-		</view>
+		<!-- <view style="display: flex; align-items: center;"> -->
+		<button a:if="{{capsuleContent}}" 
+			shape="capsule" 
+			type="ghost" 
+			onTap="onItemTap" 
+			data-index="{{index}}">{{capsuleContent}}</button>
+		<!-- </view> -->
 		<view class="am-list-capsule-line-bottom" />
 	</view>
 </view>

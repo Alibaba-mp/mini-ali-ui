@@ -14,15 +14,14 @@
       title="卡片标题3" 
       subTitle="副标题非必填3" 
       onClick="toggle" 
-      someProp="onCardClick"
+      someProp="onCardClick" 
       action="描述文字" 
-      onActionClick="onActionClick"
-      extraAction="点击卡片展开/收起↑"
-      onExtraActionClick="onExtraActionClick"
+      onActionClick="onActionClick" 
+      extraAction="点击卡片展开/收起↑" 
+      onExtraActionClick="onExtraActionClick" 
       info="点击了第三个card" 
-      expand="{{expand3rd}}"
-      bgImg="https://gw-office.alipayobjects.com/basement_prod/e8d22c8e-20f6-4bbd-a3ae-7be615e98b33.jpg"
-      />
+      expand="{{expand3rd}}" 
+      bgImg="https://gw-office.alipayobjects.com/basement_prod/e8d22c8e-20f6-4bbd-a3ae-7be615e98b33.jpg" />
   </view>
   <view style="margin-top: 10px;" />
   <view>
@@ -30,17 +29,22 @@
       title="卡片标题3" 
       subTitle="副标题非必填3" 
       onClick="onCardClick" 
-      someProp="onCardClick"
+      someProp="onCardClick" 
       info="点击了第三个card" 
       bgImg="https://gw-office.alipayobjects.com/basement_prod/e8d22c8e-20f6-4bbd-a3ae-7be615e98b33.jpg"
+      
       expand
       />
-  </view>
-  <view style="margin-top: 10px;" />
-  <view>
-    <coupon title="券标题" subtitle="券副标题">
-      <button shape="capsule" type="ghost">capsule</button>
-    </coupon>
-  </view>
-  <view style="margin-top: 50px;" />
 </view>
+<view style="margin-top: 10px;" />
+    <view>
+      <coupon title="券标题" 
+        subtitle="券副标题" 
+        thumb="{{thumb}}">
+        <button shape="capsule" 
+          slot="action" 
+          type="ghost">capsule</button>
+      </coupon>
+    </view>
+    <view style="margin-top: 50px;" />
+  </view>
