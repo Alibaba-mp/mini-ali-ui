@@ -21,8 +21,11 @@
   &-thumb {
     width: 18%;
     background: @color-fill-grey-inverse;
+    background: var(--am-coupon-background-color, @color-fill-grey-inverse);
     border-top-left-radius: @corner-radius-lg;
+    border-top-left-radius: var(--am-coupon-border-radius, @corner-radius-lg);
     border-bottom-left-radius: @corner-radius-lg;
+    border-bottom-left-radius: var(--am-coupon-border-radius, @corner-radius-lg);
     z-index: 1;
     display: flex;
     align-items: center;
@@ -31,6 +34,7 @@
       width: 42px;
       height: 42px;
       border-radius: @corner-radius-circle;
+      border-radius: var(--am-coupon-thumb-border-radius, @corner-radius-circle);
       background: grey;
       margin-left: 6px;
     }
@@ -44,11 +48,13 @@
       background: transparent;
       height: 12.5px;
       margin-top: -8px;
-      border-radius: @corner-radius-circle;
+      border-radius: 50vh;
       box-shadow: 0 17px 0 10px @color-fill-grey-inverse;
+      box-shadow: 0 17px 0 10px var(--am-coupon-background-color, @color-fill-grey-inverse);
     }
     &-middle-blank {
       background: @color-fill-grey-inverse;
+      background: var(--am-coupon-background-color, @color-fill-grey-inverse);
       flex-grow: 1;
       z-index: 1;
       display: flex;
@@ -64,8 +70,9 @@
       background: transparent;
       height: 12.5px;
       margin-bottom: -8px;
-      border-radius: @corner-radius-circle;
+      border-radius: 50vh;
       box-shadow: 0 -17px 0 10px @color-fill-grey-inverse;
+      box-shadow: 0 -17px 0 10px var(--am-coupon-background-color, @color-fill-grey-inverse);
     }
   }
   &-content {
@@ -75,19 +82,25 @@
     border-bottom-right-radius: @corner-radius-lg;
     display: flex;
     padding: @v-spacing-large @h-spacing-large;
+    padding: var(--am-coupon-content-spacing, @v-spacing-large) var(--am-coupon-content-spacing, @h-spacing-large);
     &-text {
       flex-grow: 1;
       justify-content: space-around;
       align-self: center;
+      margin-left: -6px;
       &-title {
         font-size: @font-size-title;
+        font-size: var(--am-coupon-title-size, @font-size-title);
         color: @color-text-title;
+        color: var(--am-coupon-title-color, @color-text-title);
         font-family: PingFangSC-Medium;
       }
       &-subtitle {
         margin-top: 4px;
         font-size: @font-size-content;
+        font-size: var(--am-coupon-subtitle-size, @font-size-content);
         color: @color-text-subtitle;
+        color: var(--am-coupon-subtitle-color, @color-text-subtitle);
         font-family: PingFangSC-Medium;
       }
     }
