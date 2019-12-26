@@ -1,8 +1,32 @@
 Page({
   data: {
+    tabs2: [
+      {
+        title: '选项选选项二',
+        subTitle: '描述文案',
+      },
+      {
+        title: '选项选项二',
+        subTitle: '描述文案',
+      },
+      {
+        title: '二选项二',
+        subTitle: '描述文案',
+      },
+      {
+        title: '选项选二',
+        subTitle: '描述文案',
+      },
+      {
+        title: '选二选项二',
+        subTitle: '描述文案',
+        number: '6',
+      },
+    ],
+    activeTab2: 0,
     tabs: [
       {
-        title: '选项',
+        title: '选项选项二选项二选项二',
         subTitle: '描述文案',
         number: '6',
       },
@@ -25,7 +49,7 @@ Page({
       { title: '3 Tab',
         subTitle: '描述',
       },
-      { title: '4 Tab',
+      { title: '4 Tab选项二选项二选项二选项二',
         subTitle: '描述',
       },
       { title: '15 Tab',
@@ -180,9 +204,9 @@ Page({
       });
     }
   },
-  handleTabClick({ index }) {
+  handleTabClick({ index, tabsName }) {
     this.setData({
-      activeTab: index,
+      [tabsName]: index,
     });
   },
   handleTabChange({ index }) {
