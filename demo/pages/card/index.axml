@@ -32,11 +32,21 @@
       someProp="onCardClick" 
       info="点击了第三个card" 
       bgImg="https://gw-office.alipayobjects.com/basement_prod/e8d22c8e-20f6-4bbd-a3ae-7be615e98b33.jpg"
-      
       expand
       />
 </view>
 <view style="margin-top: 10px;" />
+    <view>
+      <coupon title="券标题" 
+        thumb="{{thumb}}">
+      </coupon>
+    </view>
+    <view>
+      <coupon title="券标题" 
+        subtitle="券副标题" 
+        thumb="{{thumb}}">
+      </coupon>
+    </view>
     <view>
       <coupon title="券标题" 
         subtitle="券副标题" 
