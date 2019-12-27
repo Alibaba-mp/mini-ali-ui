@@ -1,4 +1,4 @@
-<view a:if="{{infinite}}" class="am-pageInfinite {{ClassName?ClassName:''}}" style="height: {{height}}px;">
+<view a:if="{{infinite}}" class="am-pageInfinite {{className?className:''}}" style="height: {{height}}px;">
   <scroll-view scroll-x="true" class="am-pageInfinite_content" data-id="{{pagerName}}" id="{{pagerName}}" onScroll="onScroll" style="height: {{height}}px;">
     <slot></slot>
   </scroll-view>
@@ -15,13 +15,13 @@
     </view>
   </view>
 </view>
-<view a:if="{{!infinite && white}}" class="am-pager {{ClassName?ClassName:''}}">
+<view a:if="{{!infinite && white}}" class="am-pager {{className?className:''}}">
   <block a:for="{{max}}">
     <view a:if="{{currentPage === index + 1}}" class="am-pager-current {{index === max - 1?'am-pager-lastChild':'' }}" style="background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M23.9%2C1.7c-0.5-1.4-1.9-2.1-3.3-1.6c-3%2C1.1-5.8%2C1.7-8.4%2C1.6c-3%2C0-5.9-0.6-8.7-1.6C2.2-0.3%2C0.7%2C0.3%2C0.2%2C1.7%20C-0.3%2C3%2C0.3%2C4.5%2C1.7%2C5C5%2C6.3%2C8.5%2C7%2C12.1%2C7c3.3%2C0%2C6.6-0.7%2C10.1-1.9C23.6%2C4.6%2C24.3%2C3.1%2C23.9%2C1.7z%22%2F%3E%3C%2Fsvg%3E);"></view>
     <view a:else class="am-pager-number am-pager-number_white {{index === max - 1?'am-pager-lastChild':'' }}"></view>
   </block>
 </view>
-<view a:if="{{!infinite && !white}}" class="am-pager {{ClassName?ClassName:''}}">
+<view a:if="{{!infinite && !white}}" class="am-pager {{className?className:''}}">
   <block a:for="{{max}}">
     <view a:if="{{currentPage === index + 1}}" class="am-pager-current {{index === max - 1?'am-pager-lastChild':'' }}" style="{{frontColor?'background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22' + frontColor + '%22%20d%3D%22M23.9%2C1.7c-0.5-1.4-1.9-2.1-3.3-1.6c-3%2C1.1-5.8%2C1.7-8.4%2C1.6c-3%2C0-5.9-0.6-8.7-1.6C2.2-0.3%2C0.7%2C0.3%2C0.2%2C1.7%20C-0.3%2C3%2C0.3%2C4.5%2C1.7%2C5C5%2C6.3%2C8.5%2C7%2C12.1%2C7c3.3%2C0%2C6.6-0.7%2C10.1-1.9C23.6%2C4.6%2C24.3%2C3.1%2C23.9%2C1.7z%22%2F%3E%3C%2Fsvg%3E);':''}}"></view>
     <view a:else class="am-pager-number {{index === max - 1?'am-pager-lastChild':'' }}"></view>

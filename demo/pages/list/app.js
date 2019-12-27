@@ -86,11 +86,11 @@ Page({
       //   nameZN: '气泡',
       //   path: '/pages/popover/index',
       // },
-      // {
-      //   name: 'Grid',
-      //   nameZN: '宫格',
-      //   path: '/pages/grid/index',
-      // },
+      {
+        name: 'Grid',
+        nameZN: '宫格',
+        path: '/pages/grid/index',
+      },
       // {
       //   name: 'Card',
       //   nameZN: '卡片',

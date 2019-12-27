@@ -56,7 +56,7 @@
       <view
       class="am-tabs-plus {{showPlus ? 'show' : ''}}"
       onTap="handlePlusClick" hover-class="am-tabs-bar-tab__hover" hover-start-time="0" hover-stay-time="0">
-        <am-icon type="add1" size="16"></am-icon>
+        <am-icon type="add" size="16"></am-icon>
       </view>
     </view>
     <block a:if="{{swipeable}}">
