@@ -32,6 +32,7 @@ Component({
     capsule: false,
     // 是否有副标题
     hasSubTitle: false,
+    tabsName: '',
   },
   data: {
     windowWidth,
@@ -78,14 +79,41 @@ Component({
       }
     },
     handleTabClick(e) {
-      const { index } = e.target.dataset;
+      // console.log(e, e.currentTarget.id, e.currentTarget.offsetLeft, e.detail.pageX, e.detail.clientX)
+      const { index, tabsName } = e.target.dataset;
+
+      my.createSelectorQuery()
+        .select(`#${e.currentTarget.id}`)
+        .boundingClientRect()
+        .exec((ret) => {
+          // console.log(<my.IBoundingClientRect>ret[0])
+          this.wrapWidth = (<my.IBoundingClientRect>ret[0]).width;
+        });
+      my.createSelectorQuery()
+        .select('.am-tabs-bar-content')
+        .boundingClientRect()
+        .exec((ret) => {
+          // console.log(ret[0])
+          this.wrapWidth = (<my.IBoundingClientRect>ret[0]).width;
+        });
+
+      // if(e.currentTarget.offsetLeft > e.detail.clientX / 2) {
+      //   // console.warn("👉", e.currentTarget.offsetLeft - Math.floor(e.detail.clientX)/2)
+      //   // this.setData({
+      //   //   viewScrollLeft: e.currentTarget.offsetLeft - Math.floor(e.detail.clientX)/2,
+      //   // });
+      // }else{
+      //   this.setData({
+      //     viewScrollLeft: 0,
+      //   });
+      // }
 
       this.setData({
         viewScrollLeft: e.currentTarget.offsetLeft,
       });
 
       if (this.props.onTabClick) {
-        this.props.onTabClick({ index });
+        this.props.onTabClick({ index, tabsName });
       }
     },
     handlePlusClick() {
@@ -94,6 +122,7 @@ Component({
       }
     },
     showLeftShadow(e) {
+      // console.log("🔥", e.detail.scrollLeft)
       if (e.detail.scrollLeft > 0) {
         this.setData({
           showLeftShadow: true,

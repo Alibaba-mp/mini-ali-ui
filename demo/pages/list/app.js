@@ -46,11 +46,11 @@ Page({
       //   nameZN: '选择输入项',
       //   path: '/pages/picker-item/index',
       // },
-      // {
-      //   name: 'Footer',
-      //   nameZN: '页脚',
-      //   path: '/pages/footer/index',
-      // },
+      {
+        name: 'Footer',
+        nameZN: '页脚',
+        path: '/pages/footer/index',
+      },
       {
         name: 'Modal',
         nameZN: 'Modal',
@@ -86,11 +86,11 @@ Page({
       //   nameZN: '气泡',
       //   path: '/pages/popover/index',
       // },
-      // {
-      //   name: 'Grid',
-      //   nameZN: '宫格',
-      //   path: '/pages/grid/index',
-      // },
+      {
+        name: 'Grid',
+        nameZN: '宫格',
+        path: '/pages/grid/index',
+      },
       // {
       //   name: 'Card',
       //   nameZN: '卡片',
@@ -146,11 +146,11 @@ Page({
       //   nameZN: '信息状态',
       //   path: '/pages/message/index',
       // },
-      // {
-      //   name: 'Pagination',
-      //   nameZN: '分页',
-      //   path: '/pages/pagination/index',
-      // },
+      {
+        name: 'Pagination',
+        nameZN: '分页',
+        path: '/pages/pagination/index',
+      },
       // {
       //   name: 'Collapse',
       //   nameZN: '折叠',
@@ -170,6 +170,11 @@ Page({
         name: 'Form',
         nameZN: '表单',
         path: '/pages/form/index',
+      },
+      {
+        name: 'Mask',
+        nameZN: '背景蒙层',
+        path: '/pages/mask/mask',
       },
     ],
   },

@@ -7,7 +7,7 @@
   </view>  
   <view class="am-title-operation" a:if="{{ type==='arrow' || type==='close' || type==='more' }}" onTap="onClick">
     <am-icon
-      type="{{type === 'arrow'?type+'-right':type}}"
+      type="{{type === 'arrow'?'right':type}}"
       size="17" color="#ccc"
     ></am-icon>
   </view>

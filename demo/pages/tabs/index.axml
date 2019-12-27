@@ -1,6 +1,7 @@
 <view style="padding: 12px;">
   <tabs
     tabs="{{tabs}}"
+    tabsName="activeTab"
     onTabClick="handleTabClick"
     onChange="handleTabChange"
     onPlusClick="handlePlusClick"
@@ -23,6 +24,35 @@
     </block>
     <block a:for="{{tabs}}" a:if="{{hasContentHeight}}">
       <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}">
+        <view class="tab-content" style="height: 200px;">固定高度为 200px {{item.title}}，可滑动内容区域，tabs 跟随变化。</view>
+      </tab-content>
+    </block>
+  </tabs>
+  <tabs
+    tabs="{{tabs2}}"
+    tabsName="activeTab2"
+    onTabClick="handleTabClick"
+    onChange="handleTabChange"
+    onPlusClick="handlePlusClick"
+    activeTab="{{activeTab2}}"
+    showPlus="{{hasPlus}}"
+    swipeable="{{hasContentHeight}}"
+    capsule="{{typeCapsule}}"
+    hasSubTitle="{{typeHasSubTitle}}"
+  >
+    <block a:for="{{tabs2}}" a:if="{{!hasContentHeight}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:if="{{index === 0}}">
+        <view class="tab-content" style="height: 300px;">高度为 300px {{item.title}}</view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:elif="{{index === 2}}">
+        <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:else>
+        <view class="tab-content">content of {{item.title}}</view>
+      </tab-content>
+    </block>
+    <block a:for="{{tabs2}}" a:if="{{hasContentHeight}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}">
         <view class="tab-content" style="height: 200px;">固定高度为 200px {{item.title}}，可滑动内容区域，tabs 跟随变化。</view>
       </tab-content>
     </block>
