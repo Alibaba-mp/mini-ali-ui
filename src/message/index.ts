@@ -1,10 +1,10 @@
 const SUPPORT_COMPONENT2 = my.canIUse('component2');
 const TYPE_MAP = {
-  success: 'success_',
-  fail: 'del_',
-  info: 'help1_',
+  success: 'check_',
+  fail: 'close_',
+  info: 'help_',
   warn: 'warn_',
-  waiting: 'time_',
+  waiting: 'time-5_',
 };
 
 Component({
@@ -16,7 +16,7 @@ Component({
     onTapSub: () => {},
   },
   data: {
-    iconType: 'success_',
+    iconType: 'check_',
   },
   onInit() {
     this.setType(this.props.type);
@@ -44,7 +44,7 @@ Component({
       this.props.onTapSub();
     },
     setType(type) {
-      const realType = TYPE_MAP[type] || 'success_';
+      const realType = TYPE_MAP[type] || 'check_';
       this.setData({ iconType: realType });
     },
   },

@@ -4,6 +4,7 @@
     "pages/list/index",
     "pages/amount-input/index",
     "pages/am-icon/index",
+    "pages/am-switch/index",
     "pages/picker-item/index",
     "pages/input-item/index",
     "pages/form/index",
