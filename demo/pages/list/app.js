@@ -17,6 +17,11 @@ Page({
         path: '/pages/am-icon/index',
       },
       {
+        name: 'AmSwitch',
+        nameZN: '开关',
+        path: '/pages/am-switch/index',
+      },
+      {
         name: 'Alphabet',
         nameZN: '字母检索表',
         path: '/pages/alphabet/index',
@@ -141,11 +146,11 @@ Page({
       //   nameZN: '弹出菜单',
       //   path: '/pages/popup/index',
       // },
-      // {
-      //   name: 'Message',
-      //   nameZN: '信息状态',
-      //   path: '/pages/message/index',
-      // },
+      {
+        name: 'Message',
+        nameZN: '信息状态',
+        path: '/pages/message/index',
+      },
       {
         name: 'Pagination',
         nameZN: '分页',
