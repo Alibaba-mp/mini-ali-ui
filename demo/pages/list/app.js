@@ -176,6 +176,11 @@ Page({
         nameZN: '背景蒙层',
         path: '/pages/mask/mask',
       },
+      {
+        name: 'Guide',
+        nameZN: '遮罩引导',
+        path: '/pages/guide/guide',
+      },
     ],
   },
 });
