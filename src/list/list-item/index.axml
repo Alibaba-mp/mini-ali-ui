@@ -11,6 +11,9 @@
 		src="{{thumb}}" 
 		size="{{thumbSize}}" />
 	<view class="am-list-line {{wrap ? 'am-list-wrap' : ''}}">
+		<image a:if={{thumb}} class="am-list-thumb" 
+			src="{{thumb}}" 
+			mode="scaleToFill" />
 		<view class="am-list-content">
 			<view a:if="{{titlePosition === 'top'}}" 
 				class="am-list-content-title">{{title}}</view>
@@ -24,7 +27,12 @@
 		<view a:if={{$slots.extra}} class="{{enforceExtra ? 'am-list-primary' : 'am-list-extra'}}">
 			<slot name="extra" />
 		</view>
-		<view a:if={{arrow}} class="am-list-arrow" />
+		<view a:if={{arrow}} class="am-list-arrow">
+			<am-icon type="arrow-right" 
+				class="am-list-arrow-icon" 
+				size="22" 
+				color="#ccc" />
+		</view>
 		<view class="am-list-line-bottom" />
 	</view>
 </view>

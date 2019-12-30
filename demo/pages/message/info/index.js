@@ -1,12 +1,13 @@
 Page({
   data: {
-    title: '提示信息',
+    title: '操作成功',
+    subTitle: '内容详情可折行，建议不超过两内容详情可折行，建议不超过两行',
     messageButton: {
       mainButton: {
-        buttonText: '返回首页',
+        buttonText: '主要操作',
       },
       subButton: {
-        buttonText: 'DO NOTHING',
+        buttonText: '辅助操作',
       },
     },
   },

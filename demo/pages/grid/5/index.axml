@@ -1,2 +1,11 @@
 <view style="margin-top: 10px;" />
+<grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{list55}}" infinite="{{true}}" />
+
+<view style="margin-top: 10px;" />
+<grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{list55}}" infinite="{{true}}" gridName="newGridName" circular="{{true}}" />
+
+<view style="margin-top: 10px;" />
 <grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{list5}}" />
+
+<view style="margin-top: 10px;" />
+<grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{list55}}" />

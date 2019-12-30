@@ -13,32 +13,38 @@
 			</view>
 			<block a:for="{{items}}">
 				<list-switch a:if="{{item.actionType==='switch'}}" 
+					thumb="{{thumbUrl}}" 
 					index="{{index}}" 
 					onClick="onSwitchClick" 
 					value="{{switchValues[index]}}" 
 					key="items-{{index}}" 
 					lineTouchable="{{item.lineTouchable}}" 
+					brief="简要信息" 
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
 					<view class="am-list-brief">{{item.brief}}</view>
 				</list-switch>
 				<list-check a:elif="{{item.actionType ==='check'}}" 
+					thumb="{{thumbUrl}}" 
 					index="{{index}}" 
 					onClick="onCheckClick" 
 					value="{{checkValues[index]}}" 
 					key="items-{{index}}" 
+					brief="简要信息" 
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
 				</list-check>
 				<list-capsule a:elif="{{item.actionType ==='capsule'}}" 
+					thumb="{{thumbUrl}}" 
 					index="{{index}}" 
 					onClick="onCapsuleClick" 
 					capsuleContent="{{item.capsuleContent}}" 
 					key="items-{{index}}" 
-					l last="{{index === (items.length - 1)}}">
+					brief="简要信息" 
+					last="{{index === (items.length - 1)}}">
 					{{item.title}}
 				</list-capsule>
-				<list-item a:else thumb="{{thumb}}" 
+				<list-item a:else thumb="{{thumbUrl}}" 
 					arrow="{{item.arrow}}" 
 					align="{{item.align}}" 
 					index="{{index}}" 
@@ -51,7 +57,7 @@
 					titlePosition="middle"
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
-					<view class="am-list-brief">{{item.brief}}</view>
+										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view slot="extra">
 						{{item.extra}}
 					</view>
@@ -73,9 +79,10 @@
 					key="items2-{{index}}" 
 					data-filed="aaa" 
 					title="{{item.title}}" 
+					brief="{{item.brief}}" 
 					last="{{index === (items2.length - 1)}}">
 					{{item.title}}
-					<view class="am-list-brief">{{item.brief}}</view>
+										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
 						slot="extra">
 						{{item.extra}}
@@ -97,9 +104,10 @@
 					onClick="onItemClick" 
 					key="items3-{{index}}" 
 					last="{{index === (items3.length - 1)}}" 
+					brief="{{item.brief}}" 
 					multipleLine="{{true}}">
 					{{item.title}}
-					<view class="am-list-brief">{{item.brief}}</view>
+										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
 						slot="extra">
 						{{item.extra}}
@@ -121,9 +129,10 @@
 					index="items4-{{index}}" 
 					last="{{index === (items4.length - 1)}}" 
 					key="items4-{{index}}" 
+					brief="{{item.brief}}" 
 					multipleLine="{{true}}">
 					{{item.title}}
-					<view class="am-list-brief">{{item.brief}}</view>
+										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
 						slot="extra">
 						{{item.extra}}
@@ -144,9 +153,10 @@
 					onClick="onItemClick" 
 					index="itemsThumb-{{index}}" 
 					last="{{index === (itemsThumb.length - 1)}}" 
+					brief="{{item.brief}}" 
 					key="itemsThumb-{{index}}">
 					{{item.title}}
-					<view class="am-list-brief">{{item.brief}}</view>
+										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
 						slot="extra">
 						{{item.extra}}
@@ -165,9 +175,10 @@
 					index="items-multiple-{{index}}" 
 					last="{{index === (itemsThumbMultiple.length - 1)}}" 
 					key="items-multiple-{{index}}" 
+					brief="{{item.brief}}" 
 					multipleLine="{{true}}">
 					{{item.title}}
-					<view class="am-list-brief">{{item.brief}}</view>
+										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
 						slot="extra">
 						{{item.extra}}

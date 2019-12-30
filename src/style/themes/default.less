@@ -1,4 +1,4 @@
-@import "alipay-style/style/theme/default";
+@import 'alipay-style/style/theme/default';
 
 :root {
   // 上述是全局变量，对于组件变量需要按照以下格式写注释
@@ -193,6 +193,8 @@
   --am-amount-title-font-size: var(--am-color-text-title);
   /* line-height | 金额内容行高 */
   --am-amount-content-line-height: var(--am-line-height-base);
+  /* size | 输入区上方外间距 */
+  --am-amount-value-margin-top: var(--am-size-6);
 
   /* notice */
   /* size | 上下内间距 */
@@ -219,8 +221,6 @@
   --am-notice-active-bgc: tint(@color-fill-primary, 80%);
   /* color | 活动通告栏边框色 */
   --am-notice-active-borderColor: tint(@color-fill-primary, 72%);
-  // /* corner-radius | 圆角 */
-  // --am-notice-borderRadius: var(--am-corner-radius-lg);
   /* size | icon 右外边距 */
   --am-notice-thumb-marginRight: var(--am-h-spacing-standard);
   /* font-size | 文字大小 */
@@ -253,6 +253,8 @@
   --am-title-marginBottom: var(--am-v-spacing-large);
   /* size | 底边线尺寸 */
   --am-title-borderWidth: var(--am-border-width-standard);
+  /* color | 底边线颜色 */
+  --am-title-borderColor: var(--am-color-divider-line);
   /* font-size | 标题文字大小 */
   --am-title-text-fontSize: var(--am-font-size-subtitle);
   /* color | 标题文字颜色 */
@@ -309,6 +311,8 @@
   --am-list-item-line-height: var(--am-line-height-paragraph);
   /* spacing | 列表条目间距 */
   --am-list-item-padding: var(--am-h-spacing-large);
+  /* spacing | 列表条目垂直间距 */
+  --am-list-item-padding-vertical: var(--am-v-spacing-large);
   /* size | 列表内容最小高度 */
   --am-list-item-min-height: var(--am-size-12);
   /* font-size | 列表extra内容字体大小 */
@@ -316,7 +320,7 @@
   /* color | 列表extra内容字体颜色 */
   --am-list-item-extra-color: var(--am-color-text-subtitle);
   /* spacing | 箭头左外间距 */
-  --am-list-item-arrow-margin: var(--am-h-spacing-standard);
+  --am-list-item-arrow-margin: var(--am-h-spacing-large);
 
   /* list-switch */
   /* color | 列表开关条目字体颜色 */
@@ -329,6 +333,8 @@
   --am-list-switch-line-height: var(--am-line-height-paragraph);
   /* spacing | 列表开关条目间距 */
   --am-list-switch-padding: var(--am-h-spacing-large);
+  /* spacing | 列表开关条目垂直间距 */
+  --am-list-switch-padding-vertical: var(--am-v-spacing-large);
   /* size | 列表开关内容最小高度 */
   --am-list-switch-min-height: var(--am-size-12);
   /* color | 列表开关开启时底色 */
@@ -349,6 +355,8 @@
   --am-list-check-line-height: var(--am-line-height-paragraph);
   /* spacing | 列表勾选间距 */
   --am-list-check-padding: var(--am-h-spacing-large);
+  /* spacing | 列表勾选垂直间距 */
+  --am-list-check-padding-vertical: var(--am-v-spacing-large);
   /* size | 列表内容最小高度 */
   --am-list-check-min-height: var(--am-size-12);
 
@@ -363,6 +371,8 @@
   --am-list-capsule-line-height: var(--am-line-height-paragraph);
   /* spacing | 列表胶囊按钮间距 */
   --am-list-capsule-padding: var(--am-h-spacing-large);
+  /* spacing | 列表胶囊按钮垂直间距 */
+  --am-list-capsule-padding-vertical: var(--am-v-spacing-large);
   /* size | 列表内容最小高度 */
   --am-list-capsule-min-height: var(--am-size-12);
   /* color | 按钮字体颜色 */
@@ -383,8 +393,16 @@
   --am-list-footer-header-min-height: var(--am-size-12);
   /* color | 列表header字体大小 */
   --am-list-header-font-size: var(--am-font-size-list);
-  /* spacing | 列表header间距 */
+  /* spacing | 列表header, footer左右间距 */
   --am-list-padding: var(--am-h-spacing-large);
+  /* spacing | 列表header上间距 */
+  --am-list-header-padding-top: var(--am-h-spacing-large);
+  /* spacing | 列表header下间距 */
+  --am-list-header-padding-bottom: var(--am-h-spacing-standard);
+  /* spacing | 列表footer上间距 */
+  --am-list-footer-padding-top: var(--am-h-spacing-standard);
+  /* spacing | 列表footer下间距 */
+  --am-list-footer-padding-bottom: var(--am-h-spacing-large);
   /* color | 列表条目背景色 */
   --am-list-background: var(--am-color-fill-grey-inverse);
   /* line-height | 列表条目行高 */
@@ -413,6 +431,7 @@
   --am-alphabet-bubble-background: var(--am-color-fill-grey-base);
   /* font-size | 提示气泡字体大小 */
   --am-alphabet-bubble-font-size: var(--am-font-size-stress);
+
   /* button */
   /* size | 按钮内间距 */
   --am-button-padding: var(--am-size-3);
@@ -431,7 +450,7 @@
   /* color | 默认按钮背景色 */
   --am-button-background: var(--am-color-fill-grey-inverse);
   /* color | 默认按钮边框色 */
-  --am-button-border-color: var(--am-color-divider-line);
+  --am-button-border-color: var(--am-color-fill-grey-light);
   /* color |  primary按钮背景色 */
   --am-button-primary-background: var(--am-color-fill-primary);
   /* color |  primary按钮边框色 */
@@ -484,6 +503,8 @@
   --am-tabs-capsule-paddingV: var(--am-v-spacing-large);
   /* size | 胶囊有外边距 */
   --am-tabs-capsule-marginRight: var(--am-h-spacing-large);
+  /* size | 描述文字胶囊由边距 */
+  --am-tabs-subTitle-marginRight: var(--am-size-4);
   /* size | 描述文字胶囊上下内间距 */
   --am-tabs-subTitle-paddingH: var(--am-h-spacing-standard);
   /* font-size | 描述文字大小 */
@@ -491,7 +512,7 @@
   /* line-height | 描述文字行高 */
   --am-tabs-subTitle-lineHeght: var(--am-line-height-paragraph);
   /* size | 文字选项卡右外边距 */
-  --am-tabs-title-marginRight: calc(var(--am-h-spacing-large) * 2);
+  --am-tabs-title-marginRight: var(--am-size-6);
   /* size | 文字选项卡上内边距 */
   --am-tabs-title-paddingTop: var(--am-v-spacing-large);
   /* size | 文字选项卡下内边距 */
@@ -502,6 +523,18 @@
   --am-tabs-title-capsule-bgc: var(--am-color-fill-grey-light);
   /* color | tabs 选项卡内容区域背景色 */
   --am-tabs-content-bgc: var(--am-color-fill-grey-inverse);
+  /* size | 胶囊 tab 中的数字左间距 */
+  --am-tabs-number-marginLeft: var(--am-size-1);
+  /* font-size | 胶囊 tab 中的数字大小 */
+  --am-tabs-number-fontSize: var(--am-font-size-content);
+  /* color | 胶囊 tab 中的数字默认颜色 */
+  --am-tabs-number-color: var(--am-color-text-subtitle);
+  /* color | 胶囊 tab 中的数字激活状态颜色 */
+  --am-tabs-number-color__active: var(--am-color-text-base);
+  /* size | tabs 底部分割线大小 */
+  --am-tabs-content-borderWidth: var(@border-width-standard);
+  /* color | tabs 底部分割线颜色 */
+  --am-tabs-content-borderColor: var(@color-divider-line);
 
   /* modal */
   /* size | 标题字体大小 */
@@ -532,48 +565,6 @@
   --am-modal-footer-fontSize: var(--am-font-size-title);
   /* color | footer字体颜色 */
   --am-modal-footer-color: var(--am-color-text-primary);
-
-  /* title */
-  /* size | 底内间距 */
-  --am-tag-padding: var(--am-v-spacing-standard);
-  /* font-size | 标题文字大小 */
-  --am-tag-text-font-size: var(--am-font-size-subtitle);
-  /* line-height | 标题文字行高 */
-  --am-tag-line-height: var(--am-line-height-paragraph);
-  /* color | 标题文字颜色 */
-  --am-tag-text-color: var(--am-color-text-base);
-  /* size | icon 宽度 */
-  --am-tag-icon-width: var(--am-size-6);
-  /* size | icon 高度 */
-  --am-tag-icon-height: var(--am-size-6);
-  /* size | icon 右间距 */
-  --am-tag-icon-marginRight: var(--am-h-spacing-standard);
-  /* font-size | 标签字大小 */
-  --am-tag-text-font-size: var(--am-font-size-subcontent);
-  /* color | 标签背景主颜色 */
-  --am-tag-bg-primary: var(--am-color-brand-1);
-  /* color | 标签背景警告颜色 */
-  --am-tag-bg-warning: var(--am-color-orange-1);
-  /* color | 标签背景危险颜色 */
-  --am-tag-bg-danger: var(--am-color-tangerine-1);
-  /* color | 标签背景成功颜色 */
-  --am-tag-bg-success: var(--am-color-pomonagreen-1);
-  /* color | 主字体颜色 */
-  --am-tag-icon-font-primary: var(--am-color-brand-1);
-  /* color | 有图标时主背景颜色 */
-  --am-tag-icon-bg-primary: var(--am-color-brand-2);
-  /* color | 警告字体颜色 */
-  --am-tag-icon-font-warning: var(--am-color-orange-1);
-  /* color | 有图标时警告背景颜色 */
-  --am-tag-icon-bg-warning: var(--am-color-orange-2);
-  /* color | 标签背景危险颜色 */
-  --am-tag-icon-font-danger: var(--am-color-tangerine-1);
-  /* color | 有图标时危险背景颜色 */
-  --am-tag-icon-bg-danger: var(--am-color-tangerine-2);
-  /* color | 标签背景成功颜色 */
-  --am-tag-icon-font-success: var(--am-color-pomonagreen-1);
-  /* color | 有图标时成功背景颜色 */
-  --am-tag-icon-bg-success: var(--am-color-pomonagreen-1);
 
   /* steps */
   /* color | 主体背景色 */
@@ -714,4 +705,90 @@
   --am-coupon-subtitle-size: var(--am-font-size-content);
   /* color | 内容标题字色 */
   --am-coupon-subtitle-color: var(--am-color-text-subtitle);
+
+  /* message */
+  /* color | 背景色 */
+  --am-message-background: var(--am-color-fill-grey-inverse);
+  /* size | 水平间距 */
+  --am-message-padding-h: var(--am-size-8);
+  /* size | 垂直间距 */
+  --am-message-padding-v: var(--am-size-3);
+  /* line-height | icon行高 */
+  --am-message-icon-lineheight: var(--am-line-height-base);
+  /* size | icon大小 */
+  --am-message-icon-size: var(--am-size-16);
+  /* color | success颜色 */
+  --am-message-success-color: var(--am-color-fill-primary);
+  /* color | info颜色 */
+  --am-message-info-color: var(--am-color-fill-primary);
+  /* color | waiting颜色 */
+  --am-message-waiting-color: var(--am-color-pomonagreen-1);
+  /* color | warn颜色 */
+  --am-message-warn-color: var(--am-color-orange-1);
+  /* color | fail颜色 */
+  --am-message-fail-color: var(--am-color-fill-warning);
+  /* font-size | 主标题字号 */
+  --am-message-title-size: var(--am-font-size-title);
+  /* size | 主标题间距 */
+  --am-message-title-margin: var(--am-size-5);
+  /* color | 主标题文字色 */
+  --am-message-title-color: var(--am-color-text-title);
+  /* font-size | 副标题字号 */
+  --am-message-subtitle-size: var(--am-font-size-content);
+  /* size | 副标题间距 */
+  --am-message-subtitle-margin: var(--am-size-2);
+  /* color | 副标题文字色 */
+  --am-message-subtitle-color: var(--am-color-text-subtitle);
+  /* size | 主按钮上边距 */
+  --am-message-margintop: var(--am-size-8);
+  /* size | 次按钮间距 */
+  --am-message-button-margin: var(--am-size-4);
+
+  /* footer */
+  /* font-size | 页脚文本字体大小 */
+  --am-footer-content-fontSize: var(--am-font-size-content);
+  /* color | 页脚文本字体颜色 */
+  --am-footer-content-color: var(--am-color-text-weak);
+  /* spacing | 页脚链接文本底边距 */
+  --am-footer-link-marginBottom: var(--am-v-spacing-standard);
+  /* font-size | 页脚链接文本字体大小 */
+  --am-footer-link-fontSize: var(--am-font-size-subtitle);
+  /* color | 页脚链接文本颜色 */
+  --am-footer-link-color: var(--am-color-text-primary);
+  /* size | 页脚链接文本间隔线高度 */
+  --am-footer-link-lineSize: var(--am-font-size-subcontent);
+  /* spacing | 页脚链接文本间隔线左右边距 */
+  --am-footer-link-lineMarginLR: var(--am-h-spacing-large);
+  /* spacing | 页脚链接文本间隔线下边距 */
+  --am-footer-link-lineMarginLR: var(--am-v-spacing-standard);
+  /* color | 页脚链接文本间隔线颜色 */
+  --am-footer-link-lineColor: var(--am-color-divider-line);
+  /* spacing | 页脚引导链接上下内间距 */
+  --am-footer-guide-paddingTB: var(--am-size-1);
+  /* spacing | 页脚引导链接左右内间距 */
+  --am-footer-guide-paddingLR: var(--am-h-spacing-large);
+  /* spacing | 页脚引导链接右边距 */
+  --am-footer-guide-marginRight: var(--am-h-spacing-large);
+  /* spacing | 页脚引导链接上边距 */
+  --am-footer-guide-marginTop: var(--am-v-spacing-standard);
+  /* font-size | 页脚引导链接文本大小 */
+  --am-footer-guide-fontSize: var(--am-font-size-subcontent);
+  /* corner-radius | 页脚引导链接圆角 */
+  --am-footer-guide-borderRadius: var(--am-corner-radius-circle);
+  /* color | 页脚引导链接背景色 */
+  --am-footer-guide-bgc: var(--am-color-divider-background);
+  /* color | 页脚引导链接文本颜色 */
+  --am-footer-guide-color: var(--am-color-text-subtitle);
+  /* spacing | 页脚品牌 logo 右边距 */
+  --am-footer-brand-marginRight: var(--am-h-spacing-large);
+  /* spacing | 页脚品牌 logo 下边距 */
+  --am-footer-brand-marginBottom: var(--am-v-spacing-standard);
+
+  /* am-switch */
+  /* color | switch颜色 */
+  --am-switch-background: var(--am-color-fill-primary);
+  /* corner-radius  | 圆角 */
+  --am-switch-corner-radius: var(--am-corner-radius-circle);
+  /* corner-radius  | 浮标圆角 */
+  --am-switch-float-corner-radius: var(--am-corner-radius-circle);
 }

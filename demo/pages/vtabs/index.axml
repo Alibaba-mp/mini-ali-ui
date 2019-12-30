@@ -7,7 +7,7 @@
   >
     <block a:for="{{tabs}}">
       <vtab-content anchor="{{item.anchor}}">
-        <view style="border: 1px solid #eee; height: 800px; box-sizing: border-box">
+        <view style="border: 1px solid #eee; height: 100vh; box-sizing: border-box">
           <text>content of {{item.title}}</text>
         </view>
       </vtab-content>

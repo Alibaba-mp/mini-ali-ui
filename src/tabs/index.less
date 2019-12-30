@@ -10,10 +10,15 @@
     display: flex;
     align-items: stretch;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     padding: 0 @h-spacing-large;
     padding: 0 var(--am-tabs-padding, @h-spacing-large);
+    border-bottom: @border-width-standard solid @color-divider-line;
+    border-bottom: var(--am-tabs-content-borderWidth, @border-width-standard) solid var(--am-tabs-content-borderColor, @color-divider-line);
     box-sizing: border-box;
+    &-capsule {
+      border-bottom: 0 none;
+    }
   }
 
   &-scroll-left,
@@ -21,7 +26,7 @@
     width: 36px;
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 1px;
     z-index: 99;
     background-size: 100%;
     pointer-events: none;
@@ -66,6 +71,7 @@
     position: relative;
     flex: 1 1 auto;
     overflow: hidden;
+    margin-bottom: -1px;
   }
 
   &-bar-tab {
@@ -78,10 +84,20 @@
     white-space: nowrap;
     &-capsule {
       padding: @v-spacing-large 0;
-      padding: var(--am-tabs-capsule-paddingV, @v-spacing-large);
+      padding: var(--am-tabs-capsule-paddingV, @v-spacing-large) 0;
       margin-right: @h-spacing-large;
       margin-right: var(--am-tabs-capsule-marginRight, @h-spacing-large);
       box-sizing: border-box;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__hasSubTitle {
+      margin-right: @size-4;
+      margin-right: var(--am-tabs-subTitle-marginRight, @size-4);
+      &:last-child {
+        margin-right: 0;
+      }
     }
     &-subTitle {
       margin-top: 4px;
@@ -93,32 +109,69 @@
       line-height: var(--am-tabs-subTitle-lineHeght, @line-height-paragraph);
       border-radius: 50vh;
     }
+    &-number {
+      margin-left: @size-1;
+      margin-left: var(--am-tabs-number-marginLeft, @size-1);
+      font-size: @font-size-content;
+      font-size: var(--am-tabs-number-fontSize, @font-size-content);
+      color: @color-text-subtitle;
+      color: var(--am-tabs-number-color, @color-text-subtitle);
+      &_active {
+        color: @color-text-base;
+        color: var(--am-tabs-number-color__active, @color-text-base);
+      }
+    }
+    &__hover {
+      opacity: 0.6;
+    }
+    &-capsule__hover {
+      filter: brightness(0.9);
+      & .am-tabs-bar-tab-mainTitle {
+        opacity: 0.3;
+      }
+    }
   }
 
   &-bar-title {
     position: relative;
     display: flex;
-    margin-right: @h-spacing-large * 2;
-    margin-right: var(--am-tabs-title-marginRight, @h-spacing-large * 2);
+    align-items: center;
+    margin-right: @size-6;
+    margin-right: var(--am-tabs-title-marginRight, @size-6);
     padding-top: @v-spacing-large;
     padding-top: var(--am-tabs-title-paddingTop, @v-spacing-large);
     padding-bottom: @v-spacing-large;
     padding-bottom: var(--am-tabs-title-paddingBottom, @v-spacing-large);
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: transparent;
+    // border-bottom-width: 2px;
+    // border-bottom-style: solid;
+    // border-bottom-color: transparent;
     box-sizing: border-box;
     &__noMargin {
       margin-right: 0;
       z-index: 101;
     }
     &__hasSubTitle {
-      text-align: center;
       flex-direction: column;
+      margin-right: 0;
+      text-align: center;
       border-bottom: 0 none;
+    }
+    &-underline {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 2px;
+      overflow: hidden;
+      font-size: 0;
+      border-radius: @corner-radius-circle;
+      box-sizing: border-box;
+      animation: underlineShow 200ms linear 0ms 1 forwards;
     }
   }
   &-bar-capsule-title {
+    flex: 1;
+    justify-content: center;
     margin-right: 0;
     padding: @h-spacing-large;
     padding: var(--am-tabs-title-capsule-padding, @h-spacing-large);
@@ -128,23 +181,22 @@
     border-bottom: 0 none;
   }
 
-  &-bar-badge.dot {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(8px);
-  }
+  // &-bar-badge.dot {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   transform: translateX(8px);
+  // }
 
-  &-bar-badge.text {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    transform: translateX(100%);
-    // height: 16px;
-  }
+  // &-bar-badge.text {
+  //   position: absolute;
+  //   top: 2px;
+  //   right: 2px;
+  //   transform: translateX(100%);
+  //   // height: 16px;
+  // }
 
   &-content-wrap {
-    margin-top: 1px;
     display: flex;
     flex-direction: row;
     align-content: stretch;
@@ -162,5 +214,14 @@
     width: 100%;
     display: flex;
     transition-duration: 500ms;
+  }
+}
+
+@keyframes underlineShow {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

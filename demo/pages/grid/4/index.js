@@ -3,27 +3,27 @@ Page({
     list4: [
       {
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
-        text: '标题文字',
+        text: '标题文字标题文字标题文字',
       },
       {
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
-        text: '标题文字',
+        text: '标题文字标题文字',
       },
       {
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
-        text: '标题文字',
+        text: '标字',
       },
       {
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
-        text: '标题文字',
+        text: '字',
       },
       {
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
-        text: '标题文字',
+        text: '标题文字字',
       },
       {
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
-        text: '标题文字',
+        text: '标题文字文字',
       },
       {
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
@@ -36,36 +36,36 @@ Page({
     ],
     list42: [
       {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/cDzZIzCNStljQGzVcQvs.png',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
         text: '标题文字',
       },
       {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/cDzZIzCNStljQGzVcQvs.png',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
         text: '标题文字',
       },
       {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/cDzZIzCNStljQGzVcQvs.png',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
         text: '标题文字',
       },
       {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/cDzZIzCNStljQGzVcQvs.png',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
         text: '标题文字',
       },
       {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/cDzZIzCNStljQGzVcQvs.png',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
         text: '标题文字',
       },
       {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/cDzZIzCNStljQGzVcQvs.png',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
         text: '标题文字',
       },
       {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/cDzZIzCNStljQGzVcQvs.png',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
         text: '标题文字',
       },
       {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/cDzZIzCNStljQGzVcQvs.png',
-        text: '标题文字',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '标题文字标题文',
       },
     ],
   },

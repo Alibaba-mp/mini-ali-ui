@@ -3,8 +3,8 @@
 .am-list {
   &-header,
   &-footer {
-    min-height: @size-12;
-    min-height: var(--am-list-footer-header-min-height, @size-12);
+    // min-height: @size-12;
+    // min-height: var(--am-list-footer-header-min-height, @size-12);
     display: flex;
     align-items: center;
     color: @color-text-subtitle;
@@ -17,6 +17,11 @@
   &-header {
     font-size: @font-size-subtitle;
     font-size: var(--am-list-header-font-size, @font-size-subtitle);
+    line-height: normal;
+    padding-top: @v-spacing-large;
+    padding-top: var(--am-list-header-padding-top, @v-spacing-large);
+    padding-bottom: @v-spacing-standard;
+    padding-bottom: var(--am-list-header-padding-bottom, @v-spacing-standard);
   }
   &-body {
     position: relative;
@@ -25,6 +30,11 @@
   }
   &-footer {
     font-size: @font-size-content;
+    line-height: normal;
+    padding-top: @v-spacing-standard;
+    padding-top: var(--am-list-footer-padding-top, @v-spacing-standard);
+    padding-bottom: @v-spacing-large;
+    padding-bottom: var(--am-list-footer-padding-bottom, @v-spacing-large);
   }
   &-load-more {
     text-align: center;

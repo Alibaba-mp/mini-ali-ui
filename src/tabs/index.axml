@@ -2,11 +2,11 @@
 
 <view class="am-tabs {{className}}">
   <view class="am-tabs-tab-bar-wrap">
-    <view class="am-tabs-bar" style="background-color: {{tabBarBackgroundColor}};">
+    <view class="am-tabs-bar {{capsule?'am-tabs-bar-capsule':''}}" style="background-color: {{tabBarBackgroundColor}};">
       <view class="am-tabs-bar-content-wrap">
         <scroll-view
           scroll-left="{{viewScrollLeft - 24}}"
-          scroll-into-view="tabs-item-{{tabViewNum}}"
+          scroll-into-view="tabs-item-{{tabsName?tabsName+'-':''}}{{tabViewNum}}"
           scroll-x="{{true}}"
           scroll-with-animation="{{animation}}"
           onScroll="showLeftShadow"
@@ -15,15 +15,16 @@
           <view class="am-tabs-scroll-right"  style="background-color: {{tabBarBackgroundColor}};"></view>
           <block a:for="{{tabs}}">
             <view
-              id="tabs-item-{{index}}"
+              id="tabs-item-{{tabsName?tabsName+'-':''}}{{index}}"
               data-index="{{index}}"
+              data-tabsName="{{tabsName}}"
               key="tabs-item-{{index}}"
               onTap="handleTabClick"
               style="color: {{ !hasSubTitle && capsule?
                 (index === activeTab ? capsuleTabBarActiveTextColor: tabBarInactiveTextColor)
                 :
                 (index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor) }}"
-              class="am-tabs-bar-tab {{ !hasSubTitle && capsule?'am-tabs-bar-tab-capsule':''}} {{tabBarCls}}">
+              class="am-tabs-bar-tab {{ !hasSubTitle && capsule?'am-tabs-bar-tab-capsule':''}} {{ hasSubTitle?'am-tabs-bar-tab__hasSubTitle':''}} {{tabBarCls}}" hover-class="{{index === activeTab?'':!hasSubTitle && capsule?'am-tabs-bar-tab-capsule__hover':'am-tabs-bar-tab__hover'}}" hover-start-time="0" hover-stay-time="0">
               <view class="
                 am-tabs-bar-title
                 {{ hasSubTitle ? 'am-tabs-bar-title__hasSubTitle' : ''}}
@@ -35,17 +36,18 @@
                     '':
                   (!hasSubTitle && capsule?
                   (index === activeTab ? 'background-color:' + tabBarUnderlineColor + ';' : '')
-                  :
-                  (index === activeTab ? 'border-bottom-color:' + tabBarUnderlineColor + ';' : '')) }}">
+                  :'') }}">
+                <view a:if="{{ !hasSubTitle && !capsule && index === activeTab}}" class="am-tabs-bar-title-underline" style="background-color: {{tabBarUnderlineColor}};"></view>
                 <text class="am-tabs-bar-tab-mainTitle">{{item.title}}</text>
+                <text a:if="{{!hasSubTitle && capsule && item.number}}" class="am-tabs-bar-tab-number {{ index === activeTab ?'am-tabs-bar-tab-number_active':''}}">({{item.number}})</text>
                 <text class="am-tabs-bar-tab-subTitle" a:if="{{hasSubTitle && item.subTitle}}" style="
                   {{index === activeTab ? 'background-color:' + tabBarUnderlineColor + '; color: ' + tabBarActiveSubTextColor + ';' : 'color: ' + tabBarSubTextColor + ';'}}
                 ">{{item.subTitle}}</text>
-                <badge
+                <!-- <badge
                   className="am-tabs-bar-badge {{item.badgeType ? item.badgeType : ''}}"
                   a:if="{{!capsule && item.badgeType}}"
                   dot="{{item.badgeType == 'dot'}}"
-                  text="{{item.badgeText}}" />
+                  text="{{item.badgeText}}" /> -->
               </view>
             </view>
           </block>
@@ -53,8 +55,8 @@
       </view>
       <view
       class="am-tabs-plus {{showPlus ? 'show' : ''}}"
-      onTap="handlePlusClick">
-        <am-icon type="add1" size="16"></am-icon>
+      onTap="handlePlusClick" hover-class="am-tabs-bar-tab__hover" hover-start-time="0" hover-stay-time="0">
+        <am-icon type="add" size="16"></am-icon>
       </view>
     </view>
     <block a:if="{{swipeable}}">

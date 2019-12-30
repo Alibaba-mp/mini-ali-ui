@@ -49,6 +49,7 @@ Component({
           this.wrapHeight = (<my.IBoundingClientRect>ret[0]).height;
         });
 
+
       let cacheHeight = 0;
       for (let i = 0; i < tabs.length; i++) {
         const { anchor } = tabs[i];

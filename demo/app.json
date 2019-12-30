@@ -4,6 +4,7 @@
     "pages/list/index",
     "pages/amount-input/index",
     "pages/am-icon/index",
+    "pages/am-switch/index",
     "pages/picker-item/index",
     "pages/input-item/index",
     "pages/form/index",
@@ -58,7 +59,8 @@
     "pages/title/index",
     "pages/container/index",
     "pages/alphabet/index",
-    "pages/tag/index"
+    "pages/tag/index",
+    "pages/mask/mask"
   ],
   "window": {
     "enableWK": "YES",

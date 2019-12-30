@@ -12,8 +12,8 @@
     padding-left: @h-spacing-large;
     padding-left: var(--am-list-switch-padding, @h-spacing-large);
 
-    min-height: @size-12;
-    min-height: var(--am-list-switch-min-height, @size-12);
+    // min-height: @size-12;
+    // min-height: var(--am-list-switch-min-height, @size-12);
     &-hover {
       // hover 样式
       background-color: #f8f8f8;
@@ -23,8 +23,8 @@
     margin-right: 16px;
   }
   &-thumb {
-    width: 30px; //设计稿里面没有含thumb
-    height: 30px;
+    width: 28px;
+    height: 28px;
     margin-right: 16px;
   }
   &-line {
@@ -32,14 +32,19 @@
     flex: 1;
     display: flex;
     align-items: center;
-    align-self: stretch;
+    // align-self: stretch;
     overflow: hidden;
     padding-right: @h-spacing-large;
     padding-right: var(--am-list-switch-padding, @h-spacing-large);
   }
   &-content {
-    line-height: @line-height-paragraph;
-    line-height: var(--am-list-switch-line-height, @line-height-paragraph);
+    // line-height: @line-height-paragraph;
+    // line-height: var(--am-list-switch-line-height, @line-height-paragraph);
+    line-height: normal;
+    padding-top: @v-spacing-large;
+    padding-top: var(--am-list-switch-padding-vertical, @v-spacing-large);
+    padding-bottom: @v-spacing-large;
+    padding-bottom: var(--am-list-switch-padding-vertical, @v-spacing-large);
     width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -53,7 +58,12 @@
     font-size: var(--am-list-switch-content-font-size, @font-size-list);
     align-self: stretch;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &-brief {
+    color: @color-text-subtitle;
+    font-size: @font-size-subtitle;
   }
 
   &-scene {
@@ -124,12 +134,12 @@
   }
   // 多行
   &-multiple {
-    .am-list-line {
-      padding: 6px 15px 6px 0;
-    }
+    // .am-list-line {
+    //   padding: 6px 15px 6px 0;
+    // }
     .am-list-thumb {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
     }
   }
   &-item.last {

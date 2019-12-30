@@ -27,8 +27,8 @@
     margin-right: 16px;
   }
   &-thumb {
-    width: 30px; //设计稿里面没有含thumb
-    height: 30px;
+    width: 28px;
+    height: 28px;
     margin-right: 16px;
   }
   &-line {
@@ -41,8 +41,13 @@
     justify-content: space-between;
   }
   &-content {
-    line-height: @line-height-paragraph;
-    line-height: var(--am-list-capsule-line-height, @line-height-paragraph);
+    // line-height: @line-height-paragraph;
+    // line-height: var(--am-list-capsule-line-height, @line-height-paragraph);
+    line-height: normal;
+    padding-top: @v-spacing-large;
+    padding-top: var(--am-list-capsule-padding-vertical, @v-spacing-large);
+    padding-bottom: @v-spacing-large;
+    padding-bottom: var(--am-list-capsule-padding-vertical, @v-spacing-large);
     width: auto;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -57,6 +62,8 @@
     align-self: stretch;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   &-capsule {
@@ -99,12 +106,12 @@
   }
   // 多行
   &-multiple {
-    .am-list-line {
-      padding: 6px 15px 6px 0;
-    }
+    // .am-list-line {
+    //   padding: 6px 15px 6px 0;
+    // }
     .am-list-thumb {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
     }
   }
   &-item.last {

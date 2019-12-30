@@ -4,12 +4,16 @@
 	<view a:if={{$slots.prefix}} class="am-list-capsule-prefix">
 		<slot name="prefix" />
 	</view>
-	<image a:if={{thumb}} class="am-list-capsule-thumb" 
-		src="{{thumb}}" 
-		mode="scaleToFill" />
 	<view class="am-list-capsule-line {{wrap ? 'am-list-capsule-wrap' : ''}}">
+		<image a:if={{thumb}} class="am-list-capsule-thumb" 
+			src="{{thumb}}" 
+			mode="scaleToFill" />
 		<view class="am-list-capsule-content">
-			<slot />
+			<view>
+				<slot />
+			</view>
+			<view a:if="{{brief}}" 
+				class="am-list-brief">{{brief}}</view>
 		</view>
 		<!-- <view style="display: flex; align-items: center;"> -->
 		<button a:if="{{capsuleContent}}" 

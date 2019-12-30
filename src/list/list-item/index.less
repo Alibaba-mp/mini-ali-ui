@@ -18,7 +18,7 @@
     // min-height: var(--am-list-item-min-height, @size-12);
     &-hover {
       // hover 样式
-      background-color: #f8f8f8;
+      background-color: rgba(0, 0, 0, 0.05);
     }
   }
   &-prefix {
@@ -95,18 +95,21 @@
   }
   &-arrow {
     display: block;
-    width: 15px;
-    height: 15px;
-    margin-left: @h-spacing-standard;
-    margin-left: var(--am-list-item-arrow-margin, @h-spacing-standard);
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAYAAAC+aNwHAAAAAXNSR0IArs4c6QAAAdxJREFUOBGlVT1Lw1AUbSSBdMnQf9ChU6GFtr9AEMFBiouDuOikoGixiGgRSi2i1KJTR0fHbuLi5mRbcO7QnyAIQjCSek7ghtc0DQm+5d537z0n97yvpFIYg8GgMxqNavSTjqXhcNgCqOa6bgf+eWICABwBTafTFkiuZB7HaiyChAZMUwCapnXL5XIsSR4BgWyfHQgJbA8k+yCbKrE51ydgBp2cwbSlCuDHUqm0C+tKLGhnCJjEbpxiQa+lEOAnkGzD/kpMtXMETEJOHXJulMJ+Op3ezOfzP0rMc5eCAc6h/RamruSqtm33J5OJqcQ8N7QDKeLh4vmQOWS86rq+XiwWvyUW2oEkof0OoGOZQ9ay4zgv4/HYklhkB1KE3TmEfy9zkL4bhrFaKBQ+YxEQCDkHkPOgkHyAaCVSghRH2VgdREnQo9iZw5k4wuJ1lbo3y7LWcrncF2OREriNKpjbyMUTMAkWSkDbJ8jzQHkD4OdMJrORzWZtidGGdsCjjJwPht83TbMaBJNgroOkl2mmA17nwE3kdd5C+6E3kR34BHxQMPffAvg9gHcAXvgW+AT4cgOr7b9GAHUrlcoebORr5BHgy5dwmpxwANSO+x6ynhIMOhwAXwCc+Gn/14/lDyH1t+arhvp8AAAAAElFTkSuQmCC);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    // width: 15px;
+    // height: 15px;
+    margin-left: @h-spacing-large;
+    margin-left: var(--am-list-item-arrow-margin, @h-spacing-large);
+    // background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAYAAAC+aNwHAAAAAXNSR0IArs4c6QAAAdxJREFUOBGlVT1Lw1AUbSSBdMnQf9ChU6GFtr9AEMFBiouDuOikoGixiGgRSi2i1KJTR0fHbuLi5mRbcO7QnyAIQjCSek7ghtc0DQm+5d537z0n97yvpFIYg8GgMxqNavSTjqXhcNgCqOa6bgf+eWICABwBTafTFkiuZB7HaiyChAZMUwCapnXL5XIsSR4BgWyfHQgJbA8k+yCbKrE51ydgBp2cwbSlCuDHUqm0C+tKLGhnCJjEbpxiQa+lEOAnkGzD/kpMtXMETEJOHXJulMJ+Op3ezOfzP0rMc5eCAc6h/RamruSqtm33J5OJqcQ8N7QDKeLh4vmQOWS86rq+XiwWvyUW2oEkof0OoGOZQ9ay4zgv4/HYklhkB1KE3TmEfy9zkL4bhrFaKBQ+YxEQCDkHkPOgkHyAaCVSghRH2VgdREnQo9iZw5k4wuJ1lbo3y7LWcrncF2OREriNKpjbyMUTMAkWSkDbJ8jzQHkD4OdMJrORzWZtidGGdsCjjJwPht83TbMaBJNgroOkl2mmA17nwE3kdd5C+6E3kR34BHxQMPffAvg9gHcAXvgW+AT4cgOr7b9GAHUrlcoebORr5BHgy5dwmpxwANSO+x6ynhIMOhwAXwCc+Gn/14/lDyH1t+arhvp8AAAAAElFTkSuQmCC);
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: 50% 50%;
     &-empty {
       visibility: hidden;
     }
   }
+  // &-arrow-icon {
+  //   color: @color-fill-grey-base;
+  // }
   &-line-bottom {
     .hairline('bottom');
     &::after {
@@ -131,12 +134,12 @@
   }
   // 多行
   &-multiple {
-    .am-list-line {
-      padding: 6px 15px 6px 0;
-    }
+    // .am-list-line {
+    //   padding: 6px 15px 6px 0;
+    // }
     .am-list-thumb {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
     }
   }
   &-item.last {

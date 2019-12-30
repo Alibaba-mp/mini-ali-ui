@@ -1,6 +1,8 @@
+// const imgUrl = '';
 const newitems = [
   {
-    thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
+    thumb:
+      'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
     title: '固定到头部',
     arrow: true,
     sticky: true,
@@ -187,7 +189,8 @@ Page({
     ],
     items5: [
       {
-        thumb: 'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
+        thumb:
+          'https://gw.alipayobjects.com/zos/rmsportal/KXDIRejMrRdKlSEcLseB.png',
         title: '固定到头部',
         brief: '描述信息',
         arrow: true,
@@ -204,12 +207,14 @@ Page({
         align: 'top',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
         align: 'bottom',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
         align: 'top',
       },
@@ -218,11 +223,13 @@ Page({
         arrow: true,
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
         align: 'top',
       },
@@ -231,11 +238,13 @@ Page({
         arrow: true,
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
         align: 'top',
       },
@@ -244,11 +253,13 @@ Page({
         arrow: true,
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '没有箭头',
       },
       {
-        title: '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
+        title:
+          '标题文字很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
         extra: '子元素垂直对齐',
         align: 'middle',
       },
