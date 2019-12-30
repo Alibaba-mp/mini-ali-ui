@@ -1,4 +1,4 @@
-@import "../../style/mixins/hairline.less";
+@import '../../style/mixins/hairline.less';
 
 // @list-color: #888;
 // @list-item-hover-color: #f8f8f8;
@@ -9,12 +9,13 @@
     align-items: center;
     background: @color-fill-grey-inverse;
     background: var(--am-list-item-background, @color-fill-grey-inverse);
-    padding-left: @h-spacing-large;
-    padding-left: var(--am-list-item-padding, @h-spacing-large);
-    padding-right: @h-spacing-large;
-    padding-right: var(--am-list-item-padding, @h-spacing-large);
-    min-height: @size-12;
-    min-height: var(--am-list-item-min-height, @size-12);
+    // padding-left: @h-spacing-large;
+    // padding-left: var(--am-list-item-padding, @h-spacing-large);
+    // padding-right: @h-spacing-large;
+    // padding-right: var(--am-list-item-padding, @h-spacing-large);
+    padding: var(--am-list-item-padding, @h-spacing-large);
+    // min-height: @size-12;
+    // min-height: var(--am-list-item-min-height, @size-12);
     &-hover {
       // hover 样式
       background-color: #f8f8f8;
@@ -26,7 +27,7 @@
   &-thumb {
     width: 30px; //设计稿里面没有含thumb
     height: 30px;
-    margin-right: 16px;
+    margin-right: @h-spacing-large;
   }
   &-line {
     position: relative;
@@ -34,12 +35,11 @@
     display: flex;
     align-items: center;
     align-self: stretch;
-    overflow: hidden;
+    overflow: visible;
   }
   &-content,
   &-extra,
-  &-primary,
-  &-capsule {
+  &-primary {
     line-height: @line-height-paragraph;
     line-height: var(--am-list-item-line-height, @line-height-paragraph);
     width: auto;
@@ -51,14 +51,23 @@
   }
   &-content {
     flex: 1;
-    color: @color-text-title;
-    color: var(--am-list-item-content-color, @color-text-title);
-    font-size: @font-size-list;
-    font-size: var(--am-list-item-content-font-size, @font-size-list);
     text-align: left;
     align-self: stretch;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    &-title {
+      font-size: @font-size-list;
+      font-size: var(--am-list-item-content-title-size, @font-size-list);
+      color: @color-text-title;
+      color: var(--am-list-item-content-color, @color-text-title);
+    }
+    &-subtitle {
+      font-size: @font-size-content;
+      font-size: var(--am-list-item-content-subtitle-size, @font-size-content);
+      color: @color-text-subtitle;
+      color: var(--am-list-item-content-subtitle-color, @color-text-subtitle);
+    }
   }
   &-extra {
     color: @color-text-subtitle;
@@ -74,7 +83,7 @@
     color: @color-text-title;
     color: var(--am-list-item-content-color, @color-text-title);
     font-size: @font-size-list;
-    font-size: var(--am-list-item-content-font-size, @font-size-list);
+    font-size: var(--am-list-item-content-title-size, @font-size-list);
   }
 
   &-wrap {
@@ -99,7 +108,10 @@
     }
   }
   &-line-bottom {
-    .hairline("bottom");
+    .hairline('bottom');
+    &::after {
+      bottom: -@v-spacing-large;
+    }
   }
   // 子元素垂直对齐
   &-top {

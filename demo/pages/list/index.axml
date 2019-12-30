@@ -1,9 +1,10 @@
 <view class="dyt-list" 
 	style="position: relative;">
-	<!-- <alphabet alphabet="{{alphabet}}" onClick="onAlphabetClick" >
+	<!-- <alphabet alphabet="{{alphabet}}" onClick="onAlphabetClick">
 		<view slot="prefix"><icon size="{{11}}" type="success"/></view>
 	</alphabet> -->
 	<scroll-view style="height: 80vh;" 
+		
 		scroll-y onScrollToLower="onScrollToLower" 
 		enable-back-to-top="true">
 		<list>
@@ -32,18 +33,22 @@
 				<list-capsule a:elif="{{item.actionType ==='capsule'}}" 
 					index="{{index}}" 
 					onClick="onCapsuleClick" 
-					capsuleContent="{{item.capsuleContent}}"
-					key="items-{{index}}" l
-					last="{{index === (items.length - 1)}}">
+					capsuleContent="{{item.capsuleContent}}" 
+					key="items-{{index}}" 
+					l last="{{index === (items.length - 1)}}">
 					{{item.title}}
 				</list-capsule>
-				<list-item a:else thumb="{{item.thumb}}" 
+				<list-item a:else thumb="{{thumb}}" 
 					arrow="{{item.arrow}}" 
 					align="{{item.align}}" 
 					index="{{index}}" 
 					onClick="onItemClick" 
 					key="items-{{index}}" 
 					enforceExtra="{{item.enforceExtra}}" 
+					title="{{item.title}}" 
+					upperSubtitle="{{item.title}}" 
+					lowerxSubtitle="{{item.title}}"
+					titlePosition="middle"
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
 					<view class="am-list-brief">{{item.brief}}</view>
@@ -67,6 +72,7 @@
 					index="items2-{{index}}" 
 					key="items2-{{index}}" 
 					data-filed="aaa" 
+					title="{{item.title}}" 
 					last="{{index === (items2.length - 1)}}">
 					{{item.title}}
 					<view class="am-list-brief">{{item.brief}}</view>

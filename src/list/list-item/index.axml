@@ -5,12 +5,21 @@
 	<view a:if={{$slots.prefix}} class="am-list-prefix">
 		<slot name="prefix" />
 	</view>
-	<image a:if={{thumb}} class="am-list-thumb" 
+	<!-- <image a:if={{thumb}} class="am-list-thumb" src="{{thumb}}" mode="scaleToFill" /> -->
+	<auto-sizer a:if="{{thumb}}" 
+		placeholder="{{thumbPlaceholder}}" 
 		src="{{thumb}}" 
-		mode="scaleToFill" />
+		size="{{thumbSize}}" />
 	<view class="am-list-line {{wrap ? 'am-list-wrap' : ''}}">
 		<view class="am-list-content">
-			<slot />
+			<view a:if="{{titlePosition === 'top'}}" 
+				class="am-list-content-title">{{title}}</view>
+			<view class="am-list-content-subtitle">{{upperSubtitle}}</view>
+			<view a:if="{{titlePosition === 'middle'}}" 
+				class="am-list-content-title">{{title}}</view>
+			<view class="am-list-content-subtitle">{{lowerSubtitle}}</view>
+			<view a:if="{{titlePosition === 'bottom'}}" 
+				class="am-list-content-title">{{title}}</view>
 		</view>
 		<view a:if={{$slots.extra}} class="{{enforceExtra ? 'am-list-primary' : 'am-list-extra'}}">
 			<slot name="extra" />
