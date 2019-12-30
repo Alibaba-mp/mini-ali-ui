@@ -193,6 +193,8 @@
   --am-amount-title-font-size: var(--am-color-text-title);
   /* line-height | 金额内容行高 */
   --am-amount-content-line-height: var(--am-line-height-base);
+  /* size | 输入区上方外间距 */
+  --am-amount-value-margin-top: var(--am-size-6);
 
   /* notice */
   /* size | 上下内间距 */
@@ -303,6 +305,8 @@
   --am-list-item-line-height: var(--am-line-height-paragraph);
   /* spacing | 列表条目间距 */
   --am-list-item-padding: var(--am-h-spacing-large);
+  /* spacing | 列表条目垂直间距 */
+  --am-list-item-padding-vertical: var(--am-v-spacing-large);
   /* size | 列表内容最小高度 */
   --am-list-item-min-height: var(--am-size-12);
   /* font-size | 列表extra内容字体大小 */
@@ -310,7 +314,7 @@
   /* color | 列表extra内容字体颜色 */
   --am-list-item-extra-color: var(--am-color-text-subtitle);
   /* spacing | 箭头左外间距 */
-  --am-list-item-arrow-margin: var(--am-h-spacing-standard);
+  --am-list-item-arrow-margin: var(--am-h-spacing-large);
 
   /* list-switch */
   /* color | 列表开关条目字体颜色 */
@@ -323,6 +327,8 @@
   --am-list-switch-line-height: var(--am-line-height-paragraph);
   /* spacing | 列表开关条目间距 */
   --am-list-switch-padding: var(--am-h-spacing-large);
+  /* spacing | 列表开关条目垂直间距 */
+  --am-list-switch-padding-vertical: var(--am-v-spacing-large);
   /* size | 列表开关内容最小高度 */
   --am-list-switch-min-height: var(--am-size-12);
   /* color | 列表开关开启时底色 */
@@ -343,6 +349,8 @@
   --am-list-check-line-height: var(--am-line-height-paragraph);
   /* spacing | 列表勾选间距 */
   --am-list-check-padding: var(--am-h-spacing-large);
+  /* spacing | 列表勾选垂直间距 */
+  --am-list-check-padding-vertical: var(--am-v-spacing-large);
   /* size | 列表内容最小高度 */
   --am-list-check-min-height: var(--am-size-12);
 
@@ -357,6 +365,8 @@
   --am-list-capsule-line-height: var(--am-line-height-paragraph);
   /* spacing | 列表胶囊按钮间距 */
   --am-list-capsule-padding: var(--am-h-spacing-large);
+  /* spacing | 列表胶囊按钮垂直间距 */
+  --am-list-capsule-padding-vertical: var(--am-v-spacing-large);
   /* size | 列表内容最小高度 */
   --am-list-capsule-min-height: var(--am-size-12);
   /* color | 按钮字体颜色 */
@@ -377,8 +387,16 @@
   --am-list-footer-header-min-height: var(--am-size-12);
   /* color | 列表header字体大小 */
   --am-list-header-font-size: var(--am-font-size-list);
-  /* spacing | 列表header间距 */
+  /* spacing | 列表header, footer左右间距 */
   --am-list-padding: var(--am-h-spacing-large);
+  /* spacing | 列表header上间距 */
+  --am-list-header-padding-top: var(--am-h-spacing-large);
+  /* spacing | 列表header下间距 */
+  --am-list-header-padding-bottom: var(--am-h-spacing-standard);
+  /* spacing | 列表footer上间距 */
+  --am-list-footer-padding-top: var(--am-h-spacing-standard);
+  /* spacing | 列表footer下间距 */
+  --am-list-footer-padding-bottom: var(--am-h-spacing-large);
   /* color | 列表条目背景色 */
   --am-list-background: var(--am-color-fill-grey-inverse);
   /* line-height | 列表条目行高 */
