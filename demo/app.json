@@ -59,7 +59,8 @@
     "pages/title/index",
     "pages/container/index",
     "pages/alphabet/index",
-    "pages/mask/mask"
+    "pages/mask/mask",
+    "pages/guide/guide"
   ],
   "window": {
     "enableWK": "YES",

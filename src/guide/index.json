@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pagination": "../pagination/index",
+    "mask": "../mask/index",
+    "button": "../button/index"
+  }
+}

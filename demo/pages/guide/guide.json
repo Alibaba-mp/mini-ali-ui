@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Guide",
+  "usingComponents":{
+    "guide": "../../es/guide/index"
+  }
+}
