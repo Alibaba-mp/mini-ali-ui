@@ -106,11 +106,11 @@ Page({
       //   nameZN: '日历',
       //   path: '/pages/calendar/index',
       // },
-      // {
-      //   name: 'AMCheckBox',
-      //   nameZN: '复选框',
-      //   path: '/pages/am-checkbox/index',
-      // },
+      {
+        name: 'AMCheckBox',
+        nameZN: '复选框',
+        path: '/pages/am-checkbox/index',
+      },
       // {
       //   name: 'Filter',
       //   nameZN: '筛选',
