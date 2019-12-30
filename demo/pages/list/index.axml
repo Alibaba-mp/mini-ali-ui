@@ -44,7 +44,7 @@
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
 				</list-capsule>
-				<list-item a:else thumb="{{thumbUrl}}" 
+				<list-item a:else thumb="{{thumb}}" 
 					arrow="{{item.arrow}}" 
 					align="{{item.align}}" 
 					index="{{index}}" 
@@ -53,7 +53,7 @@
 					enforceExtra="{{item.enforceExtra}}" 
 					title="{{item.title}}" 
 					upperSubtitle="{{item.title}}" 
-					lowerxSubtitle="{{item.title}}"
+					lowerSubtitle="{{item.title}}"
 					titlePosition="middle"
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}

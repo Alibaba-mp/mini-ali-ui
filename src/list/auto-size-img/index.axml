@@ -1,6 +1,6 @@
 <view class="am-auto-sizer-container" 
   style="{{ size ? `width: ${size}px; height: ${size}px;`: ''}}">
-  {{`:${placeholder}`}}
+  {{`${placeholder}1`}}
   <view class="am-auto-sizer-content" 
     style="{{(src ? `background-image: url('${src}'); background-color: transparent` : '')}}" />
   <!-- style="{{(src ? `background-image: url('${src}');` : '') + (size ? `width: ${size}px; height: ${size}px;`: '')}}" /> -->
