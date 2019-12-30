@@ -1,72 +1,35 @@
 <view class="container">
-  <button>
-    辅助操作 Normal
+  <button type="{{type}}" subtitle="{{subtitle}}" disabled="{{disabled}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}">
+    {{title}}
   </button>
-  <button disabled >
-    辅助操作 disabled
-  </button>
-  <button type="primary">
-    主要操作 Normal
-  </button>
-  <button type="primary" subtitle="按钮副文本 Primary">
-    主要操作 Normal
-  </button>
-  <button type="primary" disabled>
-    主要操作 Normal
-  </button>
-  <button type="ghost">
-    线框 Normal
-  </button>
-  <button type="ghost" disabled>
-    线框 disabled
-  </button>
-  <button type="text">
-    Text按钮 Normal
-  </button>
-  <button type="text" disabled>
-    Text按钮 disabled
-  </button>
-  <button type="warn">
-    警告按钮 Normal
-  </button>
-  <button type="warn" disabled>
-    警告按钮 disabled
-  </button>
-  <button type="warn-ghost">
-    警告按钮线框 Normal
-  </button>
-  <button type="warn-ghost" disabled>
-    警告按钮线框 disabled
-  </button>
-  <view/>
-  <button shape="capsule">
-    辅助胶囊 medium
-  </button>
-  <button shape="capsule" disabled>
-    辅助胶囊 disabled
-  </button>
-  <button shape="capsule" capsuleSize="large">
-    辅助胶囊 large
-  </button>
-  <button shape="capsule" capsuleSize="small">
-    辅助胶囊 small
-  </button>
-  <button shape="capsule" type="primary">
-    胶囊按钮 primary
-  </button>
-  <button shape="capsule" type="primary" disabled>
-    胶囊按钮 disabled
-  </button>
-  <button shape="capsule" type="ghost">
-    胶囊按钮 ghost
-  </button>
-  <button shape="capsule" type="ghost" disabled>
-    胶囊按钮 disabled
-  </button>
-  <button shape="capsule" type="light">
-    胶囊按钮 light
-  </button>
-  <button shape="capsule" type="light" disabled>
-    胶囊按钮 disabled
-  </button>
+
+  <view>主标题</view>
+  <input value="{{title}}" onInput="titleChange"/>
+  <view>副标题</view>
+  <input value="{{subtitle}}" onInput="subtitleChange"/>
+  <view>按钮类型</view>
+  <radio-group class="radio-group" onChange="typeChange" name="type">
+    <label class="radio" a:for="{{types}}" key="label-{{index}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}" />
+      <text class="radio-text">{{item.value}}</text>
+    </label>
+  </radio-group>
+  <view>形状</view>
+  <radio-group class="radio-group" onChange="shapeChange" name="shape">
+    <label class="radio" a:for="{{shapes}}" key="label-{{index}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}" />
+      <text class="radio-text">{{item.value}}</text>
+    </label>
+  </radio-group>
+  <view>胶囊按钮大小</view>
+  <radio-group class="radio-group" onChange="sizeChange" name="size">
+    <label class="radio" a:for="{{capsuleSizes}}" key="label-{{index}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}" />
+      <text class="radio-text">{{item.value}}</text>
+    </label>
+  </radio-group>
+  <view>是否禁用</view>
+  <checkbox onChange='onDisableChange'/>
+  <view>是否限制胶囊按钮最小宽度</view>
+  <checkbox onChange='onMinWidthChange'/>
 </view>

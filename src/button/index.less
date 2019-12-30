@@ -113,14 +113,23 @@
     &-large {
       font-size: @font-size-subtitle;
       font-size: var(--am-button-capsule-size-l, @font-size-subtitle);
+      &-minwidth {
+        min-width: 168rpx;
+      }
     }
     &-medium {
       font-size: @font-size-content;
       font-size: var(--am-button-capsule-size-m, @font-size-content);
+      &-minwidth {
+        min-width: 152rpx;
+      }
     }
     &-small {
       font-size: @font-size-subcontent;
       font-size: var(--am-button-capsule-size-s, @font-size-subcontent);
+      &-minwidth {
+        min-width: 144rpx;
+      }
     }
   }
 }
