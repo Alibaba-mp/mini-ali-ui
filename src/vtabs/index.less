@@ -1,3 +1,5 @@
+@import (reference) "../style/themes/default.less";
+
 .am-vtabs {
   width: 100vw;
   height: 100vh;
@@ -5,30 +7,56 @@
   flex-direction: row;
 
   &-bar {
-    width: 110px;
+    width: @size-15 * 2;
     overflow: hidden;
+    &-line {
+      position: absolute;
+      left: 0;
+      top: @h-spacing-large;
+      bottom: @h-spacing-large;
+      width: 3px;
+      overflow: hidden;
+      font-size: 0;
+      border-radius: @corner-radius-circle;
+      &-radius {
+        position: absolute;
+        right: 0;
+        width: @size-2;
+        height: @size-2;
+        border-radius: @corner-radius-circle;
+        overflow: hidden;
+        font-size: 0;
+        &__top {
+          top: -@size-2;
+        }
+        &__bottom {
+          bottom: -@size-2;
+        }
+      }
+    }
+    &-placehold {
+      flex: 1 1 0%;
+    }
   }
 
   &-bar-content {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    width: 120px;
+    width: @size-15 * 2;
   }
 
   &-bar-tab {
+    position: relative;
     box-sizing: border-box;
-    height: 55px;
-    width: 110px;
+    width: @size-15 * 2;
+    padding: @h-spacing-large @size-6;
     text-align: center;
-    line-height: 55px;
-    font-size: 14px;
-    border-left-width: 4px;
-    border-left-style: solid;
-    border-left-color: transparent;
-    border-right-width: 4px;
-    border-right-style: solid;
-    border-right-color: transparent;
-    white-space: nowrap;
-    overflow: hidden;
+    font-size: @font-size-subtitle;
+    transition: all 200ms linear;
+    &__hover {
+      opacity: 0.6;
+    }
   }
 
   &-bar-title {
@@ -36,25 +64,11 @@
     display: inline-block;
   }
 
-  &-bar-badge.dot {
-    position: absolute;
-    top: 11px;
-    right: 0;
-    transform: translateX(8px);
-  }
-
-  &-bar-badge.text {
-    position: absolute;
-    top: 8px;
-    right: 2px;
-    transform: translateX(100%);
-  }
-
   &-content-wrap {
     overflow: hidden;
     flex: 1;
     height: 100%;
-    background-color: #fff;
+    background-color: @color-fill-grey-inverse;
   }
 
   &-slides {
@@ -62,6 +76,6 @@
   }
 
   &-slides.animate {
-    transition-duration: 500ms;
+    transition-duration: 300ms;
   }
 }
