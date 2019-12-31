@@ -60,7 +60,8 @@
     "pages/container/index",
     "pages/alphabet/index",
     "pages/mask/mask",
-    "pages/guide/guide"
+    "pages/guide/guide",
+    "pages/avatar/index"
   ],
   "window": {
     "enableWK": "YES",
