@@ -1,0 +1,6 @@
+.radio {
+  display: block;
+}
+.page-section-demo {
+  padding: 24rpx;
+}
