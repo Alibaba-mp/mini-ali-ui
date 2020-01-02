@@ -18,7 +18,7 @@
 				</view>
 				<slot name="afterTitle" />
 			</view>
-			<view class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
+			<view a:if="{{upperSubtitle || $slots.afterUpperSubtitle}}" class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
 				<view a:if="{{upperSubtitle}}" class="am-list-text-wrapper">{{upperSubtitle}}</view>
 				<slot name="afterUpperSubtitle" />
 			</view>
@@ -29,7 +29,7 @@
 				</view>
 				<slot name="afterTitle" />
 			</view>
-			<view class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
+			<view a:if="{{lowerSubtitle || $slots.afterLowerSubtitle}}" class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
 				<view a:if="{{lowerSubtitle}}" class="am-list-text-wrapper">{{lowerSubtitle}}</view>
 				<slot name="afterLowerSubtitle" />
 			</view>

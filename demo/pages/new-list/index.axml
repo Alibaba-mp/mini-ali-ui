@@ -30,6 +30,13 @@
         <view a:if="{{secSlotTypes[secSlotIndex] === '文字内容'}}" slot="extra">{{secText}}</view>
         <switch a:if="{{secSlotTypes[secSlotIndex] === '开关'}}" slot="extra" />
         <am-button a:if="{{secSlotTypes[secSlotIndex] === '胶囊按钮'}}"	shape="capsule"	type="ghost"  slot="extra" >胶囊按钮</am-button>
+        <list-secondary 
+          a:if="{{secSlotTypes[secSlotIndex] === 'list-secondary'}}" 
+          title="{{secondary.title}}" 
+          subtitle="{{secondary.subtitle}}" 
+          thumb="{{secondary.useThumb ? secondary.thumb : ''}}"
+          thumbSize="{{secondary.thumbSize}}"
+          slot="extra" />
 
         <!-- <text slot="extra">{{extra}}</text> -->
 
@@ -213,6 +220,44 @@
     >
       文字内容:
     </input-item>
+    <view a:if="{{secSlotTypes[secSlotIndex] === 'list-secondary'}}">
+      <input-item
+        placeholder="无" 
+        value="{{secondary.title}}"
+        onInput="setSecInfo"
+        data-name="title"
+      >
+        标题:
+      </input-item>
+      <input-item
+        placeholder="无" 
+        value="{{secondary.subtitle}}"
+        onInput="setSecInfo"
+        data-name="subtitle"
+      >
+        副标题:
+      </input-item>
+      <list-item>
+        缩略图
+        <switch 
+          slot="extra" 
+          checked="{{secondary.useThumb}}"
+          onChange="setSecInfo"
+          data-name="useThumb"
+          controlled
+          />
+      </list-item>
+      <input-item
+        a:if="{{secondary.useThumb}}"
+        placeholder="无" 
+        value="{{secondary.thumbSize}}"
+        onInput="setSecInfo"
+        data-name="thumbSize"
+      >
+        缩略图大小:
+        <view slot="extra">px</view>
+      </input-item>
+    </view>
     <view class="gap"/>
     <view class="gap"/>
     <title>Supporting区域设置</title>

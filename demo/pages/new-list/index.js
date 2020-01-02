@@ -1,3 +1,5 @@
+const thumb =
+  'https://gw-office.alipayobjects.com/basement_prod/47775269-5c8e-40b8-bcda-43380022f311.jpg';
 Page({
   data: {
     title: '单行列表1',
@@ -6,8 +8,7 @@ Page({
     upperSubtitle: '上副标题',
     // lowerSubtitle: '下副标题',
     lowerSubtitle: '',
-    thumb:
-      'https://gw-office.alipayobjects.com/basement_prod/47775269-5c8e-40b8-bcda-43380022f311.jpg',
+    thumb,
     useThumb: false,
     thumbSize: undefined,
     primarySlotTypes: ['无内容', '标签', '问号图标'],
@@ -23,7 +24,7 @@ Page({
       'list-secondary',
     ],
     supSlotIndex: 0,
-    secSlotIndex: 0,
+    secSlotIndex: 7,
     titleSlotIndex: 0,
     upperSlotIndex: 0,
     lowerSlotIndex: 0,
@@ -41,6 +42,13 @@ Page({
     secIconSize: 17,
     titlePositions: ['top', 'middle', 'bottom'],
     titlePosIndex: 0,
+    secondary: {
+      title: '次要信息',
+      subtitle: '次要辅助信息',
+      thumb,
+      useThumb: true,
+      thumbSize: undefined,
+    },
   },
   setInfo(e) {
     const { dataset } = e.target;
@@ -51,9 +59,21 @@ Page({
       });
     }
   },
-  setThumbSize(e) {
-    this.setData({
-      thumbSize: e.detail.value,
-    });
+  setSecInfo(e) {
+    const { dataset } = e.target;
+    const { name } = dataset;
+    if (name) {
+      this.setData({
+        secondary: {
+          ...this.data.secondary,
+          [name]: e.detail.value,
+        },
+      });
+    }
   },
+  // setThumbSize(e) {
+  //   this.setData({
+  //     thumbSize: e.detail.value,
+  //   });
+  // },
 });
