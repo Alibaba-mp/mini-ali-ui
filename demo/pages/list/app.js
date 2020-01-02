@@ -111,6 +111,11 @@ Page({
         nameZN: '复选框',
         path: '/pages/am-checkbox/index',
       },
+      {
+        name: 'AMRadio',
+        nameZN: '单选框',
+        path: '/pages/am-radio/index',
+      },
       // {
       //   name: 'Filter',
       //   nameZN: '筛选',

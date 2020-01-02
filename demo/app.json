@@ -13,6 +13,7 @@
     "pages/card/index",
     "pages/calendar/index",
     "pages/am-checkbox/index",
+    "pages/am-radio/index",
     "pages/face-detection/index",
     "pages/footer/index",
     "pages/modal/index",
