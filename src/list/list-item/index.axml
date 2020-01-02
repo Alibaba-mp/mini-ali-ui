@@ -2,31 +2,52 @@
 	hover-class="{{disabled ? '' : 'am-list-item-hover'}}" 
 	onTap="onItemTap" 
 	data-index="{{index}}">
-	<view a:if={{$slots.prefix}} class="am-list-prefix">
-		<slot name="prefix" />
+	<view a:if={{$slots.supporting}} class="am-list-supporting">
+		<slot name="supporting" />
 	</view>
 	<view class="am-list-line {{wrap ? 'am-list-wrap' : ''}}">
-	<auto-sizer a:if="{{thumb}}" 
-		placeholder="{{thumbPlaceholder}}" 
-		src="{{thumb}}" 
-		size="{{thumbSize}}" />
+		<auto-sizer a:if="{{thumb}}" 
+			placeholder="{{thumbPlaceholder}}" 
+			src="{{thumb}}" 
+			size="{{thumbSize}}" />
 		<view class="am-list-content">
 			<view a:if="{{titlePosition === 'top'}}" 
-				class="am-list-content-title">{{title}}</view>
-			<view class="am-list-content-subtitle">{{upperSubtitle}}</view>
+				class="am-list-content-title">
+				<view class="am-list-text-wrapper">
+					<slot />
+				</view>
+				<slot name="afterTitle" />
+			</view>
+			<view class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
+				<view a:if="{{upperSubtitle}}" class="am-list-text-wrapper">{{upperSubtitle}}</view>
+				<slot name="afterUpperSubtitle" />
+			</view>
 			<view a:if="{{titlePosition === 'middle'}}" 
-				class="am-list-content-title">{{title}}</view>
-			<view class="am-list-content-subtitle">{{lowerSubtitle}}</view>
+				class="am-list-content-title">
+				<view class="am-list-text-wrapper">
+					<slot />
+				</view>
+				<slot name="afterTitle" />
+			</view>
+			<view class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
+				<view a:if="{{lowerSubtitle}}" class="am-list-text-wrapper">{{lowerSubtitle}}</view>
+				<slot name="afterLowerSubtitle" />
+			</view>
 			<view a:if="{{titlePosition === 'bottom'}}" 
-				class="am-list-content-title">{{title}}</view>
+				class="am-list-content-title">
+				<view class="am-list-text-wrapper">
+					<slot />
+				</view>
+				<slot name="afterTitle" />
+			</view>
 		</view>
-		<view a:if={{$slots.extra}} class="{{enforceExtra ? 'am-list-primary' : 'am-list-extra'}}">
+		<view a:if={{$slots.extra}} class="am-list-extra">
 			<slot name="extra" />
 		</view>
 		<view a:if={{arrow}} class="am-list-arrow">
-			<am-icon type="arrow-right" 
+			<am-icon type="right" 
 				class="am-list-arrow-icon" 
-				size="22" 
+				size="13" 
 				color="#ccc" />
 		</view>
 		<view class="am-list-line-bottom" />

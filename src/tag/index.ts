@@ -3,7 +3,7 @@ Component({
     // title component have boder-bottom line
     hasLine: false,
     // type: arrow、close、more、'';
-    type: '',
+    type: 'primary',
     // if type="arrow", need to write path
     iconURL: '',
     iconType: '',

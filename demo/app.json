@@ -2,6 +2,7 @@
   "pages": [
     "pages/list/app",
     "pages/list/index",
+    "pages/new-list/index",
     "pages/amount-input/index",
     "pages/am-icon/index",
     "pages/am-switch/index",

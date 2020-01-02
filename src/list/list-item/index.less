@@ -9,25 +9,25 @@
     align-items: center;
     background: @color-fill-grey-inverse;
     background: var(--am-list-item-background, @color-fill-grey-inverse);
-    // padding-left: @h-spacing-large;
-    // padding-left: var(--am-list-item-padding, @h-spacing-large);
-    // padding-right: @h-spacing-large;
-    // padding-right: var(--am-list-item-padding, @h-spacing-large);
     padding: var(--am-list-item-padding, @h-spacing-large);
-    // min-height: @size-12;
-    // min-height: var(--am-list-item-min-height, @size-12);
     &-hover {
       // hover 样式
       background-color: rgba(0, 0, 0, 0.05);
     }
   }
-  &-prefix {
-    margin-right: 16px;
+  &-supporting {
+    margin-right: @h-spacing-large;
+    margin-right: var(--am-list-item-padding, @h-spacing-large);
+    color: @color-text-subtitle;
+    color: var(--am-list-item-content-subtitle-color, @color-text-subtitle);
+    font-size: @font-size-subtitle;
+    font-size: var(--am-list-item-subtitle-size, @font-size-subtitle);
   }
   &-thumb {
     width: 30px; //设计稿里面没有含thumb
     height: 30px;
     margin-right: @h-spacing-large;
+    margin-right: var(--am-list-item-padding, @h-spacing-large);
   }
   &-line {
     position: relative;
@@ -37,18 +37,12 @@
     align-self: stretch;
     overflow: visible;
   }
-  &-content,
-  &-extra,
-  &-primary {
-    line-height: @line-height-paragraph;
-    line-height: var(--am-list-item-line-height, @line-height-paragraph);
-    width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    flex-basis: 36%;
-    text-align: right;
+
+  &-text-wrapper {
+    margin-right: @h-spacing-large;
+    margin-right: var(--am-list-item-padding, @h-spacing-large);
   }
+
   &-content {
     flex: 1;
     text-align: left;
@@ -56,28 +50,45 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    &-title,
+    &-subtitle {
+      display: flex;
+      align-items: center;
+      line-height: 1.5;
+    }
+
     &-title {
       font-size: @font-size-list;
       font-size: var(--am-list-item-content-title-size, @font-size-list);
       color: @color-text-title;
       color: var(--am-list-item-content-color, @color-text-title);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: flex;
     }
     &-subtitle {
       font-size: @font-size-subtitle;
-      font-size: var(--am-list-item-content-subtitle-size, @font-size-subtitle);
+      font-size: var(--am-list-item-subtitle-size, @font-size-subtitle);
       color: @color-text-subtitle;
       color: var(--am-list-item-content-subtitle-color, @color-text-subtitle);
+    }
+    &-subtitle-small {
+      font-size: @font-size-content;
+      font-size: var(--am-list-item-content-subtitle-size-small, @font-size-content);
     }
   }
   &-extra {
     color: @color-text-subtitle;
     color: var(--am-list-item-extra-color, @color-text-subtitle);
-    font-size: @font-size-subtitle;
-    font-size: var(--am-list-item-extra-size, @font-size-subtitle);
+    // font-size: @font-size-subtitle;
+    // font-size: var(--am-list-item-extra-size, @font-size-subtitle);
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: flex-end;
     align-self: stretch;
+    align-items: center;
   }
   &-primary {
     color: @color-text-title;
