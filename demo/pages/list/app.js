@@ -191,6 +191,11 @@ Page({
         nameZN: '遮罩引导',
         path: '/pages/guide/guide',
       },
+      {
+        name: 'Avatar',
+        nameZN: '头像',
+        path: '/pages/avatar/index',
+      },
     ],
   },
 });
