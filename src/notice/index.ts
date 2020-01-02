@@ -21,6 +21,7 @@ Component({
     showIcon: true,
     type: 'normal', // 通告栏类型： normal/error/active
     capsule: false, // 是否为胶囊型通告栏
+    transparent: false,
   },
   data: {
     animatedWidth: 0,
@@ -28,6 +29,7 @@ Component({
     duration: 0,
     marqueeStyle: '',
     canIUseTransitionEnd,
+    showShadow: true,
   },
   didMount() {
     if (this.props.enableMarquee) {
@@ -38,9 +40,27 @@ Component({
         this._measureText(this.startMarquee.bind(this));
       }
     }
+    if (this.props.type === 'active' && this.props.transparent) {
+      this.setData({
+        showShadow: false,
+      });
+    } else {
+      this.setData({
+        showShadow: true,
+      });
+    }
   },
 
   didUpdate() {
+    if (this.props.type === 'active' && this.props.transparent) {
+      this.setData({
+        showShadow: false,
+      });
+    } else {
+      this.setData({
+        showShadow: true,
+      });
+    }
     // 这里更新处理的原因是防止notice内容在动画过程中发生改变。
     if (!canIUseTransitionEnd) {
       this._measureText();
