@@ -1,0 +1,51 @@
+@import (reference) "../style/themes/default.less";
+
+.am-button-ghost {
+  border-color: #fff;
+  color: #fff;
+}
+.am-guide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &-content {
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 104px;
+    box-sizing: border-box;
+    &-pager {
+      padding-bottom: 130px;
+    }
+  }
+  &-img {
+    position: absolute;
+    z-index: 2;
+  }
+  &-btn {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+    &-item {
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &-pager {
+    position: absolute;
+    bottom: 98px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+}

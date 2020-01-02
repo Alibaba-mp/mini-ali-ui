@@ -1,42 +1,82 @@
 <view class="demo-title">NoticeBar 通告栏</view>
 <view class="demo-item">
   <notice
+    marqueeProps="{{marqueeProps}}"
     enableMarquee="{{true}}"
-    marqueeProps="{{marqueeProps}}">
-    Notice: The arrival time of incomes and transfers of Yu 'E Bao will be delayed during National Day.
+    show="{{closeShow}}"
+    type="{{noticeType}}"
+    mode="{{noticeMode}}"
+    action="{{actionText}}"
+    onClick="actionClick"
+    actionLeft="{{actionLeftText}}"
+    onClickLeft="linkActionClick">
+    无限循环滚动的通告栏展示情况。文字不够继续添加文字凑数。
   </notice>
 </view>
 <view class="demo-item">
   <notice
-    mode="link"
     enableMarquee="{{true}}"
-    onClick="linkClick">
-    因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
+    show="{{closeShow}}"
+    showIcon="{{false}}"
+    type="{{noticeType}}"
+    mode="{{noticeMode}}"
+    action="{{actionText}}"
+    onClick="actionClick"
+    actionLeft="{{actionLeftText}}"
+    onClickLeft="linkActionClick">
+    滚动一次的通告栏展示情况。文字不够继续添加文字凑数。无 icon
   </notice>
 </view>
 <view class="demo-item">
   <notice
-    mode="closable"
-    onClick="closableClick"
-    show="{{closeShow}}">
-    因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
+    show="{{closeShow}}"
+    type="{{noticeType}}"
+    mode="{{noticeMode}}"
+    action="{{actionText}}"
+    onClick="actionClick"
+    actionLeft="{{actionLeftText}}"
+    onClickLeft="linkActionClick">
+    不滚动的通告栏展示情况。
   </notice>
 </view>
 <view class="demo-item">
   <notice
-    mode="link"
-    action="去看看"
-    onClick="linkActionClick">
-    因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
+    show="{{closeShow}}"
+    type="{{noticeType}}"
+    mode="{{noticeMode}}"
+    action="{{actionText}}"
+    onClick="actionClick"
+    actionLeft="{{actionLeftText}}"
+    onClickLeft="linkActionClick"
+    capsule="{{true}}"
+    capsuleItem="{{capsuleItem}}">{{capsuleItem.length > 0? capsuleItem.length + ' 个优惠信息推荐':'暂无优惠信息推荐'}}
   </notice>
 </view>
-<view class="demo-item">
-  <notice
-    mode="closable"
-    action="不再提示"
-    actionCls="nomore-notice"
-    onClick="closableActionClick"
-    show="{{closeActionShow}}">
-    因全国公民身份系统升级，添加银行卡银行卡银行卡银行卡
-  </notice>
-</view>
+
+<view class="demo-title">type: </view>
+<radio-group class="radio-group" onChange="typeChange" name="type">
+  <label class="radio" a:for="{{type}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
+
+<view class="demo-title">mode: </view>
+<radio-group class="radio-group" onChange="modeChange" name="mode">
+  <label class="radio" a:for="{{mode}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
+
+<input placeholder="右边的文字" value="{{actionText?actionText:''}}" onInput="getRightText" />
+<input placeholder="左边的文字" a:if="{{actionText !== '' || noticeMode !== ''}}" onInput="getLeftText" />
+
+
+<view class="demo-title">胶囊通告栏 item: </view>
+<checkbox-group onChange="capsuleItemChange" name="capsule">
+  <label class="checkbox" a:for="{{capsuleItemList}}" key="label-{{index}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+    <image src='{{item.value}}' class="itemSize" />
+  </label>
+</checkbox-group>

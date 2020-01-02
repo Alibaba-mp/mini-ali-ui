@@ -1,0 +1,55 @@
+<view>
+  <view style="margin-top: 10px;" />
+  <list>
+    <view class="title">输入框</view>
+    <input-item data-field="input" 
+      clear="{{true}}" 
+      value="{{input}}" 
+      className="dadada" 
+      placeholder="暗提示" 
+      focus="{{inputFocus}}" 
+      onInput="onItemInput" 
+      onFocus="onItemFocus" 
+      onBlur="onItemBlur" 
+      onConfirm="onItemConfirm" 
+      onClear="onClear">
+      标题
+    </input-item>
+    <view class="title">选择</view>
+    <picker-item data-field="picker" 
+      placeholder="暗提示" 
+      value="{{bank}}" 
+      onPickerTap="onPickerTap">
+      标题
+    </picker-item>
+    <view class="title">验证码框</view>
+    <verify-code data-field="verifyCode" 
+      onInput="onItemInput" 
+      value="{{verifyCode}}" 
+      onClear="onClear" 
+      countDown="{{10}}" 
+      onSend="onSend"></verify-code>
+    <view class="title">长密码框</view>
+    <long-password data-field="longPassword" 
+      placeholder="" 
+      type="text" 
+      value="{{longPassword}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear" />
+    <view class="title">多行输入</view>
+    <multi-liner data-field="area" 
+      placeholder="字数统计↘" 
+      type="text" 
+      value="{{name}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear" 
+      last="{{true}}" 
+      auto-height="{{true}}" />
+
+  </list>
+  <view style="margin: 10px;" />
+  <button type="primary" 
+    onTap="onAutoFocus">聚焦</button>
+</view>

@@ -1,34 +1,33 @@
 <view class="am-vtabs {{className}}">
-  <view
-    class="am-vtabs-bar"
-    style="{{ backgroundColor: tabBarInactiveBgColor }}"
-    >
+  <view class="am-vtabs-bar">
     <scroll-view
+      style="{{tabBarActiveBgColor?'background-color: ' + tabBarActiveBgColor + ';':''}}" 
       class="am-vtabs-bar-content"
       scroll-top="{{tabTop}}"
       scroll-y="{{true}}">
       <block a:for="{{tabs}}">
-       <view
+        <view
         data-index="{{index}}"
         data-anchor="{{item.anchor}}"
         onTap="handleTabClick"
         class="am-vtabs-bar-tab"
+        hover-class="{{activeTab !== index?'am-vtabs-bar-tab__hover':''}}" hover-start-time="0" hover-stay-time="0"
         style="{{
-          color: activeTab == index ? tabBarActiveTextColor : tabBarInactiveTextColor,
-          borderLeftColor: activeTab == index ? tabBarlineColor : tabBarInactiveBgColor,
-          borderRightColor: activeTab == index ? tabBarActiveBgColor : tabBarInactiveBgColor,
-          backgroundColor: activeTab == index ? tabBarActiveBgColor : tabBarInactiveBgColor
-        }}"
+          activeTab == index?'color: ' + tabBarActiveTextColor + ';background-color: ' + tabBarActiveBgColor + ';':'color: ' + tabBarInactiveTextColor + ';background-color: ' + tabBarInactiveBgColor + ';'
+        }}
+        {{index === currentBefore?'border-radius: 0 0 8px 0;':''}}
+        {{index === currentAfter?'border-radius: 0 8px 0 0;':''}}"
         >
-        <view class="am-vtabs-bar-title">
-          <text>{{item.title}}</text>
-          <badge
-            className="am-vtabs-bar-badge {{item.badgeType ? item.badgeType : ''}}"
-            a:if="{{item.badgeType}}"
-            dot="{{item.badgeType == 'dot'}}"
-            text="{{item.badgeText}}" />
+          <view class="am-vtabs-bar-title">
+            <text>{{item.title}}<text a:if="{{item.number && item.number !== ''}}">({{item.number}})</text></text>
+          </view>
+          <view a:if="{{activeTab === index}}" class="am-vtabs-bar-line" style="{{tabBarlineColor?'background-color: ' + tabBarlineColor + ';':''}}"></view>
         </view>
-       </view>
+        <view
+          a:if="{{index + 1 === tabs.length}}"
+          style="{{index + 1 === currentAfter?'border-radius: 0 8px 0 0;':''}}
+          {{tabBarInactiveBgColor?'background-color: ' + tabBarInactiveBgColor + ';':''}}"
+          class="am-vtabs-bar-placehold"></view>
       </block>
     </scroll-view>
   </view>

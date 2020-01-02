@@ -1,5 +1,5 @@
 <view class="am-message {{className}}">
-  <icon class="am-icon" size="64" type="{{type === 'fail' ? 'cancel' : type}}" />
+  <am-icon class="am-icon icon-{{type}}" type="{{iconType}}" />
   <view class="am-message-main">
     {{title}}
   </view>

@@ -1,0 +1,1 @@
+<switch class="am-switch {{checkedCls}}" name="{{name}}" checked="{{checked}}" disabled="{{disabled}}" color="{{color}}" onChange="onChange" controlled="{{controlled}}"/>

@@ -1,0 +1,49 @@
+@import (reference) "../style/themes/default.less";
+
+.am-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: @v-spacing-large;
+  padding-bottom: var(--am-title-paddingB, @v-spacing-large);
+  font-size: @font-size-subtitle;
+  font-size: var(--am-title-text-fontSize, @font-size-subtitle);
+  color: @color-text-title;
+  color: var(--am-title-text-color, @color-text-title);
+  &-line {
+    margin-bottom: @v-spacing-large;
+    margin-bottom: var(--am-title-marginBottom, @v-spacing-large);
+    border-bottom: @border-width-standard solid @color-divider-line;
+    border-bottom: var(--am-title-borderWidth, @border-width-standard) solid var(--am-title-borderColor, @color-divider-line);
+  }
+  &-icon {
+    width: @size-6;
+    width: var(--am-title-icon-width, @size-6);
+    height: @size-6;
+    height: var(--am-title-icon-height, @size-6);
+    overflow: hidden;
+    margin-right: @h-spacing-standard;
+    margin-right: var(--am-title-icon-marginRight, @h-spacing-standard);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+  &-text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  &-operation {
+    width: @size-6;
+    width: var(--am-operation-icon-width, @size-6);
+    height: @size-6;
+    height: var(--am-operation-icon-height, @size-6);
+    overflow: hidden;
+    text-align: center;
+    line-height: @size-6;
+    line-height: var(--am-title-operation-lineHeight, @size-6);
+    margin-left: @h-spacing-standard;
+    margin-left: var(--am-title-operation-marginLeft, @h-spacing-standard);
+  }
+}

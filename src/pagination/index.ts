@@ -1,46 +1,38 @@
-const noop = () => {};
-
 Component({
   props: {
-    mode: 'text',
-    simple: false,
-    disabled: false,
-    current: 0,
-    total: 0,
-    prevText: '上一页',
-    nextText: '下一页',
-    onChange: noop,
+    infinite: false,
     className: '',
-    btnClass: '',
-  },
-
-  didMount() {
-    const { current } = this.props;
-    this.setData({
-      currentPage: current,
-    });
+    fillColor: '#ddd',
+    frontColor: '#006EFF',
+    pagerName: '',
+    height: '100',
+    white: false,
+    max: 5,
+    currentPage: 1,
   },
 
   methods: {
-    onTapPrev() {
-      const { currentPage } = this.data;
-      const { disabled } = this.props;
-      if (currentPage - 1 > 0 && !disabled) {
-        this.setData({
-          currentPage: currentPage - 1,
+    clacWidth(pagerName) {
+      my.createSelectorQuery()
+        .select(`#${pagerName}`)
+        .boundingClientRect()
+        .exec((ret) => {
+          this.wrapWidth = (<my.IBoundingClientRect>ret[0]).width;
         });
-        this.props.onChange(this.data.currentPage);
-      }
+      return this.wrapWidth;
     },
-    onTapNext() {
-      const { disabled, total } = this.props;
-      const { currentPage } = this.data;
-      if (currentPage + 1 <= total && !disabled) {
-        this.setData({
-          currentPage: currentPage + 1,
-        });
-        this.props.onChange(this.data.currentPage);
-      }
+    onScroll(e) {
+      const infinitePageNumber = {};
+      const { scrollLeft, scrollWidth } = e.detail;
+      const viewWidth = this.clacWidth(e.currentTarget.dataset.id);
+
+      infinitePageNumber[e.currentTarget.dataset.id] = {
+        pageDeg: Math.round((scrollLeft) / (scrollWidth - viewWidth) * 16) > 16 ? 16 : Math.round((scrollLeft) / (scrollWidth - viewWidth) * 16),
+      };
+
+      this.setData({
+        pageDeg: infinitePageNumber[e.currentTarget.dataset.id].pageDeg,
+      });
     },
   },
 });

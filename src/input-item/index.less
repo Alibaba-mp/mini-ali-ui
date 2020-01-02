@@ -1,11 +1,13 @@
-@import '../style/mixins/hairline.less';
+@import "../style/mixins/hairline.less";
 
 .am-input {
   &-item {
     display: flex;
     align-items: center;
-    background: #fff;
-    padding-left: 15px;
+    background: @color-fill-grey-inverse;
+    background: var(--am-input-item-background, @color-fill-grey-inverse);
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-input-item-padding-left, @h-spacing-large);
 
     .a-input-content {
       padding-left: 2px;
@@ -17,23 +19,30 @@
     flex: 1;
     display: flex;
     align-items: center;
-    padding-right: 15px;
-    min-height: 47px;
+    padding-right: @h-spacing-large;
+    padding-right: var(--am-input-line-padding-right, @h-spacing-large);
+    min-height: @size-12;
+    min-height: var(--am-input-line-min-height, @size-12);
     overflow: hidden;
+    font-size: @font-size-list;
+    font-size: var(--am-input-font-size, @font-size-list);
   }
 
   &-label {
-    min-width: 80px;
+    min-width: @size-20;
+    min-width: var(--am-input-label-min-width, @size-20);
     margin-right: 2px;
-    color: #333;
+    color: @color-text-title;
+    color: var(--am-input-item-label-color, @color-text-title);
   }
 
   &-content {
     flex: 1;
     display: flex;
-    height: 33px;
-    color: #000;
+    color: @color-text-title;
+    color: var(--am-input-item-label-color, @color-text-title);
     text-align: left;
+    padding: 0;
   }
 
   &-content .a-input-wrap {
@@ -42,8 +51,10 @@
 
   &-clear {
     display: flex;
-    height: 33px;
-    width: 33px;
+    height: @size-8;
+    height: var(--am-input-clear-size, @size-8);
+    width: @size-8;
+    width: var(--am-input-clear-size, @size-8);
     justify-content: center;
     align-items: center;
   }
@@ -58,11 +69,15 @@
   }
 
   &-line-bottom {
-    .hairline('bottom');
+    .hairline("bottom");
   }
 
   /* 最后一行 */
   &-item.last .am-input-line-bottom::after {
     display: none;
+  }
+  &-placeholder-base {
+    color: @color-text-weak;
+    color: var(--am-input-item-placeholder-color, @color-text-weak);
   }
 }

@@ -1,39 +1,65 @@
-@import '../style/themes/default.less';
+@import (reference) '../style/themes/default.less';
 @import '../style/mixins/hairline.less';
 
 .am-message {
-  background-color: #fff;
-  margin-bottom: 30px;
-  padding: 30px 15px;
+  .amFormat(@name, @val, @default) {
+    @{name}: @default;
+    @{name}: ~'var(--@{val}, @{default})';
+  }
+  .amFormat(background-color, am-message-background, @color-fill-grey-inverse);
+  padding: @size-8 @size-3;
+  padding: var(--am-message-padding-h, @size-8) var(--am-message-padding-v, @size-3);
   text-align: center;
-  height: 199px;
   box-sizing: border-box;
   position: relative;
   .hairline('bottom');
 
   & .am-icon {
     display: block;
+    .amFormat(line-height, am-message-icon-lineheight, @line-height-base);
+    .amFormat(font-size, am-message-icon-size, @size-16);
+  }
+
+  .icon-success {
+    .amFormat(color, am-message-success-color, @color-fill-primary);
+  }
+
+  .icon-info {
+    .amFormat(color, am-message-info-color, @color-fill-primary);
+  }
+
+  .icon-waiting {
+    .amFormat(color, am-message-waiting-color, @color-pomonagreen-1);
+  }
+
+  .icon-warn {
+    .amFormat(color, am-message-warn-color, @color-orange-1);
+  }
+
+  .icon-fail {
+    .amFormat(color, am-message-fail-color, @color-fill-warning);
   }
 
   &-main {
-    font-size: 20px;
-    margin: 16px 0 9px;
-    line-height: 28px;
+    .amFormat(font-size, am-message-title-size, @font-size-title);
+    .amFormat(margin-top, am-message-title-margin, @size-5);
+    .amFormat(color, am-message-title-color, @color-text-title);
   }
 
   &-sub {
-    padding: 0 30px;
-    font-size: 14px;
-    line-height: 19px;
-    margin-top: 6px;
-    color: #999;
+    .amFormat(font-size, am-message-subtitle-size, @font-size-content);
+    .amFormat(margin-top, am-message-subtitle-margin, @size-2);
+    .amFormat(color, am-message-subtitle-color, @color-text-subtitle);
   }
 
   &-button-wrap {
-    padding: 0 15px;
+    .amFormat(margin-top, am-message-margintop, @size-8);
+    padding: 0 @size-4;
+    padding: 0 var(--am-message-button-margin, @size-4);
 
     & .a-button {
-      margin-bottom: 15px;
+      margin-bottom: @size-4;
+      margin-bottom: var(--am-message-button-margin, @size-4);
     }
 
     & .a-button:last-child {

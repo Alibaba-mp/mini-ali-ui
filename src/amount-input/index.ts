@@ -12,6 +12,20 @@ Component({
   data: {
     _focus: false,
   },
+  didMount() {
+    this.setData({
+      _focus: this.props.focus,
+    });
+  },
+  didUpdate(prevProps) {
+    const { focus: prevFocus } = prevProps;
+    const { focus: nowFocus } = this.props;
+    if (prevFocus !== nowFocus) {
+      this.setData({
+        _focus: nowFocus,
+      });
+    }
+  },
   methods: {
     onInput(e) {
       const event = fmtEvent(this.props, e);
@@ -43,14 +57,19 @@ Component({
       this.setData({
         _focus: false,
       });
+      // my.alert({ content: '_focus: ' + this.data._focus });
       const event = fmtEvent(this.props, e);
       if (this.props.onBlur) {
         this.props.onBlur(event);
       }
     },
     onClearTap() {
+      // my.alert({ content: 'manually focus' });
+      this.setData({
+        _focus: true,
+      });
       if (this.props.onClear) {
-        this.props.onClear('');
+        this.props.onClear();
       }
     },
   },

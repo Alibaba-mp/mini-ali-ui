@@ -2,9 +2,13 @@
   <message
     title="{{title}}"
     subTitle="{{subTitle}}"
-    type="success" 
-    mainButton="{{messageButton.mainButton}}" 
-    subButton="{{messageButton.subButton}}" 
+    type="{{type}}" 
     onTapMain="goBack">
   </message>
+  <radio-group onChange="radioChange" name="lib">
+    <label class="radio" a:for="{{items}}" key="label-{{index}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}" />
+      <text class="radio-text">{{item.value}}</text>
+    </label>
+ </radio-group>
 </view>

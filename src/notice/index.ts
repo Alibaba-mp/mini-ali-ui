@@ -6,15 +6,21 @@ Component({
     className: '',
     mode: '', // closable,link
     action: '', // 文本按钮
+    actionLeft: '', // 文本按钮
     show: true, // 是否显示
     enableMarquee: false, // 是否开启marquee
     onClick: () => { },
+    onClickLeft: () => { },
     marqueeProps: {
       loop: false,
       leading: 500,
       trailing: 800,
       fps: 40,
     },
+    capsuleItem: [],
+    showIcon: true,
+    type: 'normal', // 通告栏类型： normal/error/active
+    capsule: false, // 是否为胶囊型通告栏
   },
   data: {
     animatedWidth: 0,
@@ -151,16 +157,23 @@ Component({
     },
 
     onNoticeTap() {
-      const { mode, onClick } = this.props;
-      if (mode === 'link' && typeof onClick === 'function') {
+      const { capsule, mode, action, actionLeft, onClick } = this.props;
+      if ((capsule && typeof onClick === 'function') || (mode === 'link' && actionLeft === '' && action === '' && typeof onClick === 'function')) {
         onClick();
       }
     },
 
     onOperationTap() {
-      const { mode, onClick } = this.props;
-      if (mode === 'closable' && typeof onClick === 'function') {
+      const { mode, action, onClick } = this.props;
+      if ((mode || action !== '') && typeof onClick === 'function') {
         onClick();
+      }
+    },
+
+    onActionLeftTap() {
+      const { actionLeft, onClickLeft } = this.props;
+      if (actionLeft !== '' && typeof onClickLeft === 'function') {
+        onClickLeft();
       }
     },
   },

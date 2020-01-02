@@ -1,0 +1,67 @@
+@import (reference) "../style/themes/default.less";
+
+/** 使用rpx，不token **/
+@avatar-sm-size: 72rpx; /* small头像大小 */
+@avatar-md-size: 104rpx; /* middle头像大小 */
+@avatar-lg-size: 120rpx; /* large头像大小 */
+@avatar-content-between-space: 20rpx; /* 头像与内容间隔 */
+@avatar-desc-between-space: 8rpx; /* 姓名与摘要间隔 */
+@avatar-fontSize-0: 24rpx;
+@avatar-fontSize-1: 28rpx;
+@avatar-fontSize-2: 30rpx;
+@avatar-fontSize-3: 34rpx;
+@avatar-fontSize-4: 36rpx;
+
+.am-avatar {
+  display: flex;
+  align-items: center;
+  &-img {
+    width: @avatar-md-size;
+    height: @avatar-md-size;
+    border-radius: @avatar-md-size / 2;
+    /* 头像大小设置 */
+    &-sm {
+      width: @avatar-sm-size;
+      height: @avatar-sm-size;
+      border-radius: @avatar-sm-size / 2;
+    }
+    &-md {
+      width: @avatar-md-size;
+      height: @avatar-md-size;
+      border-radius: @avatar-md-size / 2;
+    }
+    &-lg {
+      width: @avatar-lg-size;
+      height: @avatar-lg-size;
+      border-radius: @avatar-lg-size / 2;
+    }
+    /* 头像形状设置 */
+    &-square {
+      border-radius: 0;
+    }
+  }
+  &-content {
+    margin-left: @avatar-content-between-space;
+  }
+  &-name {
+    font-size: @avatar-fontSize-3;
+    color: #333;
+    &-lg {
+      font-size: @avatar-fontSize-4;
+    }
+    &-sm {
+      font-size: @avatar-fontSize-2;
+    }
+  }
+  &-desc {
+    font-size: @avatar-fontSize-1;
+    color: #999;
+    margin-top: @avatar-desc-between-space;
+    &-lg {
+      font-size: @avatar-fontSize-2;
+    }
+    &-sm {
+      font-size: @avatar-fontSize-0;
+    }
+  }
+}

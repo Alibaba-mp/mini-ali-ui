@@ -37,8 +37,8 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "tips-dialog": "mini-antui/es/tips/tips-dialog/index",
-    "tips-plain": "mini-antui/es/tips/tips-plain/index"
+    "tips-dialog": "mini-ali-ui/es/tips/tips-dialog/index",
+    "tips-plain": "mini-ali-ui/es/tips/tips-plain/index"
   }
 }
 ```
@@ -54,7 +54,7 @@
   >
     <view class="content" slot="content">
       <view>hello,</view>
-      <view>欢迎使用小程序扩展组件库mini-antui</view>
+      <view>欢迎使用小程序扩展组件库mini-ali-ui</view>
     </view>
     <view slot="operation" class="opt-button" onTap="onDialogTap">知道了</view> 
   </tips-dialog>

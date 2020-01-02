@@ -4,12 +4,9 @@
 .dyt-list .am-list-item-thumb {
   border-radius: 5px;
 }
-.dyt-list .am-list-brief {
+.dyt-list .am-list-briefX {
   color: #909090;
-}
-
-.dyt-list .am-list-extra {
-  color: #000;
+  font-size: 14px;
 }
 
 .am-list-sticky {

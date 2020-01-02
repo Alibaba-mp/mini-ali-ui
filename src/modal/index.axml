@@ -1,20 +1,27 @@
-<view class="am-modal-{{show ? 'show' : 'hide'}}" disable-scroll="{{disableScroll}}">
-	<view class="am-modal-mask" />
+<view class="am-modal-{{show ? 'show' : 'hide'}}" disable-scroll="{{disableScroll}}" style="{{zIndex ? `z-index: ${zIndex}`: ''}}">
+	<view class="am-modal-mask" a:if="{{mask}}"/>
 	<view class="am-modal-document {{advice === true ? 'am-modal-document-advice' : '' }}">
 		<view class="am-modal {{className}}">
-			<view a:if="{{topImage}}" class="am-modal-image am-modal-image-{{topImageSize}}">
-				<image src="{{topImage}}" />
-			</view>
-			<view class="am-modal-header" a:if="{{$slots.header}}">
-				<slot name="header" />
-			</view>
-			<view class="am-modal-body">
-				<slot />
-			</view>
-			<view class="am-modal-footer" hover-class="am-modal-footer-active" a:if="{{$slots.footer}}" onTap="onModalClick">
+			<view class="am-modal-content {{topImageSize === 'lg' ? 'am-modal-content--fill' : ''}}">
+        <view a:if="{{topImage}}" class="am-modal-image am-modal-image-{{topImageSize}}">
+          <image class="am-modal-image-element" src="{{topImage}}" />
+        </view>
+        <view class="am-modal-header" a:if="{{$slots.header}}">
+          <slot name="header" />
+        </view>
+        <view class="am-modal-body">
+          <slot />
+        </view>
+      </view>
+			<view class="am-modal-footer" hover-class="am-modal-footer-active" a:if="{{$slots.footer}}" onTap="_onModalClick">
 				<slot name="footer" />
 			</view>
-			<view class="am-modal-close {{closeType === '1' ? 'am-modal-close-white' : ''}}" hover-class="am-modal-close-active" a:if="{{showClose}}" onTap="onModalClose" />
+      <view class="am-modal-buttons {{_buttonsLayout === 'vertical' ? 'am-modal-buttons--vertical' : 'am-modal-buttons--horizontal'}}" a:if="{{buttons}}">
+        <view class="am-modal-button {{button.extClass}} {{_buttonsLayout === 'vertical' ? 'am-modal-button--vertical' : 'am-modal-button--horizontal'}}" a:for="{{buttons}}" hover-class="am-modal-button-active" a:for-item="button" onTap="_onButtonClick" data-index="{{index}}" data-item="{{button}}">
+          {{button.text}}
+        </view>
+      </view>
+			<view class="am-modal-close {{closeType === '1' ? 'am-modal-close-white' : ''}}" hover-class="am-modal-close-active" a:if="{{showClose}}" onTap="_onModalClose" />
 		</view>
 	</view>
 </view>

@@ -21,9 +21,9 @@
 {
   "defaultTitle": "SwipeAction",
   "usingComponents": {
-    "list": "mini-antui/es/list/index",
-    "list-item": "mini-antui/es/list/list-item/index",
-    "swipe-action": "mini-antui/es/swipe-action/index"
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "swipe-action": "mini-ali-ui/es/swipe-action/index"
   }
 }
 ```

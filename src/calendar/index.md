@@ -22,7 +22,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "calendar": "mini-antui/es/calendar/index"
+    "calendar": "mini-ali-ui/es/calendar/index"
   }
 }
 ```

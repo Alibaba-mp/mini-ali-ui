@@ -52,8 +52,8 @@ tabs 组件内容区域高度是否能够自适应，需要注意 `swipeable` �
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "tabs": "mini-antui/es/tabs/index",
-    "tab-content": "mini-antui/es/tabs/tab-content/index"
+    "tabs": "mini-ali-ui/es/tabs/index",
+    "tab-content": "mini-ali-ui/es/tabs/tab-content/index"
   }
 }
 ```
