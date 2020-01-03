@@ -1,6 +1,8 @@
 <view>
   <page-result
     type="busy"
-    title="系统正忙，稍后再试"
-    brief="耽误您的时候，我们深感歉意" />
+    title="请稍等哦，马上出来"
+    brief="前面还有很多朋友在排队"
+    footer="{{footer}}"
+  />
 </view>
