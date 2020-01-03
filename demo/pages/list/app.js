@@ -186,6 +186,11 @@ Page({
         nameZN: '遮罩引导',
         path: '/pages/guide/guide',
       },
+      {
+        name: 'Loading',
+        nameZN: 'loading 加载',
+        path: '/pages/loading/loading',
+      },
     ],
   },
 });

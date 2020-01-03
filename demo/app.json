@@ -60,7 +60,8 @@
     "pages/alphabet/index",
     "pages/mask/mask",
     "pages/guide/guide",
-    "pages/tabs/elevator/elevator"
+    "pages/tabs/elevator/elevator",
+    "pages/loading/loading"
   ],
   "window": {
     "enableWK": "YES",
