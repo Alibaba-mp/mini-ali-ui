@@ -71,6 +71,11 @@ Page({
         nameZN: 'VTabs',
         path: '/pages/vtabs/index',
       },
+      {
+        name: 'Tabs elevator',
+        nameZN: 'Tabs 电梯组件',
+        path: '/pages/tabs/elevator/elevator',
+      },
       // {
       //   name: 'Stepper',
       //   nameZN: 'Stepper',
