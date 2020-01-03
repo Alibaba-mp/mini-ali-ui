@@ -131,11 +131,11 @@ Page({
         nameZN: '公告',
         path: '/pages/notice/index',
       },
-      // {
-      //   name: 'SearchBar',
-      //   nameZN: '搜索框',
-      //   path: '/pages/search-bar/index',
-      // },
+      {
+        name: 'SearchBar',
+        nameZN: '搜索框',
+        path: '/pages/search-bar/index',
+      },
       // {
       //   name: 'Tips',
       //   nameZN: '小提示',

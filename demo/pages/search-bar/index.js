@@ -1,6 +1,7 @@
 Page({
   data: {
-    value: '美食',
+    value: '',
+    showVoice: false,
   },
   handleInput(value) {
     this.setData({
@@ -22,6 +23,11 @@ Page({
   handleSubmit(value) {
     my.alert({
       content: value,
+    });
+  },
+  onChange(e) {
+    this.setData({
+      showVoice: e.detail.value,
     });
   },
 });
