@@ -141,11 +141,11 @@ Page({
       //   nameZN: '小提示',
       //   path: '/pages/tips/index',
       // },
-      // {
-      //   name: 'PageResult',
-      //   nameZN: '结果页',
-      //   path: '/pages/page-result/index',
-      // },
+      {
+        name: 'PageResult',
+        nameZN: '结果页',
+        path: '/pages/page-result/index',
+      },
       // {
       //   name: 'PopUp',
       //   nameZN: '弹出菜单',
