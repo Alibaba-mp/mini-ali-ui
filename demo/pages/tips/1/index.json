@@ -1,6 +1,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "tips-dialog": "../../../es/tips/tips-dialog/index"
+    "tips-dialog": "../../../es/tips/tips-dialog/index",
+    "am-button": "../../../es/button/index"
   }
 }
