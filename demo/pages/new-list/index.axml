@@ -25,10 +25,10 @@
         
         <am-icon a:if="{{secSlotTypes[secSlotIndex] === '问号图标'}}" type="question_" slot="extra" color="#1677ff" size="{{secIconSize}}" />
         <am-icon a:if="{{secSlotTypes[secSlotIndex] === '勾图标'}}" type="check_" slot="extra" color="#1677ff" size="{{secIconSize}}" />
-        <tag a:if="{{secSlotTypes[secSlotIndex] === '标签'}}" slot="extra">{{supTagText}}</tag>
+        <tag a:if="{{secSlotTypes[secSlotIndex] === '标签'}}" slot="extra">{{secTagText}}</tag>
         <view a:if="{{secSlotTypes[secSlotIndex] === '文字内容'}}" slot="extra">{{secText}}</view>
         <switch a:if="{{secSlotTypes[secSlotIndex] === '开关'}}" slot="extra" />
-        <am-button a:if="{{secSlotTypes[secSlotIndex] === '胶囊按钮'}}"	shape="capsule"	type="ghost"  slot="extra" >胶囊按钮</am-button>
+        <am-button a:if="{{secSlotTypes[secSlotIndex] === '胶囊按钮'}}"	shape="capsule"	type="ghost"  slot="extra" >{{secText}}</am-button>
         <list-secondary 
           a:if="{{secSlotTypes[secSlotIndex] === 'list-secondary'}}" 
           title="{{secondary.title}}" 
@@ -203,21 +203,30 @@
     </input-item>
     <input-item
       placeholder="无" 
-      value="{{supTagText}}"
+      value="{{secTagText}}"
       onInput="setInfo"
-      data-name="supTagText"
-      a:if="{{supSlotTypes[supSlotIndex] === '标签'}}"
+      data-name="secTagText"
+      a:if="{{secSlotTypes[secSlotIndex] === '标签'}}"
     >
       标签内容:
     </input-item>
     <input-item
       placeholder="无" 
-      value="{{supText}}"
+      value="{{secText}}"
       onInput="setInfo"
-      data-name="supText"
-      a:if="{{supSlotTypes[supSlotIndex] === '文字内容'}}"
+      data-name="secText"
+      a:if="{{secSlotTypes[secSlotIndex] === '文字内容'}}"
     >
       文字内容:
+    </input-item>
+    <input-item
+      placeholder="无" 
+      value="{{secText}}"
+      onInput="setInfo"
+      data-name="secText"
+      a:if="{{secSlotTypes[secSlotIndex] === '胶囊按钮'}}"
+    >
+      按钮内容:
     </input-item>
     <view a:if="{{secSlotTypes[secSlotIndex] === 'list-secondary'}}">
       <input-item

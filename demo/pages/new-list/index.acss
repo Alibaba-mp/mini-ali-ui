@@ -35,9 +35,7 @@
   height: 32rpx;
   margin-left: 16rpx;
 }
-.am-picker-col-content {
-  background: white;
-}
+
 .new-list-container {
   height: 100vh;
   display: flex;
