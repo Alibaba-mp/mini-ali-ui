@@ -1,10 +1,8 @@
 <view class="am-search {{className}}">
   <view class="am-search-input">
     <view class="am-search-synthetic">
-      <view>
-        <view class="am-search-synthetic-icon"></view>
+        <am-icon type='search' class="am-search-synthetic-icon"></am-icon>
         <text class="am-search-synthetic-placeholder" style="{{ visibility: !focus && _value.length === 0 ? 'visible': 'hidden'}}">{{placeholder}}</text>
-      </view>
     </view>
     <input
       enableNative="{{false}}"
@@ -20,7 +18,10 @@
       sync-input="{{true}}"
       onBlur="handleBlur" />
     <view class="am-search-clear {{ _value.length > 0 && focus ? 'am-search-clear-show' : '' }}" onTap="handleClear">
-      <icon type="clear" size="14" />
+      <am-icon type='close_' class="am-search-clear-font"></am-icon>
+    </view>
+    <view a:if="{{showVoice && (_value.length === 0)}}" class="am-search-voice" onTap="handleVoice">
+      <am-icon type='microphone_' class='am-search-voice-font'></am-icon>
     </view>
   </view>
   <view

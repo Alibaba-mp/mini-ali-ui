@@ -1,5 +1,5 @@
-<view a:if="{{infinite}}" class="am-pageInfinite {{className?className:''}}" style="height: {{height}}px;">
-  <scroll-view scroll-x="true" class="am-pageInfinite_content" data-id="{{pagerName}}" id="{{pagerName}}" onScroll="onScroll" style="height: {{height}}px;">
+<view a:if="{{infinite}}" class="am-pageInfinite {{className?className:''}}" style="height: {{height}};">
+  <scroll-view scroll-x="true" class="am-pageInfinite_content" data-id="{{pagerName}}" id="{{pagerName}}" onScroll="onScroll" style="height: {{height}};">
     <slot></slot>
   </scroll-view>
   <view class="am-pageInfiniteWrap">

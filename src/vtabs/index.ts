@@ -9,11 +9,11 @@ Component({
     tabs: [],
     animated: false,
     swipeable: true,
-    tabBarActiveTextColor: '#108ee9',
+    tabBarActiveTextColor: '#1677FF',
     tabBarInactiveTextColor: '#333333',
     tabBarActiveBgColor: '#ffffff',
-    tabBarInactiveBgColor: '#f8f8f8',
-    tabBarlineColor: '#108ee9',
+    tabBarInactiveBgColor: '#f5f5f5',
+    tabBarlineColor: '#1677FF',
     onTabClick: () => {},
     onScrollBar: () => {},
   },
@@ -101,6 +101,8 @@ Component({
       this.setData({
         tabTop,
         current,
+        currentBefore: current - 1,
+        currentAfter: current + 1,
       });
     },
     onScroll(e) {

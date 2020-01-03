@@ -1,6 +1,6 @@
-<view class="am-checkbox">
-  <checkbox
-    class="am-checkbox-value"
+<view class="am-radio">
+  <radio
+    class="am-radio-value"
     value="{{value}}"
     checked="{{checked}}"
     disabled="{{disabled}}"
@@ -8,5 +8,5 @@
     color="{{color}}"
     id="{{id}}"
     />
-  <view class="am-checkbox-synthetic"></view>
+  <view class="am-radio-synthetic"></view>
 </view>

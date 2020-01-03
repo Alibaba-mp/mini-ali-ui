@@ -1,0 +1,11 @@
+<view class="am-avatar {{className}}">
+  <image class="am-avatar-img am-avatar-img-{{size}} am-avatar-img-{{shape}}" src="{{src}}" onError="_onError"/>
+  <view class="am-avatar-content" a:if="{{name || desc}}">
+    <view class="am-avatar-name am-avatar-name-{{size}}" a:if="{{name}}">
+      {{name}}
+    </view>
+    <view class="am-avatar-desc am-avatar-desc-{{size}}" a:if="{{desc}}">
+      {{desc}}
+    </view>
+  </view>
+</view>

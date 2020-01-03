@@ -3,6 +3,7 @@ Component({
     className: '',
     placeholder: '',
     focus: false,
+    showVoice: true,
   },
   data: {
     _value: '',
@@ -97,6 +98,11 @@ Component({
 
       if (this.props.onSubmit) {
         this.props.onSubmit(value);
+      }
+    },
+    handleVoice() {
+      if (this.props.onVoiceClick) {
+        this.props.onVoiceClick();
       }
     },
   },

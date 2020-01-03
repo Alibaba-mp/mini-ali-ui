@@ -106,11 +106,16 @@ Page({
       //   nameZN: '日历',
       //   path: '/pages/calendar/index',
       // },
-      // {
-      //   name: 'AMCheckBox',
-      //   nameZN: '复选框',
-      //   path: '/pages/am-checkbox/index',
-      // },
+      {
+        name: 'AMCheckBox',
+        nameZN: '复选框',
+        path: '/pages/am-checkbox/index',
+      },
+      {
+        name: 'AMRadio',
+        nameZN: '单选框',
+        path: '/pages/am-radio/index',
+      },
       // {
       //   name: 'Filter',
       //   nameZN: '筛选',
@@ -126,11 +131,11 @@ Page({
         nameZN: '公告',
         path: '/pages/notice/index',
       },
-      // {
-      //   name: 'SearchBar',
-      //   nameZN: '搜索框',
-      //   path: '/pages/search-bar/index',
-      // },
+      {
+        name: 'SearchBar',
+        nameZN: '搜索框',
+        path: '/pages/search-bar/index',
+      },
       // {
       //   name: 'Tips',
       //   nameZN: '小提示',
@@ -180,6 +185,16 @@ Page({
         name: 'Mask',
         nameZN: '背景蒙层',
         path: '/pages/mask/mask',
+      },
+      {
+        name: 'Guide',
+        nameZN: '遮罩引导',
+        path: '/pages/guide/guide',
+      },
+      {
+        name: 'Avatar',
+        nameZN: '头像',
+        path: '/pages/avatar/index',
       },
     ],
   },

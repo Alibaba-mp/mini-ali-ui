@@ -2,7 +2,6 @@ import fmtEvent from '../_util/fmtEvent';
 
 Component({
   props: {
-    value: '',
     checked: false,
     disabled: false,
     onChange: () => {},
