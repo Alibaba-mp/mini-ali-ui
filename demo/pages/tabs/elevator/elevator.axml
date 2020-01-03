@@ -5,9 +5,9 @@
     tabsName="activeTab"
     onTabClick="handleTabClick"
     activeTab="{{activeTab}}"
-    capsule="{{true}}"
+    capsule="{{false}}"
     hasSubTitle="{{false}}"
-    showPlus="{{true}}"
+    showPlus="{{false}}"
     elevator="{{true}}"
   >
     <block a:for="{{tabs}}">
