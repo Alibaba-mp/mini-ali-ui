@@ -4,6 +4,7 @@
     focus="{{true}}"
     disabled="{{false}}"
     maxLength="{{20}}"
+    showVoice="{{showVoice}}"
     placeholder="搜索"
     onInput="handleInput"
     onClear="handleClear"
@@ -12,4 +13,7 @@
     onCancel="handleCancel"
     onSubmit="handleSubmit"
     showCancelButton="{{false}}" />
+</view>
+<view>是否展示Voice图标
+<checkbox onChange='onChange'/>
 </view>
