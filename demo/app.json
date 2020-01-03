@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/page-result/index",
     "pages/list/app",
     "pages/list/index",
     "pages/amount-input/index",
@@ -38,6 +37,7 @@
     "pages/filter/alternative/index",
     "pages/flex/index",
     "pages/search-bar/index",
+    "pages/page-result/index",
     "pages/page-result/network/index",
     "pages/page-result/local-network/index",
     "pages/page-result/busy/index",
