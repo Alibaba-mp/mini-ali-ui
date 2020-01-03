@@ -104,6 +104,7 @@ Page({
       'add-message',
       'alipay',
       'phone-book_',
+      'delete_',
     ],
     searchIcon: [],
   },

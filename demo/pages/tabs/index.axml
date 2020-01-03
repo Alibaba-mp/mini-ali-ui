@@ -28,6 +28,8 @@
       </tab-content>
     </block>
   </tabs>
+</view>
+<view style="padding: 30px">
   <tabs
     tabs="{{tabs2}}"
     tabsName="activeTab2"

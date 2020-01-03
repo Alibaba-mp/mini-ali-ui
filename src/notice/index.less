@@ -1,6 +1,7 @@
 @import (reference) "../style/themes/default.less";
 
 .am-notice {
+  position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -24,17 +25,27 @@
     align-items: center;
   }
   &-capsule {
+    position: relative;
     display: flex;
     align-items: center;
     flex: 1;
     border-radius: 50vh;
     &-item {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-direction: row-reverse;
       margin-right: @h-spacing-large;
       margin-right: var(--am-notice-capsule-item-marginRight, @h-spacing-large);
       padding-left: @h-spacing-standard;
       padding-left: var(--am-notice-capsule-item-paddingRight, @h-spacing-standard);
+    }
+    &-content {
+      position: relative;
+      z-index: 2;
+      &__hover {
+        opacity: 0.6;
+      }
     }
     &-img {
       width: @icon-size-sm;
@@ -89,10 +100,20 @@
   &-active {
     color: @color-text-primary;
     color: var(--am-notice-active-color, @color-text-primary);
-    border-color: tint(@color-fill-primary, 72%);
-    border-color: var(--am-notice-active-borderColor, tint(@color-fill-primary, 72%));
-    background-color: tint(@color-fill-primary, 80%);
-    background-color: var(--am-notice-active-bgc, tint(@color-fill-primary, 80%));
+    border: 0 none;
+    background: none;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      border-color: tint(@color-fill-primary, 72%);
+      border-color: var(--am-notice-active-borderColor, tint(@color-fill-primary, 72%));
+      background-color: tint(@color-fill-primary, 80%);
+      background-color: var(--am-notice-active-bgc, tint(@color-fill-primary, 80%));
+    }
     &-scroll-left,
     &-scroll-right {
       background-color: tint(@color-fill-primary, 80%);
@@ -100,12 +121,15 @@
     }
   }
   &-thumb {
+    position: relative;
+    z-index: 2;
     margin-right: @h-spacing-standard;
     margin-right: var(--am-notice-thumb-marginRight, @h-spacing-standard);
   }
 
   &-content {
     position: relative;
+    z-index: 2;
     flex: 1;
     width: 100%;
     overflow: hidden;
@@ -115,6 +139,8 @@
   }
 
   &-operation {
+    position: relative;
+    z-index: 2;
     display: flex;
     margin-left: @h-spacing-standard;
     margin-left: var(--am-notice-operation-marginLeft, @h-spacing-standard);
@@ -122,6 +148,9 @@
     font-size: var(--am-notice-operation-FontSize, @font-size-subtitle);
     &-left {
       margin-right: @h-spacing-standard;
+    }
+    &-text__hover {
+      opacity: .6;
     }
   }
 
@@ -131,8 +160,4 @@
     white-space: nowrap;
     vertical-align: middle;
   }
-  // &-operation-text {
-  //   color: @color-text-warning;
-  //   color: var(--am-notice-operation-color, @color-text-warning);
-  // }
 }
