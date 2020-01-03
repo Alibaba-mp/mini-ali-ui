@@ -1,0 +1,1 @@
+<view class="am-loading" style="width: {{size}};height: {{size}};"></view>

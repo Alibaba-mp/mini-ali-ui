@@ -201,6 +201,11 @@ Page({
         nameZN: '头像',
         path: '/pages/avatar/index',
       },
+      {
+        name: 'Loading',
+        nameZN: 'loading 加载',
+        path: '/pages/loading/loading',
+      },
     ],
   },
 });
