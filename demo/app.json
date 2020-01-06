@@ -34,6 +34,8 @@
     "pages/notice/index",
     "pages/filter/index",
     "pages/filter/single/index",
+    "pages/filter/single_1/index",
+    "pages/filter/single_2/index",
     "pages/filter/alternative/index",
     "pages/flex/index",
     "pages/search-bar/index",

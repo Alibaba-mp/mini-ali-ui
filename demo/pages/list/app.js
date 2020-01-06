@@ -116,11 +116,11 @@ Page({
         nameZN: '单选框',
         path: '/pages/am-radio/index',
       },
-      // {
-      //   name: 'Filter',
-      //   nameZN: '筛选',
-      //   path: '/pages/filter/index',
-      // },
+      {
+        name: 'Filter',
+        nameZN: '筛选',
+        path: '/pages/filter/index',
+      },
       // {
       //   name: 'Flex',
       //   nameZN: 'Flex 布局',

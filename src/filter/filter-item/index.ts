@@ -12,6 +12,8 @@ Component({
     id: '',
     value: '',
     selected: false,
+    subtitle: '',
+    rows: 0,
     onChange: () => {},
   },
 
