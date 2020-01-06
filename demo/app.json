@@ -2,6 +2,7 @@
   "pages": [
     "pages/list/app",
     "pages/list/index",
+    "pages/new-list/index",
     "pages/amount-input/index",
     "pages/am-icon/index",
     "pages/am-switch/index",
@@ -35,6 +36,8 @@
     "pages/notice/index",
     "pages/filter/index",
     "pages/filter/single/index",
+    "pages/filter/single_1/index",
+    "pages/filter/single_2/index",
     "pages/filter/alternative/index",
     "pages/flex/index",
     "pages/search-bar/index",
@@ -49,6 +52,10 @@
     "pages/page-result/local-logoff/index",
     "pages/page-result/empty/index",
     "pages/page-result/local-empty/index",
+    "pages/page-result/payment/index",
+    "pages/page-result/local-payment/index",
+    "pages/page-result/redpacket/index",
+    "pages/page-result/local-redpacket/index",
     "pages/popup/index",
     "pages/message/index",
     "pages/message/success/index",
@@ -61,9 +68,12 @@
     "pages/title/index",
     "pages/container/index",
     "pages/alphabet/index",
+    "pages/tag/index",
     "pages/mask/mask",
     "pages/guide/guide",
-    "pages/avatar/index"
+    "pages/avatar/index",
+    "pages/tabs/elevator/elevator",
+    "pages/loading/loading"
   ],
   "window": {
     "enableWK": "YES",

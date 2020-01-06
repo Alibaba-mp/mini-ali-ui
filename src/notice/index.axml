@@ -4,8 +4,10 @@
     <am-icon a:else type="voice" size="17"></am-icon>
   </view>
   <view class="am-notice-content am-notice-content-{{$id}}">
-    <view a:if="{{enableMarquee}}" class="am-notice-scroll-left am-notice-{{type === 'normal'?'':type}}-scroll-left"></view>
-    <view a:if="{{enableMarquee}}" class="am-notice-scroll-right am-notice-{{type === 'normal'?'':type}}-scroll-right"></view>
+    <block a:if="{{showShadow}}">
+      <view a:if="{{enableMarquee}}" class="am-notice-scroll-left am-notice-{{type === 'normal'?'':type}}-scroll-left"></view>
+      <view a:if="{{enableMarquee}}" class="am-notice-scroll-right am-notice-{{type === 'normal'?'':type}}-scroll-right"></view>
+    </block>
     <view
       a:if="{{canIUseTransitionEnd}}"
       class="am-notice-marquee am-notice-marquee-{{$id}}"
@@ -24,19 +26,20 @@
   </view>
   <view a:if="{{mode || action !== ''}}" class="am-notice-operation">
     <!-- 左边的操作区域 -->
-    <view a:if="{{actionLeft !==''}}" class="am-notice-operation-text am-notice-operation-left" onTap="onActionLeftTap">{{actionLeft?actionLeft:'查看详情'}}</view>
+    <view a:if="{{actionLeft !==''}}" class="am-notice-operation-text am-notice-operation-left" onTap="onActionLeftTap" hover-class="am-notice-operation-text__hover" hover-start-time="0" hover-stay-time="0">{{actionLeft?actionLeft:'查看详情'}}</view>
     <!-- 右边的操作区域 -->
-    <view a:if="{{action !==''}}" class="am-notice-operation-text" onTap="onOperationTap">{{action?action:'查看详情'}}</view>
-    <view a:elif="{{mode=='closable'}}" onTap="onOperationTap">
+    <view a:if="{{action !==''}}" class="am-notice-operation-text" onTap="onOperationTap" hover-class="am-notice-operation-text__hover" hover-start-time="0" hover-stay-time="0">{{action?action:'查看详情'}}</view>
+    <view a:elif="{{mode=='closable'}}" onTap="onOperationTap" hover-class="am-notice-operation-text__hover" hover-start-time="0" hover-stay-time="0">
       <am-icon type="close" size="17"></am-icon>
     </view>
-    <view a:elif="{{mode=='link' && actionLeft ==''}}">
+    <view a:elif="{{mode=='link' && actionLeft ==''}}" hover-class="am-notice-operation-text__hover" hover-start-time="0" hover-stay-time="0">
       <am-icon type="right" size="17"></am-icon>
     </view>
-    <view a:elif="{{mode=='link' && actionLeft !==''}}" onTap="onOperationTap">
+    <view a:elif="{{mode=='link' && actionLeft !==''}}" onTap="onOperationTap" hover-class="am-notice-operation-text__hover" hover-start-time="0" hover-stay-time="0">
       <am-icon type="right" size="17"></am-icon>
     </view>
   </view>
+  <view style="{{transparent?'opacity: 0.3;':''}}" class="am-notice-{{type}}-bg" a:if="{{type === 'active'}}"></view>
 </view>
 <view class="am-notice-capsule-wrap" a:elif="{{show && capsule}}" onTap="onNoticeTap">
   <view class="am-notice am-notice-capsule {{className}} {{type ==='normal'?'':'am-notice-'+type}}">
@@ -45,8 +48,9 @@
         <image a:if="{{index <= 2}}" src="{{item}}" class="am-notice-capsule-img" />
       </block>
     </view>
-    <view class="am-notice-capsule-content am-notice-content-{{$id}}">
+    <view class="am-notice-capsule-content am-notice-content-{{$id}}" hover-class="am-notice-capsule-content__hover" hover-start-time="0" hover-stay-time="0">
       <slot></slot>
     </view>
+    <view style="{{transparent?'opacity: 0.3;':''}}" class="am-notice-{{type}}-bg" a:if="{{type === 'active'}}"></view>
   </view>
 </view>

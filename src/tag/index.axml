@@ -1,0 +1,6 @@
+<view class="am-tag {{bgClass[type]}} {{className}} {{iconType ? iconClass[type]: 'am-tag-text-plain'}}" onTap="onClick">
+  <am-icon a:if="{{iconType}}" type="{{iconType}}" size="12" class="am-tag-icon"/>
+  <view class="am-tag-text ">
+    <slot></slot>
+  </view>  
+</view>

@@ -7,9 +7,16 @@ Component({
     wrap: false,
     // type: 'normal', // 'normal' | 'capsule' | 'primary'
     enforceExtra: false,
+    titlePosition: 'top',
   },
   didMount() {
     this._updateDataSet();
+    const { title = '', upperSubtitle = '', lowerSubtitle = '' } = this.props;
+    const thumbPlaceholder =
+      title.slice(0, 1) + upperSubtitle.slice(0, 1) + lowerSubtitle.slice(0, 1);
+    this.setData({
+      thumbPlaceholder,
+    });
   },
   didUpdate() {
     this._updateDataSet();

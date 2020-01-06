@@ -32,7 +32,8 @@ Component({
     capsule: false,
     // 是否有副标题
     hasSubTitle: false,
-    tabsName: '',
+    elevator: false,
+    floorNumber: [],
   },
   data: {
     windowWidth,
@@ -44,9 +45,12 @@ Component({
     viewScrollLeft: 0,
     tabViewNum: 0,
     hideRightShadow: false,
+    boxWidth: 0,
+    elWidth: 0,
   },
   didMount() {
-    const { tabs, animation, hasSubTitle } = this.props;
+    const { tabs, animation, hasSubTitle, elevator } = this.props;
+
     if (hasSubTitle) {
       this.setData({
         capsule: true,
@@ -57,63 +61,106 @@ Component({
       animation,
       autoplay: true,
     });
+    if (elevator) {
+      this.setData({
+        swipeable: false,
+      });
+      for (let i = 0; i < tabs.length; i++) {
+        my.createSelectorQuery()
+          .select(`#am-tabs-elevator-pane-${i}`)
+          .boundingClientRect()
+          .exec((ret) => {
+            this.props.floorNumber[i] = ((<my.IBoundingClientRect>ret[0]).top);
+            this.setData({
+              floorNumber: this.props.floorNumber,
+            });
+          });
+      }
+      setTimeout(() => {
+        this.$page.data.floorNumber = this.data.floorNumber;
+      }, 100);
+    }
   },
-  didUpdate(prevProps) {
-    const { tabs } = this.props;
+  didUpdate(prevProps, prevData) {
+    const { tabs, elevator } = this.props;
     if (prevProps.tabs.length !== tabs.length) {
       this.setData({
         tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
       });
     }
+    if (elevator) {
+      this.$page.data.floorNumber = this.data.floorNumber;
+      if (this.$page.data.getFloorNumber >= 0) {
+        this.setData({
+          tabViewNum: this.$page.data.getFloorNumber,
+          prevTabViewNum: prevData.tabViewNum,
+        });
+      }
+    }
   },
   methods: {
     handleSwiperChange(e) {
       const { current } = e.detail;
+      const { tabsName } = e.target.dataset;
 
       this.setData({
         tabViewNum: current,
       });
 
       if (this.props.onChange) {
-        this.props.onChange({ index: current });
+        this.props.onChange({ index: current, tabsName });
       }
     },
     handleTabClick(e) {
-      // console.log(e, e.currentTarget.id, e.currentTarget.offsetLeft, e.detail.pageX, e.detail.clientX)
-      const { index, tabsName } = e.target.dataset;
+      const { index, tabsName, floor } = e.target.dataset;
+      let boxWidth = 0;
+      let elWidth = 0;
 
       my.createSelectorQuery()
         .select(`#${e.currentTarget.id}`)
         .boundingClientRect()
         .exec((ret) => {
-          // console.log(<my.IBoundingClientRect>ret[0])
-          this.wrapWidth = (<my.IBoundingClientRect>ret[0]).width;
+          elWidth = (<my.IBoundingClientRect>ret[0]).width;
+          this.setData({
+            elWidth,
+          });
         });
       my.createSelectorQuery()
-        .select('.am-tabs-bar-content')
+        .select(`#am-tabs-bar-${tabsName}-content`)
         .boundingClientRect()
         .exec((ret) => {
-          // console.log(ret[0])
-          this.wrapWidth = (<my.IBoundingClientRect>ret[0]).width;
+          boxWidth = (<my.IBoundingClientRect>ret[0]).width;
+          this.setData({
+            boxWidth,
+          });
+          if (this.data.elWidth > this.data.boxWidth / 2) {
+            setTimeout(() => {
+              this.setData({
+                viewScrollLeft: e.currentTarget.offsetLeft - 40,
+              });
+            }, 300);
+          } else {
+            setTimeout(() => {
+              this.setData({
+                viewScrollLeft: e.currentTarget.offsetLeft - Math.floor(this.data.boxWidth / 2),
+              });
+            }, 300);
+          }
         });
-
-      // if(e.currentTarget.offsetLeft > e.detail.clientX / 2) {
-      //   // console.warn("👉", e.currentTarget.offsetLeft - Math.floor(e.detail.clientX)/2)
-      //   // this.setData({
-      //   //   viewScrollLeft: e.currentTarget.offsetLeft - Math.floor(e.detail.clientX)/2,
-      //   // });
-      // }else{
-      //   this.setData({
-      //     viewScrollLeft: 0,
-      //   });
-      // }
-
-      this.setData({
-        viewScrollLeft: e.currentTarget.offsetLeft,
-      });
-
       if (this.props.onTabClick) {
         this.props.onTabClick({ index, tabsName });
+      }
+      if (this.props.onTabClick && this.props.elevator) {
+        this.setData({
+          tabViewNum: this.data.prevTabViewNum,
+        });
+        setTimeout(() => {
+          this.props.onTabClick({ index, tabsName });
+        }, 300);
+        my.pageScrollTo({
+          scrollTop: parseInt(floor),
+          duration: 300,
+        });
       }
     },
     handlePlusClick() {
@@ -122,7 +169,6 @@ Component({
       }
     },
     showLeftShadow(e) {
-      // console.log("🔥", e.detail.scrollLeft)
       if (e.detail.scrollLeft > 0) {
         this.setData({
           showLeftShadow: true,

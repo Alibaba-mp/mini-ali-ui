@@ -2,8 +2,8 @@
     <view class="terms-header">
         <block a:if="{{related}}">
             <view class="icon-item {{cls}}" onTap="onChange" data-id="{{status}}">
-                <am-icon class="unselected" type="circle"/>
-                <am-icon class="selected" type="check_"/>
+                <am-icon class="unselected" type="radio"/>
+                <am-icon class="selected" type="radio_sel"/>
             </view>
             <slot name="header"/>
         </block>

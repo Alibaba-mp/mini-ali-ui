@@ -1,16 +1,35 @@
+@import (reference) "../../style/themes/default.less";
+
 .am-popover-item {
-  min-width: 80px;
+  // min-width: 80px;
   max-width: 170px;
-  height: 39px;
-  margin: 0 10px;
-  line-height: 39px;
-  font-size: 14px;
+  padding: @h-spacing-large;
+  padding: var(--am-popover-item-padding, @h-spacing-large);
+  padding-right: @size-9;
+  padding-right: var(--am-popover-item-padding-right, @size-9);
+  font-size: @font-size-subtitle;
+  font-size: var(--am-popover-item-font-size, @font-size-subtitle);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #333;
-  text-align: center;
+  color: @color-text-title;
+  color: var(--am-popover-item-font-color, @color-text-title);
+  display: flex;
+  align-items: center;
+  // text-align: center;
+  &-icon-holder {
+    height: 22px;
+    width: 22px;
+  }
+  &-ver-center {
+    display: flex;
+    align-items: center;
+  }
+  &-slot-holder {
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-popover-item-icon-text-space, @h-spacing-large);
+  }
 }
 .am-popover-item:not(:last-child) {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e5e5e5;
 }

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "auto-sizer": "../auto-size-img/index"
+  }
+}
