@@ -2,5 +2,13 @@
   <view class="am-page-result-pic page-{{type}}" />
   <view class="am-page-result-title" a:if="{{!local && title}}">{{title}}</view>
   <view class="am-page-result-brief" a:if="{{brief}}">{{brief}}</view>
-  <slot></slot>
+  <slot>
+    <view a:if="{{footer}}" class="am-page-result-button">
+      <block a:for="{{footer.slice(0,2)}}" a:for-item="footerProps" a:for-index="footerIdx">
+        <button shape="capsule" type="ghost" capsuleMinWidth capsuleSize="{{local ? 'small' : 'medium'}}" disabled="{{footerProps.disabled}}" class="{{ footerIdx ===  1 ? 'am-page-result-button-right' : ''}}" onTap="{{footerIdx === 0 ? 'onLeftButton' : 'onRightButton'}}" >
+          {{footerProps.text}}
+        </button>
+      </block>
+    </view>
+  </slot>
 </view>

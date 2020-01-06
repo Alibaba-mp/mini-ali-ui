@@ -76,6 +76,11 @@ Page({
         nameZN: 'VTabs',
         path: '/pages/vtabs/index',
       },
+      {
+        name: 'Tabs elevator',
+        nameZN: 'Tabs 电梯组件',
+        path: '/pages/tabs/elevator/elevator',
+      },
       // {
       //   name: 'Stepper',
       //   nameZN: 'Stepper',
@@ -141,11 +146,11 @@ Page({
       //   nameZN: '小提示',
       //   path: '/pages/tips/index',
       // },
-      // {
-      //   name: 'PageResult',
-      //   nameZN: '结果页',
-      //   path: '/pages/page-result/index',
-      // },
+      {
+        name: 'PageResult',
+        nameZN: '结果页',
+        path: '/pages/page-result/index',
+      },
       // {
       //   name: 'PopUp',
       //   nameZN: '弹出菜单',
@@ -195,6 +200,11 @@ Page({
         name: 'Avatar',
         nameZN: '头像',
         path: '/pages/avatar/index',
+      },
+      {
+        name: 'Loading',
+        nameZN: 'loading 加载',
+        path: '/pages/loading/loading',
       },
     ],
   },

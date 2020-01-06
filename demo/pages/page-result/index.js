@@ -1,4 +1,3 @@
-
 Page({
   data: {
     components: [
@@ -51,6 +50,26 @@ Page({
         name: 'local-empty',
         nameZN: '局部空状态',
         path: './local-empty/index',
+      },
+      {
+        name: 'payment',
+        nameZN: '付款失败',
+        path: './payment/index',
+      },
+      {
+        name: 'local-payment',
+        nameZN: '局部付款失败',
+        path: './local-payment/index',
+      },
+      {
+        name: 'redpacket',
+        nameZN: '红包领空',
+        path: './redpacket/index',
+      },
+      {
+        name: 'local-redpacket',
+        nameZN: '局部红包领空',
+        path: './local-redpacket/index',
       },
     ],
   },

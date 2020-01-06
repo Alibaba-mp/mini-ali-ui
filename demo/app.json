@@ -50,6 +50,10 @@
     "pages/page-result/local-logoff/index",
     "pages/page-result/empty/index",
     "pages/page-result/local-empty/index",
+    "pages/page-result/payment/index",
+    "pages/page-result/local-payment/index",
+    "pages/page-result/redpacket/index",
+    "pages/page-result/local-redpacket/index",
     "pages/popup/index",
     "pages/message/index",
     "pages/message/success/index",
@@ -64,7 +68,9 @@
     "pages/alphabet/index",
     "pages/mask/mask",
     "pages/guide/guide",
-    "pages/avatar/index"
+    "pages/avatar/index",
+    "pages/tabs/elevator/elevator",
+    "pages/loading/loading"
   ],
   "window": {
     "enableWK": "YES",

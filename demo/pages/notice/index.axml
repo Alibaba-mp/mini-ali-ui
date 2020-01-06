@@ -9,7 +9,8 @@
     action="{{actionText}}"
     onClick="actionClick"
     actionLeft="{{actionLeftText}}"
-    onClickLeft="linkActionClick">
+    onClickLeft="linkActionClick"
+    transparent="{{transparentValue}}">
     无限循环滚动的通告栏展示情况。文字不够继续添加文字凑数。
   </notice>
 </view>
@@ -23,7 +24,8 @@
     action="{{actionText}}"
     onClick="actionClick"
     actionLeft="{{actionLeftText}}"
-    onClickLeft="linkActionClick">
+    onClickLeft="linkActionClick"
+    transparent="{{transparentValue}}">
     滚动一次的通告栏展示情况。文字不够继续添加文字凑数。无 icon
   </notice>
 </view>
@@ -35,7 +37,8 @@
     action="{{actionText}}"
     onClick="actionClick"
     actionLeft="{{actionLeftText}}"
-    onClickLeft="linkActionClick">
+    onClickLeft="linkActionClick"
+    transparent="{{transparentValue}}">
     不滚动的通告栏展示情况。
   </notice>
 </view>
@@ -49,13 +52,22 @@
     actionLeft="{{actionLeftText}}"
     onClickLeft="linkActionClick"
     capsule="{{true}}"
-    capsuleItem="{{capsuleItem}}">{{capsuleItem.length > 0? capsuleItem.length + ' 个优惠信息推荐':'暂无优惠信息推荐'}}
+    capsuleItem="{{capsuleItem}}"
+    transparent="{{transparentValue}}">{{capsuleItem.length > 0? capsuleItem.length + ' 个优惠信息推荐':'暂无优惠信息推荐'}}
   </notice>
 </view>
 
 <view class="demo-title">type: </view>
 <radio-group class="radio-group" onChange="typeChange" name="type">
   <label class="radio" a:for="{{type}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
+
+<view class="demo-title" a:if="{{noticeType === 'active'}}">transparent: </view>
+<radio-group class="radio-group" onChange="transparentChange" name="transparent" a:if="{{noticeType === 'active'}}">
+  <label class="radio" a:for="{{transparent}}" key="label-{{index}}">
     <radio value="{{item.name}}" checked="{{item.checked}}" />
     <text class="radio-text">{{item.value}}</text>
   </label>
