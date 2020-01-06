@@ -1,0 +1,115 @@
+@import (reference) '../style/themes/default.less';
+
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+.am-coupon {
+  position: relative;
+  padding-top: 24%;
+  margin: 6px 10px;
+  background: transparent;
+  &-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border-radius: @corner-radius-lg;
+    border-radius: var(--am-coupon-border-radius, @corner-radius-lg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+  &-thumb {
+    width: 18%;
+    background: @color-fill-grey-inverse;
+    background: var(--am-coupon-background-color, @color-fill-grey-inverse);
+    border-top-left-radius: @corner-radius-lg;
+    border-top-left-radius: var(--am-coupon-border-radius, @corner-radius-lg);
+    border-bottom-left-radius: @corner-radius-lg;
+    border-bottom-left-radius: var(--am-coupon-border-radius, @corner-radius-lg);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &-image {
+      width: 42px;
+      height: 42px;
+      border-radius: @corner-radius-circle;
+      border-radius: var(--am-coupon-thumb-border-radius, @corner-radius-circle);
+      background: grey;
+      margin-left: 6px;
+    }
+  }
+  &-divider {
+    width: 12.5px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    &-upper-hole {
+      background: transparent;
+      height: 12.5px;
+      margin-top: -8px;
+      border-radius: 50vh;
+      box-shadow: 0 17px 0 10px @color-fill-grey-inverse;
+      box-shadow: 0 17px 0 10px var(--am-coupon-background-color, @color-fill-grey-inverse);
+    }
+    &-middle-blank {
+      background: @color-fill-grey-inverse;
+      background: var(--am-coupon-background-color, @color-fill-grey-inverse);
+      flex-grow: 1;
+      z-index: 1;
+      display: flex;
+      justify-content: space-around;
+    }
+    &-dashed-line {
+      border-left: 1px dashed #eee;
+      // border-right: 1px dashed @color-fill-grey-base;
+      height: 100%;
+      width: 0;
+    }
+    &-lower-hole {
+      background: transparent;
+      height: 12.5px;
+      margin-bottom: -8px;
+      border-radius: 50vh;
+      box-shadow: 0 -17px 0 10px @color-fill-grey-inverse;
+      box-shadow: 0 -17px 0 10px var(--am-coupon-background-color, @color-fill-grey-inverse);
+    }
+  }
+  &-content {
+    flex: 1;
+    background: @color-fill-grey-inverse;
+    border-top-right-radius: @corner-radius-lg;
+    border-bottom-right-radius: @corner-radius-lg;
+    display: flex;
+    padding: @v-spacing-large @h-spacing-large;
+    padding: var(--am-coupon-content-spacing, @v-spacing-large) var(--am-coupon-content-spacing, @h-spacing-large);
+    &-text {
+      flex-grow: 1;
+      justify-content: space-around;
+      align-self: center;
+      margin-left: -6px;
+      &-title {
+        font-size: @font-size-title;
+        font-size: var(--am-coupon-title-size, @font-size-title);
+        color: @color-text-title;
+        color: var(--am-coupon-title-color, @color-text-title);
+        font-family: PingFangSC-Medium;
+      }
+      &-subtitle {
+        margin-top: 4px;
+        font-size: @font-size-content;
+        font-size: var(--am-coupon-subtitle-size, @font-size-content);
+        color: @color-text-subtitle;
+        color: var(--am-coupon-subtitle-color, @color-text-subtitle);
+        font-family: PingFangSC-Medium;
+      }
+    }
+    &-action {
+      display: flex;
+      align-items: center;
+      &-slot {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import "alipay-style/style/theme/default";
+@import 'alipay-style/style/theme/default';
 
 :root {
   // 上述是全局变量，对于组件变量需要按照以下格式写注释
@@ -295,10 +295,18 @@
   --am-container-padding-item: var(--am-v-spacing-standard);
 
   /* list-item */
-  /* color | 列表条目字体颜色 */
+  /* color | 内容标题字色 */
   --am-list-item-content-color: var(--am-color-text-title);
-  /* color | 列表条目字体颜色 */
-  --am-list-item-content-font-size: var(--am-font-size-list);
+  /* color | 内容副标题字色 */
+  --am-list-item-content-subtitle-color: var(--am-color-text-subtitle);
+  /* font-size | 内容标题字号 */
+  --am-list-item-content-title-size: var(--am-font-size-list);
+  /* font-size | 内容副标题字号 */
+  --am-list-item-subtitle-size: var(--am-font-size-subtitle);
+  /* font-size | 内容副标题字号 */
+  --am-list-item-content-subtitle-size-small: var(--am-font-size-content);
+  /* spacing | 内容垂直内间距 */
+  --am-list-item-content-padding: var(--am-v-spacing-large);
   /* color | 列表条目背景色 */
   --am-list-item-background: var(--am-color-fill-grey-inverse);
   /* line-height | 列表条目行高 */
@@ -315,6 +323,16 @@
   --am-list-item-extra-color: var(--am-color-text-subtitle);
   /* spacing | 箭头左外间距 */
   --am-list-item-arrow-margin: var(--am-h-spacing-large);
+
+  /* list-secondary */
+  /* font-size | 标题字号 */
+  --am-list-secondary-title-size: var(--am-font-size-list);
+  /* font-size | 副标题字号 */
+  --am-list-secondary-subtitle-size: var(--am-font-size-subtitle);
+  /* color | 标题字色 */
+  --am-list-secondary-title-color: var(--am-color-text-title);
+  /* color | 副标题字色 */
+  --am-list-secondary-subtitle-color: var(--am-color-text-subtitle);
 
   /* list-switch */
   /* color | 列表开关条目字体颜色 */
@@ -425,6 +443,7 @@
   --am-alphabet-bubble-background: var(--am-color-fill-grey-base);
   /* font-size | 提示气泡字体大小 */
   --am-alphabet-bubble-font-size: var(--am-font-size-stress);
+
   /* button */
   /* size | 按钮内间距 */
   --am-button-padding: var(--am-size-3);
@@ -558,6 +577,146 @@
   --am-modal-footer-fontSize: var(--am-font-size-title);
   /* color | footer字体颜色 */
   --am-modal-footer-color: var(--am-color-text-primary);
+
+  /* steps */
+  /* color | 主体背景色 */
+  --am-steps-bg-color: var(--am-color-fill-grey-inverse);
+  /* color | 主体色 */
+  --am-steps-color: var(--am-color-fill-primary);
+  /* color | 主体底色 */
+  --am-steps-bottom-color: var(--am-color-fill-grey-base);
+  /* border-radius | 步骤点圆角 */
+  --am-steps-icon-border-radius: var(--am-corner-radius-circle);
+  /* color | 纵向步骤条当前步骤标题字色 */
+  --am-steps-vertical-title-active-color: var(--am-color-text-primary);
+  /* color | 步骤条标题字色 */
+  --am-steps-title-color: var(--am-color-text-title);
+  /* color | 步骤条描述字色 */
+  --am-steps-description-color: var(--am-color-text-subtitle);
+  /* color | 纵向步骤条警告色 */
+  --am-steps-vertical-warning-color: var(--am-color-text-warning);
+  /* font-size | 横向步骤条标题字号 */
+  --am-steps-horizontal-title-size: var(--am-font-size-subcontent);
+  /* font-size | 横向步骤条描述字号 */
+  --am-steps-horizontal-description-size: var(--am-font-size-subcontent);
+  /* font-size | 纵向步骤条标题字号 */
+  --am-steps-vertical-title-size: var(--am-font-size-list);
+  /* font-size | 纵向步骤条描述字号 */
+  --am-steps-vertical-description-size: var(--am-font-size-subtitle);
+
+  /* tips-plain */
+  /* border-radius | 主体圆角 */
+  --am-tips-plain-border-radius: var(--am-corner-radius-lg);
+  /* color | 主体字色 */
+  --am-tips-plain-text-color: var(--am-color-text-base);
+  /* color | 背景色 */
+  --am-tips-plain-bg-color: var(--am-color-fill-grey-dark);
+  /* spacing | 框内左右间距 */
+  --am-tips-plain-padding: var(--am-h-spacing-large);
+  /* font-size | 字体大小 */
+  --am-tips-plain-font-size: var(--am-font-size-subtitle);
+  /* line-height | 行高 */
+  --am-tips-plain-line-height: var(--am-line-height-paragraph);
+
+  /* tips-dialog */
+  /* border-radius | 主体圆角 */
+  --am-tips-dialog-border-radius: var(--am-corner-radius-lg);
+  /* color | 主体字色 */
+  --am-tips-dialog-text-color: var(--am-color-text-base);
+  /* line-height | 主体字行高 */
+  --am-tips-dialog-line-height: var(--am-line-height-paragraph);
+  /* color | 主体背景色 */
+  --am-tips-dialog-bg-color: var(--am-color-fill-grey-dark);
+  /* color | 关闭按钮颜色 */
+  --am-tips-dialog-close-btn-color: var(--am-color-fill-grey-base);
+  /* color | icon底色 */
+  --am-tips-dialog-icon-bg-color: var(--am-color-fill-grey-inverse);
+  /* spacing | 框内左右间距 */
+  --am-tips-dialog-padding: var(--am-h-spacing-large);
+  /* spacing | 框内左右间距 */
+  --am-tips-dialog-close-btn-spacing: var(--am-h-spacing-large);
+  /* font-size | 字体大小 */
+  --am-tips-dialog-font-size: var(--am-font-size-subtitle);
+  /* size | 图标大小 */
+  --am-tips-dialog-image-size: var(--am-size-9);
+
+  /* popover */
+  /* border-radius | 圆角 */
+  --am-popover-border-radius: var(--am-corner-radius-md);
+  /* color | 字色 */
+  --am-popover-font-color: var(--am-color-text-title);
+  /* color | 背景色 */
+  --am-popover-bg-color: var(--am-color-fill-grey-inverse);
+  /* color | 蒙层色 */
+  --am-popover-mask-color: var(--am-color-fill-marketing-mask);
+  /* color | 箭头颜色 */
+  --am-popover-arrow-color: var(--am-color-fill-grey-inverse);
+  /* font-size | 字号 */
+  --am-popover-font-size: var(--am-font-size-subtitle);
+
+  /* popover-item */
+  /* color | 字色 */
+  --am-popover-item-font-color: var(--am-color-text-title);
+  /* font-size | 字号 */
+  --am-popover-item-font-size: var(--am-font-size-subtitle);
+  /* spacing | 间距 */
+  --am-popover-item-padding: var(--am-h-spacing-large);
+  /* size | 主体右侧内间距 */
+  --am-popover-item-padding-right: var(--am-size-9);
+  /* spacing | 图标文字间距 */
+  --am-popover-item-icon-text-space: var(--am-h-spacing-large);
+
+  /* badge */
+  /* color | 背景色 */
+  --am-badge-bg-color: var(--am-color-fill-warning);
+  /* color | 字体色 */
+  --am-badge-font-color: var(--am-color-text-base);
+  /* border-radius | 字体色 */
+  --am-badge-border-radius: var(--am-corner-radius-circle);
+  /* line-height | 行高 */
+  --am-badge-line-height: var(--am-line-height-base);
+
+  /* card */
+  /* border-radius | 卡片圆角 */
+  --am-card-border-radius: var(--am-corner-radius-lg);
+  /* border-radius | 图标圆角 */
+  --am-card-thumb-border-radius: var(--am-corner-radius-circle);
+  /* color | 卡片默认填充色 */
+  --am-card-bg-color: var(--am-color-fill-grey-inverse);
+  /* spacing | 卡片内间距 */
+  --am-card-padding: var(--am-h-spacing-large);
+  /* border-width | 图标边框宽度 */
+  --am-card-thumb-border-width: var(--am-border-width-thick);
+  /* color | 图标边框色 */
+  --am-card-thumb-border-color: var(--am-color-fill-grey-inverse);
+  /* color | footer颜色 */
+  --am-card-footer-color: var(--am-color-fill-grey-inverse);
+  /* color | 标题字色 */
+  --am-card-title-color: var(--am-color-text-base);
+  /* color | 副标题字色 */
+  --am-card-subtitle-color: var(--am-color-text-base);
+  /* color | action字色 */
+  --am-card-action-color: var(--am-color-text-title);
+  /* size | 标题字号 */
+  --am-card-title-size: var(--am-font-size-title);
+
+  /* coupon */
+  /* border-radius | 券圆角 */
+  --am-coupon-border-radius: var(--am-corner-radius-lg);
+  /* color | 券背景色 */
+  --am-coupon-background-color: var(--am-color-fill-grey-inverse);
+  /* border-radius | 缩略图圆角 */
+  --am-coupon-thumb-border-radius: var(--am-corner-radius-circle);
+  /* spacing | 内容区内间距 */
+  --am-coupon-content-spacing: var(--am-corner-radius-circle);
+  /* font-size | 内容标题字号 */
+  --am-coupon-title-size: var(--am-font-size-title);
+  /* color | 内容标题字色 */
+  --am-coupon-title-color: var(--am-color-text-title);
+  /* font-size | 内容副标题字号 */
+  --am-coupon-subtitle-size: var(--am-font-size-content);
+  /* color | 内容标题字色 */
+  --am-coupon-subtitle-color: var(--am-color-text-subtitle);
 
   /* message */
   /* color | 背景色 */

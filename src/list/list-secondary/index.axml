@@ -1,0 +1,10 @@
+<view class="am-list-secondary">
+  <auto-sizer a:if="{{thumb}}" 
+    placeholder="{{thumbPlaceholder}}" 
+    src="{{thumb}}" 
+    size="{{thumbSize}}" />
+  <view class="am-list-secondary-text">
+    <view class="am-list-secondary-title" a:if="{{title}}">{{title}}</view>
+    <view class="am-list-secondary-subtitle" a:if="{{subtitle}}">{{subtitle}}</view>
+  </view>
+</view>

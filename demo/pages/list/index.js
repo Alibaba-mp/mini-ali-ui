@@ -272,7 +272,7 @@ Page({
       // check: false,
     },
     checkValues: {},
-    thumbUrl: 'https://tfsimg.alipay.com/images/partner/T12rhxXkxcXXXXXXXX',
+    thumb: 'https://gw-office.alipayobjects.com/basement_prod/47775269-5c8e-40b8-bcda-43380022f311.jpg',
   },
   onLoad() {
     const charCode = 65;

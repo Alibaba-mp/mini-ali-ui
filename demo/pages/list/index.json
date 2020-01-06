@@ -6,6 +6,9 @@
     "list-switch": "../../es/list/list-switch/index",
     "list-check": "../../es/list/list-check/index",
     "list-capsule": "../../es/list/list-capsule/index",
-    "alphabet": "../../es/list/alphabet/index"
+    "alphabet": "../../es/list/alphabet/index",
+    "list-secondary": "../../es/list/list-secondary/index",
+    "tag": "../../es/tag/index",
+    "am-icon": "../../es/am-icon/index"
   }
 }

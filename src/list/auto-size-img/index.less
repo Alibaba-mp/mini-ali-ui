@@ -1,0 +1,31 @@
+@import (reference) '../../style/themes/default.less';
+
+.am-auto-sizer {
+  &-container {
+    position: relative;
+    font-size: @font-size-list;
+    font-size: var(--am-list-item-content-title-size, @font-size-list);
+    margin-right: @h-spacing-large;
+    margin-right: var(--am-list-item-padding, @h-spacing-large);
+    color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    // padding-bottom: 100%;
+  }
+  &-container::before {
+    float: left;
+    content: '';
+    padding-bottom: 100%;
+  }
+  &-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: grey;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

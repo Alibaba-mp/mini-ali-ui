@@ -1,0 +1,10 @@
+.am-title {
+  padding-top: 24rpx;
+}
+.container {
+  padding: 24rpx;
+}
+.changeColor {
+  font-size: 30px;
+  color: #f32600;
+}
