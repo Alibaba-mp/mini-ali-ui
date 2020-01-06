@@ -1,11 +1,9 @@
 <view>
   <list>
     <block a:for="{{items}}">
-      <view 
-        class="list-like"
+      <view class="list-like" 
         index="{{index}}" 
-        key="items-{{index}}" 
-        last="{{index === (items.length - 1)}}">
+        key="items-{{index}}">
         <view>
           <badge a:if="{{item.isWrap}}" 
             text="{{item.text}}" 
@@ -15,7 +13,7 @@
           </badge>
           <text style="margin-left: {{ item.isWrap ? '12px' : '0' }}">{{item.intro}}</text>
         </view>
-        <view slot="extra">
+        <view >
           <badge a:if="{{!item.isWrap}}" 
             text="{{item.text}}" 
             dot="{{item.dot}}" 
