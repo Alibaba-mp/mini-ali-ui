@@ -23,7 +23,10 @@ Component({
         this.props.hoverClass = 'am-button-active-text';
       }
     }
-    this.setData({ baseClass: this.wrapBaseCls(this.props) });
+    this.setData({
+      baseClass: this.wrapBaseCls(this.props),
+      hoverClass: this.props.hoverClass,
+    });
   },
   deriveDataFromProps(nextProps) {
     if (this.propsChange(this.props, nextProps)) {
@@ -38,7 +41,10 @@ Component({
           this.props.hoverClass = 'am-button-active-text';
         }
       }
-      this.setData({ baseClass: this.wrapBaseCls(this.props) });
+      this.setData({
+        baseClass: this.wrapBaseCls(this.props),
+        hoverClass: this.props.hoverClass,
+      });
     }
   },
   didUpdate(prevProps) {
