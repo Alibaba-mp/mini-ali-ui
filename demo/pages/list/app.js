@@ -4,7 +4,7 @@ Page({
       {
         name: 'List',
         nameZN: '列表',
-        path: '/pages/list/index',
+        path: '/pages/new-list/index',
       },
       {
         name: 'AmountInput',
