@@ -6,12 +6,14 @@
   justify-content: flex-end;
   position: relative;
   height: 100%;
+  max-width: 100%;
   &-text {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-end;
     height: 100%;
+    max-width: 100%;
   }
   &-title {
     font-size: @font-size-list;
@@ -21,6 +23,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    max-width: 100%;
   }
   &-subtitle {
     font-size: @font-size-subtitle;
@@ -30,5 +33,6 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    max-width: 100%;
   }
 }
