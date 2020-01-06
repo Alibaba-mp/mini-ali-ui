@@ -76,6 +76,9 @@ Component({
             });
           });
       }
+      setTimeout(() => {
+        this.$page.data.floorNumber = this.data.floorNumber;
+      }, 100);
     }
   },
   didUpdate(prevProps, prevData) {
@@ -87,7 +90,7 @@ Component({
     }
     if (elevator) {
       this.$page.data.floorNumber = this.data.floorNumber;
-      if (this.$page.data.getFloorNumber) {
+      if (this.$page.data.getFloorNumber >= 0) {
         this.setData({
           tabViewNum: this.$page.data.getFloorNumber,
           prevTabViewNum: prevData.tabViewNum,
