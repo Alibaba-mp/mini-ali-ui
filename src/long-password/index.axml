@@ -24,7 +24,7 @@
     </view>
     <view class="am-long-password-eye" 
       onTap="onSwitchVisible">
-      <am-icon type="{{!visible ? 'eye-close' : 'eye-open'}}" 
+      <am-icon type="{{!visible ? 'eye-close' : 'eye'}}" 
         size="20" 
         color="#1677ff"></am-icon>
     </view>

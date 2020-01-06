@@ -166,11 +166,11 @@ Page({
         nameZN: ' 标签',
         path: '/pages/tag/index',
       },
-      {
-        name: 'FaceDetection',
-        nameZN: '（旧组件）人脸检测',
-        path: '/pages/face-detection/index',
-      },
+      // {
+      //   name: 'FaceDetection',
+      //   nameZN: '（旧组件）人脸检测',
+      //   path: '/pages/face-detection/index',
+      // },
       {
         name: 'InputItem',
         nameZN: '（旧组件）列表输入项',
