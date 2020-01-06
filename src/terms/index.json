@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "button": "../button/index",
+        "am-checkbox": "../am-checkbox/index",
+        "am-icon": "../am-icon/index"
+    }
+}

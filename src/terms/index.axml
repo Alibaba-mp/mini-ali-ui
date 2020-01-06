@@ -1,0 +1,23 @@
+<view class="terms terms-{{fixed ? 'fixed' : 'normal'}}">
+    <view class="terms-header">
+        <block a:if="{{related}}">
+            <view class="icon-item {{cls}}" onTap="onChange" data-id="{{status}}">
+                <am-icon class="unselected" type="circle"/>
+                <am-icon class="selected" type="check_"/>
+            </view>
+            <slot name="header"/>
+        </block>
+        <block a:else>
+            <slot name="header"/>
+        </block>
+    </view>
+	<view class="terms-body">
+        <button type="{{agreeBtnType}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" dataName="{{agreeBtnData}}" subtitle="{{agreeBtnSubtitle}}" disabled="{{showBtn}}">{{agreeBtnTitle}}</button>
+    <block a:if="{{cancelBtnTitle}}">
+        <button type="{{cancelBtnType}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}"  onTap="onTap" dataName="{{cancelBtnData}}" subtitle="{{cancelBtnSubtitle}}">{{cancelBtnTitle}}</button>
+    </block>
+    </view>
+    <view class="terms-footer" a:if="{{hasDesc}}">
+        <slot name="desc"/>
+    </view>   
+</view>

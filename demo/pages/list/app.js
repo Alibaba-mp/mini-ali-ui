@@ -76,6 +76,11 @@ Page({
         nameZN: 'VTabs',
         path: '/pages/vtabs/index',
       },
+      {
+        name: 'Terms',
+        nameZN: 'Terms',
+        path: '/pages/terms/index',
+      },
       // {
       //   name: 'Stepper',
       //   nameZN: 'Stepper',

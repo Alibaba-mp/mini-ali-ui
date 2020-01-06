@@ -1,0 +1,77 @@
+@import (reference) "../style/themes/default.less";
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  padding: var(--terms-padding, @size-2);
+  width: 100%;
+  box-sizing: border-box;
+  .terms-header {
+    height: var(--terms-content-font-size, @size-4);
+    display: flex;
+    color: var(--terms-content-color, @color-fill-grey-dark);
+    margin-bottom: var(--terms-content-padding, @size-2);
+    .icon-item {
+      width: var(--terms-content-font-size, @size-4);
+      height: var(--terms-content-font-size, @size-4);
+      display: block;
+      .selected.am-icon {
+        color: var(--terms-icon-selected-color, @color-fill-primary);
+      }
+      .am-icon {
+        font-size: var(--terms-content-font-size, @size-4);
+        line-height: var(--terms-content-line-height, @size-4);
+        margin-right: var(--terms-content-font-size, @size-3);
+        color: var(--terms-icon-color, @color-fill-grey-dark);
+      }
+      .unselected {
+        display: block;
+      }
+      .selected {
+        display: none;
+      }
+    }
+    .switch {
+      .unselected {
+        display: none;
+      }
+      .selected {
+        display: block;
+      }
+    }
+    .text {
+      font-size: var(--terms-content-font-size, @size-4);
+      line-height: var(--terms-content-line-height, @size-4);
+      margin-left: var(--terms-content-font-size, @size-1);
+      flex: 1;
+      .link {
+        color: var(--terms-link-color, @color-fill-primary);
+        display: inline;
+      }
+    }
+  }
+  .terms-body {
+    display: flex;
+    flex-direction: column;
+    .am-button {
+      margin-bottom: var(--terms-button-margin, @size-2);
+    }
+  }
+  .terms-footer {
+    color: var(--terms-desc-color, @color-fill-grey-dark);
+    font-size: var(--terms-desc-font-size, @size-3);
+    line-height: var(--terms-desc-line-height, @size-4);
+    .text {
+      .link {
+        color: var(--terms-link-color, @color-fill-primary);
+        display: inline;
+      }
+    }
+  }
+}
+
+.terms-fixed {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--terms-background-color, #fff);
+}

@@ -3,6 +3,7 @@ Page({
     title: '按钮操作 Normal',
     subtitle: '',
     disabled: false,
+    dataName: '1',
     type: '',
     shape: 'default',
     capsuleSize: 'medium',
@@ -27,7 +28,6 @@ Page({
     ],
   },
   onLoad() {
-
   },
   typeChange(e) {
     this.setData({
@@ -63,5 +63,8 @@ Page({
     this.setData({
       capsuleMinWidth: e.detail.value,
     });
+  },
+  onTap() {
+    // e.target.dataset.name
   },
 });
