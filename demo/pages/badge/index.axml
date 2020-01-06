@@ -1,7 +1,8 @@
 <view>
   <list>
     <block a:for="{{items}}">
-      <list-item arrow="{{true}}" 
+      <view 
+        class="list-like"
         index="{{index}}" 
         key="items-{{index}}" 
         last="{{index === (items.length - 1)}}">
@@ -19,10 +20,10 @@
             text="{{item.text}}" 
             dot="{{item.dot}}" 
             overflowCount="{{item.overflowCount}}" 
-            withArrow="{{item.withArrow}}"
-            direction="{{item.direction}}"/>
-</view>
-</list-item>
-</block>
-</list>
+            withArrow="{{item.withArrow}}" 
+            direction="{{item.direction}}" />
+        </view>
+      </view>
+    </block>
+  </list>
 </view>
