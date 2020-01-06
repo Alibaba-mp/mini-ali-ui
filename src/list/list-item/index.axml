@@ -18,8 +18,10 @@
 				</view>
 				<slot name="afterTitle" />
 			</view>
-			<view a:if="{{upperSubtitle || $slots.afterUpperSubtitle}}" class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
-				<view a:if="{{upperSubtitle}}" class="am-list-text-wrapper">{{upperSubtitle}}</view>
+			<view a:if="{{upperSubtitle || $slots.afterUpperSubtitle}}" 
+				class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
+				<view a:if="{{upperSubtitle}}" 
+					class="am-list-text-wrapper">{{upperSubtitle}}</view>
 				<slot name="afterUpperSubtitle" />
 			</view>
 			<view a:if="{{titlePosition === 'middle'}}" 
@@ -29,8 +31,10 @@
 				</view>
 				<slot name="afterTitle" />
 			</view>
-			<view a:if="{{lowerSubtitle || $slots.afterLowerSubtitle}}" class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
-				<view a:if="{{lowerSubtitle}}" class="am-list-text-wrapper">{{lowerSubtitle}}</view>
+			<view a:if="{{lowerSubtitle || $slots.afterLowerSubtitle}}" 
+				class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
+				<view a:if="{{lowerSubtitle}}" 
+					class="am-list-text-wrapper">{{lowerSubtitle}}</view>
 				<slot name="afterLowerSubtitle" />
 			</view>
 			<view a:if="{{titlePosition === 'bottom'}}" 
@@ -41,10 +45,11 @@
 				<slot name="afterTitle" />
 			</view>
 		</view>
-		<view a:if={{$slots.extra}} class="am-list-extra">
+		<view a:if="{{$slots.extra}}" 
+			class="am-list-extra">
 			<slot name="extra" />
 		</view>
-		<view a:if={{arrow}} class="am-list-arrow">
+		<view a:if="{{arrow}}" class="am-list-arrow">
 			<am-icon type="right" 
 				class="am-list-arrow-icon" 
 				size="13" 
