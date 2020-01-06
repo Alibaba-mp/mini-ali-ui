@@ -95,14 +95,6 @@ Component({
       }
     }
   },
-  didUnmount() {
-    this.setData({
-      tabViewNum: 0,
-      prevTabViewNum: 0,
-      floorNumber: [],
-      tabWidth: 0,
-    });
-  },
   methods: {
     handleSwiperChange(e) {
       const { current } = e.detail;
