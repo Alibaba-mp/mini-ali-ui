@@ -1,5 +1,5 @@
 <view>
-  <terms onSelect="onSelect" related="{{c1.related}}" hasDesc="{{c1.hasDesc}}" agreeBtnTitle="{{c1.agreeBtnTitle}}" cancelBtnTitle="{{c1.cancelBtnTitle}}">
+  <terms onSelect="onSelect" related="{{c1.related}}" hasDesc="{{c1.hasDesc}}" agreeBtn="{{c1.agreeBtn}}" cancelBtn="{{c1.cancelBtn}}">
     <view class="text" slot="header">
       <text>
         同意
@@ -10,7 +10,7 @@
   <text class="title">双按钮</text>
 </view>
 <view>
-  <terms onSelect="onSelect" fixed="{{c2.fixed}}" related="{{c2.related}}" hasDesc="{{c2.hasDesc}}" agreeBtnTitle="{{c2.agreeBtnTitle}}" cancelBtnType="{{c2.cancelBtnType}}" cancelBtnTitle="{{c2.cancelBtnTitle}}" shape="{{c2.shape}}" capsuleMinWidth="{{c2.capsuleMinWidth}}" capsuleSize="{{c2.capsuleSize}}">
+  <terms onSelect="onSelect" fixed="{{c2.fixed}}" related="{{c2.related}}" hasDesc="{{c2.hasDesc}}" agreeBtn="{{c2.agreeBtn}}" cancelBtn="{{c1.cancelBtn}}" shape="{{c2.shape}}" capsuleMinWidth="{{c2.capsuleMinWidth}}" capsuleSize="{{c2.capsuleSize}}">
     <view class="text" slot="desc">
       <text>
         查看
@@ -22,7 +22,7 @@
   <text class="title">带辅助描述</text>
 </view>
 <view>
-  <terms fixed="{{c3.fixed}}" related="{{c3.related}}" hasDesc="{{c3.hasDesc}}" agreeBtnTitle="{{c3.agreeBtnTitle}}"  cancelBtnTitle="{{c3.cancelBtnTitle}}" agreeBtnChecked="{{c3.agreeBtnChecked}}">
+  <terms fixed="{{c3.fixed}}" related="{{c3.related}}" hasDesc="{{c3.hasDesc}}" agreeBtn="{{c3.agreeBtn}}" cancelBtn="{{c3.cancelBtn}}">
     <view class="text" slot="header">
       <text>
         同意
@@ -33,7 +33,7 @@
   <text class="title">捆绑协议已选中</text>
 </view>
 <view>
-  <terms fixed="{{c4.fixed}}" related="{{c4.related}}" hasDesc="{{c4.hasDesc}}" agreeBtnTitle="{{c4.agreeBtnTitle}}" cancelBtnType="{{c4.cancelBtnType}}" cancelBtnTitle="{{c4.cancelBtnTitle}}" shape="{{c4.shape}}" capsuleMinWidth="{{c4.capsuleMinWidth}}" capsuleSize="{{c4.capsuleSize}}">
+  <terms fixed="{{c4.fixed}}" related="{{c4.related}}" hasDesc="{{c4.hasDesc}}" agreeBtn="{{c4.agreeBtn}}" cancelBtn="{{c4.cancelBtn}}" shape="{{c4.shape}}" capsuleMinWidth="{{c4.capsuleMinWidth}}" capsuleSize="{{c4.capsuleSize}}">
     <view class="text" slot="header">
       <text>
         同意
@@ -44,7 +44,7 @@
   <text class="title">捆绑协议未选中</text>
 </view>
 <view>
-  <terms fixed="{{c5.fixed}}" related="{{c5.related}}" hasDesc="{{c5.hasDesc}}" agreeBtnTitle="{{c5.agreeBtnTitle}}" cancelBtnType="{{c5.cancelBtnType}}" cancelBtnTitle="{{c5.cancelBtnTitle}}" shape="{{c5.shape}}" capsuleMinWidth="{{c5.capsuleMinWidth}}" capsuleSize="{{c5.capsuleSize}}">
+  <terms fixed="{{c5.fixed}}" related="{{c5.related}}" hasDesc="{{c5.hasDesc}}"  agreeBtn="{{c5.agreeBtn}}" cancelBtn="{{c5.cancelBtn}}" shape="{{c5.shape}}" capsuleMinWidth="{{c5.capsuleMinWidth}}" capsuleSize="{{c5.capsuleSize}}">
     <view class="text" slot="header">
       <text>
         同意
@@ -55,7 +55,7 @@
   <text class="title">无捆绑协议</text>
 </view>
 <view>
-  <terms fixed="{{c6.fixed}}" related="{{c6.related}}" hasDesc="{{c6.hasDesc}}" agreeBtnTitle="{{c6.agreeBtnTitle}}" cancelBtnType="{{c6.cancelBtnType}}" cancelBtnTitle="{{c6.cancelBtnTitle}}" shape="{{c6.shape}}" capsuleMinWidth="{{c6.capsuleMinWidth}}" capsuleSize="{{c6.capsuleSize}}">
+  <terms fixed="{{c6.fixed}}" related="{{c6.related}}" hasDesc="{{c6.hasDesc}}" agreeBtn="{{c6.agreeBtn}}" cancelBtn="{{c6.cancelBtn}}" shape="{{c6.shape}}" capsuleMinWidth="{{c6.capsuleMinWidth}}" capsuleSize="{{c6.capsuleSize}}">
     <view class="text" slot="header">
       <text>
         同意

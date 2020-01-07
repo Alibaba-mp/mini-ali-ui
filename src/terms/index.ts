@@ -3,18 +3,22 @@ Component({
     fixed: false,
     related: true,
     onChange: () => {},
-    agreeBtnTitle: '',
-    cancelBtnTitle: '',
-    agreeBtnSubtitle: '',
-    cancelBtnSubtitle: '',
-    agreeBtnType: 'primary',
-    agreeBtnChecked: false,
-    cancelBtnType: 'default',
+    agreeBtn: {
+      title: '',
+      subtitle: '',
+      type: 'primary',
+      data: 1,
+      checked: false,
+    },
+    cancelBtn: {
+      title: '',
+      subtitle: '',
+      type: 'default',
+      data: 2,
+    },
     capsuleSize: 'large',
     shape: 'default',
     capsuleMinWidth: false,
-    agreeBtnData: '1',
-    cancelBtnData: '2',
     hasDesc: false,
   },
   data: {
@@ -23,8 +27,8 @@ Component({
     status: 0,
   },
   didMount() {
-    const { agreeBtnChecked, related } = this.props;
-    if ((agreeBtnChecked && related) || !related) {
+    const { agreeBtn, related } = this.props;
+    if ((agreeBtn.checked && related) || !related) {
       this.setData({ showBtn: false, cls: 'switch', status: 1 });
     } else {
       this.setData({ showBtn: true, cls: '', status: 0 });

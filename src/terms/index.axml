@@ -12,9 +12,9 @@
         </block>
     </view>
 	<view class="terms-body">
-        <button type="{{agreeBtnType}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" dataName="{{agreeBtnData}}" subtitle="{{agreeBtnSubtitle}}" disabled="{{showBtn}}">{{agreeBtnTitle}}</button>
-    <block a:if="{{cancelBtnTitle}}">
-        <button type="{{cancelBtnType}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}"  onTap="onTap" dataName="{{cancelBtnData}}" subtitle="{{cancelBtnSubtitle}}">{{cancelBtnTitle}}</button>
+        <button type="{{agreeBtn.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" dataName="{{agreeBtn.data}}" subtitle="{{agreeBtn.subtitle}}" disabled="{{showBtn}}">{{agreeBtn.title}}</button>
+    <block a:if="{{cancelBtn.title}}">
+        <button type="{{cancelBtn.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}"  onTap="onTap" dataName="{{cancelBtn.data}}" subtitle="{{cancelBtn.subtitle}}">{{cancelBtn.title}}</button>
     </block>
     </view>
     <view class="terms-footer" a:if="{{hasDesc}}">
