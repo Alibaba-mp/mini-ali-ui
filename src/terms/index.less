@@ -3,26 +3,36 @@
 .terms {
   display: flex;
   flex-direction: column;
-  padding: var(--terms-padding, @size-2);
+  padding: @size-1;
+  padding: var(--am-terms-padding, @size-1);
   width: 100%;
   box-sizing: border-box;
   .terms-header {
-    height: var(--terms-content-font-size, @size-4);
+    height: @icon-size-sm;
+    height: var(--am-terms-content-font-size, @icon-size-sm);
+    line-height: @icon-size-sm;
+    line-height: var(--am-terms-content-line-height, @icon-size-sm);
     display: flex;
-    color: var(--terms-content-color, @color-fill-grey-dark);
-    margin-bottom: var(--terms-content-padding, @size-2);
+    color: @color-text-title;
+    color: var(--am-terms-content-color, @color-text-title);
+    margin-bottom: @v-spacing-large;
+    margin-bottom: var(--am-terms-content-padding, @v-spacing-large);
     .icon-item {
-      width: var(--terms-content-font-size, @size-4);
-      height: var(--terms-content-font-size, @size-4);
+      width: @icon-size-sm;
+      width: var(--am-terms-content-font-size, @icon-size-sm);
+      height: @icon-size-sm;
+      height: var(--am-terms-content-font-size, @icon-size-sm);
       display: block;
+      margin-right: @v-spacing-standard;
+      margin-right: var(--am-terms-content-font-size, @v-spacing-standard);
       .selected.am-icon {
-        color: var(--terms-icon-selected-color, @color-fill-primary);
+        color: var(--am-terms-icon-selected-color, @color-text-primary);
       }
       .am-icon {
-        font-size: var(--terms-content-font-size, @size-4);
-        line-height: var(--terms-content-line-height, @size-4);
-        margin-right: var(--terms-content-font-size, @size-3);
-        color: var(--terms-icon-color, @color-fill-grey-dark);
+        font-size: @icon-size-sm;
+        font-size: var(--am-terms-content-font-size, @icon-size-sm);
+        color: @color-text-title;
+        color: var(--am-terms-icon-color, @color-text-title);
       }
       .unselected {
         display: block;
@@ -40,12 +50,14 @@
       }
     }
     .text {
-      font-size: var(--terms-content-font-size, @size-4);
-      line-height: var(--terms-content-line-height, @size-4);
-      margin-left: var(--terms-content-font-size, @size-1);
+      font-size: @font-size-subtitle;
+      font-size: var(--am-terms-content-font-size, @font-size-subtitle);
+      line-height: @icon-size-sm;
+      line-height: var(--am-terms-content-line-height, @icon-size-sm);
       flex: 1;
       .link {
-        color: var(--terms-link-color, @color-fill-primary);
+        color: @color-text-primary;
+        color: var(--am-terms-link-color, @color-text-primary);
         display: inline;
       }
     }
@@ -54,16 +66,23 @@
     display: flex;
     flex-direction: column;
     .am-button {
-      margin-bottom: var(--terms-button-margin, @size-2);
+      margin-bottom: @v-spacing-standard;
+      margin-bottom: var(--am-terms-button-margin, @v-spacing-standard);
     }
   }
   .terms-footer {
-    color: var(--terms-desc-color, @color-fill-grey-dark);
-    font-size: var(--terms-desc-font-size, @size-3);
-    line-height: var(--terms-desc-line-height, @size-4);
+    color: @color-text-title;
+    color: var(--am-terms-desc-color, @color-text-title);
+    font-size: @font-size-weak;
+    font-size: var(--am-terms-desc-font-size, @font-size-weak);
+    line-height: @line-height-paragraph;
+    line-height: var(--am-terms-desc-line-height, @line-height-paragraph);
+    margin-top: @size-1;
+    margin-top: var(--am-terms-desc-margin, @size-1);
     .text {
       .link {
-        color: var(--terms-link-color, @color-fill-primary);
+        color: @color-text-primary;
+        color: var(--am-terms-link-color, @color-text-primary);
         display: inline;
       }
     }
@@ -73,5 +92,6 @@
 .terms-fixed {
   position: fixed;
   bottom: 0;
-  background-color: var(--terms-background-color, #fff);
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-terms-background-color, @color-fill-grey-inverse);
 }
