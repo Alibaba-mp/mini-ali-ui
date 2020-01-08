@@ -8,6 +8,7 @@ Page({
     shape: 'default',
     capsuleSize: 'medium',
     capsuleMinWidth: false,
+    showLoading: false,
     types: [
       { name: 'default', value: 'default', checked: true },
       { name: 'primary', value: 'primary' },
@@ -66,5 +67,10 @@ Page({
   },
   onTap() {
     // e.target.dataset.name
+  },
+  onLoadingChange(e) {
+    this.setData({
+      showLoading: e.detail.value,
+    });
   },
 });

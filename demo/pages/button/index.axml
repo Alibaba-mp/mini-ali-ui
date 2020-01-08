@@ -1,5 +1,5 @@
 <view class="container">
-  <button onTap="onTest"  dataName="{{dataName}}" type="{{type}}" subtitle="{{subtitle}}" disabled="{{disabled}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}">
+  <button onTap="onTest" showLoading="{{showLoading}}" dataName="{{dataName}}" type="{{type}}" subtitle="{{subtitle}}" disabled="{{disabled}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}">
     {{title}}
   </button>
 
@@ -32,4 +32,6 @@
   <checkbox onChange='onDisableChange'/>
   <view>是否限制胶囊按钮最小宽度</view>
   <checkbox onChange='onMinWidthChange'/>
+  <view>是否现实loading</view>
+  <checkbox onChange='onLoadingChange'/>
 </view>
