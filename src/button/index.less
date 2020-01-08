@@ -16,6 +16,17 @@
   background-color: @color-fill-grey-inverse;
   background-color: var(--am-button-background, @color-fill-grey-inverse);
 
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-loading {
+    margin-right: 12px;
+  }
+
   &&-disabled {
     opacity: @opacity-disabled;
     opacity: var(--am-button-disabled-opacity, @opacity-disabled);

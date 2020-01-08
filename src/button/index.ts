@@ -16,6 +16,7 @@ Component({
     subtitle: '',
     onTap: noop,
     capsuleMinWidth: false,
+    showLoading: false,
   },
   onInit() {
     if (!this.props.hoverClass) {
