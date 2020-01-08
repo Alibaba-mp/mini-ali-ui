@@ -23,6 +23,7 @@
     "pages/vtabs/index",
     "pages/stepper/index",
     "pages/steps/index",
+    "pages/terms/index",
     "pages/popover/index",
     "pages/grid/index",
     "pages/tips/index",

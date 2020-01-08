@@ -11,6 +11,7 @@ Component({
   props: {
     className: '',
     type: '',
+    dataName: '',
     disabled: false,
     subtitle: '',
     onTap: noop,

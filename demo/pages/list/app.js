@@ -57,6 +57,11 @@ Page({
         path: '/pages/vtabs/index',
       },
       {
+        name: 'Terms',
+        nameZN: 'Terms',
+        path: '/pages/terms/index',
+      },
+      {
         name: 'Tabs elevator',
         nameZN: 'Tabs 电梯组件',
         path: '/pages/tabs/elevator/elevator',
