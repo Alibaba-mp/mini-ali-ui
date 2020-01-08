@@ -171,6 +171,11 @@ Page({
         nameZN: ' 标签',
         path: '/pages/tag/index',
       },
+      {
+        name: 'Terms',
+        nameZN: ' 协议',
+        path: '/pages/terms/index',
+      },
       // {
       //   name: 'FaceDetection',
       //   nameZN: '（旧组件）人脸检测',

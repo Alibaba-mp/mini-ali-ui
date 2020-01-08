@@ -1,13 +1,13 @@
 @import (reference) "../style/themes/default.less";
 
-.terms {
+.am-terms {
   display: flex;
   flex-direction: column;
   padding: @size-1;
   padding: var(--am-terms-padding, @size-1);
   width: 100%;
   box-sizing: border-box;
-  .terms-header {
+  & &-header {
     height: @icon-size-sm;
     height: var(--am-terms-content-font-size, @icon-size-sm);
     line-height: @icon-size-sm;
@@ -26,6 +26,7 @@
       margin-right: var(--am-terms-content-font-size, @v-spacing-standard);
       display: block;
       .selected.am-icon {
+        color: @color-text-primary;
         color: var(--am-terms-icon-selected-color, @color-text-primary);
       }
       .am-icon {
@@ -62,7 +63,7 @@
       }
     }
   }
-  .terms-body {
+  & &-body {
     display: flex;
     flex-direction: column;
     .am-button {
@@ -70,7 +71,7 @@
       margin-bottom: var(--am-terms-button-margin, @v-spacing-standard);
     }
   }
-  .terms-footer {
+  & &-footer {
     color: @color-text-title;
     color: var(--am-terms-desc-color, @color-text-title);
     font-size: @font-size-weak;
@@ -87,11 +88,10 @@
       }
     }
   }
-}
-
-.terms-fixed {
-  position: fixed;
-  bottom: 0;
-  background-color: @color-fill-grey-inverse;
-  background-color: var(--am-terms-background-color, @color-fill-grey-inverse);
+  &-fixed {
+    position: fixed;
+    bottom: 0;
+    background-color: @color-fill-grey-inverse;
+    background-color: var(--am-terms-background-color, @color-fill-grey-inverse);
+  }
 }
