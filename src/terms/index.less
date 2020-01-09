@@ -32,8 +32,8 @@
       .am-icon {
         font-size: @icon-size-sm;
         font-size: var(--am-terms-content-font-size, @icon-size-sm);
-        color: @color-text-title;
-        color: var(--am-terms-icon-color, @color-text-title);
+        color: @color-text-weak;
+        color: var(--am-terms-icon-color, @color-text-weak);
       }
       .unselected {
         display: block;
@@ -91,6 +91,8 @@
   &-fixed {
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
     background-color: @color-fill-grey-inverse;
     background-color: var(--am-terms-background-color, @color-fill-grey-inverse);
   }

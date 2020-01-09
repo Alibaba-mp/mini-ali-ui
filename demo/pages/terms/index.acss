@@ -5,5 +5,5 @@
     margin-bottom: 20px
 }
 page {
-    padding-bottom: 100px;
+    padding: 12px;
 }
