@@ -24,6 +24,7 @@
   <view style="margin-top: 10px;" />
 	<modal
 		show="{{modalOpened21}}"
+    className="modalButtonBold"
 		onModalClick="onModalClick21"
 		onModalClose="onModalClose21"
 		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
@@ -134,9 +135,9 @@
 	>
 		<view slot="header">标题单行</view>
 		<view>说明当前状态、提示用户解决方案，最好不要超过两行。</view>
-    <view style="margin-top:10px;">
+    <view style="margin-top:10px;padding-bottom:10px">
       <slider value="5" step="5"/>
     </view>
-    <button type="primary" style="margin-top: 10px" onTap="onModalClose9">主操作</button>
+    <button type="primary" onTap="onModalClose9">主操作</button>
 	</modal>
 </view>

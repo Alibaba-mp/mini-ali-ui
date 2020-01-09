@@ -1,6 +1,7 @@
 {
   "defaultTitle": "Modal",
   "usingComponents":{
-    "modal": "../../es/modal/index"
+    "modal": "../../es/modal/index",
+    "button": "../../es/button/index"
   }
 }

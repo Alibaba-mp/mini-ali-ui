@@ -21,7 +21,9 @@
           {{button.text}}
         </view>
       </view>
-			<view class="am-modal-close {{closeType === '1' ? 'am-modal-close-white' : ''}}" hover-class="am-modal-close-active" a:if="{{showClose}}" onTap="_onModalClose" />
+			<view class="am-modal-close" hover-class="am-modal-close-active" a:if="{{showClose}}" onTap="_onModalClose" >
+        <am-icon type="{{advice ? 'close-circle' : 'close'}}" size="{{advice ? 34 : 27}}" color="{{closeType === '1' ? 'white' : '#A3A3A3'}}" />
+      </view>
 		</view>
 	</view>
 </view>

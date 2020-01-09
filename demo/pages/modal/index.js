@@ -10,10 +10,10 @@ Page({
     modalOpened6: false,
     buttons5: [
       { text: '取消' },
-      { text: '主操作' },
+      { text: '主操作', extClass: 'buttonBold' },
     ],
     buttons6: [
-      { text: '主操作' },
+      { text: '主操作', extClass: 'buttonBold' },
       { text: '取消' },
     ],
     buttons7: [
@@ -21,7 +21,7 @@ Page({
       { text: '删除', extClass: 'deleteBtn' },
     ],
     buttons8: [
-      { text: '主操作' },
+      { text: '主操作', extClass: 'buttonBold' },
       { text: '更多' },
       { text: '取消' },
     ],

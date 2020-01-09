@@ -5,3 +5,6 @@
 .cancelBtn {
   color: #ccc;
 }
+.buttonBold, .modalButtonBold .am-modal-footer {
+  font-weight: bold;
+}
