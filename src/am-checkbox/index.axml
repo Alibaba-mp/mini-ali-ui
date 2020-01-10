@@ -8,5 +8,5 @@
     color="{{color}}"
     id="{{id}}"
     />
-  <view class="am-checkbox-synthetic"></view>
+  <view class="am-checkbox-synthetic" style="{{ type === 'circle' ? '--am-checkbox-corner-radius: 50%;' : ''}}"></view>
 </view>

@@ -5,6 +5,7 @@ Page({
       { checked: false, disabled: false, value: 'b', title: '复选框-默认未选中', id: 'checkbox2' },
       { checked: true, disabled: true, value: 'c', title: '复选框-默认选中disabled', id: 'checkbox3' },
       { checked: false, disabled: true, value: 'd', title: '复选框-默认未选中disabled', id: 'checkbox4' },
+      { checked: false, disabled: false, type: 'circle', value: 'e', title: '圆形checkbox', id: 'checkbox5' },
     ],
   },
   onSubmit(e) {
