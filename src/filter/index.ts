@@ -9,6 +9,7 @@ Component({
     className: '',
     onChange: () => {},
     max: 10000,
+    equalRows: 0,
   },
   didMount() {
     const { commonProps } = this.data;

@@ -2,8 +2,8 @@ Page({
   data: {
     show: true,
     items: [
-      { id: 1, value: '衣服', rows: 2, subtitle: '子标题', selected: true },
-      { id: 1, value: '橱柜', rows: 2, subtitle: '子标题' },
+      { id: 1, value: '衣服', subtitle: '子标题', selected: true },
+      { id: 1, value: '橱柜', subtitle: '子标题' },
     ],
   },
   handleCallBack(data) {

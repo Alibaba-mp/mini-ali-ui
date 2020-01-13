@@ -13,7 +13,6 @@ Component({
     value: '',
     selected: false,
     subtitle: '',
-    rows: 0,
     onChange: () => {},
   },
 
