@@ -1,15 +1,9 @@
 <view class="am-terms am-terms-{{fixed ? 'fixed' : 'normal'}}">
     <view class="am-terms-header">
         <block a:if="{{related}}">
-            <view class="icon-item {{cls}}" onTap="onChange" data-id="{{status}}">
-                <am-icon class="unselected" type="radio"/>
-                <am-icon class="selected" type="radio_sel"/>
-            </view>
-            <slot name="header"/>
+            <am-checkbox type="circle" onChange="onChange" checked="{{status}}">
         </block>
-        <block a:else>
-            <slot name="header"/>
-        </block>
+        <slot name="header"/>
     </view>
 	<view class="am-terms-body">
         <button type="{{agreeBtn.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" dataName="{{agreeBtn.data}}" subtitle="{{agreeBtn.subtitle}}" disabled="{{showBtn}}">{{agreeBtn.title}}</button>

@@ -23,15 +23,14 @@ Component({
   },
   data: {
     showBtn: true,
-    cls: '',
     status: 0,
   },
   didMount() {
     const { agreeBtn, related } = this.props;
     if ((agreeBtn.checked && related) || !related) {
-      this.setData({ showBtn: false, cls: 'switch', status: 1 });
+      this.setData({ showBtn: false, status: 1 });
     } else {
-      this.setData({ showBtn: true, cls: '', status: 0 });
+      this.setData({ showBtn: true, status: 0 });
     }
   },
   methods: {
@@ -39,14 +38,15 @@ Component({
       const { onSelect } = this.props;
       onSelect && onSelect(e);
     },
-    onChange() {
+    onChange(e) {
       const { related } = this.props;
-      const id = this.data.status;
+      const isSeleted = e.detail.value;
 
-      if (related && !id) {
-        this.setData({ showBtn: false, cls: 'switch', status: 1 });
+
+      if (related && isSeleted) {
+        this.setData({ showBtn: false, status: 1 });
       } else {
-        this.setData({ showBtn: true, cls: '', status: 0 });
+        this.setData({ showBtn: true, status: 0 });
       }
     },
   },

@@ -10,7 +10,7 @@
   <text class="title">双按钮</text>
 </view>
 <view>
-  <terms onSelect="onSelect" fixed="{{c2.fixed}}" related="{{c2.related}}" hasDesc="{{c2.hasDesc}}" agreeBtn="{{c2.agreeBtn}}" cancelBtn="{{c1.cancelBtn}}" shape="{{c2.shape}}" capsuleMinWidth="{{c2.capsuleMinWidth}}" capsuleSize="{{c2.capsuleSize}}">
+  <terms onSelect="onSelect" fixed="{{c2.fixed}}" related="{{c2.related}}" hasDesc="{{c2.hasDesc}}" agreeBtn="{{c2.agreeBtn}}" cancelBtn="{{c2.cancelBtn}}" shape="{{c2.shape}}" capsuleMinWidth="{{c2.capsuleMinWidth}}" capsuleSize="{{c2.capsuleSize}}">
     <view class="text" slot="desc">
       <text>
         查看
@@ -54,7 +54,7 @@
   </terms>
   <text class="title">无捆绑协议</text>
 </view>
-<view>
+<view style="padding-bottom:30px;">
   <terms fixed="{{c6.fixed}}" related="{{c6.related}}" hasDesc="{{c6.hasDesc}}" agreeBtn="{{c6.agreeBtn}}" cancelBtn="{{c6.cancelBtn}}" shape="{{c6.shape}}" capsuleMinWidth="{{c6.capsuleMinWidth}}" capsuleSize="{{c6.capsuleSize}}">
     <view class="text" slot="header">
       <text>
