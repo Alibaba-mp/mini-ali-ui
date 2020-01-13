@@ -11,7 +11,7 @@
   left: @left;
 }
 
-.hairline(@direction, @color: #eee) when (@direction = 'top') {
+.hairline(@direction, @color: @color-divider-line) when (@direction = 'top') {
   &::before {
     .scale-hairline-common(@color, 0, 0, auto, 0);
     height: 1px;
@@ -19,7 +19,7 @@
   }
 }
 
-.hairline(@direction, @color: #eee) when (@direction = 'right') {
+.hairline(@direction, @color: @color-divider-line) when (@direction = 'right') {
   &::after {
     .scale-hairline-common(@color, 0, 0, 0, auto);
     width: 1px;
@@ -27,7 +27,7 @@
   }
 }
 
-.hairline(@direction, @color: #eee) when (@direction = 'bottom') {
+.hairline(@direction, @color: @color-divider-line) when (@direction = 'bottom') {
   &::after {
     .scale-hairline-common(@color, auto, 0, 0, 0);
     height: 1px;
@@ -35,7 +35,7 @@
   }
 }
 
-.hairline(@direction, @color: #eee) when (@direction = 'left') {
+.hairline(@direction, @color: @color-divider-line) when (@direction = 'left') {
   &::before {
     .scale-hairline-common(@color, 0, auto, 0, 0);
     width: 1px;

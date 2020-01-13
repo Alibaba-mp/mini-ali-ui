@@ -134,7 +134,7 @@ Page({
             number: '66',
           },
           {
-            title: '3 Tab',
+            title: 'Tab',
             subTitle: '描述',
             number: '99+',
           },

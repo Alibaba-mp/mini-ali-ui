@@ -4,6 +4,10 @@
   <title hasLine="true">内部标题无 icon</title>
 
   <title
+  iconURL="https://img.alicdn.com/tfs/TB1UNX2bSFRMKJjy0FhXXX.xpXa-112-46.png"
+  >无下划线</title>
+
+  <title
   hasLine="true"
   iconURL="https://img.alicdn.com/tfs/TB1UNX2bSFRMKJjy0FhXXX.xpXa-112-46.png"
   >内部标题无操作</title>

@@ -16,7 +16,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     z-index: 2;
     pointer-events: none;
   }
@@ -26,7 +26,7 @@
     height: 9px;
     width: 50px;
     overflow: hidden;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.5);
     background-repeat: no-repeat;
   }
   &Move {
@@ -52,6 +52,7 @@
 .am-pager {
   display: flex;
   justify-content: center;
+  transform: scale(0.5);
   &-number {
     flex: 0 0 6px;
     height: 6px;

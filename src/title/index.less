@@ -1,4 +1,5 @@
 @import (reference) "../style/themes/default.less";
+@import "../style/mixins/hairline";
 
 .am-title {
   display: flex;
@@ -10,10 +11,10 @@
   color: @color-text-title;
   color: var(--am-title-text-color, @color-text-title);
   &-line {
+    position: relative;
     margin-bottom: @v-spacing-large;
     margin-bottom: var(--am-title-marginBottom, @v-spacing-large);
-    border-bottom: @border-width-standard solid @color-divider-line;
-    border-bottom: var(--am-title-borderWidth, @border-width-standard) solid var(--am-title-borderColor, @color-divider-line);
+		.hairline("bottom");
   }
   &-icon {
     width: @size-6;

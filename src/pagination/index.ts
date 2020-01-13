@@ -5,7 +5,7 @@ Component({
     fillColor: '#ddd',
     frontColor: '#006EFF',
     pagerName: '',
-    height: '100',
+    height: '100px',
     white: false,
     max: 5,
     currentPage: 1,
