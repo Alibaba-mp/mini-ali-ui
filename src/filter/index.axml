@@ -2,7 +2,7 @@
   <view class="am-filter-mask" onTap="maskTap" />
   <view class="am-filter-document">
     <view class="am-filter-content" onChange="{{callBackFn}}">
-      <view class="am-filter-list">
+      <view class="am-filter-list {{ equalRows > 0 ? 'am-filter-child-' + equalRows : ''}}">
         <slot/>
       </view>
       <view class="am-filter-btn" a:if="{{max !== 1}}">
