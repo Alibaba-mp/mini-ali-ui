@@ -4,6 +4,7 @@ Page({
     position: position[0],
     show: false,
     showMask: true,
+    showIcon: true,
   },
   onShowPopoverTap() {
     this.setData({
@@ -21,6 +22,11 @@ Page({
   onMaskChangeTap() {
     this.setData({
       showMask: !this.data.showMask,
+    });
+  },
+  onIconChangeTap() {
+    this.setData({
+      showIcon: !this.data.showIcon,
     });
   },
   onMaskClick() {

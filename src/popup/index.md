@@ -27,7 +27,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "popup": "mini-antui/es/popup/index"
+    "popup": "mini-ali-ui/es/popup/index"
   }
 }
 ```

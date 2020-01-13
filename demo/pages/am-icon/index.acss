@@ -1,12 +1,5 @@
-.icon-title {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  color: #333;
-  font-size: 16px;
-}
-
 .icon-list {
+  padding-bottom: 10px;
   background: #fff;
 }
 
@@ -21,4 +14,11 @@
 
 .icon-desc {
   margin-top: 10px;
+}
+
+.searchInput {
+  width: 100%;
+  color: #f32600;
+  background-color: #f5f5f5;
+  border-bottom: 2rpx solid #eee;
 }

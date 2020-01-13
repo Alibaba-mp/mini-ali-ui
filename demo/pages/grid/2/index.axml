@@ -1,4 +1,4 @@
-<view style="margin-top: 10px;" />
+<!-- <view style="margin-top: 10px;" />
 <grid onGridItemClick="onItemClick" columnNum="{{2}}" list="{{list1}}">
     <view class="am-grid-item-wrapper" slot-scope="props">
       <view class="am-grid-icon-container">
@@ -9,7 +9,7 @@
         <text	class="am-grid-desc">{{props.item.desc}}</text>
       </view>
     </view>
-</grid>
+</grid> -->
 
 <view style="margin-top: 10px;" />
 <grid onGridItemClick="onItemClick" columnNum="{{2}}" list="{{list1}}" />

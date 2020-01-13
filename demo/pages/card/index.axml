@@ -1,26 +1,60 @@
 <view class="container">
-  <card
-    title="卡片标题1"
-    subTitle="副标题非必填1"
-    onClick="onCardClick"
-    info="点击了第一个card"
-  />
+  <card title="卡片标题1" 
+    onClick="onCardClick" 
+    info="点击了第一个card" />
   <view style="margin-top: 10px;" />
-  <card
-    thumb="{{thumb}}"
-    title="卡片标题2"
-    subTitle="副标题非必填2"
-    onClick="onCardClick"
-    info="点击了第二个card"
-  />
+  <card thumb="{{thumb}}" 
+    title="卡片标题2" 
+    subTitle="副标题非必填2" 
+    onClick="onCardClick" 
+    info="点击了第二个card" />
   <view style="margin-top: 10px;" />
-  <card
-    thumb="{{thumb}}"
-    title="卡片标题3"
-    subTitle="副标题非必填3"
-    onClick="onCardClick"
-    footer="描述文字"
-    footerImg="{{footerImg}}"
-    info="点击了第三个card"
-  />
+  <view>
+    <card thumb="{{thumb}}" 
+      title="卡片标题3" 
+      subTitle="副标题非必填3" 
+      onClick="toggle" 
+      someProp="onCardClick" 
+      action="描述文字" 
+      onActionClick="onActionClick" 
+      extraAction="点击卡片展开/收起↑" 
+      onExtraActionClick="onExtraActionClick" 
+      info="点击了第三个card" 
+      expand="{{expand3rd}}" 
+      bgImg="https://gw-office.alipayobjects.com/basement_prod/e8d22c8e-20f6-4bbd-a3ae-7be615e98b33.jpg" />
+  </view>
+  <view style="margin-top: 10px;" />
+  <view>
+    <card thumb="{{thumb}}" 
+      title="卡片标题3" 
+      subTitle="副标题非必填3" 
+      onClick="onCardClick" 
+      someProp="onCardClick" 
+      info="点击了第三个card" 
+      bgImg="https://gw-office.alipayobjects.com/basement_prod/e8d22c8e-20f6-4bbd-a3ae-7be615e98b33.jpg"
+      expand
+      />
 </view>
+<view style="margin-top: 10px;" />
+    <view>
+      <coupon title="券标题" 
+        thumb="{{thumb}}">
+      </coupon>
+    </view>
+    <view>
+      <coupon title="券标题" 
+        subtitle="券副标题" 
+        thumb="{{thumb}}">
+      </coupon>
+    </view>
+    <view>
+      <coupon title="券标题" 
+        subtitle="券副标题" 
+        thumb="{{thumb}}">
+        <button shape="capsule" 
+          slot="action" 
+          type="ghost">capsule</button>
+      </coupon>
+    </view>
+    <view style="margin-top: 50px;" />
+  </view>

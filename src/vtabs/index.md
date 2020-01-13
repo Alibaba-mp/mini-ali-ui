@@ -36,8 +36,8 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "vtabs": "mini-antui/es/vtabs/index",
-    "vtab-content": "mini-antui/es/vtabs/vtab-content/index"
+    "vtabs": "mini-ali-ui/es/vtabs/index",
+    "vtab-content": "mini-ali-ui/es/vtabs/vtab-content/index"
   }
 }
 ```

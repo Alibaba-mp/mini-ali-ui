@@ -1,0 +1,104 @@
+@import '../../style/mixins/hairline.less';
+
+.am-alphabet {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  &-letter {
+    text-align: center;
+    font-size: @font-size-weak;
+    font-size: var(--am-alphabet-letter-font-size, @font-size-weak);
+    color: @color-text-subtitle;
+    color: var(--am-alphabet-letter-color, @color-text-subtitle);
+    height: @size-4;
+    height: var(--am-alphabet-letter-size, @size-4);
+    width: @size-4;
+    width: var(--am-alphabet-letter-size, @size-4);
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-alphabet-letter-border-radius, @corner-radius-circle);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-letter-chosen {
+    background: @color-fill-primary;
+    background: var(--am-alphabet-letter-chosen-background, @color-fill-primary);
+    color: @color-text-base;
+    color: var(--am-alphabet-letter-chosen-text-color, @color-text-base);
+  }
+  &-bubble {
+    color: @color-text-base;
+    color: var(--am-alphabet-bubble-color, @color-text-base);
+    position: absolute;
+    right: 40px;
+    height: 47px;
+    width: 47px;
+    border-radius: @corner-radius-circle;
+    background: @color-fill-grey-base;
+    background: var(--am-alphabet-bubble-background, @color-fill-grey-base);
+    top: -17px;
+    font-size: @font-size-stress;
+    font-size: var(--am-alphabet-bubble-font-size, @font-size-stress);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-item {
+    min-height: @size-12;
+    min-height: var(--am-alphabet-min-height, @size-12);
+  }
+  &-line {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    overflow: hidden;
+  }
+  &-content {
+    padding: 20px 0;
+    width: 87px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    // width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  &-wrap {
+    .am-list-content,
+    .am-list-extra {
+      white-space: normal;
+      word-break: break-all;
+    }
+  }
+
+  &-line-bottom {
+    .hairline('bottom');
+  }
+  // 子元素垂直对齐
+  &-top {
+    .am-list-line {
+      align-items: flex-start;
+    }
+  }
+  &-middle {
+    .am-list-line {
+      align-items: center;
+    }
+  }
+  &-bottom {
+    .am-list-line {
+      align-items: flex-end;
+    }
+  }
+}

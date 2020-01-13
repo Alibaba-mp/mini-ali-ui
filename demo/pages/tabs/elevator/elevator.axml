@@ -1,0 +1,26 @@
+<view style="height: 300px;background-color: #ccc;">有 300px 高度的一个 view</view>
+<view style="padding: 12px;">
+  <tabs
+    tabs="{{tabs}}"
+    tabsName="activeTab"
+    onTabClick="handleTabClick"
+    activeTab="{{activeTab}}"
+    capsule="{{false}}"
+    hasSubTitle="{{false}}"
+    showPlus="{{false}}"
+    elevator="{{true}}"
+  >
+    <block a:for="{{tabs}}">
+      <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:if="{{index === 0}}">
+        <view class="tab-content" style="height: 300px;">高度为 300px {{item.title}}</view>
+      </tab-content>
+      <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:elif="{{index === 2}}">
+        <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
+      </tab-content>
+      <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:else>
+        <view class="tab-content">content of {{item.title}}</view>
+      </tab-content>
+    </block>
+  </tabs>
+</view>
+<view style="height: 500px;background-color: #ccc;">有 500px 高度的一个 view</view>

@@ -1,0 +1,7 @@
+{
+    "defaultTitle": "Terms",
+    "usingComponents": {
+      "terms": "../../es/terms/index"
+    } 
+  }
+  

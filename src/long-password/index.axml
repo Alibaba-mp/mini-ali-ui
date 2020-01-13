@@ -1,0 +1,33 @@
+<view class="am-long-password-item {{last ? 'last': ''}} {{className}}">
+  <view class="am-long-password-line">
+    <input enableNative="{{enableNative}}" 
+      sync-input="{{syncInput}}" 
+      class="am-long-password-content {{inputCls}}" 
+      value="{{value}}" 
+      name="{{name}}" 
+      type="{{type}}" 
+      password="{{visible ? false : true}}" 
+      placeholder="{{placeholder}}" 
+      placeholderClass="am-long-password-placeholder-base {{placeholderClass}}" 
+      placeholderStyle="{{placeholderStyle}}" 
+      disabled="{{disabled}}" 
+      maxlength="{{maxlength}}" 
+      focus="{{focus}}" 
+      onInput="onInput" 
+      onConfirm="onConfirm" 
+      onFocus="onFocus" 
+      onBlur="onBlur" />
+    <view class="am-long-password-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
+      onTap="onClear">
+      <icon size="18" 
+        type="clear" />
+    </view>
+    <view class="am-long-password-eye" 
+      onTap="onSwitchVisible">
+      <am-icon type="{{!visible ? 'eye-close' : 'eye'}}" 
+        size="20" 
+        color="#1677ff"></am-icon>
+    </view>
+    <view class="am-long-password-line-bottom" />
+  </view>
+</view>

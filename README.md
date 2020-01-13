@@ -4,12 +4,12 @@
 
 # Mini AntUI
 
-[![npm package](https://img.shields.io/npm/v/mini-antui.svg?style=flat-square)](https://www.npmjs.com/package/mini-antui)
-[![GitHub stars](https://img.shields.io/github/stars/ant-mini-program/mini-antui.svg)](https://github.com/ant-mini-program/mini-antui/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ant-mini-program/mini-antui.svg)](https://github.com/ant-mini-program/mini-antui/network/members)
-[![NPM downloads](https://img.shields.io/npm/dm/mini-antui.svg?style=flat-square)](https://www.npmjs.com/package/mini-antui)
-[![GitHub issues](https://img.shields.io/github/issues/ant-mini-program/mini-antui.svg)](https://github.com/ant-mini-program/mini-antui/issues)
-[![GitHub license](https://img.shields.io/github/license/ant-mini-program/mini-antui.svg)](https://github.com/ant-mini-program/mini-antui/blob/master/LICENSE)
+[![npm package](https://img.shields.io/npm/v/mini-ali-ui.svg?style=flat-square)](https://www.npmjs.com/package/mini-ali-ui)
+[![GitHub stars](https://img.shields.io/github/stars/ant-mini-program/mini-ali-ui.svg)](https://github.com/ant-mini-program/mini-ali-ui/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ant-mini-program/mini-ali-ui.svg)](https://github.com/ant-mini-program/mini-ali-ui/network/members)
+[![NPM downloads](https://img.shields.io/npm/dm/mini-ali-ui.svg?style=flat-square)](https://www.npmjs.com/package/mini-ali-ui)
+[![GitHub issues](https://img.shields.io/github/issues/ant-mini-program/mini-ali-ui.svg)](https://github.com/ant-mini-program/mini-ali-ui/issues)
+[![GitHub license](https://img.shields.io/github/license/ant-mini-program/mini-ali-ui.svg)](https://github.com/ant-mini-program/mini-ali-ui/blob/master/LICENSE)
 
 ## 示例
 
@@ -18,10 +18,10 @@
 </p>
 
 ## 链接
-- [mini-antui官网文档](https://docs.alipay.com/mini/component-ext/overview-ext-common)
+- [mini-ali-ui官网文档](https://docs.alipay.com/mini/component-ext/overview-ext-common)
 - [支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)
 - [开发工具](https://docs.alipay.com/mini/ide/overview)
-- [开发规范](https://github.com/ant-mini-program/mini-antui/wiki/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83)
+- [开发规范](https://github.com/ant-mini-program/mini-ali-ui/wiki/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83)
 
 ## 特性
 
@@ -31,7 +31,7 @@
 ## 安装
 
 ```bash
-$ npm install mini-antui --save
+$ npm install mini-ali-ui --save
 ```
 
 ## 使用
@@ -41,7 +41,7 @@ $ npm install mini-antui --save
 ```json
 {
   "usingComponents": {
-    "card": "mini-antui/es/card/index",
+    "card": "mini-ali-ui/es/card/index",
   }
 }
 ```
@@ -61,4 +61,4 @@ $ npm install mini-antui --save
 
 ## 贡献
 
-如果你有好的意见或建议，欢迎给我们提[issue](https://github.com/ant-mini-program/mini-antui/issues)。
+如果你有好的意见或建议，欢迎给我们提[issue](https://github.com/ant-mini-program/mini-ali-ui/issues)。

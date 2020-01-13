@@ -1,16 +1,19 @@
-<view>
+<view style="padding: 12px;">
   <tabs
     tabs="{{tabs}}"
-    showPlus="{{true}}"
+    tabsName="activeTab"
     onTabClick="handleTabClick"
     onChange="handleTabChange"
     onPlusClick="handlePlusClick"
     activeTab="{{activeTab}}"
-    swipeable="{{false}}"
+    showPlus="{{hasPlus}}"
+    swipeable="{{hasContentHeight}}"
+    capsule="{{typeCapsule}}"
+    hasSubTitle="{{typeHasSubTitle}}"
   >
-    <block a:for="{{tabs}}">
-      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 1}}">
-        <view class="tab-content" style="height: 100px;">高度为 100px {{item.title}}</view>
+    <block a:for="{{tabs}}" a:if="{{!hasContentHeight}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 0}}">
+        <view class="tab-content" style="height: 300px;">高度为 300px {{item.title}}</view>
       </tab-content>
       <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 2}}">
         <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
@@ -19,5 +22,72 @@
         <view class="tab-content">content of {{item.title}}</view>
       </tab-content>
     </block>
+    <block a:for="{{tabs}}" a:if="{{hasContentHeight}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}">
+        <view class="tab-content" style="height: 200px;">固定高度为 200px {{item.title}}，可滑动内容区域，tabs 跟随变化。</view>
+      </tab-content>
+    </block>
   </tabs>
 </view>
+<view style="padding: 30px">
+  <tabs
+    tabs="{{tabs2}}"
+    tabsName="activeTab2"
+    onTabClick="handleTabClick"
+    onChange="handleTabChange"
+    onPlusClick="handlePlusClick"
+    activeTab="{{activeTab2}}"
+    showPlus="{{hasPlus}}"
+    swipeable="{{hasContentHeight}}"
+    capsule="{{typeCapsule}}"
+    hasSubTitle="{{typeHasSubTitle}}"
+  >
+    <block a:for="{{tabs2}}" a:if="{{!hasContentHeight}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:if="{{index === 0}}">
+        <view class="tab-content" style="height: 300px;">高度为 300px {{item.title}}</view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:elif="{{index === 2}}">
+        <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
+      </tab-content>
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:else>
+        <view class="tab-content">content of {{item.title}}</view>
+      </tab-content>
+    </block>
+    <block a:for="{{tabs2}}" a:if="{{hasContentHeight}}">
+      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}">
+        <view class="tab-content" style="height: 200px;">固定高度为 200px {{item.title}}，可滑动内容区域，tabs 跟随变化。</view>
+      </tab-content>
+    </block>
+  </tabs>
+</view>
+<view class="demo-title">tab 类型: </view>
+<radio-group class="radio-group" onChange="typeChange" name="type">
+  <label class="radio" a:for="{{type}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
+
+<view class="demo-title">是否有 ➕icon: </view>
+<radio-group class="radio-group" onChange="plusChange" name="plus">
+  <label class="radio" a:for="{{plus}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
+
+<view class="demo-title">内容区域是否固定高度: </view>
+<radio-group class="radio-group" onChange="heightChange" name="contentHeight">
+  <label class="radio" a:for="{{contentHeight}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>
+
+<view class="demo-title">tabs选项数量: </view>
+<radio-group class="radio-group" onChange="tabsNumberChange" name="tabsNumber">
+  <label class="radio" a:for="{{tabsNumber}}" key="label-{{index}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />
+    <text class="radio-text">{{item.value}}</text>
+  </label>
+</radio-group>

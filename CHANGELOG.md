@@ -3,10 +3,10 @@
 `2019-09-24`
 
 - **Bug Fix**
-  - **search-bar** 点击清除 icon 后搜索框自动获取焦点 [#289](https://github.com/ant-mini-program/mini-antui/issues/289)
+  - **search-bar** 点击清除 icon 后搜索框自动获取焦点 [#289](https://github.com/ant-mini-program/mini-ali-ui/issues/289)
 
 - **Feature**
-  - **filter** 组件可点击遮罩层关闭;调整最大高度值 [#287](https://github.com/ant-mini-program/mini-antui/issues/287)
+  - **filter** 组件可点击遮罩层关闭;调整最大高度值 [#287](https://github.com/ant-mini-program/mini-ali-ui/issues/287)
 
 
 ## 0.4.33
@@ -29,8 +29,8 @@
   - **Calendar** 组件可控制年份；
   - 相关组件文档内容优化
 - **Feature**
-  - **Tabs** 组件新增 `tab-content` 高度自适应；（[#71](https://github.com/ant-mini-program/mini-antui/issues/71)）
-  - **List** 组件新增 `loadMore` 属性；([#73](https://github.com/ant-mini-program/mini-antui/issues/73))
+  - **Tabs** 组件新增 `tab-content` 高度自适应；（[#71](https://github.com/ant-mini-program/mini-ali-ui/issues/71)）
+  - **List** 组件新增 `loadMore` 属性；([#73](https://github.com/ant-mini-program/mini-ali-ui/issues/73))
 
 ## 0.4.31
 
@@ -44,8 +44,8 @@
 `2019-08-27`
 
 - **Bug Fix**
-  - 修复 `collapse` 在 `didUnmout` 时清除缓存的问题 [#291](https://github.com/ant-mini-program/mini-antui/pull/291)
-  - 修复 `swipe-action` 在模拟器中点击会触发滑动的问题 [#294](https://github.com/ant-mini-program/mini-antui/pull/294)
+  - 修复 `collapse` 在 `didUnmout` 时清除缓存的问题 [#291](https://github.com/ant-mini-program/mini-ali-ui/pull/291)
+  - 修复 `swipe-action` 在模拟器中点击会触发滑动的问题 [#294](https://github.com/ant-mini-program/mini-ali-ui/pull/294)
 
 - **Enhancement**
   - package.json 增加 node 版本限定 `"node": "^10.0.0"`
@@ -71,7 +71,7 @@
 `2019-05-24`
 
 - **Bug Fix**
-  - 修复`collapse`无法在钉钉小程序上展开的问题([#272](https://github.com/ant-mini-program/mini-antui/issues/272))
+  - 修复`collapse`无法在钉钉小程序上展开的问题([#272](https://github.com/ant-mini-program/mini-ali-ui/issues/272))
   - 修复`stepper` readOnly状态下按钮点击无效的问题
 
 ## 0.4.26
@@ -79,8 +79,8 @@
 `2019-05-10`
 
 - **Bug Fix**
-  - 修复`vtabs`的语法错误([#264](https://github.com/ant-mini-program/mini-antui/issues/264))
-  - 修复`am-icon`默认class为undefined的问题([#261](https://github.com/ant-mini-program/mini-antui/issues/261))
+  - 修复`vtabs`的语法错误([#264](https://github.com/ant-mini-program/mini-ali-ui/issues/264))
+  - 修复`am-icon`默认class为undefined的问题([#261](https://github.com/ant-mini-program/mini-ali-ui/issues/261))
   - 修复`list-item`数字和英文不换行的问题
 
 ## 0.4.25
@@ -103,7 +103,7 @@
 `2019-03-29`
 
 - **Bug Fix**
-  - 修复`flex`没有justify-content:center的问题([#247](https://github.com/ant-mini-program/mini-antui/issues/247))
+  - 修复`flex`没有justify-content:center的问题([#247](https://github.com/ant-mini-program/mini-ali-ui/issues/247))
 
 ## 0.4.21
 
@@ -158,7 +158,7 @@
 `2019-02-01`
 
 - **Enhancement**
-  - 优化`notice`动画性能([#140](https://github.com/ant-mini-program/mini-antui/issues/140))
+  - 优化`notice`动画性能([#140](https://github.com/ant-mini-program/mini-ali-ui/issues/140))
   - 修复`pagination`闪烁问题
 
 ## 0.4.14
@@ -180,7 +180,7 @@
 `2019-01-04`
 
 - **Bug Fix**
-  - 修复`stepper`step属性设置小数时精度问题([#196](https://github.com/ant-mini-program/mini-antui/issues/196))
+  - 修复`stepper`step属性设置小数时精度问题([#196](https://github.com/ant-mini-program/mini-ali-ui/issues/196))
 
 ## 0.4.11
 
@@ -219,7 +219,7 @@
 `2018-12-07`
 
 - **Enhancement**
-  - `swipe-action`版本判断优化([#176](https://github.com/ant-mini-program/mini-antui/issues/176))
+  - `swipe-action`版本判断优化([#176](https://github.com/ant-mini-program/mini-ali-ui/issues/176))
   - `stepper`value属性类型兼容字符串
 
 ## 0.4.6
@@ -258,17 +258,17 @@
 
 - **Enhancement**
   - `amount-input`组件type属性新增`digit`类型
-  - `vtabs`新增`activeTab`，`onTabClick`和`onChange`属性([#125](https://github.com/ant-mini-program/mini-antui/issues/125))
+  - `vtabs`新增`activeTab`，`onTabClick`和`onChange`属性([#125](https://github.com/ant-mini-program/mini-ali-ui/issues/125))
 
 ## 0.4.1
 
 `2018-10-29`
 
 - **Enhancement**
-  - `notice`新增`enableMarquee`和`marqueeProps`属性([#140](https://github.com/ant-mini-program/mini-antui/issues/140))
+  - `notice`新增`enableMarquee`和`marqueeProps`属性([#140](https://github.com/ant-mini-program/mini-ali-ui/issues/140))
 
 - **Bug Fix**
-  - 修复`message`type为`fail`时的白屏问题([#152](https://github.com/ant-mini-program/mini-antui/issues/152))
+  - 修复`message`type为`fail`时的白屏问题([#152](https://github.com/ant-mini-program/mini-ali-ui/issues/152))
 
 ## 0.4.0
 
@@ -279,7 +279,7 @@
   - 新增`badge`组件
 
 - **Enhancement**
-  - `calendar`组件`tabs`属性新增`disable`字段，新增`onSelectHasDisableDat`属性([#108](https://github.com/ant-mini-program/mini-antui/issues/108))
+  - `calendar`组件`tabs`属性新增`disable`字段，新增`onSelectHasDisableDat`属性([#108](https://github.com/ant-mini-program/mini-ali-ui/issues/108))
 
 - **Bug Fix**
   - 修复`vtabs`在安卓下出现滚动误差的问题
@@ -298,15 +298,15 @@
 `2018-10-12`
 
 - **Enhancement**
-  - `vtabs`新增`badgeType`和`badgeText`属性([#92](https://github.com/ant-mini-program/mini-antui/issues/92))
+  - `vtabs`新增`badgeType`和`badgeText`属性([#92](https://github.com/ant-mini-program/mini-ali-ui/issues/92))
 
 ## 0.3.11
 
 `2018-10-10`
 
 - **Bug Fix**
-  - 修复`search-bar`在IPhone X下面出现滚动的问题([#113](https://github.com/ant-mini-program/mini-antui/issues/113))
-  - 修复`stepper`在重置初始值时操作按钮状态不改变的bug([#111](https://github.com/ant-mini-program/mini-antui/issues/111))
+  - 修复`search-bar`在IPhone X下面出现滚动的问题([#113](https://github.com/ant-mini-program/mini-ali-ui/issues/113))
+  - 修复`stepper`在重置初始值时操作按钮状态不改变的bug([#111](https://github.com/ant-mini-program/mini-ali-ui/issues/111))
 
 - **Enhancement**
   - `page-result`图标升级到最新版本
@@ -337,16 +337,16 @@
   - 新增`picker-item`组件
 
 - **Enhancement**
-  - `tabs`新增`activeCls`属性，用来表示激活tabbar的自定义class([#87](https://github.com/ant-mini-program/mini-antui/issues/87))
-  - `input-item`新增`clear`、`onClear`属性，组件内支持清除输入功能([#84](https://github.com/ant-mini-program/mini-antui/issues/84))
-  - `list-item` onClick回调新增target参数，用来支持自定义dataset([#85](https://github.com/ant-mini-program/mini-antui/issues/85))
+  - `tabs`新增`activeCls`属性，用来表示激活tabbar的自定义class([#87](https://github.com/ant-mini-program/mini-ali-ui/issues/87))
+  - `input-item`新增`clear`、`onClear`属性，组件内支持清除输入功能([#84](https://github.com/ant-mini-program/mini-ali-ui/issues/84))
+  - `list-item` onClick回调新增target参数，用来支持自定义dataset([#85](https://github.com/ant-mini-program/mini-ali-ui/issues/85))
 
 ## 0.3.7
 
 `2018-09-25`
 
 - **Bug Fix**
-  - 修复了`input-item`组件在失去焦点等事件中无dataset的问题([#66](https://github.com/ant-mini-program/mini-antui/issues/66))
+  - 修复了`input-item`组件在失去焦点等事件中无dataset的问题([#66](https://github.com/ant-mini-program/mini-ali-ui/issues/66))
   - 修复`popup`组件mask定位为absolut导致的页面滚动时mask跟着滚动的bug
 
 - **Enhancement**

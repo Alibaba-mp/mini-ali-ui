@@ -1,0 +1,20 @@
+@import (reference) "../style/themes/default.less";
+
+.am-switch {
+  .checkbox {
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-switch-corner-radius, @corner-radius-circle);
+  }
+  .a-switch-checkbox.a-switch-checkbox:checked ~ .checkbox {
+    background: @color-fill-primary;
+    background: var(--am-switch-background, @color-fill-primary);
+  }
+  .checkbox:after {
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-switch-float-corner-radius, @corner-radius-circle);
+  }
+  .checkbox:before {
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-switch-corner-radius, @corner-radius-circle);
+  }
+}

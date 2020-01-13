@@ -3,9 +3,11 @@
     class="am-badge-text
     {{ text.toString().length > 1 ? 'am-badge-double' : ''}}"
     a:if="{{!dot}}">
-    <text class="am-badge-text-padding">{{typeof text === 'number' && text > overflowCount ? overflowCount + '+' : text }}</text>
+    <!-- <text class="am-badge-text-padding">{{typeof text === 'number' && text > overflowCount ? overflowCount + '+' : text }}</text> -->
     <text class="am-badge-text-inner">{{typeof text === 'number' && text > overflowCount ? overflowCount + '+' : text }}</text>
   </view>
   <view class="am-badge-text is-dot" a:if="{{dot}}"></view>
   <slot name="inner" />
+  <view a:if="{{withArrow}}" 
+    class="am-badge-arrow {{direction ==='right' ? 'am-badge-arrow-right' : ''}} {{direction ==='left' ? 'am-badge-arrow-left' : ''}}"/>
 </view>

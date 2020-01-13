@@ -25,7 +25,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "am-icon": "mini-antui/es/am-icon/index",
+    "am-icon": "mini-ali-ui/es/am-icon/index",
   }
 }
 ```

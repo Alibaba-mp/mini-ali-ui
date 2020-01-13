@@ -2,6 +2,13 @@
   "defaultTitle": "List",
   "usingComponents":{
     "list": "../../es/list/index",
-    "list-item": "../../es/list/list-item/index"
+    "list-item": "../../es/list/list-item/index",
+    "list-switch": "../../es/list/list-switch/index",
+    "list-check": "../../es/list/list-check/index",
+    "list-capsule": "../../es/list/list-capsule/index",
+    "alphabet": "../../es/list/alphabet/index",
+    "list-secondary": "../../es/list/list-secondary/index",
+    "tag": "../../es/tag/index",
+    "am-icon": "../../es/am-icon/index"
   }
 }

@@ -1,24 +1,31 @@
-@import '../style/themes/default.less';
+@import (reference) '../style/themes/default.less';
 
 .am-badge {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  line-height: 1;
+  line-height: @line-height-base;
+  line-height: var(--am-badge-line-height, @line-height-base);
 
   &-text {
-    display: inline-block;
+    display: flex;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     right: 0;
     transform: translate(50%, -50%);
     top: 0;
     min-width: 16px;
     padding: 0;
-    height: 16px;
+    min-height: 16px;
     text-align: center;
-    background-color: #ff3b30;
-    border-radius: 16px;
-    color: #fff;
+    background-color: @color-fill-warning;
+    background-color: var(--am-badge-bg-color, @color-fill-warning);
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-badge-border-radius, @corner-radius-circle);
+    color: @color-text-base;
+    color: var(--am-badge-font-color, @color-text-base);
+    z-index: 1;
 
     &-padding {
       font-size: 10px;
@@ -26,11 +33,7 @@
     }
 
     &-inner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 20px;
-      transform: translate(-50%, -50%) scale(0.5);
+      font-size: @font-size-weak;
       white-space: nowrap;
     }
 
@@ -51,5 +54,33 @@
     width: 10px;
     min-width: 10px;
     height: 10px;
+    min-height: 10px;
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-badge-border-radius, @corner-radius-circle);
+  }
+  &-arrow {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: @color-fill-warning;
+    background-color: var(--am-badge-bg-color, @color-fill-warning);
+    bottom: -2px;
+    left: 50%;
+    margin-left: -4px;
+    transform: rotate(45deg);
+    z-index: 0;
+    &-left {
+      left: 2px;
+      margin-left: 0;
+      bottom: 0;
+      transform: skew(0, -20deg);
+    }
+    &-right {
+      right: 2px;
+      left: auto;
+      margin-left: 0;
+      bottom: 0;
+      transform: skew(0, 20deg);
+    }
   }
 }

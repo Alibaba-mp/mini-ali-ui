@@ -1,0 +1,146 @@
+@import (reference) "../style/themes/default.less";
+@buttonPrefixCls: am-button;
+.@{buttonPrefixCls} {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  line-height: normal;
+  padding: @size-3;
+  padding: var(--am-button-padding, @size-3);
+  border-radius: @corner-radius-md;
+  border-radius: var(--am-button-corner-radius, @corner-radius-md);
+  color: @color-fill-grey-dark;
+  color: var(--am-button-color, @color-fill-grey-dark);
+  border: @border-width-standard solid @color-fill-grey-light;
+  border: var(--am-button-border-size, @border-width-standard) solid var(--am-button-border-color, @color-fill-grey-light);
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-button-background, @color-fill-grey-inverse);
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-loading {
+    margin-right: 12px;
+  }
+
+  &&-disabled {
+    opacity: @opacity-disabled;
+    opacity: var(--am-button-disabled-opacity, @opacity-disabled);
+    color: @color-fill-grey-dark;
+    color: var(--am-button-color, @color-fill-grey-dark);
+    background-color: @color-fill-grey-inverse;
+    background-color: var(--am-button-background, @color-fill-grey-inverse);
+  }
+
+  &-active {
+    filter: brightness(0.9);
+    > :nth-child(1n + 1) {
+      opacity: 0.3;
+    }
+    &-text {
+      > :nth-child(1n + 1) {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &-subtitle {
+    padding: @size-2;
+    padding: var(--am-button-doubleline-padding, @size-2);
+    &-subfont {
+      font-size: @font-size-subcontent;
+      font-size: var(--am-button-subtitle-size, @font-size-subcontent);
+    }
+  }
+
+  &-primary,
+  &-primary.@{buttonPrefixCls}-disabled {
+    background-color: @color-fill-primary;
+    background-color: var(--am-button-primary-background, @color-fill-primary);
+    border-color: @color-fill-primary;
+    border-color: var(--am-button-primary-border-color, @color-fill-primary);
+    color: @color-text-base;
+    color: var(--am-button-primary-color, @color-text-base);
+  }
+
+  &-ghost,
+  &-ghost.@{buttonPrefixCls}-disabled {
+    background-color: transparent;
+    border-color: @color-fill-primary;
+    border-color: var(--am-button-ghost-border-color, @color-fill-primary);
+    color: @color-text-primary;
+    color: var(--am-button-ghost-color, @color-text-primary);
+  }
+
+  &-warn,
+  &-warn.@{buttonPrefixCls}-disabled {
+    background-color: @color-fill-warning;
+    background-color: var(--am-button-warn-background, @color-fill-warning);
+    border-color: @color-fill-warning;
+    border-color: var(--am-button-warn-border-color, @color-fill-warning);
+    color: @color-text-base;
+    color: var(--am-button-warn-color, @color-text-base);
+  }
+
+  &-warn-ghost,
+  &-warn-ghost.@{buttonPrefixCls}-disabled {
+    background-color: transparent;
+    border-color: @color-fill-warning;
+    border-color: var(--am-button-warn-ghost-border-color, @color-fill-warning);
+    color: @color-text-warning;
+    color: var(--am-button-warn-ghost-color, @color-text-warning);
+  }
+
+  &-light,
+  &-light.@{buttonPrefixCls}-disabled {
+    background-color: @color-brand-2;
+    background-color: var(--am-button-light-background, @color-brand-2);
+    border-color: @color-brand-2;
+    border-color: var(--am-button-light-border-color, @color-brand-2);
+    color: @color-text-primary;
+    color: var(--am-button-light-color, @color-text-primary);
+  }
+
+  &-text,
+  &-text.@{buttonPrefixCls}-disabled {
+    display: inline-block;
+    background-color: transparent;
+    color: @color-fill-primary;
+    color: var(--am-button-text-color, @color-fill-primary);
+    border: 0;
+    padding: 0;
+  }
+
+  &-capsule {
+    display: inline-block;
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-button-capsule-corner, @corner-radius-circle);
+    padding: @size-1 @size-3;
+    padding: var(--am-button-capsule-padding-v, @size-1) var(--am-button-capsule-padding-h, @size-3);
+    &-large {
+      font-size: @font-size-subtitle;
+      font-size: var(--am-button-capsule-size-l, @font-size-subtitle);
+      &-minwidth {
+        min-width: 168rpx;
+      }
+    }
+    &-medium {
+      font-size: @font-size-content;
+      font-size: var(--am-button-capsule-size-m, @font-size-content);
+      &-minwidth {
+        min-width: 152rpx;
+      }
+    }
+    &-small {
+      font-size: @font-size-subcontent;
+      font-size: var(--am-button-capsule-size-s, @font-size-subcontent);
+      &-minwidth {
+        min-width: 144rpx;
+      }
+    }
+  }
+}

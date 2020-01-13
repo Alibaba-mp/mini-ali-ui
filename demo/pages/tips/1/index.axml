@@ -6,9 +6,10 @@
   >
     <view class="content" slot="content">
       <view>hello,</view>
-      <view>欢迎使用小程序扩展组件库mini-antui</view>
+      <view>欢迎使用小程序扩展组件库mini-ali-ui</view>
     </view>
-    <view slot="operation" class="opt-button" onTap="onDialogTap">知道了</view> 
+    <am-button slot="operation" shape="capsule" onTap="onRectangleTap">知道了</am-button>
+    <!-- <view slot="operation" class="opt-button" onTap="onDialogTap">知道了</view>  -->
   </tips-dialog>
   <tips-dialog
     iconUrl="https://gw.alipayobjects.com/zos/rmsportal/AzRAgQXlnNbEwQRvEwiu.png"
@@ -19,6 +20,7 @@
     <view class="content" slot="content">
       把“城市服务”添加到首页
     </view>
-    <view slot="operation" class="add-home" onTap="onRectangleTap">立即添加</view>
+    <am-button slot="operation" shape="capsule" onTap="onRectangleTap">立即添加</am-button>
+    <!-- <view slot="operation" class="add-home" onTap="onRectangleTap">立即添加</view> -->
   </tips-dialog>
 </view>

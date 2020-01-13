@@ -49,7 +49,7 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents":{
-    "face-detection": "mini-antui/es/face-detection/index"
+    "face-detection": "mini-ali-ui/es/face-detection/index"
   }
 }
 ```

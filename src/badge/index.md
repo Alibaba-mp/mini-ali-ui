@@ -24,9 +24,9 @@
 {
   "defaultTitle": "小程序AntUI组件库",
   "usingComponents": {
-    "list": "mini-antui/es/list/index",
-    "list-item": "mini-antui/es/list/list-item/index",
-    "badge": "mini-antui/es/badge/index"
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "badge": "mini-ali-ui/es/badge/index"
   }
 }
 ```

@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Alphabet",
+  "usingComponents":{
+    "alphabet": "../../es/list/alphabet/index",
+    "am-icon": "../../es/am-icon/index"
+  }
+}

@@ -28,8 +28,8 @@
 ```json
 {  
   "usingComponents": {
-    "popover": "mini-antui/es/popover/index",
-    "popover-item": "mini-antui/es/popover/popover-item/index"
+    "popover": "mini-ali-ui/es/popover/index",
+    "popover-item": "mini-ali-ui/es/popover/popover-item/index"
   }
 }
 ```
