@@ -1,16 +1,21 @@
 @import (reference) "../style/themes/default.less";
+@import "../style/mixins/hairline";
 
 .am-grid {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	padding: @v-spacing-large 0 0 @h-spacing-large;
-	padding: var(--am-grid-paddingTop, @v-spacing-large) 0 0 var(--am-grid-paddingLeft, @h-spacing-large);
+	padding: @v-spacing-large @h-spacing-large 0;
+	padding: var(--am-grid-paddingTop, @v-spacing-large) var(--am-grid-paddingLeft, @h-spacing-large) 0;
 	background-color: @color-fill-grey-inverse;
 	background-color: var(--am-grid-bgc, @color-fill-grey-inverse);
 	box-sizing: border-box;
 	&-3 {
 		padding: 0;
+	}
+	&-4 {
+		padding: @v-spacing-large @h-spacing-large/2 0;
+		padding: var(--am-grid-paddingTop, @v-spacing-large) calc(var(--am-grid-paddingLeft, @h-spacing-large) / 2) 0;
 	}
 	&-5 {
 		flex-wrap: nowrap;
@@ -43,12 +48,6 @@
 			box-sizing: border-box;
 			&-2 {
 				flex-direction: row;
-				margin-right: @h-spacing-large;
-				margin-right: var(--am-grid-item2-marginRight, @h-spacing-large);
-			}
-			&-4 {
-				margin-right: @h-spacing-large;
-				margin-right: var(--am-grid-item4-marginRight, @h-spacing-large);
 			}
 			&-5 {
 				margin-right: @h-spacing-standard;
@@ -61,33 +60,44 @@
 		// 列数控制
 		&-2 {
 			flex: 0 0 50%;
+			&:nth-child(odd) {
+				padding-right: @h-spacing-large;
+				padding-right: var(--am-grid-item2-marginRight, @h-spacing-large);
+			}
+			&:nth-child(even) {
+				padding-left: @h-spacing-large;
+				padding-left: var(--am-grid-item2-marginRight, @h-spacing-large);
+			}
 		}
 		&-3 {
+			position: relative;
 			flex: 0 0 33.33%;
 			margin-bottom: 0;
 			padding: @h-spacing-large;
 			padding: var(--am-grid-item3-padding, @h-spacing-large);
 			text-align: center;
-			border-right: @border-width-standard solid @color-divider-line;
-			border-right: var(--am-grid-item3-borderWidth, @border-width-standard) solid var(--am-grid-item3-borderColor, @color-divider-line);
-			border-bottom: @border-width-standard solid @color-divider-line;
-			border-bottom: var(--am-grid-item3-borderWidth, @border-width-standard) solid var(--am-grid-item3-borderColor, @color-divider-line);
-			&:nth-child(3n) {
-				border-right: 0 none;
-			}
-			&_noBorder {
-				border-bottom: 0 none;
+			.hairline("bottom");
+			.hairline("left");
+			&:nth-child(3n-2)::before,
+			&_noBorder::after {
+				display: none;
 			}
 		}
 		&-4 {
 			flex: 0 0 25%;
+			padding: 0 @h-spacing-large / 2;
+			padding: 0 calc(var(--am-grid-item4-marginRight, @h-spacing-large) / 2);
 		}
 		&-5 {
-			flex: 0 0 20%;
+			flex: 0 0 18.5%;
 		}
 	}
-	&-no-line .am-grid-item-3 {
-		border: 0 none;
+	&-5__overHide .am-grid-item-5 {
+		flex: 0 0 20%;
+	}
+	&-no-line .am-grid-item-3::before,
+	&-no-line .am-grid-item-3::after {
+		display: none;
 	}
 	// grid 中的图标
 	&-icon {

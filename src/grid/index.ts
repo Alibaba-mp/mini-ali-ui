@@ -9,6 +9,7 @@ Component({
     onGridItemClick: () => {},
     hasLine: true,
     infinite: false,
+    infiniteHeight: '90px',
     gridName: '',
   },
   didMount() {
