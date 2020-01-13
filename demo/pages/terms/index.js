@@ -4,9 +4,11 @@ const cfg = {
     agreeBtn: {
       title: '同意协议并开通',
       type: 'primary',
+      data: 'btn1',
     },
     cancelBtn: {
       title: '暂不开通，仅手动缴费',
+      data: 'btn2',
     },
     hasDesc: false,
   },
@@ -55,8 +57,11 @@ Page({
   data: cfg,
   onLoad() {
   },
-  onSelect() {
-    // e.currentTarget.dataset.name
+  onSelect(e) {
+    const selectedData = e.currentTarget.dataset.name || '';
+    selectedData && my.alert({
+      title: selectedData,
+    });
   },
 
 });
