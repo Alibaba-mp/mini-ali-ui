@@ -3,6 +3,7 @@ Component({
     show: true,
     className: '',
     type: 'dialog',
+    iconSize: 20,
   },
   methods: {
     onCloseTap() {

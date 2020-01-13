@@ -5,7 +5,7 @@
 
 .dialog {
   position: fixed;
-  bottom: 10px;
+  bottom: 18px;
 }
 
 .content {
