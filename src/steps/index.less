@@ -19,9 +19,9 @@
 .am-hor-step-line {
   position: relative;
   margin: 6px 0;
-  height: 2px;
-  background-color: @color-fill-grey-base;
-  background-color: var(--am-steps-bottom-color, @color-fill-grey-base);
+  height: 1px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
 }
 
 .am-hor-step-line.is-active {
@@ -37,13 +37,13 @@
   position: absolute;
   top: 50%;
   left: 0;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   transform: translate(-50%, -50%);
   border-radius: @corner-radius-circle;
   border-radius: var(--am-steps-icon-border-radius, @corner-radius-circle);
-  background-color: @color-fill-grey-base;
-  background-color: var(--am-steps-bottom-color, @color-fill-grey-base);
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
 }
 
 .am-hor-step-icon.is-active {
@@ -52,7 +52,7 @@
 }
 
 .am-hor-step-text {
-  margin-top: 20px;
+  margin-top: 8px;
   padding: 0 5px;
   max-width: 90px;
   transform: translateX(-50%);
@@ -66,7 +66,7 @@
 }
 
 .am-hor-step-description {
-  margin-top: 6px;
+  margin-top: 2px;
   font-size: @font-size-subcontent;
   font-size: var(--am-steps-horizontal-description-size, @font-size-subcontent);
   color: @color-text-subtitle;
@@ -75,7 +75,7 @@
 
 /* vertical steps style */
 .am-vertical-steps {
-  padding: 20px 30px 0 30px;
+  padding: 20px 30px 20px 30px;
   background-color: @color-fill-grey-inverse;
   background-color: var(--am-steps-bg-color, @color-fill-grey-inverse);
 }
@@ -98,9 +98,9 @@
 .am-vertical-step-line {
   position: relative;
   top: 10px;
-  width: 2px;
-  background-color: @color-fill-grey-base;
-  background-color: var(--am-steps-bottom-color, @color-fill-grey-base);
+  width: 1px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
 }
 
 .am-vertical-step-line-top {
@@ -110,9 +110,9 @@
 /* 60px 是 am-vertical-step-text的margin-bottom的40px加上line的下移20px，保证line-top底部和右侧文字底布对齐 */
 .am-vertical-step-line-bottom {
   height: 30px;
-  width: 2px;
-  background-color: @color-fill-grey-base;
-  background-color: var(--am-steps-bottom-color, @color-fill-grey-base);
+  width: 1px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
 }
 
 .am-vertical-step-line.is-active {
@@ -143,16 +143,16 @@
 }
 
 .am-vertical-step-image {
-  background-color: @color-fill-grey-base;
-  background-color: var(--am-steps-bottom-color, @color-fill-grey-base);
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
 }
 
 .am-vertical-step-icon.is-normal {
   top: 5px;
-  background-color: @color-fill-grey-base;
-  background-color: var(--am-steps-bottom-color, @color-fill-grey-base);
-  width: 10px;
-  height: 10px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+  width: 8px;
+  height: 8px;
 }
 
 .am-vertical-step-icon.is-active,
@@ -164,7 +164,11 @@
 
 .am-vertical-step-right {
   flex: 1;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+.am-vertical-step-right-last {
+  margin-bottom: 0;
 }
 
 .am-vertical-step-title {
@@ -201,7 +205,7 @@
   left: 50%;
   transform: translateX(-50%);
   height: 100%;
-  width: 2px;
-  background-color: @color-fill-grey-base;
-  background-color: var(--am-steps-bottom-color, @color-fill-grey-base);
+  width: 1px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
 }
