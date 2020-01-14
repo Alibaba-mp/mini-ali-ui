@@ -1,12 +1,3 @@
 <view>
-  <page-result
-    type="network"
-    title="网络不给力"
-    brief="世界上最遥远的距离莫过于此"
-    footer="{{footer}}"
-    onTapLeft="onTapLeft"
-    onTapRight="onTapRight"
-  >
- </page-result>
+  <page-result type="network" footer="{{footer}}" onTapLeft="onTapLeft" onTapRight="onTapRight"></page-result>
 </view>
-
