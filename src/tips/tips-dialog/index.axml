@@ -9,7 +9,9 @@
     <view class="am-tips-dialog-content">
       <slot name="content" />
     </view>
-    <slot name="operation" />
+    <view style="margin-left: 12px; display: inherit">
+      <slot name="operation" />
+    </view>
     <!-- <view class="am-tips-dialog-close-container"> -->
     <!-- <view class="am-tips-dialog-close" onTap="onCloseTap" a:if="{{type === 'rectangle'}}"></view> -->
     <am-icon class="am-tips-dialog-close" 

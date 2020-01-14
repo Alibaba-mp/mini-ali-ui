@@ -13,6 +13,7 @@ Page({
       'right',
     ],
     arrowPosIndex: 0,
+    useButton: true,
   },
   onCloseTap() {
     this.setData({
