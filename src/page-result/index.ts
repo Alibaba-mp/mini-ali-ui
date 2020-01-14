@@ -33,7 +33,7 @@ Component({
     },
     countDownTitle: '',
   },
-  onInit() {
+  didMount() {
     const { countDownText, isCountDown } = this.props;
     if (!isCountDown) {
       return;
