@@ -14,11 +14,11 @@
       onConfirm="onConfirm" 
       onFocus="onFocus" 
       onBlur="onBlur" />
-
     <view class="am-amount-clear {{ value.toString().length > 0 && _focus ? 'am-amount-clear-show' : '' }}" 
       onTap="onClearTap">
-      <icon class="am-amount-clear-icon" 
-        type="clear" 
+      <am-icon class="am-amount-clear-icon" 
+        type="delete_" 
+        color="#ccc" 
         size="22" />
     </view>
   </view>

@@ -2,6 +2,18 @@ Page({
   data: {
     showRectangle: true,
     showDialog: true,
+    arrowPositions: [
+      'bottom-left',
+      'bottom-center',
+      'bottom-right',
+      'top-left',
+      'top-center',
+      'top-right',
+      'left',
+      'right',
+    ],
+    arrowPosIndex: 0,
+    useButton: true,
   },
   onCloseTap() {
     this.setData({
@@ -16,6 +28,13 @@ Page({
   onDialogTap() {
     this.setData({
       showDialog: false,
+    });
+  },
+  setInfo(e) {
+    const { dataset } = e.target;
+    const { name } = dataset;
+    this.setData({
+      [name]: e.detail.value,
     });
   },
 });
