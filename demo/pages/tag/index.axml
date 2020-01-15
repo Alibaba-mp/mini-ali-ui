@@ -7,11 +7,13 @@
   <view/>
   <tag type="success">标签</tag>
   <view/>
-  <tag type="primary" iconType="addFriends">标签</tag>
+  <tag type="primary" iconType="qr">标签</tag>
   <view/>
   <tag type="warning" iconType="add">标签</tag>
   <view/>
   <tag type="danger" iconType="alipay">标签</tag>
   <view/>
   <tag type="success" iconType="ant">标签</tag>
+  <view/>
+  <tag type="primary" ghost>标签</tag>
 </view>
