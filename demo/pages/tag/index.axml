@@ -1,19 +1,29 @@
 <view class="container">
-  <tag type="primary">标签</tag>
-  <view/>
-  <tag type="warning">标签</tag>
-  <view/>
-  <tag type="danger">标签</tag>
-  <view/>
-  <tag type="success">标签</tag>
-  <view/>
-  <tag type="primary" iconType="qr">标签</tag>
-  <view/>
-  <tag type="warning" iconType="add">标签</tag>
-  <view/>
-  <tag type="danger" iconType="alipay">标签</tag>
-  <view/>
-  <tag type="success" iconType="ant">标签</tag>
-  <view/>
-  <tag type="primary" ghost>标签</tag>
+  <view style="display: flex; justify-content: space-evenly;">
+    <tag size="{{sizes[sizeIndex]}}" iconType="{{useIcon ? 'qr' : ''}}" ghost="{{ghost}}" type="primary">标签</tag>
+    <tag size="{{sizes[sizeIndex]}}" iconType="{{useIcon ? 'qr' : ''}}" ghost="{{ghost}}" type="warning">标签</tag>
+    <tag size="{{sizes[sizeIndex]}}" iconType="{{useIcon ? 'qr' : ''}}" ghost="{{ghost}}" type="danger">标签</tag>
+    <tag size="{{sizes[sizeIndex]}}" iconType="{{useIcon ? 'qr' : ''}}" ghost="{{ghost}}" type="success">标签</tag>
+  </view>
+  <view style="padding: 20px 10px;">
+    <picker onChange="setInfo" 
+      value="{{sizeIndex}}" 
+      range="{{sizes}}" 
+      data-name="sizeIndex">
+      <view class="row">
+        <view class="row-title">尺寸</view>
+        <view class="row-extra">当前选择：{{sizes[sizeIndex]}}</view>
+        <am-icon type="right" 
+          size="13" />
+      </view>
+    </picker>
+    <list-item>
+      图标
+      <switch slot="extra" onChange="setInfo" data-name="useIcon" checked="{{useIcon}}"/>
+    </list-item>
+    <list-item>
+      线框样式
+      <switch slot="extra" onChange="setInfo" data-name="ghost" checked="{{ghost}}"/>
+    </list-item>
+  </view>
 </view>

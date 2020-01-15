@@ -1,5 +1,8 @@
 Page({
-  data: {},
+  data: {
+    sizes: ['lg', 'sm'],
+    sizeIndex: 0,
+  },
   onLoad() {},
   titleGo() {
     my.showToast({
@@ -14,6 +17,14 @@ Page({
   titleClose() {
     my.showToast({
       content: '点击关闭，可设置关闭',
+    });
+  },
+  setInfo(e) {
+    const { dataset } = e.target;
+    const { name } = dataset;
+    console.log(e.detail.value);
+    this.setData({
+      [name]: e.detail.value,
     });
   },
 });

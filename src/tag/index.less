@@ -3,13 +3,21 @@
 .am-tag {
   display: inline-flex;
   align-items: center;
-  padding: 0 2px;
-  font-size: @font-size-subtitle;
-  font-size: var(--am-tag-text-fontSize, @font-size-subtitle);
   border-radius: @corner-radius-sm;
+  border-radius: var(--am-tag-border-radius, @corner-radius-sm);
   position: relative;
-  &-with-icon {
+  &-with-icon.am-tag-sm {
     padding: 0 3px;
+  }
+  &-sm {
+    font-size: @font-size-weak;
+    font-size: var(--am-tag-sm-font-size, @font-size-weak);
+    padding: 0 2px;
+  }
+  &-lg {
+    font-size: @font-size-subcontent;
+    font-size: var(--am-tag-lg-font-size, @font-size-subcontent);
+    padding: 2px 4px;
   }
   &-bg-primary {
     background: @color-brand-1;
@@ -27,29 +35,37 @@
     background: @color-tangerine-1;
     background: var(--am-tag-bg-danger, @color-tangerine-1);
   }
-  &-ghost-primary {
+  &-ghost {
     background: @color-fill-grey-inverse;
-    // background: var(@color-fill-grey-inverse);
+    background: var(--am-tag-ghost-bg, @color-fill-grey-inverse);
+  }
+  &-ghost-primary {
     color: @color-brand-1;
+    color: var(--am-tag-ghost-primary-color, @color-brand-1);
     border: 1px solid @color-brand-1;
+    border: 1px solid var(--am-tag-ghost-primary, @color-brand-1);
   }
   &-ghost-warning {
-    background: @color-orange-1;
-    background: var(--am-tag-bg-warning, @color-orange-1);
+    color: @color-orange-1;
+    color: var(--am-tag-ghost-warning-color, @color-orange-1);
+    border: 1px solid @color-orange-1;
+    border: 1px solid var(--am-tag-ghost-warning, @color-orange-1);
   }
   &-ghost-success {
-    background: @color-pomonagreen-1;
-    background: var(--am-tag-bg-success, @color-pomonagreen-1);
+    color: @color-pomonagreen-1;
+    color: var(--am-tag-ghost-success, @color-pomonagreen-1);
+    border: 1px solid @color-pomonagreen-1;
+    border: 1px solid var(--am-tag-ghost-success, @color-pomonagreen-1);
   }
   &-ghost-danger {
-    background: @color-tangerine-1;
-    background: var(--am-tag-bg-danger, @color-tangerine-1);
+    color: @color-tangerine-1;
+    color: var(--am-tag-ghost-danger, @color-tangerine-1);
+    border: 1px solid @color-tangerine-1;
+    border: 1px solid var(--am-tag-ghost-danger, @color-tangerine-1);
   }
   &-icon {
     overflow: hidden;
     margin-right: 3px;
-    // margin-right: @h-spacing-standard;
-    // margin-right: var(--am-tag-icon-marginRight, @h-spacing-standard);
     line-height: @line-height-paragraph;
     line-height: var(--am-tag-line-height, @line-height-paragraph);
     background-position: center;
@@ -62,8 +78,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: @font-size-subcontent;
-    font-size: var(--am-tag-text-font-size, @font-size-subcontent);
+    // font-size: @font-size-subcontent;
+    // font-size: var(--am-tag-text-font-size, @font-size-subcontent);
     line-height: @line-height-paragraph;
     line-height: var(--am-tag-line-height, @line-height-paragraph);
   }
