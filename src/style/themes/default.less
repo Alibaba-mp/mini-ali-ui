@@ -249,6 +249,8 @@
   /* title */
   /* size | 底内间距 */
   --am-title-paddingB: var(--am-v-spacing-large);
+  /* size | 左右内间距 */
+  --am-title-paddingLR: var(--am-h-spacing-large);
   /* size | 底外边距 */
   --am-title-marginBottom: var(--am-v-spacing-large);
   /* size | 底边线尺寸 */
@@ -529,8 +531,10 @@
   --am-tabs-title-paddingTop: var(--am-v-spacing-large);
   /* size | 文字选项卡下内边距 */
   --am-tabs-title-paddingBottom: var(--am-v-spacing-large);
-  /* size | 胶囊文字内边距 */
-  --am-tabs-title-capsule-padding: var(--am-h-spacing-large);
+  /* size | 胶囊文字上下内边距 */
+  --am-tabs-title-capsule-paddingTB: var(--am-h-spacing-standard);
+  /* size | 胶囊文字左右内边距 */
+  --am-tabs-title-capsule-paddingLR: var(--am-h-spacing-large);
   /* color | 未激活的胶囊文字背景色 */
   --am-tabs-title-capsule-bgc: var(--am-color-fill-grey-light);
   /* color | tabs 选项卡内容区域背景色 */
@@ -990,4 +994,24 @@
   --am-result-margin-vertical: var(--am-size-5);
   /* size | 异常组件 主标题最大宽度水平边距 */
   --am-result-title-h-spacing: var(--am-size-12);
+
+  /* collapse */
+  /* color | 折叠面板背景色 */
+  --am-collapse-bgc: var(--am-color-fill-grey-inverse);
+  /* color | 折叠面板标题文字颜色 */
+  --am-collapse-title-color: var(--am-color-text-title);
+  /* font-size | 折叠面板标题文字大小 */
+  --am-collapse-title-fontSize: var(--am-font-size-list);
+  /* spacing | 折叠面板标题区域左右间距 */
+  --am-collapse-title-marginLR: var(--am-h-spacing-large);
+  /* spacing | 折叠面板标题区域上下间距 */
+  --am-collapse-title-paddingTB: var(--am-v-spacing-large);
+  /* font-size | 折叠面板箭头大小 */
+  --am-collapse-arrow-size: var(--am-font-size-list);
+  /* color | 折叠面板箭头颜色 */
+  --am-collapse-arrow-color: var(--am-color-text-weak);
+  /* opacity | 折叠面板不可用时标题透明度 */
+  --am-collapse-disabled: var(--am-opacity-disabled);
+  /* spacing | 折叠面板标题文字与箭头之间的保留空间 */
+  --am-collapse-title-arrow-spacing: var(--am-h-spacing-large);
 }

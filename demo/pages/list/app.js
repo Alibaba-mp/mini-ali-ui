@@ -218,7 +218,7 @@ Page({
       },
       {
         name: 'Collapse',
-        nameZN: '（旧组件）折叠',
+        nameZN: '折叠',
         path: '/pages/collapse/index',
       },
     ],
