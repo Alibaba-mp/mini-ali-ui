@@ -2,7 +2,7 @@
   onTap="onClick">
   <am-icon a:if="{{iconType}}" 
     type="{{iconType}}" 
-    size="10" 
+    size="{{size === 'sm' ? 10 : 12}}" 
     class="am-tag-icon" />
   <view class="am-tag-text ">
     <slot></slot>
