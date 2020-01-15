@@ -5,7 +5,7 @@ Component({
   props: {
     className: '',
     topImageSize: 'md',
-    showClose: true,
+    showClose: false,
     closeType: '0',
     mask: true,
     buttonsLayout: 'horizontal',

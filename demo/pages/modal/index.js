@@ -4,6 +4,7 @@ Page({
     modalOpened2: false,
     modalOpened21: false,
     modalOpened22: false,
+    modalOpened23: false,
     modalOpened3: false,
     modalOpened4: false,
     modalOpened5: false,
@@ -88,6 +89,22 @@ Page({
   onModalClose22() {
     this.setData({
       modalOpened22: false,
+    });
+  },
+  /* 带图弹框-关闭icon */
+  openModal23() {
+    this.setData({
+      modalOpened23: true,
+    });
+  },
+  onModalClick23() {
+    this.setData({
+      modalOpened23: false,
+    });
+  },
+  onModalClose23() {
+    this.setData({
+      modalOpened23: false,
     });
   },
   /* 运营活动弹框-大 */
