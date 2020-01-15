@@ -3,6 +3,7 @@
   "usingComponents": {
     "tips-dialog": "../../../es/tips/tips-dialog/index",
     "am-button": "../../../es/button/index",
-    "list-item": "../../../es/list/list-item/index"
+    "list-item": "../../../es/list/list-item/index",
+    "input-item": "../../../es/input-item/index"
   }
 }

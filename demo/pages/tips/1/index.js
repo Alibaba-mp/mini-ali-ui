@@ -12,7 +12,7 @@ Page({
       'left',
       'right',
     ],
-    arrowPosIndex: 0,
+    arrowPosIndex: 3,
     useButton: true,
   },
   onCloseTap() {
