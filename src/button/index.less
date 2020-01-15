@@ -11,8 +11,9 @@
   border-radius: var(--am-button-corner-radius, @corner-radius-md);
   color: @color-fill-grey-dark;
   color: var(--am-button-color, @color-fill-grey-dark);
-  border: @border-width-standard solid @color-fill-grey-light;
-  border: var(--am-button-border-size, @border-width-standard) solid var(--am-button-border-color, @color-fill-grey-light);
+  border: 0 none;
+  box-shadow: inset 0 0 0 @border-width-standard @color-fill-grey-light;
+  box-shadow: inset 0 0 0 var(--am-button-border-size, @border-width-standard) var(--am-button-border-color, @color-fill-grey-light);
   background-color: @color-fill-grey-inverse;
   background-color: var(--am-button-background, @color-fill-grey-inverse);
 
@@ -61,48 +62,45 @@
   &-primary.@{buttonPrefixCls}-disabled {
     background-color: @color-fill-primary;
     background-color: var(--am-button-primary-background, @color-fill-primary);
-    border-color: @color-fill-primary;
-    border-color: var(--am-button-primary-border-color, @color-fill-primary);
     color: @color-text-base;
     color: var(--am-button-primary-color, @color-text-base);
+    box-shadow: 0 0 0 0;
   }
 
   &-ghost,
   &-ghost.@{buttonPrefixCls}-disabled {
     background-color: transparent;
-    border-color: @color-fill-primary;
-    border-color: var(--am-button-ghost-border-color, @color-fill-primary);
     color: @color-text-primary;
     color: var(--am-button-ghost-color, @color-text-primary);
+    box-shadow: inset 0 0 0 @border-width-standard @color-fill-primary;
+    box-shadow: inset 0 0 0 var(--am-button-border-size, @border-width-standard) var(--am-button-ghost-border-color, @color-fill-primary);
   }
 
   &-warn,
   &-warn.@{buttonPrefixCls}-disabled {
     background-color: @color-fill-warning;
     background-color: var(--am-button-warn-background, @color-fill-warning);
-    border-color: @color-fill-warning;
-    border-color: var(--am-button-warn-border-color, @color-fill-warning);
     color: @color-text-base;
     color: var(--am-button-warn-color, @color-text-base);
+    box-shadow: 0 0 0 0;
   }
 
   &-warn-ghost,
   &-warn-ghost.@{buttonPrefixCls}-disabled {
     background-color: transparent;
-    border-color: @color-fill-warning;
-    border-color: var(--am-button-warn-ghost-border-color, @color-fill-warning);
     color: @color-text-warning;
     color: var(--am-button-warn-ghost-color, @color-text-warning);
+    box-shadow: inset 0 0 0 @border-width-standard @color-fill-warning;
+    box-shadow: inset 0 0 0 var(--am-button-border-size, @border-width-standard) var(--am-button-ghost-border-color, @color-fill-warning);
   }
 
   &-light,
   &-light.@{buttonPrefixCls}-disabled {
     background-color: @color-fill-primary-light;
     background-color: var(--am-button-light-background, @color-fill-primary-light);
-    border-color: @color-fill-primary-light;
-    border-color: var(--am-button-light-border-color, @color-fill-primary-light);
     color: @color-text-primary;
     color: var(--am-button-light-color, @color-text-primary);
+    box-shadow: 0 0 0 0;
   }
 
   &-text,
@@ -113,6 +111,7 @@
     color: var(--am-button-text-color, @color-fill-primary);
     border: 0;
     padding: 0;
+    box-shadow: 0 0 0 0;
   }
 
   &-capsule {

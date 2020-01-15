@@ -10,6 +10,7 @@
   padding: @size-8 @size-3;
   padding: var(--am-message-padding-h, @size-8) var(--am-message-padding-v, @size-3);
   text-align: center;
+  line-height: normal;
   box-sizing: border-box;
   position: relative;
   .hairline('bottom');
@@ -54,12 +55,12 @@
 
   &-button-wrap {
     .amFormat(margin-top, am-message-margintop, @size-5);
-    padding: 0 @size-4;
-    padding: 0 var(--am-message-button-margin, @size-4);
+    padding: 0 @size-3;
+    padding: 0 var(--am-message-button-margin, @size-3);
 
     & .a-button {
-      margin-bottom: @size-4;
-      margin-bottom: var(--am-message-button-margin, @size-4);
+      margin-bottom: @size-3;
+      margin-bottom: var(--am-message-button-margin, @size-3);
     }
 
     & .a-button:last-child {
