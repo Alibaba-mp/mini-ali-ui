@@ -11,7 +11,7 @@
     <view class="item">c1</view>
     <view class="item">c2</view>
     <view class="item">c3</view>
-    <view slot="footer" class="footer">底部展示区</view>
+    <view slot="footer" class="footer" style="padding-left: 12px;">底部展示区</view>
   </container>
   <container className="container-item">
     <title slot="header">滑动</title>

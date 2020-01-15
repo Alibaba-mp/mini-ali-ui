@@ -5,10 +5,15 @@
   width: 100%;
   border-radius: @corner-radius-lg;
   border-radius: var(--am-container-corner-radius, @corner-radius-lg);
-  padding: @v-spacing-large @h-spacing-large;
-  padding: var(--am-container-padding-v, @v-spacing-large) var(--am-container-padding-h, @h-spacing-large);
+  padding: @v-spacing-large 0;
+  padding: var(--am-container-padding-v, @v-spacing-large) 0;
   background: @color-fill-grey-inverse;
   background: var(--am-container-background, @color-fill-grey-inverse);
+
+  &-content-box {
+    padding: 0 @h-spacing-large;
+    padding: 0 var(--am-container-padding-h, @h-spacing-large);
+  }
 
   &-content {
     display: flex;
