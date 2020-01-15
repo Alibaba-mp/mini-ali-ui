@@ -1,8 +1,5 @@
 Page({
-  data: {
-    sizes: ['lg', 'sm'],
-    sizeIndex: 0,
-  },
+  data: {},
   onLoad() {},
   titleGo() {
     my.showToast({
