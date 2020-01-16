@@ -10,7 +10,7 @@ Page({
     lowerSubtitle: '',
     thumb,
     useThumb: true,
-    thumbSize: 44,
+    thumbSize: 40,
     primarySlotTypes: ['无内容', '标签', '问号图标'],
     supSlotTypes: ['无内容', '标签', '问号图标', '勾图标', '文字内容'],
     secSlotTypes: [

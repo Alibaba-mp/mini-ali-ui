@@ -8,6 +8,7 @@
     "am-icon": "../../es/am-icon/index",
     "title": "../../es/title/index",
     "input-item": "../../es/input-item/index",
-    "am-button": "../../es/button/index"
+    "am-button": "../../es/button/index",
+    "am-checkbox": "../../es/am-checkbox/index"
   }
 }
