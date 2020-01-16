@@ -19,12 +19,13 @@
       onBlur="onBlur" />
     <view class="am-long-password-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
       onTap="onClear">
-      <icon size="18" 
-        type="clear" />
+      <am-icon size="20" 
+        type="close_" 
+        color="#ccc" />
     </view>
     <view class="am-long-password-eye" 
       onTap="onSwitchVisible">
-      <am-icon type="{{!visible ? 'eye-close' : 'eye'}}" 
+      <am-icon type="{{!visible ? 'eye-close' : 'eye_'}}" 
         size="20" 
         color="#1677ff"></am-icon>
     </view>

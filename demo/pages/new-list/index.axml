@@ -11,21 +11,23 @@
       thumbSize="{{thumbSize}}"
       last="{{true}}">
         {{title}}
-        <tag a:if="{{primarySlotTypes[titleSlotIndex] === '标签'}}" slot="afterTitle">{{titleTagText}}</tag>
-        <tag a:if="{{primarySlotTypes[upperSlotIndex] === '标签'}}" slot="afterUpperSubtitle">{{upperTagText}}</tag>
-        <tag a:if="{{primarySlotTypes[lowerSlotIndex] === '标签'}}" slot="afterLowerSubtitle">{{lowerTagText}}</tag>
+        <tag a:if="{{primarySlotTypes[titleSlotIndex] === '标签'}}" size="sm" slot="afterTitle">{{titleTagText}}</tag>
+        <tag a:if="{{primarySlotTypes[upperSlotIndex] === '标签'}}" size="sm" slot="afterUpperSubtitle">{{upperTagText}}</tag>
+        <tag a:if="{{primarySlotTypes[lowerSlotIndex] === '标签'}}" size="sm" slot="afterLowerSubtitle">{{lowerTagText}}</tag>
         <am-icon a:if="{{primarySlotTypes[titleSlotIndex] === '问号图标'}}" size="{{titleIconSize}}" type="question_" slot="afterTitle" color="#1677ff" />
         <am-icon a:if="{{primarySlotTypes[upperSlotIndex] === '问号图标'}}" size="{{upperIconSize}}" type="question_" slot="afterUpperSubtitle" color="#1677ff" />
         <am-icon a:if="{{primarySlotTypes[lowerSlotIndex] === '问号图标'}}" size="{{lowerIconSize}}" type="question_" slot="afterLowerSubtitle" color="#1677ff" />
 
         <am-icon a:if="{{supSlotTypes[supSlotIndex] === '问号图标'}}" type="question_" slot="supporting" color="#1677ff" size="{{supIconSize}}" />
-        <am-icon a:if="{{supSlotTypes[supSlotIndex] === '勾图标'}}" type="check_" slot="supporting" color="#1677ff" size="{{supIconSize}}" />
-        <tag a:if="{{supSlotTypes[supSlotIndex] === '标签'}}" slot="supporting">{{supTagText}}</tag>
+        <!-- <am-icon a:if="{{supSlotTypes[supSlotIndex] === '勾图标'}}" type="check_" slot="supporting" color="#1677ff" size="{{supIconSize}}" /> -->
+        <am-checkbox a:if="{{supSlotTypes[supSlotIndex] === '勾图标'}}" slot="supporting" />
+        <tag a:if="{{supSlotTypes[supSlotIndex] === '标签'}}" size="sm" slot="supporting">{{supTagText}}</tag>
         <view a:if="{{supSlotTypes[supSlotIndex] === '文字内容'}}" slot="supporting">{{supText}}</view>
         
         <am-icon a:if="{{secSlotTypes[secSlotIndex] === '问号图标'}}" type="question_" slot="extra" color="#1677ff" size="{{secIconSize}}" />
-        <am-icon a:if="{{secSlotTypes[secSlotIndex] === '勾图标'}}" type="check_" slot="extra" color="#1677ff" size="{{secIconSize}}" />
-        <tag a:if="{{secSlotTypes[secSlotIndex] === '标签'}}" slot="extra">{{secTagText}}</tag>
+        <!-- <am-icon a:if="{{secSlotTypes[secSlotIndex] === '勾图标'}}" type="check_" slot="extra" color="#1677ff" size="{{secIconSize}}" /> -->
+        <am-checkbox a:if="{{secSlotTypes[secSlotIndex] === '勾图标'}}" slot="extra" />
+        <tag a:if="{{secSlotTypes[secSlotIndex] === '标签'}}" size="sm" slot="extra">{{secTagText}}</tag>
         <view a:if="{{secSlotTypes[secSlotIndex] === '文字内容'}}" slot="extra">{{secText}}</view>
         <switch a:if="{{secSlotTypes[secSlotIndex] === '开关'}}" slot="extra" />
         <am-button a:if="{{secSlotTypes[secSlotIndex] === '胶囊按钮'}}"	shape="capsule"	type="ghost"  slot="extra" >{{secText}}</am-button>

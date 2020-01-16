@@ -27,73 +27,67 @@
     // line-height: var(--am-tips-dialog-line-height, @line-height-paragraph);
   }
 
-  // &-wrap::before {
-  //   content: '';
+  // &-floater {
   //   position: absolute;
-  //   bottom: -9px;
-  //   left: 40px;
-  //   margin-left: -8px;
-  //   width: 1px;
-  //   border-left: 8px solid transparent;
-  //   border-right: 8px solid transparent;
-  //   border-top: 9px solid rgba(0, 0, 0, 0.75);
-  //   // border-top: 9px solid var(--am-tips-dialog-bg-color, @color-fill-grey-dark);
+  //   width: 100%;
   // }
+
   &-arrow {
     position: absolute;
-    width: 1px;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 9px solid rgba(0, 0, 0, 0.75);
+    width: 15px;
+    height: 8px;
   }
 
   &-arrow-bottom-left {
-    bottom: -9px;
-    left: 16px;
+    bottom: -8px;
+    left: 26px;
+    // transform: scaleY(1.07);
   }
 
   &-arrow-bottom-right {
-    bottom: -9px;
-    right: 16px;
+    bottom: -8px;
+    right: 26px;
+    // transform: scaleY(1.07);
   }
 
   &-arrow-bottom-center {
-    bottom: -9px;
+    bottom: -8px;
     left: 50%;
     margin-left: -8px;
+    // transform: scaleY(1.07);
   }
 
   &-arrow-top-left {
-    top: -9px;
-    left: 16px;
-    transform: rotate(180deg);
+    top: -8px;
+    left: 26px;
+    transform: rotate(180deg) /* scaleY(1.07) */;
   }
 
   &-arrow-top-right {
-    top: -9px;
-    right: 16px;
-    transform: rotate(180deg);
+    top: -8px;
+    right: 26px;
+    transform: rotate(180deg) /* scaleY(1.07) */;
   }
 
   &-arrow-top-center {
-    top: -9px;
+    top: -8px;
     left: 50%;
     margin-left: -8px;
-    transform: rotate(180deg);
+    transform: rotate(180deg) /* scaleY(1.07) */;
   }
 
   &-arrow-left {
     top: 50%;
-    left: -13px;
+    left: -11px;
     margin-top: -4px;
-    transform: rotate(90deg);
+    transform: rotate(90deg) /* scaleY(1.19) */;
   }
 
   &-arrow-right {
     top: 50%;
-    right: -13px;
+    right: -11px;
     margin-top: -4px;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) /* scaleY(1.19) */;
   }
 
   &-wrap &-rectangle {

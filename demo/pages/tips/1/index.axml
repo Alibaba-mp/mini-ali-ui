@@ -17,7 +17,10 @@
       slot="content">
       箭头有8个方向。字数字数字数字数字两行
     </view>
-    <am-button a:if="{{useButton}}" slot="operation" shape="capsule" onTap="onRectangleTap">立即添加</am-button>
+    <am-button a:if="{{useButton}}" 
+      slot="operation" 
+      shape="capsule" 
+      onTap="onRectangleTap">立即添加</am-button>
     <!-- <view slot="operation" class="add-home" onTap="onRectangleTap">立即添加</view> -->
   </tips-dialog>
   <view style="padding: 20px 10px;">
