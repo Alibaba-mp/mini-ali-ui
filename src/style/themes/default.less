@@ -297,6 +297,10 @@
   --am-container-padding-item: var(--am-v-spacing-standard);
 
   /* list-item */
+  /* spacing | 圆角时外部间距 */
+  --am-list-item-outside-spacing: var(--am-h-spacing-large);
+  /* spacing | 整体圆角值 */
+  --am-list-item-border-radius: var(--am-corner-radius-lg);
   /* color | 内容标题字色 */
   --am-list-item-content-color: var(--am-color-text-title);
   /* color | 内容副标题字色 */
@@ -588,7 +592,7 @@
   /* color | 主体色 */
   --am-steps-color: var(--am-color-fill-primary);
   /* color | 主体底色 */
-  --am-steps-bottom-color: var(--am-color-fill-grey-base);
+  --am-steps-bg-color: var(--am-color-fill-grey-light);
   /* border-radius | 步骤点圆角 */
   --am-steps-icon-border-radius: var(--am-corner-radius-circle);
   /* color | 纵向步骤条当前步骤标题字色 */
@@ -764,7 +768,7 @@
   /* size | 主按钮上边距 */
   --am-message-margintop: var(--am-size-5);
   /* size | 次按钮间距 */
-  --am-message-button-margin: var(--am-size-4);
+  --am-message-button-margin: var(--am-size-3);
 
   /* footer */
   /* font-size | 页脚文本字体大小 */
@@ -911,10 +915,10 @@
   --am-terms-link-color: var(--am-color-text-primary);
   /* line-height | 字体行高 */
   --am-terms-content-line-height: var(--am-line-height-base);
-   /* size | 协议提示上下外间距 */
+  /* size | 协议提示上下外间距 */
   --am-terms-content-margin: var(--am-size-5);
   /* size | 协议按钮上下外间距 */
-  --am-terms-button-margin: var(--am-h-spacing-standard);
+  --am-terms-button-margin: var(--am-v-spacing-large);
   /* font-size | 协议描述字体大小 */
   --am-terms-desc-font-size: var(--am-font-size-subtitle);
   /* color | 协议提示字体颜色 */
@@ -923,8 +927,10 @@
   --am-terms-desc-line-height: var(--am-line-height-base);
   /* size | 协议提示上下外间距 */
   --am-terms-desc-margin: var(--am-v-spacing-standard);
-   /* color | 协议提示吸顶上下内部间距 */
+  /* color | 协议提示吸顶上下内部间距 */
   --am-terms-fixed-padding: var(--am-v-spacing-standard);
+  /* size | 文字与checkbox水平间距 */
+  --am-terms-checkbox-margin: var(--am-h-spacing-standard);
 
   /* search-bar */
   /* color | 背景色 */
@@ -973,6 +979,7 @@
   --am-filter-title-pick-color: var(--am-color-text-primary);
   /* color | 选中态背景色 */
   --am-filter-pick-background: var(--am-color-fill-primary-light);
+
   /* page-result */
   /* font-size | 全局异常组件 主标题字体大小 */
   --am-result-title-fontSize: var(--am-font-size-title);
@@ -1014,4 +1021,52 @@
   --am-collapse-disabled: var(--am-opacity-disabled);
   /* spacing | 折叠面板标题文字与箭头之间的保留空间 */
   --am-collapse-title-arrow-spacing: var(--am-h-spacing-large);
+
+  /* tag | 标签 */
+  /* color | 危险背景色 */
+  --am-tag-bg-danger: @color-tangerine-2;
+  /* color | 主题背景色 */
+  --am-tag-bg-primary: @color-brand-1;
+  /* color | 成功背景色 */
+  --am-tag-bg-success: @color-pomonagreen-1;
+  /* color | 警告背景色 */
+  --am-tag-bg-warning: @color-orange-1;
+  /* color | 带图标危险背景色 */
+  --am-tag-icon-bg-danger: @color-tangerine-2;
+  /* color | 带图标主题背景色 */
+  --am-tag-icon-bg-primary: @color-brand-2;
+  /* color | 带图标成功背景色 */
+  --am-tag-icon-bg-success: @color-pomonagreen-2;
+  /* color | 带图标警告背景色 */
+  --am-tag-icon-bg-warning: @color-orange-2;
+  /* color | 带图标危险字色 */
+  --am-tag-icon-font-danger: @color-tangerine-1;
+  /* color | 带图标主题字色 */
+  --am-tag-icon-font-primary: @color-brand-1;
+  /* color | 带图标成功字色 */
+  --am-tag-icon-font-success: @color-pomonagreen-1;
+  /* color | 带图标警告字色 */
+  --am-tag-icon-font-warning: @color-orange-1;
+  /* line-height | 行高 */
+  --am-tag-line-height: @line-height-paragraph;
+  /* color | 无图标时字色 */
+  --am-tag-text-color: @color-text-base;
+  /* font-size | 字号 */
+  --am-tag-lg-font-size: @font-size-subtitle;
+  /* corner-radius | 圆角 */
+  --am-tag-border-radius: @corner-radius-sm;
+  /* color | 幽灵标签主题色 */
+  --am-tag-ghost-primary: @color-brand-1;
+  /* color | 幽灵标签警告色 */
+  --am-tag-ghost-warning: @color-orange-1;
+  /* color | 幽灵标签成功色 */
+  --am-tag-ghost-success: @color-orange-1;
+  /* color | 幽灵标签成功色 */
+  --am-tag-ghost-danger: @color-orange-1;
+  /* color | 幽灵标签底色 */
+  --am-tag-ghost-bg: @color-fill-grey-inverse;
+  /* font-size | 小字号 */
+  --am-tag-sm-font-size: @font-size-weak;
+  /* font-size | 大字号 */
+  --am-tag-lg-font-size: @font-size-subcontent;
 }

@@ -1,15 +1,19 @@
-<view class="am-list-item am-list-{{align}} {{multipleLine ? 'am-list-multiple' : ''}} {{last ? 'last': ''}} {{className}}" 
+<view class="am-list-item am-list-{{align}} {{multipleLine ? 'am-list-multiple' : ''}} {{last ? 'last': ''}} {{borderRadius ? 'am-list-item-radius' : ''}} {{className}}" 
 	hover-class="{{disabled ? '' : 'am-list-item-hover'}}" 
 	onTap="onItemTap" 
 	data-index="{{index}}">
-	<view a:if={{$slots.supporting}} class="am-list-supporting">
-		<slot name="supporting" />
-	</view>
-	<view class="am-list-line {{wrap ? 'am-list-wrap' : ''}}">
+	<view class="am-list-prefix">
+		<view a:if={{$slots.supporting}} class="am-list-supporting">
+			<slot name="supporting" />
+		</view>
 		<auto-sizer a:if="{{thumb}}" 
 			placeholder="{{thumbPlaceholder}}" 
 			src="{{thumb}}" 
 			size="{{thumbSize}}" />
+	</view>
+	<view class="am-list-line {{wrap ? 'am-list-wrap' : ''}}">
+
+		<!-- <view class="am-list-main"> -->
 		<view class="am-list-content">
 			<view a:if="{{titlePosition === 'top'}}" 
 				class="am-list-content-title">
@@ -49,12 +53,15 @@
 			class="am-list-extra">
 			<slot name="extra" />
 		</view>
-		<view a:if="{{arrow}}" class="am-list-arrow">
+		<view a:if="{{arrow}}" 
+			class="am-list-arrow">
 			<am-icon type="right" 
 				class="am-list-arrow-icon" 
 				size="13" 
 				color="#ccc" />
 		</view>
-		<view class="am-list-line-bottom" />
+		<!-- <view class="am-list-line-bottom" /> -->
+		<!-- </view> -->
+
 	</view>
 </view>

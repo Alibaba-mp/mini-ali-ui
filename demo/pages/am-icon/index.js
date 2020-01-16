@@ -7,7 +7,7 @@ Page({
       'add-square',
       'file',
       'text',
-      'minus-sqaure',
+      'minus-square',
       'barcode',
       'wallet',
       'scan-code',

@@ -14,7 +14,7 @@ Page({
       title: '步骤1',
       description: '这是步骤1的描述文档，文字足够多的时候会换行，设置了成功的icon',
       activeIcon: 'https://i.alipayobjects.com/common/favicon/favicon.ico',
-      size: 32,
+      size: 20,
     }, {
       title: '步骤2 如果标题足够长的话也会换行的',
       description: '这是步骤2，同时设置了两种状态的icon',

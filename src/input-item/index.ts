@@ -60,5 +60,10 @@ Component({
       const event = fmtEvent(this.props, e);
       this.props.onClear(event);
     },
+    onTap() {
+      // this.setData({
+      //   _focus: true,
+      // });
+    },
   },
 });

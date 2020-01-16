@@ -28,18 +28,18 @@
         a:if="{{index < items.length - 1}}"
       ></view>
       <view class="am-vertical-step-icon is-fail" a:if="{{index == failIndex - 1}}">
-        <icon type="cancel" size="{{item.size || size || 24}}"/>
+        <icon type="cancel" size="{{item.size || size || 20}}"/>
       </view>
       <view class="am-vertical-step-icon is-active" a:elif="{{index <= activeIndex - 1}}">
-        <image mode="widthFix" class="am-vertical-step-active-image" a:if="{{item.activeIcon}}" src="{{item.activeIcon}}" style="width: {{item.size || size || 24}}px;"/>
-        <icon a:else type="success" size="{{item.size || size || 24}}"/>
+        <image mode="widthFix" class="am-vertical-step-active-image" a:if="{{item.activeIcon}}" src="{{item.activeIcon}}" style="width: {{item.size || size || 20}}px;"/>
+        <icon a:else type="success" size="{{item.size || size || 20}}"/>
       </view>
       <view a:else>
-        <image mode="widthFix" class="am-vertical-step-icon am-vertical-step-image" a:if="{{item.icon}}" src="{{item.icon}}" style="width: {{item.size || size || 24}}px;"/>
-        <view class="am-vertical-step-icon is-normal" a:else style="width: {{item.size || size || 10}}px; height: {{item.size || size || 10}}px;"></view>
+        <image mode="widthFix" class="am-vertical-step-icon am-vertical-step-image" a:if="{{item.icon}}" src="{{item.icon}}" style="width: {{item.size || size || 20}}px;"/>
+        <view class="am-vertical-step-icon is-normal" a:else style="width: {{item.size || size || 8}}px; height: {{item.size || size || 8}}px;"></view>
       </view>
     </view>
-    <view class="am-vertical-step-right">
+    <view class="am-vertical-step-right {{index === items.length - 1 ? 'am-vertical-step-right-last': ''}}">
       <view class="am-vertical-step-title {{index <= activeIndex - 1 ? 'is-active' : ''}} {{index == failIndex - 1 ? 'is-fail' : ''}}">
         <text>{{item.title}}</text>
       </view>

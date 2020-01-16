@@ -14,7 +14,8 @@
 @modal-body-max-width: 638px * @pixelSize; /* 弹框最大宽度 */
 @modal-advice-border-radius-size: 16px * @pixelSize; /* advice close icon 大小 */
 @modal-advice-close-bottom: 100px * @pixelSize; /* advice close bottom距离 */
-@modal-advice-close-size: 56px * @pixelSize; /* advice close icon 大小 */
+@modal-advice-close-size: 52px * @pixelSize; /* advice close icon 大小 */
+@modal-advice-margin-size: 48px * @pixelSize; /* advice close icon 顶部距离 */
 
 .am-modal {
   background-color: @color-fill-grey-inverse;
@@ -191,7 +192,9 @@
     bottom: -@modal-advice-close-bottom;
     top: auto;
     right: 50%;
-    transform: translateX(50%) translateY(25%);
+    transform: translateX(50%);
+    line-height: 1;
+    margin-top: @modal-advice-margin-size;
     height: @modal-advice-close-size;
     width: @modal-advice-close-size;
   }

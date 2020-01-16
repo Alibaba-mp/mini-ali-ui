@@ -1,6 +1,10 @@
-<view class="am-tag {{bgClass[type]}} {{className}} {{iconType ? iconClass[type]: 'am-tag-text-plain'}}" onTap="onClick">
-  <am-icon a:if="{{iconType}}" type="{{iconType}}" size="12" class="am-tag-icon"/>
+<view class="am-tag {{size === 'sm' ? 'am-tag-sm': 'am-tag-lg'}} {{iconType ? 'am-tag-with-icon' : ''}} {{className}} {{iconType && !ghost ? iconClass[type]: ghost? '' : 'am-tag-text-plain'}} {{ghost ? `${ghostClass[type]} am-tag-ghost` : bgClass[type]}}" 
+  onTap="onClick">
+  <am-icon a:if="{{iconType}}" 
+    type="{{iconType}}" 
+    size="{{size === 'sm' ? 10 : 12}}" 
+    class="am-tag-icon" />
   <view class="am-tag-text ">
     <slot></slot>
-  </view>  
+  </view>
 </view>

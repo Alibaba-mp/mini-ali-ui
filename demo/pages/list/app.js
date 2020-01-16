@@ -176,6 +176,21 @@ Page({
         nameZN: ' 协议',
         path: '/pages/terms/index',
       },
+      {
+        name: 'SwipeAction',
+        nameZN: '滑动删除',
+        path: '/pages/swipe-action/index',
+      },
+      {
+        name: 'Collapse',
+        nameZN: '折叠',
+        path: '/pages/collapse/index',
+      },
+      {
+        name: 'Stepper',
+        nameZN: 'Stepper',
+        path: '/pages/stepper/index',
+      },
       // {
       //   name: 'FaceDetection',
       //   nameZN: '（旧组件）人脸检测',
@@ -192,16 +207,6 @@ Page({
         path: '/pages/picker-item/index',
       },
       {
-        name: 'SwipeAction',
-        nameZN: '（旧组件）滑动删除',
-        path: '/pages/swipe-action/index',
-      },
-      {
-        name: 'Stepper',
-        nameZN: '（旧组件）Stepper',
-        path: '/pages/stepper/index',
-      },
-      {
         name: 'Calendar',
         nameZN: '（旧组件）日历',
         path: '/pages/calendar/index',
@@ -215,11 +220,6 @@ Page({
         name: 'PopUp',
         nameZN: '（旧组件）弹出菜单',
         path: '/pages/popup/index',
-      },
-      {
-        name: 'Collapse',
-        nameZN: '折叠',
-        path: '/pages/collapse/index',
       },
     ],
   },

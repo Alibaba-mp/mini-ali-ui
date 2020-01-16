@@ -60,7 +60,6 @@ Component({
         .select(`.am-swipe-right-${this.$id}`)
         .boundingClientRect()
         .exec((ret) => {
-          // console.log(ret)
           this.btnWidth = (ret && ret[0] && ret[0].width) || 0;
           if (isV2 && this.props.enableNew) {
             this.setData({

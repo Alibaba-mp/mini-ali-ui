@@ -16,4 +16,12 @@ Page({
       content: '点击关闭，可设置关闭',
     });
   },
+  setInfo(e) {
+    const { dataset } = e.target;
+    const { name } = dataset;
+    console.log(e.detail.value);
+    this.setData({
+      [name]: e.detail.value,
+    });
+  },
 });

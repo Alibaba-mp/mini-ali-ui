@@ -26,6 +26,12 @@ Component({
       success: 'am-tag-icon-success',
       danger: 'am-tag-icon-danger',
     },
+    ghostClass: {
+      primary: 'am-tag-ghost-primary',
+      warning: 'am-tag-ghost-warning',
+      success: 'am-tag-ghost-success',
+      danger: 'am-tag-ghost-danger',
+    },
   },
   didMount() {},
   didUpdate() {},
@@ -33,7 +39,10 @@ Component({
   methods: {
     onClick() {
       const { type, onActionTap } = this.props;
-      if ((type === 'arrow' || type === 'more' || type === 'close') && typeof onActionTap === 'function') {
+      if (
+        (type === 'arrow' || type === 'more' || type === 'close') &&
+        typeof onActionTap === 'function'
+      ) {
         onActionTap();
       }
     },
