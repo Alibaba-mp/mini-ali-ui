@@ -5,6 +5,7 @@
       arrow="{{arrow}}" 
       align="{{align}}" 
       index="{{index}}" 
+      borderRadius="{{borderRadius}}"
       upperSubtitle="{{upperSubtitle}}" 
       lowerSubtitle="{{lowerSubtitle}}" 
       titlePosition="{{titlePositions[titlePosIndex]}}" 
@@ -46,6 +47,15 @@
   </list>
   <view class="gap"/>
   <view class="setting">
+    <list-item>
+      是否圆角 
+      <switch slot="extra" 
+        checked="{{borderRadius}}" 
+        onChange="setInfo"
+        data-name="borderRadius"
+        controlled />
+    </list-item>
+    <view class="gap" />
     <title>Primary区域设置</title>
     <list-item>
       缩略图 

@@ -13,6 +13,12 @@
       // hover 样式
       background-color: #eee;
     }
+    &-radius {
+      margin: 0 @h-spacing-large;
+      margin: 0 var(--am-list-item-outside-spacing, @h-spacing-large);
+      border-radius: @corner-radius-lg;
+      border-radius: var(--am-list-item-border-radius, @corner-radius-lg);
+    }
   }
   &-prefix {
     display: flex;
@@ -22,6 +28,7 @@
     padding: var(--am-list-item-padding, @h-spacing-large);
     padding-right: 0;
   }
+
   &-supporting {
     margin-right: @h-spacing-large;
     margin-right: var(--am-list-item-padding, @h-spacing-large);

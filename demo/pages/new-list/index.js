@@ -9,6 +9,7 @@ Page({
     // lowerSubtitle: '下副标题',
     lowerSubtitle: '',
     thumb,
+    borderRadius: false,
     useThumb: true,
     thumbSize: 40,
     primarySlotTypes: ['无内容', '标签', '问号图标'],
