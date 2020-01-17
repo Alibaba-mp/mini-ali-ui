@@ -191,6 +191,11 @@ Page({
         nameZN: 'Stepper',
         path: '/pages/stepper/index',
       },
+      {
+        name: 'Calendar',
+        nameZN: '日历',
+        path: '/pages/calendar/index',
+      },
       // {
       //   name: 'FaceDetection',
       //   nameZN: '（旧组件）人脸检测',
@@ -205,11 +210,6 @@ Page({
         name: 'PickerItem',
         nameZN: '（旧组件）选择输入项',
         path: '/pages/picker-item/index',
-      },
-      {
-        name: 'Calendar',
-        nameZN: '（旧组件）日历',
-        path: '/pages/calendar/index',
       },
       {
         name: 'Flex',

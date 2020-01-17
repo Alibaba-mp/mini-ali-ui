@@ -17,6 +17,6 @@
     type="number"
   />
   <view class="am-stepper-option am-stepper-add" style="opacity:{{opaAdd}}" data-type="add" onTap="changeFn">
-    <am-icon type="add" size="12" color="#1677FF" />
+    <am-icon type="add" />
   </view>
 </view>
