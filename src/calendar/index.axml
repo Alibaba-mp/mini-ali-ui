@@ -1,16 +1,16 @@
 <view class="am-calendar {{className}}" a:if="{{dates.length > 0}}">
   <view class="am-calendar-months">
-    <view class="am-calendar-prev-month" onTap="onPrevYearTap" a:if="{{haveYear}}">
+    <view class="am-calendar-prev-month {{prevYearDisable?'am-calendar-prev-year_disable':''}}" onTap="onPrevYearTap" a:if="{{haveYear}}">
       <view class="am-calendar-arrow am-calendar-arrow_year"></view>
     </view>
-    <view class="am-calendar-prev-month" onTap="onPrevMonthTap">
-      <view class="am-calendar-arrow"></view>
+    <view class="am-calendar-prev-month  {{prevMonthDisable?'am-calendar-prev-month_disable':''}}" onTap="onPrevMonthTap">
+      <am-icon type="left" class="am-calendar-arrow" />
     </view>
     <view class="am-calendar-selected-month">{{selectedYear}}年{{selectedMonth + 1}}月</view>
-    <view class="am-calendar-next-month" onTap="onNextMonthTap">
-      <view class="am-calendar-arrow next"></view>
+    <view class="am-calendar-next-month {{nextvMonthDisable?'am-calendar-next-month_disable':''}}" onTap="onNextMonthTap">
+      <am-icon type="right" class="am-calendar-arrow" />
     </view>
-    <view class="am-calendar-next-month" onTap="onNextYearTap" a:if="{{haveYear}}">
+    <view class="am-calendar-next-month {{nextYearDisable?'am-calendar-next-year_disable':''}}" onTap="onNextYearTap" a:if="{{haveYear}}">
       <view class="am-calendar-arrow am-calendar-arrow_year next"></view>
     </view>
   </view>
@@ -43,7 +43,7 @@
               class="am-calendar-date {{ item.isGray ? 'am-calendar-gray': '' }} {{ item.isToday ? 'am-calendar-today': ''}}"
             >{{item.date}}</view>
             <view class="am-calendar-tag" style="{{
-              color: item.isSelected || item.isMiddle || item.isStart || item.isEnd ? '#fff' : (item.disable ? '#999' : item.color)
+              color: item.isSelected || item.isMiddle || item.isStart || item.isEnd ? '#fff' : (item.disable ? '#ccc' : item.color)
             }}">{{item.disable ? '' : item.tag}}</view>
           </view>
         </block>

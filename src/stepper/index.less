@@ -4,37 +4,53 @@
   &-content {
     display: flex;
     position: relative;
-    height: 22px;
+    height: @size-6;
+    height: var(--am-stepper-height, @size-6);
     overflow: hidden;
-    font-size: 15px;
-    border: 1px solid #eee;
-    background-color: #fff;
+    font-size: @font-size-subtitle;
+    border: @border-width-standard solid @color-divider-line;
+    border: var(--am-stepper-borderWidth, @border-width-standard) solid var(--am-stepper-borderColor, @color-divider-line);
+    background-color: @color-fill-grey-inverse;
+    background-color: var(--am-stepper-bgc, @color-fill-grey-inverse);
     border-radius: @corner-radius-sm;
+    border-radius: var(--am-stepper-borderRadius, @corner-radius-sm);
     box-sizing: border-box;
   }
   &-input {
     width: 100%;
-    min-width: 21px;
-    height: 21px;
+    min-width: @size-6;
+    min-width: var(--am-stepper-input-size, @size-6);
+    height: @size-6;
+    height: var(--am-stepper-input-size, @size-6);
     padding: 0;
-    margin: 0 8px;
-    line-height: 21px;
+    margin: 0 @v-spacing-standard;
+    margin: 0 var(--am-stepper-input-marginLR, v-spacing-standard);
+    line-height: @size-6;
+    line-height: var(--am-stepper-input-size, @size-6);
     text-align: center;
-    font-size: 15px;
-    color: #333;
+    font-size: @font-size-subtitle;
+    font-size: var(--am-stepper-input-fontSize, @font-size-subtitle);
+    color: @color-text-title;
+    color: var(--am-stepper-input-color, @color-text-title);
     border: 0 none;
     background-color: transparent;
+    transform: translate(0, -1px);
     &-hide {
       visibility: hidden;
     }
   }
   &-option {
     display: flex;
-    flex: 0 0 22px;
-    height: 22px;
+    flex: 0 0 @size-6;
+    flex: 0 0 var(--am-stepper-btn-size, @size-6);
+    height: @size-6;
+    height: var(--am-stepper-btn-size, @size-6);
     justify-content: center;
     align-items: center;
-    border: 1px solid #eee;
+    border: @border-width-standard solid @color-divider-line;
+    border: var(--am-stepper-borderWidth, @border-width-standard) solid var(--am-stepper-borderColor, @color-divider-line);
+    border-radius: @corner-radius-sm;
+    border-radius: var(--am-stepper-borderRadius, @corner-radius-sm);
     box-sizing: border-box;
   }
   &-reduce {
@@ -43,14 +59,22 @@
     &::before {
       content: "";
       display: inline-block;
-      width: 9px;
+      width: @size-2;
+      width: var(--am-stepper-btn-reduce, @size-2);
       height: 1px;
       overflow: hidden;
-      background-color: #1677FF;
-      border-radius: 5vh;
+      background-color: @color-text-primary;
+      background-color: var(--am-stepper-btn-color, @color-text-primary);
+      border-radius: @corner-radius-circle;
     }
   }
   &-add {
     transform: translate(1px, -1px);
+    .am-icon {
+      font-size: @size-3;
+      font-size: var(--am-stepper-btn-add, @size-3);
+      color: @color-text-primary;
+      color: var(--am-stepper-btn-color, @color-text-primary);
+    }
   }
 }

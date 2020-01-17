@@ -49,6 +49,10 @@ Component({
     tagData: [],
     type: 'single',
     haveYear: false,
+    prevMonthDisable: false,
+    prevYearDisable: false,
+    nextvMonthDisable: false,
+    nextYearDisable: false,
   },
   didMount() {
     this.tapTimes = 1;
@@ -86,83 +90,99 @@ Component({
   methods: {
     onPrevYearTap() {
       const { selectedMonth, selectedYear } = this.data;
-      let year = selectedYear;
-      const month = selectedMonth;
+      const { prevYearDisable } = this.props;
 
-      year = selectedYear - 1;
+      if (!prevYearDisable) {
+        let year = selectedYear;
+        const month = selectedMonth;
 
-      if (this.props.onYearChange) {
-        this.props.onYearChange(year, selectedYear);
+        year = selectedYear - 1;
+
+        if (this.props.onYearChange) {
+          this.props.onYearChange(year, selectedYear);
+        }
+
+        this.setData({
+          selectedYear: year,
+        });
+
+        this.refreshdates(month, year);
       }
-
-      this.setData({
-        selectedYear: year,
-      });
-
-      this.refreshdates(month, year);
     },
     onNextYearTap() {
       const { selectedMonth, selectedYear } = this.data;
-      let year = selectedYear;
-      const month = selectedMonth;
+      const { nextYearDisable } = this.props;
 
-      year = selectedYear + 1;
+      if (!nextYearDisable) {
+        let year = selectedYear;
+        const month = selectedMonth;
 
-      if (this.props.onYearChange) {
-        this.props.onYearChange(year, selectedYear);
+        year = selectedYear + 1;
+
+        if (this.props.onYearChange) {
+          this.props.onYearChange(year, selectedYear);
+        }
+
+        this.setData({
+          selectedYear: year,
+        });
+
+        this.refreshdates(month, year);
       }
-
-      this.setData({
-        selectedYear: year,
-      });
-
-      this.refreshdates(month, year);
     },
     onPrevMonthTap() {
       const { selectedMonth, selectedYear } = this.data;
-      let year = selectedYear;
-      let month = selectedMonth;
-      // 如果当前选中是一月份，前一月是去年的12月
-      if (selectedMonth === FIRST_MONTH) {
-        year = selectedYear - 1;
-        month = LAST_MONTH;
-      } else {
-        month = selectedMonth - 1;
+      const { prevMonthDisable } = this.props;
+
+      if (!prevMonthDisable) {
+        let year = selectedYear;
+        let month = selectedMonth;
+        // 如果当前选中是一月份，前一月是去年的12月
+        if (selectedMonth === FIRST_MONTH) {
+          year = selectedYear - 1;
+          month = LAST_MONTH;
+        } else {
+          month = selectedMonth - 1;
+        }
+
+        if (this.props.onMonthChange) {
+          this.props.onMonthChange(month, selectedMonth);
+        }
+
+        this.setData({
+          selectedYear: year,
+          selectedMonth: month,
+        });
+
+        this.refreshdates(month, year);
       }
-
-      if (this.props.onMonthChange) {
-        this.props.onMonthChange(month, selectedMonth);
-      }
-
-      this.setData({
-        selectedYear: year,
-        selectedMonth: month,
-      });
-
-      this.refreshdates(month, year);
     },
     onNextMonthTap() {
       const { selectedMonth, selectedYear } = this.data;
-      let year = selectedYear;
-      let month = selectedMonth;
-      // 如果当前选中是十二月份，下一月是去年的12月
-      if (selectedMonth === LAST_MONTH) {
-        year = selectedYear + 1;
-        month = FIRST_MONTH;
-      } else {
-        month = selectedMonth + 1;
+      const { nextvMonthDisable } = this.props;
+
+      if (!nextvMonthDisable) {
+        let year = selectedYear;
+        let month = selectedMonth;
+        // 如果当前选中是十二月份，下一月是去年的12月
+        if (selectedMonth === LAST_MONTH) {
+          year = selectedYear + 1;
+          month = FIRST_MONTH;
+        } else {
+          month = selectedMonth + 1;
+        }
+
+        if (this.props.onMonthChange) {
+          this.props.onMonthChange(month, selectedMonth);
+        }
+
+        this.setData({
+          selectedYear: year,
+          selectedMonth: month,
+        });
+
+        this.refreshdates(month, year);
       }
-
-      if (this.props.onMonthChange) {
-        this.props.onMonthChange(month, selectedMonth);
-      }
-
-      this.setData({
-        selectedYear: year,
-        selectedMonth: month,
-      });
-
-      this.refreshdates(month, year);
     },
     refreshdates(month, year) {
       this.tapTimes = 1;
