@@ -7,7 +7,7 @@ const babel = require('gulp-babel');
 const gulpif = require('gulp-if');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const dist = isProduction ? path.join(__dirname, '../dist/es') : path.join(__dirname, '../demo/es');
+const dist = isProduction ? path.join(__dirname, '../es') : path.join(__dirname, '../demo/es');
 const src = path.join(__dirname, '../src');
 const extTypes = ['ts', 'less', 'json', 'axml', 'sjs'];
 
