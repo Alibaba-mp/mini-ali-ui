@@ -17,10 +17,8 @@
       </view>
       <am-icon
         a:if="{{showArrow}}"
-        size="{{16}}"
-        color="#ccc"
-        class="am-collapse-item-title-arrow arrow--{{isActive ? 'down' : 'right'}}"
-        type="arrow-up"
+        class="am-collapse-item-title-arrow"
+        type="{{isActive ? 'down' : 'up'}}"
       />
     </view>
   </view>

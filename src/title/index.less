@@ -4,8 +4,8 @@
 .am-title {
   display: flex;
   align-items: center;
-  padding-bottom: @v-spacing-large;
-  padding-bottom: var(--am-title-paddingB, @v-spacing-large);
+  padding: 0 @h-spacing-large @v-spacing-large;
+  padding: 0 var(--am-title-paddingLR, @h-spacing-large) var(--am-title-paddingB, @v-spacing-large);
   font-size: @font-size-subtitle;
   font-size: var(--am-title-text-fontSize, @font-size-subtitle);
   color: @color-text-title;

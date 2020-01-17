@@ -13,23 +13,44 @@
     bottom: 0;
     display: flex;
     right: 0;
+    transition: all 100ms 0s ease-out;
   }
 
   &-btn {
-    padding: 0 14px;
+    padding: 0 12px;
     justify-content: center;
     align-items: center;
     display: flex;
     color: #fff;
+    &-text {
+      height: 1em;
+      overflow: hidden;
+      line-height: 1;
+    }
 
     &-delete {
-      background-color: rgb(244, 51, 60);
+      background-color: #FF3B30;
     }
 
     &-edit {
-      background-color: #108ee9;
+      background-color: #CCC;
+    }
+    &-other {
+      background-color: #1677FF;
     }
   }
+
+  &-right-radius {
+    overflow: hidden;
+    border-radius: 8px;
+    .am-swipe-btn {
+      margin-right: 1px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
   //=== v2 ===
   &-movable {
 

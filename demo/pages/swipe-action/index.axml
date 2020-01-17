@@ -9,6 +9,7 @@
 				onSwipeStart="onSwipeStart"
 				extra="item{{index}}"
 				enableNew="{{true}}"
+				borderRadius="{{index <= 2 ? true : false}}"
 			>
 				<list-item
 					arrow="horizontal"
@@ -16,6 +17,9 @@
 					key="items-{{index}}"
 					onClick="onItemClick"
 					last="{{index === list.length - 1}}"
+					upperSubtitle="{{index >= 4?'这是一个有副标题的列表':''}}"
+					lowerSubtitle="{{index === 5?'这是一个小的副标题':''}}"
+					borderRadius="{{index <= 2 ? true : false}}"
 				>
 					{{item.content}}
 				</list-item>

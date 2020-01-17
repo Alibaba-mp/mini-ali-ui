@@ -33,7 +33,7 @@
                 {{ index === activeTab ? activeCls : '' }}
                 {{ !hasSubTitle && capsule?'am-tabs-bar-capsule-title':''}}
                 {{tabs.length - 1 === index?'am-tabs-bar-title__noMargin':''}}
-                " style="{{!hasSubTitle && capsule? (tabs.length <= 3?'font-size: 17px;':'font-size: 15px;'):''}}
+                " style="{{!hasSubTitle && capsule? (tabs.length <= 3?'font-size: 15px;':'font-size: 13px;'):''}}
                   {{hasSubTitle?
                     '':
                   (!hasSubTitle && capsule?

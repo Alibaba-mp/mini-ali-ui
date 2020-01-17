@@ -1,50 +1,50 @@
 @import '../../style/mixins/hairline.less';
 
 .am-collapse-item {
-  border-radius: 4px;
-  background-color: #fff;
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-collapse-bgc, @color-fill-grey-inverse);
   &-title-container {
-    width: 100%;
-    display: flex;
-    color: #333;
-    font-size: 17px;
-    line-height: 24px;
     position: relative;
+    display: flex;
     text-align: justify;
     align-items: center;
-    padding: 0 16px 14px 0;
     justify-content: space-between;
-    transition: all 0.3s ease-in-out;
-    .hairline('bottom', #fff);
-  }
-
-  &--disabled .am-collapse-title {
-    opacity: 0.5;
+    width: 100%;
+    color: @color-text-title;
+    color: var(--am-collapse-title-fontSize, @color-text-title);
+    font-size: @font-size-list;
+    font-size: var(--am-collapse-title-fontSize, @font-size-list);
+    transition: all 300ms ease-in-out;
   }
 
   &-title {
-    background-color: #fff;
-    padding: 14px 16px 0 16px;
-    border-top: 1px solid #eee;
-    &.title--active .am-collapse-item-title-container {
-      .hairline('bottom');
+    position: relative;
+    padding: @v-spacing-large 0;
+    padding: var(--am-collapse-title-paddingTB, @v-spacing-large) 0;
+    margin: 0 @h-spacing-large;
+    margin: 0 var(--am-collapse-title-marginLR, @h-spacing-large);
+    .hairline('bottom');
+    &-arrow {
+      font-size: @font-size-list;
+      font-size: var(--am-collapse-arrow-size, @font-size-list);
+      color: @color-text-weak;
+      color: var(--am-collapse-arrow-color, @color-text-weak);
     }
   }
 
+  &--disabled .am-collapse-item-title {
+    opacity: @opacity-disabled;
+    opacity: var(--am-collapse-disabled, @opacity-disabled);
+  }
+
   &-title-text-wrapper {
-    padding-right: 16px;
+    padding-right: @h-spacing-large;
+    padding-right: var(--am-collapse-title-arrow-spacing, @h-spacing-large);
   }
   &-content-wrapper {
     overflow-y: hidden;
     box-sizing: border-box;
     will-change: max-height;
-    transition: max-height 0.3s ease-in-out;
-  }
-  &-title-arrow {
-    transform: rotate(0deg);
-    transition: all 0.2s ease-out;
-  }
-  .arrow--down {
-    transform: rotate(180deg);
+    transition: max-height 300ms ease-in-out;
   }
 }

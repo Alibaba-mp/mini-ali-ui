@@ -3,22 +3,12 @@ Page({
     swipeIndex: null,
     list: [
       { right: [{ type: 'delete', text: '删除', fColor: 'black' }], content: '更换文字颜色' },
-      { right: [{ type: 'edit', text: '取消收藏', fColor: 'rgba(0,0,0,.5)' }, { type: 'delete', text: '删除', fColor: 'yellow' }], content: '改变文字颜色' },
+      { right: [{ type: 'edit', text: '取消收藏', fColor: 'rgba(0,0,0,.5)' }, { type: 'delete', text: '删除', fColor: 'yellow' }, { type: 'other', text: '新增一个' }], content: '改变文字颜色' },
       { right: [{ type: 'edit', text: '取消收藏', bgColor: '#333' }, { type: 'delete', text: '删除' }], content: '其中一个背景色变化' },
       { right: [{ type: 'edit', text: '取消收藏', bgColor: '#ccc', fColor: '#f00' }, { type: 'delete', text: '删除', bgColor: '#0ff', fColor: '#333' }], content: '文字和背景色同时改变' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '默认颜色样式' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '6BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '7BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '8BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '9BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '10BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '11BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '12BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '13BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '14BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '15BBB' },
-      { right: [{ type: 'edit', text: '取消收藏' }, { type: 'delete', text: '删除' }], content: '16BBB' },
-      { right: [{ type: 'delete', text: '删除' }], content: 'CCC' },
+      { right: [{ type: 'edit', text: '取消收藏取消收藏取消' }, { type: 'delete', text: '删除删除删除删除' }], content: '默认颜色样式' },
+      { right: [{ type: 'edit', text: '取消关注' }, { type: 'other', text: '免打扰' }, { type: 'delete', text: '删除' }], content: '三个选项的卡片' },
+      { right: [{ type: 'edit', text: '取消关注' }, { type: 'other', text: '免打扰' }, { type: 'delete', text: '删除' }], content: '三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片三个选项的卡片' },
     ],
   },
   onRightItemClick(e) {
@@ -33,9 +23,9 @@ Page({
         if (result.confirm) {
           if (type === 'delete') {
             list.splice(this.data.swipeIndex, 1);
-            this.setData({
-              list: [...list],
-            });
+            // this.setData({
+            //   list: [...list],
+            // });
           }
 
           my.showToast({

@@ -9,7 +9,6 @@
           readOnly="{{false}}"
           value="{{value}}"
           min="{{2}}"
-          max="{{12}}"
           />
       </view>
     </list-item>
@@ -23,7 +22,6 @@
           readOnly="{{false}}"
           value="{{value}}"
           min="{{2}}"
-          max="{{12}}"
           />
       </view>
     </list-item>
@@ -36,7 +34,6 @@
           readOnly="{{false}}"
           value="{{value}}"
           min="{{2}}"
-          max="{{12}}"
           />
       </view>
     </list-item>
@@ -48,7 +45,6 @@
           showNumber
           value="{{11}}"
           min="{{2}}"
-          max="{{12}}"
           disabled
           />
       </view>
@@ -61,12 +57,10 @@
           showNumber
           value="{{11}}"
           min="{{2}}"
-          max="{{12}}"
           readOnly
           />
       </view>
     </list-item>
-    <list-item>
-      <button onTap="modifyValue">修改setper初始值</button>
-    </list-item>
   </list>
+
+      <button onTap="modifyValue">修改setper初始值</button>

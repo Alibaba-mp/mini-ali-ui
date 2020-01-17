@@ -16,7 +16,7 @@ Component({
     right: [],
     restore: false,
     index: null,
-    height: 52,
+    height: 0,
     enableNew: false,
   },
   didMount() {
@@ -27,10 +27,11 @@ Component({
       useV2,
     });
     this.setBtnWidth();
+    this.getSwipeHeight();
     if (useV2) {
       setTimeout(() => {
         this.setData({
-          transitionVal: 'transform 100ms',
+          transitionVal: 'transform 100ms linear',
         });
       }, 500);
     }
@@ -43,12 +44,14 @@ Component({
       this.setData({
         leftPos: 0,
         swiping: false,
+        cellWidth: this.btnWidth,
         x: this.btnWidth, // V2
       });
     }
 
     if (!useV2) {
       this.setBtnWidth();
+      this.getSwipeHeight();
     }
   },
   methods: {
@@ -62,8 +65,19 @@ Component({
             this.setData({
               actionWidth: this.btnWidth,
               x: this.btnWidth,
+              cellWidth: this.btnWidth,
             });
           }
+        });
+    },
+    getSwipeHeight() {
+      my.createSelectorQuery()
+        .select(`.am-swipe-movable-area-${this.$id}`)
+        .boundingClientRect()
+        .exec((ret) => {
+          this.setData({
+            height: ret[0].height,
+          });
         });
     },
     onSwipeTap() {
@@ -161,7 +175,10 @@ Component({
         });
       }
     },
-    onChange() {
+    onChange(e) {
+      this.setData({
+        cellWidth: e.detail.x,
+      });
       if (!this.data.swiping) {
         this.setData({
           swiping: true,
