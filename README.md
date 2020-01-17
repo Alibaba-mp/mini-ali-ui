@@ -2,7 +2,7 @@
   <img width="300" src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original">
 </p>
 
-# Mini AntUI
+# Mini Ali UI
 
 [![npm package](https://img.shields.io/npm/v/mini-ali-ui.svg?style=flat-square)](https://www.npmjs.com/package/mini-ali-ui)
 [![GitHub stars](https://img.shields.io/github/stars/ant-mini-program/mini-ali-ui.svg)](https://github.com/ant-mini-program/mini-ali-ui/stargazers)
