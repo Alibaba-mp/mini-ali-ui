@@ -19,7 +19,6 @@ Component({
     const { value, min, max } = this.props;
     this.setData({
       value: Math.min(Math.max(min, value), max),
-      getInputWidth: value.length,
     });
   },
   didUpdate(preProps) {
