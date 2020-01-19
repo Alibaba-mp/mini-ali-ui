@@ -1,5 +1,5 @@
 <view class="am-message {{className}}">
-  <am-icon class="am-icon icon-{{type}}" type="{{iconType}}" />
+  <am-icon className="am-icon icon-{{type}}" type="{{iconType}}" />
   <view class="am-message-main">
     {{title}}
   </view>

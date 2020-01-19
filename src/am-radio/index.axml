@@ -8,5 +8,5 @@
     color="{{color}}"
     id="{{id}}"
     />
-  <view class="am-radio-synthetic"></view>
+    <am-icon className="am-radio-synthetic" type="check"/>
 </view>
