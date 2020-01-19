@@ -55,17 +55,6 @@
   onTapLeft="onTapLeft"
   onTapRight="onTapRight"
 />
-<!-- 兼容原组件写法 -->
-<page-result
-  type="network"
-  title="网络不给力"
-  brief="世界上最遥远的距离莫过于此"
->
-  <view class="am-page-result-btns">
-    <view onTap="backHome">回到首页</view>
-    <view>示例按钮</view>
-  </view>
-</page-result>
 ```
 
 ```js
