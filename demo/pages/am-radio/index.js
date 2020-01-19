@@ -6,7 +6,6 @@ Page({
     ],
     items1: [
       { checked: true, disabled: true, value: 'c', desc: '单选框-默认选中disabled', id: 'checkbox3' },
-      { checked: false, disabled: true, value: 'd', desc: '单选框-默认未选中disabled', id: 'checkbox4' },
     ],
   },
   onSubmit(e) {
