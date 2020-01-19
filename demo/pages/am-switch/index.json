@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "小程序 mini-ali-ui 库",
   "usingComponents": {
     "am-switch": "../../es/am-switch/index"
   }

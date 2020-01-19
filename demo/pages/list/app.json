@@ -1,7 +1,8 @@
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "小程序 mini-ali-ui 库",
   "usingComponents":{
     "list": "../../es/list/index",
-    "list-item": "../../es/list/list-item/index"
+    "list-item": "../../es/list/list-item/index",
+    "tag": "../../es/tag/index"
   }
 }
