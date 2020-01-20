@@ -16,7 +16,7 @@
       placeholderStyle="{{placeholderStyle}}" 
       disabled="{{disabled}}" 
       maxlength="{{maxlength}}" 
-      focus="{{_focus}}" 
+      focus="{{focus}}" 
       onInput="onInput" 
       onConfirm="onConfirm" 
       onFocus="onFocus" 
