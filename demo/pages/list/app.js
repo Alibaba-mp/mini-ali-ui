@@ -348,16 +348,6 @@ Page({
     ],
     // components: [
     //   // {
-    //   //   name: 'Terms',
-    //   //   nameZN: 'Terms',
-    //   //   path: '/pages/terms/index',
-    //   // },
-    //   // {
-    //   //   name: 'FaceDetection',
-    //   //   nameZN: '（旧组件）人脸检测',
-    //   //   path: '/pages/face-detection/index',
-    //   // },
-    //   // {
     //   //   name: 'InputItem',
     //   //   nameZN: '（旧组件）列表输入项',
     //   //   path: '/pages/input-item/index',
