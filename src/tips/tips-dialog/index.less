@@ -1,4 +1,4 @@
-@import (reference) '../../style/themes/default.less';
+@import (reference) "../../style/themes/default.less";
 
 .am-tips-dialog {
   position: relative;
@@ -8,7 +8,7 @@
   padding: 0 var(--am-tips-dialog-container-spacing, @h-spacing-standard);
   box-sizing: border-box;
   font-size: @font-size-subtitle;
-  font-size: var(--am-tips-plain-font-size, @font-size-subtitle);
+  font-size: var(--am-tips-dialog-font-size, @font-size-subtitle);
 
   &-wrap {
     display: flex;
@@ -80,14 +80,14 @@
     top: 50%;
     left: -11px;
     margin-top: -4px;
-    transform: rotate(90deg) /* scaleY(1.19) */;
+    transform: rotate(90deg) translateY(6%);
   }
 
   &-arrow-right {
     top: 50%;
     right: -11px;
     margin-top: -4px;
-    transform: rotate(-90deg) /* scaleY(1.19) */;
+    transform: rotate(-90deg) translateY(6%);
   }
 
   &-wrap &-rectangle {
