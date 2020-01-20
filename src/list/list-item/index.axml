@@ -12,8 +12,6 @@
 			size="{{thumbSize}}" />
 	</view>
 	<view class="am-list-line {{wrap ? 'am-list-wrap' : ''}}">
-
-		<!-- <view class="am-list-main"> -->
 		<view class="am-list-content">
 			<view a:if="{{titlePosition === 'top'}}" 
 				class="am-list-content-title">
@@ -23,7 +21,7 @@
 				<slot name="afterTitle" />
 			</view>
 			<view a:if="{{upperSubtitle || $slots.afterUpperSubtitle}}" 
-				class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
+				class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}} {{$slots.afterLowerSubtitle && upperSubtitle ?  'am-list-content-subtitle-small' : ''}}">
 				<view a:if="{{upperSubtitle}}" 
 					class="am-list-text-wrapper">{{upperSubtitle}}</view>
 				<slot name="afterUpperSubtitle" />
@@ -36,7 +34,7 @@
 				<slot name="afterTitle" />
 			</view>
 			<view a:if="{{lowerSubtitle || $slots.afterLowerSubtitle}}" 
-				class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}}">
+				class="am-list-content-subtitle {{upperSubtitle && lowerSubtitle ? 'am-list-content-subtitle-small' : ''}} {{lowerSubtitle && $slots.afterUpperSubtitle ? 'am-list-content-subtitle-small' : ''}}">
 				<view a:if="{{lowerSubtitle}}" 
 					class="am-list-text-wrapper">{{lowerSubtitle}}</view>
 				<slot name="afterLowerSubtitle" />
@@ -56,7 +54,6 @@
 		<view a:if="{{arrow}}" 
 			class="am-list-arrow">
 			<am-icon type="right" 
-				class="am-list-arrow-icon" 
 				size="13" 
 				color="#ccc" />
 		</view>

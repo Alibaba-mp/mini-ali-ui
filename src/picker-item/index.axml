@@ -9,7 +9,9 @@
       <text class="am-picker-content am-picker-text {{pickerCls}} {{ value.length > 0 ? 'am-picker-content-value': 'am-picker-content-placeholder' }}">
         {{value.length > 0 ? value : placeholder}}
       </text>
-      <view class="am-picker-arrow"></view>
+      <view class="am-picker-arrow">
+        <am-icon class="am-picker-arrow" type="right" size="22" color="#ccc"/>
+      </view>
     </view>
     <slot name="extra" />
     <view class="am-picker-line-bottom" />
