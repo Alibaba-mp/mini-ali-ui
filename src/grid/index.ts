@@ -1,3 +1,5 @@
+import fmtUnit from '../_util/fmtUnit';
+
 Component({
   data: {
     getColumnBorderIndex: 0,
@@ -9,7 +11,7 @@ Component({
     onGridItemClick: () => {},
     hasLine: true,
     infinite: false,
-    infiniteHeight: '90px',
+    infiniteHeight: fmtUnit('90px'),
     gridName: '',
   },
   didMount() {

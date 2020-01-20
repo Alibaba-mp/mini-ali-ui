@@ -1,4 +1,4 @@
-<pagination pagerName='test1' height="200px" infinite="true">
+<pagination pagerName='test1' infinite="true">
   <view style="display: flex;">
     <view style="flex: 0 0 auto;width: 100vw;background-color: yellow;">文字</view>
     <view style="flex: 0 0 auto;width: 90vw;background-color: blue;">文字</view>

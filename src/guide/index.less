@@ -16,10 +16,10 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    padding-bottom: 104px;
+    padding-bottom: 208 * @pixelSize;
     box-sizing: border-box;
     &-pager {
-      padding-bottom: 130px;
+      padding-bottom: 260 * @pixelSize;
     }
   }
   &-img {
@@ -28,14 +28,14 @@
   }
   &-btn {
     position: absolute;
-    bottom: 60px;
+    bottom: 120 * @pixelSize;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     z-index: 5;
     &-item {
-      margin-right: 12px;
+      margin-right: 24 * @pixelSize;
       &:last-child {
         margin-right: 0;
       }
@@ -43,7 +43,7 @@
   }
   &-pager {
     position: absolute;
-    bottom: 98px;
+    bottom: 196 * @pixelSize;
     left: 0;
     right: 0;
     z-index: 5;

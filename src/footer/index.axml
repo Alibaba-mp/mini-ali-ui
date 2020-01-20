@@ -1,7 +1,7 @@
 <view class="am-footer am-footer__{{type}} {{className}}">
   <view a:if="{{type === 'brand'}}" class="am-footer-brand">
     <block a:for="{{extend}}">
-      <image src="{{item.logo}}" style="{{item.width?'width:' + item.width +'px;':''}}{{item.height?'height:' + item.height +'px;':''}}" class="am-footer-brand-logo" data-url="{{item.link}}" data-index="{{index}}" onTap="onBrandClick" />
+      <image src="{{item.logo}}" style="{{item.width?'width:' + item.width +';':''}}{{item.height?'height:' + item.height +';':''}}" class="am-footer-brand-logo" data-url="{{item.link}}" data-index="{{index}}" onTap="onBrandClick" />
     </block>
   </view>
   <view a:if="{{type === 'link'}}" class="am-footer-extend am-footer-extend__{{type}}">

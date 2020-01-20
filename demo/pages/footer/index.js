@@ -40,14 +40,14 @@ Page({
       extend: [
         {
           logo: 'https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original',
-          width: '80',
-          height: '24',
+          width: '80px',
+          height: '24px',
           link: '/pages/list/app',
         },
         {
           logo: 'https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original',
-          width: '150',
-          height: '54',
+          width: '150rpx',
+          height: '100rpx',
         },
       ],
     },
