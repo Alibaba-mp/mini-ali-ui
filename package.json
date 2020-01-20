@@ -46,7 +46,10 @@
     "lint-staged": "lint-staged",
     "build": "yarn && NODE_ENV=production node scripts/compiler.js",
     "pub": "npm run build && node scripts/pub.js",
-    "dev": "yarn && node scripts/compiler.js"
+    "dev": "yarn && node scripts/compiler.js",
+    "build:rpx": "yarn && NODE_ENV=production node scripts/compiler.js --rpx",
+    "pub:rpx": "npm run build:rpx && node scripts/pub.js --rpx",
+    "dev:rpx": "yarn && node scripts/compiler.js --rpx"
   },
   "pre-commit": [
     "lint-staged"

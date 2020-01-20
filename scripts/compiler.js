@@ -10,9 +10,14 @@ const isProduction = process.env.NODE_ENV === 'production';
 const dist = isProduction ? path.join(__dirname, '../es') : path.join(__dirname, '../demo/es');
 const src = path.join(__dirname, '../src');
 const extTypes = ['ts', 'less', 'json', 'axml', 'sjs'];
+const isRpx = process.argv.splice(2)[0] === '--rpx';
 
 gulp.task('less', () => gulp.src(`${src}/**/*.less`)
-  .pipe(less())
+  .pipe(less({
+    modifyVars: {
+      '@pixelSize': isRpx ? '1rpx' : '0.5px',
+    },
+  }))
   .on('error', e => console.error(e))
   .pipe(gulpif(isProduction, cleanCss()))
   .pipe(rename({
