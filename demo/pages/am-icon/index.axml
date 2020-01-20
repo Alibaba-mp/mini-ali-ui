@@ -3,7 +3,7 @@
   <view a:if="{{searchIcon.length > 0}}">
     <block a:for="{{searchIcon}}">
       <view class="icon-item">
-        <am-icon type="{{item}}" />
+        <am-icon type="{{item}}" size="50" />
         <text class="icon-desc">{{item}}</text>
       </view>
     </block>

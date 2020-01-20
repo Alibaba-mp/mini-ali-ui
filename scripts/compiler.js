@@ -5,14 +5,21 @@ const rename = require('gulp-rename');
 const cleanCss = require('gulp-clean-css');
 const babel = require('gulp-babel');
 const gulpif = require('gulp-if');
+const injectEnvs = require('gulp-inject-envs');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const dist = isProduction ? path.join(__dirname, '../es') : path.join(__dirname, '../demo/es');
 const src = path.join(__dirname, '../src');
 const extTypes = ['ts', 'less', 'json', 'axml', 'sjs'];
+const isRpx = process.argv.splice(2)[0] === '--rpx';
+const env = { jsUnitRpx: isRpx };
 
 gulp.task('less', () => gulp.src(`${src}/**/*.less`)
-  .pipe(less())
+  .pipe(less({
+    modifyVars: {
+      '@pixelSize': isRpx ? '1rpx' : '0.5px',
+    },
+  }))
   .on('error', e => console.error(e))
   .pipe(gulpif(isProduction, cleanCss()))
   .pipe(rename({
@@ -22,6 +29,7 @@ gulp.task('less', () => gulp.src(`${src}/**/*.less`)
 
 gulp.task('ts', () => gulp.src(`${src}/**/*.ts`)
   .pipe(babel())
+  .pipe(injectEnvs(env))
   .on('error', (err) => {
     console.log(err);
   })

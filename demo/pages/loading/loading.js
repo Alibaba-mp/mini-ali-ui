@@ -1,4 +1,6 @@
 Page({
-  data: {},
+  data: {
+    loadSize: '180rpx',
+  },
   onLoad() {},
 });

@@ -7,17 +7,17 @@
   border-radius: var(--am-tag-border-radius, @corner-radius-sm);
   position: relative;
   &-with-icon.am-tag-sm {
-    padding: 0 3px;
+    padding: 0 6 * @pixelSize;
   }
   &-sm {
     font-size: @font-size-weak;
     font-size: var(--am-tag-sm-font-size, @font-size-weak);
-    padding: 0 2px;
+    padding: 0 4 * @pixelSize;
   }
   &-lg {
     font-size: @font-size-subcontent;
     font-size: var(--am-tag-lg-font-size, @font-size-subcontent);
-    padding: 2px 4px;
+    padding: 4 * @pixelSize 8 * @pixelSize;
   }
   &-bg-primary {
     background: @color-brand-1;
@@ -65,7 +65,7 @@
   }
   &-icon {
     overflow: hidden;
-    margin-right: 3px;
+    margin-right: 6 * @pixelSize;
     line-height: @line-height-paragraph;
     line-height: var(--am-tag-line-height, @line-height-paragraph);
     background-position: center;

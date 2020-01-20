@@ -33,6 +33,7 @@
     "gulp-if": "^2.0.2",
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.2.3",
+    "gulp-inject-envs": "^1.1.1",
     "lint-staged": "^8.2.0",
     "mini-types": "^0.0.1",
     "pre-commit": "^1.2.2",
@@ -46,7 +47,10 @@
     "lint-staged": "lint-staged",
     "build": "yarn && NODE_ENV=production node scripts/compiler.js",
     "pub": "npm run build && node scripts/pub.js",
-    "dev": "yarn && node scripts/compiler.js"
+    "dev": "yarn && node scripts/compiler.js",
+    "build:rpx": "yarn && NODE_ENV=production node scripts/compiler.js --rpx",
+    "pub:rpx": "npm run build:rpx && node scripts/pub.js --rpx",
+    "dev:rpx": "yarn && node scripts/compiler.js --rpx"
   },
   "pre-commit": [
     "lint-staged"
