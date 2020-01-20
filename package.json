@@ -33,6 +33,7 @@
     "gulp-if": "^2.0.2",
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.2.3",
+    "gulp-inject-envs": "^1.1.1",
     "lint-staged": "^8.2.0",
     "mini-types": "^0.0.1",
     "pre-commit": "^1.2.2",
