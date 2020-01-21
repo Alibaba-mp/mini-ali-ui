@@ -28,7 +28,9 @@
         type="close_" 
         color="#ccc" />
     </view>
-    <slot name="extra" />
+    <view a:if="{{$slots.extra}}" class="am-input-item-extra">
+       <slot name="extra" />
+    </view>
     <view class="am-input-line-bottom" />
   </view>
 </view>
