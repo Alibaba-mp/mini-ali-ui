@@ -10,7 +10,7 @@
         {{value.length > 0 ? value : placeholder}}
       </text>
       <view class="am-picker-arrow">
-        <am-icon class="am-picker-arrow" type="right" size="22" color="#ccc"/>
+        <am-icon class="am-picker-arrow" type="right" size="18" color="#ccc"/>
       </view>
     </view>
     <slot name="extra" />
