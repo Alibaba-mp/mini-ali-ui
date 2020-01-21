@@ -26,7 +26,7 @@ iOS 和安卓展现样式有所差异。iOS 单选开关为圆形；安卓单选
 ```json
 {
   "usingComponents": {
-    "am-switch": "../../es/am-switch/index"
+    "am-switch": "mini-ali-ui/es/am-switch/index"
   }
 }
 ```

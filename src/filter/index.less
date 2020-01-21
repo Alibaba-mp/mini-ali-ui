@@ -39,7 +39,7 @@
     padding-bottom: var(--am-filter-padding, @size-3);
     overflow-x: hidden;
     overflow-y: scroll;
-    max-height: 415px;
+    max-height: 830 * @pixelSize;
     box-sizing: border-box;
   }
 
@@ -50,8 +50,8 @@
 
   &-default, &-primary {
     flex: 1;
-    height: 48px;
-    font-size: 18px;
+    height: 96 * @pixelSize;
+    font-size: 36 * @pixelSize;
     box-sizing: border-box;
     width: 50%;
     border: 0;
@@ -59,7 +59,7 @@
   }
 
   &-default {
-    border-top: 1px solid #eee;
+    border-top: @border-width-standard solid #eee;
     border-right: none;
   }
 
