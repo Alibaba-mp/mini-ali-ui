@@ -3,7 +3,7 @@ Component({
     className: '',
     placeholder: '',
     focus: false,
-    showVoice: true,
+    showVoice: false,
   },
   data: {
     _value: '',

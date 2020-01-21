@@ -13,6 +13,7 @@
 | 属性 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | type | String | default | default, primary, ghost, warn,  warn-ghost, text, light | 按钮样式 | - |
+| subtitle | String | - | - | 子标题 | - |
 | shape | String | default | default, capsule | 按钮形状 | - |
 | capsuleSize | String | medium | large, medium, small | 胶囊按钮大小 | - | 
 | capsuleMinWidth | Boolean | false | true, false | 是否启用胶囊按钮最小宽度 | - | 
@@ -36,9 +37,9 @@
 {
   "defaultTitle": "Button",
   "usingComponents": {
-    "button": "../../es/button/index",
-    "radio": "../../es/am-radio/index",
-    "checkbox": "../../es/am-checkbox/index"
+    "button": "mini-ali-ui/es/button/index",
+    "radio": "mini-ali-ui/es/am-radio/index",
+    "checkbox": "mini-ali-ui/es/am-checkbox/index"
   }
 }
 
