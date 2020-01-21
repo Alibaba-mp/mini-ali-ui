@@ -5,7 +5,7 @@
 ## 演示
 
 <video width="375" autoplay muted loop >
-  <source src="https://gw.alipayobjects.com/os/basement_prod/c4f6f0c6-d048-423b-ac7c-6ccc52dd52aa.mov">
+  <source src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/file/A*pgTFTqfq44IAAAAAAAAAAABkARQnAQ" type="video/mp4">
   Sorry, your browser doesn't support embedded videos.
 </video>
 
