@@ -6,11 +6,11 @@ const FIRST_MONTH = 0;
 const LAST_MONTH = 11;
 const DAYS_PER_ROW = 7;
 const COLOR_MAP = {
-  1: '#f5a911',
-  2: '#e8541e',
-  3: '#07a89b',
-  4: '#108ee9',
-  5: 'rgba(51, 51, 51, 0.4)',
+  1: '#ff6010',
+  2: '#00b578',
+  3: '#ff8f1f',
+  4: '#1677ff',
+  5: '#999',
 };
 
 // 获取某月第某天是星期几

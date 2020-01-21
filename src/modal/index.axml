@@ -22,7 +22,7 @@
         </view>
       </view>
 			<view class="am-modal-close" hover-class="am-modal-close-active" a:if="{{showClose || advice}}" onTap="_onModalClose" >
-        <am-icon type="{{advice ? 'close-circle' : 'close'}}" size="{{advice ? 26 : 22}}" color="{{closeType === '1' ? 'white' : '#A3A3A3'}}" />
+        <am-icon type="{{advice ? 'close-circle' : 'close'}}" size="{{advice ? 26 : 18}}" color="{{closeType === '1' ? 'white' : '#999'}}" />
       </view>
 		</view>
 	</view>
