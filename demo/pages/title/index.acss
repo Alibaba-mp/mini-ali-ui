@@ -1,3 +1,6 @@
+.container {
+  background-color: #fff;
+}
 .am-title {
   padding-top: 24rpx;
 }

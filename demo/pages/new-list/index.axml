@@ -88,7 +88,7 @@
       <view class="row">
         <view class="row-title">标题位置</view>
         <view class="row-extra">当前选择：{{titlePositions[titlePosIndex]}}</view>
-        <am-icon type="right" size="13" />
+        <am-icon type="right" size="18" color="#cccc"/>
       </view>
     </picker>
     <view class="gap"/>
@@ -121,7 +121,7 @@
       <view class="row">
         <view class="row-title">标题插槽内容</view>
         <view class="row-extra">当前选择：{{primarySlotTypes[titleSlotIndex]}}</view>
-        <am-icon type="right" size="13" />
+        <am-icon type="right" size="18" color="#cccc"/>
       </view>
     </picker>
     <input-item
@@ -147,7 +147,7 @@
       <view class="row">
         <view class="row-title">上副标题插槽</view>
         <view class="row-extra">当前选择：{{primarySlotTypes[upperSlotIndex]}}</view>
-        <am-icon type="right" size="13" />
+        <am-icon type="right" size="18" color="#cccc"/>
       </view>
     </picker>
     <input-item
@@ -173,7 +173,7 @@
       <view class="row">
         <view class="row-title">下副标题插槽</view>
         <view class="row-extra">当前选择：{{primarySlotTypes[lowerSlotIndex]}}</view>
-        <am-icon type="right" size="13" />
+        <am-icon type="right" size="18" color="#cccc"/>
       </view>
     </picker>
     <input-item
@@ -201,7 +201,7 @@
       <view class="row">
         <view class="row-title">secondary插槽</view>
         <view class="row-extra">当前选择：{{secSlotTypes[secSlotIndex]}}</view>
-        <am-icon type="right" size="13" />
+        <am-icon type="right" size="18" color="#cccc"/>
       </view>
     </picker>
     <input-item
@@ -285,7 +285,7 @@
       <view class="row">
         <view class="row-title">supporting插槽</view>
         <view class="row-extra">当前选择：{{supSlotTypes[supSlotIndex]}}</view>
-        <am-icon type="right" size="13" />
+        <am-icon type="right" size="18" color="#cccc"/>
       </view>
     </picker>
     <input-item

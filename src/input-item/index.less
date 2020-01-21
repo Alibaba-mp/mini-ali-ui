@@ -1,4 +1,4 @@
-@import '../style/mixins/hairline.less';
+@import "../style/mixins/hairline.less";
 
 .am-input {
   &-item {
@@ -12,6 +12,9 @@
     // .a-input-content {
     //   padding-left: 2px;
     // }
+    &-extra {
+      margin-left: @h-spacing-large;
+    }
   }
 
   &-line {
@@ -51,12 +54,13 @@
 
   &-clear {
     display: flex;
-    height: @size-8;
-    height: var(--am-input-clear-size, @size-8);
-    width: @size-8;
-    width: var(--am-input-clear-size, @size-8);
+    height: @icon-size-sm;
+    width: @icon-size-sm;
     justify-content: center;
     align-items: center;
+    &-icon {
+      line-height: @line-height-base;
+    }
   }
 
   &-clear.show {
@@ -69,7 +73,7 @@
   }
 
   &-line-bottom {
-    .hairline('bottom');
+    .hairline("bottom");
   }
 
   /* 最后一行 */

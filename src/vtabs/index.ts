@@ -1,7 +1,10 @@
+import fmtUnit from '../_util/fmtUnit';
+
 Component({
   data: {
     tabTop: 0,
     wrapScrollTop: 0,
+    besideRadius: fmtUnit('8px'),
   },
   props: {
     activeTab: 0,

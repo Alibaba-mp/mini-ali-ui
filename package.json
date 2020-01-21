@@ -1,10 +1,10 @@
 {
   "name": "mini-ali-ui",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "小程序版AntUI",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ant-mini-program/mini-ali-ui.git"
+    "url": "git@github.com:Alibaba-mp/mini-ali-ui.git"
   },
   "files": [
     "es",
@@ -33,6 +33,7 @@
     "gulp-if": "^2.0.2",
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.2.3",
+    "gulp-inject-envs": "^1.1.1",
     "lint-staged": "^8.2.0",
     "mini-types": "^0.0.1",
     "pre-commit": "^1.2.2",
@@ -40,13 +41,16 @@
     "stylelint-config-standard": "^18.2.0",
     "typescript": "^3.6.4",
     "typescript-eslint-parser": "^22.0.0",
-    "alipay-style": "^0.0.3"
+    "alipay-style": "^0.0.7"
   },
   "scripts": {
     "lint-staged": "lint-staged",
     "build": "yarn && NODE_ENV=production node scripts/compiler.js",
     "pub": "npm run build && node scripts/pub.js",
-    "dev": "yarn && node scripts/compiler.js"
+    "dev": "yarn && node scripts/compiler.js",
+    "build:rpx": "yarn && NODE_ENV=production node scripts/compiler.js --rpx",
+    "pub:rpx": "npm run build:rpx && node scripts/pub.js --rpx",
+    "dev:rpx": "yarn && node scripts/compiler.js --rpx"
   },
   "pre-commit": [
     "lint-staged"

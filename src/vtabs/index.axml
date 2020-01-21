@@ -15,8 +15,8 @@
         style="{{
           activeTab == index?'font-weight: bold;color: ' + tabBarActiveTextColor + ';background-color: ' + tabBarActiveBgColor + ';':'color: ' + tabBarInactiveTextColor + ';background-color: ' + tabBarInactiveBgColor + ';'
         }}
-        {{index === currentBefore?'border-radius: 0 0 8px 0;':''}}
-        {{index === currentAfter?'border-radius: 0 8px 0 0;':''}}"
+        {{index === currentBefore?'border-radius: 0 0 ' + besideRadius + ' 0;':''}}
+        {{index === currentAfter?'border-radius: 0 ' + besideRadius + ' 0 0;':''}}"
         >
           <view class="am-vtabs-bar-title">
             <text>{{item.title}}<text a:if="{{item.number && item.number !== ''}}">({{item.number}})</text></text>
@@ -25,7 +25,7 @@
         </view>
         <view
           a:if="{{index + 1 === tabs.length}}"
-          style="{{index + 1 === currentAfter?'border-radius: 0 8px 0 0;':''}}
+          style="{{index + 1 === currentAfter?'border-radius: 0 ' + besideRadius + ' 0 0;':''}}
           {{tabBarInactiveBgColor?'background-color: ' + tabBarInactiveBgColor + ';':''}}"
           class="am-vtabs-bar-placehold"></view>
       </block>

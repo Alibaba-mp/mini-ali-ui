@@ -10,7 +10,6 @@
     display: flex;
     align-items: stretch;
     width: 100%;
-    // overflow: hidden;
     padding: 0 @h-spacing-large;
     padding: 0 var(--am-tabs-padding, @h-spacing-large);
     border-bottom: @border-width-standard solid @color-divider-line;
@@ -23,7 +22,7 @@
 
   &-scroll-left,
   &-scroll-right {
-    width: 36px;
+    width: 72 * @pixelSize;
     position: absolute;
     top: 0;
     bottom: 1px;
@@ -100,7 +99,7 @@
       }
     }
     &-subTitle {
-      margin-top: 4px;
+      margin-top: 8 * @pixelSize;
       padding: 0 @h-spacing-standard;
       padding: 0 var(--am-tabs-subTitle-paddingH, @h-spacing-standard);
       font-size: @font-size-content;
@@ -158,7 +157,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      height: 2px;
+      height: 4 * @pixelSize;
       overflow: hidden;
       font-size: 0;
       border-radius: @corner-radius-circle;

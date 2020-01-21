@@ -22,8 +22,10 @@
       onBlur="onBlur" />
     <view class="am-verify-code-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
       onTap="onClear">
-      <icon size="18" 
-        type="clear" />
+      <am-icon size="18" 
+        type="close_"
+        class="am-verify-code-clear-icon"
+        color="#ccc" />
     </view>
     <view class="am-verify-code-action {{_actionActive ? 'active' : 'inactive'}}" 
       onTap="onTapSend">{{

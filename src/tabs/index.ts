@@ -1,3 +1,5 @@
+import fmtUnit from '../_util/fmtUnit';
+
 const { windowWidth } = my.getSystemInfoSync();
 
 Component({
@@ -47,6 +49,8 @@ Component({
     hideRightShadow: false,
     boxWidth: 0,
     elWidth: 0,
+    tabFontSize15: fmtUnit('15px'),
+    tabFontSize13: fmtUnit('13px'),
   },
   didMount() {
     const { tabs, animation, hasSubTitle, elevator } = this.props;

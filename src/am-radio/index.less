@@ -7,9 +7,10 @@
 
 .am-radio {
   position: relative;
-  .amFormat(height, am-radio-size, @icon-size-sm);
-  .amFormat(width, am-radio-size, @icon-size-sm);
+  .amFormat(height, am-radio-size, @font-size-title);
+  .amFormat(width, am-radio-size, @font-size-title);
   display: inline-block;
+  line-height: @line-height-base;
   &-value {
     position: absolute;
     z-index: 1;
@@ -27,7 +28,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  .amFormat(font-size, am-radio-size, @icon-size-sm);
+  .amFormat(font-size, am-radio-size, @font-size-title);
   text-align: center;
   .amFormat(color, am-radio-color, @color-text-primary);
 }

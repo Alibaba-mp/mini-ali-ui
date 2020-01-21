@@ -17,15 +17,15 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 5px;
+    height: 10 * @pixelSize;
     z-index: 2;
     pointer-events: none;
   }
   &Area {
     position: absolute;
     left: 50%;
-    height: 9px;
-    width: 50px;
+    height: 18 * @pixelSize;
+    width: 100 * @pixelSize;
     overflow: hidden;
     transform: translateX(-50%) scale(0.5);
     background-repeat: no-repeat;
@@ -34,9 +34,9 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 180px;
-    height: 180px;
-    margin-left: -90px;
+    width: 360 * @pixelSize;
+    height: 360 * @pixelSize;
+    margin-left: -180 * @pixelSize;
     transition: all 100ms linear;
     border-radius: 50%;
   }
@@ -45,8 +45,8 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-100%);
-    height: 9px;
-    width: 25px;
+    height: 18 * @pixelSize;
+    width: 50 * @pixelSize;
     background-repeat: no-repeat;
   }
 }
@@ -55,10 +55,10 @@
   justify-content: center;
   transform: scale(0.5);
   &-number {
-    flex: 0 0 6px;
-    height: 6px;
+    flex: 0 0 12 * @pixelSize;
+    height: 12 * @pixelSize;
     overflow: hidden;
-    margin-right: 6px;
+    margin-right: 12 * @pixelSize;
     margin-bottom: @v-spacing-standard;
     border-radius: 50%;
     background-color: #ddd;
@@ -67,9 +67,9 @@
     }
   }
   &-current {
-    width: 24px;
-    height: 7px;
-    margin-right: 6px;
+    width: 48 * @pixelSize;
+    height: 14 * @pixelSize;
+    margin-right: 12 * @pixelSize;
     background-repeat: no-repeat;
   }
   &-lastChild {
