@@ -1,4 +1,4 @@
-<view class="am-input-item {{last ? 'last': ''}} {{className}}" onTap="onTap">
+<view class="am-input-item {{last ? 'last': ''}} {{className}}">
   <view class="am-input-line">
     <view a:if="{{$slots.$default}}" 
       class="am-input-label {{labelCls}}">

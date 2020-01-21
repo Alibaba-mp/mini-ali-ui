@@ -9,7 +9,7 @@ Page({
   },
   onAutoFocus() {
     this.setData({
-      inputFocus: true,
+      focus1: true,
     });
   },
   onExtraTap() {
@@ -22,14 +22,15 @@ Page({
       [e.target.dataset.field]: e.detail.value,
     });
   },
-  onItemFocus() {
+  onItemFocus(e) {
     this.setData({
-      inputFocus: true,
+      [e.target.dataset.name]: true,
     });
+    debugger;
   },
-  onItemBlur() {
+  onItemBlur(e) {
     this.setData({
-      inputFocus: false,
+      [e.target.dataset.name]: false,
     });
   },
   onItemConfirm() {},
