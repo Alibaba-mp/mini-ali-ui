@@ -41,7 +41,7 @@
     "stylelint-config-standard": "^18.2.0",
     "typescript": "^3.6.4",
     "typescript-eslint-parser": "^22.0.0",
-    "alipay-style": "^0.0.7"
+    "alipay-style": "^0.0.8"
   },
   "scripts": {
     "lint-staged": "lint-staged",
