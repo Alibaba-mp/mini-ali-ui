@@ -25,7 +25,7 @@
   }
 
   &-loading {
-    margin-right: 12px;
+    margin-right: 24 * @pixelSize;
   }
 
   &&-disabled {
@@ -124,21 +124,21 @@
       font-size: @font-size-subtitle;
       font-size: var(--am-button-capsule-size-l, @font-size-subtitle);
       &-minwidth {
-        min-width: 168rpx;
+        min-width: 168 * @pixelSize;
       }
     }
     &-medium {
       font-size: @font-size-content;
       font-size: var(--am-button-capsule-size-m, @font-size-content);
       &-minwidth {
-        min-width: 152rpx;
+        min-width: 152 * @pixelSize;
       }
     }
     &-small {
       font-size: @font-size-subcontent;
       font-size: var(--am-button-capsule-size-s, @font-size-subcontent);
       &-minwidth {
-        min-width: 144rpx;
+        min-width: 144 * @pixelSize;
       }
     }
   }
