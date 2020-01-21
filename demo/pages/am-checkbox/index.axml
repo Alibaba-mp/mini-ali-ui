@@ -11,7 +11,7 @@
       last="{{index === (items.length - 1)}}"
     >
       <view style="display: flex; align-items: center;">
-        <am-checkbox id="{{item.id}}" data-name="{{item.value}}" type="{{item.type}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
+        <am-checkbox id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
         <label for="{{item.id}}">{{item.title}}</label>
       </view>
     </list-item>

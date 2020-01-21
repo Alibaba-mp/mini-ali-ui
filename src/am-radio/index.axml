@@ -4,8 +4,6 @@
     value="{{value}}"
     checked="{{checked}}"
     disabled="{{disabled}}"
-    onChange="onChange"
-    color="{{color}}"
     id="{{id}}"
     />
     <am-icon className="am-radio-synthetic" type="check"/>
