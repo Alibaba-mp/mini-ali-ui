@@ -55,6 +55,9 @@
     width: @icon-size-sm;
     justify-content: center;
     align-items: center;
+    &-icon {
+      line-height: @line-height-base;
+    }
   }
 
   &-clear.show {
@@ -62,7 +65,7 @@
   }
 
   &-clear.hidden {
-    visibility: hidden;
+    // visibility: hidden;
     pointer-events: none;
   }
 

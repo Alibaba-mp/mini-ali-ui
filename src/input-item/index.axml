@@ -24,6 +24,7 @@
     <view class="am-input-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
       onTap="onClear">
       <am-icon size="18" 
+        class="am-input-clear-icon" 
         type="close_" 
         color="#ccc" />
     </view>
