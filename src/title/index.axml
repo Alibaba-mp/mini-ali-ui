@@ -6,9 +6,6 @@
     <slot></slot>
   </view>  
   <view class="am-title-operation" a:if="{{ type==='arrow' || type==='close' || type==='more' }}" onTap="onClick">
-    <am-icon
-      type="{{type === 'arrow'?'right':type}}"
-      size="17" color="#ccc"
-    ></am-icon>
+    <am-icon type="{{type === 'arrow'?'right':type}}" class="am-title-operation-icon"></am-icon>
   </view>
 </view>
