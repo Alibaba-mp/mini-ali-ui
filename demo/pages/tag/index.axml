@@ -1,4 +1,4 @@
-<view class="container">
+<view style="padding: 12px;">
   <view style="display: flex; justify-content: space-evenly;">
     <tag size="lg" iconType="{{useIcon ? 'qr' : ''}}" ghost="{{ghost}}" type="primary">标签</tag>
     <tag size="lg" iconType="{{useIcon ? 'qr' : ''}}" ghost="{{ghost}}" type="warning">标签</tag>
