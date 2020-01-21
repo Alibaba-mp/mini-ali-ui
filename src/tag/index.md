@@ -4,7 +4,7 @@
 
 ## 演示
 
-<video width="250" autoplay muted loop src="https://gw.alipayobjects.com/os/basement_prod/c4f6f0c6-d048-423b-ac7c-6ccc52dd52aa.mov">
+<video width="375" autoplay muted loop src="https://gw.alipayobjects.com/os/basement_prod/c4f6f0c6-d048-423b-ac7c-6ccc52dd52aa.mov">
   Sorry, your browser doesn't support embedded videos.
 </video>
 
