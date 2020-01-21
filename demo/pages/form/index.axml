@@ -49,6 +49,6 @@
       auto-height="{{true}}" />
   </list>
   <view style="margin: 10px;" />
-  <button type="primary" 
-    onTap="onAutoFocus">聚焦</button>
+  <!-- <button type="primary" 
+    onTap="onAutoFocus">聚焦</button> -->
 </view>

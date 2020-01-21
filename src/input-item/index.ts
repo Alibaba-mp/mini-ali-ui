@@ -33,11 +33,6 @@ Component({
       _focus: this.props.focus,
     });
   },
-  didUpdate() {
-    this.setData({
-      _focus: this.props.focus,
-    });
-  },
   methods: {
     onBlur(e) {
       this.setData({
@@ -64,11 +59,6 @@ Component({
     onClear(e) {
       const event = fmtEvent(this.props, e);
       this.props.onClear(event);
-    },
-    onTap() {
-      this.setData({
-        _focus: true,
-      });
     },
   },
 });
