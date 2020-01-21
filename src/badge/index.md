@@ -14,7 +14,7 @@
 | dot           | Boolean         | false    | -      | 不展示数字，只有一个小红点            | -        | -    |
 | overflowCount | Number          | 99       | -      | 展示封顶的数字值，超出部分用“+”号表示 | -        | -    |
 | withArrow     | Boolean         | false    | -      | 是否使用箭头                          | -        | -    |
-| direction     | String          | 'middle' | middle, left, right | 箭头方向                              | -        | -    |
+| direction     | String          | 'middle' | middle<br/> left<br/> right | 箭头方向                              | -        | -    |
 ## slots
 
 | slotName | 说明 |
