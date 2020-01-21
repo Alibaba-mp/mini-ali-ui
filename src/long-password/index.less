@@ -43,10 +43,14 @@
 
   &-clear {
     display: flex;
-    height: 32px; //不token
-    width: 32px;  //不token
+    height: @icon-size-sm; //不token
+    width: @icon-size-sm;  //不token
     justify-content: center;
     align-items: center;
+    margin-left: @h-spacing-large;
+    &-icon {
+      line-height: 1;
+    }
   }
 
   &-clear.show {
@@ -54,7 +58,7 @@
   }
 
   &-clear.hidden {
-    visibility: hidden;
+    // visibility: hidden;
     pointer-events: none;
   }
 
@@ -73,7 +77,12 @@
   &-eye {
     margin-left: @h-spacing-large;
     margin-left: var(--am-long-password-eye-margin-left, @h-spacing-large);
-    padding: 5px 7px;
-    margin-right: -7px;
+    height: @icon-size-sm;
+    width: @icon-size-sm;
+    display: flex;
+    align-items: center;
+    &-icon {
+      line-height: 1;
+    }
   }
 }
