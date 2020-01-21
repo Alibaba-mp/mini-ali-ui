@@ -7,28 +7,28 @@
 ![输入框.png](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*DumuSohfeXQAAAAAAAAAAABkARQnAQ) 
 
 ## 属性
-| 属性名           | 类型                | 默认值 | 可选值                                          | 描述                                                      |
-| ---------------- | ------------------- | ------ | ----------------------------------------------- | --------------------------------------------------------- |
-| className        | String              | ''     | -                                               | 自定义的class                                             |
-| labelCls         | String              | ''     | -                                               | 自定义label的class                                        |
-| inputCls         | String              | ''     | -                                               | 自定义input的class                                        |
-| last             | Boolean             | false  | -                                               | 是否最后一行                                              |
-| value            | String              | ''     | -                                               | 初始内容                                                  |
-| name             | String              | ''     | -                                               | 组件名字，用于表单提交获取数据                            |
-| type             | String              | text   | - text<br />- number<br />- idcard<br />- digit | input 的类型，有效值：`text`, `number`, `idcard`, `digit` |
-| password         | Boolean             | false  | -                                               | 是否是密码类型                                            |
-| placeholder      | String              | ''     | -                                               | 占位符                                                    |
-| placeholderStyle | String              | ''     | -                                               | 指定 placeholder 的样式                                   |
-| placeholderClass | String              | ''     | -                                               | 指定 placeholder 的样式类                                 |
-| disabled         | Boolean             | false  | -                                               | 是否禁用                                                  |
-| maxlength        | Number              | 140    | -                                               | 最大长度                                                  |
-| focus            | Boolean             | false  | -                                               | 获取焦点                                                  |
-| clear            | Boolean             | false  | -                                               | 是否带清除功能，仅disabled为false才生效                   |
-| onInput          | (e: Object) => void |        | -                                               | 键盘输入时触发input事件                                   |
-| onConfirm        | (e: Object) => void |        | -                                               | 点击键盘完成时触发                                        |
-| onFocus          | (e: Object) => void |        | -                                               | 聚焦时触发                                                |
-| onBlur           | (e: Object) => void |        | -                                               | 失去焦点时触发                                            |
-| onClear          | () => void          |        | -                                               | 点击清除icon时触发                                        |
+| 属性名           | 类型                | 默认值 | 可选值                           | 描述                                                      | 最低版本 | 必填 |
+| ---------------- | ------------------- | ------ | -------------------------------- | --------------------------------------------------------- | -------- | ---- |
+| className        | String              | ''     | -                                | 自定义的class                                             |          |      |
+| labelCls         | String              | ''     | -                                | 自定义label的class                                        |          |      |
+| inputCls         | String              | ''     | -                                | 自定义input的class                                        |          |      |
+| last             | Boolean             | false  | -                                | 是否最后一行                                              |          |      |
+| value            | String              | ''     | -                                | 初始内容                                                  |          |      |
+| name             | String              | ''     | -                                | 组件名字，用于表单提交获取数据                            |          |      |
+| type             | String              | text   | - text - number - idcard - digit | input 的类型，有效值：`text`, `number`, `idcard`, `digit` |          |      |
+| password         | Boolean             | false  | -                                | 是否是密码类型                                            |          |      |
+| placeholder      | String              | ''     | -                                | 占位符                                                    |          |      |
+| placeholderStyle | String              | ''     | -                                | 指定 placeholder 的样式                                   |          |      |
+| placeholderClass | String              | ''     | -                                | 指定 placeholder 的样式类                                 |          |      |
+| disabled         | Boolean             | false  | -                                | 是否禁用                                                  |          |      |
+| maxlength        | Number              | 140    | -                                | 最大长度                                                  |          |      |
+| focus            | Boolean             | false  | -                                | 获取焦点                                                  |          |      |
+| clear            | Boolean             | false  | -                                | 是否带清除功能，仅disabled为false才生效                   |          |      |
+| onInput          | (e: Object) => void |        | -                                | 键盘输入时触发input事件                                   |          |      |
+| onConfirm        | (e: Object) => void |        | -                                | 点击键盘完成时触发                                        |          |      |
+| onFocus          | (e: Object) => void |        | -                                | 聚焦时触发                                                |          |      |
+| onBlur           | (e: Object) => void |        | -                                | 失去焦点时触发                                            |          |      |
+| onClear          | () => void          |        | -                                | 点击清除icon时触发                                        |          |      |
 
 ### type 属性值介绍
 * `text`： 字符输入框
