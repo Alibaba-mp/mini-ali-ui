@@ -15,7 +15,7 @@
 | last             | Boolean             | false  | -                                | 是否最后一行                                              |          |      |
 | value            | String              | ''     | -                                | 初始内容                                                  |          |      |
 | name             | String              | ''     | -                                | 组件名字，用于表单提交获取数据                            |          |      |
-| type             | String              | text   | - text - number - idcard - digit | input 的类型，有效值：`text`, `number`, `idcard`, `digit` |          |      |
+| type             | String              | text   | text, number, idcard, digit      | input 的类型，有效值：`text`, `number`, `idcard`, `digit` |          |      |
 | password         | Boolean             | false  | -                                | 是否是密码类型                                            |          |      |
 | placeholder      | String              | ''     | -                                | 占位符                                                    |          |      |
 | placeholderStyle | String              | ''     | -                                | 指定 placeholder 的样式                                   |          |      |
