@@ -1,4 +1,4 @@
-@import '../style/mixins/hairline.less';
+@import "../style/mixins/hairline.less";
 
 .am-input {
   &-item {
@@ -51,10 +51,8 @@
 
   &-clear {
     display: flex;
-    height: 22px;
-    // height: var(--am-input-clear-size, @size-8);
-    width: 22px;
-    // width: var(--am-input-clear-size, @size-8);
+    height: @icon-size-sm;
+    width: @icon-size-sm;
     justify-content: center;
     align-items: center;
   }
@@ -69,7 +67,7 @@
   }
 
   &-line-bottom {
-    .hairline('bottom');
+    .hairline("bottom");
   }
 
   /* 最后一行 */
