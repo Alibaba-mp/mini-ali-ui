@@ -1,8 +1,7 @@
 Page({
   data: {
     type: 'market',
-    // show: false,
-    // maskZindex: 10,
+    maskZindex: 10,
   },
   maskClick() {
     if (this.data.type === 'market') {

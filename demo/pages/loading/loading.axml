@@ -1,4 +1,4 @@
 <loading />
 <loading size="50px" />
-<loading size="400rpx" color="#f00" />
+<loading size="400rpx" color="red" />
 <loading size="{{loadSize}}" color="#f00" />
