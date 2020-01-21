@@ -1,5 +1,6 @@
-文本输入。
-
+文本输入框。
+- 输入区内容不折行，如用户输入的字数超出显示区，输入框内的文字可左右滑动
+- 如无特殊情况，清空按钮在框内有内容且获得焦点时默认出现
 ## 扫码体验
 <img src="https://gw.alipayobjects.com/zos/rmsportal/HoUOLnPEOaymuHlbeyqR.jpeg" width="154" height="190" />
 
