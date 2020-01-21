@@ -43,13 +43,17 @@
 
   &-clear {
     display: flex;
-    height: @icon-size-sm; //不token
-    width: @icon-size-sm;  //不token
+    height: @icon-size-sm;
+    height: var(--am-long-password-icon-size, @icon-size-sm);
+    width: @icon-size-sm;
+    width: var(--am-long-password-icon-size, @icon-size-sm);
     justify-content: center;
     align-items: center;
     margin-left: @h-spacing-large;
+    margin-left: var(--am-long-password-eye-spacing, @h-spacing-large);
     &-icon {
       line-height: @line-height-base;
+      line-height: var(--am-long-password-icon-line-height, @line-height-base);
     }
   }
 
@@ -76,13 +80,16 @@
   }
   &-eye {
     margin-left: @h-spacing-large;
-    margin-left: var(--am-long-password-eye-margin-left, @h-spacing-large);
+    margin-left: var(--am-long-password-eye-spacing, @h-spacing-large);
     height: @icon-size-sm;
+    height: var(--am-long-password-icon-size, @icon-size-sm);
     width: @icon-size-sm;
+    width: var(--am-long-password-icon-size, @icon-size-sm);
     display: flex;
     align-items: center;
     &-icon {
       line-height: @line-height-base;
+      line-height: var(--am-long-password-icon-line-height, @line-height-base);
     }
   }
 }
