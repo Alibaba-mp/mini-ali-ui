@@ -7,15 +7,14 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/NQlAfTbzwLneEYbNYNht.jpeg" width="154" height="190" />
 
 ## 属性
-| 属性名        | 类型            | 默认值   | 描述                                  | 最低版本 | 必填 |
-| ------------- | --------------- | -------- | ------------------------------------- | -------- | ---- |
-| className     | String          | ''       | 类名称                                | -        | -    |
-| text          | String / Number | ''       | 展示的数字或文案                      | -        | -    |
-| dot           | Boolean         | false    | 不展示数字，只有一个小红点            | -        | -    |
-| overflowCount | Number          | 99       | 展示封顶的数字值，超出部分用“+”号表示 | -        | -    |
-| withArrow     | Boolean         | false    | 是否使用箭头                          | -        | -    |
-| direction     | String          | 'middle' | 箭头方向                              | -        | -    |
-
+| 属性名        | 类型            | 默认值   | 可选项 | 描述                                  | 最低版本 | 必填 |
+| ------------- | --------------- | -------- | ------ | ------------------------------------- | -------- | ---- |
+| className     | String          | ''       | -      | 类名称                                | -        | -    |
+| text          | String / Number | ''       | -      | 展示的数字或文案                      | -        | -    |
+| dot           | Boolean         | false    | -      | 不展示数字，只有一个小红点            | -        | -    |
+| overflowCount | Number          | 99       | -      | 展示封顶的数字值，超出部分用“+”号表示 | -        | -    |
+| withArrow     | Boolean         | false    | -      | 是否使用箭头                          | -        | -    |
+| direction     | String          | 'middle' | middle, left, right | 箭头方向                              | -        | -    |
 ## slots
 
 | slotName | 说明 |
