@@ -94,8 +94,10 @@
     margin-left: @h-spacing-large;
     margin-left: var(--am-tips-dialog-h-spacing, @h-spacing-large);
     align-self: flex-start;
-    height: 22px;
-    width: 22px;
+    height: @icon-size-sm;
+    height: var(--am-tips-dialog-icon-size, @icon-size-sm);
+    width: @icon-size-sm;
+    width: var(--am-tips-dialog-icon-size, @icon-size-sm);
   }
   &-close:before {
     transform: rotate(45deg);
