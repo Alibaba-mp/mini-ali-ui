@@ -1,4 +1,3 @@
-/* required by usingComponents */
 .list-like {
   display: flex;
   background: #fff;
