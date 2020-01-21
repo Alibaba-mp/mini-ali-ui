@@ -240,6 +240,13 @@ Page({
                 tagType: 'success',
               },
               {
+                name: 'PickerItem',
+                nameZN: '选择框',
+                path: '/pages/picker-item/index',
+                tag: '优化',
+                tagType: 'success',
+              },
+              {
                 name: 'VerifyCode',
                 nameZN: '验证码框',
                 path: '/pages/verify-code/index',
