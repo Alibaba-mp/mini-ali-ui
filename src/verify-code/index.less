@@ -57,10 +57,14 @@
     // width: @size-8;
     // width: var(--am-verify-code-clear-size, @size-8);
     // 这个长宽设置其实没有意义，所以就不开放给用户设置
-    height: 32px;
-    width: 32px;
+    height: @icon-size-sm;
+    width: @icon-size-sm;
     justify-content: center;
     align-items: center;
+    margin-right: @h-spacing-large;
+    &-icon {
+      line-height: @line-height-base;
+    }
   }
 
   &-clear.show {
@@ -68,7 +72,7 @@
   }
 
   &-clear.hidden {
-    visibility: hidden;
+    // visibility: hidden;
     pointer-events: none;
   }
 

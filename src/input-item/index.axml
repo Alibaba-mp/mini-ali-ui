@@ -23,11 +23,14 @@
       onBlur="onBlur" />
     <view class="am-input-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
       onTap="onClear">
-      <am-icon size="20" 
+      <am-icon size="18" 
+        class="am-input-clear-icon" 
         type="close_" 
         color="#ccc" />
     </view>
-    <slot name="extra" />
+    <view a:if="{{$slots.extra}}" class="am-input-item-extra">
+       <slot name="extra" />
+    </view>
     <view class="am-input-line-bottom" />
   </view>
 </view>

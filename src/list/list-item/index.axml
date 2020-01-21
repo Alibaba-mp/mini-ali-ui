@@ -54,7 +54,7 @@
 		<view a:if="{{arrow}}" 
 			class="am-list-arrow">
 			<am-icon type="right" 
-				size="13" 
+				size="18" 
 				color="#ccc" />
 		</view>
 		<!-- <view class="am-list-line-bottom" /> -->
