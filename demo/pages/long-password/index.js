@@ -24,14 +24,10 @@ Page({
   },
   onItemFocus() {
     this.setData({
-      inputFocus: true,
-    });
-  },
-  onItemBlur() {
-    this.setData({
       inputFocus: false,
     });
   },
+  onItemBlur() {},
   onItemConfirm() {},
   onClear(e) {
     this.setData({

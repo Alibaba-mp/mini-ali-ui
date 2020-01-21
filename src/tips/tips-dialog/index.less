@@ -1,4 +1,4 @@
-@import (reference) '../../style/themes/default.less';
+@import (reference) "../../style/themes/default.less";
 
 .am-tips-dialog {
   position: relative;
@@ -8,29 +8,24 @@
   padding: 0 var(--am-tips-dialog-container-spacing, @h-spacing-standard);
   box-sizing: border-box;
   font-size: @font-size-subtitle;
-  font-size: var(--am-tips-plain-font-size, @font-size-subtitle);
+  font-size: var(--am-tips-dialog-font-size, @font-size-subtitle);
+
+  & .am-button {
+    box-shadow: none;
+  }
 
   &-wrap {
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, 0.75);
     position: relative;
-    // background: @color-fill-grey-dark;
-    // background: var(--am-tips-dialog-bg-color, @color-fill-grey-dark);
     box-shadow: 0 4px 10px 0 rgba(51, 51, 51, 0.2);
     border-radius: @corner-radius-lg;
     border-radius: var(--am-tips-dialog-border-radius, @corner-radius-lg);
     padding: @v-spacing-standard @h-spacing-large;
     padding: var(--am-tips-dialog-v-spacing, @v-spacing-standard) var(--am-tips-dialog-spacing, @h-spacing-large);
     height: 100%;
-    // line-height: @line-height-paragraph;
-    // line-height: var(--am-tips-dialog-line-height, @line-height-paragraph);
   }
-
-  // &-floater {
-  //   position: absolute;
-  //   width: 100%;
-  // }
 
   &-arrow {
     position: absolute;
@@ -41,53 +36,50 @@
   &-arrow-bottom-left {
     bottom: -8px;
     left: 26px;
-    // transform: scaleY(1.07);
   }
 
   &-arrow-bottom-right {
     bottom: -8px;
     right: 26px;
-    // transform: scaleY(1.07);
   }
 
   &-arrow-bottom-center {
     bottom: -8px;
     left: 50%;
     margin-left: -8px;
-    // transform: scaleY(1.07);
   }
 
   &-arrow-top-left {
     top: -8px;
     left: 26px;
-    transform: rotate(180deg) /* scaleY(1.07) */;
+    transform: rotate(180deg);
   }
 
   &-arrow-top-right {
     top: -8px;
     right: 26px;
-    transform: rotate(180deg) /* scaleY(1.07) */;
+    transform: rotate(180deg);
   }
 
   &-arrow-top-center {
     top: -8px;
     left: 50%;
     margin-left: -8px;
-    transform: rotate(180deg) /* scaleY(1.07) */;
+    transform: rotate(180deg);
   }
 
   &-arrow-left {
     top: 50%;
     left: -11px;
     margin-top: -4px;
-    transform: rotate(90deg) /* scaleY(1.19) */;
+    transform: rotate(90deg) translateY(6%);
   }
 
   &-arrow-right {
     top: 50%;
     right: -11px;
     margin-top: -4px;
-    transform: rotate(-90deg) /* scaleY(1.19) */;
+    transform: rotate(-90deg) translateY(6%);
   }
 
   &-wrap &-rectangle {
@@ -99,24 +91,11 @@
   }
 
   &-close {
-    // position: relative;
-    // width: 15px;
-    // height: 15px;
     margin-left: @h-spacing-large;
     margin-left: var(--am-tips-dialog-h-spacing, @h-spacing-large);
     align-self: flex-start;
     padding-top: 4px;
   }
-  // &-close:before,
-  // &-close:after {
-  //   position: absolute;
-  //   left: 7px;
-  //   content: ' ';
-  //   height: 15px;
-  //   width: 2px;
-  //   background-color: @color-fill-grey-base;
-  //   background-color: var(--am-tips-dialog-close-btn-color, @color-fill-grey-base);
-  // }
   &-close:before {
     transform: rotate(45deg);
   }
@@ -131,20 +110,9 @@
     position: relative;
     height: 100%;
     align-self: stretch;
-    // margin-right: 11px;
-    // height: 20px;
-    // width: 20px;
-    // background-image: url(https://gw.alipayobjects.com/zos/rmsportal/YtkqfRVfNxhpKWnrJRUJ.png);
-    // background-size: 50%;
-    // background-position: center;
-    // background-repeat: no-repeat;
   }
 
   &-icon {
-    // height: @size-9;
-    // height: var(--am-tips-dialog-image-size, @size-9);
-    // width: @size-9;
-    // width: var(--am-tips-dialog-image-size, @size-9);
     background-color: @color-fill-grey-inverse;
     background-color: var(--am-tips-dialog-icon-bg-color, @color-fill-grey-inverse);
     border-radius: @corner-radius-md;

@@ -20,6 +20,7 @@
     <am-button a:if="{{useButton}}" 
       slot="operation" 
       shape="capsule" 
+      capsuleSize="small" 
       onTap="onRectangleTap">立即添加</am-button>
     <!-- <view slot="operation" class="add-home" onTap="onRectangleTap">立即添加</view> -->
   </tips-dialog>
