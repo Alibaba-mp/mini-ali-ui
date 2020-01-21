@@ -1,18 +1,10 @@
 Component({
   props: {
-    // title component have boder-bottom line
-    hasLine: false,
-    // type: arrow、close、more、'';
     type: 'primary',
-    // if type="arrow", need to write path
-    iconURL: '',
     iconType: '',
-    onActionTap: () => {},
-    // developer can use class for style
     className: '',
-    color: 'blue',
+    size: 'lg',
   },
-  // TODO
   data: {
     bgClass: {
       primary: 'am-tag-bg-primary',
@@ -36,15 +28,4 @@ Component({
   didMount() {},
   didUpdate() {},
   didUnmount() {},
-  methods: {
-    onClick() {
-      const { type, onActionTap } = this.props;
-      if (
-        (type === 'arrow' || type === 'more' || type === 'close') &&
-        typeof onActionTap === 'function'
-      ) {
-        onActionTap();
-      }
-    },
-  },
 });
