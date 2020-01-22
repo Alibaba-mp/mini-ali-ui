@@ -4,6 +4,7 @@ Component({
   props: {
     className: '',
     labelCls: '',
+    label: '验证码',
     inputCls: '',
     last: false,
     value: '',
