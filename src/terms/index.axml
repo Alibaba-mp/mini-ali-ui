@@ -6,9 +6,9 @@
         <slot name="header"/>
     </view>
 	<view class="am-terms-body">
-        <button type="{{agreeBtn.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" dataName="{{agreeBtn.data}}" subtitle="{{agreeBtn.subtitle}}" disabled="{{showBtn}}">{{agreeBtn.title}}</button>
-    <block a:if="{{cancelBtn.title}}">
-        <button type="{{cancelBtn.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}"  onTap="onTap" dataName="{{cancelBtn.data}}" subtitle="{{cancelBtn.subtitle}}">{{cancelBtn.title}}</button>
+        <button type="{{agreeBtnAttr.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" dataName="{{agreeBtnAttr.data}}" subtitle="{{agreeBtnAttr.subtitle}}" disabled="{{showBtn}}">{{agreeBtnAttr.title}}</button>
+    <block a:if="{{cancelBtnAttr.title}}">
+        <button type="{{cancelBtnAttr.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}"  onTap="onTap" dataName="{{cancelBtnAttr.data}}" subtitle="{{cancelBtnAttr.subtitle}}">{{cancelBtnAttr.title}}</button>
     </block>
     </view>
     <view class="am-terms-footer" a:if="{{hasDesc}}">

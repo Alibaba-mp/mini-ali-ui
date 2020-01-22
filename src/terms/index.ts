@@ -2,35 +2,48 @@ Component({
   props: {
     fixed: false,
     related: true,
-    onChange: () => {},
-    agreeBtn: {
-      title: '',
-      subtitle: '',
-      type: 'primary',
-      data: 1,
-      checked: false,
-    },
-    cancelBtn: {
-      title: '',
-      subtitle: '',
-      type: 'default',
-      data: 2,
-    },
     capsuleSize: 'large',
     shape: 'default',
+    agreeBtn: null,
+    cancelBtn: null,
     capsuleMinWidth: false,
     hasDesc: false,
   },
   data: {
     showBtn: true,
     status: 0,
+    agreeBtnAttr: {},
+    cancelBtnAttr: {},
   },
   didMount() {
-    const { agreeBtn, related } = this.props;
-    if ((agreeBtn.checked && related) || !related) {
-      this.setData({ showBtn: false, status: 1 });
+    const { agreeBtn, cancelBtn, related } = this.props;
+    const agreeBtnCfg = agreeBtn ? Object.assign({
+      title: '',
+      subtitle: '',
+      type: 'primary',
+      data: 1,
+      checked: false,
+    }, agreeBtn) : {};
+    const cancelBtnCfg = cancelBtn ? Object.assign({
+      title: '',
+      subtitle: '',
+      type: 'default',
+      data: 2,
+    }, cancelBtn) : {};
+    if ((agreeBtnCfg.checked && related) || !related) {
+      this.setData({
+        showBtn: false,
+        status: 1,
+        agreeBtnAttr: agreeBtnCfg,
+        cancelBtnAttr: cancelBtnCfg,
+      });
     } else {
-      this.setData({ showBtn: true, status: 0 });
+      this.setData({
+        showBtn: true,
+        status: 0,
+        agreeBtnAttr: agreeBtnCfg,
+        cancelBtnAttr: cancelBtnCfg,
+      });
     }
   },
   methods: {
@@ -41,7 +54,6 @@ Component({
     onChange(e) {
       const { related } = this.props;
       const isSeleted = e.detail.value;
-
 
       if (related && isSeleted) {
         this.setData({ showBtn: false, status: 1 });

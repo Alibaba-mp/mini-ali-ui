@@ -6,7 +6,7 @@
     "Component": true,
     "Page": true
   },
-  "parser": "typescript-eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "plugins": [
     "typescript"
   ],
