@@ -3,7 +3,6 @@
     <view slot="header">New List Demo</view>
     <list-item thumb="{{useThumb ? thumb : ''}}" 
       arrow="{{arrow}}" 
-      align="{{align}}" 
       index="{{index}}" 
       borderRadius="{{borderRadius}}"
       upperSubtitle="{{upperSubtitle}}" 

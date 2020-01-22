@@ -11,15 +11,7 @@
 | loadMore    | String | -                                    | -      | 显示加载更多 item。`load`：显示加载更多；`over`：显示加载完成无更多 |          | 否   |
 | loadContent | Array  | ['加载更多...','-- 数据加载完了 --'] | -      | 需结合 `loadMore` 属性使用，用于文案展示                     |          | 否   |
 
-### loadMore 使用介绍
-当需要使用无限循环列表时，可将 `list` 组件放置入到 [`scroll-view`](https://docs.alipay.com/mini/component/scroll-view) 中，根据需求对 [`scroll-view`](https://docs.alipay.com/mini/component/scroll-view) 添加相对应的属性，比如：
-```xml
-<scroll-view style="height: 80vh;" scroll-y onScrollToLower="onScrollToLower" enable-back-to-top="true">
-  <list loadMore="{{loadMore}}" loadContent="{{loadContent}}">
-    <list-item>...</list-item>
-  </list>
-</scroll-view>
-```
+
 ```javascript
 Page({
   data: {

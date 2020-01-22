@@ -1,4 +1,4 @@
-<view class="am-list-item am-list-{{align}} {{multipleLine ? 'am-list-multiple' : ''}} {{last ? 'last': ''}} {{borderRadius ? 'am-list-item-radius' : ''}} {{className}}" 
+<view class="am-list-item {{last ? 'last': ''}} {{borderRadius ? 'am-list-item-radius' : ''}} {{className}}" 
 	hover-class="{{disabled ? '' : 'am-list-item-hover'}}" 
 	onTap="onItemTap" 
 	data-index="{{index}}">

@@ -110,23 +110,20 @@ Page({
     ],
     items2: [
       {
-        title: '多行列表',
+        title: '列表组',
         arrow: true,
       },
       {
-        title: '多行列表',
-        arrow: 'up',
+        title: '列表组',
       },
       {
-        title: '多行列表',
-        arrow: 'down',
+        title: '列表组',
       },
       {
-        title: '多行列表',
-        arrow: 'empty',
+        title: '列表组',
       },
       {
-        title: '多行列表',
+        title: '列表组',
       },
     ],
     items3: [
@@ -138,18 +135,24 @@ Page({
     ],
     items4: [
       {
-        title: '双行列表',
-        brief: '描述信息',
+        title: '三行列表',
+        upperSubtitle: '上副标题',
+        lowerSubtitle: '下副标题',
+        titlePosition: 'top',
         arrow: true,
       },
       {
-        title: '双行列表',
-        brief: '描述信息',
+        title: '三行列表',
+        upperSubtitle: '上副标题',
+        lowerSubtitle: '下副标题',
+        titlePosition: 'middle',
         arrow: true,
       },
       {
-        title: '双行列表',
-        brief: '描述信息',
+        title: '三行列表',
+        upperSubtitle: '上副标题',
+        lowerSubtitle: '下副标题',
+        titlePosition: 'bottom',
         arrow: true,
       },
     ],
