@@ -1,8 +1,5 @@
 <view class="dyt-list" 
 	style="position: relative;">
-	<!-- <alphabet alphabet="{{alphabet}}" onClick="onAlphabetClick">
-		<view slot="prefix"><icon size="{{11}}" type="success"/></view>
-	</alphabet> -->
 	<scroll-view style="height: 80vh;" 
 		scroll-y onScrollToLower="onScrollToLower" 
 		enable-back-to-top="true">
@@ -22,7 +19,6 @@
 					upperSubtitle="{{item.brief}}"
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
-					<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<am-switch slot="extra"/>
 				</list-item>
 				<list-item a:elif="{{item.actionType ==='check'}}" 
@@ -130,7 +126,6 @@
 					titlePosition="{{item.titlePosition}}"
 					>
 					{{item.title}}
-										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
 						slot="extra">
 						{{item.extra}}
@@ -154,7 +149,6 @@
 					brief="{{item.brief}}" 
 					key="itemsThumb-{{index}}">
 					{{item.title}}
-										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
 						slot="extra">
 						{{item.extra}}
@@ -176,7 +170,6 @@
 					upperSubtitle="{{item.brief}}" 
 					multipleLineX="{{true}}">
 					{{item.title}}
-										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
 						slot="extra">
 						{{item.extra}}
