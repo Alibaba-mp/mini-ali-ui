@@ -39,7 +39,7 @@
 {
   "defaultTitle": "Steps",
   "usingComponents": {
-    "steps": "../../es/steps/index"
+    "steps": "min-ali-ui/es/steps/index"
   }
 }
 ```

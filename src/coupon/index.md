@@ -37,8 +37,8 @@
 {
   "defaultTitle": "Coupon",
   "usingComponents":{
-    "coupon":"../../es/coupon/index",
-    "button": "../../es/button/index"
+    "coupon":"min-ali-ui/es/coupon/index",
+    "button": "min-ali-ui/es/button/index"
   }
 }
 ```

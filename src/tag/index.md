@@ -28,9 +28,9 @@
 {
   "defaultTitle": "小程序 mini-ali-ui 库",
   "usingComponents": {
-    "tag": "../../es/tag/index",
-    "list-item": "../../es/list/list-item/index",
-    "am-switch": "../../es/am-switch/index"
+    "tag": "min-ali-ui/es/tag/index",
+    "list-item": "min-ali-ui/es/list/list-item/index",
+    "am-switch": "min-ali-ui/es/am-switch/index"
   }
 }
 ```

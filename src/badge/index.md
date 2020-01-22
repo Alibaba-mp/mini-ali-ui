@@ -27,8 +27,8 @@
 {
   "defaultTitle": "徽标",
   "usingComponents": {
-    "list-item": "../../es/list/list-item/index",
-    "badge": "../../es/badge/index"
+    "list-item": "min-ali-ui/es/list/list-item/index",
+    "badge": "min-ali-ui/es/badge/index"
   }
 }
 ```

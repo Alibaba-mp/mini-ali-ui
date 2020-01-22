@@ -8,8 +8,6 @@
       class="am-verify-code-content {{inputCls}}" 
       value="{{value}}" 
       name="{{name}}" 
-      type="{{type}}" 
-      password="{{password}}" 
       placeholder="{{placeholder}}" 
       placeholderClass="am-verify-code-placeholder-base {{placeholderClass}}" 
       placeholderStyle="{{placeholderStyle}}" 

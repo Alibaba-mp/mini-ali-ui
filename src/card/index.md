@@ -37,7 +37,7 @@
 {
   "defaultTitle": "Card",
   "usingComponents":{
-    "card":"../../es/card/index"
+    "card":"min-ali-ui/es/card/index"
   }
 }
 ```
