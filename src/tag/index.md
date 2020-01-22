@@ -2,7 +2,7 @@
 
 突出利益点、以及属性说明的标签
 
-## 演示
+## 预览
 
 <img width="375" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*DT2tRpvTjswAAAAAAAAAAABkARQnAQ">
 </img>
