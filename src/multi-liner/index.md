@@ -1,6 +1,7 @@
 # MultiLiner 多行文本
 
 ## 预览
+<img width="375" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*dRDqR7zAUwsAAAAAAAAAAABkARQnAQ">
 
 ## 属性
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
