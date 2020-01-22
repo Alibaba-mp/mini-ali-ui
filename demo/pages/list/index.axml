@@ -172,8 +172,8 @@
 					index="items-multiple-{{index}}" 
 					last="{{index === (itemsThumbMultiple.length - 1)}}" 
 					key="items-multiple-{{index}}" 
-					brief="{{item.brief}}" 
-					multipleLine="{{true}}">
+					upperSubtitle="{{item.brief}}" 
+					multipleLineX="{{true}}">
 					{{item.title}}
 										<!-- <view class="am-list-brief">{{item.brief}}</view> -->
 					<view a:if="{{item.extra}}" 
