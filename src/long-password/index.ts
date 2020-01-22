@@ -3,7 +3,6 @@ import fmtEvent from '../_util/fmtEvent';
 Component({
   props: {
     className: '',
-    labelCls: '',
     inputCls: '',
     last: false,
     value: '',

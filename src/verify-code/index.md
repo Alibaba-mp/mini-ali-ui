@@ -46,7 +46,7 @@
   <view style="margin-top: 10px;" />
   <view style="padding: 0 10px;">验证码框</view>
   <view style="margin-top: 10px;" />
-  <verify-code data-field="verifyCode" 
+  <verify-code
     onInput="onInput" 
     value="{{verifyCode}}" 
     onClear="onClear" 
