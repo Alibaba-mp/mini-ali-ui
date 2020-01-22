@@ -5,7 +5,6 @@
 ## 预览
 
 <img width="375" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*DT2tRpvTjswAAAAAAAAAAABkARQnAQ">
-</img>
 
 ## 属性
 

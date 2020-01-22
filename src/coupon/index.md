@@ -1,53 +1,96 @@
-# Card 卡片
+# Coupon 票券
 
-卡片。
 
-扫码体验：
 
-<img src="https://gw.alipayobjects.com/zos/rmsportal/XptnMtDkEbMxinQIPGwL.jpeg" width="154" height="190" />
+票券组件可应用于各种优惠券、红包、票等可兑换利益的虚拟资产。
 
-| 属性名 | 描述 | 类型 | 默认值 | 必选 |
-| ---- | ---- | ---- | ---- | ---- |
-| thumb | Card缩略图地址 | String |  | false |
-| title | Card标题 | String | | true |
-| subTitle | Card副标题 | String |  | false |
-| footer | footer文字 | String |  | false |
-| footerImg | footer图片地址 | String | | false |
-| onCardClick | Card点击的回调 | (info: Object) => void | | false |
-| info | 用于点击卡片时往外传递数据 | String | | false |
+
+
+## 预览
+
+<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*wew8QamnvfoAAAAAAAAAAABkARQnAQ" width="375">
+
+
+
+## 属性
+
+| 属性名        | 类型     | 默认值 | 可选值 | 描述                   | 最低版本 | 必选 |
+| ------------- | -------- | ------ | ------ | ---------------------- | -------- | ---- |
+| thumb         | String   | -      | -      | Coupon缩略图地址       | -        | -    |
+| title         | String   | -      | -      | Coupon标题             | -        | true |
+| subTitle      | String   | -      | -      | Coupon副标题           | -        | -    |
+| onCouponClick | Function | -      | -      | Coupon点击时的事件回调 | -        | -    |
+
+## Slot
+
+| slot name | 描述           |
+| --------- | -------------- |
+| action    | 票券右侧的插槽 |
+
+
 
 ## 示例
 
+
+### json
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
-  "usingComponents": {
-    "card": "mini-ali-ui/es/card/index"
+  "defaultTitle": "Coupon",
+  "usingComponents":{
+    "coupon":"../../es/coupon/index",
+    "button": "../../es/button/index"
   }
 }
 ```
 
+
+### axml
 ```html
-<card
-  thumb="{{thumb}}"
-  title="卡片标题"
-  subTitle="副标题非必填"
-  onClick="onCardClick"
-  footer="描述文字"
-  footerImg="{{footerImg}}"
-  info="dadadadadada"
-/>
+<view style="margin-top: 10px;" />
+    <view>
+      <coupon title="券标题"
+        onCouponClick="onCouponClick" 
+        thumb="{{thumb}}">
+      </coupon>
+    </view>
+    <view>
+      <coupon title="券标题" 
+        subtitle="券副标题" 
+        onCouponClick="onCouponClick" 
+        thumb="{{thumb}}">
+      </coupon>
+    </view>
+    <view>
+      <coupon title="券标题" 
+        subtitle="券副标题" 
+        onCouponClick="onCouponClick" 
+        thumb="{{thumb}}">
+        <button shape="capsule" 
+          slot="action" 
+          onTap="onButtonTap"
+          type="ghost">capsule</button>
+      </coupon>
+    </view>
+    <view style="margin-top: 50px;" />
+</view>
 ```
 
+
+### js
 ```javascript
 Page({
   data: {
-    tagData: [
-      { date: '2018-05-14', tag: '还房贷', tagColor: 5 },
-      { date: '2018-05-28', tag: '公积金', tagColor: 2 },
-    ],
+    thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*b-kqQ4RZgsYAAAAAAAAAAABkARQnAQ',
   },
-  handleSelect() {},
-  onMonthChange() {},
+  onCouponClick() {
+    my.alert({
+      content: '票券点击事件',
+    });
+  },
+  onButtonTap() {
+    my.alert({
+      content: '胶囊按钮点击事件',
+    });
+  },
 });
 ```

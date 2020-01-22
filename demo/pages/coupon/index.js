@@ -1,7 +1,6 @@
 Page({
   data: {
     thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*b-kqQ4RZgsYAAAAAAAAAAABkARQnAQ',
-    expand3rd: false,
   },
   onCouponClick() {
     my.alert({
