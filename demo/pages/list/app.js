@@ -55,10 +55,17 @@ Page({
               },
               {
                 name: 'Card',
-                nameZN: '卡券 & 卡片',
+                nameZN: '卡片',
                 path: '/pages/card/index',
                 tag: '优化',
                 tagType: 'success',
+              },
+              {
+                name: 'Coupon',
+                nameZN: '票券',
+                path: '/pages/coupon/index',
+                tag: '新组件',
+                tagType: 'danger',
               },
               {
                 name: 'Grid',

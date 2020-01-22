@@ -1,21 +1,25 @@
 <view style="margin-top: 10px;" />
     <view>
-      <coupon title="券标题" 
+      <coupon title="券标题"
+        onCouponClick="onCouponClick" 
         thumb="{{thumb}}">
       </coupon>
     </view>
     <view>
       <coupon title="券标题" 
         subtitle="券副标题" 
+        onCouponClick="onCouponClick" 
         thumb="{{thumb}}">
       </coupon>
     </view>
     <view>
       <coupon title="券标题" 
         subtitle="券副标题" 
+        onCouponClick="onCouponClick" 
         thumb="{{thumb}}">
         <button shape="capsule" 
           slot="action" 
+          onTap="onButtonTap"
           type="ghost">capsule</button>
       </coupon>
     </view>
