@@ -48,24 +48,24 @@ list-item共有6个插槽，位置和名称如下图所示
 
 ### axml
 ```html
-	<list>
-			<view slot="header">
-				列表头部
-			</view>
-      <list-item thumb="http://thumb.link.png" 
-        arrow="{{true}}" 
-        onClick="onItemClick" 
-        upperSubtitle="上副标题" 
-        lowerSubtitle="下副标题" >
-        主标题
-        <view slot="extra">
-          辅助信息
-        </view>
-      </list-item>
-			<view slot="footer">
-				列表尾部
-			</view>
-		</list>
+<list>
+  <view slot="header">
+    列表头部
+  </view>
+  <list-item thumb="http://thumb.link.png" 
+    arrow="{{true}}" 
+    onClick="onItemClick" 
+    upperSubtitle="上副标题" 
+    lowerSubtitle="下副标题" >
+    主标题
+    <view slot="extra">
+      辅助信息
+    </view>
+  </list-item>
+  <view slot="footer">
+    列表尾部
+  </view>
+</list>
 ```
 
 ### js
