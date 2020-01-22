@@ -1,0 +1,23 @@
+<view style="margin-top: 10px;" />
+    <view>
+      <coupon title="券标题" 
+        thumb="{{thumb}}">
+      </coupon>
+    </view>
+    <view>
+      <coupon title="券标题" 
+        subtitle="券副标题" 
+        thumb="{{thumb}}">
+      </coupon>
+    </view>
+    <view>
+      <coupon title="券标题" 
+        subtitle="券副标题" 
+        thumb="{{thumb}}">
+        <button shape="capsule" 
+          slot="action" 
+          type="ghost">capsule</button>
+      </coupon>
+    </view>
+    <view style="margin-top: 50px;" />
+</view>
