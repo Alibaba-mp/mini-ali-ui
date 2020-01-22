@@ -31,6 +31,7 @@
 
 ```json
 {
+    "defaultTitle": "Terms",
     "usingComponents": {
       "terms": "mini-ali-ui/es/terms/index"
     } 
