@@ -8,16 +8,16 @@
 
 选择输入。
 
-| 属性名 | 描述 | 类型 | 默认值 |
-| ---- | ---- | ---- | ---- |
-| className | 自定义的class | String|  |
-| labelCls | 自定义label的class | String | |
-| pickerCls | 自定义选择区域的class | String | |
-| last| 是否最后一行 | Boolean | false |
-| value| 初始内容 | String | |
-| name| 组件名字，用于表单提交获取数据 | String | |
-| placeholder | 占位符 | String | |
-| onPickerTap | 点击pickeritem时触发 | (e: Object) => void | |
+| 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
+| --- | --- | --- | --- | --- | --- | --- |
+| className | String |  |  | 自定义的class |  |  |
+| labelCls | String |  |  | 自定义label的class |  |  |
+| pickerCls | String |  |  | 自定义选择区域的class |  |  |
+| last | Boolean | false |  | 是否最后一行 |  |  |
+| value | String |  |  | 初始内容 |  |  |
+| name | String |  |  | 组件名字，用于表单提交获取数据 |  |  |
+| placeholder | String |  |  | 占位符 |  |  |
+| onPickerTap | (e: Object) => void |  |  | 点击pickeritem时触发 |  |  |
 
 ## slots
 

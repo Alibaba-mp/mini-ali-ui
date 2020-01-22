@@ -7,23 +7,23 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/qZmlRHhFariKmpfXMsTC.jpeg" width="154" height="190" />
 
 
-| 属性名 | 描述 | 类型 | 默认值 | 必选 |
-| ---- | ---- | ---- | ---- | ---- |
-| type | input 的类型，有效值：digit、number | String | number | false |
-| title | 左上角标题 | String |  | false |
-| extra | 左下角说明 | String |  | false |
-| value | 输入框当前值 | String |  | false |
-| btnText | 右下角按钮文案 | String |  | false |
-| placeholder | placeholder | String | | false |
-| focus | 自动获取光标 | Boolean | false | false |
-| onInput | 键盘输入时触发 | (e: Object) => void | | false |
-| onFocus | 获取焦点时触发 | (e: Object) => void | | false |
-| onBlur | 失去焦点时触发 | (e: Object) => void | | false |
-| onConfirm | 点击键盘完成时触发 | (e: Object) => void | | false |
-| onClear | 点击 clear 图标触发 | () => void | | false |
-| onButtonClick | 点击右下角按钮时触发 | () => void | | false |
-| maxLength | 最多允许输入的字符个数 | Number | | false |
-| controlled | 是否为受控组件。为 true时，value内容会完全受setData控制 | Boolean | false | false |
+| 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
+| --- | --- | --- | --- | --- | --- | --- |
+| type | String | number |  | input 的类型，有效值：digit、number |  | false |
+| title | String |  |  | 左上角标题 |  | false |
+| extra | String |  |  | 左下角说明 |  | false |
+| value | String |  |  | 输入框当前值 |  | false |
+| btnText | String |  |  | 右下角按钮文案 |  | false |
+| placeholder | String |  |  | placeholder |  | false |
+| focus | Boolean | false |  | 自动获取光标 |  | false |
+| onInput | (e: Object) => void |  |  | 键盘输入时触发 |  | false |
+| onFocus | (e: Object) => void |  |  | 获取焦点时触发 |  | false |
+| onBlur | (e: Object) => void |  |  | 失去焦点时触发 |  | false |
+| onConfirm | (e: Object) => void |  |  | 点击键盘完成时触发 |  | false |
+| onClear | () => void |  |  | 点击 clear 图标触发 |  | false |
+| onButtonClick | () => void |  |  | 点击右下角按钮时触发 |  | false |
+| maxLength | Number |  |  | 最多允许输入的字符个数 |  | false |
+| controlled | Boolean | false |  | 是否为受控组件。为 true时，value内容会完全受setData控制 |  | false |
 
 
 ## 示例
