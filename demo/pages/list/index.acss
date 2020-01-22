@@ -14,3 +14,9 @@
   top: 0;
   z-index: 2;
 }
+.am-list-item .a-icon-success_no_circle {
+  fill: #1677ff;
+}
+.am-list-item .a-shared-checkbox {
+  border: 0;
+}

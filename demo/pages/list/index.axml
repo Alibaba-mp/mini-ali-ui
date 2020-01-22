@@ -11,7 +11,7 @@
 				列表头部
 			</view>
 				<block a:for="{{items}}">
-				<list-switch a:if="{{item.actionType==='switch'}}" 
+				<list-item a:if="{{item.actionType==='switch'}}" 
 					thumb="{{thumbUrl}}" 
 					index="{{index}}" 
 					onClick="onSwitchClick" 
@@ -19,30 +19,32 @@
 					key="items-{{index}}" 
 					lineTouchable="{{item.lineTouchable}}" 
 					briefx="简要信息" 
+					upperSubtitle="{{item.brief}}"
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
-					<view class="am-list-brief">{{item.brief}}</view>
-				</list-switch>
-				<list-check a:elif="{{item.actionType ==='check'}}" 
+					<!-- <view class="am-list-brief">{{item.brief}}</view> -->
+					<am-switch slot="extra"/>
+				</list-item>
+				<list-item a:elif="{{item.actionType ==='check'}}" 
 					thumb="{{thumbUrl}}" 
 					index="{{index}}" 
 					onClick="onCheckClick" 
 					value="{{checkValues[index]}}" 
 					key="items-{{index}}" 
-					briefx="简要信息" 
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
-				</list-check>
-				<list-capsule a:elif="{{item.actionType ==='capsule'}}" 
+					<checkbox slot="extra" checked/>
+				</list-item>
+				<list-item a:elif="{{item.actionType ==='capsule'}}" 
 					thumb="{{thumbUrl}}" 
 					index="{{index}}" 
 					onClick="onCapsuleClick" 
 					capsuleContent="{{item.capsuleContent}}" 
 					key="items-{{index}}" 
-					briefx="简要信息" 
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
-				</list-capsule>
+					<button slot="extra" type="ghost" shape="capsule">胶囊按钮</button>
+				</list-item>
 				<list-item a:else thumbx="{{thumb}}" 
 					arrow="{{item.arrow}}" 
 					align="{{item.align}}" 
@@ -56,12 +58,6 @@
 					titlePosition="middle" 
 					last="{{index === (items.length - 1)}}">
 					{{item.title}}
-					<tag slot="afterUpperSubtitle">{{item.title}}</tag>
-					<!-- <tag slot="afterLowerSubtitle">{{item.title}}</tag> -->
-					<tag slot="afterTitle">{{item.title.slice(2)}}</tag>
-					<text slot="extra">{{item.extra}}</text>
-					<!-- <am-icon type="question_" slot="supporting" color="#1677ff" /> -->
-					<!-- <view slot="supporting">what</view> -->
 				</list-item>
 			</block>
 			<view slot="footer">
