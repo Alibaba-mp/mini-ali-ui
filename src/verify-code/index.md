@@ -1,15 +1,20 @@
 # VerifyCode 验证码输入。
 
-验证码输入。
+验证码输入框。  
+受控模式，使用时需要用onInput事件来回设value。
+
+## 预览
+<img width="375" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*7T1KQp58uCkAAAAAAAAAAABkARQnAQ">
 
 ## 属性
 | 属性名           | 类型                | 默认值 | 可选值                      | 描述                                                      | 最低版本 | 必填 |
 | ---------------- | ------------------- | ------ | --------------------------- | --------------------------------------------------------- | -------- | ---- |
 | className        | String              | ''     | -                           | 自定义的class                                             |          | 否   |
+| label            | String              | '验证码'| -                           | 自定义label文案                                           |          | 否   |
 | labelCls         | String              | ''     | -                           | 自定义label的class                                        |          | 否   |
 | inputCls         | String              | ''     | -                           | 自定义input的class                                        |          | 否   |
 | last             | Boolean             | false  | -                           | 是否最后一行                                              |          | 否   |
-| value            | String              | ''     | -                           | 初始内容                                                  |          | 否   |
+| value            | String              | ''     | -                           | 输入框值                                                 |          | 否   |
 | name             | String              | ''     | -                           | 组件名字，用于表单提交获取数据                            |          | 否   |
 | placeholder      | String              | ''     | -                           | 占位符                                                    |          | 否   |
 | placeholderStyle | String              | ''     | -                           | 指定 placeholder 的样式                                   |          | 否   |
@@ -24,14 +29,9 @@
 | onBlur           | (e: Object) => void |        | -                           | 失去焦点时触发                                            |          | 否   |
 | onClear          | () => void          |        | -                           | 点击清除icon时触发                                        |          | 否   |
 
-## slots
-
-| slotname | 说明 |
-| ---- | ---- |
-| extra | 可选，用于渲染picker-item项右边说明 |
-
 ## 示例
 
+### json
 ```json
 {
   "defaultTitle": "小程序AntUI组件库",
@@ -40,45 +40,36 @@
   }
 }
 ```
-
-```axml
+### axml
+```html
 <view>
-  <list>
-    <input-item
-      data-field="password"
-      placeholder="密码"
-      password
-    >
-      密码
-    </input-item>
-    <picker-item
-      data-field="bank"
-      placeholder="选择发卡银行"
-      value="{{bank}}"
-      onPickerTap="onSelect"
-    >
-      发卡银行
-    </picker-item>
-  </list>
+  <view style="margin-top: 10px;" />
+  <view style="padding: 0 10px;">验证码框</view>
+  <view style="margin-top: 10px;" />
+  <verify-code data-field="verifyCode" 
+    onInput="onInput" 
+    value="{{verifyCode}}" 
+    onClear="onClear" 
+    last="{{true}}" 
+    countDown="{{10}}" 
+    onSend="onSend"></verify-code>
 </view>
 ```
 
+### js
 ```javascript
-const banks = ['网商银行', '建设银行', '工商银行', '浦发银行'];
-
 Page({
   data: {
-    bank: '',
+    verifyCode: '',
   },
-  onSelect() {
-    my.showActionSheet({
-      title: '选择发卡银行',
-      items: banks,
-      success: (res) => {
-        this.setData({
-          bank: banks[res.index],
-        });
-      },
+  onSend() {
+    my.alert({
+      title: 'verify code sent',
+    });
+  },
+  onInput(e) {
+    this.setData({
+      verifyCode: e.detail.value,
     });
   },
 });
