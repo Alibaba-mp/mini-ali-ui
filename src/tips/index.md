@@ -8,13 +8,13 @@
 
 ## tips-dialog
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
-| ---- | ---- | ---- | ---- | ---- |
-| className | 自定义class | String| | false |
-| show | 控制组件是否展示 | Boolean | true | false |
-| type | `dialog`表示对话框的样式类型，`rectangle`表示矩形的样式类型。 | String | dialog | false |
-| onCloseTap | 当`type`值为`rectangle`时，组件点击关闭icon的回调 | () => void | | false |
-| iconUrl | 展示icon的url地址 | String | | false |
+| 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
+| --- | --- | --- | --- | --- | --- | --- |
+| className | String |  |  | 自定义class |  | false |
+| show | Boolean | true |  | 控制组件是否展示 |  | false |
+| type | String | dialog |  | `dialog`表示对话框的样式类型，`rectangle`表示矩形的样式类型。 |  | false |
+| onCloseTap | () => void |  |  | 当`type`值为`rectangle`时，组件点击关闭icon的回调 |  | false |
+| iconUrl | String |  |  | 展示icon的url地址 |  | false |
 
 ### slots
 
@@ -25,11 +25,12 @@
 
 ## tips-plain
 
-| 属性 | 说明 | 类型 | 默认值 | 必选 |
-| ---- | ---- | ---- | ---- | ---- |
-| className| 自定义class | String| | false |
-| time | 自动关闭时间(单位毫秒) | Number | 5000(ms) | false |
-| onClose | 回调并关闭提示框 | () => void | | false |
+| 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
+| --- | --- | --- | --- | --- | --- | --- |
+| className | String |  |  | 自定义class |  | false |
+| time | Number | 5000(ms) |  | 自动关闭时间(单位毫秒) |  | false |
+| onClose | () => void |  |  | 回调并关闭提示框 |  | false |
+
 
 ## 示例
 
