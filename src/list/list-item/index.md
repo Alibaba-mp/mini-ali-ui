@@ -14,6 +14,7 @@
 | lowerSubtitle | String  | -      | -                          | 下副标题                                           | -        | -              |
 | titlePosition | String  | top    | top<br/> middle<br/>bottom | 主标题位置                                         | -        | -              |
 | thumbSize     | String  | - | - | 缩略图大小，建议手动设值。<br/> 不设值时图片的高度会有一定的自适应能力，**但不能保证跟文案内容高度完全一致** | - | 有缩略图时必填 |
+| onClick       | Function| -      | -                          | 点击列表项事件                                       | -        | -              |
 
 
 
