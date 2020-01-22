@@ -4,10 +4,8 @@
 
 ## 演示
 
-<video width="375" autoplay muted loop controls >
-  <source src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/file/A*pgTFTqfq44IAAAAAAAAAAABkARQnAQ">
-  Sorry, your browser doesn't support embedded videos.
-</video>
+<img width="375" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*DT2tRpvTjswAAAAAAAAAAABkARQnAQ">
+</img>
 
 ## 属性
 
