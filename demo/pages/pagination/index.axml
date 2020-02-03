@@ -16,7 +16,7 @@
 
 <view style="margin-top: 20px;">正常翻页样式</view>
 <view style="padding: 20px 20px 0;background-color: yellow;">
-  <pagination currentPage="{{3}}" max="{{10}}" />
+  <pagination currentPage="{{3}}" max="{{10}}" height="200px" />
 </view>
 
 <view style="margin-top: 20px;">反白翻页样式</view>
