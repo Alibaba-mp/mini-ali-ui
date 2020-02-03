@@ -2,29 +2,34 @@
 
 CSS flex布局的封装。
 
-扫码体验：
+## 扫码体验
 
 <img src="https://gw.alipayobjects.com/mdn/miniProgra/afts/img/A*7eyvR59-2LIAAAAAAAAAAABjARQnAQ" width="154" height="190" />
 
-## flex
+## 截图
+<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*4h5tRJZKSAcAAAAAAAAAAABkARQnAQ" alt="flex 布局" style="zoom:50%;" />
 
-| 属性名 | 描述 | 类型 | 默认值 | 必选 |
-| ---- | ---- | ---- | ---- | ---- |
-| direction | 项目定位方向，值可以为 row,row-reverse,column,column-reverse | String | row | false |
-| wrap | 子元素的换行方式，可选nowrap,wrap,wrap-reverse | String | nowrap | false |
-| justify | 子元素在主轴上的对齐方式，可选start,end,center,between,around | String | start | false |
-| align | 子元素在交叉轴上的对齐方式，可选start,center,end,baseline,stretch | String | center | false |
-| alignContent | 有多根轴线时的对齐方式，可选start,end,center,between,around,stretch | String | stretch | false |
+## 属性介绍
+Flex 布局是由 `<flex>` 和 `<flex-item>` 两种标签组合的，相对应的属性值的情况也有所不同。
 
-## flex-item
+### flex
+| 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| direction | String | row | row、row-reverse、column、column-reverse | 项目定位方向 | - | - |
+| wrap | String | nowrap | nowrap、wrap、wrap-reverse | 子元素的换行方式 | - | - |
+| justify | String | start | start、end、cener、between、around | 子元素在主轴上的对齐方式 | - | - |
+| align | String | center | start、center、end、baseline、stretch | 子元素在交叉轴上的对齐方式 | - | - |
+| alignContent | String | stretch | start、end、center、between、around、stretch | 有多跟轴线时的对齐方式 | - | - |
 
-flex-item 组件默认加上了样式flex:1,保证所有 item 平均分宽度, flex 容器的 children 不一定是 flex-item
+### flex-item
 
-## 示例
+flex-item 组件默认加上了样式 flex:1，保证所有 item 平均分宽度，flex 容器的 children 不一定是 flex-item。
+
+## 代码示例
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "flex 布局",
   "usingComponents": {
     "flex": "mini-ali-ui/es/flex/index",
     "flex-item": "mini-ali-ui/es/flex/flex-item/index"
@@ -32,7 +37,7 @@ flex-item 组件默认加上了样式flex:1,保证所有 item 平均分宽度, f
 }
 ```
 
-```html
+```xml
 <view class="flex-container">
   <view class="sub-title">Basic</view>
   <flex>
