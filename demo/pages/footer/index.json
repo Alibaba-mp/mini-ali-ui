@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "footer 页脚",
   "usingComponents": {
     "footer": "../../es/footer/index"
   }

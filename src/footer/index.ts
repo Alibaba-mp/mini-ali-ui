@@ -6,9 +6,6 @@ Component({
     // copyright：声明；
     // brand：带品牌；
     // link：带链接
-    footerType: 'normal',
-    footerContent: '',
-    footerExtend: [],
     type: 'normal',
     content: '',
     extend: [],

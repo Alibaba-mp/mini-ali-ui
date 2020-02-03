@@ -1,13 +1,5 @@
 Page({
   data: {
-    copyright: '© 2004-2017 Alipay.com. All rights reserved.',
-    links: [
-      { text: '底部链接', url: '/pages/list/index' },
-      { text: '底部链接', url: '/pages/card/index' },
-    ],
-    singleLink: [
-      { text: '底部链接', url: '/pages/list/index' },
-    ],
     footerInfo1: {
       type: 'normal',
       content: '底部文案置底说明',
