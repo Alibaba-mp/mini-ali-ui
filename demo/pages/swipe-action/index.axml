@@ -8,7 +8,6 @@
 				onRightItemClick="onRightItemClick"
 				onSwipeStart="onSwipeStart"
 				extra="item{{index}}"
-				enableNew="{{true}}"
 				borderRadius="{{index <= 2 ? true : false}}"
 			>
 				<list-item

@@ -15,9 +15,10 @@ Component({
     className: '',
     right: [],
     restore: false,
+    borderRadius: false,
     index: null,
     height: 0,
-    enableNew: false,
+    enableNew: true,
   },
   didMount() {
     const { enableNew } = this.props;

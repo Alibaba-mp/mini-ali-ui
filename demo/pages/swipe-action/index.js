@@ -23,9 +23,6 @@ Page({
         if (result.confirm) {
           if (type === 'delete') {
             list.splice(this.data.swipeIndex, 1);
-            // this.setData({
-            //   list: [...list],
-            // });
           }
 
           my.showToast({
