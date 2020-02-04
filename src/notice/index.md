@@ -5,10 +5,6 @@
 * 仅用于 UI 展示没有对应的业务逻辑功能。
 * notice 为瀑布流布局不会定位到页面头部，用户可以根据需求将它放在相应位置。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/DJfecsuPIyuOUHZtVFxG.jpeg" width="154" height="190" />
-
 ## 截图
 ![notice](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*tumxSr-ODscAAAAAAAAAAABkARQnAQ)
 

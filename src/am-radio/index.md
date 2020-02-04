@@ -2,10 +2,6 @@
 
 单选框。具体用法和小程序框架中 radio 保持一致，在 radio 基础上做了样式的封装。
 
-
-## 扫码体验：
-待统一补充
-
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_a02d41/afts/img/A*FIq6QqDQzaoAAAAAAAAAAABkARQnAQ" />
 

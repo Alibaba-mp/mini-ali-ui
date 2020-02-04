@@ -2,10 +2,6 @@
 
 按照不同的业务场景，可选择不同列数的宫格，包含了 2、3、4、5 列四种列数的宫格。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/ebqnVPiuCCoOKXwioUUH.jpeg" width="154" height="190" />
-
 ## 截图
 ![grid 宫格模块](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*vQv9Qr8uHz8AAAAAAAAAAABkARQnAQ)
 

@@ -2,8 +2,6 @@
 
 对话框，当应用中需要比较明显的对用户当前的操作行为进行警示或提醒时，可以使用对话框。用户需要针对对话框进行操作后方可结束。
 
-## 扫码体验：
-<img src="https://gw.alipayobjects.com/zos/rmsportal/heaiwgCysVcdCUYmUjri.jpeg" width="154" height="190" />
 
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_349abe/afts/img/A*mVtGR7j1kU0AAAAAAAAAAABkARQnAQ" />

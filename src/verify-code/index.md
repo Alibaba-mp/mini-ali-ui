@@ -1,10 +1,5 @@
 验证码输入。
 
-## TODO
-```
-## 扫码体验
-<img src="https://gw.alipayobjects.com/zos/rmsportal/HoUOLnPEOaymuHlbeyqR.jpeg" width="154" height="190" />
-
 ## 效果示例
 ![输入框.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/188518/1564389321807-3fdc73ec-f8c4-454b-aa2b-69121edd0d25.png) 
 
@@ -60,7 +55,7 @@
   }
 }
 ```
-```
+
 
 ```html
 <!-- API-DEMO page/component/input-item/input-item.axml -->
@@ -120,7 +115,7 @@
   <view>
 </view>
 ```
-```
+
 ```javascript
 // API-DEMO page/component/input-item/input-item.js
 const banks = ['网商银行', '建设银行', '工商银行', '浦发银行'];
@@ -172,7 +167,7 @@ Page({
   },
 });
 ```
-```
+
 ```css
 /* API-DEMO page/component/input-item/input-item.acss */
 .extra {

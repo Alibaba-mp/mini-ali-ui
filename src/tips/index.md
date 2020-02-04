@@ -2,10 +2,6 @@
 
 小提示。分`tips-dialog`和`tips-plain`两种类型。
 
-扫码体验：
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/DjQXcSygEImQjMOnlJqV.jpeg" width="154" height="190" />
-
 ## tips-dialog
 
 | 属性 | 说明 | 类型 | 默认值 | 必选 |

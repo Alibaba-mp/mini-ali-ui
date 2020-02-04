@@ -2,10 +2,6 @@
 
 可用于需要遮罩蒙层的弹层元素。
 
-## 扫码体验
-
-待统一截图添加
-
 ## 截图
 ![mask 遮罩蒙层](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*Cu8kT4Xm8jcAAAAAAAAAAABkARQnAQ)
 

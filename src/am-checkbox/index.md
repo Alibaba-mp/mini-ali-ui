@@ -2,9 +2,6 @@
 
 复选框。具体用法和小程序框架中checkbox保持一致，在checkbox基础上做了样式的封装。
 
-## 扫码体验：
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/ttsOmZZOgOesoeoxJZgw.jpeg" width="154" height="190" />
 
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_a02d41/afts/img/A*f3-xS7ChP58AAAAAAAAAAABkARQnAQ"/>

@@ -2,9 +2,6 @@
 
 头像。
 
-## 扫码体验：
-待统一补充
-
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_349abe/afts/img/A*2ojQSLUUPyQAAAAAAAAAAABkARQnAQ" />
 

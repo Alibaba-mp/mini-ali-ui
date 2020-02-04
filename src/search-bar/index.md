@@ -2,9 +2,6 @@
 
 搜索栏。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/VtRSLehBBvvrKgQSjOvZ.jpeg" width="154" height="190" />
 
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*uaJMRY6kMXkAAAAAAAAAAABkARQnAQ"/>

@@ -2,10 +2,6 @@
 
 图标。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*mQn6SLUq1KkAAAAAAAAAAABjARQnAQ" width="154" height="190" />
-
 ## 截图
 ![am-icon icon 图标](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*j2riR5PaCqsAAAAAAAAAAABkARQnAQ)
 

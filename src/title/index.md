@@ -2,9 +2,6 @@
 
 页面内每个容器模块中的标题模块。
 
-## 扫码体验
-
-待统一截图添加
 
 ## 截图
 ![title 标题模块](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*ykKWRYvzEM8AAAAAAAAAAABkARQnAQ)

@@ -4,9 +4,6 @@
 
 局部异常组件：用在页面的某个区块出现异常时的反馈提示，同时提供了对应的处理按钮。
 
-## 扫码体验：
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/ZCkOkoTgcKkhEhqHbnBL.jpeg" width="154" height="190" />
 
 ## 截图
 

@@ -2,10 +2,6 @@
 
 分页标识符。
 
-## 扫码体验
-
-待统一截图添加
-
 ## 截图
 ![pagination 分页符](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*Rx1NSbwPvYsAAAAAAAAAAABkARQnAQ)
 

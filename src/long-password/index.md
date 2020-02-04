@@ -1,8 +1,6 @@
 ## TODO
 文本输入。
 
-## 扫码体验
-<img src="https://gw.alipayobjects.com/zos/rmsportal/HoUOLnPEOaymuHlbeyqR.jpeg" width="154" height="190" />
 
 ## 效果示例
 ![输入框.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/188518/1564389321807-3fdc73ec-f8c4-454b-aa2b-69121edd0d25.png) 

@@ -2,10 +2,6 @@
 
 用于引导新用户或者页面内的新功能使用说明。
 
-## 扫码体验
-
-待统一截图添加
-
 ## 截图
 ![guide 遮罩引导模块](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*SuBkQbcbr7AAAAAAAAAAAABkARQnAQ)
 

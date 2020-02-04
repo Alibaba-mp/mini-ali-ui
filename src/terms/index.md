@@ -2,9 +2,6 @@
 
 需用户主动操作后，才能开通或激活服务时；通常包含了用户授权协议详细说明的跳转入口。
 
-## 扫码体验
-
-
 
 ## 截图
 ![](https://gw.alipayobjects.com/mdn/rms_01d31f/afts/img/A*DNO6SYWbkjYAAAAAAAAAAABkARQnAQ)

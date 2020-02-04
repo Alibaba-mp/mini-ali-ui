@@ -2,10 +2,6 @@
 
 气泡。
 
-扫码体验：
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/fiqtYDYDruVwbWnspKwQ.jpeg" width="154" height="190" />
-
 
 ## popover
 

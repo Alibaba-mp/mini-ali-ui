@@ -3,9 +3,6 @@
 按钮，用户只需单击一下即可执行操作并做出选择。常用于表单提交、界面跳转、模块引导点击。具体用法和小程序框架中 button 保持一致，在 button 基础上做了样式的封装。
 
 
-## 扫码体验：
-待统一补充
-
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*ke0cQJqPhZwAAAAAAAAAAABkARQnAQ" />
 

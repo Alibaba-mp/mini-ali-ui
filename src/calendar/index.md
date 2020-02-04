@@ -2,10 +2,6 @@
 
 单日历组件。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/DFLnQbhXIrEgpCAIIBOv.jpeg" width="154" height="190" />
-
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*i4_VS4T9wt8AAAAAAAAAAABkARQnAQ" alt="calendar 日历" style="zoom:50%;" />
 

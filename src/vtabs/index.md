@@ -2,10 +2,6 @@
 
 用于让用户在不同的视图中进行切换。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/iYBdHWcyPaNUDTQaNznG.jpeg" width="154" height="190" />
-
 ## 截图
 ![vtabs 纵向选项卡](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*Z1-_Qpx1nVwAAAAAAAAAAABkARQnAQ)
 

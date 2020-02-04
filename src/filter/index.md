@@ -2,10 +2,6 @@
 
 用作标签卡筛选。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/CGpZwarBxYgOdUWtiVyC.jpeg" width="154" height="190" />
-
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*QVA0RZfaWkAAAAAAAAAAAABkARQnAQ"/>
 ## 属性介绍

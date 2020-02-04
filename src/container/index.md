@@ -2,8 +2,6 @@
 
 容器依据最佳实践统一了子元素的间距、圆角。
 
-## 扫码体验：
-待统一补充
 
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*IaaZSYKZltoAAAAAAAAAAABkARQnAQ" />

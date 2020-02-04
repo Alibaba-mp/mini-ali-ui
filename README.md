@@ -23,8 +23,10 @@
 
 ## 特性
 
-- 基于 **Alipay Design** 设计规范
-- 使用[支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)开发
+- 基于 **Alipay Design** 设计规范；
+- 支持多端小程序（支付宝，淘宝，钉钉等），使用[支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)开发；
+- 支持主题配置切换；
+- 支持 `px` 与 `rpx`；
 
 ## 安装
 
@@ -60,7 +62,7 @@ $ npm install mini-ali-ui-rpx --save
 }
 ```
 
-组件注册成功之后，具体的使用方式无差别。v
+组件注册成功之后，具体的使用方式无差别。
 
 在 axml 文件中进行调用：
 ```xml

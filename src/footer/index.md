@@ -2,10 +2,6 @@
 
 显示页面页脚组件。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/EdfgZYAQrrlpnqQKGMqa.jpeg" width="154" height="190" />
-
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*T_pITIe8eqAAAAAAAAAAAABkARQnAQ" alt="footer 页脚" style="zoom:50%;" />
 

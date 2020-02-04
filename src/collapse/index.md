@@ -4,9 +4,6 @@
 * 对复杂区域进行分组和隐藏，保持页面的整洁。
 * **手风琴模式**是一种特殊的折叠面板，只允许单个内容区域展开。
 
-## 扫码体验
-
-待统一截图添加
 
 ## 截图
 ![collapse 折叠面板](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*cPXdQZmoXfIAAAAAAAAAAABkARQnAQ)

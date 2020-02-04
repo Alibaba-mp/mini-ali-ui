@@ -2,9 +2,6 @@
 
 列表。
 
-扫码体验：
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/tAvsiCUfvPlAYSRQLHOs.jpeg" width="154" height="190" />
 
 ## list
 

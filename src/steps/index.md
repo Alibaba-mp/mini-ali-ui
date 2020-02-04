@@ -2,10 +2,6 @@
 
 根据步骤显示的进度条。
 
-扫码体验：
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/yTQSJcsYUNRmaVAqbwkM.jpeg" width="154" height="190" />
-
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 | ---- | ---- | ---- | ---- | ---- |

@@ -6,10 +6,6 @@
 * 输入最大值无提示，超过最大值时系统会自动回显数值为最大值。
 * 不支持输入小数，可通过 + 和 - 改变数值大小。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/TGdJemwrVBJGZgCvUzJF.jpeg" width="154" height="190" />
-
 ## 截图
 ![stepper 步进器](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*5RvrTLEgxa4AAAAAAAAAAABkARQnAQ)
 

@@ -9,10 +9,6 @@
 * 通过触发 onChange 事件，设置 setData 对应的数据，从而切换页面上的 tabs 数据。
 * 可使用 [my.request](https://opendocs.alipay.com/mini/api/owycmh) 传数据给后端。
 
-## 扫码体验
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/QrAcpDwscNMUBvtQtVEm.jpeg" width="154" height="190" />
-
 ## 截图
 ![tabs](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*cmZwRoYG120AAAAAAAAAAABkARQnAQ)
 

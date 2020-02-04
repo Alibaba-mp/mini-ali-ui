@@ -2,10 +2,6 @@
 
 loading 加载动画。
 
-## 扫码体验
-
-待统一截图添加
-
 ## 截图
 ![loading 加载动画](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*yGirSonwGzAAAAAAAAAAAABkARQnAQ)
 
