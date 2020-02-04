@@ -1,15 +1,24 @@
 ## Avatar 头像
 
-| 属性名 | 描述 | 类型 | 默认值 |
-| ---- | ---- | ---- | ---- |
-| className| 自定义class | String| |
-| src | 头像图片资源地址| String | 默认蓝底头像 |
-| size | 头像尺寸大小：`lg`、`md`、`sm`| String | md |
-| shape | 头像形状：`circle`、`square`| String | circle |
-| name | 设置用户名| String | |
-| desc | 设置摘要信息| String | |
-| onError| 图片资源加载失败回调 | (e: Object) => void|  |
+头像。
 
+## 扫码体验：
+待统一补充
+
+## 截图
+<img src="https://gw.alipayobjects.com/mdn/rms_349abe/afts/img/A*2ojQSLUUPyQAAAAAAAAAAABkARQnAQ" />
+
+## 属性介绍
+| 属性 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| className | String | - | - | 自定义class | - |
+| src | String | 默认蓝底头像 | - | 头像图片资源地址 | - |
+| size | String | md | lg, md, sm | 头像尺寸大小 | - |
+| shape | String | circle | circle, square | 头像形状 | - |
+| name | String | - | - | 设置用户名 | - |
+| desc | String | - | - | 设置摘要信息 | - |
+| name | String | - | - | 设置用户名 | - |
+| onError | EventHandle | (e: Object) => void | - | 图片资源加载失败回调 | - |
 
 ## 示例
 
