@@ -19,7 +19,7 @@ It sad but true that someone just glance(not read) [mini-ali-ui's documentation]
 
 Your questions may be asked and solved by others. So please spend several minutes on searching. Remember [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), both code and questions.
 
-* [Issues list](https://github.com/ant-mini-program/mini-ali-ui/issues)
+* [Issues list](https://github.com/Alibaba-mp/mini-ali-ui/issues)
 
 ## Close your issue if it's solved
 
