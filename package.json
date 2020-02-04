@@ -4,7 +4,7 @@
   "description": "小程序版AntUI",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Alibaba-mp/mini-ali-ui.git"
+    "url": "git@gitlab.alipay-inc.com:alipay-fe/mini-antui.git"
   },
   "files": [
     "es",
