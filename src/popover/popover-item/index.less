@@ -1,0 +1,46 @@
+@import '../../style/mixins/hairline.less';
+
+.am-popover-item {
+  // min-width: 80px;
+  max-width: 170px;
+  padding: 0 @h-spacing-large;
+  padding: 0 var(--am-popover-item-padding, @h-spacing-large);
+  &-hover {
+    background-color: #f2f2f2;
+  }
+  &-wrapper {
+    position: relative;
+    padding-top: @h-spacing-large;
+    padding-top: var(--am-popover-item-padding, @h-spacing-large);
+    padding-bottom: @h-spacing-large;
+    padding-bottom: var(--am-popover-item-padding, @h-spacing-large);
+    padding-right: @size-9;
+    padding-right: var(--am-popover-item-padding-right, @size-9);
+    font-size: @font-size-subtitle;
+    font-size: var(--am-popover-item-font-size, @font-size-subtitle);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: @color-text-title;
+    color: var(--am-popover-item-font-color, @color-text-title);
+    display: flex;
+    align-items: center;
+    // .hairline("bottom", #eee);
+  }
+  &-icon-holder {
+    height: 22px;
+    width: 22px;
+  }
+  &-ver-center {
+    display: flex;
+    align-items: center;
+  }
+  &-slot-holder {
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-popover-item-icon-text-space, @h-spacing-large);
+  }
+}
+.am-popover-item:not(:last-child) > .am-popover-item-wrapper {
+  // border-bottom: 1px solid #e5e5e5;
+  .hairline('bottom');
+}

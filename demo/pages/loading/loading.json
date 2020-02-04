@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "loading 加载",
+  "usingComponents":{
+    "loading":"../../es/loading/index"
+  }
+}

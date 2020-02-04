@@ -1,0 +1,52 @@
+<view class="am-vtabs {{className}}">
+  <view class="am-vtabs-bar">
+    <scroll-view
+      style="{{tabBarActiveBgColor?'background-color: ' + tabBarActiveBgColor + ';':''}}" 
+      class="am-vtabs-bar-content"
+      scroll-top="{{tabTop}}"
+      scroll-y="{{true}}">
+      <block a:for="{{tabs}}">
+        <view
+        data-index="{{index}}"
+        data-anchor="{{item.anchor}}"
+        onTap="handleTabClick"
+        class="am-vtabs-bar-tab"
+        hover-class="{{activeTab !== index?'am-vtabs-bar-tab__hover':''}}" hover-start-time="0" hover-stay-time="0"
+        style="{{
+          activeTab == index?'font-weight: bold;color: ' + tabBarActiveTextColor + ';background-color: ' + tabBarActiveBgColor + ';':'color: ' + tabBarInactiveTextColor + ';background-color: ' + tabBarInactiveBgColor + ';'
+        }}
+        {{index === currentBefore?'border-radius: 0 0 ' + besideRadius + ' 0;':''}}
+        {{index === currentAfter?'border-radius: 0 ' + besideRadius + ' 0 0;':''}}"
+        >
+          <view class="am-vtabs-bar-title">
+            <text>{{item.title}}<text a:if="{{item.number && item.number !== ''}}">({{item.number}})</text></text>
+          </view>
+          <view a:if="{{activeTab === index}}" class="am-vtabs-bar-line" style="{{tabBarlineColor?'background-color: ' + tabBarlineColor + ';':''}}"></view>
+        </view>
+        <view
+          a:if="{{index + 1 === tabs.length}}"
+          style="{{index + 1 === currentAfter?'border-radius: 0 ' + besideRadius + ' 0 0;':''}}
+          {{tabBarInactiveBgColor?'background-color: ' + tabBarInactiveBgColor + ';':''}}"
+          class="am-vtabs-bar-placehold"></view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="am-vtabs-content-wrap" onTouchMove="onWrapTouchMove">
+    <block a:if="{{swipeable}}">
+      <scroll-view
+        trap-scroll="{{true}}"
+        class="am-vtabs-slides am-vtabs-slides-{{$id}}"
+        scroll-with-animation="{{animated}}"
+        scroll-y="{{true}}"
+        scroll-top="{{wrapScrollTop}}"
+        onScroll="onScroll">
+        <slot></slot>
+      </scroll-view>
+    </block>
+    <block a:else>
+      <view class="am-vtabs-slides am-vtabs-slides-{{$id}} {{animated ? 'animate' : ''}}" style="{{ transform: 'translate3d(0, ' +(-wrapScrollTop) + 'px, 0)' }}">
+        <slot></slot>
+      </view>
+    </block>
+  </view>
+</view>

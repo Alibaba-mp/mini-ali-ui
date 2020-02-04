@@ -1,0 +1,4 @@
+<text
+  class="am-icon am-icon-{{type}} {{className}}"
+  style="{{size?'--am-icon-size: ' + size + valueUnit + ';':''}} {{color?'--am-icon-color:' + color + ';':''}}">
+</text>

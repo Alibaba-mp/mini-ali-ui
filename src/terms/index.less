@@ -1,0 +1,72 @@
+@import (reference) "../style/themes/default.less";
+
+.am-terms {
+  display: flex;
+  flex-direction: column;
+  padding: @size-1;
+  padding: var(--am-terms-padding, @size-1);
+  width: 100%;
+  box-sizing: border-box;
+  & &-header {
+    display: flex;
+    align-items: center;
+    color: @color-text-title;
+    color: var(--am-terms-content-color, @color-text-title);
+    margin-bottom: @size-5;
+    margin-bottom: var(--am-terms-content-margin, @size-5);
+    .am-checkbox {
+      margin-right: @h-spacing-standard;
+      margin-right: var(--am-terms-checkbox-margin, @h-spacing-standard);
+    }
+    .text {
+      font-size: @font-size-subtitle;
+      font-size: var(--am-terms-content-font-size, @font-size-subtitle);
+      line-height: @icon-size-sm;
+      line-height: var(--am-terms-content-line-height, @icon-size-sm);
+      flex: 1;
+      .link {
+        color: @color-text-primary;
+        color: var(--am-terms-link-color, @color-text-primary);
+        display: inline;
+      }
+    }
+  }
+  & &-body {
+    display: flex;
+    flex-direction: column;
+    .am-button {
+      margin-bottom: @v-spacing-large;
+      margin-bottom: var(--am-terms-button-margin, @v-spacing-large);
+    }
+  }
+  & &-footer {
+    color: @color-text-title;
+    color: var(--am-terms-desc-color, @color-text-title);
+    font-size: @font-size-weak;
+    font-size: var(--am-terms-desc-font-size, @font-size-weak);
+    line-height: @line-height-paragraph;
+    line-height: var(--am-terms-desc-line-height, @line-height-paragraph);
+    margin-top: @size-1;
+    margin-top: var(--am-terms-desc-margin, @size-1);
+    .text {
+      .link {
+        color: @color-text-primary;
+        color: var(--am-terms-link-color, @color-text-primary);
+        display: inline;
+      }
+    }
+  }
+  &-fixed {
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: @color-fill-grey-inverse;
+    background-color: var(--am-terms-background-color, @color-fill-grey-inverse);
+    padding: @v-spacing-standard;
+    padding: var(--am-terms-fixed-padding, @v-spacing-standard);
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

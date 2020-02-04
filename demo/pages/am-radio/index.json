@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "am-radio": "../../es/am-radio/index",
+    "list": "../../es/list/index",
+    "list-item": "../../es/list/list-item/index"
+  }
+}

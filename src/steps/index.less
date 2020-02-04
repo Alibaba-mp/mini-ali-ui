@@ -1,0 +1,212 @@
+/* horizontal steps style */
+@import (reference) "../style/themes/default.less";
+
+.am-hor-steps {
+  padding: 20px 56px;
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-inverse);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.am-hor-step {
+  display: inline-block;
+  white-space: normal;
+  text-align: center;
+  vertical-align: top;
+  line-height: normal;
+}
+
+.am-hor-step-line {
+  position: relative;
+  margin: 6px 0;
+  height: 1px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+}
+
+.am-hor-step-line.is-active {
+  background-color: @color-fill-primary;
+  background-color: var(--am-steps-color, @color-fill-primary);
+}
+
+.am-hor-step-line.is-last {
+  background-color: transparent;
+}
+
+.am-hor-step-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  transform: translate(-50%, -50%);
+  border-radius: @corner-radius-circle;
+  border-radius: var(--am-steps-icon-border-radius, @corner-radius-circle);
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+}
+
+.am-hor-step-icon.is-active {
+  background-color: @color-fill-primary;
+  background-color: var(--am-steps-color, @color-fill-primary);
+}
+
+.am-hor-step-text {
+  margin-top: 12px;
+  padding: 0 5px;
+  max-width: 90px;
+  transform: translateX(-50%);
+}
+
+.am-hor-step-title {
+  font-size: @font-size-subcontent;
+  font-size: var(--am-steps-horizontal-title-size, @font-size-subcontent);
+  color: @color-text-title;
+  color: var(--am-steps-title-color, @color-text-title);
+}
+
+.am-hor-step-description {
+  margin-top: 2px;
+  font-size: @font-size-subcontent;
+  font-size: var(--am-steps-horizontal-description-size, @font-size-subcontent);
+  color: @color-text-subtitle;
+  color: var(--am-steps-description-color, @color-text-subtitle);
+}
+
+/* vertical steps style */
+.am-vertical-steps {
+  padding: 20px 30px 20px 30px;
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-inverse);
+}
+
+.am-vertical-step {
+  display: flex;
+}
+
+.am-vertical-step-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  margin-right: 20px;
+}
+
+/* line 包含 top 和 bottom 两块， 整体下移20px, 保证和原点无缝衔接 */
+.am-vertical-step-line {
+  position: relative;
+  top: 10px;
+  width: 1px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+}
+
+.am-vertical-step-line-top {
+  flex: 1;
+}
+
+/* 60px 是 am-vertical-step-text的margin-bottom的40px加上line的下移20px，保证line-top底部和右侧文字底布对齐 */
+.am-vertical-step-line-bottom {
+  height: 30px;
+  width: 1px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+}
+
+.am-vertical-step-line.is-active {
+  background-color: @color-fill-primary;
+  background-color: var(--am-steps-color, @color-fill-primary);
+}
+
+.am-vertical-step-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: @corner-radius-circle;
+  border-radius: var(--am-steps-icon-border-radius, @corner-radius-circle);
+}
+
+.am-vertical-step-active-image,
+.am-vertical-step-image {
+  width: 24px;
+  /* height: 24px; */
+  border-radius: @corner-radius-circle;
+  border-radius: var(--am-steps-icon-border-radius, @corner-radius-circle);
+}
+
+.am-vertical-step-active-image {
+  background-color: @color-fill-primary;
+  background-color: var(--am-steps-color, @color-fill-primary);
+}
+
+.am-vertical-step-image {
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+}
+
+.am-vertical-step-icon.is-normal {
+  top: 5px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+  width: 8px;
+  height: 8px;
+}
+
+.am-vertical-step-icon.is-active,
+.am-vertical-step-icon.is-fail {
+  display: flex;
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-inverse);
+}
+
+.am-vertical-step-right {
+  flex: 1;
+  margin-bottom: 12px;
+}
+
+.am-vertical-step-right-last {
+  margin-bottom: 0;
+}
+
+.am-vertical-step-title {
+  margin-bottom: 4px;
+  font-size: @font-size-list;
+  font-size: var(--am-steps-vertical-title-size, @font-size-list);
+  color: @color-text-title;
+  color: var(--am-steps-title-color, @color-text-title);
+}
+
+.am-vertical-step-title.is-active {
+  color: @color-text-primary;
+  color: var(--am-steps-vertical-title-active-color, @color-text-primary);
+}
+
+.am-vertical-step-title.is-fail {
+  color: @color-text-warning;
+  color: var(--am-steps-vertical-warning-color, @color-text-warning);
+}
+
+.am-vertical-step-description {
+  font-size: @font-size-subtitle;
+  font-size: var(--am-steps-vertical-description-size, @font-size-subtitle);
+  color: @color-text-subtitle;
+  color: var(--am-steps-description-color, @color-text-subtitle);
+}
+
+.am-vertical-placeholder {
+  height: 20px;
+}
+
+.am-vertical-placeholder-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 1px;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+}

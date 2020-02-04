@@ -1,0 +1,7 @@
+<button data-name="{{dataName}}"  class="{{baseClass}} {{className}}" hover-class="{{hoverClass}}" disabled="{{disabled}}" subtitle="{{subtitle}}" size="{{size}}" loading="{{loading}}" hover-start-time="{{hoverStartTime}}" hover-stay-time="{{hoverStayTime}}"	hover-stop-propagation="{{hoverStopPropagation}}" form-type="{{formType}}" open-type="{{openType}}" scope="{{scope}}" onTap="onButtonTap" app-parameter="{{appParameter}}" public-id="{{publicId}}">
+  <view class="am-button-content">
+    <loading a:if="{{showLoading && shape !== 'capsule'}}" className="am-button-loading" color="{{type === 'primary' || type === 'warn' ? '#fff' : ( type === 'warn-ghost' ? '#ff3b30' : '#1677ff' )}}" size="24px"/>
+    <slot/>
+  </view>
+  <view a:if="{{subtitle}}" class="am-button-subtitle-subfont">{{subtitle}}</view>
+</button>

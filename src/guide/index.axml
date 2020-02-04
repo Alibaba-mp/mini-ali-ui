@@ -1,0 +1,43 @@
+<block a:if="{{show}}">
+  <view class="am-guide" style="{{guideZindex?'z-index: ' + guideZindex + ';':'z-index: 1000;'}}" a:if="{{hasJump}}">
+    <view class="am-guide-content {{guideNumber > 1?'am-guide-content-pager':''}}">
+      <image src="{{showGuideList.url}}" class="am-guide-img" style="
+        {{showGuideList.x?'left: ' + showGuideList.x + ';':'left: 0;'}}
+        {{showGuideList.y?'top: ' + showGuideList.y + ';':'top: 0;'}}
+        {{showGuideList.width?'width: ' + showGuideList.width + ';':''}}
+        {{showGuideList.height?'height: ' + showGuideList.height + ';':''}}
+        " />
+      <pagination currentPage="{{guideNumber - guideCurrent + 1}}" max="{{guideNumber}}" white="true" a:if="{{guideNumber > 1}}" class="am-guide-pager"></pagination>
+      <view class="am-guide-btn">
+        <block a:if="{{guideCurrent > 1}}">
+          <button shape="capsule" type="ghost" class="am-guide-btn-item" onTap="onGuideClick">{{btn_jump}}</button>
+          <button shape="capsule" class="am-guide-btn-item" onTap="onBtnClick">{{btn_next}}</button>
+        </block>
+        <block a:else>
+          <button shape="capsule" class="am-guide-btn-item" onTap="onGuideClick">{{btn_over}}</button>
+        </block>
+      </view>
+    </view>
+    <mask show="{{hasJump && show}}"></mask>
+  </view>
+  <view class="am-guide" style="{{guideZindex?'z-index: '+ guideZindex + ';':'z-index: 1000;'}}" a:else>
+    <view class="am-guide-content">
+      <image src="{{showGuideList.url}}" class="am-guide-img" style="
+        {{showGuideList.x?'left: ' + showGuideList.x + ';':'left: 0;'}}
+        {{showGuideList.y?'top: ' + showGuideList.y + ';':'top: 0;'}}
+        {{showGuideList.width?'width: ' + showGuideList.width + ';':''}}
+        {{showGuideList.height?'height: ' + showGuideList.height + ';':''}}
+        " />
+      <view class="am-guide-btn">
+        <block a:if="{{guideCurrent > 1}}">
+          <button shape="capsule" type="ghost" class="am-guide-btn-item" onTap="onBtnClick">{{btn_next}}</button>
+        </block>
+        <block a:else>
+          <button shape="capsule" type="ghost" class="am-guide-btn-item" onTap="onGuideClick">{{btn_over}}</button>
+        </block>
+      </view>
+    </view>
+    </view>
+    <mask show="{{!hasJump && show}}"></mask>
+  </view>
+</block>

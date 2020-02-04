@@ -1,0 +1,8 @@
+<view>
+  <page-result
+    type="payment"
+    footer="{{footer}}"
+  />
+</view>
+
+

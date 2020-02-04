@@ -1,0 +1,6 @@
+<view class="am-filter-item-wrap {{className}}" onTap="handleClick">
+  <view class="am-filter-item {{confirmStyle !=='' ? 'am-filter-click':''}}">
+    <view class="am-filter-item-title">{{value}}</view>
+    <view class="am-filter-item-subtitle">{{subtitle}}</view>
+  </view>
+</view>

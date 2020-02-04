@@ -1,0 +1,17 @@
+<view class="am-terms am-terms-{{fixed ? 'fixed' : 'normal'}}">
+    <view class="am-terms-header">
+        <block a:if="{{related}}">
+            <am-checkbox type="circle" onChange="onChange" checked="{{status}}">
+        </block>
+        <slot name="header"/>
+    </view>
+	<view class="am-terms-body">
+        <button type="{{agreeBtnAttr.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" dataName="{{agreeBtnAttr.data}}" subtitle="{{agreeBtnAttr.subtitle}}" disabled="{{showBtn}}">{{agreeBtnAttr.title}}</button>
+    <block a:if="{{cancelBtnAttr.title}}">
+        <button type="{{cancelBtnAttr.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}" capsuleMinWidth="{{capsuleMinWidth}}"  onTap="onTap" dataName="{{cancelBtnAttr.data}}" subtitle="{{cancelBtnAttr.subtitle}}">{{cancelBtnAttr.title}}</button>
+    </block>
+    </view>
+    <view class="am-terms-footer" a:if="{{hasDesc}}">
+        <slot name="desc"/>
+    </view>
+</view>

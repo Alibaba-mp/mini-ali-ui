@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Button",
+  "usingComponents": {
+    "button": "../../es/button/index",
+    "container": "../../es/container/index",
+    "radio": "../../es/am-radio/index",
+    "checkbox": "../../es/am-checkbox/index"
+  }
+}

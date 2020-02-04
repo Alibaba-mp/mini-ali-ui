@@ -1,0 +1,89 @@
+<pagination a:if="{{columnNum === 5 && infinite && list.length > 5}}" pagerName="{{gridName}}" infinite="true" className="am-grid-scroll" height="{{infiniteHeight}}">
+  <view class="am-grid am-grid-{{columnNum}}">
+    <block a:for="{{list}}">
+      <view
+        class="am-grid-item
+          am-grid-item-{{columnNum}}"
+        onTap="onGridItemClick"
+        data-index={{index}}
+        key="grid-item-{{index}}">
+        <slot item="{{item}}">
+          <view
+            class="am-grid-item-wrapper am-grid-item-wrapper-{{columnNum}}"
+            hover-start-time="0"
+            hover-stay-time="0"
+            hover-class="am-grid-item__hover"
+          >
+            <view
+              class="
+                am-grid-icon
+                am-grid-icon-{{columnNum}}
+                {{circular && columnNum >= 4 ? 'am-grid-icon-circular' : ''}}
+              "
+              style="background-image: url({{item.icon}});"
+              >
+            </view>
+            <view class="am-grid-text-wrapper">
+              <text class="am-grid-text am-grid-text-{{columnNum}}">{{item.text}}</text>
+            </view>
+          </view>
+        </slot>
+      </view>
+    </block>
+  </view>
+</pagination>
+<view
+  a:else 
+  class="am-grid am-grid-{{columnNum}}
+    {{columnNum === 5?'am-grid-5__overHide':''}}
+    {{hasLine ? '' : 'am-grid-no-line'}}">
+  <block a:for="{{list}}">
+    <view
+      class="am-grid-item
+        am-grid-item-{{columnNum}}
+        {{columnNum === 3 && list.length - index <= getColumnBorderIndex ? 'am-grid-item-3_noBorder' : ''}}"
+      onTap="onGridItemClick"
+      data-index={{index}}
+      key="grid-item-{{index}}">
+      <slot item="{{item}}">
+        <view
+          class="am-grid-item-wrapper am-grid-item-wrapper-{{columnNum}}"
+          hover-start-time="0"
+          hover-stay-time="0"
+          hover-class="am-grid-item__hover"
+        >
+          <view
+            class="
+              am-grid-icon
+              am-grid-icon-{{columnNum}}
+              {{circular && columnNum >= 4 ? 'am-grid-icon-circular' : ''}}
+            "
+            style="background-image: url({{item.icon}});"
+            a:if="{{columnNum < 5 || (columnNum === 5 && list.length <= 5)}}"
+            >
+          </view>
+          <block a:if="{{columnNum === 5 && list.length > 5}}"">
+            <view class="am-grid-icon am-grid-icon-{{columnNum}}" a:if="{{index === 4}}">
+              <am-icon type="more-1" size="28" color="#999" />
+            </view>
+            <view
+              a:else
+              class="
+                am-grid-icon
+                am-grid-icon-{{columnNum}}
+                {{circular && columnNum >= 4 ? 'am-grid-icon-circular' : ''}}
+              "
+              style="background-image: url({{item.icon}});"
+              >
+            </view>
+          </block>
+          <view class="am-grid-text-wrapper">
+            <text class="am-grid-text am-grid-text-{{columnNum}}">{{item.text}}</text>
+            <text class="am-grid-desc am-grid-desc-{{columnNum}}"
+              a:if="{{(columnNum === 2 || columnNum === 3) && item.desc && item.desc !== ''}}">{{item.desc}}</text>
+          </view>
+        </view>
+      </slot>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,90 @@
+@import "../style/mixins/hairline.less";
+
+.am-picker {
+  &-item {
+    display: flex;
+    align-items: center;
+    background: @color-fill-grey-inverse;
+    background: var(--am-picker-background, @color-fill-grey-inverse);
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-picker-padding-left, @h-spacing-large);
+  }
+
+  &-line {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-right: @h-spacing-large;
+    padding-right: var(--am-picker-line-padding-right, @h-spacing-large);
+    min-height: @size-12;
+    min-height: var(--am-picker-line-min-height, @size-12);
+    overflow: hidden;
+    font-size: @font-size-list;
+    font-size: var(--am-picker-font-size, @font-size-list);
+  }
+
+  &-label {
+    min-width: @size-20;
+    min-width: var(--am-picker-label-min-width, @size-20);
+    margin-right: 2px;
+    color: @color-text-title;
+    color: var(--am-picker-label-color, @color-text-title);
+  }
+
+  &-wrapper {
+    display: flex;
+    flex: 1;
+    height: @size-6;
+    height: var(--am-picker-wrapper-height, @size-6);
+    align-items: center;
+    overflow: hidden;
+    padding-left: 3px;
+  }
+
+  &-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: @color-text-title;
+    color: var(--am-picker-label-color, @color-text-title);
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+  }
+
+  &-clear {
+    display: flex;
+  }
+
+  &-line-bottom {
+    .hairline("bottom");
+  }
+
+  /* 最后一行 */
+  &-item.last .am-picker-line-bottom::after {
+    display: none;
+  }
+
+  &-text {
+    // padding-left: @size-2;
+    // padding-left: var(--am-picker-text-padding-left, @size-2);
+  }
+
+  &-content-placeholder {
+    color: @color-text-weak;
+    color: var(--am-picker-placeholder-color, @color-text-weak);
+  }
+
+  &-content-value {
+    color: @color-text-title;
+    color: var(--am-picker-content-value-color, @color-text-title);
+  }
+
+  &-arrow {
+    display: block;
+    margin-left: 8px;
+    line-height: 1;
+  }
+}

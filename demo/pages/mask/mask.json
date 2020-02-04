@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "遮罩蒙层",
+  "usingComponents":{
+    "mask":"../../es/mask/index"
+  }
+}

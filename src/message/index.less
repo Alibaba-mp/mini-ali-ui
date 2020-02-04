@@ -1,0 +1,70 @@
+@import (reference) '../style/themes/default.less';
+@import '../style/mixins/hairline.less';
+
+.am-message {
+  .amFormat(@name, @val, @default) {
+    @{name}: @default;
+    @{name}: ~'var(--@{val}, @{default})';
+  }
+  .amFormat(background-color, am-message-background, @color-fill-grey-inverse);
+  padding: @size-8 @size-3;
+  padding: var(--am-message-padding-h, @size-8) var(--am-message-padding-v, @size-3);
+  text-align: center;
+  line-height: normal;
+  box-sizing: border-box;
+  position: relative;
+  .hairline('bottom');
+
+  & .am-icon {
+    display: block;
+    .amFormat(line-height, am-message-icon-lineheight, @line-height-base);
+    .amFormat(font-size, am-message-icon-size, @size-16);
+  }
+
+  .icon-success {
+    .amFormat(color, am-message-success-color, @color-fill-primary);
+  }
+
+  .icon-info {
+    .amFormat(color, am-message-info-color, @color-fill-primary);
+  }
+
+  .icon-waiting {
+    .amFormat(color, am-message-waiting-color, @color-pomonagreen-1);
+  }
+
+  .icon-warn {
+    .amFormat(color, am-message-warn-color, @color-orange-1);
+  }
+
+  .icon-fail {
+    .amFormat(color, am-message-fail-color, @color-fill-warning);
+  }
+
+  &-main {
+    .amFormat(font-size, am-message-title-size, @font-size-title);
+    .amFormat(margin-top, am-message-title-margin, @size-5);
+    .amFormat(color, am-message-title-color, @color-text-title);
+  }
+
+  &-sub {
+    .amFormat(font-size, am-message-subtitle-size, @font-size-content);
+    .amFormat(margin-top, am-message-subtitle-margin, @size-2);
+    .amFormat(color, am-message-subtitle-color, @color-text-subtitle);
+  }
+
+  &-button-wrap {
+    .amFormat(margin-top, am-message-margintop, @size-5);
+    padding: 0 @size-3;
+    padding: 0 var(--am-message-button-margin, @size-3);
+
+    & .a-button {
+      margin-bottom: @size-3;
+      margin-bottom: var(--am-message-button-margin, @size-3);
+    }
+
+    & .a-button:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

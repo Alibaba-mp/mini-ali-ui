@@ -1,0 +1,10 @@
+.tab-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  height: 550px;
+}

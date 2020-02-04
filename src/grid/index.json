@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pagination": "../pagination/index",
+    "am-icon": "../am-icon/index"
+  }
+}

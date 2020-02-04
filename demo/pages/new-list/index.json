@@ -1,0 +1,14 @@
+{
+  "defaultTitle": "New List",
+  "usingComponents":{
+    "list": "../../es/list/index",
+    "list-item": "../../es/list/list-item/index",
+    "list-secondary": "../../es/list/list-secondary/index",
+    "tag": "../../es/tag/index",
+    "am-icon": "../../es/am-icon/index",
+    "title": "../../es/title/index",
+    "input-item": "../../es/input-item/index",
+    "am-button": "../../es/button/index",
+    "am-checkbox": "../../es/am-checkbox/index"
+  }
+}

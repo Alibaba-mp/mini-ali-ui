@@ -1,0 +1,39 @@
+@import (reference) '../../style/themes/default.less';
+
+.am-list-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  &-title {
+    font-size: @font-size-list;
+    font-size: var(--am-list-secondary-title-size, @font-size-list);
+    color: @color-text-title;
+    color: var(--am-list-secondary-title-color, @color-text-title);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  &-subtitle {
+    font-size: @font-size-subtitle;
+    font-size: var(--am-list-secondary-subtitle-size, @font-size-subtitle);
+    color: @color-text-subtitle;
+    color: var(--am-list-secondary-subtitle-color, @color-text-subtitle);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+  }
+}

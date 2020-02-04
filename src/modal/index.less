@@ -1,0 +1,201 @@
+@import '../style/mixins/hairline.less';
+@import (reference) "../style/themes/default.less";
+
+@modal-width: 560px * @pixelSize; /* 弹框宽度 */
+@modal-sm-image-size: 128px * @pixelSize; /* 小图片尺寸 */
+@modal-md-image-size: 268px * @pixelSize; /* 小图片尺寸 */
+@modal-lg-image-v-size: 312px * @pixelSize; /* 小图片尺寸 */
+@modal-v-spacing: 40px * @pixelSize; /* 弹框垂直内边距 */
+@modal-footer-height: 100px * @pixelSize; /* footer 高度 */
+@modal-footer-border-color: #E5E5E5; /* footer border颜色 */
+@modal-close-size: 88px * @pixelSize; /* close 区块大小 */
+@modal-close-icon-size: 32px * @pixelSize; /* close icon 大小 */
+@modal-active-reverse-backgroundColor: rgba(37, 39, 40, .05); /* close icon 大小 */
+@modal-body-max-width: 638px * @pixelSize; /* 弹框最大宽度 */
+@modal-advice-border-radius-size: 16px * @pixelSize; /* advice close icon 大小 */
+@modal-advice-close-bottom: 100px * @pixelSize; /* advice close bottom距离 */
+@modal-advice-close-size: 52px * @pixelSize; /* advice close icon 大小 */
+@modal-advice-margin-size: 48px * @pixelSize; /* advice close icon 顶部距离 */
+
+.am-modal {
+  background-color: @color-fill-grey-inverse;
+  background-color: var(--am-modal-content-backgroundColor, @color-fill-grey-inverse);
+  border-radius: @corner-radius-lg;
+  border-radius: var(--am-modal-content-radius, @corner-radius-lg);
+  width: @modal-width;
+  position: relative;
+  &-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &-hide {
+    display: none;
+  }
+  &-mask,
+  &-document {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &-mask {
+    background-color: @color-product-mask;
+    background-color: var(--am-modal-mask-backgroundColor, @color-product-mask);
+  }
+  &-document {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-content {
+    padding: @modal-v-spacing @h-spacing-large;
+    padding: var(@modal-v-spacing --am-modal-content-padding-h, @modal-v-spacing @h-spacing-large);
+    &--fill {
+      padding-top: 0;
+    }
+  }
+  &-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: @v-spacing-large;
+    margin-bottom: var(--am-modal-content-margin-v, @v-spacing-large);
+  }
+  &-image-lg &-image-element {
+    width: @modal-width;
+    height: @modal-lg-image-v-size;
+    margin-left: -@h-spacing-large;
+    margin-left: var(---am-modal-content-padding-h, -@h-spacing-large);
+    margin-right: -@h-spacing-large;
+    margin-right: var(---am-modal-content-padding-h, -@h-spacing-large);
+    border-top-left-radius: @corner-radius-lg;
+    border-top-left-radius: var(--am-modal-content-radius, @corner-radius-lg);
+    border-top-right-radius: @corner-radius-lg;
+    border-top-right-radius: var(--am-modal-content-radius, @corner-radius-lg);
+    overflow: hidden;
+  }
+  &-image-md &-image-element {
+    width: @modal-md-image-size;
+    height: @modal-md-image-size;
+  }
+  &-image-sm &-image-element {
+    width: @modal-sm-image-size;
+    height: @modal-sm-image-size;
+  }
+  &-header {
+    font-size: @font-size-title;
+    font-size: var(--am-modal-title-fontSize, @font-size-title);
+    line-height: @line-height-paragraph;
+    line-height: var(--am-modal-title-lineHeight, @line-height-paragraph);
+    text-align: center;
+    color: @color-text-title;
+    color: var(--am-modal-title-color, @color-text-title);
+    font-weight: bold;
+    margin-bottom: @v-spacing-standard;
+    margin-bottom: var(--am-modal-title-margin-v, @v-spacing-standard);
+  }
+  &-body {
+    overflow: hidden;
+    max-width: @modal-width;
+    line-height: @line-height-paragraph;
+    line-height: var(--am-modal-body-lineHeight, @line-height-paragraph);
+    text-align: center;
+    color: @color-text-title;
+    color: var(--am-modal-body-color, @color-text-title);
+    font-size: @font-size-subtitle;
+    font-size: var(--am-modal-body-fontSize, @font-size-subtitle);
+  }
+
+  &-footer {
+    height: @modal-footer-height;
+    line-height: @modal-footer-height;
+    position: relative;
+    font-size: @font-size-title;
+    font-size: var(--am-modal-footer-fontSize, @font-size-title);
+    color: @color-text-primary;
+    color: var(--am-color-text-primary, @color-text-primary);
+    text-align: center;
+    .hairline('top', @modal-footer-border-color);
+  }
+  &-buttons {
+    position: relative;
+    display: flex;
+    font-size: @font-size-title;
+    font-size: var(--am-modal-footer-fontSize, @font-size-title);
+    color: @color-text-primary;
+    color: var(--am-color-text-primary, @color-text-primary);
+    text-align: center;
+    .hairline('top', @modal-footer-border-color);
+    &--vertical {
+      flex-direction: column;
+    }
+    &--horizontal {
+      flex-direction: row;
+    }
+  }
+  &-button {
+    padding: 12px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &--vertical {
+      .hairline('bottom', @modal-footer-border-color);
+      &:last-child::after {
+        display: none;
+      }
+    }
+    &--horizontal {
+      .hairline('right', @modal-footer-border-color);
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+  &-close {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    height: @modal-close-size;
+    width: @modal-close-size;
+    text-align: center;
+    line-height: @modal-close-size;
+  }
+
+  &-close-active,
+  &-button-active,
+  &-footer-active {
+    background-color: @modal-active-reverse-backgroundColor;
+  }
+
+  &-document-advice & {
+    margin-top: -(@modal-advice-close-bottom + @modal-advice-close-size)/2;
+    padding-top: 0;
+    width: auto;
+  }
+  &-document-advice &-content {
+    padding: 0;
+    border-radius: @modal-advice-border-radius-size;
+    overflow: hidden;
+  }
+  &-document-advice &-body {
+    padding: 0;
+    max-width: @modal-body-max-width;
+  }
+
+  &-document-advice &-close {
+    bottom: -@modal-advice-close-bottom;
+    top: auto;
+    right: 50%;
+    transform: translateX(50%);
+    line-height: 1;
+    margin-top: @modal-advice-margin-size;
+    height: @modal-advice-close-size;
+    width: @modal-advice-close-size;
+  }
+}

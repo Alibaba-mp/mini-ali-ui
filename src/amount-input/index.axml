@@ -1,0 +1,30 @@
+<view class="am-amount {{className}}">
+  <view class="am-amount-title">{{title}}</view>
+  <view class="am-amount-input">
+    <view class="am-amount-symbol">¥</view>
+    <input controlled="{{true}}" 
+      type="{{type === 'digit' ? 'digit' : 'number'}}" 
+      maxlength="{{maxLength}}" 
+      placeholder="{{placeholder}}" 
+      placeholderClass="am-amount-placeholder" 
+      class="am-amount-value" 
+      value="{{value}}" 
+      focus="{{_focus}}" 
+      onInput="onInput" 
+      onConfirm="onConfirm" 
+      onFocus="onFocus" 
+      onBlur="onBlur" />
+    <view class="am-amount-clear {{ value.toString().length > 0 && _focus ? 'am-amount-clear-show' : '' }}" 
+      onTap="onClearTap">
+      <am-icon class="am-amount-clear-icon" 
+        type="delete_" 
+        color="#ccc" 
+        size="22" />
+    </view>
+  </view>
+  <view class="am-amount-footer">
+    <view class="am-amount-extra">{{extra}}</view>
+    <view class="am-amount-btn" 
+      onTap="onButtonClick">{{btnText}}</view>
+  </view>
+</view>

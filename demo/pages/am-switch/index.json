@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "am-switch": "../../es/am-switch/index"
+  }
+}

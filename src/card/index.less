@@ -1,0 +1,147 @@
+@import (reference) '../style/themes/default.less';
+
+.am-card {
+  position: relative;
+  display: flex;
+  border-radius: @corner-radius-lg;
+  border-radius: var(--am-card-border-radius, @corner-radius-lg);
+  margin: 6px 10px;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  background-size: 100%;
+  min-height: 85px;
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  &-container-expanded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  &-outter-container {
+    padding-top: 0;
+  }
+  &-outter-container-expanded {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    height: 0;
+    padding-top: 60%;
+    // transition-property: padding-top;
+    // transition-duration: 0.5s;
+  }
+  &-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 19px @h-spacing-large;
+    padding: 19px var(--am-card-padding, @h-spacing-large);
+    border-radius: @corner-radius-lg;
+    border-radius: var(--am-card-border-radius, @corner-radius-lg);
+    min-height: 85px;
+    box-sizing: border-box;
+    background-color: #929292;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative;
+    background-size: 100%;
+  }
+  &-bg-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: @corner-radius-lg;
+    border-radius: var(--am-card-border-radius, @corner-radius-lg);
+    width: 100%;
+    height: 100%;
+    background: rgb(101, 100, 100);
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(252, 252, 252, 0) 60px,
+        rgba(244, 244, 244, 0) 100%
+      );
+  }
+  &-body-expand {
+    align-items: flex-start;
+    // padding-top: 19px;
+    background-color: transparent;
+    height: 100%;
+  }
+  &-content-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  &-content {
+    flex: 1;
+    min-width: 100px;
+    z-index: 1;
+  }
+  &-title {
+    font-size: @font-size-title;
+    font-size: var(--am-card-title-size, @font-size-title);
+    line-height: 25px;
+    color: @color-text-base;
+    color: var(--am-card-title-color, @color-text-base);
+  }
+  &-subtitle {
+    margin-top: 2px;
+  }
+  &-subtitle-text {
+    font-size: @font-size-content;
+    line-height: 1.5;
+    color: @color-text-base;
+    color: var(--am-card-subtitle-colo, @color-text-base);
+    background: #0003;
+    border-radius: 3px;
+    padding: 1px 6px;
+  }
+  &-thumb {
+    margin-right: @h-spacing-large;
+    margin-right: var(--am-card-padding, @h-spacing-large);
+    width: 48px;
+    height: 48px;
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-card-thumb-border-radius, @corner-radius-circle);
+    border-width: @border-width-thick;
+    border-width: var(--am-card-thumb-border-width, @border-width-thick);
+    border-color: @color-fill-grey-inverse;
+    border-color: var(--am-card-thumb-border-color, @color-fill-grey-inverse);
+    border-style: solid;
+  }
+  &-arrow {
+    width: 13px;
+    height: 13px;
+  }
+  &-footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 14px;
+    line-height: 20px;
+    color: @color-text-title;
+    color: var(--am-card-action-color, @color-text-title);
+    background: @color-fill-grey-inverse;
+    background: var(--am-card-footer-color, @color-fill-grey-inverse);
+    box-sizing: border-box;
+    padding: @h-spacing-large;
+    padding: var(--am-card-padding, @h-spacing-large);
+    border-radius: 0 0 @corner-radius-lg @corner-radius-lg;
+    border-radius: 0 0 var(--am-card-border-radius, @corner-radius-lg) var(--am-card-border-radius, @corner-radius-lg);
+    border-top: @corner-radius-lg solid @color-fill-grey-inverse;
+    border-top:
+      var(--am-card-border-radius, @corner-radius-lg) solid
+      var(--am-card-footer-color, @color-fill-grey-inverse);
+    margin-top: -(@corner-radius-lg);
+    margin-top: calc(var(--am-card-border-radius, @corner-radius-lg) * -1);
+    z-index: 1;
+  }
+}

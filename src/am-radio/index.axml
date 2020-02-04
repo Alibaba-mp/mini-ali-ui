@@ -1,0 +1,10 @@
+<view class="am-radio">
+  <radio
+    class="am-radio-value"
+    value="{{value}}"
+    checked="{{checked}}"
+    disabled="{{disabled}}"
+    id="{{id}}"
+    />
+    <am-icon className="am-radio-synthetic" type="check"/>
+</view>

@@ -1,0 +1,16 @@
+<view class="am-container {{className}}">
+  <slot name="header"></slot>
+  <view class="am-container-content-box">
+    <view a:if="{{type === 'line'}}" class="am-container-content">
+      <slot></slot>
+    </view>
+    <view a:elif="{{type === 'onewithtwo'}}" class="am-container-content-grid">
+      <slot name="first"></slot>
+      <view class="am-container-content-grid-sub">
+        <slot name="second"></slot>
+        <slot name="third"></slot>
+      </view>
+    </view>
+  </view>
+  <slot name="footer"></slot>
+</view>

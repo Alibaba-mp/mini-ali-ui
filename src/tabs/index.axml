@@ -1,0 +1,87 @@
+<import-sjs name="util" from="./util.sjs"/>
+
+<view class="am-tabs {{className}}">
+  <view class="am-tabs-tab-bar-wrap">
+    <view class="am-tabs-bar {{capsule?'am-tabs-bar-capsule':''}}" style="background-color: {{tabBarBackgroundColor}};{{elevator?'position: sticky;top: 0;':'0'}}">
+      <view class="am-tabs-bar-content-wrap">
+        <scroll-view
+          scroll-left="{{viewScrollLeft}}"
+          scroll-into-view="tabs-item-{{tabsName?tabsName+'-':''}}{{tabViewNum}}"
+          scroll-x="{{true}}"
+          scroll-with-animation="{{animation}}"
+          onScroll="showLeftShadow"
+          class="am-tabs-bar-content"
+          id="am-tabs-bar-{{tabsName?tabsName+'-':''}}content">
+          <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"  style="background-color: {{tabBarBackgroundColor}};"></view>
+          <view class="am-tabs-scroll-right"  style="background-color: {{tabBarBackgroundColor}};"></view>
+          <block a:for="{{tabs}}">
+            <view
+              id="tabs-item-{{tabsName?tabsName+'-':''}}{{index}}"
+              data-index="{{index}}"
+              data-tabsName="{{tabsName}}"
+              data-floor="{{floorNumber[index]}}"
+              key="tabs-item-{{index}}"
+              onTap="handleTabClick"
+              style="color: {{ !hasSubTitle && capsule?
+                (index === activeTab ? capsuleTabBarActiveTextColor: tabBarInactiveTextColor)
+                :
+                (index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor) }}"
+              class="am-tabs-bar-tab {{ !hasSubTitle && capsule?'am-tabs-bar-tab-capsule':''}} {{ hasSubTitle?'am-tabs-bar-tab__hasSubTitle':''}} {{tabBarCls}}" hover-class="{{index === activeTab?'':!hasSubTitle && capsule?'am-tabs-bar-tab-capsule__hover':'am-tabs-bar-tab__hover'}}" hover-start-time="0" hover-stay-time="0">
+              <view class="
+                am-tabs-bar-title
+                {{ hasSubTitle ? 'am-tabs-bar-title__hasSubTitle' : ''}}
+                {{ index === activeTab ? activeCls : '' }}
+                {{ !hasSubTitle && capsule?'am-tabs-bar-capsule-title':''}}
+                {{tabs.length - 1 === index?'am-tabs-bar-title__noMargin':''}}
+                " style="{{!hasSubTitle && capsule? (tabs.length <= 3?'font-size: ' + tabFontSize15 + ';':'font-size: ' + tabFontSize13 + ';'):''}}
+                  {{hasSubTitle?
+                    '':
+                  (!hasSubTitle && capsule?
+                  (index === activeTab ? 'background-color:' + tabBarUnderlineColor + ';' : '')
+                  :'') }}">
+                <view a:if="{{ !hasSubTitle && !capsule && index === activeTab}}" class="am-tabs-bar-title-underline" style="background-color: {{tabBarUnderlineColor}};"></view>
+                <text class="am-tabs-bar-tab-mainTitle" style="{{index === activeTab?'font-weight: bold;':''}}">{{item.title}}</text>
+                <text a:if="{{!hasSubTitle && capsule && item.number}}" class="am-tabs-bar-tab-number {{ index === activeTab ?'am-tabs-bar-tab-number_active':''}}">({{item.number}})</text>
+                <text class="am-tabs-bar-tab-subTitle" a:if="{{hasSubTitle && item.subTitle}}" style="
+                  {{index === activeTab ? 'background-color:' + tabBarUnderlineColor + '; color: ' + tabBarActiveSubTextColor + ';' : 'color: ' + tabBarSubTextColor + ';'}}
+                ">{{item.subTitle}}</text>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+      <view
+      class="am-tabs-plus {{showPlus ? 'show' : ''}}"
+      onTap="handlePlusClick" hover-class="am-tabs-bar-tab__hover" hover-start-time="0" hover-stay-time="0">
+        <am-icon type="add" size="16"></am-icon>
+      </view>
+    </view>
+    <block a:if="{{elevator}}">
+      <view class="am-tabs-elevator-content">
+        <slot></slot>
+      </view>
+    </block>
+    <block a:else>
+      <block a:if="{{swipeable}}">
+        <swiper
+          circular="{{false}}"
+          current="{{activeTab}}"
+          data-tabsName="{{tabsName}}"
+          interval="99999999"
+          autoplay="{{autoplay}}"
+          duration="{{duration}}"
+          onChange="handleSwiperChange"
+          class="am-tabs-content-wrap {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
+          <slot></slot>
+        </swiper>
+      </block>
+      <block a:else>
+        <view class="am-tabs-content-wrap {{util.compareVersion(version) >= 0 ? 'fix' : ''}}">
+          <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-activeTab * 100) + '%, 0, 0)' }}">
+            <slot></slot>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>

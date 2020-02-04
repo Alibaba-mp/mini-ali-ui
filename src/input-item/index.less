@@ -1,0 +1,91 @@
+@import "../style/mixins/hairline.less";
+
+.am-input {
+  &-item {
+    display: flex;
+    align-items: center;
+    background: @color-fill-grey-inverse;
+    background: var(--am-input-item-background, @color-fill-grey-inverse);
+    padding-left: @h-spacing-large;
+    padding-left: var(--am-input-item-padding-left, @h-spacing-large);
+
+    // .a-input-content {
+    //   padding-left: 2px;
+    // }
+    &-extra {
+      margin-left: @h-spacing-large;
+      margin-left: var(--am-input-item-padding-left, @h-spacing-large);
+    }
+  }
+
+  &-line {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-right: @h-spacing-large;
+    padding-right: var(--am-input-line-padding-right, @h-spacing-large);
+    min-height: @size-12;
+    min-height: var(--am-input-line-min-height, @size-12);
+    overflow: hidden;
+    font-size: @font-size-list;
+    font-size: var(--am-input-font-size, @font-size-list);
+  }
+
+  &-label {
+    min-width: @size-20;
+    min-width: var(--am-input-label-min-width, @size-20);
+    margin-right: 2px;
+    color: @color-text-title;
+    color: var(--am-input-item-label-color, @color-text-title);
+  }
+
+  &-content {
+    flex: 1;
+    display: flex;
+    color: @color-text-title;
+    color: var(--am-input-item-label-color, @color-text-title);
+    text-align: left;
+    padding: 0;
+  }
+
+  &-content .a-input-wrap {
+    flex: 1;
+  }
+
+  &-clear {
+    display: flex;
+    height: @icon-size-sm;
+    height: var(--am-input-icon-size, @icon-size-sm);
+    width: @icon-size-sm;
+    width: var(--am-input-icon-size, @icon-size-sm);
+    justify-content: center;
+    align-items: center;
+    &-icon {
+      line-height: @line-height-base;
+      line-height: var(--am-input-icon-line-height, @line-height-base);
+    }
+  }
+
+  &-clear.show {
+    visibility: visible;
+  }
+
+  &-clear.hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &-line-bottom {
+    .hairline("bottom");
+  }
+
+  /* 最后一行 */
+  &-item.last .am-input-line-bottom::after {
+    display: none;
+  }
+  &-placeholder-base {
+    color: @color-text-weak;
+    color: var(--am-input-item-placeholder-color, @color-text-weak);
+  }
+}

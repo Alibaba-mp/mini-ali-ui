@@ -1,0 +1,30 @@
+<view class="am-search {{className}}">
+  <view class="am-search-input">
+    <view class="am-search-synthetic">
+        <am-icon type='search' class="am-search-synthetic-icon"></am-icon>
+        <text class="am-search-synthetic-placeholder" style="{{ visibility: !focus && _value.length === 0 ? 'visible': 'hidden'}}">{{placeholder}}</text>
+    </view>
+    <input
+      enableNative="{{false}}"
+      class="am-search-value"
+      confirm-type="search"
+      value="{{_value}}"
+      focus="{{focus}}"
+      maxlength="{{maxLength}}"
+      disabled="{{disabled}}"
+      onInput="handleInput"
+      onFocus="handleFocus"
+      onConfirm="handleConfirm"
+      sync-input="{{true}}"
+      onBlur="handleBlur" />
+    <view class="am-search-clear {{ _value.length > 0 && focus ? 'am-search-clear-show' : '' }}" onTap="handleClear">
+      <am-icon type='close_' class="am-search-clear-font"></am-icon>
+    </view>
+    <view a:if="{{showVoice && (_value.length === 0)}}" class="am-search-voice" onTap="handleVoice">
+      <am-icon type='microphone_' class='am-search-voice-font'></am-icon>
+    </view>
+  </view>
+  <view
+    class="am-search-cancel am-search-anim {{ focus || showCancelButton ? 'am-search-repos' : '' }}"
+    onTap="handleCancel">取消</view>
+</view>

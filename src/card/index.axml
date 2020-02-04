@@ -1,0 +1,30 @@
+<view class="am-card">
+  <!-- <image a:if="{{expand}}" class="am-card-background" src="{{bgImg}}" /> -->
+  <view style="width: 100%;" 
+    class="am-card-outter-container {{expand ? 'am-card-outter-container-expanded' : ''}}">
+    <view class="am-card-container {{expand ? 'am-card-container-expanded' : ''}}">
+      <view class="am-card-body {{expand ? 'am-card-body-expand' : ''}}" 
+        style="{{bgImg ? `background-image: url('${bgImg}');` : ''}}" 
+        onTap="onCardClick">
+        <!-- <view class="am-card-bg-mask" /> -->
+        <view class="am-card-content-wrapper">
+          <image src="{{thumb}}" 
+            class="am-card-thumb" 
+            mode="scaleToFill" />
+          <view class="am-card-content">
+            <view class="am-card-title">{{title}}</view>
+            <view a:if="{{subTitle}}" 
+              class="am-card-subtitle">
+              <text class="am-card-subtitle-text">{{subTitle}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view a:if="{{action && !expand}}" 
+        class="am-card-footer">
+        <text onTap="onActionClick">{{action}}</text>
+        <text onTap="onExtraActionClick">{{extraAction}}</text>
+      </view>
+    </view>
+  </view>
+</view>

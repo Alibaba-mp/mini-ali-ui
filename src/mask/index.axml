@@ -1,0 +1,5 @@
+<view
+  class="am-mask {{type === 'market'?'am-mask__m':''}}"
+  style="{{show?'':'display: none;'}}{{maskZindex?'z-index: ' + maskZindex + ';':''}}"
+  onTap="onMaskClick"
+></view>

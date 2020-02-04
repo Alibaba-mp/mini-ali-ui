@@ -1,0 +1,25 @@
+<pagination pagerName='test1' infinite="true">
+  <view style="display: flex;">
+    <view style="flex: 0 0 auto;width: 100vw;background-color: yellow;">文字</view>
+    <view style="flex: 0 0 auto;width: 90vw;background-color: blue;">文字</view>
+    <view style="flex: 0 0 auto;width: 50vw;background-color: red;">文字</view>
+    <view style="flex: 0 0 auto;width: 120vw;background-color: green;">文字</view>
+    <view style="flex: 0 0 auto;width: 20vw;background-color: grey;">文字</view>
+  </view>
+</pagination>
+
+<view style="width: 50vw;">
+  <pagination pagerName='test2' height="300px" white="true" infinite="true">
+    <view style="width: 110vw;height: 100%;background-color: #f32600;color: #fff;">反白的无极翻页</view>
+  </pagination>
+</view>
+
+<view style="margin-top: 20px;">正常翻页样式</view>
+<view style="padding: 20px 20px 0;background-color: yellow;">
+  <pagination currentPage="{{3}}" max="{{10}}" height="200px" />
+</view>
+
+<view style="margin-top: 20px;">反白翻页样式</view>
+<view style="padding: 20px 20px 0;background-color: red;">
+  <pagination currentPage="{{5}}" white="true" />
+</view>

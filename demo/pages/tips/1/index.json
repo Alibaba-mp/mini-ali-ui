@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "小程序 mini-ali-ui 库",
+  "usingComponents": {
+    "tips-dialog": "../../../es/tips/tips-dialog/index",
+    "am-button": "../../../es/button/index",
+    "am-icon": "../../../es/am-icon/index",
+    "list-item": "../../../es/list/list-item/index",
+    "input-item": "../../../es/input-item/index"
+  }
+}

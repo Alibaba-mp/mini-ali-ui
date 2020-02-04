@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Avatar",
+  "usingComponents":{
+    "avatar": "../../es/avatar/index"
+  }
+}

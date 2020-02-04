@@ -1,0 +1,81 @@
+@import (reference) "../style/themes/default.less";
+
+.am-vtabs {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  &-bar {
+    width: @size-15 * 2;
+    overflow: hidden;
+    &-line {
+      position: absolute;
+      left: 0;
+      top: @h-spacing-large;
+      bottom: @h-spacing-large;
+      width: 6 * @pixelSize;
+      overflow: hidden;
+      font-size: 0;
+      border-radius: @corner-radius-circle;
+      &-radius {
+        position: absolute;
+        right: 0;
+        width: @size-2;
+        height: @size-2;
+        border-radius: @corner-radius-circle;
+        overflow: hidden;
+        font-size: 0;
+        &__top {
+          top: -@size-2;
+        }
+        &__bottom {
+          bottom: -@size-2;
+        }
+      }
+    }
+    &-placehold {
+      flex: 1 1 0%;
+    }
+  }
+
+  &-bar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: @size-15 * 2;
+  }
+
+  &-bar-tab {
+    position: relative;
+    box-sizing: border-box;
+    width: @size-15 * 2;
+    padding: @h-spacing-large @size-6;
+    text-align: center;
+    font-size: @font-size-subtitle;
+    transition: all 200ms linear;
+    &__hover {
+      opacity: 0.6;
+    }
+  }
+
+  &-bar-title {
+    position: relative;
+    display: inline-block;
+  }
+
+  &-content-wrap {
+    overflow: hidden;
+    flex: 1;
+    height: 100%;
+    background-color: @color-fill-grey-inverse;
+  }
+
+  &-slides {
+    height: 100%;
+  }
+
+  &-slides.animate {
+    transition-duration: 300ms;
+  }
+}

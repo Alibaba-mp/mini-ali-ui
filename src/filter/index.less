@@ -1,0 +1,77 @@
+@import (reference) "../style/themes/default.less";
+
+.am-filter {
+  &-show {
+    height: 100vh;
+    display: block;
+    position: relative;
+  }
+
+  &-hide {
+    display: none;
+  }
+
+  &-mask, &-document {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &-mask {
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  &-content {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  &-list {
+    flex: 1;
+    padding-left: @size-3;
+    padding-left: var(--am-filter-padding, @size-3);
+    padding-bottom: @size-3;
+    padding-bottom: var(--am-filter-padding, @size-3);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 830 * @pixelSize;
+    box-sizing: border-box;
+  }
+
+  &-btn {
+    width: 100%;
+    display: flex;
+  }
+
+  &-default, &-primary {
+    flex: 1;
+    height: 96 * @pixelSize;
+    font-size: 36 * @pixelSize;
+    box-sizing: border-box;
+    width: 50%;
+    border: 0;
+    border-radius: 0;
+  }
+
+  &-default {
+    border-top: @border-width-standard solid #eee;
+    border-right: none;
+  }
+
+  &-child-2 {
+    & > .am-filter-item-wrap {
+      width: 50%;
+    }
+  }
+
+  &-child-3 {
+    & > .am-filter-item-wrap {
+      width: 33.3%;
+    }
+  }
+}

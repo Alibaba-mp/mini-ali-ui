@@ -1,0 +1,29 @@
+<view a:if="{{infinite}}" class="am-pageInfinite {{className?className:''}}" style="height: {{height}};">
+  <scroll-view scroll-x="true" class="am-pageInfinite_content" data-id="{{pagerName}}" id="{{pagerName}}" onScroll="onScroll" style="height: {{height}};">
+    <slot></slot>
+  </scroll-view>
+  <view class="am-pageInfiniteWrap">
+    <view a:if="{{white}}" class="am-pageInfiniteArea" style="background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2250px%22%20height%3D%229px%22%20viewBox%3D%220%200%2050%209%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M48.6%2C2.07%20C48.33%2C0.54%2046.98%2C-0.18%2045.18%2C0.09%20C42.66%2C0.63%2031.23%2C2.7%2024.66%2C2.7%20C17.37%2C2.7%2010.17%2C1.8%203.51%2C0.09%20C1.98%2C-0.27%200.45%2C0.54%200.09%2C1.98%20C-0.27%2C3.42%200.63%2C4.86%202.07%2C5.31%20C9.27%2C7.11%2016.83%2C8.1%2024.66%2C8.1%20C31.68%2C8.1%2038.79%2C7.2%2046.53%2C5.31%20C48.06%2C4.95%2048.78%2C4.05%2048.6%2C2.07%20Z%22%20fill%3D%22%23fff%22%20opacity%3D%220.4%22%2F%3E%3C%2Fsvg%3E);">
+      <view class="am-pageInfiniteMove" style="transform: rotate(-{{pageDeg}}deg);">
+        <view class="am-pageInfiniteInner" style="background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2226px%22%20height%3D%229px%22%20viewBox%3D%220%200%2026%209%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M21.5890857%2C2.60515607%20C15.3790857%2C2.33515607%209.34908566%2C1.52515607%203.58908566%2C0.0851560696%20C2.05908566%2C-0.27484393%200.529085662%2C0.53515607%200.079085662%2C1.97515607%20C-0.280914338%2C3.41515607%200.619085662%2C4.85515607%202.14908566%2C5.30515607%20C8.26908566%2C6.83515607%2014.7490857%2C7.73515607%2021.3190857%2C8.00515607%20C22.8490857%2C8.09515607%2024.1990857%2C6.92515607%2024.2890857%2C5.39515607%20C24.3790857%2C3.95515607%2023.1190857%2C2.69515607%2021.5890857%2C2.60515607%20Z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E);"></view>
+      </view>
+    </view>
+    <view a:else class="am-pageInfiniteArea" style="{{fillColor?'background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2250px%22%20height%3D%229px%22%20viewBox%3D%220%200%2050%209%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M48.6%2C2.07%20C48.33%2C0.54%2046.98%2C-0.18%2045.18%2C0.09%20C42.66%2C0.63%2031.23%2C2.7%2024.66%2C2.7%20C17.37%2C2.7%2010.17%2C1.8%203.51%2C0.09%20C1.98%2C-0.27%200.45%2C0.54%200.09%2C1.98%20C-0.27%2C3.42%200.63%2C4.86%202.07%2C5.31%20C9.27%2C7.11%2016.83%2C8.1%2024.66%2C8.1%20C31.68%2C8.1%2038.79%2C7.2%2046.53%2C5.31%20C48.06%2C4.95%2048.78%2C4.05%2048.6%2C2.07%20Z%22%20fill%3D%22' + fillColor + '%22%2F%3E%3C%2Fsvg%3E);':''}}">
+      <view class="am-pageInfiniteMove" style="transform: rotate(-{{pageDeg}}deg);">
+        <view class="am-pageInfiniteInner" style="{{frontColor?'background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2226px%22%20height%3D%229px%22%20viewBox%3D%220%200%2026%209%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M21.5890857%2C2.60515607%20C15.3790857%2C2.33515607%209.34908566%2C1.52515607%203.58908566%2C0.0851560696%20C2.05908566%2C-0.27484393%200.529085662%2C0.53515607%200.079085662%2C1.97515607%20C-0.280914338%2C3.41515607%200.619085662%2C4.85515607%202.14908566%2C5.30515607%20C8.26908566%2C6.83515607%2014.7490857%2C7.73515607%2021.3190857%2C8.00515607%20C22.8490857%2C8.09515607%2024.1990857%2C6.92515607%2024.2890857%2C5.39515607%20C24.3790857%2C3.95515607%2023.1190857%2C2.69515607%2021.5890857%2C2.60515607%20Z%22%20fill%3D%22' + frontColor + '%22%2F%3E%3C%2Fsvg%3E);':''}}"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<view a:if="{{!infinite && white}}" class="am-pager {{className?className:''}}">
+  <block a:for="{{max}}">
+    <view a:if="{{currentPage === index + 1}}" class="am-pager-current {{index === max - 1?'am-pager-lastChild':'' }}" style="background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M23.9%2C1.7c-0.5-1.4-1.9-2.1-3.3-1.6c-3%2C1.1-5.8%2C1.7-8.4%2C1.6c-3%2C0-5.9-0.6-8.7-1.6C2.2-0.3%2C0.7%2C0.3%2C0.2%2C1.7%20C-0.3%2C3%2C0.3%2C4.5%2C1.7%2C5C5%2C6.3%2C8.5%2C7%2C12.1%2C7c3.3%2C0%2C6.6-0.7%2C10.1-1.9C23.6%2C4.6%2C24.3%2C3.1%2C23.9%2C1.7z%22%2F%3E%3C%2Fsvg%3E);"></view>
+    <view a:else class="am-pager-number am-pager-number_white {{index === max - 1?'am-pager-lastChild':'' }}"></view>
+  </block>
+</view>
+<view a:if="{{!infinite && !white}}" class="am-pager {{className?className:''}}">
+  <block a:for="{{max}}">
+    <view a:if="{{currentPage === index + 1}}" class="am-pager-current {{index === max - 1?'am-pager-lastChild':'' }}" style="{{frontColor?'background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22' + frontColor + '%22%20d%3D%22M23.9%2C1.7c-0.5-1.4-1.9-2.1-3.3-1.6c-3%2C1.1-5.8%2C1.7-8.4%2C1.6c-3%2C0-5.9-0.6-8.7-1.6C2.2-0.3%2C0.7%2C0.3%2C0.2%2C1.7%20C-0.3%2C3%2C0.3%2C4.5%2C1.7%2C5C5%2C6.3%2C8.5%2C7%2C12.1%2C7c3.3%2C0%2C6.6-0.7%2C10.1-1.9C23.6%2C4.6%2C24.3%2C3.1%2C23.9%2C1.7z%22%2F%3E%3C%2Fsvg%3E);':''}}"></view>
+    <view a:else class="am-pager-number {{index === max - 1?'am-pager-lastChild':'' }}"></view>
+  </block>
+</view>

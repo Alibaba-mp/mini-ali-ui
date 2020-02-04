@@ -1,0 +1,16 @@
+<view class="am-popover-item {{className}}" 
+  hover-class="am-popover-item-hover"
+  hover-start-time="20"
+  hover-stay-time="20"
+  onTap="onItemClick">
+  <view class="am-popover-item-wrapper">
+    <view class="am-popover-item-icon-holder am-popover-item-ver-center" 
+      a:if="{{iconType}}">
+      <am-icon type="{{iconType}}" 
+        size="22" />
+    </view>
+    <view class="am-popover-item-slot-holder am-popover-item-ver-center">
+      <slot />
+    </view>
+  </view>
+</view>

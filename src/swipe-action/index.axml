@@ -1,0 +1,71 @@
+
+<view a:if={{!useV2}} class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}">
+  <block a:if="{{right.length > 0}}">
+    <view class="am-swipe-right am-swipe-right-{{$id}}">
+      <block a:for="{{right}}">
+        <view
+          class="am-swipe-btn am-swipe-btn-{{item.type}}"
+          onTap="onItemClick"
+          data-index="{{index}}"
+          key="swipe-item-{{index}}"
+          style="{{item.bgColor?'background-color:' + item.bgColor + ';':''}} {{item.fColor?'color: ' + item.fColor + ';':''}}"
+        >
+          {{item.text}}
+        </view>
+      </block>
+    </view>
+  </block>
+  <view
+    class="am-swipe-content"
+    onTap="onSwipeTap"
+    onTouchStart="onSwipeStart"
+    onTouchEnd="onSwipeEnd"
+    catchTouchMove="onSwipeMove"
+    data-type="content"
+    style="-webkit-transform: translateX({{leftPos}}px); transform: translateX({{leftPos}}px);"
+  >
+    <slot />
+  </view>
+</view>
+<view
+  class="am-swipe am-swipe-{{$id}} {{className}}"
+  style="width: {{viewWidth}}px; {{height?'height: ' + height + 'px;':'height: auto;'}}"
+  key="{{key}}"
+  a:else
+>
+  <movable-area
+    class="am-swipe-movable-area am-swipe-movable-area-{{$id}}"
+    style="width: {{ viewWidth + actionWidth}}px;{{height?'height: ' + height + 'px;':'height: auto;'}}left: -{{actionWidth}}px;"
+  >
+    <block a:if="{{right.length > 0}}">
+      <view class="am-swipe-right am-swipe-right-{{$id}} {{borderRadius?'am-swipe-right-radius':''}}" style="right: 0;width: {{actionWidth - cellWidth}}px;">
+        <block a:for="{{right}}">
+          <view
+            class="am-swipe-btn am-swipe-btn-{{item.type}}"
+            onTap="onItemClick"
+            data-index="{{index}}"
+            key="swipe-item-{{index}}"
+            style="{{item.bgColor?'background-color:' + item.bgColor + ';':''}} {{item.fColor?'color: ' + item.fColor + ';':''}}"
+          >
+            <text class="am-swipe-btn-text">{{item.text}}</text>
+          </view>
+        </block>
+      </view>
+    </block>
+    <movable-view
+      class="am-swipe-content"
+      onTap="onSwipeTap"
+      onTouchStart="onSwipeStart"
+      direction="horizontal"
+      data-type="content"
+      style="width: {{viewWidth}}px;{{height?'height: ' + height + 'px;':'height: auto;'}} transition: {{transitionVal}};"
+      x="{{x}}"
+      onChange="onChange"
+      onChangeEnd="onChangeEnd"
+      damping="30"
+      friction="5"
+    >
+      <slot />
+    </movable-view>
+  </movable-area>
+</view>

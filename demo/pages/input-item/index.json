@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "input-item",
+  "usingComponents":{
+    "list": "../../es/list/index",
+    "input-item": "../../es/input-item/index",
+    "picker-item": "../../es/picker-item/index",
+    "verify-code": "../../es/verify-code/index"
+  }
+}

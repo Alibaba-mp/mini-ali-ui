@@ -1,0 +1,22 @@
+<view 
+  class="am-stepper-content {{className}}"
+  style="opacity:{{disabled ? '0.4' : '1'}};width: calc(60px + {{showNumber?(getInputWidth <= 2 ? 2 : getInputWidth / 2 + 1) + 'em':'2em'}});"
+  max="{{max}}"
+  min="{{min}}"
+  onChange="{{callBackFn}}"
+  step="{{step}}"
+  disabled="{{disabled || readOnly}}"
+>
+  <view class="am-stepper-option am-stepper-reduce" style="opacity:{{opaReduce}}" data-type="reduce" onTap="changeFn"></view>
+  <input
+    class="am-stepper-input {{showNumber?'':'am-stepper-input-hide'}}"
+    value="{{value > max ? max : value}}"
+    onBlur="onBlur"
+    onInput="onInput"
+    disabled="{{disabled || readOnly}}"
+    type="number"
+  />
+  <view class="am-stepper-option am-stepper-add" style="opacity:{{opaAdd}}" data-type="add" onTap="changeFn">
+    <am-icon type="add" />
+  </view>
+</view>

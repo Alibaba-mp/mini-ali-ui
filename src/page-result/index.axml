@@ -1,0 +1,14 @@
+<view class="am-page-result {{className}} {{local ? 'am-local-page': ''}}">
+  <view class="am-page-result-pic page-{{type}}" />
+  <view class="am-page-result-title" a:if="{{!local}}">{{title === undefined ? defaultTitle[type] : title }}</view>
+  <view class="am-page-result-brief">{{brief === undefined ? defaultBrief[type] : brief}}</view>
+  <slot>
+    <view a:if="{{footer}}" class="am-page-result-button">
+      <block a:for="{{isCountDown ? footer.slice(0,1) : footer.slice(0,2)}}" a:for-item="footerProps" a:for-index="footerIdx">
+        <button shape="capsule" type="ghost" capsuleMinWidth capsuleSize="{{local ? 'small' : 'medium'}}" disabled="{{isCountDown}}" class="{{ footerIdx ===  1 ? 'am-page-result-button-right' : ''}}" onTap="{{footerIdx === 0 ? 'onLeftButton' : 'onRightButton'}}">
+          {{ isCountDown ? countDownTitle : footerProps.text }}
+        </button>
+      </block>
+    </view>
+  </slot>
+</view>

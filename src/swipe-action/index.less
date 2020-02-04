@@ -1,0 +1,73 @@
+.am-swipe {
+  position: relative;
+  overflow: hidden;
+
+  &-content {
+    position: relative;
+    transition: all 250ms;
+  }
+
+  &-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    right: 0;
+    transition: all 100ms 0s ease-out;
+  }
+
+  &-btn {
+    padding: 0 24 * @pixelSize;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    &-text {
+      height: 1em;
+      overflow: hidden;
+      line-height: 1;
+    }
+
+    &-delete {
+      background-color: #FF3B30;
+    }
+
+    &-edit {
+      background-color: #CCC;
+    }
+    &-other {
+      background-color: #1677FF;
+    }
+  }
+
+  &-right-radius {
+    overflow: hidden;
+    border-radius: 16 * @pixelSize;
+    .am-swipe-btn {
+      margin-right: 2 * @pixelSize;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  //=== v2 ===
+  &-movable {
+
+    &-area {
+      position: absolute;
+    }
+
+    &-area .am-swipe-content {
+      transition: none;
+    }
+  }
+  .am-list-item {
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.am-swiping .am-swipe-content {
+  transition: none;
+}

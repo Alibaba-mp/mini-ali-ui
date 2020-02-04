@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "小程序 mini-ali-ui 库",
+  "usingComponents": {
+    "tips-plain": "../../../es/tips/tips-plain/index"
+  }
+}

@@ -1,0 +1,86 @@
+@import (reference) '../style/themes/default.less';
+
+.am-badge {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: @line-height-base;
+  line-height: var(--am-badge-line-height, @line-height-base);
+
+  &-text {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    transform: translate(50%, -50%);
+    top: 0;
+    min-width: 16px;
+    padding: 0;
+    min-height: 16px;
+    text-align: center;
+    background-color: @color-fill-warning;
+    background-color: var(--am-badge-bg-color, @color-fill-warning);
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-badge-border-radius, @corner-radius-circle);
+    color: @color-text-base;
+    color: var(--am-badge-font-color, @color-text-base);
+    z-index: 1;
+
+    &-padding {
+      font-size: 10px;
+      opacity: 0;
+    }
+
+    &-inner {
+      font-size: @font-size-weak;
+      white-space: nowrap;
+    }
+
+    &.am-badge-double {
+      padding: 0 4px;
+    }
+  }
+
+  &-not-a-wrapper .am-badge-text {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: translateX(0);
+  }
+
+  &-text.is-dot {
+    padding: 0;
+    width: 10px;
+    min-width: 10px;
+    height: 10px;
+    min-height: 10px;
+    border-radius: @corner-radius-circle;
+    border-radius: var(--am-badge-border-radius, @corner-radius-circle);
+  }
+  &-arrow {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: @color-fill-warning;
+    background-color: var(--am-badge-bg-color, @color-fill-warning);
+    bottom: -2px;
+    left: 50%;
+    margin-left: -4px;
+    transform: rotate(45deg);
+    z-index: 0;
+    &-left {
+      left: 2px;
+      margin-left: 0;
+      bottom: 0;
+      transform: skew(0, -20deg);
+    }
+    &-right {
+      right: 2px;
+      left: auto;
+      margin-left: 0;
+      bottom: 0;
+      transform: skew(0, 20deg);
+    }
+  }
+}
