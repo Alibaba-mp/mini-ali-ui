@@ -42,11 +42,17 @@
 
   &-right-radius {
     overflow: hidden;
-    border-radius: 16 * @pixelSize;
     .am-swipe-btn {
       margin-right: 2 * @pixelSize;
+      &:nth-child(2) {
+        border-radius: 16 * @pixelSize 0 0 16 * @pixelSize;
+      }
       &:last-child {
         margin-right: 0;
+        border-radius: 0 16 * @pixelSize 16 * @pixelSize 0;
+      }
+      &:nth-child(2):last-child {
+        border-radius: 16 * @pixelSize;
       }
     }
   }

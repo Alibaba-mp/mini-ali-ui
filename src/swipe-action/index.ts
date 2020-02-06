@@ -1,3 +1,5 @@
+import fmtUnit from '../_util/fmtUnit';
+
 const { windowWidth } = my.getSystemInfoSync();
 const isV2 = my.canIUse('movable-view.onTouchStart');
 
@@ -10,6 +12,7 @@ Component({
     x: 0,
     actionWidth: 0,
     transitionVal: 'none',
+    radiusItemSpace: fmtUnit('12px'),
   },
   props: {
     className: '',
@@ -67,6 +70,7 @@ Component({
               actionWidth: this.btnWidth,
               x: this.btnWidth,
               cellWidth: this.btnWidth,
+              lastWidth: this.btnWidth,
             });
           }
         });
@@ -82,6 +86,9 @@ Component({
         });
     },
     onSwipeTap() {
+      this.setData({
+        cellWidth: this.data.lastWidth,
+      });
       if (!this.data.swiping && this.data.x < 0) {
         this.setData({
           leftPos: 0,

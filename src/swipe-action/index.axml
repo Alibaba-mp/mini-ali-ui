@@ -1,4 +1,3 @@
-
 <view a:if={{!useV2}} class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}">
   <block a:if="{{right.length > 0}}">
     <view class="am-swipe-right am-swipe-right-{{$id}}">
@@ -38,7 +37,8 @@
     style="width: {{ viewWidth + actionWidth}}px;{{height?'height: ' + height + 'px;':'height: auto;'}}left: -{{actionWidth}}px;"
   >
     <block a:if="{{right.length > 0}}">
-      <view class="am-swipe-right am-swipe-right-{{$id}} {{borderRadius?'am-swipe-right-radius':''}}" style="right: 0;width: {{actionWidth - cellWidth}}px;">
+      <view class="am-swipe-right am-swipe-right-{{$id}} {{borderRadius?'am-swipe-right-radius':''}}" style="{{borderRadius?'right: ' + radiusItemSpace + ';':'right: 0;'}}width: {{actionWidth - cellWidth}}px;">
+        <view a:if="{{borderRadius}}" style="width: {{radiusItemSpace}};height: 100%;"></view>
         <block a:for="{{right}}">
           <view
             class="am-swipe-btn am-swipe-btn-{{item.type}}"

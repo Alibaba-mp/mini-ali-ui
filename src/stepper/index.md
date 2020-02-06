@@ -21,10 +21,12 @@
 | readOnly | Boolean | false | - | 是否只读 | - | - |
 | showNumber | Boolean | false | - | 是否显示数值 | - | - |
 | onChange | EventHandle | (value: Number) => void | - | 变化时回调函数 | - | - |
+| inputWidth | String | 36px | - | 输入框的宽度 | - | - |
 
 ## Bug & Tip
 * `readOnly` 为 `true` 后，只可通过 + - 按钮来控制数字增加；
 * `disabled` 为 `true` 后，步进器将不可用；
+* 输入框的宽度由开发者自行设置，默认宽度为 `36px`；
 
 ## 代码示例
 ```json

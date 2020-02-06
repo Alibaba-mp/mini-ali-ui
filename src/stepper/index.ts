@@ -1,3 +1,5 @@
+import fmtUnit from '../_util/fmtUnit';
+
 Component({
   data: {
     opaReduce: 1,
@@ -12,6 +14,7 @@ Component({
     value: 10,
     readOnly: false,
     showNumber: false,
+    inputWidth: fmtUnit('36px'),
     step: 1,
     onChange: () => {},
   },

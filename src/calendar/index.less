@@ -112,6 +112,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: @size-11;
     height: var(--am-calendar-date-height, @size-11);
     flex: 1;
@@ -119,6 +120,7 @@
 
   &-date {
     text-align: center;
+    line-height: 1;
     font-size: @font-size-title;
     font-size: var(--am-calendar-date-fontSize, @font-size-title);
     color: @color-text-title;
@@ -127,10 +129,11 @@
 
   &-tag {
     position: absolute;
-    bottom: @size-1;
+    bottom: @size-1 / 2;
     width: 100%;
     overflow: hidden;
     text-overflow: hidden;
+    line-height: 1;
     white-space: nowrap;
     font-size: @font-size-weak;
     font-size: var(--am-calendar-tag-fontSize, @font-size-weak);

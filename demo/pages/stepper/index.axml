@@ -8,6 +8,7 @@
         showNumber
         readOnly="{{false}}"
         value="{{value}}"
+        inputWidth="60px"
         min="{{2}}"
         />
     </view>
