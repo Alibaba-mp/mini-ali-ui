@@ -1,15 +1,13 @@
 Component({
   props: {
     title: '',
-    onClick: () => {},
+    onCardClick: () => {},
     info: '',
   },
   methods: {
     onCardClick() {
-      const { info, onClick } = this.props;
-      if (onClick) {
-        onClick({ info });
-      }
+      const { info, onCardClick } = this.props;
+      onCardClick({ info });
     },
     onActionClick() {
       const { info, onActionClick } = this.props;

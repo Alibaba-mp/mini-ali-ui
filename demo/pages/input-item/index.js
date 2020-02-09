@@ -1,16 +1,8 @@
-const banks = ['网商银行', '建设银行', '工商银行', '浦发银行'];
 
 Page({
   data: {
     cardNo: '1234****',
-    inputFocus: true,
-    bank: '',
     name: '',
-  },
-  onAutoFocus() {
-    this.setData({
-      focus1: true,
-    });
   },
   onExtraTap() {
     my.alert({
@@ -26,7 +18,6 @@ Page({
     this.setData({
       [e.target.dataset.name]: true,
     });
-    debugger;
   },
   onItemBlur(e) {
     this.setData({
@@ -37,17 +28,6 @@ Page({
   onClear(e) {
     this.setData({
       [e.target.dataset.field]: '',
-    });
-  },
-  onPickerTap() {
-    my.showActionSheet({
-      title: '选择发卡银行',
-      items: banks,
-      success: (res) => {
-        this.setData({
-          bank: banks[res.index],
-        });
-      },
     });
   },
   onSend() {

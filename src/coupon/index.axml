@@ -1,4 +1,4 @@
-<view class="am-coupon">
+<view class="am-coupon" onTap="onCouponClick">
   <view class="am-coupon-container">
     <view class="am-coupon-thumb">
       <image class="am-coupon-thumb-image" 
@@ -21,10 +21,8 @@
           {{subtitle}}
         </view>
       </view>
-      <view class="am-coupon-content-action">
-        <!-- <view class="am-coupon-content-action-slot"> -->
+      <view class="am-coupon-content-action" catchTap="catchActionTap">
         <slot name="action" />
-        <!-- </view> -->
       </view>
     </view>
   </view>

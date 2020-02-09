@@ -4,11 +4,10 @@
   <multi-liner data-field="area" 
     placeholder="字数统计↘" 
     type="text" 
-    value="{{name}}" 
-    clear="{{true}}" 
-    onInput="onItemInput" 
-    onClear="onClear" 
+    value="{{value}}" 
+    onInput="onInput" 
     last="{{true}}" 
-    auto-height="{{true}}" />
+    auto-height="{{true}}" 
+    controlled="{{controlled}}"/>
   <view style="margin: 10px;" />
 </view>

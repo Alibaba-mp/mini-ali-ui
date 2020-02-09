@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Coupon",
+  "usingComponents":{
+    "coupon":"../../es/coupon/index",
+    "button": "../../es/button/index"
+  }
+}
