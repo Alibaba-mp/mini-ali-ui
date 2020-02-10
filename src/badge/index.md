@@ -3,12 +3,15 @@
 红点、数字或文字。用于告诉用户待处理的事物或者更新数。
 
 
-| 属性名 | 描述 | 类型 | 默认值 | 必选 |
-| ---- | ---- | ---- | ---- | ---- |
-| text | 展示的数字或文案 | String / Number |  | false |
-| dot | 不展示数字，只有一个小红点 | Boolean |  | false |
-| overflowCount | 展示封顶的数字值，超出部分用“+”号表示 | Number | 99 | false |
-
+## 属性
+| 属性名        | 类型            | 默认值   | 可选项 | 描述                                  | 最低版本 | 必填 |
+| ------------- | --------------- | -------- | ------ | ------------------------------------- | -------- | ---- |
+| className     | String          | ''       | -      | 类名称                                | -        | -    |
+| text          | String / Number | ''       | -      | 展示的数字或文案                      | -        | -    |
+| dot           | Boolean         | false    | -      | 不展示数字，只有一个小红点            | -        | -    |
+| overflowCount | Number          | 99       | -      | 展示封顶的数字值，超出部分用“+”号表示 | -        | -    |
+| withArrow     | Boolean         | false    | -      | 是否使用箭头                          | -        | -    |
+| direction     | String          | 'middle' | middle<br/> left<br/> right | 箭头方向                              | -        | -    |
 ## slots
 
 | slotName | 说明 |
@@ -19,38 +22,49 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "徽标",
   "usingComponents": {
-    "list": "mini-ali-ui/es/list/index",
-    "list-item": "mini-ali-ui/es/list/list-item/index",
-    "badge": "mini-ali-ui/es/badge/index"
+    "list-item": "min-ali-ui/es/list/list-item/index",
+    "badge": "min-ali-ui/es/badge/index"
   }
 }
 ```
 
 ```html
 <view>
-  <list>
-    <block a:for="{{items}}">
-      <list-item
-        arrow="{{true}}"
-        index="{{index}}"
-        key="items-{{index}}"
-        last="{{index === (items.length - 1)}}"
-      >
-        <view>
-          <badge a:if="{{item.isWrap}}" text="{{item.text}}" dot="{{item.dot}}">
-            <view slot="inner" style="height: 26px; width: 26px; background-color: #ddd;"></view>
-          </badge>
-          <text style="margin-left: {{ item.isWrap ? '12px' : '0' }}">{{item.intro}}</text>
-        </view>
-        <view slot="extra">
-          <badge a:if="{{!item.isWrap}}" text="{{item.text}}" dot="{{item.dot}}" overflowCount="{{item.overflowCount}}" /> 
-        </view>
-      </list-item>
-    </block>
-  </list>
+  <block a:for="{{items}}">
+    <view class="list-like" 
+      index="{{index}}" 
+      key="items-{{index}}">
+      <view>
+        <badge a:if="{{item.isWrap}}" 
+          text="{{item.text}}" 
+          dot="{{item.dot}}">
+          <view slot="inner" 
+            style="height: 24px; width: 24px; background-color: #ddd;"></view>
+        </badge>
+        <text style="margin-left: {{ item.isWrap ? '12px' : '0' }}">{{item.intro}}</text>
+      </view>
+      <view >
+        <badge a:if="{{!item.isWrap}}" 
+          text="{{item.text}}" 
+          dot="{{item.dot}}" 
+          overflowCount="{{item.overflowCount}}" 
+          withArrow="{{item.withArrow}}" 
+          direction="{{item.direction}}" />
+      </view>
+    </view>
+  </block>
+  <list-item>
+    list-item 
+    <badge 
+      slot="extra"
+      text="text" 
+      withArrow="{{true}}" 
+      direction="right" />
+  </list-item>
 </view>
+
 ```
 
 ```javascript
@@ -88,7 +102,42 @@ Page({
         isWrap: false,
         intro: '文字',
       },
+      {
+        dot: false,
+        text: 'middle arrow',
+        isWrap: false,
+        intro: '箭头中',
+        withArrow: true,
+        direction: 'middle',
+      },
+      {
+        dot: false,
+        text: 'left arrow',
+        isWrap: false,
+        intro: '箭头左',
+        withArrow: true,
+        direction: 'left',
+      },
+      {
+        dot: false,
+        text: 'right arrow',
+        isWrap: false,
+        intro: '箭头右',
+        withArrow: true,
+        direction: 'right',
+      },
     ],
   },
 });
+
+```
+
+```css
+.list-like {
+  display: flex;
+  background: #fff;
+  padding: 12px;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
 ```

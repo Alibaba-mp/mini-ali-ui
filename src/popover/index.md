@@ -2,25 +2,34 @@
 
 气泡。
 
+扫码体验：
 
-## popover
+<img src="https://gw.alipayobjects.com/zos/rmsportal/fiqtYDYDruVwbWnspKwQ.jpeg" width="154" height="190" />
 
-| 属性名 | 描述 | 类型 | 默认值 | 必选 |
-| ---- | ---- | ---- | ---- | ---- |
-| className | 最外层覆盖样式 | String | | false |
-| show | 气泡是否展示 | Boolean | false | true |
-| showMask | 蒙层是否展示 | Boolean | true | false |
-| position | 气泡位置可选值：`top`、`topRight`、`topLeft`、`bottom`、`bottomLeft`、`bottomRight`、`right`、`rightTop`、`rightBottom`、`left`、`leftBottom`、 `leftTop`  | String | bottomRight | false |
+## 预览
+<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*vTy0QqLynmQAAAAAAAAAAABkARQnAQ" width="375" />
 
-## popover-item
 
-| 属性名 | 描述 | 类型 | 默认值 | 必选 |
-| ---- | ---- | ---- | ---- | ----|
-| className | 单项样式 | String | | false |
-| onItemClick | 单项点击事件 | () => void | | false |
+## popover 属性
+
+| 属性名    | 类型    | 默认值      | 可选项                                                       | 描述           | 最低版本 | 必填 |
+| --------- | ------- | ----------- | ------------------------------------------------------------ | -------------- | -------- | ---- |
+| className | String  |             | -                                                            | 最外层覆盖样式 | -        | -    |
+| show      | Boolean | false       | -                                                            | 气泡是否展示   | -        | true |
+| showMask  | Boolean | true        | -                                                            | 蒙层是否展示   | -        | -    |
+| position  | String  | bottomRight | `top`<br/>`topRight`<br/>`topLeft`<br/> `bottom`<br/>`bottomLeft`<br/>`bottomRight`<br/>`right`<br/>`rightTop`<br/>`rightBottom`<br/>`left`<br/>`leftBottom`<br/> `leftTop` | 气泡位置       | -        | -    |
+
+## popover-item 属性
+
+| 属性名      | 类型       | 默认值 | 可选项 | 描述         | 最低版本 | 必填 |
+| ----------- | ---------- | ------ | ------ | ------------ | -------- | ---- |
+| className   | String     | -      | -      | 单项样式     | -        | -    |
+| onItemClick | () => void | -      | -      | 单项点击事件 | -        | -    |
+
 
 ## 示例
 
+### json
 ```json
 {  
   "usingComponents": {
@@ -30,6 +39,7 @@
 }
 ```
 
+### axml
 ```html
 <popover
   position="{{position}}"
@@ -49,6 +59,7 @@
 </popover>
 ```
 
+### js
 ```javascript
 Page({
   data: {

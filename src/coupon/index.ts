@@ -1,27 +1,15 @@
 Component({
   props: {
     title: '',
-    onClick: () => {},
-    info: '',
+    onCouponClick: () => {},
   },
   methods: {
-    onCardClick() {
-      const { info, onClick } = this.props;
-      if (onClick) {
-        onClick({ info });
-      }
+    onCouponClick(e) {
+      const { onCouponClick } = this.props;
+      onCouponClick(e);
     },
-    onActionClick() {
-      const { info, onActionClick } = this.props;
-      if (onActionClick) {
-        onActionClick({ info });
-      }
-    },
-    onExtraActionClick() {
-      const { info, onExtraActionClick } = this.props;
-      if (onExtraActionClick) {
-        onExtraActionClick({ info });
-      }
+    catchActionTap() {
+
     },
   },
 });

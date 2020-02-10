@@ -1,7 +1,6 @@
 {
   "defaultTitle": "verify-code",
   "usingComponents":{
-    "list": "../../es/list/index",
     "long-password": "../../es/long-password/index"
   }
 }

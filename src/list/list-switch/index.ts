@@ -26,13 +26,13 @@ Component({
         }
       }
     },
-    onChange() {
-      const { onClick, disabled, value, index } = this.props;
+    onChange(e) {
+      const { onClick, disabled, /* value, */ index } = this.props;
       if (onClick && !disabled) {
         onClick({
+          ...e,
           index,
           target: { dataset: this.dataset },
-          detail: { value: !value },
         });
       }
     },

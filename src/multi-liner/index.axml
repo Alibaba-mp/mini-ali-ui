@@ -5,8 +5,6 @@
       class="am-multi-liner-content {{inputCls}}" 
       value="{{value}}" 
       name="{{name}}" 
-      type="{{type}}" 
-      password="{{password}}" 
       placeholder="{{placeholder}}" 
       placeholderClass="am-input-placeholder-base {{placeholderClass}}" 
       placeholderStyle="{{placeholderStyle}}" 
@@ -18,7 +16,8 @@
       onInput="onInput" 
       onConfirm="onConfirm" 
       onFocus="onFocus" 
-      onBlur="onBlur" />
+      onBlur="onBlur" 
+      controlled="{{controlled}}" />
   </view>
   <view class="am-multi-liner-line-bottom" />
 </view>
