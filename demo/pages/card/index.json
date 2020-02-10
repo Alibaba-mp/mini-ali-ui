@@ -1,8 +1,6 @@
 {
   "defaultTitle": "Card",
   "usingComponents":{
-    "card":"../../es/card/index",
-    "coupon":"../../es/coupon/index",
-    "button": "../../es/button/index"
+    "card":"../../es/card/index"
   }
 }

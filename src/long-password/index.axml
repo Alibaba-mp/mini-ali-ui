@@ -5,7 +5,7 @@
       class="am-long-password-content {{inputCls}}" 
       value="{{value}}" 
       name="{{name}}" 
-      type="{{type}}" 
+      type="text" 
       password="{{visible ? false : true}}" 
       placeholder="{{placeholder}}" 
       placeholderClass="am-long-password-placeholder-base {{placeholderClass}}" 
@@ -16,7 +16,8 @@
       onInput="onInput" 
       onConfirm="onConfirm" 
       onFocus="onFocus" 
-      onBlur="onBlur" />
+      onBlur="onBlur" 
+      controlled />
     <view class="am-long-password-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
       onTap="onClear">
       <am-icon size="18" 

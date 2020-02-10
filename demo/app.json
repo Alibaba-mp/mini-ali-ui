@@ -15,6 +15,7 @@
     "pages/badge/index",
     "pages/button/index",
     "pages/card/index",
+    "pages/coupon/index",
     "pages/calendar/index",
     "pages/am-checkbox/index",
     "pages/am-radio/index",

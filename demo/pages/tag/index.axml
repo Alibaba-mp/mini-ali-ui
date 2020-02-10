@@ -1,4 +1,4 @@
-<view class="container">
+<view style="padding: 12px;">
   <view style="display: flex; justify-content: space-evenly;">
     <tag size="lg" iconType="{{useIcon ? 'qr' : ''}}" ghost="{{ghost}}" type="primary">标签</tag>
     <tag size="lg" iconType="{{useIcon ? 'qr' : ''}}" ghost="{{ghost}}" type="warning">标签</tag>
@@ -14,11 +14,11 @@
   <view style="padding: 20px 10px;">
     <list-item>
       图标
-      <switch slot="extra" onChange="setInfo" data-name="useIcon" checked="{{useIcon}}"/>
+      <am-switch slot="extra" onChange="setInfo" data-name="useIcon" checked="{{useIcon}}"/>
     </list-item>
     <list-item>
       线框样式
-      <switch slot="extra" onChange="setInfo" data-name="ghost" checked="{{ghost}}"/>
+      <am-switch slot="extra" onChange="setInfo" data-name="ghost" checked="{{ghost}}"/>
     </list-item>
   </view>
 </view>

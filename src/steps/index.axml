@@ -24,7 +24,7 @@
         a:if="{{index < items.length - 1}}"
       ></view>
       <view 
-        class="am-vertical-step-line am-vertical-step-line-bottom {{index < activeIndex - 1 ? 'is-active' : ''}}"
+        class="am-vertical-step-line am-vertical-step-line-bottom {{index < activeIndex - 1 || (index === activeIndex - 1 && index === failIndex - 2) ? 'is-active' : ''}}"
         a:if="{{index < items.length - 1}}"
       ></view>
       <view class="am-vertical-step-icon is-fail" a:if="{{index == failIndex - 1}}">

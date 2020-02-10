@@ -9,6 +9,8 @@
     "alphabet": "../../es/list/alphabet/index",
     "list-secondary": "../../es/list/list-secondary/index",
     "tag": "../../es/tag/index",
-    "am-icon": "../../es/am-icon/index"
+    "am-icon": "../../es/am-icon/index",
+    "am-switch": "../../es/am-switch/index",
+    "button": "../../es/button/index"
   }
 }
