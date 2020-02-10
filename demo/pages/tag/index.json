@@ -2,6 +2,7 @@
   "defaultTitle": "小程序 mini-ali-ui 库",
   "usingComponents": {
     "tag": "../../es/tag/index",
-    "list-item": "../../es/list/list-item/index"
+    "list-item": "../../es/list/list-item/index",
+    "am-switch": "../../es/am-switch/index"
   }
 }

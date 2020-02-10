@@ -1,8 +1,11 @@
 Page({
   data: {
-    inputValue: '内容',
-    inputFocus: true,
-    bank: '',
-    name: '',
+    value: '内容',
+    controlled: true,
+  },
+  onInput(e) {
+    this.setData({
+      value: e.detail.value,
+    });
   },
 });

@@ -3,7 +3,6 @@
     <view slot="header">New List Demo</view>
     <list-item thumb="{{useThumb ? thumb : ''}}" 
       arrow="{{arrow}}" 
-      align="{{align}}" 
       index="{{index}}" 
       borderRadius="{{borderRadius}}"
       upperSubtitle="{{upperSubtitle}}" 
@@ -30,7 +29,7 @@
         <am-checkbox a:if="{{secSlotTypes[secSlotIndex] === '勾图标'}}" slot="extra" />
         <tag a:if="{{secSlotTypes[secSlotIndex] === '标签'}}" size="sm" slot="extra">{{secTagText}}</tag>
         <view a:if="{{secSlotTypes[secSlotIndex] === '文字内容'}}" slot="extra">{{secText}}</view>
-        <switch a:if="{{secSlotTypes[secSlotIndex] === '开关'}}" slot="extra" />
+        <am-switch a:if="{{secSlotTypes[secSlotIndex] === '开关'}}" slot="extra" />
         <am-button a:if="{{secSlotTypes[secSlotIndex] === '胶囊按钮'}}"	shape="capsule"	type="ghost"  slot="extra" >{{secText}}</am-button>
         <list-secondary 
           a:if="{{secSlotTypes[secSlotIndex] === 'list-secondary'}}" 
@@ -49,7 +48,7 @@
   <view class="setting">
     <list-item>
       是否圆角 
-      <switch slot="extra" 
+      <am-switch slot="extra" 
         checked="{{borderRadius}}" 
         onChange="setInfo"
         data-name="borderRadius"
@@ -59,7 +58,7 @@
     <title>Primary区域设置</title>
     <list-item>
       缩略图 
-      <switch slot="extra" 
+      <am-switch slot="extra" 
         checked="{{useThumb}}" 
         onChange="setInfo"
         data-name="useThumb"
@@ -77,7 +76,7 @@
     <view class="gap"/>
     <list-item>
       箭头 
-      <switch slot="extra" 
+      <am-switch slot="extra" 
         checked="{{arrow}}" 
         onChange="setInfo"
         data-name="arrow"
@@ -259,7 +258,7 @@
       </input-item>
       <list-item>
         缩略图
-        <switch 
+        <am-switch 
           slot="extra" 
           checked="{{secondary.useThumb}}"
           onChange="setSecInfo"
