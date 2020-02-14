@@ -11,11 +11,12 @@
   <input
     class="am-stepper-input {{showNumber?'':'am-stepper-input-hide'}}"
     style="flex: 0 0 {{inputWidth}};"
-    value="{{value > max ? max : value}}"
+    value="{{value}}"
     onBlur="onBlur"
     onInput="onInput"
     disabled="{{disabled || readOnly}}"
     type="number"
+    controlled="true"
   />
   <view class="am-stepper-option am-stepper-add" style="opacity:{{opaAdd}}" data-type="add" onTap="changeFn">
     <am-icon type="add" />

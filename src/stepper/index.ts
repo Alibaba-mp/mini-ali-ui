@@ -4,7 +4,6 @@ Component({
   data: {
     opaReduce: 1,
     opaAdd: 1,
-    getInputWidth: 2,
   },
   props: {
     className: '',
@@ -30,7 +29,6 @@ Component({
       const newValue = Math.min(Math.max(min, value), max);
       this.setData({
         value: newValue,
-        getInputWidth: value.length,
       });
       this.resetFn(newValue);
     }
@@ -59,33 +57,30 @@ Component({
           value,
           opaAdd,
           opaReduce,
-          getInputWidth: `${value}`.length,
         });
         onChange(value);
       }
     },
     onInput(e) {
       const { max } = this.props;
-      let valueLen = 0;
-      if (e.detail.value > max) {
-        valueLen = max.length;
-        this.props.readOnly = true;
-      } else {
-        valueLen = e.detail.value.length;
+      const { value } = e.detail;
+      if (value >= max) {
+        e.detail.value = max;
+        this.setData({
+          value: max,
+        });
       }
-      this.setData({
-        getInputWidth: valueLen,
-      });
+      this.resetFn(value);
     },
     onBlur(event) {
       const { value } = event.detail;
       const { max } = this.props;
-      if (value > max) {
+      if (value >= max) {
         event.detail.value = max;
+        this.setData({
+          value: max,
+        });
       }
-      this.setData({
-        getInputWidth: value.length,
-      });
       this.resetFn(value);
     },
     resetFn(value) {
