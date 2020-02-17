@@ -15,8 +15,8 @@
 | --------------- | ----------- | ------------------------------------------------------------ | ---------- | ---------------- | -------- | ---- |
 | fixed           | Boolean     | false                                                        | false,true | 需要常驻页面底部 | -        | -    |
 | related         | Boolean     | true                                                         | true, false | 是否需要勾选复选框 | - | - |
-| agreeBtn        | Object      | {"title":"","subtitle":"","type":"primary","data":1,"checked":false} |            | 同意按钮配置 | - | - |
-| cancelBtn       | Object      | {"title":"","subtitle":"","type":"default","data":2}         |  | 取消按钮配置 | - | - |
+| agreeBtn        | Object      | {"title":"", "subtitle":"", "type":"primary", "data":1, "checked":false } |            | 同意按钮配置 | - | - |
+| cancelBtn       | Object      | {"title":"", "subtitle":"", "type":"default", "data":2 }         |  | 取消按钮配置 | - | - |
 | capsuleSize     | String      | medium | large, medium, small | 胶囊按钮大小  | - | - |
 | shape           | String      | default | default, capsule | 按钮形状 | - | - |
 | capsuleMinWidth | Boolean     | false | true, false | 是否启用胶囊按钮最小宽度 | - | - |
