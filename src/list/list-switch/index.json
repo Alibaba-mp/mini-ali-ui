@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "am-switch": "../../am-switch/index"
-  }
-}
