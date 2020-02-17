@@ -4,7 +4,7 @@
 
 
 ## 截图
-![](https://gw.alipayobjects.com/mdn/rms_01d31f/afts/img/A*DNO6SYWbkjYAAAAAAAAAAABkARQnAQ)
+<img src="https://gw.alipayobjects.com/mdn/rms_01d31f/afts/img/A*DNO6SYWbkjYAAAAAAAAAAABkARQnAQ" style="zoom: 33%;" />
 
 
 ## 属性介绍
@@ -36,7 +36,7 @@
  
 ```
 
-```axml
+```xml
 <view>
   <terms onSelect="onSelect" related="{{c1.related}}" hasDesc="{{c1.hasDesc}}" agreeBtn="{{c1.agreeBtn}}" cancelBtn="{{c1.cancelBtn}}">
     <view class="text" slot="header">
@@ -118,7 +118,7 @@ page {
 }
 ```
 
-```js
+```javascript
 const cfg = {
   c1: {
     related: false,

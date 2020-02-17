@@ -3,7 +3,7 @@
 单日历组件。
 
 ## 截图
-<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*i4_VS4T9wt8AAAAAAAAAAABkARQnAQ" alt="calendar 日历" style="zoom:50%;" />
+<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*aSuuRJJNNCkAAAAAAAAAAABkARQnAQ" alt="calendar 日历" style="zoom:50%;" />
 
 ## 属性介绍
 

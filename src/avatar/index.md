@@ -3,7 +3,7 @@
 头像。
 
 ## 截图
-<img src="https://gw.alipayobjects.com/mdn/rms_349abe/afts/img/A*2ojQSLUUPyQAAAAAAAAAAABkARQnAQ" />
+<img src="https://gw.alipayobjects.com/mdn/rms_349abe/afts/img/A*2ojQSLUUPyQAAAAAAAAAAABkARQnAQ" style="zoom:50%;" />
 
 ## 属性介绍
 | 属性 | 类型 | 默认值 | 可选值 | 描述 | 必填 |

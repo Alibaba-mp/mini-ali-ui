@@ -1,13 +1,14 @@
 # InputItem 文本输入框。
 - 输入区内容不折行，如用户输入的字数超出显示区，输入框内的文字可左右滑动
 - 如无特殊情况，清空按钮在框内有内容且获得焦点时默认出现
-## 扫码体验
-<img src="https://gw.alipayobjects.com/zos/rmsportal/HoUOLnPEOaymuHlbeyqR.jpeg" width="154" height="190" />
 
-## 效果示例
+## 截图
 ![输入框.png](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*DumuSohfeXQAAAAAAAAAAABkARQnAQ) 
 
-## 属性
+
+
+## 属性介绍
+
 | 属性名           | 类型                | 默认值 | 可选值                      | 描述                                                      | 最低版本 | 必填 |
 | ---------------- | ------------------- | ------ | --------------------------- | --------------------------------------------------------- | -------- | ---- |
 | className        | String              | ''     | -                           | 自定义的class                                             |          | 否   |
@@ -45,7 +46,9 @@
 | ---- | ---- |
 | extra | 可选，用于渲染input-item项右边说明 |
 
-## 示例代码
+
+
+## 代码示例
 
 ```json
 // API-DEMO pages/input-item/index.json

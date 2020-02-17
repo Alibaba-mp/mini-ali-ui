@@ -7,7 +7,7 @@
 * 不支持输入小数，可通过 + 和 - 改变数值大小。
 
 ## 截图
-![stepper 步进器](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*5RvrTLEgxa4AAAAAAAAAAABkARQnAQ)
+![stepper 步进器](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*KMc7RKB9ZfAAAAAAAAAAAABkARQnAQ)
 
 ## 属性介绍
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
@@ -51,6 +51,7 @@
         showNumber
         readOnly="{{false}}"
         value="{{value}}"
+        inputWidth="60px"
         min="{{2}}"
         />
     </view>

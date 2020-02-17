@@ -1,7 +1,5 @@
 .setting {
   padding: 20px;
-  //border: 1px solid #00000020;
-  //margin: 10px;
   overflow: scroll;
   box-shadow: inset 0px 1px 4px 0px rgba(204,204,204,1);
 }

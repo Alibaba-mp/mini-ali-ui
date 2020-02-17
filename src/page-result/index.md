@@ -12,15 +12,15 @@
 ## 属性介绍
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| type | String | network | 网络异常`network`、服务繁忙`busy`、服务异常`error`、空状态`empty`、用户注销`logoff`、付款失败`payment`、红包领空`redpacket` | 异常页面类型 | - | 否 |
-| local | Boolean | false | - | 是否是局部异常内容 | - | 否 |
-| title | String | 默认文案 | - | 错误提示标题 (最多一行) | - | 否 |
-| brief | String | 默认文案 | - | 错误提示简要 (最多两行) | - | 否 |
-| footer | Array[{text}] | - | - | 错误处理按钮文案（一个或两个按钮） | - | 否 |
-| onTapLeft | EventHandle | e => {} | - |（左侧）按钮事件处理函数 | - | 否 |
-| onTapRight | EventHandle | e => {} | - |（右侧）按钮事件处理函数 | - | 否 |
-| isCountDown | Boolean | false | - | 是否设置倒计时模式 | - | 否 |
-| countDownText | String | `重新刷新` | - | 倒计时提示的文案 | - | 否 |
+| type | String | network | 网络异常`network`、服务繁忙`busy`、服务异常`error`、空状态`empty`、用户注销`logoff`、付款失败`payment`、红包领空`redpacket` | 异常页面类型 | - | - |
+| local | Boolean | false | - | 是否是局部异常内容 | - | - |
+| title | String | 默认文案 | - | 错误提示标题 (最多一行) | - | - |
+| brief | String | 默认文案 | - | 错误提示简要 (最多两行) | - | - |
+| footer | Array[{text}] | - | - | 错误处理按钮文案（一个或两个按钮） | - | - |
+| onTapLeft | EventHandle | e => {} | - |（左侧）按钮事件处理函数 | - | - |
+| onTapRight | EventHandle | e => {} | - |（右侧）按钮事件处理函数 | - | - |
+| isCountDown | Boolean | false | - | 是否设置倒计时模式 | - | - |
+| countDownText | String | `重新刷新` | - | 倒计时提示的文案 | - | - |
 
 
 

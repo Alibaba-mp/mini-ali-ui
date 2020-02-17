@@ -3,7 +3,7 @@
 可滑动单元格
 
 ## 截图
-![SwipeAction 可滑动模块](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*yLq_R6Lo3RsAAAAAAAAAAABkARQnAQ)
+![SwipeAction 可滑动模块](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*dqZ9RKrZc9cAAAAAAAAAAABkARQnAQ)
 
 ## 属性介绍
 

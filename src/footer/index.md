@@ -10,7 +10,7 @@
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | className | String | - | - | 自定义 class | - | - |
-| type | String | normal | normal、guide、copyright、brand、link | 选择使用指定的页脚类型 | - | true |
+| type | String | normal | normal、guide、copyright、brand、link | 选择使用指定的页脚类型 | - | - |
 | content | String | - | - | 页脚文本内容 | - | - |
 | extend | Array | - | - | 页脚部分的链接、logo 等信息 | - | - |
 | onBrandTap | EventHandle | () => {} | - | 品牌 logo 事件回调 | - | - |
