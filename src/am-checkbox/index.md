@@ -28,7 +28,7 @@
 }
 ```
 
-```html
+```xml
 <list>
   <view slot="header">
     列表+复选框

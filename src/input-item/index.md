@@ -61,7 +61,7 @@
 }
 ```
 
-```html
+```xml
 <!-- API-DEMO pages/input-item/index.axml -->
 <view>
   <view style="margin-top: 10px;" />

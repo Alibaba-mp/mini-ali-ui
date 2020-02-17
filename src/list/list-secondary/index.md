@@ -29,15 +29,15 @@ list-secondary用于放在**extra**插槽
 {
   "defaultTitle": "List",
   "usingComponents":{
-    "list": "../../es/list/index",
-    "list-item": "../../es/list/list-item/index",
-    "list-secondary": "../../es/list/list-secondary/index",
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "list-secondary": "mini-ali-ui/es/list/list-secondary/index",
   }
 }
 ```
 
 ### axml
-```html
+```xml
 <list>
   <view slot="header">
     列表头部

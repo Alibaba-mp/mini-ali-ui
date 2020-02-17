@@ -30,7 +30,7 @@
 }
 ```
 
-```html
+```xml
 <view>
   <block a:for="{{items}}">
     <view class="list-like" 

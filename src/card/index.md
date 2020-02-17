@@ -41,7 +41,7 @@
 
 
 ### axml
-```html
+```xml
 <view class="container">
   <card title="卡片标题1" 
     onCardClick="onCardClick" 

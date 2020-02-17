@@ -38,7 +38,7 @@
 }
 ```
 
-```html
+```xml
 <filter show="{{show}}" max="{{1}}" equalRows="{{3}}">
   <block a:for="{{items}}">
     <filter-item value="{{item.value}}" subtitle="{{item.subtitle}}" id="{{item.id}}" onChange="handleCallBack" selected="{{item.selected}}" key="filter-item-{{key}}" />

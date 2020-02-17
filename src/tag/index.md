@@ -35,7 +35,7 @@
 }
 ```
 
-```html
+```xml
 <!-- pages/tag/index.axml -->
 <view style="padding: 12px;">
   <view style="display: flex; justify-content: space-evenly;">

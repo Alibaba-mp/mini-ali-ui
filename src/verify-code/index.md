@@ -41,7 +41,7 @@
 }
 ```
 ### axml
-```html
+```xml
 <view>
   <view style="margin-top: 10px;" />
   <view style="padding: 0 10px;">验证码框</view>

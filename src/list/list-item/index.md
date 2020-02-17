@@ -41,14 +41,14 @@ list-item共有6个插槽，位置和名称如下图所示
 {
   "defaultTitle": "List",
   "usingComponents":{
-    "list": "../../es/list/index",
-    "list-item": "../../es/list/list-item/index",
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
   }
 }
 ```
 
 ### axml
-```html
+```xml
 <list>
   <view slot="header">
     列表头部

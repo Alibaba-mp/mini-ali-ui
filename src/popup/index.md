@@ -28,7 +28,7 @@
 }
 ```
 
-```html
+```xml
 <view>
   <view class="btn-container">
     <button onTap="onTopBtnTap">弹出popup</button>

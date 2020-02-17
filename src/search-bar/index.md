@@ -36,7 +36,7 @@
 }
 ```
 
-```html
+```xml
 <view>
   <search-bar
     value="{{value}}"

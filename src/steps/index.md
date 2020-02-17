@@ -42,7 +42,7 @@
 
 
 ### axml
-```html
+```xml
 <steps 
   className="demo-steps-class"
   activeIndex="{{activeIndex}}"

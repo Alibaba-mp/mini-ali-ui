@@ -45,7 +45,7 @@
 }
 ```
 
-```html
+```xml
 <page-result
   type="network"
   title="网络不给力"
@@ -76,7 +76,7 @@ Page({
 ```
 
 > 倒计时模式，10 秒后可点击按钮（与 native 规范一致）
-```html
+```xml
 <!-- 倒计时模式 -->
 <page-result
   type="busy"

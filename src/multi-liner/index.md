@@ -33,13 +33,13 @@
 {
   "defaultTitle": "Form",
   "usingComponents": {
-    "multi-liner": "../../es/multi-liner/index"
+    "multi-liner": "mini-ali-ui/es/multi-liner/index"
   }
 }
 ```
 
 ### axml
-```html
+```xml
 <view>
   <view style="margin-top: 10px;" />
   <view class="title">多行输入</view>

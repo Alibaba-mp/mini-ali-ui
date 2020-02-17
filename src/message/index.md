@@ -29,7 +29,7 @@
 }
 ```
 
-```html
+```xml
 <view>
   <message
     title="{{title}}"

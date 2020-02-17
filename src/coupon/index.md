@@ -45,7 +45,7 @@
 
 
 ### axml
-```html
+```xml
 <view style="margin-top: 10px;" />
     <view>
       <coupon title="券标题"

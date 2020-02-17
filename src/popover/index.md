@@ -36,7 +36,7 @@
 ```
 
 ### axml
-```html
+```xml
 <popover
   position="{{position}}"
   show="{{show}}"

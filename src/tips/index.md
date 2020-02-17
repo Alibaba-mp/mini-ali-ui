@@ -42,7 +42,7 @@
 
 ### tips-dialog
 
-```html
+```xml
 <view>
   <tips-dialog
     show="{{showDialog}}"
@@ -134,7 +134,7 @@ Page({
 
 ### tips-plain
 
-```html
+```xml
 <tips-plain onClose="onClose" time="{{time}}">{{content}}</tips-plain>
 ```
 

@@ -25,7 +25,7 @@
 }
 ```
 
-```html
+```xml
 <view class="page">
   <view class="page-description">单选框</view>
   <view class="page-section">

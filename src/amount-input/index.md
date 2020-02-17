@@ -33,7 +33,7 @@
 }
 ```
 
-```html
+```xml
 <view>
   <amount-input
     type="digit"

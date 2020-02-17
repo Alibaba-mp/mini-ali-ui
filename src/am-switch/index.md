@@ -28,7 +28,7 @@ iOS 和安卓展现样式有所差异。iOS 单选开关为圆形；安卓单选
 }
 ```
 
-```html
+```xml
 <view class="page">
   <view class="page-description">开关</view>
   <view class="page-section">

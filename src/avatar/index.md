@@ -28,7 +28,7 @@
 }
 ```
 
-```html
+```xml
 <view>
   <!--普通头像组件-->
   <avatar src="xxxx"/>

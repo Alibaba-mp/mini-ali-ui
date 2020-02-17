@@ -26,7 +26,7 @@ type 为 line 时会等分所有子元素。
 }
 ```
 
-```html
+```xml
 <view className="container">
   <container className="container-item">
     <view class="item">a1</view>

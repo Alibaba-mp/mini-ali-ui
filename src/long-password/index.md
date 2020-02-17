@@ -34,13 +34,13 @@
 {
   "defaultTitle": "verify-code",
   "usingComponents":{
-    "long-password": "../../es/long-password/index"
+    "long-password": "mini-ali-ui/es/long-password/index"
   }
 }
 ```
 
 ### axml
-```html
+```xml
 <view>
   <view style="margin-top: 10px;" />
   <view style="padding: 0 10px;">长密码框</view>

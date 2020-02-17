@@ -51,7 +51,7 @@
 }
 ```
 
-```html
+```xml
 <view>
   <button onTap="openModal">打开modal</button>
   <modal
