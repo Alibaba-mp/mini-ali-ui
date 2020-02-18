@@ -28,7 +28,7 @@
 ```xml
 <view style="position: relative; height: 100vh;">
 	<alphabet alphabet="{{alphabet}}" onClick="onAlphabetClick" >
-		<view slot="prefix"><am-icon size="12" type="success_"/></view>
+		<view slot="prefix"><am-icon size="12" type="check_"/></view>
 	</alphabet>
 </view>
 ```
