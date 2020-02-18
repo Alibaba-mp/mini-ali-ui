@@ -2,6 +2,7 @@
   <page-result
     type="payment"
     footer="{{footer}}"
+    local="{{true}}"
   />
 </view>
 
