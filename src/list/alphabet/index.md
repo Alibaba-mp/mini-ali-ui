@@ -1,6 +1,6 @@
 ## Alphabet 字母检索表
 
-位于列表右侧的次级信息组件，用于列表项的extra插槽。
+字母检索表
 
 ## 预览
 ![img](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*dxUqTYRYZBsAAAAAAAAAAABkARQnAQ)
