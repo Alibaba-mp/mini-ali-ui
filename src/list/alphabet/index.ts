@@ -1,10 +1,6 @@
 Component({
   props: {
     className: '',
-    align: false,
-    disabled: false,
-    multipleLine: false,
-    wrap: false,
     alphabet: [],
   },
   data: {

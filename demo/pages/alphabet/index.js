@@ -1,11 +1,6 @@
 Page({
   data: {
-    maxList: 5,
-    switchValues: {
-      // switch: true,
-      // check: false,
-    },
-    checkValues: {},
+    alphabet: [],
   },
   onLoad() {
     const charCode = 65;
@@ -16,20 +11,6 @@ Page({
     this.setData({
       alphabet: charList,
     });
-  },
-  onItemClick(ev) {
-    if (ev.detail && ev.index === 'check') {
-      this.setData({
-        actionValues: {
-          ...this.data.actionValues,
-          [ev.index]: ev.detail.value,
-        },
-      });
-    } else {
-      my.alert({
-        content: `点击了第${ev.index}行`,
-      });
-    }
   },
   onAlphabetClick(ev) {
     my.alert({
