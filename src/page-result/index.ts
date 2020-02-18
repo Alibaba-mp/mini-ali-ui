@@ -39,22 +39,28 @@ Component({
       return;
     }
     let countDownTimes = COUNT_DOWN_TIMES;
-    let timer = null;
+    this._timer = null;
     const execCountDown = () => {
       this.setData({
         countDownTitle: `${countDownTimes} 秒后${countDownText}`,
       });
       countDownTimes -= 1;
       if (countDownTimes < 0) {
-        clearTimeout(timer);
+        clearTimeout(this._timer);
         this.setData({
           isCountDown: false,
         });
       } else {
-        timer = setTimeout(execCountDown, 1000);
+        this._timer = setTimeout(execCountDown, 1000);
       }
     };
     execCountDown();
+  },
+  didUnmount() {
+    if (this._timer) {
+      clearTimeout(this._timer);
+      this._timer = null;
+    }
   },
   methods: {
     onDefaultTap(propName, ...args) {
