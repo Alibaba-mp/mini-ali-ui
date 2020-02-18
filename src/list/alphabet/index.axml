@@ -1,5 +1,5 @@
 <view class="am-alphabet">
-	<view class="am-alphabet-item am-alphabet-{{align}} {{last ? 'last': ''}} {{className}}" 
+	<view class="am-alphabet-item" 
 		data-index="{{index}}">
 		<view class="am-alphabet-content">
 			<view class="am-alphabet-letter" 

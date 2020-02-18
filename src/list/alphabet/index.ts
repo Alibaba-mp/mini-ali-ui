@@ -1,6 +1,5 @@
 Component({
   props: {
-    className: '',
     alphabet: [],
   },
   data: {
