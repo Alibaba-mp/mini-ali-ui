@@ -3,7 +3,7 @@
 字母检索表
 
 ## 预览
-![img](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*dxUqTYRYZBsAAAAAAAAAAABkARQnAQ)
+<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*dxUqTYRYZBsAAAAAAAAAAABkARQnAQ" alt="img" style="zoom:50%;" />
 
 ## 属性
 

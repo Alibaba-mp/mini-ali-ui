@@ -17,14 +17,10 @@
   <img width="250" src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*xXX3TqsZimMwfA5KoKInYQBjAQAAAQ/original">
 </p>
 
-## 链接
-- [支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)
-- [开发工具](https://docs.alipay.com/mini/ide/overview)
-
 ## 特性
 
 - 基于 **Alipay Design** 设计规范；
-- 支持多端小程序（支付宝，淘宝，钉钉等），使用[支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)开发；
+- 支持多端小程序（支付宝，淘宝，钉钉等）；
 - 支持主题配置切换；
 - 支持 `px` 与 `rpx`；
 
@@ -79,3 +75,11 @@ $ npm install mini-ali-ui-rpx --save
 ## 贡献
 
 如果你有好的意见或建议，欢迎给我们提 [issue](https://github.com/Alibaba-mp/mini-ali-ui/issues)。
+
+## 钉钉群
+
+<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*WMfjR6iXXysAAAAAAAAAAABkARQnAQ" alt="钉钉群：30147295" style="zoom: 33%;vertical-align: -70px;" />群号：**30147295**
+
+## 链接
+- [支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)
+- [开发工具](https://docs.alipay.com/mini/ide/overview)
