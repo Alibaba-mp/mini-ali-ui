@@ -78,7 +78,7 @@ $ npm install mini-ali-ui-rpx --save
 
 ## 钉钉群
 
-<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*WMfjR6iXXysAAAAAAAAAAABkARQnAQ" alt="钉钉群：30147295" style="zoom: 33%;vertical-align: -70px;" />群号：**30147295**
+![钉钉群：30147295](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*qP-BRLk3wvYAAAAAAAAAAABkARQnAQ) 群号：**30147295**
 
 ## 链接
 - [支付宝小程序](https://mini.open.alipay.com/channel/miniIndex.htm)
