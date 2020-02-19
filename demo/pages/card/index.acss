@@ -1,4 +1,3 @@
 .container {
-  //background: green;
   padding-bottom: 50px;
 }

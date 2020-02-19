@@ -8,6 +8,7 @@
     "tag": "../../es/tag/index",
     "am-icon": "../../es/am-icon/index",
     "am-switch": "../../es/am-switch/index",
+    "am-radio": "../../es/am-radio/index",
     "button": "../../es/button/index"
   }
 }

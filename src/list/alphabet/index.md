@@ -18,8 +18,8 @@
 {
   "defaultTitle": "Alphabet",
   "usingComponents":{
-    "alphabet": "../../es/list/alphabet/index",
-    "am-icon": "../../es/am-icon/index"
+    "alphabet": "mini-ali-ui/es/list/alphabet/index",
+    "am-icon": "mini-ali-ui/es/am-icon/index"
   }
 }
 ```

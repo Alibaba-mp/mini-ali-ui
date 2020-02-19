@@ -9,7 +9,7 @@
     "title": "../../es/title/index",
     "input-item": "../../es/input-item/index",
     "am-button": "../../es/button/index",
-    "am-checkbox": "../../es/am-checkbox/index",
+    "am-radio": "../../es/am-radio/index",
     "am-switch": "../../es/am-switch/index"
   }
 }

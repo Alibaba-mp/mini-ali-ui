@@ -37,21 +37,24 @@
     padding-bottom: var(--am-list-footer-padding-bottom, @v-spacing-large);
   }
   &-load-more {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: @color-fill-grey-inverse;
     background: var(--am-list-background, @color-fill-grey-inverse);
-    padding: 10px 16px;
+    padding: 12px;
     font-size: 15px;
     line-height: 1.4;
     color: @color-fill-grey-dark;
     color: var(--am-list-load-more-color, @color-fill-grey-dark);
     &-txt {
-      padding: 0 10px;
+      padding: 0 8px;
+      color: #999;
     }
   }
   &-load-over {
     display: block;
-    padding: 10px 16px;
+    padding: 12px;
     font-size: 10px;
     text-align: center;
     color: #ccc;

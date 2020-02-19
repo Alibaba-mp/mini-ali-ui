@@ -1,12 +1,11 @@
 const thumb =
-  'https://gw-office.alipayobjects.com/basement_prod/47775269-5c8e-40b8-bcda-43380022f311.jpg';
+  'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ';
 Page({
   data: {
     title: '单行列表1',
     extra: '详细信息',
     arrow: true,
     upperSubtitle: '上副标题',
-    // lowerSubtitle: '下副标题',
     lowerSubtitle: '',
     thumb,
     borderRadius: false,
@@ -25,7 +24,7 @@ Page({
       'list-secondary',
     ],
     supSlotIndex: 0,
-    secSlotIndex: 7,
+    secSlotIndex: 0,
     titleSlotIndex: 0,
     upperSlotIndex: 0,
     lowerSlotIndex: 0,
@@ -72,9 +71,4 @@ Page({
       });
     }
   },
-  // setThumbSize(e) {
-  //   this.setData({
-  //     thumbSize: e.detail.value,
-  //   });
-  // },
 });

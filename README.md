@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300" src="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original">
+  <img width="390" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*whN9RZGSym8AAAAAAAAAAABkARQnAQ">
 </p>
 
 # Mini Ali UI

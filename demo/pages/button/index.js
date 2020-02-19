@@ -65,7 +65,7 @@ Page({
       capsuleMinWidth: e.detail.value,
     });
   },
-  onTap() {
+  onTest() {
     // e.target.dataset.name
   },
   onLoadingChange(e) {

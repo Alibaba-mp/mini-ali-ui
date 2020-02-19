@@ -276,6 +276,8 @@ Page({
     },
     checkValues: {},
     thumb: 'https://gw-office.alipayobjects.com/basement_prod/47775269-5c8e-40b8-bcda-43380022f311.jpg',
+    changeCheckbox: true,
+    changeSwitch: true,
   },
   onLoad() {
     const charCode = 65;
@@ -301,20 +303,20 @@ Page({
       });
     }
   },
-  onSwitchClick(ev) {
+  onSwitchClick() {
     this.setData({
-      switchValues: {
-        ...this.data.actionValues,
-        [ev.index]: ev.detail.value,
-      },
+      changeSwitch: !this.data.changeSwitch,
+    });
+    my.alert({
+      content: 'switch changed',
     });
   },
-  onCheckClick(ev) {
+  onCheckClick() {
     this.setData({
-      checkValues: {
-        ...this.data.actionValues,
-        [ev.index]: ev.detail.value,
-      },
+      changeCheckbox: !this.data.changeCheckbox,
+    });
+    my.alert({
+      content: 'checkbox changed',
     });
   },
   onCapsuleClick() {

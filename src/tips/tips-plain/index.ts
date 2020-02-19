@@ -9,11 +9,14 @@ Component({
   },
   didMount() {
     const { time } = this.props;
-    setTimeout(() => {
+    this._timer = setTimeout(() => {
       this.setData({
         show: false,
       });
     }, time);
+  },
+  didUnmount() {
+    clearTimeout(this._timer);
   },
   methods: {
     onClose() {
