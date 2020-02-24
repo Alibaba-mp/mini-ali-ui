@@ -1,3 +1,8 @@
+## 1.0.1
+`2020-02-24`
+* **fixed** verify-code component bug;
+* **modify** demo and readme content;
+
 ## 1.0.0
 `2020-02-19`
 * 新增 **mini-ali-ui** 的 logo，以及钉钉交流群；
