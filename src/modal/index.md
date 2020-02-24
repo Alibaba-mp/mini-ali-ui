@@ -44,7 +44,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Modal",
   "usingComponents": {
     "modal": "mini-ali-ui/dist/es/modal/index"
   }

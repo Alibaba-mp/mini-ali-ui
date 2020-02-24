@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "宫格",
+  "defaultTitle": "Grid",
   "usingComponents":{
     "list": "../../es/list/index",
     "list-item": "../../es/list/list-item/index",

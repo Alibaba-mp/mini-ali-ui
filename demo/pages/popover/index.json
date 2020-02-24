@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Popover气泡",
+  "defaultTitle": "Popover",
   "usingComponents": {
     "popover": "../../es/popover/index",
     "popover-item": "../../es/popover/popover-item/index"

@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "搜索框",
+  "defaultTitle": "Search-bar",
   "usingComponents":{
     "search-bar":"../../es/search-bar/index"
   }

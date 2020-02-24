@@ -28,7 +28,7 @@
 
 ```json
 {
-  "defaultTitle": "footer 页脚",
+  "defaultTitle": "Footer",
   "usingComponents": {
     "footer": "mini-ali-ui/es/footer/index"
   }

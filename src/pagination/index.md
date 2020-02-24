@@ -33,7 +33,7 @@
 
 ```json
 {
-  "defaultTitle": "pagination 分页",
+  "defaultTitle": "Pagination",
   "usingComponents": {
     "pagination": "mini-ali-ui/es/pagination/index"
   }

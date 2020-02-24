@@ -25,7 +25,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Picker item",
   "usingComponents": {
     "list": "mini-ali-ui/es/list/index",
     "list-item": "mini-ali-ui/es/list/list-item/index",
@@ -35,7 +35,7 @@
 }
 ```
 
-```axml
+```xml
 <view>
   <list>
     <input-item

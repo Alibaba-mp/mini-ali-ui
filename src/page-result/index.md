@@ -38,7 +38,7 @@
 
 ```json
 {
-  "defaultTitle": "异常反馈",
+  "defaultTitle": "Page Result",
   "usingComponents": {
     "page-result": "mini-ali-ui/es/page-result/index"
   }

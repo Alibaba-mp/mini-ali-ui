@@ -29,7 +29,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Search-bar",
   "usingComponents": {
     "search-bar": "mini-ali-ui/es/search-bar/index"
   }

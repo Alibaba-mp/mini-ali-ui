@@ -39,7 +39,7 @@ vtabs 纵向选项卡包含了 `<vtabs>` 和 `<vtab-content>` 两部分。
 
 ```json
 {
-  "defaultTitle": "vtabs 纵向选项卡",
+  "defaultTitle": "Vtabs",
   "usingComponents": {
     "vtabs": "mini-ali-ui/es/vtabs/index",
     "vtab-content": "mini-ali-ui/es/vtabs/vtab-content/index"

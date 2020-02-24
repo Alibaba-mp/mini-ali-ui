@@ -21,7 +21,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Avatar",
   "usingComponents": {
     "avatar": "mini-ali-ui/dist/es/avatar/index"
   }

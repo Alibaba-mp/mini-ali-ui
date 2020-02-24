@@ -7,15 +7,17 @@
     subButton="{{subButton}}" 
     onTapMain="goBack">
   </message>
-  <radio-group class="radio-group" onChange="radioChange" name="lib">
-    <label class="radio" a:for="{{items}}" key="label-{{index}}">
-      <radio value="{{item.name}}" checked="{{item.checked}}" />
-      <text class="radio-text">{{item.value}}</text>
-    </label>
- </radio-group>
- <view>主标题</view>
- <input value="{{title}}" onInput="titleChange"/>
- <view>副标题</view>
- <textarea value="{{subTitle}}" onInput="subtitleChange"/>
- <checkbox onChange='onChange'/>显示按钮
+  <view style="padding: 20rpx;">
+    <radio-group class="radio-group" onChange="radioChange" name="lib">
+      <label class="radio" a:for="{{items}}" key="label-{{index}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" />
+        <text class="radio-text">{{item.value}}</text>
+      </label>
+    </radio-group>
+    <view style="padding:20rpx 0;font-weight: bold;">主标题</view>
+    <input value="{{title}}" onInput="titleChange"/>
+    <view style="padding:20rpx 0;font-weight: bold;">副标题</view>
+    <textarea value="{{subTitle}}" onInput="subtitleChange" style="margin-bottom: 20rpx;" />
+    <checkbox onChange='onChange'/>显示按钮
+  </view>
 </view>

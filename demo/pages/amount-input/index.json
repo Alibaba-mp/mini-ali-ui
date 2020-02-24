@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "amount-input",
+  "defaultTitle": "Amount-input",
   "usingComponents":{
     "amount-input": "../../es/amount-input/index"
   }

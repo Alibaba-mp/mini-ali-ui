@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "小程序 mini-ali-ui 库",
+  "defaultTitle": "Am-icon",
   "usingComponents": {
     "am-icon": "../../es/am-icon/index"
   }

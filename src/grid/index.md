@@ -30,7 +30,7 @@
 
 ```json
 {
-  "defaultTitle": "5列宫格",
+  "defaultTitle": "Grid",
   "usingComponents":{
     "grid":"mini-ali-ui/es/grid/index",
     "pagination": "mini-ali-ui/es/pagination/index"

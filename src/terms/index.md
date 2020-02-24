@@ -106,7 +106,7 @@
 </view>
 ```
 
-```acss
+```css
 .title{
     text-align: center;
     display: block;
@@ -180,7 +180,6 @@ Page({
   },
 
 });
-
 ```
 
 

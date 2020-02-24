@@ -1,4 +1,4 @@
-# MultiLiner 多行文本
+# Multi-liner 多行文本
 
 ## 预览
 <img width="375" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*dRDqR7zAUwsAAAAAAAAAAABkARQnAQ">
@@ -31,7 +31,7 @@
 ### json
 ```json
 {
-  "defaultTitle": "Form",
+  "defaultTitle": "Multi-liner",
   "usingComponents": {
     "multi-liner": "mini-ali-ui/es/multi-liner/index"
   }

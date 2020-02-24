@@ -1,4 +1,4 @@
-# AMCheckBox 复选框
+# am-checkBox 复选框
 
 复选框。具体用法和小程序框架中checkbox保持一致，在checkbox基础上做了样式的封装。
 
@@ -19,7 +19,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "am-checkbox",
   "usingComponents": {
     "list": "mini-ali-ui/es/list/index",
     "list-item": "mini-ali-ui/es/list/list-item/index",

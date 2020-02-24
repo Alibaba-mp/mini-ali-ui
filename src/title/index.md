@@ -23,7 +23,7 @@
 ## 代码示例
 ```json
 {
-  "defaultTitle": "title 组件",
+  "defaultTitle": "title",
   "usingComponents": {
     "title": "mini-ali-ui/es/title/index"
   }

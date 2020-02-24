@@ -31,7 +31,7 @@
 
 ```json
 {
-  "defaultTitle": "am-icon icon 图标",
+  "defaultTitle": "am-icon",
   "usingComponents": {
     "am-icon": "mini-ali-ui/es/am-icon/index"
   }

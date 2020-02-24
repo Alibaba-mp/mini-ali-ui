@@ -24,9 +24,8 @@
 ## 示例
 
 ```json
-// pages/tag/index.json
 {
-  "defaultTitle": "小程序 mini-ali-ui 库",
+  "defaultTitle": "Tag",
   "usingComponents": {
     "tag": "min-ali-ui/es/tag/index",
     "list-item": "min-ali-ui/es/list/list-item/index",
@@ -36,7 +35,6 @@
 ```
 
 ```xml
-<!-- pages/tag/index.axml -->
 <view style="padding: 12px;">
   <view style="display: flex; justify-content: space-evenly;">
     <tag
@@ -122,7 +120,6 @@
 ```
 
 ```javascript
-// pages/tag/index.js
 Page({
   data: {
     items: [

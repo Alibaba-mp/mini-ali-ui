@@ -11,6 +11,7 @@
 | type | String | dialog |  | `dialog`表示对话框的样式类型，`rectangle`表示矩形的样式类型。 |  | false |
 | onCloseTap | () => void |  |  | 当`type`值为`rectangle`时，组件点击关闭icon的回调 |  | false |
 | iconUrl | String |  |  | 展示icon的url地址 |  | false |
+| arrowPosition | String | bottom-left | `bottom-left`, `bottom-center`, `bottom-right`, `top-left`, `top-center`, `top-right`, `left`, `right` | 控制 tips 中的箭头位置 |  | false |
 
 ### slots
 
@@ -32,7 +33,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Tips",
   "usingComponents": {
     "tips-dialog": "mini-ali-ui/es/tips/tips-dialog/index",
     "tips-plain": "mini-ali-ui/es/tips/tips-plain/index"

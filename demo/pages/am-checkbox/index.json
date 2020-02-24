@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "Am-checkbox",
   "usingComponents": {
     "am-checkbox": "../../es/am-checkbox/index",
     "list": "../../es/list/index",

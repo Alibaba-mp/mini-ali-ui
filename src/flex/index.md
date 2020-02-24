@@ -25,7 +25,7 @@ flex-item 组件默认加上了样式 flex:1，保证所有 item 平均分宽度
 
 ```json
 {
-  "defaultTitle": "flex 布局",
+  "defaultTitle": "Flex",
   "usingComponents": {
     "flex": "mini-ali-ui/es/flex/index",
     "flex-item": "mini-ali-ui/es/flex/flex-item/index"

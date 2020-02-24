@@ -42,7 +42,7 @@ Collapse 折叠面板主要是有 `<collapse>` 和 `<collapse-item>` 两部分�
 
 ```json
 {
-  "defaultTitle": "collapse 折叠面板",
+  "defaultTitle": "Collapse",
   "usingComponents": {
     "collapse": "mini-ali-ui/es/collapse/index",
     "collapse-item": "mini-ali-ui/es/collapse/collapse-item/index"

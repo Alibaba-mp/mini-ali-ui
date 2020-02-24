@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "徽标",
+  "defaultTitle": "Badge",
   "usingComponents": {
     "list-item": "../../es/list/list-item/index",
     "badge": "../../es/badge/index"

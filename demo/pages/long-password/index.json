@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "verify-code",
+  "defaultTitle": "Long-password",
   "usingComponents":{
     "long-password": "../../es/long-password/index"
   }

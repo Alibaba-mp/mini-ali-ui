@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "Am-radio",
   "usingComponents": {
     "am-radio": "../../es/am-radio/index",
     "list": "../../es/list/index",

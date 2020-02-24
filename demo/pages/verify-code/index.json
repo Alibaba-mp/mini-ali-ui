@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "verify-code",
+  "defaultTitle": "Verify-code",
   "usingComponents":{
     "list": "../../es/list/index",
     "verify-code": "../../es/verify-code/index"

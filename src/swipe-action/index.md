@@ -1,4 +1,4 @@
-## SwipeAction 可滑动单元格
+## swipe-action 可滑动单元格
 
 可滑动单元格
 
@@ -32,7 +32,7 @@
 
 ```json
 {
-  "defaultTitle": "SwipeAction",
+  "defaultTitle": "Swipe-action",
   "usingComponents": {
     "list": "mini-ali-ui/es/list/index",
     "list-item": "mini-ali-ui/es/list/list-item/index",

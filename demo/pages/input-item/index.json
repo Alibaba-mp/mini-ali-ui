@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "input-item",
+  "defaultTitle": "Input-item",
   "usingComponents":{
     "list": "../../es/list/index",
     "input-item": "../../es/input-item/index"

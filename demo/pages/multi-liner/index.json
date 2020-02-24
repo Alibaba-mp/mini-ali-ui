@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Form",
+  "defaultTitle": "Multi-liner",
   "usingComponents": {
     "multi-liner": "../../es/multi-liner/index"
   }

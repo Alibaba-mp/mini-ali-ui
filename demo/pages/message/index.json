@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "信息状态",
+  "defaultTitle": "Message",
   "usingComponents": {
     "message": "../../es/message/index"
   }

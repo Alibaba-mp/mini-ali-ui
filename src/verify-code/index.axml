@@ -28,7 +28,7 @@
     </view>
     <view class="am-verify-code-action {{_actionActive ? 'active' : 'inactive'}}" 
       onTap="onTapSend">{{
-       _actionActive ? (actedBefore ? '重发验证码' : '发送验证码') : `${_countDown}秒后重试`
+        _actionActive ? (actedBefore ? '重发验证码' : '发送验证码') : `${_countDown}秒后重试`
       }}</view>
     <view class="am-verify-code-line-bottom" />
   </view>

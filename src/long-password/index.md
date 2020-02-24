@@ -32,7 +32,7 @@
 ### json
 ```json
 {
-  "defaultTitle": "verify-code",
+  "defaultTitle": "Long-password",
   "usingComponents":{
     "long-password": "mini-ali-ui/es/long-password/index"
   }

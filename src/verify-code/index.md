@@ -34,7 +34,7 @@
 ### json
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Verify-code",
   "usingComponents": {
     "verify-code": "mini-ali-ui/es/verify-code/index"
   }

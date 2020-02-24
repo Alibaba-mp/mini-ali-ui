@@ -22,7 +22,7 @@
 
 ```json
 {
-  "defaultTitle": "徽标",
+  "defaultTitle": "Badge",
   "usingComponents": {
     "list-item": "min-ali-ui/es/list/list-item/index",
     "badge": "min-ali-ui/es/badge/index"

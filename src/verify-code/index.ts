@@ -43,6 +43,9 @@ Component({
       actedBefore: false,
     });
   },
+  didUnmount() {
+    clearInterval(this._timeout);
+  },
   methods: {
     onBlur(e) {
       this.setData({
@@ -74,18 +77,19 @@ Component({
       this.setData({
         _actionActive: false,
       });
-      const timeout = setInterval(() => {
+      this._timeout = setInterval(() => {
         const subOne = this.data._countDown - 1;
-        this.setData({
-          _countDown: subOne,
-        });
-        if (subOne === 0) {
-          clearInterval(timeout);
+        if (subOne <= 0) {
+          clearInterval(this._timeout);
           this.setData({
             _actionActive: true,
             resend: true,
             _countDown: this.props.countDown,
             actedBefore: true,
+          });
+        } else {
+          this.setData({
+            _countDown: subOne,
           });
         }
       }, 1000);

@@ -31,7 +31,7 @@
 ## 代码示例
 ```json
 {
-  "defaultTitle": "Stepper 步进器",
+  "defaultTitle": "Stepper",
   "usingComponents":{
     "stepper": "mini-ali-ui/es/stepper/index",
     "list": "mini-ali-ui/es/list/index",

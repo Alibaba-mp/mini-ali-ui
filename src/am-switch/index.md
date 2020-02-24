@@ -1,4 +1,4 @@
-# AMSwitch 开关
+# am-switch 开关
 
 开关。具体用法和小程序框架中 switch 保持一致，在 switch 基础上做了样式的封装。
 
@@ -22,6 +22,7 @@ iOS 和安卓展现样式有所差异。iOS 单选开关为圆形；安卓单选
 
 ```json
 {
+  "defaultTitle": "am-switch",
   "usingComponents": {
     "am-switch": "mini-ali-ui/es/am-switch/index"
   }

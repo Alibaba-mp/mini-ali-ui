@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "Picker-item",
   "usingComponents": {
     "list": "../../es/list/index",
     "input-item": "../../es/input-item/index",

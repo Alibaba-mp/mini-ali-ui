@@ -39,7 +39,7 @@
 
 ```json
 {
-  "defaultTitle": "notice 通告栏",
+  "defaultTitle": "Notice",
   "usingComponents": {
     "notice": "mini-ali-ui/es/notice/index"
   }

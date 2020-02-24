@@ -51,7 +51,6 @@
 ## 代码示例
 
 ```json
-// API-DEMO pages/input-item/index.json
 {
   "defaultTitle": "input-item",
   "usingComponents":{
@@ -62,7 +61,6 @@
 ```
 
 ```xml
-<!-- API-DEMO pages/input-item/index.axml -->
 <view>
   <view style="margin-top: 10px;" />
   <list>
@@ -101,8 +99,6 @@
 ```
 
 ```javascript
-// API-DEMO pages/input-item/index.js
-
 Page({
   data: {
     cardNo: '1234****',

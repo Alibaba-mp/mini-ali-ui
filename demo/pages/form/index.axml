@@ -7,29 +7,24 @@
       value="{{input}}" 
       className="dadada" 
       placeholder="暗提示" 
-      focus="{{inputFocus}}" 
       onInput="onItemInput" 
-      onFocus="onItemFocus" 
       onBlur="onItemBlur" 
       onConfirm="onItemConfirm" 
       onClear="onClear">
       标题
     </input-item>
-    <!-- <view class="title">选择</view> -->
     <picker-item data-field="picker" 
       placeholder="暗提示" 
       value="{{bank}}" 
       onPickerTap="onPickerTap">
       标题
     </picker-item>
-    <!-- <view class="title">验证码框</view> -->
     <verify-code data-field="verifyCode" 
       onInput="onItemInput" 
       value="{{verifyCode}}" 
       onClear="onClear" 
       countDown="{{10}}" 
       onSend="onSend"></verify-code>
-    <!-- <view class="title">长密码框</view> -->
     <long-password data-field="longPassword" 
       placeholder="" 
       type="text" 
@@ -49,6 +44,4 @@
       auto-height="{{true}}" />
   </list>
   <view style="margin: 10px;" />
-  <!-- <button type="primary" 
-    onTap="onAutoFocus">聚焦</button> -->
 </view>

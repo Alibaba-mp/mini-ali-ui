@@ -28,7 +28,8 @@
 
 ### json
 ```json
-{  
+{
+  "defaultTitle": "Popover",
   "usingComponents": {
     "popover": "mini-ali-ui/es/popover/index",
     "popover-item": "mini-ali-ui/es/popover/popover-item/index"

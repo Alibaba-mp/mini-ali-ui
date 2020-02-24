@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "Am-switch",
   "usingComponents": {
     "am-switch": "../../es/am-switch/index"
   }

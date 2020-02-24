@@ -22,7 +22,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Message",
   "usingComponents": {
     "message": "mini-ali-ui/es/message/index"
   }

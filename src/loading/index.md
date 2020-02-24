@@ -20,7 +20,7 @@ loading 加载动画。
 ## 代码示例
 ```json
 {
-  "defaultTitle": "loading 加载",
+  "defaultTitle": "Loading",
   "usingComponents": {
     "loading": "mini-ali-ui/es/loading/index"
   }

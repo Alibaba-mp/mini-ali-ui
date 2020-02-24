@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "New List",
+  "defaultTitle": "List item",
   "usingComponents":{
     "list": "../../es/list/index",
     "list-item": "../../es/list/list-item/index",

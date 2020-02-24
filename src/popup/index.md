@@ -21,7 +21,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "Popup",
   "usingComponents": {
     "popup": "mini-ali-ui/es/popup/index"
   }

@@ -30,7 +30,7 @@
 
 ```json
 {
-  "defaultTitle": "单选",
+  "defaultTitle": "Filter",
   "usingComponents": {
     "filter": "mini-ali-ui/es/filter/index",
     "filter-item": "mini-ali-ui/es/filter/filter-item/index"

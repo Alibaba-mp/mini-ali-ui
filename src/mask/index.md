@@ -17,7 +17,7 @@
 ## 代码示例
 ```json
 {
-  "defaultTitle": "mask 遮罩蒙层",
+  "defaultTitle": "Mask",
   "usingComponents":{
     "mask": "mini-ali-ui/es/mask/index"
   }

@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "小程序 mini-ali-ui 库",
+  "defaultTitle": "Tag",
   "usingComponents": {
     "tag": "../../es/tag/index",
     "list-item": "../../es/list/list-item/index",

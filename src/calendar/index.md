@@ -36,7 +36,7 @@
 
 ```json
 {
-  "defaultTitle": "Calendar 日历",
+  "defaultTitle": "Calendar",
   "usingComponents":{
     "calendar": "mini-ali-ui/es/calendar/index"
   }

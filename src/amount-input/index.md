@@ -1,4 +1,4 @@
-# AmountInput 金额输入
+# amount-input 金额输入
 
 金额输入框。
 
@@ -26,7 +26,7 @@
 
 ```json
 {
-  "defaultTitle": "小程序AntUI组件库",
+  "defaultTitle": "amount-input",
   "usingComponents": {
     "amount-input": "mini-ali-ui/es/amount-input/index"
   }

@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "popup 弹出菜单",
+  "defaultTitle": "Popup",
   "usingComponents": {
     "popup": "../../es/popup/index"
   }

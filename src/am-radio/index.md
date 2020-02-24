@@ -1,4 +1,4 @@
-# AMCheckBox 复选框
+# am-radio 单选框
 
 单选框。具体用法和小程序框架中 radio 保持一致，在 radio 基础上做了样式的封装。
 
@@ -17,6 +17,7 @@
 
 ```json
 {
+  "defaultTitle": "am-radio",
   "usingComponents": {
     "am-radio": "mini-ali-ui/es/am-radio/index",
     "list": "mini-ali-ui/es/list/index",
