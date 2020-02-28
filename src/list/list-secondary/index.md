@@ -2,6 +2,12 @@
 
 位于列表右侧的次级信息组件，用于列表项的extra插槽。
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*iavDQpGB4n55l25IgDrAHQBkAa8wAA/original?bz=openpt_doc&t=vX5JmSHEdEWubXP3L8eL-AAAAABkMK8AAAAA)
+
+
+
 ## 属性
 
 | 属性名        | 类型    | 默认值 | 可选值                     | 描述                                               | 最低版本 | 必填           |

@@ -2,6 +2,12 @@
 
 金额输入框。
 
+## 扫码体验 
+
+![image](http://mdn.alipayobjects.com/afts/img/A*9104QYYFeUcAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=KykAPsGBc8V1cSdvjWnEAgAAAABkMK8AAAAA)
+
+## 属性介绍
+
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -22,7 +28,7 @@
 | controlled | Boolean | false |  | 是否为受控组件。为 true时，value内容会完全受setData控制 |  | false |
 
 
-## 示例
+## 代码示例
 
 ```json
 {

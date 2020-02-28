@@ -6,6 +6,12 @@
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*uaJMRY6kMXkAAAAAAAAAAABkARQnAQ"/>
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*cFR6T6YDzqIAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=ygcRtsAdl4OZ4KWbaCFW8QAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 
 | 属性名 | 类型 | 默认值 | 可选项 | 必选 | 描述 |

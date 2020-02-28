@@ -2,6 +2,12 @@
 
 小提示。分`tips-dialog`和`tips-plain`两种类型。
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*yfZURLPdBOsAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=UAAm-g5ooVnIlNHckQOZRgAAAABkMK8AAAAA)
+
+
+
 ## tips-dialog
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |

@@ -6,6 +6,12 @@
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_349abe/afts/img/A*mVtGR7j1kU0AAAAAAAAAAABkARQnAQ" style="zoom:50%;" />
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*8DxQRIGbf_IAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=0-opYp1Sx-nOVTVdL6sS0QAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 | 属性 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -46,7 +52,7 @@
 {
   "defaultTitle": "Modal",
   "usingComponents": {
-    "modal": "mini-ali-ui/dist/es/modal/index"
+    "modal": "mini-ali-ui/es/modal/index"
   }
 }
 ```

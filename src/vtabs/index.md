@@ -5,6 +5,12 @@
 ## 截图
 ![vtabs 纵向选项卡](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*Z1-_Qpx1nVwAAAAAAAAAAABkARQnAQ)
 
+## 扫码体验
+
+![](http://mdn.alipayobjects.com/afts/img/A*WsyHSJGoGNMAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=a8iGRMQiins5W8ZubeTGcQAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 vtabs 纵向选项卡包含了 `<vtabs>` 和 `<vtab-content>` 两部分。
 

@@ -9,6 +9,12 @@
 
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*JEeUR5IS5uoAAAAAAAAAAABkARQnAQ" width="187" height="333" />
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*zYygR7epO_cAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=Odl4kKM5ksKxXaxUKwpCmAAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

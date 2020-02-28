@@ -4,7 +4,14 @@
 
 
 ## 预览
-<<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*q8EXQZLe1ToAAAAAAAAAAABkARQnAQ" width="375" />
+<img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*q8EXQZLe1ToAAAAAAAAAAABkARQnAQ" width="375" />
+
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*rxAHT4dTIvcAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=KYBuhWlZKyz_rIAo-puidwAAAABkMK8AAAAA)
+
+
+
 ## 属性
 
 | 属性名      | 类型                                                | 默认值     | 可选项                    | 描述                                       | 最低版本 | 必填  |
@@ -35,7 +42,7 @@
 {
   "defaultTitle": "Steps",
   "usingComponents": {
-    "steps": "min-ali-ui/es/steps/index"
+    "steps": "mini-ali-ui/es/steps/index"
   }
 }
 ```

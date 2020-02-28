@@ -5,6 +5,12 @@ loading 加载动画。
 ## 截图
 ![loading 加载动画](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*yGirSonwGzAAAAAAAAAAAABkARQnAQ)
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*8spKR7IFKE0AAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=4jH-vtQojHPwBwOHtiLKtwAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |

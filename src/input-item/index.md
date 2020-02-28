@@ -3,7 +3,11 @@
 - 如无特殊情况，清空按钮在框内有内容且获得焦点时默认出现
 
 ## 截图
-![输入框.png](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*DumuSohfeXQAAAAAAAAAAABkARQnAQ) 
+![输入框.png](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*DumuSohfeXQAAAAAAAAAAABkARQnAQ)
+
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*dxShQq_ajv0AAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=2gtI9okdyKpu-Ah9sjky6wAAAABkMK8AAAAA)
 
 
 
@@ -54,8 +58,8 @@
 {
   "defaultTitle": "input-item",
   "usingComponents":{
-    "list": "min-ali-ui/es/list/index",
-    "input-item": "min-ali-ui/es/input-item/index"
+    "list": "mini-ali-ui/es/list/index",
+    "input-item": "mini-ali-ui/es/input-item/index"
   }
 }
 ```

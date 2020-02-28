@@ -5,6 +5,12 @@
 ## 截图
 ![grid 宫格模块](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*vQv9Qr8uHz8AAAAAAAAAAABkARQnAQ)
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*gPTMQ4wkXFQAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=3vb1C51SZCjMRA8VwlA9aQAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |

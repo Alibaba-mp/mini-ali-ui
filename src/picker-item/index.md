@@ -1,8 +1,12 @@
 ## PickerItem 选择输入
 
-文本输入。
-
 选择输入。
+
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*XwVVT66kNG0AAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=p9aFDx4PxuycTqU6HHzUNAAAAABkMK8AAAAA)
+
+## 属性介绍
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -15,22 +19,20 @@
 | placeholder | String |  |  | 占位符 |  |  |
 | onPickerTap | (e: Object) => void |  |  | 点击pickeritem时触发 |  |  |
 
-## slots
+### slots
 
 | slotname | 说明 |
 | ---- | ---- |
 | extra | 可选，用于渲染picker-item项右边说明 |
 
-## 示例
+## 代码示例
 
 ```json
 {
-  "defaultTitle": "Picker item",
+  "defaultTitle": "Picker-item",
   "usingComponents": {
     "list": "mini-ali-ui/es/list/index",
-    "list-item": "mini-ali-ui/es/list/list-item/index",
-    "picker-item": "mini-ali-ui/es/picker-item/index",
-    "input-item": "mini-ali-ui/es/input-item/index"
+    "picker-item": "mini-ali-ui/es/picker-item/index"
   }
 }
 ```
@@ -38,18 +40,11 @@
 ```xml
 <view>
   <list>
-    <input-item
-      data-field="password"
-      placeholder="密码"
-      password
-    >
-      密码
-    </input-item>
     <picker-item
       data-field="bank"
       placeholder="选择发卡银行"
       value="{{bank}}"
-      onPickerTap="onSelect"
+      onPickerTap="onPickerTap"
     >
       发卡银行
     </picker-item>

@@ -6,15 +6,21 @@
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*ke0cQJqPhZwAAAAAAAAAAABkARQnAQ" />
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*-MwMSrAXKSAAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=mDIEfzP2RF0jHtlUvWJKjAAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 | 属性 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | type | String | default | default, primary, ghost, warn,  warn-ghost, text, light | 按钮样式 | - |
 | subtitle | String | - | - | 子标题 | - |
 | shape | String | default | default, capsule | 按钮形状 | - |
-| capsuleSize | String | medium | large, medium, small | 胶囊按钮大小 | - | 
-| capsuleMinWidth | Boolean | false | true, false | 是否启用胶囊按钮最小宽度 | - | 
-| disabled | Boolean | false | true, false | 是否禁用 | - | 
+| capsuleSize | String | medium | large, medium, small | 胶囊按钮大小 | - |
+| capsuleMinWidth | Boolean | false | true, false | 是否启用胶囊按钮最小宽度 | - |
+| disabled | Boolean | false | true, false | 是否禁用 | - |
 | showLoading | Boolean | false | true, false | 按钮文字前是否带 loading 图标 | - |
 | hover-class | String | button-hover | - |按钮按下去的样式类。`button-hover` 默认为 `{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}`，`hover-class="none"` 时表示没有点击态效果 | - |
 | hover-start-time | Number | 20 | - | 按住后多少事件后出现点击状态，单位毫秒 | -  |

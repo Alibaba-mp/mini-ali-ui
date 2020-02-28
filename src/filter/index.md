@@ -4,6 +4,13 @@
 
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*QVA0RZfaWkAAAAAAAAAAAABkARQnAQ"/>
+
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*vSyvTL5GeJAAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=W1waafhpQGo-GEu68p5nYwAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 
 ### filter

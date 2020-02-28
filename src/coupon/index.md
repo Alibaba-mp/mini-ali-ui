@@ -10,6 +10,10 @@
 
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*wew8QamnvfoAAAAAAAAAAABkARQnAQ" width="375">
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*i9RQS4VidDEAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=BvcR6EamqEIxqVna9hLPtgAAAABkMK8AAAAA)
+
 
 
 ## 属性
@@ -37,8 +41,8 @@
 {
   "defaultTitle": "Coupon",
   "usingComponents":{
-    "coupon":"min-ali-ui/es/coupon/index",
-    "button": "min-ali-ui/es/button/index"
+    "coupon":"mini-ali-ui/es/coupon/index",
+    "button": "mini-ali-ui/es/button/index"
   }
 }
 ```

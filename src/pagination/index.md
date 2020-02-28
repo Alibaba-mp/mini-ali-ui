@@ -3,7 +3,13 @@
 分页标识符。
 
 ## 截图
-![pagination 分页符](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*Rx1NSbwPvYsAAAAAAAAAAABkARQnAQ)
+![pagination 分页符](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*Q1OPTZaZTM0AAAAAAAAAAABkARQnAQ)
+
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*vUeSRZiBv4EAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=WZGmMGHmAo6KgQF8JSYnnQAAAABkMK8AAAAA)
+
+
 
 ## 属性介绍
 
@@ -42,28 +48,28 @@
 
 ```xml
 <pagination pagerName='test1' infinite="true">
-  <view style="display: flex;">
-    <view style="flex: 0 0 auto;width: 100vw;background-color: yellow;">文字</view>
-    <view style="flex: 0 0 auto;width: 90vw;background-color: blue;">文字</view>
-    <view style="flex: 0 0 auto;width: 50vw;background-color: red;">文字</view>
-    <view style="flex: 0 0 auto;width: 120vw;background-color: green;">文字</view>
-    <view style="flex: 0 0 auto;width: 20vw;background-color: grey;">文字</view>
+  <view style="display: flex;height: 100%;">
+    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 90vw;background-color: #f8d7d7;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="width: 300rpx;height: 72rpx;" /></view>
+    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 90vw;background-color: #d5f7d5;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="width: 300rpx;height: 72rpx;" /></view>
+    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 50vw;background-color: #f0e39e;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ" style="width: 70px;height: 70px;"></view>
+    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 120vw;background-color: #F8F8F8;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="width: 300rpx;height: 72rpx;" /></view>
+    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 20vw;background-color: #d3d3d3;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ" style="width: 50px;height: 50px;"></view>
   </view>
 </pagination>
 
-<view style="width: 50vw;">
-  <pagination pagerName='test2' height="300px" white="true" infinite="true">
-    <view style="width: 110vw;height: 100%;background-color: #f32600;color: #fff;">反白的无极翻页</view>
+<view style="width: 50vw;margin: 20px auto 0;background-color: #8f8f8f;">
+  <pagination pagerName='test2' height="220rpx" white="true" infinite="true">
+    <image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="width: 779rpx;height: 186rpx;margin: 10px 20px;" />
   </pagination>
 </view>
 
 <view style="margin-top: 20px;">正常翻页样式</view>
-<view style="padding: 20px 20px 0;background-color: yellow;">
+<view style="padding: 20px 20px 0;background-color: #f8f8ba;">
   <pagination currentPage="{{3}}" max="{{10}}" height="200px" />
 </view>
 
 <view style="margin-top: 20px;">反白翻页样式</view>
-<view style="padding: 20px 20px 0;background-color: red;">
+<view style="padding: 20px 20px 0;background-color: #0e98d8;">
   <pagination currentPage="{{5}}" white="true" />
 </view>
 ```

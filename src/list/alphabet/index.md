@@ -5,15 +5,20 @@
 ## 预览
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*dxUqTYRYZBsAAAAAAAAAAABkARQnAQ" alt="img" style="zoom:50%;" />
 
-## 属性
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*KNOYT4LW3VEAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=LvZJ0dVW6YGHzehjluyj7wAAAABkMK8AAAAA)
+
+
+
+## 属性介绍
 
 | 属性名        | 类型    | 默认值 | 可选值                     | 描述                                               | 最低版本 | 必填           |
 | ------------- | ------- | ------ | -------------------------- | -------------------------------------------------- | -------- | -------------- |
 | alphabet      | Array   | -      | -                       | 字母表内容 | -        | -              |
 
 
-## 示例
-### json
+## 代码示例
 ```json
 {
   "defaultTitle": "Alphabet",
@@ -24,7 +29,6 @@
 }
 ```
 
-### axml
 ```xml
 <view style="position: relative; height: 100vh;">
 	<alphabet alphabet="{{alphabet}}" onClick="onAlphabetClick" >
@@ -33,7 +37,6 @@
 </view>
 ```
 
-### js
 ```javascript
 Page({
   data: {

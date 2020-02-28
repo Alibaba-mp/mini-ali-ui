@@ -8,6 +8,14 @@
 ## 截图
 ![collapse 折叠面板](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*cPXdQZmoXfIAAAAAAAAAAABkARQnAQ)
 
+
+
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*zPrfTYBFXaQAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=6VlOp_JCeXb8UFqBpZsovAAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 Collapse 折叠面板主要是有 `<collapse>` 和 `<collapse-item>` 两部分组成，所以，属性也有所不同。
 

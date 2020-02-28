@@ -5,6 +5,12 @@
 ## 截图
 ![mask 遮罩蒙层](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*Cu8kT4Xm8jcAAAAAAAAAAABkARQnAQ)
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*R7BBTYwB74oAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=sa6Mi3J_bvFm4MxiD-d6bwAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |

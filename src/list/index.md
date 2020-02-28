@@ -2,6 +2,12 @@
 
 列表。
 
+## 扫码体验
+
+![](http://mdn.alipayobjects.com/afts/img/A*4q61RJSr6m4AAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=JVlQE2VGLHmBy7Lm0u4fegAAAABkMK8AAAAA)
+
+
+
 
 ## list
 

@@ -7,6 +7,12 @@
 ## 预览
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*pn46SLaFl_IAAAAAAAAAAABkARQnAQ" width="375" />
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*tPTnSI54PusAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=ngISZ3PEd03jNify0dMxKwAAAABkMK8AAAAA)
+
+
+
 
 ## 属性
 
@@ -34,7 +40,7 @@
 {
   "defaultTitle": "Card",
   "usingComponents":{
-    "card":"min-ali-ui/es/card/index"
+    "card":"mini-ali-ui/es/card/index"
   }
 }
 ```

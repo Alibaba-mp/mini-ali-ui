@@ -5,6 +5,12 @@
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_349abe/afts/img/A*2ojQSLUUPyQAAAAAAAAAAABkARQnAQ" style="zoom:50%;" />
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*wQu2TLea8JsAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=ezrdO7s0f2889e0cDyjjIAAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 | 属性 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -23,7 +29,7 @@
 {
   "defaultTitle": "Avatar",
   "usingComponents": {
-    "avatar": "mini-ali-ui/dist/es/avatar/index"
+    "avatar": "mini-ali-ui/es/avatar/index"
   }
 }
 ```

@@ -5,6 +5,12 @@
 ## 预览
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*vTy0QqLynmQAAAAAAAAAAABkARQnAQ" width="375" />
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*KRs3QZ_zR8AAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=HwC0KCFWIPKOGVKzvlzw9gAAAABkMK8AAAAA)
+
+
+
 
 ## popover 属性
 

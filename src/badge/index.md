@@ -2,6 +2,12 @@
 
 红点、数字或文字。用于告诉用户待处理的事物或者更新数。
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*OPTsT7uTzEkAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=QWjAorNavfdXv5ASjtEz7wAAAABkMK8AAAAA)
+
+
+
 
 ## 属性
 | 属性名        | 类型            | 默认值   | 可选项 | 描述                                  | 最低版本 | 必填 |
@@ -24,8 +30,8 @@
 {
   "defaultTitle": "Badge",
   "usingComponents": {
-    "list-item": "min-ali-ui/es/list/list-item/index",
-    "badge": "min-ali-ui/es/badge/index"
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "badge": "mini-ali-ui/es/badge/index"
   }
 }
 ```

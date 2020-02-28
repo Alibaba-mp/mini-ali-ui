@@ -6,6 +6,12 @@
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_01d31f/afts/img/A*DNO6SYWbkjYAAAAAAAAAAABkARQnAQ" style="zoom: 33%;" />
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*goE_Sa_KX1oAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=lsHNmXXKvxl4XsA2_djixAAAAABkMK8AAAAA)
+
+
+
 
 ## 属性介绍
 

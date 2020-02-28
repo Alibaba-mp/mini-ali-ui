@@ -1,10 +1,17 @@
 # LongPassword 长密码框
 
 长密码框  
+
 受控模式，使用时需要用onInput事件来回设value。
 
 ## 截图
 <img width="375" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*zDnVSq3-tiUAAAAAAAAAAABkARQnAQ">
+
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*UCLtQJC8q68AAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=CqzwHAcMCOuwiY2WbZee4AAAAABkMK8AAAAA)
+
+
 
 ## 属性介绍
 | 属性名           | 类型                | 默认值 | 可选值 | 描述                                    | 最低版本 | 必填 |

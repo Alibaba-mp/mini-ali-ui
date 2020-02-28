@@ -2,6 +2,12 @@
 
 列表项
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*iavDQpGB4n4AAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=OxoTJzq0hvdzYy1DHa-xWQAAAABkMK8AAAAA)
+
+
+
 ## 属性
 
 | 属性名        | 类型    | 默认值 | 可选值                     | 描述                                               | 最低版本 | 必填           |

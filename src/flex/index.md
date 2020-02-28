@@ -5,6 +5,12 @@ CSS flex布局的封装。
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*4h5tRJZKSAcAAAAAAAAAAABkARQnAQ" alt="flex 布局" style="zoom:50%;" />
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*xDjERrdrKNgAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=HwadADoddxwKvylwyWSy5wAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 Flex 布局是由 `<flex>` 和 `<flex-item>` 两种标签组合的，相对应的属性值的情况也有所不同。
 

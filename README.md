@@ -1,6 +1,7 @@
 <p align="center">
-  <img width="390" src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*whN9RZGSym8AAAAAAAAAAABkARQnAQ">
+  <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="zoom: 0.5;">
 </p>
+
 
 # Mini Ali UI
 

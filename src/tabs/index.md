@@ -12,6 +12,12 @@
 ## 截图
 ![tabs](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*cmZwRoYG120AAAAAAAAAAABkARQnAQ)
 
+## 扫码体验
+
+![](http://mdn.alipayobjects.com/afts/img/A*AptiT47jyXEAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=We6nKeYvCpiZLki_J91kbAAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成，包含的类型较多，可通过 `<tabs>` 的属性进行配置。
 

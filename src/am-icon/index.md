@@ -5,6 +5,12 @@
 ## 截图
 ![am-icon icon 图标](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*j2riR5PaCqsAAAAAAAAAAABkARQnAQ)
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*FIgnQYG0eU4Cu2dKuSefyABkAa8wAA/original?bz=openpt_doc&t=P5eibJNtHlEwlULPUKeZ8QAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |

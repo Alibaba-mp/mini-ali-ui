@@ -8,6 +8,12 @@
 ## 截图
 ![notice](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*tumxSr-ODscAAAAAAAAAAABkARQnAQ)
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*06nrQ59oMj4AAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=Xqkh2vEWDnjXvk-6JX_3GwAAAABkMK8AAAAA)
+
+
+
 ## 属性介绍
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |

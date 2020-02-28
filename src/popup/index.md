@@ -2,6 +2,14 @@
 
 弹出菜单。
 
+## 扫码体验
+
+![image](http://mdn.alipayobjects.com/afts/img/A*ATcjRKr8C5AAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=i6VQeJ7lemdBInJkDOPs5QAAAABkMK8AAAAA)
+
+
+
+## 属性介绍
+
 
 | 属性名 | 描述 | 类型 | 默认值 | 必选 |
 | ---- | ---- | ---- | ---- | ---- |
@@ -13,11 +21,11 @@
 | disableScroll | 展示mask时是否禁止页面滚动 | Boolean | true | - |
 | zIndex | 定义popup的层级 | Number | 0 | - |
 
-## slots
+### slots
 
-可以在popup组件中定义要展示部分，具体可参看下面示例。
+可以在popup组件中定义要展示部分，具体可参看下面代码示例。
 
-## 示例
+## 代码示例
 
 ```json
 {
