@@ -1,3 +1,9 @@
+## 1.0.2
+`2020-02-28`
+* **fixed** tabs component bug;
+* **modify** demo and readme content;
+* **add** the components qr code to the readme document;
+
 ## 1.0.1
 `2020-02-24`
 * **fixed** verify-code component bug;
