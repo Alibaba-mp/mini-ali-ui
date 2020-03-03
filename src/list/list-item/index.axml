@@ -7,7 +7,6 @@
 			<slot name="supporting" />
 		</view>
 		<auto-sizer a:if="{{thumb}}" 
-			placeholder="{{thumbPlaceholder}}" 
 			src="{{thumb}}" 
 			size="{{thumbSize}}" />
 	</view>

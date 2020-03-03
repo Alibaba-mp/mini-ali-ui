@@ -8,7 +8,7 @@
       upperSubtitle="{{upperSubtitle}}" 
       lowerSubtitle="{{lowerSubtitle}}" 
       titlePosition="{{titlePositions[titlePosIndex]}}" 
-      thumbSize="{{thumbSize}}"
+      thumbSize="{{thumbSize ? `${thumbSize}px` : ''}}"
       last="{{true}}">
         {{title}}
         <tag a:if="{{primarySlotTypes[titleSlotIndex] === '标签'}}" size="sm" slot="afterTitle">{{titleTagText}}</tag>
