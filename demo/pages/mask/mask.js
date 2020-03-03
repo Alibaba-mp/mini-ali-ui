@@ -10,7 +10,7 @@ Page({
       });
     } else {
       this.setData({
-        type: 'market',
+        type: '',
         show: false,
       });
     }

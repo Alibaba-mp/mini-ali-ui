@@ -12,4 +12,5 @@ Page({
       verifyCode: e.detail.value,
     });
   },
+  onClear() {},
 });
