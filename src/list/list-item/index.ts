@@ -10,12 +10,6 @@ Component({
   },
   didMount() {
     this._updateDataSet();
-    const { upperSubtitle = '', lowerSubtitle = '' } = this.props;
-    const thumbPlaceholder =
-      '__' + upperSubtitle.slice(0, 1) + lowerSubtitle.slice(0, 1);
-    this.setData({
-      thumbPlaceholder,
-    });
   },
   didUpdate() {
     this._updateDataSet();
