@@ -19,7 +19,7 @@
 | upperSubtitle | String  | -      | -                          | 上副标题                                           | -        | -              |
 | lowerSubtitle | String  | -      | -                          | 下副标题                                           | -        | -              |
 | titlePosition | String  | top    | top<br/> middle<br/>bottom | 主标题位置                                         | -        | -              |
-| thumbSize     | String  | 40 | - | 缩略图大小 | - | 有缩略图时必填 |
+| thumbSize     | String  | 40px | - | 缩略图大小 | - | 有缩略图时必填 |
 | onClick       | Function| -      | -                          | 点击列表项事件                                       | -        | -              |
 
 

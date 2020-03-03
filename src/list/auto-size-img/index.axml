@@ -1,5 +1,5 @@
 <view class="am-auto-sizer-container" 
-  style="{{ size ? `width: ${size}px; height: ${size}px;`: 'width: 40px; height: 40px;'}}">
+  style="{{ size ? `width: ${size}; height: ${size};`: `width: ${defaultWidth}; height: ${defaultHeight};`}}">
   <view class="am-auto-sizer-content" 
     style="{{(src ? `background-image: url('${src}'); background-color: transparent` : '')}}" />
 </view>
