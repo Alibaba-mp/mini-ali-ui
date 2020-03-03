@@ -1,3 +1,8 @@
+## 1.0.3
+`2020-03-03`
+* **Update** Calendar component demo;
+* **Fixed** List component bug;
+
 ## 1.0.2
 `2020-02-28`
 * **fixed** tabs component bug;
