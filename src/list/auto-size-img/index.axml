@@ -1,6 +1,5 @@
 <view class="am-auto-sizer-container" 
-  style="{{ size ? `width: ${size}px; height: ${size}px;`: ''}}">
-  {{placeholder}}_
+  style="{{ size ? `width: ${size}px; height: ${size}px;`: 'width: 40px; height: 40px;'}}">
   <view class="am-auto-sizer-content" 
     style="{{(src ? `background-image: url('${src}'); background-color: transparent` : '')}}" />
 </view>
