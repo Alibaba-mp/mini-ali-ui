@@ -30,8 +30,7 @@
 | showIcon | Boolean | true | - | 是否显示 icon | - | - |
 | capsuleItem | Array | - | - | 胶囊通告栏的业务 logo url | - | - |
 | capsule | Boolean | false | - | 是否为胶囊通告栏 | - | - |
-| type | String | normal | normal、error、active | 通告栏类型 | - | - |
-| transparent | Boolean | false | - | active 通告栏是否具有半透明 | - | - |
+| type | String | normal | normal、error、active、transparent | 通告栏类型 | - | - |
 
 ## Bug & Tip
 * 如果 `action` 没有任何值，那么 `actionLeft` 将不会显示；
@@ -39,7 +38,7 @@
 * 当 `mode` 的值为 `link`，显示为一个箭头 icon 时，整条通告栏是可点击的；
 * 当 `action` 有值时，将会代替 `mode` 中的 `closable` 和 `link`，只会显示文字；
 * `capsuleItem` 在胶囊通告栏中只会显示 3 个，超过部分仅统计个数，但不会显示 logo；
-* 当 `type` 的值为 `active` 时，`transparent` 才会有效果；
+* 当 `type` 的值为 `transparent` 时，展示的是带有透明度，内容色为白色的通告栏；
 
 ## 代码示例
 
@@ -69,8 +68,7 @@
   type="active"
   onClick="actionClick"
   capsule="{{true}}"
-  capsuleItem="{{['https://img.alicdn.com/tfs/TB1yTvnfQY2gK0jSZFgXXc5OFXa-145-145.png','https://img.alicdn.com/tfs/TB1egTmfNz1gK0jSZSgXXavwpXa-145-145.png','https://img.alicdn.com/tfs/TB1l36mfQP2gK0jSZPxXXacQpXa-145-145.png','https://img.alicdn.com/tfs/TB1uCUdfND1gK0jSZFyXXciOVXa-151-164.png']}}"
-  transparent="{{true}}">4 个优惠信息推荐
+  capsuleItem="{{['https://img.alicdn.com/tfs/TB1yTvnfQY2gK0jSZFgXXc5OFXa-145-145.png','https://img.alicdn.com/tfs/TB1egTmfNz1gK0jSZSgXXavwpXa-145-145.png','https://img.alicdn.com/tfs/TB1l36mfQP2gK0jSZPxXXacQpXa-145-145.png','https://img.alicdn.com/tfs/TB1uCUdfND1gK0jSZFyXXciOVXa-151-164.png']}}">4 个优惠信息推荐
 </notice>
 ```
 

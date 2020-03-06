@@ -31,6 +31,7 @@ Page({
       { name: 'normal', value: 'normal', checked: true },
       { name: 'error', value: 'error' },
       { name: 'active', value: 'active' },
+      { name: 'transparent', value: 'transparent' },
     ],
     noticeType: 'normal',
     mode: [
@@ -39,18 +40,8 @@ Page({
       { name: 'closable', value: '关闭' },
     ],
     noticeMode: '',
-    transparent: [
-      { name: true, value: '透明' },
-      { name: false, value: '不透明', checked: true },
-    ],
-    transparentValue: false,
     actionText: '',
     actionLeftText: '',
-  },
-  transparentChange(e) {
-    this.setData({
-      transparentValue: e.detail.value,
-    });
   },
   capsuleItemChange(e) {
     this.setData({
@@ -65,7 +56,6 @@ Page({
   typeChange(e) {
     this.setData({
       noticeType: e.detail.value,
-      transparentValue: false,
     });
   },
   modeChange(e) {

@@ -205,6 +205,12 @@
   --am-amount-content-line-height: var(--am-line-height-base);
   /* size | 输入区上方外间距 */
   --am-amount-value-margin-top: var(--am-size-6);
+  /* spacing | 带分割线页脚与文本/icon的距离 */
+  --am-footer-divider-content-paddingLR: var(@h-spacing-large);
+  /* spacing | 带分割线页脚的上下间距 */
+  --am-footer-divider-content-paddingTB: var(@size-5);
+  /* spacing | 带分割线页脚的左右间距 */
+  --am-footer-divider-paddingLR: var(@h-spacing-large);
 
   /* notice */
   /* size | 上下内间距 */
@@ -246,7 +252,7 @@
   /* size | 右侧文字左外边距 */
   --am-notice-operation-marginLeft: var(--am-h-spacing-standard);
   /* size | 胶囊通告栏 item 右外边距 */
-  --am-notice-capsule-item-marginRight: var(--am-h-spacing-large);
+  --am-notice-capsule-item-marginRight: var(--am-h-spacing-standard);
   /* size | 胶囊通告栏 item 左内间距 */
   --am-notice-capsule-item-paddingRight: var(--am-h-spacing-standard);
   /* corner-radius | 胶囊通告栏 item 圆角 */
@@ -257,6 +263,10 @@
   --am-notice-capsule-item-borderWidth: var(--am-border-width-thick);
   /* color | 胶囊通告栏 item 边框颜色 */
   --am-notice-capsule-item-borderColor: var(--am-color-fill-grey-inverse);
+  /* color | 胶囊通告栏背景色 */
+  --am-notice-capsule-bgc: var(--am-color-fill-grey-inverse);
+  /* color | 胶囊通告栏边框色 */
+  --am-notice-capsule-borderColor: var(--am-color-fill-grey-light);
 
   /* title */
   /* size | 底内间距 */
@@ -575,6 +585,7 @@
   --am-modal-title-fontSize: var(--am-font-size-title);
   /* background | 蒙层背景色 */
   --am-modal-mask-backgroundColor: var(--am-color-product-mask);
+  --am-modal-market-mask-backgroundColor: var(--am-color-marketing-mask);
   /* background | 主体背景色 */
   --am-modal-content-backgroundColor: var(--am-color-fill-grey-inverse);
   /* radius | 主体圆角 */
@@ -1147,4 +1158,9 @@
   --am-calendar-selected-color: var(--am-color-text-base);
   /* color | 灰色以及禁用的日期文字颜色 */
   --am-calendar-outer-color: var(--am-color-text-weak);
+
+  /* mask */
+  /* background | 蒙层背景色 */
+  --am-mask-backgroundColor: var(--am-color-product-mask);
+  --am-mask-market-backgroundColor: var(--am-color-marketing-mask);
 }

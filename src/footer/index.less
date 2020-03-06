@@ -1,4 +1,5 @@
 @import (reference) '../style/themes/default.less';
+@import "../style/mixins/hairline.less";
 
 .am-footer {
   display: flex;
@@ -13,6 +14,32 @@
     font-size: var(--am-footer-content-fontSize, @font-size-content);
     color: @color-text-weak;
     color: var(--am-footer-content-color, @color-text-weak);
+  }
+  &-end {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 @h-spacing-large;
+    padding: 0 var(--am-footer-divider-paddingLR, @h-spacing-large);
+    font-size: @font-size-content;
+    font-size: var(--am-footer-content-fontSize, @font-size-content);
+    color: @color-text-weak;
+    color: var(--am-footer-content-color, @color-text-weak);
+    box-sizing: border-box;
+    &__divider {
+      position: relative;
+      flex: 1 1 auto;
+      height: 2px;
+      box-sizing: border-box;
+      .hairline("bottom");
+    }
+    &__text {
+      white-space: nowrap;
+      padding: @size-5 @h-spacing-large;
+      padding: var(--am-footer-divider-content-paddingTB, @size-5) var(--am-footer-divider-content-paddingLR, @h-spacing-large);
+    }
   }
   &-extend {
     display: flex;

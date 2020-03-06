@@ -16,10 +16,16 @@
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | className | String | - | - | 自定义 class | - | - |
-| type | String | normal | normal、guide、copyright、brand、link | 选择使用指定的页脚类型 | - | - |
+| type | String | normal | normal、guide、copyright、brand、link、end | 选择使用指定的页脚类型 | - | - |
 | content | String | - | - | 页脚文本内容 | - | - |
 | extend | Array | - | - | 页脚部分的链接、logo 等信息 | - | - |
 | onBrandTap | EventHandle | () => {} | - | 品牌 logo 事件回调 | - | - |
+| showEndIcon | Boolean | false | - | type="end" 时的 footer 组件是否以 icon 方式展示，为 true 将不会显示 `content` 的文本内容 | - | - |
+| iconName | String | selected | - | 使用 am-icon，具体的值可参考 am-icon 的 type 值 | - | - |
+| iconURL | String | - | - | 使用网络图片。当确定使用网络图片后，`iconName` 将失效；且 网络图片目前仅支持宽高相同且小于等于 44rpx； | - | - |
+| iconSize | Number | 18 | - | 小于等于 22px 的值 | - | - |
+| footerEndColor | String | - | - | type="end" 时文本的颜色 | - | - |
+
 
 ## Bug & Tip
 * `onBrandTap` 仅在 `type: brand` 中有效，且是无链接的品牌 logo；
@@ -29,6 +35,10 @@
   * `copyright`：无 `extend`；
   * `brand`：`extend` 的值为 `[{ logo: '', width: '', height: '', link: '',},]`，如果无 `link` 的话，可选择触发 `onBrandTap` 事件；
   * `link`：`extend` 的值为 `[{ link: '', text: '',},]`，但有多个值时，文本链接之间会有间隔线出现；
+  * `end`：显示为“没有更多了”字样的结尾，可更改为 am-icon 中的类型或者自定图片 url；
+    * `end` 类型 `content` 默认值为“没有更多了”；
+    * `showEndIcon` 时，`content` 内容将不再显示；
+    * `iconURL` 有值时，am-icon 中的类型将不会展示，显示为 icon 的 url，请确保该 url 是可访问的
 
 ## 代码示例
 
@@ -71,6 +81,18 @@
   type="{{footerInfo6.type}}" 
   content="{{footerInfo6.content}}"
   extend="{{footerInfo6.extend}}"
+/>
+<footer 
+  type="{{footerInfo7.type}}" 
+  content="{{footerInfo7.content}}"
+/>
+<footer 
+  type="{{footerInfo8.type}}" 
+  content="{{footerInfo8.content}}"
+  showEndIcon="{{footerInfo8.showEndIcon}}"
+  typeIcon="{{footerInfo8.typeIcon}}"
+  iconSize="{{footerInfo8.iconSize}}"
+  iconURL="{{footerInfo8.iconURL}}"
 />
 ```
 
@@ -143,6 +165,17 @@ Page({
           text: '底部链接',
         },
       ],
+    },
+    footerInfo7: {
+      type: 'end',
+      content: '自定义的没有更多内容了',
+    },
+    footerInfo8: {
+      type: 'end',
+      showEndIcon: true,
+      iconName: 'logo-alipay_',
+      iconURL: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
+      iconSize: 50,
     },
   },
   brandClick() {

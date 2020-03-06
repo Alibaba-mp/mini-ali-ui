@@ -30,6 +30,7 @@
 * `size` 只需要填写纯数字，默认增加 `px` 单位，当安装 **mini-ali-ui-rpx** npm 包后，默认增加 `rpx` 单位，仅仅只是默认增加的单位，具体的 `size` 将根据所填写的值而显示。比如 `size="30"`，最终得到的可能就是 `30px` 或者 `30rpx` 的结果；
 * `color` 默认为空，可继承父级元素的颜色值；
 * **am-icon** 使用的是 iconfont 方式，如通过 `className` 方式控制大小，需要通过设置 `font-size` 来改变；
+* 如果设置 `size` 和 `color` 属性后无效，那么很大可能就是当前设备 **不支持 CSS 自定义属性（CSS 变量）**，只能通过 `className` 方式来修改 `font-size` 和 `color` 的属性值；
 
 
 

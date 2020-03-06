@@ -7,9 +7,7 @@
     "url": "git@github.com:Alibaba-mp/mini-ali-ui.git"
   },
   "files": [
-    "es",
-    "demo",
-    "src"
+    "es"
   ],
   "keywords": [
     "antui",
@@ -24,7 +22,7 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
     "@typescript-eslint/parser": "^2.17.0",
-    "alipay-style": "^0.0.8",
+    "alipay-style": "^0.0.9",
     "eslint": "^5.16.0",
     "eslint-config-ali": "^3.1.0",
     "eslint-plugin-import": "^2.11.0",

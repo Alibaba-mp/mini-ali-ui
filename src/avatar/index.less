@@ -1,16 +1,15 @@
 @import (reference) "../style/themes/default.less";
 
-/** 使用rpx，不token **/
-@avatar-sm-size: 72rpx; /* small头像大小 */
-@avatar-md-size: 104rpx; /* middle头像大小 */
-@avatar-lg-size: 120rpx; /* large头像大小 */
-@avatar-content-between-space: 20rpx; /* 头像与内容间隔 */
-@avatar-desc-between-space: 8rpx; /* 姓名与摘要间隔 */
+@avatar-sm-size: @size-9;   // 72rpx
+@avatar-md-size: @size-13;  // 102rpx
+@avatar-lg-size: @size-15;  // 120rpx
+@avatar-content-between-space: @h-spacing-large; /* 头像与内容间隔 */
+@avatar-desc-between-space: @v-spacing-standard / 2; /* 姓名与摘要间隔 */
 @avatar-fontSize-0: 24rpx;
 @avatar-fontSize-1: 28rpx;
-@avatar-fontSize-2: 30rpx;
-@avatar-fontSize-3: 34rpx;
-@avatar-fontSize-4: 36rpx;
+@avatar-fontSize-2: @font-size-subtitle;  // 30rpx
+@avatar-fontSize-3: @font-size-list;      // 34rpx
+@avatar-fontSize-4: @font-size-title;     // 36rpx
 
 .am-avatar {
   display: flex;
@@ -18,22 +17,19 @@
   &-img {
     width: @avatar-md-size;
     height: @avatar-md-size;
-    border-radius: @avatar-md-size / 2;
+    border-radius: @corner-radius-circle;
     /* 头像大小设置 */
     &-sm {
       width: @avatar-sm-size;
       height: @avatar-sm-size;
-      border-radius: @avatar-sm-size / 2;
     }
     &-md {
       width: @avatar-md-size;
       height: @avatar-md-size;
-      border-radius: @avatar-md-size / 2;
     }
     &-lg {
       width: @avatar-lg-size;
       height: @avatar-lg-size;
-      border-radius: @avatar-lg-size / 2;
     }
     /* 头像形状设置 */
     &-square {
@@ -45,23 +41,17 @@
   }
   &-name {
     font-size: @avatar-fontSize-3;
-    color: #333;
+    color: @color-text-title;
     &-lg {
       font-size: @avatar-fontSize-4;
     }
-    &-sm {
-      font-size: @avatar-fontSize-2;
-    }
   }
   &-desc {
-    font-size: @avatar-fontSize-1;
-    color: #999;
     margin-top: @avatar-desc-between-space;
-    &-lg {
-      font-size: @avatar-fontSize-2;
-    }
+    font-size: @avatar-fontSize-2;
+    color: @color-text-subtitle;
     &-sm {
-      font-size: @avatar-fontSize-0;
+      display: none;
     }
   }
 }

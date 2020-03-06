@@ -1,3 +1,5 @@
+import fmtUnit from '../_util/fmtUnit';
+
 Component({
   props: {
     className: '',
@@ -6,10 +8,18 @@ Component({
     // copyright：声明；
     // brand：带品牌；
     // link：带链接
+    // end: 没有更多
     type: 'normal',
     content: '',
     extend: [],
     onBrandTap: () => { },
+    showEndIcon: false,
+    iconName: 'selected',
+  },
+  data: {
+    defaultSize: fmtUnit(18),
+    maxSize: fmtUnit(22),
+    valueUnit: fmtUnit('px'),
   },
   methods: {
     onBrandClick(e) {

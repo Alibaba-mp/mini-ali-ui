@@ -14,8 +14,10 @@
   </view>
   <view style="margin-top: 20px;" />
   <view class="demo-avatar-content">
-    <avatar mode="widthFix" name="用户名"/>
+    <avatar mode="widthFix" name="用户名" desc="摘要信息" size="sm"/>
     <view style="margin-top: 20px;" />
-    <avatar name="用户名" desc="摘要信息"/>
+    <avatar name="用户名" desc="摘要信息" size="md"/>
+    <view style="margin-top: 20px;" />
+    <avatar name="用户名" desc="摘要信息" size="lg"/>
   </view>
 </view>

@@ -67,6 +67,18 @@ Page({
         },
       ],
     },
+    footerInfo7: {
+      type: 'end',
+      content: '自定义的没有更多内容了',
+      footerEndColor: 'red',
+    },
+    footerInfo8: {
+      type: 'end',
+      showEndIcon: true,
+      iconName: 'logo-alipay_',
+      iconURL: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
+      iconSize: 50,
+    },
   },
   brandClick() {
     my.alert({

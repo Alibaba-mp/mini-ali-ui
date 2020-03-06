@@ -39,10 +39,10 @@
       <am-icon type="right" class="am-notice-operation-icon"></am-icon>
     </view>
   </view>
-  <view style="{{transparent?'opacity: 0.3;':''}}" class="am-notice-{{type}}-bg" a:if="{{type === 'active'}}"></view>
+  <view class="{{transparent?'am-notice-transparent-bg':'am-notice-' + type + '-bg'}}"></view>
 </view>
 <view class="am-notice-capsule-wrap" a:elif="{{show && capsule}}" onTap="onNoticeTap">
-  <view class="am-notice am-notice-capsule {{className}} {{type ==='normal'?'':'am-notice-'+type}}">
+  <view class="am-notice am-notice-capsule {{className}}">
     <view class="am-notice-capsule-item" a:if="{{capsuleItem.length > 0}}">
       <block a:for="{{capsuleItem}}">
         <image a:if="{{index <= 2}}" src="{{item}}" class="am-notice-capsule-img" />
@@ -51,6 +51,6 @@
     <view class="am-notice-capsule-content am-notice-content-{{$id}}" hover-class="am-notice-capsule-content__hover" hover-start-time="0" hover-stay-time="0">
       <slot></slot>
     </view>
-    <view style="{{transparent?'opacity: 0.3;':''}}" class="am-notice-{{type}}-bg" a:if="{{type === 'active'}}"></view>
+    <view class="am-notice-capsule-bg"></view>
   </view>
 </view>

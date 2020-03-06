@@ -1,5 +1,5 @@
 <view class="am-modal-{{show ? 'show' : 'hide'}}" disable-scroll="{{disableScroll}}" style="{{zIndex ? `z-index: ${zIndex};`: ''}}">
-	<view class="am-modal-mask" a:if="{{mask}}" />
+	<view class="am-modal-mask {{advice === true ? 'am-modal-mask-advice': ''}}" a:if="{{mask}}" />
 	<view class="am-modal-document {{advice === true ? 'am-modal-document-advice' : '' }}">
 		<view class="am-modal {{className}}">
 			<view class="am-modal-content {{topImageSize === 'lg' ? 'am-modal-content--fill' : ''}}">

@@ -47,6 +47,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | onPlusClick | EventHandle | () => {} | - | + icon 被点击时的回调 | - | - |
 | onTabClick | EventHandle | (index: Number) => void | - | tab 被点击的回调 | - | - |
 | onChange | EventHandle | (index: Number) => void | - | tab 变化时触发 | - | - |
+| tabsName | String | - | - | tab 选项卡的名字，与 `activeTab` 的 key 值相同 | - | true |
 
 ### tab-content
 
@@ -62,6 +63,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 * `hasSubTitle` 为 `true` 时，tab 选项卡会显示带有描述的模式，但如果 `tabs` 数据中的 `subTitle` 为空，将不会显示描述文案；
 * 当 tabs 选项卡为胶囊模式时，会根据 `tabs` 数据中的 `number` 值显示数字；
 * 如 `elevator` 为 `true`，则为电梯组件，`<tab-content>` 将竖排展示，自动计算每个 `<tab-content>` 的坐标后，根据索引值定位指向；
+* `tabsName` 是为了能更好获取到当前 tab 选项卡的名称进行识别，值需要与 `activeTab` 的 key 值相同，如：`activeTab="{{activeTab2}}"`，那么 `tabsName="activeTab2"`；
 
 ### tab-content 高度自适应说明
 

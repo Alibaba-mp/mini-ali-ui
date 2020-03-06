@@ -854,10 +854,10 @@ align-text@^0.1.1, align-text@^0.1.3:
     longest "^1.0.1"
     repeat-string "^1.5.2"
 
-alipay-style@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/alipay-style/-/alipay-style-0.0.8.tgz#940f6e3cf6a2e268b857c30d8e41556940734f44"
-  integrity sha512-hPx5R/fCqU7EbXbDmCwSp5LBf6JfFSJWye+yMKTDbZPDt5rX8+Tayyb4oDj2TarU+S1owPm1MAVSAA5j5vp//Q==
+alipay-style@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/alipay-style/-/alipay-style-0.0.9.tgz#8d64424ea0c30200c23f34767ee1537439ae129d"
+  integrity sha512-GiDLH4T5d3oMmzY2lwDJA9R4CvYEMUtNLCkwv+4veLISIJD/i5H3RB1jkyLLPvzLdIfkf4ojbdWnn3f26CdWYw==
 
 ansi-colors@^1.0.1:
   version "1.1.0"
