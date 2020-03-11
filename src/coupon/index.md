@@ -32,6 +32,7 @@
 | action    | 票券右侧的插槽 |
 | date      | 票券到期时间的插槽 |
 | detail    | 票券规则详情的插槽 |
+| category  | 票券左侧票券类别的插槽 |
 
 
 ## 示例
@@ -50,98 +51,149 @@
 }
 ```
 
-
 ### axml
 ```xml
-<view style="margin-top: 10px;" />
-  <view>
-    <coupon title="券标题"
-      onCouponClick="onCouponClick" 
-      thumb="{{thumb}}">
-    </coupon>
-  </view>
-  <view>
-    <coupon title="券标题" 
-      subtitle="券副标题" 
-      onCouponClick="onCouponClick" 
-      thumb="{{thumb}}">
-    </coupon>
-  </view>
-  <view>
-    <coupon title="券标题" 
-      subtitle="券副标题" 
-      used="{{true}}"
-      onCouponClick="onCouponClick" 
-      thumb="{{thumb}}">
-      <view slot="date">有效期：2020.02.14-2020.02.29</view>
-      <view slot="detail" class="coupon_rule">
-        <text>1、详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明；</text>
-        <text>2、详细规则说明详细规则说明规则说明详细规则说明详细规则说明；</text>
-      </view>
-    </coupon>
-  </view>
-  <view>
-    <coupon title="券标题" 
-      subtitle="券副标题" 
-      onCouponClick="onCouponClick"
-      extra="{{false}}"
-      thumb="{{thumb}}">
-      <button shape="capsule" slot="action" onTap="onButtonTap" type="ghost">立即使用</button>
-      <view slot="date">有效期：2020.02.14-2020.02.29</view>
-      <view slot="detail" class="coupon_rule">
-        <text>1、详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明；</text>
-        <text>2、详细规则说明详细规则说明规则说明详细规则说明详细规则说明；</text>
-      </view>
-    </coupon>
-  </view>
-  <view>
-    <coupon title="券标题" 
-      subtitle="券副标题" 
-      onCouponClick="onCouponClick" 
-      thumb="{{thumb}}">
-      <button shape="capsule" slot="action" onTap="onButtonTap" type="ghost">立即使用</button>
-    </coupon>
-  </view>
-  <view>
-    <coupon title="券标题" 
-      subtitle="券副标题"
-      moreBtn="查看更多"
-      moreHide="{{false}}"
-      onCouponClick="onCouponClick" 
-      thumb="{{thumb}}">
-      <button shape="capsule" slot="action" onTap="onButtonTap" type="primary">立即使用</button>
-      <view slot="date">有效期：2020.02.14-2020.02.29</view>
-      <view slot="detail" class="coupon_rule">
-        <text>1、详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明；</text>
-        <text>2、详细规则说明详细规则说明规则说明详细规则说明详细规则说明；</text>
-      </view>
-    </coupon>
-  </view>
-  <view>
-    <coupon title="券标题" 
-      subtitle="券副标题" 
-      onCouponClick="onCouponClick" 
-      thumb="{{thumb}}">
-      <am-checkbox slot="action" onTap="onButtonTap" />
-    </coupon>
-  </view>
-  <view>
-    <coupon title="券标题" 
-      subtitle="券副标题" 
-      onCouponClick="onCouponClick" 
-      thumb="{{thumb}}">
-      <stepper
-        slot="action"
-        step="{{1}}"
-        showNumber
-        min="{{2}}"
-      />
-    </coupon>
-  </view>
-  <view style="margin-top: 50px;" />
+<view style="margin-top: 10px;"></view>
+<view>
+  <coupon title="券标题1"
+    onCouponClick="onCouponClick" 
+    thumb="{{thumb}}">
+  </coupon>
 </view>
+<view>
+  <coupon title="券标题2" 
+    subtitle="券副标题" 
+    onCouponClick="onCouponClick" 
+    thumb="{{thumb}}">
+  </coupon>
+</view>
+<view>
+  <coupon title="券标题3" 
+    subtitle="券副标题" 
+    used="{{true}}"
+    onCouponClick="onCouponClick" 
+    thumb="{{thumb}}">
+    <view slot="date">有效期：2020.02.14-2020.02.29</view>
+    <view slot="detail" class="coupon_rule">
+      <text>1、详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明；</text>
+      <text>2、详细规则说明详细规则说明规则说明详细规则说明详细规则说明；</text>
+    </view>
+  </coupon>
+</view>
+<view>
+  <coupon title="券标题4" 
+    subtitle="券副标题" 
+    onCouponClick="onCouponClick"
+    thumb="{{thumb}}">
+    <view slot="category" class="categoryDemo">
+      <text class="price">50</text><text class="unit">元</text><text class="type">满减券</text>
+    </view>
+    <button shape="capsule" slot="action" onTap="onButtonTap" type="ghost">立即使用</button>
+    <view slot="date">有效期：2020.02.14-2020.02.29</view>
+    <view slot="detail" class="coupon_rule">
+      <text>1、详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明；</text>
+      <text>2、详细规则说明详细规则说明规则说明详细规则说明详细规则说明；</text>
+    </view>
+  </coupon>
+</view>
+<view>
+  <coupon title="券标题5" 
+    subtitle="券副标题" 
+    onCouponClick="onCouponClick"
+    extra="{{false}}"
+    thumb="{{thumb}}">
+    <button shape="capsule" slot="action" onTap="onButtonTap" type="ghost">立即使用</button>
+    <view slot="date">有效期：2020.02.14-2020.02.29</view>
+    <view slot="detail" class="coupon_rule">
+      <text>1、详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明；</text>
+      <text>2、详细规则说明详细规则说明规则说明详细规则说明详细规则说明；</text>
+    </view>
+  </coupon>
+</view>
+<view>
+  <coupon title="券标题6" 
+    subtitle="券副标题" 
+    onCouponClick="onCouponClick" 
+    thumb="{{thumb}}"
+  >
+    <button shape="capsule" slot="action" onTap="onButtonTap" type="ghost">立即使用</button>
+  </coupon>
+</view>
+<view>
+  <coupon title="券标题7" 
+    subtitle="券副标题"
+    moreBtn="查看更多"
+    moreHide="{{false}}"
+    onCouponClick="onCouponClick" 
+    thumb="{{thumb}}">
+    <button shape="capsule" slot="action" onTap="onButtonTap" type="primary">立即使用</button>
+    <view slot="date">有效期：2020.02.14-2020.02.29</view>
+    <view slot="detail" class="coupon_rule">
+      <text>1、详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明详细规则说明；</text>
+      <text>2、详细规则说明详细规则说明规则说明详细规则说明详细规则说明；</text>
+    </view>
+  </coupon>
+</view>
+<view>
+  <coupon title="券标题8" 
+    subtitle="券副标题" 
+    onCouponClick="onCouponClick" 
+    thumb="{{thumb}}">
+    <am-checkbox slot="action" onTap="onButtonTap" />
+  </coupon>
+</view>
+<view>
+  <coupon title="券标题9" 
+    subtitle="券副标题" 
+    onCouponClick="onCouponClick" 
+    thumb="{{thumb}}">
+    <stepper
+      slot="action"
+      step="{{1}}"
+      showNumber
+      min="{{2}}"
+    />
+  </coupon>
+</view>
+<view style="margin-top: 50px;"></view>
 ```
 
+### acss
+```css
+.container {
+  padding-bottom: 50px;
+}
+.coupon_rule text {
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+/* 左侧权益内容的样式 slot="category" */
+.categoryDemo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+  align-self: flex-start;
+}
+.categoryDemo .price {
+  font-size: 60rpx;
+  color: #FF6010;
+}
+.categoryDemo .unit {
+  padding-left: 4rpx;
+  font-weight: bold;
+  font-size: 26rpx;
+  color: #FF6010;
+}
+.categoryDemo .type {
+  flex: 1 1 100%;
+  text-align: center;
+  font-size: 22rpx;
+  color: #999;
+}
+```
 
 ### js
 ```javascript

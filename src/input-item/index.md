@@ -68,21 +68,19 @@
 
 ```xml
 <view>
-  <view style="margin-top: 10px;" />
+  <view style="margin-top: 10px;"></view>
   <list>
     <input-item data-field="cardNo" 
       clear="{{true}}" 
       value="{{cardNo}}" 
       className="dadada" 
       placeholder="银行卡号" 
-      onInput="onItemInput"
+      onInput="onItemInput" 
       onBlur="onItemBlur" 
       onConfirm="onItemConfirm" 
-      onClear="onClear" >
+      onClear="onClear">
       卡号
-      <view slot="extra" 
-        class="extra" 
-        onTap="onExtraTap"></view>
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
     </input-item>
     <input-item data-field="name" 
       placeholder="姓名" 
@@ -90,19 +88,14 @@
       value="{{name}}" 
       clear="{{true}}" 
       onInput="onItemInput" 
-      onClear="onClear" >
-      姓名
-    </input-item>
+      onClear="onClear">姓名</input-item>
     <input-item data-field="password" 
-      placeholder="密码" 
-      password >
-      密码
-    </input-item>
-    <input-item data-field="layerShow" 
+      placeholder="密码">密码</input-item>
+    <input-item data-field="layerShow1" 
       placeholder="layer 为 vertical 的排列" 
       type="text" 
       layer="vertical"
-      value="{{layerShow}}" 
+      value="{{layerShow1}}" 
       clear="{{true}}" 
       onInput="onItemInput" 
       onClear="onClear">
@@ -111,19 +104,43 @@
         <am-icon type="phone-book_" size="24" color="#1677ef"></am-icon>
       </view>
     </input-item>
-    <input-item data-field="remark" 
-      placeholder="备注" />
+    <input-item data-field="layerShow2"
+      placeholder="layer 为 vertical 的排列" 
+      type="text" 
+      layer="vertical"
+      value="{{layerShow2}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear">
+      竖向表单
+    </input-item>
+    <input-item data-field="layerShow3" 
+      placeholder="layer 为 vertical 的排列" 
+      type="text" 
+      layer="vertical"
+      disabled="{{true}}"
+      value="{{layerShow3}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear">
+      竖向表单
+      <view onTap="onExtraTap" slot="extra">
+        <am-icon type="phone-book_" size="24" color="#1677ef"></am-icon>
+      </view>
+    </input-item>
+    <input-item data-field="remark" placeholder="备注"></input-item>
   </list>
 </view>
 ```
 
 ```javascript
-
 Page({
   data: {
     cardNo: '1234****',
     name: '',
-    layer: '',
+    layerShow1: '',
+    layerShow2: '垂直输入框的布局',
+    layerShow3: 'disabled 状态的 input',
   },
   onExtraTap() {
     my.alert({
@@ -135,8 +152,8 @@ Page({
       [e.target.dataset.field]: e.detail.value,
     });
   },
-  onItemFocus(e) {},
-  onItemBlur(e) {},
+  onItemFocus() {},
+  onItemBlur() {},
   onItemConfirm() {},
   onClear(e) {
     this.setData({
@@ -152,7 +169,6 @@ Page({
 ```
 
 ```css
-/* API-DEMO page/input-item/index.acss */
 .extra {
   background-image: url('https://gw.alipayobjects.com/zos/rmsportal/dOfSJfWQvYdvsZiJStvg.svg');
   background-size: contain;

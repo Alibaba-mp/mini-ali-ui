@@ -16,15 +16,15 @@
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | className | String | - | - | 自定义 class | - | - |
-| type | String | normal | normal、guide、copyright、brand、link、end | 选择使用指定的页脚类型 | - | - |
+| type | String | normal | normal、guide、copyright、brand、link、end | 选择使用指定的页脚类型 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | content | String | - | - | 页脚文本内容 | - | - |
 | extend | Array | - | - | 页脚部分的链接、logo 等信息 | - | - |
 | onBrandTap | EventHandle | () => {} | - | 品牌 logo 事件回调 | - | - |
-| showEndIcon | Boolean | false | - | type="end" 时的 footer 组件是否以 icon 方式展示，为 true 将不会显示 `content` 的文本内容 | - | - |
-| iconName | String | selected | - | 使用 am-icon，具体的值可参考 am-icon 的 type 值 | - | - |
-| iconURL | String | - | - | 使用网络图片。当确定使用网络图片后，`iconName` 将失效；且 网络图片目前仅支持宽高相同且小于等于 44rpx； | - | - |
-| iconSize | Number | 18 | - | 小于等于 22px 的值 | - | - |
-| footerEndColor | String | - | - | type="end" 时文本的颜色 | - | - |
+| showEndIcon | Boolean | false | - | type="end" 时的 footer 组件是否以 icon 方式展示，为 true 将不会显示 `content` 的文本内容 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| iconName | String | selected | - | 使用 am-icon，具体的值可参考 am-icon 的 type 值 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| iconURL | String | - | - | 使用网络图片。当确定使用网络图片后，`iconName` 将失效；且 网络图片目前仅支持宽高相同且小于等于 44rpx； | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| iconSize | Number | 18 | - | 小于等于 22px 的值 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| footerEndColor | String | - | - | type="end" 时文本的颜色 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 
 ## Bug & Tip
@@ -85,15 +85,27 @@
 <footer 
   type="{{footerInfo7.type}}" 
   content="{{footerInfo7.content}}"
+  footerEndColor="{{footerInfo7.footerEndColor}}"
+/>
+<footer 
+  type="{{footerInfo8.type}}"
 />
 <footer 
   type="{{footerInfo8.type}}" 
   content="{{footerInfo8.content}}"
   showEndIcon="{{footerInfo8.showEndIcon}}"
-  typeIcon="{{footerInfo8.typeIcon}}"
   iconSize="{{footerInfo8.iconSize}}"
-  iconURL="{{footerInfo8.iconURL}}"
 />
+```
+
+```css
+page {
+  padding-top: 20px;
+  background-color: #fff;
+}
+.am-footer {
+  margin-bottom: 40px;
+}
 ```
 
 ```javascript
@@ -130,15 +142,15 @@ Page({
       content: '过往业绩不预示产品未来表现，市场有风险，投资需谨慎',
       extend: [
         {
-          logo: 'https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original',
-          width: '80px',
-          height: '24px',
+          logo: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
+          width: '30px',
+          height: '30px',
           link: '/pages/list/app',
         },
         {
-          logo: 'https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original',
-          width: '150rpx',
-          height: '100rpx',
+          logo: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ',
+          width: '420rpx',
+          height: '116rpx',
         },
       ],
     },
@@ -168,13 +180,12 @@ Page({
     },
     footerInfo7: {
       type: 'end',
-      content: '自定义的没有更多内容了',
+      content: '自定义的没有更多内容的底线',
+      footerEndColor: 'red',
     },
     footerInfo8: {
       type: 'end',
       showEndIcon: true,
-      iconName: 'logo-alipay_',
-      iconURL: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
       iconSize: 50,
     },
   },
