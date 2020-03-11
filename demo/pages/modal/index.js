@@ -4,6 +4,7 @@ Page({
     modalOpened2: false,
     modalOpened21: false,
     modalOpened22: false,
+    modalOpened222: false,
     modalOpened23: false,
     modalOpened3: false,
     modalOpened4: false,
@@ -89,6 +90,22 @@ Page({
   onModalClose22() {
     this.setData({
       modalOpened22: false,
+    });
+  },
+  /* 带图弹窗-中图 */
+  openModal222() {
+    this.setData({
+      modalOpened222: true,
+    });
+  },
+  onModalClick222() {
+    this.setData({
+      modalOpened222: false,
+    });
+  },
+  onModalClose222() {
+    this.setData({
+      modalOpened222: false,
     });
   },
   /* 带图弹框-关闭icon */

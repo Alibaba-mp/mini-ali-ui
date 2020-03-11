@@ -1,8 +1,10 @@
-
 Page({
   data: {
     cardNo: '1234****',
     name: '',
+    layerShow1: '',
+    layerShow2: '垂直输入框的布局',
+    layerShow3: 'disabled 状态的 input',
   },
   onExtraTap() {
     my.alert({
@@ -14,16 +16,8 @@ Page({
       [e.target.dataset.field]: e.detail.value,
     });
   },
-  onItemFocus(e) {
-    this.setData({
-      [e.target.dataset.name]: true,
-    });
-  },
-  onItemBlur(e) {
-    this.setData({
-      [e.target.dataset.name]: false,
-    });
-  },
+  onItemFocus() {},
+  onItemBlur() {},
   onItemConfirm() {},
   onClear(e) {
     this.setData({

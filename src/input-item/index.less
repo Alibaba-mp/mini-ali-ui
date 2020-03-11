@@ -8,10 +8,6 @@
     background: var(--am-input-item-background, @color-fill-grey-inverse);
     padding-left: @h-spacing-large;
     padding-left: var(--am-input-item-padding-left, @h-spacing-large);
-
-    // .a-input-content {
-    //   padding-left: 2px;
-    // }
     &-extra {
       margin-left: @h-spacing-large;
       margin-left: var(--am-input-item-padding-left, @h-spacing-large);
@@ -33,11 +29,29 @@
   }
 
   &-label {
+    align-self: center;
     min-width: @size-20;
     min-width: var(--am-input-label-min-width, @size-20);
     margin-right: 2px;
     color: @color-text-title;
     color: var(--am-input-item-label-color, @color-text-title);
+  }
+
+  &-layer {
+    display: flex;
+    flex: 1;
+    &-vertical {
+      flex-direction: column;
+      padding: 12px 0;
+      .am-input-label {
+        align-self: flex-start;
+        font-size: @font-size-subtitle;
+        color: @color-text-subtitle;
+      }
+      .a-input-placeholder {
+        margin-left: -3px;
+      }
+    }
   }
 
   &-content {

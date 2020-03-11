@@ -25,6 +25,7 @@
   }
 
   &-label {
+    align-self: center;
     min-width: @size-20;
     min-width: var(--am-picker-label-min-width, @size-20);
     margin-right: 2px;
@@ -40,6 +41,23 @@
     align-items: center;
     overflow: hidden;
     padding-left: 3px;
+  }
+
+  &-layer {
+    display: flex;
+    flex: 1;
+    &-vertical {
+      flex-direction: column;
+      padding: 12px 0;
+      .am-picker-label {
+        align-self: flex-start;
+        font-size: @font-size-subtitle;
+        color: @color-text-subtitle;
+      }
+      .am-picker-wrapper {
+        padding-left: 0;
+      }
+    }
   }
 
   &-content {

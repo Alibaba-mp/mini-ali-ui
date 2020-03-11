@@ -34,10 +34,11 @@
   footerEndColor="{{footerInfo7.footerEndColor}}"
 />
 <footer 
+  type="{{footerInfo8.type}}"
+/>
+<footer 
   type="{{footerInfo8.type}}" 
   content="{{footerInfo8.content}}"
   showEndIcon="{{footerInfo8.showEndIcon}}"
-  typeIcon="{{footerInfo8.typeIcon}}"
   iconSize="{{footerInfo8.iconSize}}"
-  iconURL="{{footerInfo8.iconURL}}"
 />

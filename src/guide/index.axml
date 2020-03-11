@@ -37,7 +37,6 @@
         </block>
       </view>
     </view>
-    </view>
     <mask show="{{!hasJump && show}}"></mask>
   </view>
 </block>

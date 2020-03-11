@@ -2,9 +2,9 @@
   <view style="display: flex;height: 100%;">
     <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 90vw;background-color: #f8d7d7;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="width: 300rpx;height: 72rpx;" /></view>
     <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 90vw;background-color: #d5f7d5;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="width: 300rpx;height: 72rpx;" /></view>
-    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 50vw;background-color: #f0e39e;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ" style="width: 70px;height: 70px;"></view>
+    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 50vw;background-color: #f0e39e;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ" style="width: 70px;height: 70px;" /></view>
     <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 120vw;background-color: #F8F8F8;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="width: 300rpx;height: 72rpx;" /></view>
-    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 20vw;background-color: #d3d3d3;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ" style="width: 50px;height: 50px;"></view>
+    <view style="text-align: center;padding-top: 20px;flex: 0 0 auto;width: 20vw;background-color: #d3d3d3;"><image src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ" style="width: 50px;height: 50px;" /></view>
   </view>
 </pagination>
 

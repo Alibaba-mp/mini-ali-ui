@@ -31,15 +31,15 @@ Page({
       content: '过往业绩不预示产品未来表现，市场有风险，投资需谨慎',
       extend: [
         {
-          logo: 'https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original',
-          width: '80px',
-          height: '24px',
+          logo: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
+          width: '30px',
+          height: '30px',
           link: '/pages/list/app',
         },
         {
-          logo: 'https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original',
-          width: '150rpx',
-          height: '100rpx',
+          logo: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ',
+          width: '420rpx',
+          height: '116rpx',
         },
       ],
     },
@@ -69,14 +69,12 @@ Page({
     },
     footerInfo7: {
       type: 'end',
-      content: '自定义的没有更多内容了',
+      content: '自定义的没有更多内容的底线',
       footerEndColor: 'red',
     },
     footerInfo8: {
       type: 'end',
       showEndIcon: true,
-      iconName: 'logo-alipay_',
-      iconURL: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ',
       iconSize: 50,
     },
   },

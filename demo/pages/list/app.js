@@ -66,6 +66,8 @@ Page({
                 path: '/pages/coupon/index',
                 tag: '新组件',
                 tagType: 'danger',
+                update: true,
+                updateDesc: '✍️新增票券类型',
               },
               {
                 name: 'Grid',
@@ -87,6 +89,8 @@ Page({
                 path: '/pages/footer/index',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️新增页脚类型',
               },
               {
                 name: 'Terms',
@@ -136,6 +140,8 @@ Page({
                 path: '/pages/modal/index',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️小、中图的尺寸优化',
               },
               {
                 name: 'PopUp',
@@ -187,6 +193,8 @@ Page({
                 path: '/pages/notice/index',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️调整通告栏类型及表现方式',
               },
               {
                 name: 'Badge',
@@ -222,6 +230,8 @@ Page({
                 path: '/pages/avatar/index',
                 tag: '新组件',
                 tagType: 'danger',
+                update: true,
+                updateDesc: '✍️调整头像尺寸及文字大小',
               },
             ],
           },
@@ -245,6 +255,8 @@ Page({
                 path: '/pages/input-item/index',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️新增垂直输入框',
               },
               {
                 name: 'Picker-item',
@@ -252,6 +264,8 @@ Page({
                 path: '/pages/picker-item/index',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️新增垂直选择框',
               },
               {
                 name: 'Verify-code',

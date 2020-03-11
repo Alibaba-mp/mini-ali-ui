@@ -31,5 +31,6 @@
       info="点击了第三个card" 
       bgImg="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*OjyRRqjLM6MAAAAAAAAAAABkARQnAQ"
       expand
-      />
+    />
+  </view>
 </view>

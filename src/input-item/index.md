@@ -35,6 +35,7 @@
 | onFocus          | (e: Object) => void |        | -                           | 聚焦时触发                                                |          | 否   |
 | onBlur           | (e: Object) => void |        | -                           | 失去焦点时触发                                            |          | 否   |
 | onClear          | () => void          |        | -                           | 点击清除icon时触发                                        |          | 否   |
+| layer | String | '' | vertical | 文本输入框是否为垂直排列，`vertical` 时为垂直排列，空值为横向排列 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
 
 ### type 属性值介绍
 * `text`： 字符输入框
@@ -59,7 +60,8 @@
   "defaultTitle": "input-item",
   "usingComponents":{
     "list": "mini-ali-ui/es/list/index",
-    "input-item": "mini-ali-ui/es/input-item/index"
+    "input-item": "mini-ali-ui/es/input-item/index",
+    "am-icon": "mini-ali-ui/es/am-icon/index"
   }
 }
 ```
@@ -96,6 +98,19 @@
       password >
       密码
     </input-item>
+    <input-item data-field="layerShow" 
+      placeholder="layer 为 vertical 的排列" 
+      type="text" 
+      layer="vertical"
+      value="{{layerShow}}" 
+      clear="{{true}}" 
+      onInput="onItemInput" 
+      onClear="onClear">
+      竖向表单
+      <view onTap="onExtraTap" slot="extra">
+        <am-icon type="phone-book_" size="24" color="#1677ef"></am-icon>
+      </view>
+    </input-item>
     <input-item data-field="remark" 
       placeholder="备注" />
   </list>
@@ -103,10 +118,12 @@
 ```
 
 ```javascript
+
 Page({
   data: {
     cardNo: '1234****',
     name: '',
+    layer: '',
   },
   onExtraTap() {
     my.alert({
@@ -118,17 +135,8 @@ Page({
       [e.target.dataset.field]: e.detail.value,
     });
   },
-  onItemFocus(e) {
-    this.setData({
-      [e.target.dataset.name]: true,
-    });
-    debugger;
-  },
-  onItemBlur(e) {
-    this.setData({
-      [e.target.dataset.name]: false,
-    });
-  },
+  onItemFocus(e) {},
+  onItemBlur(e) {},
   onItemConfirm() {},
   onClear(e) {
     this.setData({
@@ -141,7 +149,6 @@ Page({
     });
   },
 });
-
 ```
 
 ```css

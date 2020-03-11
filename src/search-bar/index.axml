@@ -5,7 +5,6 @@
         <text class="am-search-synthetic-placeholder" style="{{ visibility: !focus && _value.length === 0 ? 'visible': 'hidden'}}">{{placeholder}}</text>
     </view>
     <input
-      enableNative="{{false}}"
       class="am-search-value"
       confirm-type="search"
       value="{{_value}}"

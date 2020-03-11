@@ -3,40 +3,35 @@
 /* stylelint-disable font-family-no-missing-generic-family-keyword */
 .am-coupon {
   position: relative;
-  padding-top: 24%;
-  margin: 6px 10px;
+  margin: @v-spacing-standard @h-spacing-large;
   background: transparent;
   &-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: transparent;
-    border-radius: @corner-radius-lg;
-    border-radius: var(--am-coupon-border-radius, @corner-radius-lg);
     width: 100%;
     height: 100%;
     display: flex;
     align-items: stretch;
+    border-radius: @corner-radius-lg;
+    border-radius: var(--am-coupon-border-radius, @corner-radius-lg);
   }
   &-thumb {
-    width: 18%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    width: @size-20;
+    padding: @size-5 0 @size-5 @size-5;
     background: @color-fill-grey-inverse;
     background: var(--am-coupon-background-color, @color-fill-grey-inverse);
     border-top-left-radius: @corner-radius-lg;
     border-top-left-radius: var(--am-coupon-border-radius, @corner-radius-lg);
     border-bottom-left-radius: @corner-radius-lg;
     border-bottom-left-radius: var(--am-coupon-border-radius, @corner-radius-lg);
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    box-sizing: border-box;
     &-image {
-      width: 42px;
-      height: 42px;
+      width: @size-9;
+      height: @size-9;
       border-radius: @corner-radius-circle;
       border-radius: var(--am-coupon-thumb-border-radius, @corner-radius-circle);
-      background: grey;
-      margin-left: 6px;
     }
   }
   &-divider {
@@ -45,20 +40,20 @@
     display: flex;
     flex-direction: column;
     &-upper-hole {
-      background: transparent;
       height: 12.5px;
       margin-top: -8px;
+      background: transparent;
       border-radius: 50vh;
       box-shadow: 0 17px 0 10px @color-fill-grey-inverse;
       box-shadow: 0 17px 0 10px var(--am-coupon-background-color, @color-fill-grey-inverse);
     }
     &-middle-blank {
-      background: @color-fill-grey-inverse;
-      background: var(--am-coupon-background-color, @color-fill-grey-inverse);
       flex-grow: 1;
-      z-index: 1;
       display: flex;
       justify-content: space-around;
+      z-index: 1;
+      background: @color-fill-grey-inverse;
+      background: var(--am-coupon-background-color, @color-fill-grey-inverse);
     }
     &-dashed-line {
       width: 0;
@@ -74,38 +69,112 @@
   }
   &-content {
     flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: @size-5 @h-spacing-large;
+    padding: var(--am-coupon-content-spacingTB, @size-5) var(--am-coupon-content-spacingLR, @h-spacing-large);
     background: @color-fill-grey-inverse;
     border-top-right-radius: @corner-radius-lg;
     border-bottom-right-radius: @corner-radius-lg;
-    display: flex;
-    padding: @v-spacing-large @h-spacing-large;
-    padding: var(--am-coupon-content-spacing, @v-spacing-large) var(--am-coupon-content-spacing, @h-spacing-large);
     &-text {
+      position: relative;
+      z-index: 2;
       flex-grow: 1;
       justify-content: space-around;
       align-self: center;
-      margin-left: -6px;
       &-title {
+        font-weight: bold;
         font-size: @font-size-title;
         font-size: var(--am-coupon-title-size, @font-size-title);
         color: @color-text-title;
         color: var(--am-coupon-title-color, @color-text-title);
-        font-family: PingFangSC-Medium;
       }
       &-subtitle {
-        margin-top: 4px;
+        margin-top: @v-spacing-standard;
+        margin-top: var(--am-coupon-subTitle-marginTop, @v-spacing-standard);
         font-size: @font-size-content;
         font-size: var(--am-coupon-subtitle-size, @font-size-content);
         color: @color-text-subtitle;
         color: var(--am-coupon-subtitle-color, @color-text-subtitle);
-        font-family: PingFangSC-Medium;
       }
     }
     &-action {
+      position: relative;
+      z-index: 2;
       display: flex;
       align-items: center;
+      .am-checkbox {
+        margin-right: @size-2;
+      }
       &-slot {
         display: flex;
+      }
+    }
+    &-used {
+      &-tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: @size-17;
+        height: @size-17;
+        background: url('https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*y-ZxR79ovioAAAAAAAAAAABkARQnAQ') no-repeat 0 0;
+        background-size: cover;
+        z-index: 1;
+      }
+      .am-coupon-thumb-image {
+        opacity: @opacity-disabled;
+      }
+      .am-coupon-content-text-title {
+        color: @color-text-subtitle;
+      }
+    }
+    &-detail {
+      display: flex;
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-top: @size-5;
+      padding-top: var(--am-coupon-content-spacingTB, @size-5);
+      margin-bottom: -@v-spacing-large;
+      font-size: @font-size-weak;
+      font-size: var(--am-coupon-detail-size, @font-size-weak);
+      color: @color-text-subtitle;
+      color: var(--am-coupon-detail-color, @color-text-subtitle);
+      &-date {
+        flex: 1;
+        white-space: nowrap;
+        align-self: center;
+        margin-top: -@size-1/2;
+      }
+      &-option {
+        flex: 1;
+        text-align: right;
+        align-self: center;
+        &__arrow {
+          margin-left: @size-1/2;
+          margin-top: @size-1;
+          vertical-align: -@size-1/2;
+          font-size: @font-size-subtitle;
+          font-size: var(--am-coupon-detail-arrow-size, @font-size-subtitle);
+          color: @color-text-weak;
+          color: var(--am-coupon-detail-arrow-color, @color-text-weak);
+        }
+      }
+      &-more {
+        width: 100%;
+        padding: @size-1 0;
+      }
+    }
+    &-no-extra {
+      padding-left: @size-5;
+      padding-left: var(--am-coupon-no-extra-spacingL, @size-5);
+      border-radius: @corner-radius-lg;
+      &-text {
+        margin-left: 0;
+      }
+      .am-coupon-content-detail-more {
+        padding-right: @size-20;
+        padding-right: var(--am-coupon-no-extra-detail-padding, @size-20);
       }
     }
   }

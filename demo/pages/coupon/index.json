@@ -2,6 +2,8 @@
   "defaultTitle": "Coupon",
   "usingComponents":{
     "coupon":"../../es/coupon/index",
-    "button": "../../es/button/index"
+    "button": "../../es/button/index",
+    "am-checkbox": "../../es/am-checkbox/index",
+    "stepper": "../../es/stepper/index"
   }
 }

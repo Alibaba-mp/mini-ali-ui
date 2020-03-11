@@ -18,6 +18,7 @@
 | name | String |  |  | 组件名字，用于表单提交获取数据 |  |  |
 | placeholder | String |  |  | 占位符 |  |  |
 | onPickerTap | (e: Object) => void |  |  | 点击pickeritem时触发 |  |  |
+| layer | String | '' | vertical | 文本输入框是否为垂直排列，`vertical` 时为垂直排列，空值为横向排列 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
 
 ### slots
 
@@ -45,6 +46,15 @@
       placeholder="选择发卡银行"
       value="{{bank}}"
       onPickerTap="onPickerTap"
+    >
+      发卡银行
+    </picker-item>
+    <picker-item
+      data-field="bank"
+      placeholder="选择发卡银行"
+      value="{{bank}}"
+      onPickerTap="onPickerTap"
+      layer="vertical"
     >
       发卡银行
     </picker-item>

@@ -2,6 +2,7 @@
   "defaultTitle": "Input-item",
   "usingComponents":{
     "list": "../../es/list/index",
-    "input-item": "../../es/input-item/index"
+    "input-item": "../../es/input-item/index",
+    "am-icon": "../../es/am-icon/index"
   }
 }

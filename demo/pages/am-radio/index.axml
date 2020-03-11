@@ -7,7 +7,7 @@
           <radio-group class="radio-group" onChange="radioChange" name="lib">
             <label class="radio" a:for="{{items}}" key="label-{{index}}">
               <am-radio value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}" />
-              <view style="display:inline-block;">{{item.desc}}</text>
+              <view style="display:inline-block;">{{item.desc}}</view>
             </label>
           </radio-group>
         </view>
@@ -15,7 +15,7 @@
           <radio-group class="radio-group" onChange="radioChange" name="lib">
             <label class="radio" a:for="{{items1}}" key="label-{{index}}">
               <am-radio value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}" />
-              <view style="display:inline-block;">{{item.desc}}</text>
+              <view style="display:inline-block;">{{item.desc}}</view>
             </label>
           </radio-group>
         </view>

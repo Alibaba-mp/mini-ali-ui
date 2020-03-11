@@ -1,19 +1,20 @@
 <view class="am-picker-item {{last ? 'last': ''}} {{className}}">
   <view class="am-picker-line">
-    <view a:if="{{$slots.$default}}" 
-      class="am-picker-label {{labelCls}}">
-      <slot />
+    <view class="am-picker-layer {{layer === 'vertical'?'am-picker-layer-vertical':'am-picker-layer-normal'}}" onTap="onPickerTap">
+      <view a:if="{{$slots.$default}}" 
+        class="am-picker-label {{labelCls}}">
+        <slot />
+      </view>
+      <view class="am-picker-wrapper">
+        <text class="am-picker-content am-picker-text {{pickerCls}} {{ value.length > 0 ? 'am-picker-content-value': 'am-picker-content-placeholder' }}">
+          {{value.length > 0 ? value : placeholder}}
+        </text>
+      </view>
     </view>
-    <view class="am-picker-wrapper" 
-      onTap="onPickerTap">
-      <text class="am-picker-content am-picker-text {{pickerCls}} {{ value.length > 0 ? 'am-picker-content-value': 'am-picker-content-placeholder' }}">
-        {{value.length > 0 ? value : placeholder}}
-      </text>
-      <am-icon class="am-picker-arrow" 
-        type="right" 
-        size="18" 
-        color="#ccc" />
-    </view>
+    <am-icon class="am-picker-arrow" 
+      type="right" 
+      size="18" 
+      color="#ccc" />
     <slot name="extra" />
     <view class="am-picker-line-bottom" />
   </view>

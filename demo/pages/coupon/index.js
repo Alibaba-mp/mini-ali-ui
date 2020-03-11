@@ -2,10 +2,14 @@ Page({
   data: {
     thumb: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*b-kqQ4RZgsYAAAAAAAAAAABkARQnAQ',
   },
-  onCouponClick() {
-    my.alert({
-      content: '票券点击事件',
-    });
+  onCouponClick(e) {
+    if (e.currentTarget.dataset.used) {
+      return false;
+    } else {
+      my.alert({
+        content: '可用票券，票券点击事件',
+      });
+    }
   },
   onButtonTap() {
     my.alert({

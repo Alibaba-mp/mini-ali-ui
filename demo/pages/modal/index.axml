@@ -4,6 +4,8 @@
 	<view style="margin-top: 10px;" />
 	<button onTap="openModal22" style="margin: 0 10px;">带图弹窗-小图</button>
 	<view style="margin-top: 10px;" />
+	<button onTap="openModal222" style="margin: 0 10px;">带图弹窗-中图</button>
+	<view style="margin-top: 10px;" />
 	<button onTap="openModal2" style="margin: 0 10px;">带图弹窗-大图</button>
   <view style="margin-top: 10px;" />
 	<button onTap="openModal23" style="margin: 0 10px;">带图弹窗-关闭icon</button>
@@ -63,6 +65,17 @@
 		onModalClose="onModalClose22"
 		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
 		topImageSize="sm"
+	>
+		<view slot="header">标题单行</view>
+		说明当前状态、提示用户解决方案，最好不要超过两行。
+		<view slot="footer">我知道了</view>
+	</modal>
+	<modal
+		show="{{modalOpened222}}"
+		onModalClick="onModalClick222"
+		onModalClose="onModalClose222"
+		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
+		topImageSize="md"
 	>
 		<view slot="header">标题单行</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。

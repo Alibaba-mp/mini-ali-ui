@@ -16,7 +16,7 @@
       <view class="am-footer-end__text" a:if="{{showEndIcon}}">
         <am-icon
         a:if="{{!iconURL}}"
-          type="{{typeIcon?typeIcon:'selected'}}" 
+          type="{{iconName?iconName:'selected'}}" 
           size="{{iconSize?(iconSize > maxSize?maxSize:iconSize):defaultSize}}" 
           color="#999"
         />
@@ -32,7 +32,7 @@
       <view class="am-footer-end__text"
         style="{{footerEndColor?'--am-footerEndColor:' + footerEndColor + ';color:' + footerEndColor + ';color: var(--am-footerEndColor);':''}}"
         a:else
-      >{{content?content:'没有更多了'}}</view>
+      >{{content?content:'我是有底线的'}}</view>
       <view class="am-footer-end__divider"></view>
     </view>
   </block>

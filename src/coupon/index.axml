@@ -1,19 +1,23 @@
-<view class="am-coupon" onTap="onCouponClick">
+<view class="am-coupon {{used?'am-coupon-used':''}}" 
+  onTap="onCouponClick"
+  data-used="{{used}}"
+>
   <view class="am-coupon-container">
-    <view class="am-coupon-thumb">
+    <view class="am-coupon-thumb" a:if="{{extra}}">
       <image class="am-coupon-thumb-image" 
-        src="{{thumb}}" 
+        src="{{thumb}}" a:if="{{!$slots.category}}"
         mode="scaleToFill" />
+      <slot name="category" />
     </view>
-    <view class="am-coupon-divider">
+    <view class="am-coupon-divider" a:if="{{extra}}">
       <view class="am-coupon-divider-upper-hole" />
       <view class="am-coupon-divider-middle-blank">
         <view class="am-coupon-divider-dashed-line" />
       </view>
       <view class="am-coupon-divider-lower-hole" />
     </view>
-    <view class="am-coupon-content">
-      <view class="am-coupon-content-text">
+    <view class="am-coupon-content {{extra?'':'am-coupon-content-no-extra'}}">
+      <view class="am-coupon-content-text {{extra?'':'am-coupon-content-no-extra-text'}}">
         <view class="am-coupon-content-text-title">
           {{title}}
         </view>
@@ -24,6 +28,20 @@
       <view class="am-coupon-content-action" catchTap="catchActionTap">
         <slot name="action" />
       </view>
+      <view class="am-coupon-content-detail">
+        <view class="am-coupon-content-detail-date">
+          <slot name="date" />
+        </view>
+        <view class="am-coupon-content-detail-more" a:if="{{!moreHide}}">
+          <slot name="detail" />
+        </view>
+        <view
+          class="am-coupon-content-detail-option {{show?'am-coupon-content-detail-option__show':''}}"
+          a:if="{{$slots.detail}}"
+          catchTap="changeMoreState"
+        >{{moreBtn}} <icon type="{{!moreHide?'up':'down'}}" class="am-coupon-content-detail-option__arrow" /></view>
+      </view>
     </view>
+    <view class="am-coupon-used-tag" a:if="{{used}}"></view>
   </view>
 </view>
