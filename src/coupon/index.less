@@ -110,24 +110,6 @@
         display: flex;
       }
     }
-    &-used {
-      &-tag {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: @size-17;
-        height: @size-17;
-        background: url('https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*y-ZxR79ovioAAAAAAAAAAABkARQnAQ') no-repeat 0 0;
-        background-size: cover;
-        z-index: 1;
-      }
-      .am-coupon-thumb-image {
-        opacity: @opacity-disabled;
-      }
-      .am-coupon-content-text-title {
-        color: @color-text-subtitle;
-      }
-    }
     &-detail {
       display: flex;
       flex: 1 1 100%;
@@ -176,6 +158,24 @@
         padding-right: @size-20;
         padding-right: var(--am-coupon-no-extra-detail-padding, @size-20);
       }
+    }
+  }
+  &-used {
+    &-tag {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: @size-17;
+      height: @size-17;
+      background: url('https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*y-ZxR79ovioAAAAAAAAAAABkARQnAQ') no-repeat 0 0;
+      background-size: cover;
+      z-index: 1;
+    }
+    .am-coupon-thumb-image {
+      opacity: @opacity-disabled;
+    }
+    .am-coupon-content-text-title {
+      color: @color-text-subtitle;
     }
   }
 }
