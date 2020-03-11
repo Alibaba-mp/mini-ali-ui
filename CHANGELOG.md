@@ -1,3 +1,17 @@
+## 1.0.4
+`2020-03-11`
+* **Add**
+  * footer 组件新增 `end` 类型 [#8](https://github.com/Alibaba-mp/mini-ali-ui/issues/8)；
+  * coupon 组件新增票券权益、使用规则等说明；
+  * input-item、picker-item 新增垂直类型；
+* **Update**
+  * notice 组件类型更新；
+  * search-bar 组件键盘显示“搜索”；
+  * 微调 avatar 头像尺寸和 modal 组件中图片尺寸；
+  * 相关 demo 文件以及 readme.md 文档调整；
+* **Fixed**
+  * 组件标签闭合
+
 ## 1.0.3
 `2020-03-03`
 * **Update** Calendar component demo;
