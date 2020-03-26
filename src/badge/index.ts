@@ -6,5 +6,6 @@ Component({
     dot: false,
     withArrow: false,
     direction: 'middle',
+    stroke: false,
   },
 });

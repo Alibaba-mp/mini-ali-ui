@@ -1,6 +1,7 @@
 <view a:if={{!useV2}} class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}">
   <block a:if="{{right.length > 0}}">
-    <view class="am-swipe-right am-swipe-right-{{$id}}">
+    <view class="am-swipe-right am-swipe-right-{{$id}} {{borderRadius?'am-swipe-right-radius':''}}" style="{{borderRadius?'right: ' + radiusItemSpace + ';':'right: 0;'}}width: {{actionWidth - cellWidth}}px;">
+      <view a:if="{{borderRadius}}" style="width: {{radiusItemSpace}};height: 100%;"></view>
       <block a:for="{{right}}">
         <view
           class="am-swipe-btn am-swipe-btn-{{item.type}}"
@@ -29,11 +30,11 @@
 <view
   class="am-swipe am-swipe-{{$id}} {{className}}"
   style="width: {{viewWidth}}px; {{height?'height: ' + height + 'px;':'height: auto;'}}"
-  key="{{key}}"
+  key="{{$id}}"
   a:else
 >
   <movable-area
-    class="am-swipe-movable-area am-swipe-movable-area-{{$id}}"
+    class="am-swipe-movable-area"
     style="width: {{ viewWidth + actionWidth}}px;{{height?'height: ' + height + 'px;':'height: auto;'}}left: -{{actionWidth}}px;"
   >
     <block a:if="{{right.length > 0}}">
@@ -65,7 +66,7 @@
       damping="30"
       friction="5"
     >
-      <slot />
+      <view class="am-swipe-movable-area-{{$id}}"><slot /></view>
     </movable-view>
   </movable-area>
 </view>

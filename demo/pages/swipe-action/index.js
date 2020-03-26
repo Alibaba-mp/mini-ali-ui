@@ -19,15 +19,14 @@ Page({
       confirmButtonText: '确定',
       cancelButtonText: '取消',
       success: (result) => {
-        const { list } = this.data;
+        // const { list } = this.data;
         if (result.confirm) {
           if (type === 'delete') {
-            list.splice(this.data.swipeIndex, 1);
+            // list.splice(this.data.swipeIndex, 1);
+            my.showToast({
+              content: '确认 => 可进行删除数据操作',
+            });
           }
-
-          my.showToast({
-            content: '确定 => 执行滑动删除还原',
-          });
           e.done();
         } else {
           my.showToast({

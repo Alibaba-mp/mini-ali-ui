@@ -44,7 +44,7 @@ $ npm install mini-ali-ui-rpx --save
 ```json
 {
   "usingComponents": {
-    "title": "mini-ali-ui/es/title/index",
+    "title": "mini-ali-ui/es/title/index"
   }
 }
 ```
@@ -54,7 +54,7 @@ $ npm install mini-ali-ui-rpx --save
 ```json
 {
   "usingComponents": {
-    "title": "mini-ali-ui-rpx/es/title/index",
+    "title": "mini-ali-ui-rpx/es/title/index"
   }
 }
 ```

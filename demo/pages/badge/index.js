@@ -34,7 +34,7 @@ Page({
       },
       {
         dot: false,
-        text: 'middle arrow',
+        text: '22222222222222',
         isWrap: false,
         intro: '箭头中',
         withArrow: true,

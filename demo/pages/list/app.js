@@ -45,6 +45,8 @@ Page({
                 path: '/pages/vtabs/index',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️新增文字大小控制以及选中态样式',
               },
               {
                 name: 'Tabs elevator',
@@ -89,8 +91,6 @@ Page({
                 path: '/pages/footer/index',
                 tag: '优化',
                 tagType: 'success',
-                update: true,
-                updateDesc: '✍️新增页脚类型',
               },
               {
                 name: 'Terms',
@@ -140,8 +140,6 @@ Page({
                 path: '/pages/modal/index',
                 tag: '优化',
                 tagType: 'success',
-                update: true,
-                updateDesc: '✍️小、中图的尺寸优化',
               },
               {
                 name: 'PopUp',
@@ -194,7 +192,7 @@ Page({
                 tag: '优化',
                 tagType: 'success',
                 update: true,
-                updateDesc: '✍️调整通告栏类型及表现方式',
+                updateDesc: '✍️右侧点击区域对齐调整',
               },
               {
                 name: 'Badge',
@@ -202,6 +200,8 @@ Page({
                 path: '/pages/badge/index',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️气泡左右箭头样式调整',
               },
               {
                 name: 'Tag',
@@ -230,8 +230,6 @@ Page({
                 path: '/pages/avatar/index',
                 tag: '新组件',
                 tagType: 'danger',
-                update: true,
-                updateDesc: '✍️调整头像尺寸及文字大小',
               },
             ],
           },
@@ -255,8 +253,6 @@ Page({
                 path: '/pages/input-item/index',
                 tag: '优化',
                 tagType: 'success',
-                update: true,
-                updateDesc: '✍️新增垂直输入框',
               },
               {
                 name: 'Picker-item',
@@ -264,8 +260,6 @@ Page({
                 path: '/pages/picker-item/index',
                 tag: '优化',
                 tagType: 'success',
-                update: true,
-                updateDesc: '✍️新增垂直选择框',
               },
               {
                 name: 'Verify-code',
@@ -345,6 +339,8 @@ Page({
                 path: '/pages/swipe-action/index',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️高度优化',
               },
             ],
           },

@@ -69,7 +69,7 @@ Page({
   data: {
     bank: '',
   },
-  onSelect() {
+  onPickerTap() {
     my.showActionSheet({
       title: '选择发卡银行',
       items: banks,

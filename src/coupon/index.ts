@@ -8,9 +8,6 @@ Component({
     moreBtn: '规则详情',
     moreHide: true,
   },
-  didMount() {
-    this.changeExtra();
-  },
   methods: {
     onCouponClick(e) {
       const { onCouponClick } = this.props;
@@ -23,14 +20,6 @@ Component({
       this.setData({
         moreHide: !moreHide,
       });
-    },
-    changeExtra() {
-      const { $slots, thumb } = this.props;
-      if (!$slots.category && !thumb) {
-        this.setData({
-          extra: false,
-        });
-      }
     },
   },
 });

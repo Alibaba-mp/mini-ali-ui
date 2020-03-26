@@ -52,10 +52,14 @@
     width: @size-15 * 2;
     padding: @h-spacing-large @size-6;
     text-align: center;
-    font-size: @font-size-subtitle;
-    transition: all 200ms linear;
     &__hover {
       opacity: 0.6;
+    }
+    &__active {
+      font-size: @font-size-subtitle;
+    }
+    &__same {
+      font-size: @font-size-content;
     }
   }
 
