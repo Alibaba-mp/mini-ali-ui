@@ -18,6 +18,8 @@
 | overflowCount | Number          | 99       | -      | 展示封顶的数字值，超出部分用“+”号表示 | -        | -    |
 | withArrow     | Boolean         | false    | -      | 是否使用箭头                          | -        | -    |
 | direction     | String          | 'middle' | middle<br/> left<br/> right | 箭头方向                              | -        | -    |
+| stroke | Boolean | false | - | 是否带描边的气泡 | [1.0.6](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+
 ## slots
 
 | slotName | 说明 |
@@ -61,16 +63,21 @@
       </view>
     </view>
   </block>
-  <list-item>
-    list-item 
+</view>
+<view style="
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  color: #f8f8f8;">
+    深色底时，stroke 可设为 true
     <badge 
       slot="extra"
-      text="text" 
+      text="深色底时加描边"
+      stroke="{{true}}" 
       withArrow="{{true}}" 
-      direction="right" />
-  </list-item>
+      direction="left" />
 </view>
-
 ```
 
 ```javascript
@@ -110,7 +117,7 @@ Page({
       },
       {
         dot: false,
-        text: 'middle arrow',
+        text: '22222222222222',
         isWrap: false,
         intro: '箭头中',
         withArrow: true,
@@ -135,7 +142,6 @@ Page({
     ],
   },
 });
-
 ```
 
 ```css
