@@ -1,3 +1,16 @@
+## 1.0.6
+`2020-03-26`
+* **Add**
+  * vtabs 组件新增选中态的样式；
+  * badge 组件新增描边
+* **Update**
+  * badge 组件左右箭头样式调整；
+  * demo 以及 readme 文档更新；
+* **Fixed**
+  * notice 组件对齐问题；
+  * swipe-action 组件在钉钉小程序中报错处理；
+  * swipe-action 组件高度计算错误处理；
+
 ## 1.0.5
 `2020-03-11`
 * **Fixed** 修复 coupon 组件中已使用票券类型的样式问题；
