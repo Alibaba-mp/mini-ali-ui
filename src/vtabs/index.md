@@ -30,6 +30,8 @@ vtabs 纵向选项卡包含了 `<vtabs>` 和 `<vtab-content>` 两部分。
 | tabBarlineColor | String | #1677FF | - | tabBar 激活状态边线 | - | - |
 | onTabClick | EventHandle | (index: Number) => void | - | tab 被点击时的回调 | - | - |
 | onChange | EventHandle | (index: Number) => void | - | vtab-content变化时触发 | - | - |
+| sameFontSize | Boolean | true | - | tab 选项卡的文字是否保持相同，如为 false，激活态的文字会大一点 | [1.0.6](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| tabBarlineShow| Boolean | true | - | tab 选项卡激活态侧边竖线是否显示 | [1.0.6](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### vtab-content
 
@@ -59,6 +61,8 @@ vtabs 纵向选项卡包含了 `<vtabs>` 和 `<vtab-content>` 两部分。
   onTabClick="handleChange"
   onChange="onChange"
   activeTab="{{activeTab}}"
+  sameFontSize="{{false}}"
+  tabBarlineShow="{{false}}"
 >
   <block a:for="{{tabs}}">
     <vtab-content anchor="{{item.anchor}}">

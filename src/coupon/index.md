@@ -20,10 +20,10 @@
 | title         | String   | -      | -      | Coupon标题             | -        | true |
 | subTitle      | String   | -      | -      | Coupon副标题           | -        | -    |
 | onCouponClick | Function | -      | -      | Coupon点击时的事件回调 | -        | -    |
-| extra | Boolean | true | - | 票券是否展示左侧扩展信息 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
-| moreBtn | String | 规则详情 | - | 票券使用规则点击展开显示更多的点击区域文案 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
-| moreHide | Boolean | true | - | 是否展开票券使用规则的更多信息 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
-| used | Boolean | false | - | 票券是否失效 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| extra | Boolean | true | - | 票券是否展示左侧扩展信息 | [1.0.6](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| moreBtn | String | 规则详情 | - | 票券使用规则点击展开显示更多的点击区域文案 | [1.0.6](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| moreHide | Boolean | true | - | 是否展开票券使用规则的更多信息 | [1.0.6](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| used | Boolean | false | - | 票券是否失效 | [1.0.6](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ## Slot
 
@@ -34,11 +34,7 @@
 | detail    | 票券规则详情的插槽 |
 | category  | 票券左侧票券类别的插槽 |
 
-
 ## 示例
-
-
-### json
 ```json
 {
   "defaultTitle": "Coupon",
@@ -51,7 +47,6 @@
 }
 ```
 
-### axml
 ```xml
 <view style="margin-top: 10px;"></view>
 <view>
@@ -100,8 +95,7 @@
   <coupon title="券标题5" 
     subtitle="券副标题" 
     onCouponClick="onCouponClick"
-    extra="{{false}}"
-    thumb="{{thumb}}">
+    extra="{{false}}">
     <button shape="capsule" slot="action" onTap="onButtonTap" type="ghost">立即使用</button>
     <view slot="date">有效期：2020.02.14-2020.02.29</view>
     <view slot="detail" class="coupon_rule">
@@ -158,7 +152,6 @@
 <view style="margin-top: 50px;"></view>
 ```
 
-### acss
 ```css
 .container {
   padding-bottom: 50px;

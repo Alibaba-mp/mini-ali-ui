@@ -37,7 +37,7 @@ list-secondary用于放在**extra**插槽
   "usingComponents":{
     "list": "mini-ali-ui/es/list/index",
     "list-item": "mini-ali-ui/es/list/list-item/index",
-    "list-secondary": "mini-ali-ui/es/list/list-secondary/index",
+    "list-secondary": "mini-ali-ui/es/list/list-secondary/index"
   }
 }
 ```

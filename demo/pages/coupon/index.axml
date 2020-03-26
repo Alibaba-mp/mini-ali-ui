@@ -45,8 +45,7 @@
   <coupon title="券标题5" 
     subtitle="券副标题" 
     onCouponClick="onCouponClick"
-    extra="{{false}}"
-    thumb="{{thumb}}">
+    extra="{{false}}">
     <button shape="capsule" slot="action" onTap="onButtonTap" type="ghost">立即使用</button>
     <view slot="date">有效期：2020.02.14-2020.02.29</view>
     <view slot="detail" class="coupon_rule">

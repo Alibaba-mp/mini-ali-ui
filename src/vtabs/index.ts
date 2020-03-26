@@ -17,6 +17,8 @@ Component({
     tabBarActiveBgColor: '#ffffff',
     tabBarInactiveBgColor: '#f5f5f5',
     tabBarlineColor: '#1677FF',
+    sameFontSize: true,
+    tabBarlineShow: true,
     onTabClick: () => {},
     onScrollBar: () => {},
   },
