@@ -86,7 +86,7 @@ Component({
           .boundingClientRect()
           .exec((ret) => {
             this.setData({
-              height: parseInt(ret[0].height, 1),
+              height: parseInt(ret[0].height, 0),
             });
           });
       }
