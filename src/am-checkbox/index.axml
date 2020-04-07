@@ -7,5 +7,5 @@
     onChange="onChange"
     id="{{id}}"
     />
-  <view class="am-checkbox-synthetic"></view>
+  <view class="{{`am-checkbox-synthetic  ${_checked ? 'am-checkbox-checked' : ''} ${disabled ? 'am-checkbox-disabled' : ''}`}}"></view>
 </view>
