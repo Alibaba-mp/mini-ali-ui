@@ -62,7 +62,7 @@
             a:if="{{columnNum < 5 || (columnNum === 5 && list.length <= 5)}}"
             >
           </view>
-          <block a:if="{{columnNum === 5 && list.length > 5}}"">
+          <block a:if="{{columnNum === 5 && list.length > 5}}">
             <view class="am-grid-icon am-grid-icon-{{columnNum}}" a:if="{{index === 4}}">
               <am-icon type="more-1" size="28" color="#999" />
             </view>

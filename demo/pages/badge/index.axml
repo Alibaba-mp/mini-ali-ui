@@ -31,7 +31,6 @@
   color: #f8f8f8;">
     深色底时，stroke 可设为 true 
     <badge 
-      slot="extra"
       text="深色底时加描边"
       stroke="{{true}}" 
       withArrow="{{true}}" 

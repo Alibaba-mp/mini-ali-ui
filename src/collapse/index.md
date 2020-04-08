@@ -68,8 +68,10 @@ Collapse 折叠面板主要是有 `<collapse>` 和 `<collapse-item>` 两部分�
     onChange="onChange"
   >
     <collapse-item header="标题1" itemKey="item-11" collapseKey="collapse1">
-      <view class="item-content content1">
-        <view>内容区域</view>
+      <view class="item-content">
+        <block a:for="{{randomLine}}">
+          <view>自适应高度的内容区域 共 {{index + 1}} 行</view>
+        </block>
       </view>
     </collapse-item>
     <collapse-item header="标题2" itemKey="item-12" collapseKey="collapse1">
@@ -92,8 +94,10 @@ Collapse 折叠面板主要是有 `<collapse>` 和 `<collapse-item>` 两部分�
     accordion="{{true}}"
   >
     <collapse-item header="标题1" itemKey="item-21" collapseKey="collapse2">
-      <view class="item-content content1">
-        <view>内容区域</view>
+      <view class="item-content">
+        <block a:for="{{randomLine}}">
+          <view>自适应高度的内容区域 共 {{index + 1}} 行</view>
+        </block>
       </view>
     </collapse-item>
     <collapse-item header="标题2" itemKey="item-22" collapseKey="collapse2">
@@ -142,6 +146,14 @@ Collapse 折叠面板主要是有 `<collapse>` 和 `<collapse-item>` 两部分�
 
 ```javascript
 Page({
+  data: {
+    randomLine: 0,
+  },
+  onShow() {
+    this.setData({
+      randomLine: parseInt(Math.random()*20 + 1, 0),
+    })
+  },
   onChange(e) {
     console.log('collapse change', e);
   },
