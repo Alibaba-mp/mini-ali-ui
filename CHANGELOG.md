@@ -5,8 +5,9 @@
 * **Update**
   * collapse增加自适应 demo 效果；
 * **Fixed**
-  * 标签闭合;
-  * am-checkbox 在插件中的样式问题 [#16](https://github.com/Alibaba-mp/mini-ali-ui/pull/16)
+  * 标签闭合；
+  * am-checkbox 在插件中的样式问题 [#16](https://github.com/Alibaba-mp/mini-ali-ui/pull/16)；
+  * rpx 版本中 modal 组件的样式问题；
 
 ## 1.0.6
 `2020-03-26`
