@@ -1,21 +1,21 @@
 @import '../style/mixins/hairline.less';
 @import (reference) "../style/themes/default.less";
 
-@modal-width: 560px * @pixelSize; /* 弹框宽度 */
-@modal-sm-image-size: 160px * @pixelSize; /* 小图片尺寸 */
-@modal-md-image-size: 280px * @pixelSize; /* 小图片尺寸 */
-@modal-lg-image-v-size: 312px * @pixelSize; /* 小图片尺寸 */
-@modal-v-spacing: 40px * @pixelSize; /* 弹框垂直内边距 */
-@modal-footer-height: 100px * @pixelSize; /* footer 高度 */
+@modal-width: 560 * @pixelSize; /* 弹框宽度 */
+@modal-sm-image-size: 160 * @pixelSize; /* 小图片尺寸 */
+@modal-md-image-size: 280 * @pixelSize; /* 小图片尺寸 */
+@modal-lg-image-v-size: 312 * @pixelSize; /* 小图片尺寸 */
+@modal-v-spacing: 40 * @pixelSize; /* 弹框垂直内边距 */
+@modal-footer-height: 100 * @pixelSize; /* footer 高度 */
 @modal-footer-border-color: #E5E5E5; /* footer border颜色 */
-@modal-close-size: 88px * @pixelSize; /* close 区块大小 */
-@modal-close-icon-size: 32px * @pixelSize; /* close icon 大小 */
+@modal-close-size: 88 * @pixelSize; /* close 区块大小 */
+@modal-close-icon-size: 32 * @pixelSize; /* close icon 大小 */
 @modal-active-reverse-backgroundColor: rgba(37, 39, 40, .05); /* close icon 大小 */
-@modal-body-max-width: 638px * @pixelSize; /* 弹框最大宽度 */
-@modal-advice-border-radius-size: 16px * @pixelSize; /* advice close icon 大小 */
-@modal-advice-close-bottom: 100px * @pixelSize; /* advice close bottom距离 */
-@modal-advice-close-size: 52px * @pixelSize; /* advice close icon 大小 */
-@modal-advice-margin-size: 48px * @pixelSize; /* advice close icon 顶部距离 */
+@modal-body-max-width: 638 * @pixelSize; /* 弹框最大宽度 */
+@modal-advice-border-radius-size: 16 * @pixelSize; /* advice close icon 大小 */
+@modal-advice-close-bottom: 100 * @pixelSize; /* advice close bottom距离 */
+@modal-advice-close-size: 52 * @pixelSize; /* advice close icon 大小 */
+@modal-advice-margin-size: 48 * @pixelSize; /* advice close icon 顶部距离 */
 
 .am-modal {
   background-color: @color-fill-grey-inverse;
@@ -141,7 +141,7 @@
     }
   }
   &-button {
-    padding: 12px;
+    padding: 24 * @pixelSize;
     flex: 1;
     position: relative;
     overflow: hidden;

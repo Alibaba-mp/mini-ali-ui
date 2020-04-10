@@ -1,6 +1,10 @@
+import fmtUnit from '../_util/fmtUnit';
+
 Component({
   data: {
     _buttonsLayout: '',
+    adviceClose: fmtUnit(26),
+    normalClose: fmtUnit(18),
   },
   props: {
     className: '',
