@@ -36,6 +36,7 @@ Component({
     hasSubTitle: false,
     elevator: false,
     floorNumber: [],
+    elevatorTop: '0px',
   },
   data: {
     windowWidth,
@@ -162,7 +163,7 @@ Component({
           this.props.onTabClick({ index, tabsName });
         }, 300);
         my.pageScrollTo({
-          scrollTop: parseInt(floor),
+          scrollTop: Math.ceil(floor),
           duration: 300,
         });
       }

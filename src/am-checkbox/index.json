@@ -1,6 +1,3 @@
 {
-  "component": true,
-  "usingComponents": {
-    "am-icon": "../am-icon/index"
-  }
+  "component": true
 }

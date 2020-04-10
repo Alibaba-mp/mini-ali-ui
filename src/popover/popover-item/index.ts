@@ -3,9 +3,9 @@ Component({
     className: '',
   },
   methods: {
-    onItemClick() {
+    onItemClick(e) {
       if (this.props.onItemClick && typeof this.props.onItemClick === 'function') {
-        this.props.onItemClick();
+        this.props.onItemClick(e);
       }
     },
   },

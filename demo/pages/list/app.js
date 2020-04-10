@@ -45,8 +45,6 @@ Page({
                 path: '/pages/vtabs/index',
                 tag: '优化',
                 tagType: 'success',
-                update: true,
-                updateDesc: '✍️新增文字大小控制以及选中态样式',
               },
               {
                 name: 'Tabs elevator',
@@ -54,6 +52,8 @@ Page({
                 path: '/pages/tabs/elevator/elevator',
                 tag: '优化',
                 tagType: 'success',
+                update: true,
+                updateDesc: '✍️新增 top 值可控；tab 位置计算方式优化；',
               },
               {
                 name: 'Card',
@@ -68,8 +68,6 @@ Page({
                 path: '/pages/coupon/index',
                 tag: '新组件',
                 tagType: 'danger',
-                update: true,
-                updateDesc: '✍️新增票券类型',
               },
               {
                 name: 'Grid',
@@ -191,8 +189,6 @@ Page({
                 path: '/pages/notice/index',
                 tag: '优化',
                 tagType: 'success',
-                update: true,
-                updateDesc: '✍️右侧点击区域对齐调整',
               },
               {
                 name: 'Badge',
@@ -200,8 +196,6 @@ Page({
                 path: '/pages/badge/index',
                 tag: '优化',
                 tagType: 'success',
-                update: true,
-                updateDesc: '✍️气泡左右箭头样式调整',
               },
               {
                 name: 'Tag',
@@ -309,6 +303,8 @@ Page({
                 path: '/pages/am-checkbox/index',
                 tag: '新组件',
                 tagType: 'danger',
+                update: true,
+                updateDesc: '✍️修正在插件中点击后样式无效问题',
               },
               {
                 name: 'Am-radio',
@@ -339,8 +335,6 @@ Page({
                 path: '/pages/swipe-action/index',
                 tag: '优化',
                 tagType: 'success',
-                update: true,
-                updateDesc: '✍️高度优化',
               },
             ],
           },

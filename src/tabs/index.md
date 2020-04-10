@@ -44,6 +44,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | capsule | Boolean | false | - | 是否为胶囊 tab | - | - |
 | hasSubTitle | Boolean | false | - | 是否有副标题（描述）内容 | - | - |
 | elevator | Boolean | false | - | 是否电梯组件 | - | - |
+| elevatorTop | String | 0px | - | 电梯组件中 tab 置顶时的位置控制 | - | - |
 | onPlusClick | EventHandle | () => {} | - | + icon 被点击时的回调 | - | - |
 | onTabClick | EventHandle | (index: Number) => void | - | tab 被点击的回调 | - | - |
 | onChange | EventHandle | (index: Number) => void | - | tab 变化时触发 | - | - |
@@ -167,6 +168,17 @@ Page({
     my.alert({
       content: 'plus clicked',
     });
+  },
+  onPageScroll({ scrollTop }) {
+    // 电梯组件时需要添加，计算页面滚动时，tab 的切换；
+    for (let i = 0; i <= this.data.floorNumber.length; i++) {
+      if (scrollTop >= this.data.floorNumber[i]) {
+        this.setData({
+          activeTab: i,
+          getFloorNumber: i,
+        });
+      }
+    }
   },
 });
 ```

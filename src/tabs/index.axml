@@ -2,7 +2,12 @@
 
 <view class="am-tabs {{className}}">
   <view class="am-tabs-tab-bar-wrap">
-    <view class="am-tabs-bar {{capsule?'am-tabs-bar-capsule':''}}" style="background-color: {{tabBarBackgroundColor}};{{elevator?'position: sticky;top: 0;':'0'}}">
+    <view class="am-tabs-bar {{capsule?'am-tabs-bar-capsule':''}}"
+      style="
+        background-color: {{tabBarBackgroundColor}};
+        {{elevator?'position: sticky;':''}}
+        {{elevator && elevatorTop ? `top: ${elevatorTop};` : ''}}"
+    >
       <view class="am-tabs-bar-content-wrap">
         <scroll-view
           scroll-left="{{viewScrollLeft}}"
