@@ -1,3 +1,13 @@
+## 1.0.7
+`2020-04-10`
+* **Add**
+  * tabs 电梯组件新增 `elevatorTop` 属性，可控 tab 位置；
+* **Update**
+  * collapse增加自适应 demo 效果；
+* **Fixed**
+  * 标签闭合;
+  * am-checkbox 在插件中的样式问题 [#16](https://github.com/Alibaba-mp/mini-ali-ui/pull/16)
+
 ## 1.0.6
 `2020-03-26`
 * **Add**
