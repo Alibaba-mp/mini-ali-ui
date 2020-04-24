@@ -1,6 +1,6 @@
 <list>
   <view slot="header">
-    列表+复选框
+    列表+复选框（非受控）
   </view>
   <block a:for="{{items}}">
     <list-item
@@ -11,7 +11,28 @@
       last="{{index === (items.length - 1)}}"
     >
       <view style="display: flex; align-items: center;">
-        <am-checkbox id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
+        <am-checkbox data-id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" defaultChecked="{{item.defaultChecked}}" />
+        <label for="{{item.id}}">{{item.title}}</label>
+      </view>
+    </list-item>
+  </block>
+  <view style="height: 60rpx; padding: 20rpx; line-height: 60rpx; color: #999;">
+    列表+复选框（受控）
+  </view>
+  <view style="height: 70rpx;">
+    <button size="mini" type="primary" onTap="checkedON" style="margin-left: 20rpx;">全选</button>
+    <button size="mini" type="primary" onTap="checkedOFF" style="margin-left: 20rpx;">不全选</button>
+  </view>
+  <block a:for="{{items1}}">
+    <list-item
+      thumb=""
+      arrow="{{false}}"
+      index="{{index}}"
+      key="items-{{index}}"
+      last="{{index === (items.length - 1)}}"
+    >
+      <view style="display: flex; align-items: center;">
+        <am-checkbox data-id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
         <label for="{{item.id}}">{{item.title}}</label>
       </view>
     </list-item>
