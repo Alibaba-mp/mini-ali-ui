@@ -15,6 +15,7 @@
 ## 属性介绍
 | 属性名 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- |
+| className | String | - | - | 自定义样式名 | - |
 | type | String | line | line, onewithtwo | 容器排版类型 | - |
 
 ## tips

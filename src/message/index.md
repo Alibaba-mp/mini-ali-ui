@@ -9,8 +9,6 @@
 
 ![image](http://mdn.alipayobjects.com/afts/img/A*RZ2wRbmVjwkAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=CoCuy7cSr1K1kcT35aQYNAAAAABkMK8AAAAA)
 
-
-
 ## 属性介绍
 
 | 属性名 |  类型 | 默认值 | 可选项 | 必选 | 描述 |
@@ -23,6 +21,11 @@
 | subButton | Object<buttonText, disabled>  | - | - | - | 副按钮的文本和可用性相关 |
 | onTapMain | () => {}  | - | - | - | 主按钮的点击函数 |
 | onTapSub | () => {}  | - | - | - | 副按钮的点击函数 |
+
+### slots
+| slotName |  说明 |
+| ----- | ---- |
+| tips | 可根据需要插入内容，如拨打客服电话等。当 `subTitle` 为空时才有效。 |
 
 ## 示例
 
@@ -44,6 +47,7 @@
     mainButton="{{mainButton}}" 
     subButton="{{subButton}}" 
     onTapMain="goBack">
+    <view slot="tips">这里是通过 <text style="color: red;">slot</text> 插槽加入的内容，加入更多自定义内容。</view>
   </message>
   <radio-group class="radio-group" onChange="radioChange" name="lib">
     <label class="radio" a:for="{{items}}" key="label-{{index}}">
@@ -64,7 +68,7 @@
 Page({
   data: {
     title: '操作成功',
-    subTitle: '内容详情可折行，建议不超过两内容详情可折行，建议不超过两行',
+    subTitle: '内容详情可折行，建议不超过两内容。也可以通过 slot="tips" 插入更具有功能性的提示。',
     type: 'success',
     items: [
       { name: 'success', value: 'success', checked: true },

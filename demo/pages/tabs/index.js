@@ -42,25 +42,44 @@ Page({
         title: '选项选项二选项二选项二',
         subTitle: '描述文案',
         number: '6',
+        showBadge: true,
+        badge: {
+          arrow: true,
+          stroke: true,
+        },
       },
       {
         title: '选项二',
         subTitle: '描述文案描述',
         number: '66',
+        showBadge: true,
+        badge: {
+          arrow: false,
+          stroke: true,
+        },
       },
       {
         title: '3 Tab',
         subTitle: '描述',
-        number: '99+',
+        number: '文字',
+        showBadge: true,
+        badge: {
+          arrow: true,
+        },
       },
       { title: '4 Tab',
         subTitle: '描述',
+        showBadge: true,
+        number: 0,
       },
       { title: '5 Tab5 Tab5 Tab',
         subTitle: '描述描述描述',
+        number: '99+',
+        showBadge: false,
       },
       { title: '3 Tab',
         subTitle: '描述',
+        showBadge: false,
       },
       { title: '4 Tab选项二选项二选项二选项二',
         subTitle: '描述',
@@ -93,89 +112,6 @@ Page({
       { name: '3', value: '三条' },
       { name: '-1', value: '很多', checked: true },
     ],
-  },
-  tabsNumberChange(e) {
-    if (e.detail.value === '1') {
-      this.setData({
-        tabs: [
-          {
-            title: '选项',
-            subTitle: '描述文案',
-            number: '6',
-          },
-        ],
-      });
-    } else if (e.detail.value === '2') {
-      this.setData({
-        tabs: [
-          {
-            title: '选项',
-            subTitle: '描述文案',
-            number: '6',
-          },
-          {
-            title: '选项二',
-            subTitle: '描述文案描述',
-            number: '66',
-          },
-        ],
-      });
-    } else if (e.detail.value === '3') {
-      this.setData({
-        tabs: [
-          {
-            title: '选项',
-            subTitle: '描述文案',
-            number: '6',
-          },
-          {
-            title: '选项二',
-            subTitle: '描述文案描述',
-            number: '66',
-          },
-          {
-            title: 'Tab',
-            subTitle: '描述',
-            number: '99+',
-          },
-        ],
-      });
-    } else {
-      this.setData({
-        tabs: [
-          {
-            title: '选项',
-            subTitle: '描述文案',
-            number: '6',
-          },
-          {
-            title: '选项二',
-            subTitle: '描述文案描述',
-            number: '66',
-          },
-          {
-            title: '3 Tab',
-            subTitle: '描述',
-            number: '99+',
-          },
-          { title: '4 Tab',
-            subTitle: '描述',
-          },
-          { title: '5 Tab',
-            subTitle: '描述描述描述',
-          },
-          { title: '3 Tab',
-            subTitle: '描述',
-          },
-          { title: '4 Tab',
-            subTitle: '描述',
-          },
-          { title: '15 Tab',
-            subTitle: '描述',
-          },
-        ],
-      });
-    }
   },
   typeChange(e) {
     if (e.detail.value === 'hasSubTitle') {
@@ -231,5 +167,124 @@ Page({
     my.alert({
       content: 'plus clicked',
     });
+  },
+  tabsNumberChange(e) {
+    if (e.detail.value === '1') {
+      this.setData({
+        tabs: [
+          {
+            title: '选项',
+            subTitle: '描述文案',
+            number: '6',
+          },
+        ],
+      });
+    } else if (e.detail.value === '2') {
+      this.setData({
+        tabs: [
+          {
+            title: '选项',
+            subTitle: '描述文案',
+            number: '6',
+            showBadge: true,
+            badge: {
+              arrow: true,
+              stroke: true,
+            },
+          },
+          {
+            title: '选项二',
+            subTitle: '描述文案描述',
+            number: '66',
+            showBadge: true,
+          },
+        ],
+      });
+    } else if (e.detail.value === '3') {
+      this.setData({
+        tabs: [
+          {
+            title: '选项',
+            subTitle: '描述文案',
+            number: '6',
+            showBadge: true,
+            badge: {
+              arrow: true,
+              stroke: true,
+            },
+          },
+          {
+            title: '选项二',
+            subTitle: '描述文案描述',
+            number: '66',
+            showBadge: true,
+          },
+          {
+            title: 'Tab',
+            subTitle: '描述',
+            number: '99+',
+            showBadge: true,
+            badge: {
+              arrow: true,
+              stroke: false,
+            },
+          },
+        ],
+      });
+    } else {
+      this.setData({
+        tabs: [
+          {
+            title: '选项选项二选项二选项二',
+            subTitle: '描述文案',
+            number: '6',
+            showBadge: true,
+            badge: {
+              arrow: true,
+              stroke: true,
+            },
+          },
+          {
+            title: '选项二',
+            subTitle: '描述文案描述',
+            number: '66',
+            showBadge: true,
+            badge: {
+              arrow: false,
+              stroke: true,
+            },
+          },
+          {
+            title: '3 Tab',
+            subTitle: '描述',
+            number: '99+',
+            showBadge: true,
+            badge: {
+              arrow: true,
+            },
+          },
+          { title: '4 Tab',
+            subTitle: '描述',
+            showBadge: true,
+            number: 0,
+          },
+          { title: '5 Tab5 Tab5 Tab',
+            subTitle: '描述描述描述',
+            number: '99+',
+            showBadge: false,
+          },
+          { title: '3 Tab',
+            subTitle: '描述',
+            showBadge: false,
+          },
+          { title: '4 Tab选项二选项二选项二选项二',
+            subTitle: '描述',
+          },
+          { title: '15 Tab',
+            subTitle: '描述',
+          },
+        ],
+      });
+    }
   },
 });

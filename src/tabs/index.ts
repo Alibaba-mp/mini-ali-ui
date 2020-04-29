@@ -37,6 +37,7 @@ Component({
     elevator: false,
     floorNumber: [],
     elevatorTop: '0px',
+    showBadge: false,
   },
   data: {
     windowWidth,

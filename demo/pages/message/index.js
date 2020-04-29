@@ -1,7 +1,7 @@
 Page({
   data: {
     title: '操作成功',
-    subTitle: '内容详情可折行，建议不超过两内容详情可折行，建议不超过两行',
+    subTitle: '内容详情可折行，建议不超过两内容。也可以通过 slot="tips" 插入更具有功能性的提示。',
     type: 'success',
     items: [
       { name: 'success', value: 'success', checked: true },

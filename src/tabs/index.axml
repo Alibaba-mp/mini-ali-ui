@@ -42,8 +42,16 @@
                   (index === activeTab ? 'background-color:' + tabBarUnderlineColor + ';' : '')
                   :'') }}">
                 <view a:if="{{ !hasSubTitle && !capsule && index === activeTab}}" class="am-tabs-bar-title-underline" style="background-color: {{tabBarUnderlineColor}};"></view>
-                <text class="am-tabs-bar-tab-mainTitle" style="{{index === activeTab?'font-weight: bold;':''}}">{{item.title}}</text>
-                <text a:if="{{!hasSubTitle && capsule && item.number}}" class="am-tabs-bar-tab-number {{ index === activeTab ?'am-tabs-bar-tab-number_active':''}}">({{item.number}})</text>
+                <view class="am-tabs-bar-tab-mainTitle" style="{{index === activeTab?'font-weight: bold;':''}}">{{item.title}}
+                  <badge className="am-tabs-bar-tab-badge" a:if="{{item.showBadge}}"
+                  dot="{{item.number ? false : true}}" 
+                  text="{{item.number}}"
+                  withArrow="{{item.badge.arrow ? item.badge.arrow : false}}"
+                  direction="{{item.badge.arrow ? 'left' : ''}}"
+                  stroke="{{item.badge.stroke ? item.badge.stroke : false}}"
+                  ></badge>
+                </view>
+                <text a:if="{{!hasSubTitle && capsule && item.number && !item.showBadge}}" class="am-tabs-bar-tab-number {{ index === activeTab ?'am-tabs-bar-tab-number_active':''}}">({{item.number}})</text>
                 <text class="am-tabs-bar-tab-subTitle" a:if="{{hasSubTitle && item.subTitle}}" style="
                   {{index === activeTab ? 'background-color:' + tabBarUnderlineColor + '; color: ' + tabBarActiveSubTextColor + ';' : 'color: ' + tabBarSubTextColor + ';'}}
                 ">{{item.subTitle}}</text>

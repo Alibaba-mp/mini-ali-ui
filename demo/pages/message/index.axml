@@ -6,6 +6,7 @@
     mainButton="{{mainButton}}" 
     subButton="{{subButton}}" 
     onTapMain="goBack">
+    <view slot="tips">这里是通过 <text style="color: red;">slot</text> 插槽加入的内容，加入更多自定义内容。</view>
   </message>
   <view style="padding: 20rpx;">
     <radio-group class="radio-group" onChange="radioChange" name="lib">

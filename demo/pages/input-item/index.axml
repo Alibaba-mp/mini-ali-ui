@@ -2,13 +2,14 @@
   <view style="margin-top: 10px;"></view>
   <list>
     <input-item data-field="cardNo" 
-      clear="{{true}}" 
+      clear="{{false}}" 
       value="{{cardNo}}" 
       className="dadada" 
       placeholder="银行卡号" 
       onInput="onItemInput" 
       onBlur="onItemBlur" 
       onConfirm="onItemConfirm" 
+      controlled="{{true}}"
       onClear="onClear">
       卡号
       <view slot="extra" class="extra" onTap="onExtraTap"></view>
@@ -20,7 +21,7 @@
       clear="{{true}}" 
       onInput="onItemInput" 
       onClear="onClear">姓名</input-item>
-    <input-item data-field="password" 
+    <input-item data-field="password" password="{{true}}"
       placeholder="密码">密码</input-item>
     <input-item data-field="layerShow1" 
       placeholder="layer 为 vertical 的排列" 

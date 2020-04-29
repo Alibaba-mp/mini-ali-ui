@@ -20,7 +20,7 @@
       onBlur="onBlur" 
       controlled />
     <view class="am-verify-code-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
-      onTap="onClear">
+      onTap="onClear" a:if="{{clear}}">
       <am-icon size="18" 
         type="close_"
         class="am-verify-code-clear-icon"

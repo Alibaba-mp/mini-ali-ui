@@ -85,6 +85,15 @@
     font-size: @font-size-list;
     font-size: var(--am-tabs-fontSize, @font-size-list);
     white-space: nowrap;
+    &-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(55%, -70%);
+    }
+    &-mainTitle {
+      position: relative;
+    }
     &-capsule {
       padding: @v-spacing-large 0;
       padding: var(--am-tabs-capsule-paddingV, @v-spacing-large) 0;
@@ -93,6 +102,12 @@
       box-sizing: border-box;
       &:last-child {
         margin-right: 0;
+      }
+      .am-tabs-bar-tab-mainTitle {
+        position: static;
+      }
+      .am-tabs-bar-tab-badge {
+        transform: translate(0, -55%);
       }
     }
     &__hasSubTitle {

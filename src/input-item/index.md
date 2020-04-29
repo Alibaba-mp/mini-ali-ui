@@ -36,6 +36,7 @@
 | onBlur           | (e: Object) => void |        | -                           | 失去焦点时触发                                            |          | 否   |
 | onClear          | () => void          |        | -                           | 点击清除icon时触发                                        |          | 否   |
 | layer | String | '' | vertical | 文本输入框是否为垂直排列，`vertical` 时为垂直排列，空值为横向排列 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
+| controlled | Boolean | false | - | 是否为受控组件。参考 [input 组件](https://opendocs.alipay.com/mini/component/input) | [1.0.9](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
 
 ### type 属性值介绍
 * `text`： 字符输入框
@@ -71,7 +72,7 @@
   <view style="margin-top: 10px;"></view>
   <list>
     <input-item data-field="cardNo" 
-      clear="{{true}}" 
+      clear="{{false}}" 
       value="{{cardNo}}" 
       className="dadada" 
       placeholder="银行卡号" 

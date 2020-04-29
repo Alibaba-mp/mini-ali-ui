@@ -6,6 +6,9 @@
   <view a:if="{{subTitle}}" class="am-message-sub">
     {{subTitle}}
   </view>
+  <view a:else class="am-message-sub">
+    <slot name="tips" />
+  </view>
 </view>
 <view class="am-message-button-wrap" a:if="{{mainButton || subButton}}">
   <button

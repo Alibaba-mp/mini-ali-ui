@@ -21,10 +21,11 @@
         onInput="onInput" 
         onConfirm="onConfirm" 
         onFocus="onFocus" 
-        onBlur="onBlur" />
+        onBlur="onBlur"
+        controlled="{{controlled}}" />
     </view>
     <view class="am-input-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
-      onTap="onClear">
+      onTap="onClear" a:if="{{clear}}">
       <am-icon size="18" 
         class="am-input-clear-icon" 
         type="close_" 

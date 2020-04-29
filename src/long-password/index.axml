@@ -19,7 +19,7 @@
       onBlur="onBlur" 
       controlled />
     <view class="am-long-password-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
-      onTap="onClear">
+      onTap="onClear" a:if="{{clear}}">
       <am-icon size="18" 
         class="am-long-password-clear-icon"
         type="close_"
