@@ -7,10 +7,10 @@
   >
     <view class="demo-popover-btn" onTap="onShowPopoverTap">点击{{show ? '隐藏' : '显示'}}</view>
     <view slot="items">
-      <popover-item onItemClick="itemTap1" iconType="{{showIcon ? 'qr' : ''}}">
+      <popover-item onItemClick="itemTap1" iconType="{{showIcon ? 'qr' : ''}}" data-direction="{{position}}">
         <text>{{position}}</text>
       </popover-item>
-      <popover-item onItemClick="itemTap2" iconType="{{showIcon ? 'qr' : ''}}">
+      <popover-item onItemClick="itemTap2" iconType="{{showIcon ? 'qr' : ''}}" data-index="{{2}}">
         <text>line2</text>
       </popover-item>
     </view>

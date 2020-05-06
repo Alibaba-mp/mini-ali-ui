@@ -34,14 +34,14 @@ Page({
       show: false,
     });
   },
-  itemTap1() {
+  itemTap1(e) {
     my.alert({
-      content: '点击1',
+      content: `点击_${e.currentTarget.dataset.direction}`,
     });
   },
-  itemTap2() {
+  itemTap2(e) {
     my.alert({
-      content: '点击2',
+      content: `点击_${e.currentTarget.dataset.index}`,
     });
   },
 });
