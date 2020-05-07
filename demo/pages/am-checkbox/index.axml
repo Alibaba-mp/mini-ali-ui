@@ -11,17 +11,21 @@
       last="{{index === (items.length - 1)}}"
     >
       <view style="display: flex; align-items: center;">
-        <am-checkbox data-id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" defaultChecked="{{item.defaultChecked}}" />
+        <am-checkbox data-id="{{item.id}}" id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" />
         <label for="{{item.id}}">{{item.title}}</label>
       </view>
     </list-item>
   </block>
-  <view style="height: 60rpx; padding: 20rpx; line-height: 60rpx; color: #999;">
+</list>
+
+<view style="padding: 24rpx 0 0 24rpx;">
+  <button capsuleSize="small" shape="capsule" type="primary" onTap="checkedON" style="margin-left: 20rpx;">全选</button>
+  <button capsuleSize="small" shape="capsule" type="primary" onTap="checkedOFF" style="margin-left: 20rpx;">不全选</button>
+</view>
+
+<list>
+  <view slot="header">
     列表+复选框（受控）
-  </view>
-  <view style="height: 70rpx;">
-    <button size="mini" type="primary" onTap="checkedON" style="margin-left: 20rpx;">全选</button>
-    <button size="mini" type="primary" onTap="checkedOFF" style="margin-left: 20rpx;">不全选</button>
   </view>
   <block a:for="{{items1}}">
     <list-item
@@ -32,10 +36,9 @@
       last="{{index === (items.length - 1)}}"
     >
       <view style="display: flex; align-items: center;">
-        <am-checkbox data-id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
+        <am-checkbox data-id="{{item.id}}" id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" ctrlChecked="{{item.ctrlChecked}}" onChange="onChange" />
         <label for="{{item.id}}">{{item.title}}</label>
       </view>
     </list-item>
   </block>
 </list>
-

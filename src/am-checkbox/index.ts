@@ -1,40 +1,39 @@
 import fmtEvent from '../_util/fmtEvent';
 
 /**
- * 对齐ant design checkbox的设计，增加defaultChecked属性
- * 当props中有checked传入时，am-checkbox是受控组件
- * 当props中不传入checked时，am-checkbox是非受控组件
+ * 对齐 ant design checkbox 的设计，增加 ctrlChecked 属性
+ * 当 props 中有 checked 传入时，am-checkbox 是非受控组件
+ * 当 props 中不传入 checked 而使用 ctrlChecked 时，am-checkbox 是受控组件
  */
 Component({
   props: {
     value: '',
-    defaultChecked: false,
-    checked: undefined,
+    checked: false,
+    ctrlChecked: undefined,
     disabled: false,
     onChange: () => {},
-    color: '',
     id: '',
   },
   data: {
-    // 组件内维护的chackbox勾选状态
+    // 组件内维护的 chackbox 勾选状态
     _checked: false,
   },
   onInit() {
-    const { defaultChecked } = this.props;
+    const { checked } = this.props;
     this.setData({
-      _checked: defaultChecked,
+      _checked: checked,
     });
   },
-  // props改变时
-  deriveDataFromProps(nextPrps) {
+  // props 改变时
+  deriveDataFromProps(nextProps) {
     const { _checked } = this.data;
-    const { checked: oldChecked } = this.props;
-    const { checked } = nextPrps;
-    // oldChecked===undefined 说明未传入checked属性，am-checkbox将成为不受控组件
-    // oldChecked有传入值_checked受外部checked属性控制
-    if (_checked !== checked && oldChecked !== undefined) {
+    const { ctrlChecked: oldChecked } = this.props;
+    const { ctrlChecked } = nextProps;
+    // oldChecked===undefined 说明未传入 checked 属性，am-checkbox 将成为不受控组件
+    // oldChecked 有传入值 _checked 受外部 checked 属性控制
+    if (_checked !== ctrlChecked && oldChecked !== undefined) {
       this.setData({
-        _checked: checked,
+        _checked: ctrlChecked,
       });
     }
   },

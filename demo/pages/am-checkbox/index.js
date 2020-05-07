@@ -1,20 +1,16 @@
 Page({
   data: {
     items: [
-      { defaultChecked: true, disabled: false, value: 'a', title: '复选框-默认选中', id: 'checkbox1' },
-      { defaultChecked: true, disabled: true, value: 'b', title: '复选框-默认选中disabled', id: 'checkbox2' },
+      { value: 'a', title: '复选框-默认未选中', id: 'checkbox1' },
+      { checked: true, value: 'b', title: '复选框-默认选中', id: 'checkbox2' },
+      { checked: true, disabled: true, value: 'c', title: '复选框-默认选中disabled', id: 'checkbox3' },
     ],
     items1: [
-      { checked: false, disabled: false, value: 'c', title: '复选框-默认未选中', id: 'checkbox3' },
-      { checked: false, disabled: true, value: 'd', title: '复选框-默认未选中disabled', id: 'checkbox4' },
+      { ctrlChecked: false, disabled: false, value: 'd', title: '复选框-默认未选中', id: 'checkbox4' },
+      { ctrlChecked: true, disabled: true, value: 'e', title: '复选框-默认未选中disabled', id: 'checkbox5' },
+      { ctrlChecked: true, value: 'f', title: '复选框-默认选中', id: 'checkbox6' },
     ],
   },
-  onSubmit(e) {
-    my.alert({
-      content: `你选择的框架是 ${e.detail.value.libs.join(', ')}`,
-    });
-  },
-  onReset() {},
   onChange(e) {
     const { id } = e.currentTarget.dataset;
     const { value } = e.detail;
@@ -22,12 +18,12 @@ Page({
     items1.forEach((element) => {
       if (element.id === id) {
         // eslint-disable-next-line no-param-reassign
-        element.checked = value;
+        element.ctrlChecked = value;
       }
     });
-    this.setData(
+    this.setData({
       items1,
-    );
+    });
   },
   // 全选
   checkedON() {
@@ -41,10 +37,10 @@ Page({
     const { items1 } = this.data;
     items1.forEach((element) => {
       // eslint-disable-next-line no-param-reassign
-      element.checked = status;
+      element.ctrlChecked = status;
     });
-    this.setData(
+    this.setData({
       items1,
-    );
+    });
   },
 });
