@@ -26,7 +26,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | className | String | - | - | 自定义 class | - | - |
-| tabs | Array | - | - | tab数据，其中包括选项标题 `title`，以及副标题（描述）文案 `subTitle`，以及胶囊形式 tab 中的数字 `number` | - | true |
+| tabs | Array | - | - | tab数据，其中包括选项标题 `title`，以及副标题（描述）文案 `subTitle`，以及胶囊形式 tab 中的数字 `number`，如需要以 badge 方式展示数字，添加 `showBadge` 并设置为 true 即可 | [1.0.9](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) 支持 `showBadge` | true |
 | activeTab | Number | 0 | - | 当前激活的 tab 索引 | - | true |
 | activeCls | String | - | - | tabbar激活的 tab 样式 class | - | - |
 | tabBarCls | String | - | - | tabbar的自定义样式class | - | - |
@@ -65,6 +65,10 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 * 当 tabs 选项卡为胶囊模式时，会根据 `tabs` 数据中的 `number` 值显示数字；
 * 如 `elevator` 为 `true`，则为电梯组件，`<tab-content>` 将竖排展示，自动计算每个 `<tab-content>` 的坐标后，根据索引值定位指向；
 * `tabsName` 是为了能更好获取到当前 tab 选项卡的名称进行识别，值需要与 `activeTab` 的 key 值相同，如：`activeTab="{{activeTab2}}"`，那么 `tabsName="activeTab2"`；
+* `tabs` 中的 `showBadge` 为 `true` 时，`number` 中的值会以 badge 形式展示，并且不受 tab 类型影响，否则 `number` 中的值仅在胶囊 tab 中有效；
+  * 可同时添加 `badge: { arrow: true, stroke: true, }` 控制 badge 的样式；
+  * `arrow` 可展示有箭头的 badge，箭头仅有左方向；
+  * `stroke` 可展示有描边的 badge；
 
 ### tab-content 高度自适应说明
 
@@ -120,18 +124,33 @@ Page({
       {
         title: '选项',
         subTitle: '描述文案',
+        number: '66',
+        showBadge: true,
+        badge: {
+          arrow: false,
+          stroke: true,
+        },
       },
       {
         title: '选选',
         subTitle: '描述文案',
+        number: '文字',
+        showBadge: true,
+        badge: {
+          arrow: true,
+        },
       },
       {
         title: '二二',
         subTitle: '描述文案',
+        showBadge: true,
+        number: 0,
       },
       {
         title: '选二',
         subTitle: '描述文案',
+        number: '99+',
+        showBadge: false,
       },
       {
         title: '项二',
