@@ -1,3 +1,17 @@
+## 1.0.9
+`2020-05-07`
+* **Add**
+  * message 组件增加 slot 插槽；
+  * tabs 组件新增 badge 展示；
+* **Update**
+  * page-result 插画风格统一；
+* **Fixed**
+  * input-item 组件 clear 不展示时不占位处理；
+  * input-item 组件透传 controlled 参数 [#15](https://github.com/Alibaba-mp/mini-ali-ui/issues/15)；
+  * CheckBox 可控处理 [#18](https://github.com/Alibaba-mp/mini-ali-ui/pull/18)；
+  * list-item 的 hover 状态修正；
+  * popover 组件 item 传值 [#11](https://github.com/Alibaba-mp/mini-ali-ui/issues/11)；
+
 ## 1.0.8
 `2020-04-10`
 * **Fixed** 在 IDE 中无法正常显示 `-webkit-` 前缀的问题；
@@ -7,7 +21,7 @@
 * **Add**
   * tabs 电梯组件新增 `elevatorTop` 属性，可控 tab 位置；
 * **Update**
-  * collapse增加自适应 demo 效果；
+  * collapse 增加自适应 demo 效果；
 * **Fixed**
   * 标签闭合；
   * am-checkbox 在插件中的样式问题 [#16](https://github.com/Alibaba-mp/mini-ali-ui/pull/16)；
