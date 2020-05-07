@@ -1,7 +1,6 @@
 # am-checkBox 复选框
 
-复选框。具体用法和小程序框架中checkbox保持一致，在checkbox基础上做了样式的封装。
-
+复选框。 对齐ant design checkbox的设计，当checked===undefined(默认)时am-checkbox是非受控组件，否则是一个受控组件
 
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_a02d41/afts/img/A*f3-xS7ChP58AAAAAAAAAAABkARQnAQ"/>
@@ -10,13 +9,12 @@
 
 ![image](http://mdn.alipayobjects.com/afts/img/A*2utdSJ4pVQIAAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=YNFG8j9uSgTPpwzq-7EBRAAAAABkMK8AAAAA)
 
-
-
 ## 属性介绍
 | 属性名 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | value | String | - | - | 组件值，选中时 change 事件会携带的 value | - |
-| checked | Boolean | false | true,false | 当前是否选中，可用来设置默认选中 | - |
+| ctrlChecked | Boolean | undefined | true,false | 当 ctrlChecked 不等于 undefined 时 am-checkbox 是受控组件 | - |
+| checked | Boolean | false | true,false | 默认是否选中 | - |
 | disabled | Boolean | false | true,false | 是否禁用 | - |
 | onChange | (e: Object) => void |  | - | change 事件触发的回调函数 | - |
 | id | String | - | - | 与label组件的for属性组合使用 | - |
@@ -29,7 +27,8 @@
   "usingComponents": {
     "list": "mini-ali-ui/es/list/index",
     "list-item": "mini-ali-ui/es/list/list-item/index",
-    "am-checkbox": "mini-ali-ui/es/am-checkbox/index"
+    "am-checkbox": "mini-ali-ui/es/am-checkbox/index",
+    "button": "mini-ali-ui/es/button/index"
   }
 }
 ```
@@ -37,7 +36,7 @@
 ```xml
 <list>
   <view slot="header">
-    列表+复选框
+    列表+复选框（非受控）
   </view>
   <block a:for="{{items}}">
     <list-item
@@ -48,26 +47,84 @@
       last="{{index === (items.length - 1)}}"
     >
       <view style="display: flex; align-items: center;">
-        <am-checkbox id="{{item.id}}" data-name="{{item.value}}" type="{{item.type}}" disabled="{{item.disabled}}" checked="{{item.checked}}" onChange="onChange" />
+        <am-checkbox data-id="{{item.id}}" id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" />
         <label for="{{item.id}}">{{item.title}}</label>
       </view>
     </list-item>
   </block>
 </list>
 
+<view style="padding: 24rpx 0 0 24rpx;">
+  <button capsuleSize="small" shape="capsule" type="primary" onTap="checkedON" style="margin-left: 20rpx;">全选</button>
+  <button capsuleSize="small" shape="capsule" type="primary" onTap="checkedOFF" style="margin-left: 20rpx;">不全选</button>
+</view>
+
+<list>
+  <view slot="header">
+    列表+复选框（受控）
+  </view>
+  <block a:for="{{items1}}">
+    <list-item
+      thumb=""
+      arrow="{{false}}"
+      index="{{index}}"
+      key="items-{{index}}"
+      last="{{index === (items.length - 1)}}"
+    >
+      <view style="display: flex; align-items: center;">
+        <am-checkbox data-id="{{item.id}}" id="{{item.id}}" value="{{item.value}}" disabled="{{item.disabled}}" ctrlChecked="{{item.ctrlChecked}}" onChange="onChange" />
+        <label for="{{item.id}}">{{item.title}}</label>
+      </view>
+    </list-item>
+  </block>
+</list>
 ```
 
 ```javascript
 Page({
   data: {
     items: [
-      { checked: true, disabled: false, value: 'a', title: '复选框-默认选中', id: 'checkbox1' },
-      { checked: false, disabled: false, value: 'b', title: '复选框-默认未选中', id: 'checkbox2' },
+      { value: 'a', title: '复选框-默认未选中', id: 'checkbox1' },
+      { checked: true, value: 'b', title: '复选框-默认选中', id: 'checkbox2' },
       { checked: true, disabled: true, value: 'c', title: '复选框-默认选中disabled', id: 'checkbox3' },
-      { checked: false, disabled: true, value: 'd', title: '复选框-默认未选中disabled', id: 'checkbox4' },
+    ],
+    items1: [
+      { ctrlChecked: false, disabled: false, value: 'd', title: '复选框-默认未选中', id: 'checkbox4' },
+      { ctrlChecked: true, disabled: true, value: 'e', title: '复选框-默认未选中disabled', id: 'checkbox5' },
+      { ctrlChecked: true, value: 'f', title: '复选框-默认选中', id: 'checkbox6' },
     ],
   },
-  onChange() {
+  onChange(e) {
+    const { id } = e.currentTarget.dataset;
+    const { value } = e.detail;
+    const { items1 } = this.data;
+    items1.forEach((element) => {
+      if (element.id === id) {
+        // eslint-disable-next-line no-param-reassign
+        element.ctrlChecked = value;
+      }
+    });
+    this.setData({
+      items1
+    });
+  },
+  // 全选
+  checkedON() {
+    this.checkedAll(true);
+  },
+  // 全不选
+  checkedOFF() {
+    this.checkedAll(false);
+  },
+  checkedAll(status) {
+    const { items1 } = this.data;
+    items1.forEach((element) => {
+      // eslint-disable-next-line no-param-reassign
+      element.ctrlChecked = status;
+    });
+    this.setData({
+      items1
+    });
   },
 });
 ```

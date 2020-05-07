@@ -2,7 +2,7 @@
   <checkbox
     class="am-checkbox-value"
     value="{{value}}"
-    checked="{{checked}}"
+    checked="{{_checked}}"
     disabled="{{disabled}}"
     onChange="onChange"
     id="{{id}}"
