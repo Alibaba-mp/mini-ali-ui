@@ -15,15 +15,15 @@ Page({
     const { id } = e.currentTarget.dataset;
     const { value } = e.detail;
     const { items1 } = this.data;
-    items1.forEach((element) => {
-      if (element.id === id) {
-        // eslint-disable-next-line no-param-reassign
-        element.ctrlChecked = value;
+    const { length } = items1;
+    for (let index = 0; index < length; index += 1) {
+      if (items1[index].id === id) {
+        this.setData({
+          [`items1[${index}].ctrlChecked`]: value,
+        });
+        break;
       }
-    });
-    this.setData({
-      items1,
-    });
+    }
   },
   // 全选
   checkedON() {
@@ -34,11 +34,10 @@ Page({
     this.checkedAll(false);
   },
   checkedAll(status) {
-    const { items1 } = this.data;
-    items1.forEach((element) => {
-      // eslint-disable-next-line no-param-reassign
-      element.ctrlChecked = status;
-    });
+    const items1 = this.data.items1.map((element) => ({
+      ...element,
+      ctrlChecked: status,
+    }));
     this.setData({
       items1,
     });

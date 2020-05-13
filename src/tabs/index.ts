@@ -38,6 +38,10 @@ Component({
     floorNumber: [],
     elevatorTop: '0px',
     showBadge: false,
+    // 选中选项卡下划线宽度
+    tabBarUnderlineWidth: '',
+    // 选中选项卡下划线高度
+    tabBarUnderlineHeight: '',
   },
   data: {
     windowWidth,

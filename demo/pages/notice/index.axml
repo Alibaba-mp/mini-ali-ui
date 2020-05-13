@@ -1,4 +1,3 @@
-<view class="demo-title">NoticeBar 通告栏</view>
 <view class="demo-item">
   <notice
     marqueeProps="{{marqueeProps}}"
@@ -74,9 +73,9 @@
 
 
 <view class="demo-title">胶囊通告栏 item: </view>
-<checkbox-group onChange="capsuleItemChange" name="capsule">
+<checkbox-group class="radio-group" onChange="capsuleItemChange" name="capsule">
   <label class="checkbox" a:for="{{capsuleItemList}}" key="label-{{index}}">
-    <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" style="vertical-align: middle;" />
     <image src='{{item.value}}' class="itemSize" />
   </label>
 </checkbox-group>

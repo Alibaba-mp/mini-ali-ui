@@ -45,46 +45,105 @@
 
 ### axml
 ```xml
-<popover
-  position="{{position}}"
-  show="{{show}}"
-  showMask="{{showMask}}"
-  onMaskClick="onMaskClick"
->
-  <view onTap="onShowPopoverTap">点击显示</view>
-  <view slot="items">
-    <popover-item onItemClick="itemTap1">
-      <text>line1</text>
-    </popover-item>
-    <popover-item>
-      <text>line2</text>
-    </popover-item>
-  </view>
-</popover>
+<view class="demo-popover">
+  <popover
+    position="{{position}}"
+    show="{{show}}"
+    showMask="{{showMask}}"
+    onMaskClick="onMaskClick"
+  >
+    <view class="demo-popover-btn" onTap="onShowPopoverTap">点击{{show ? '隐藏' : '显示'}}</view>
+    <view slot="items">
+      <popover-item onItemClick="itemTap1" iconType="{{showIcon ? 'qr' : ''}}" data-direction="{{position}}">
+        <text>{{position}}</text>
+      </popover-item>
+      <popover-item onItemClick="itemTap2" iconType="{{showIcon ? 'qr' : ''}}" data-index="{{2}}">
+        <text>line2</text>
+      </popover-item>
+    </view>
+  </popover>
+</view>
+<view class="demo-popover-test-btns">
+  <button class="demo-popover-test-btn" onTap="onNextPositionTap">下个位置</button>
+  <button class="demo-popover-test-btn" onTap="onMaskChangeTap">蒙层{{showMask ? '隐藏' : '显示'}}</button>
+  <button class="demo-popover-test-btn" onTap="onIconChangeTap">显示/隐藏图标</button>
+</view>
 ```
 
 ### js
 ```javascript
+const position = ['top', 'topRight', 'rightTop', 'right', 'rightBottom', 'bottomRight', 'bottom', 'bottomLeft', 'leftBottom', 'left', 'leftTop', 'topLeft'];
 Page({
   data: {
-    position: 'bottomRight',
+    position: position[0],
     show: false,
     showMask: true,
+    showIcon: true,
+  },
+  onShowPopoverTap() {
+    this.setData({
+      show: !this.data.show,
+    });
+  },
+  onNextPositionTap() {
+    let index = position.indexOf(this.data.position);
+    index = index >= position.length - 1 ? 0 : index + 1;
+    this.setData({
+      show: true,
+      position: position[index],
+    });
+  },
+  onMaskChangeTap() {
+    this.setData({
+      showMask: !this.data.showMask,
+    });
+  },
+  onIconChangeTap() {
+    this.setData({
+      showIcon: !this.data.showIcon,
+    });
   },
   onMaskClick() {
     this.setData({
       show: false,
     });
   },
-  onShowPopoverTap() {
-    this.setData({
-      show: true,
+  itemTap1(e) {
+    my.alert({
+      content: `点击_${e.currentTarget.dataset.direction}`,
     });
   },
-  itemTap1() {
+  itemTap2(e) {
     my.alert({
-      content: '点击1',
+      content: `点击_${e.currentTarget.dataset.index}`,
     });
   },
 });
+```
+
+### acss
+```css
+.demo-popover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+}
+.demo-popover-btn {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+}
+.demo-popover-test-btns {
+  display: flex;
+  justify-content: space-around;
+}
+.demo-popover-test-btn {
+  width: 45%;
+}
 ```

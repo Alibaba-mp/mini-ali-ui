@@ -41,7 +41,10 @@
                   (!hasSubTitle && capsule?
                   (index === activeTab ? 'background-color:' + tabBarUnderlineColor + ';' : '')
                   :'') }}">
-                <view a:if="{{ !hasSubTitle && !capsule && index === activeTab}}" class="am-tabs-bar-title-underline" style="background-color: {{tabBarUnderlineColor}};"></view>
+                <view a:if="{{ !hasSubTitle && !capsule && index === activeTab}}" class="am-tabs-bar-title-underline" 
+                  style="background-color: {{tabBarUnderlineColor}};
+                    {{tabBarUnderlineWidth?`width: ${tabBarUnderlineWidth};`:''}}
+                    {{tabBarUnderlineHeight?`height: ${tabBarUnderlineHeight};`:''}}"></view>
                 <view class="am-tabs-bar-tab-mainTitle" style="{{index === activeTab?'font-weight: bold;':''}}">{{item.title}}
                   <badge className="am-tabs-bar-tab-badge" a:if="{{item.showBadge}}"
                   dot="{{item.number ? false : true}}" 

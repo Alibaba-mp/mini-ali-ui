@@ -20,8 +20,6 @@
     min-height: @size-12;
     min-height: var(--am-picker-line-min-height, @size-12);
     overflow: hidden;
-    font-size: @font-size-list;
-    font-size: var(--am-picker-font-size, @font-size-list);
   }
 
   &-label {
@@ -29,6 +27,8 @@
     min-width: @size-20;
     min-width: var(--am-picker-label-min-width, @size-20);
     margin-right: 2px;
+    font-size: @font-size-list;
+    font-size: var(--am-picker-label-font-size, @font-size-list);
     color: @color-text-title;
     color: var(--am-picker-label-color, @color-text-title);
   }
@@ -39,8 +39,10 @@
     height: @size-6;
     height: var(--am-picker-wrapper-height, @size-6);
     align-items: center;
-    overflow: hidden;
     padding-left: 3px;
+    overflow: hidden;
+    font-size: @font-size-list;
+    font-size: var(--am-picker-font-size, @font-size-list);
   }
 
   &-layer {
@@ -48,11 +50,14 @@
     flex: 1;
     &-vertical {
       flex-direction: column;
-      padding: 12px 0;
+      padding: @v-spacing-large 0;
+      padding: var(--am-picker-vlabel-paddingTB, @v-spacing-large) 0;
       .am-picker-label {
         align-self: flex-start;
         font-size: @font-size-subtitle;
+        font-size: var(--am-picker-vlabel-font-size, @font-size-subtitle);
         color: @color-text-subtitle;
+        color: var(--am-picker-vlabel-color, @color-text-subtitle);
       }
       .am-picker-wrapper {
         padding-left: 0;
@@ -85,11 +90,6 @@
     display: none;
   }
 
-  &-text {
-    // padding-left: @size-2;
-    // padding-left: var(--am-picker-text-padding-left, @size-2);
-  }
-
   &-content-placeholder {
     color: @color-text-weak;
     color: var(--am-picker-placeholder-color, @color-text-weak);
@@ -102,7 +102,8 @@
 
   &-arrow {
     display: block;
-    margin-left: 8px;
+    margin-left: @h-spacing-standard;
+    margin-left: var(--am-picker-arrow-marginLeft, @h-spacing-standard);
     line-height: 1;
   }
 }

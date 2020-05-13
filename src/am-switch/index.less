@@ -2,12 +2,10 @@
 
 .am-switch {
   .checkbox {
+    width: 102 * @pixelSize;
+    height: 62 * @pixelSize;
     border-radius: @corner-radius-circle;
     border-radius: var(--am-switch-corner-radius, @corner-radius-circle);
-  }
-  .a-switch-checkbox.a-switch-checkbox:checked ~ .checkbox {
-    background: @color-fill-primary;
-    background: var(--am-switch-background, @color-fill-primary);
   }
   .checkbox:after {
     left: 4 * @pixelSize;
@@ -24,5 +22,27 @@
     height: 54 * @pixelSize;
     border-radius: @corner-radius-circle;
     border-radius: var(--am-switch-corner-radius, @corner-radius-circle);
+  }
+  &.a-switch-android .checkbox {
+    width: 144 * @pixelSize;
+    height: 46 * @pixelSize;
+    border-radius: 6 * @pixelSize;
+  }
+  &.a-switch-android .checkbox:after {
+    width: 70 * @pixelSize;
+    height: 42 * @pixelSize;
+    border-radius: 4 * @pixelSize;
+    left: 2 * @pixelSize;
+    top: 2 * @pixelSize;
+  }
+  .a-switch-checkbox.a-switch-checkbox:checked ~ .checkbox {
+    background: @color-fill-primary;
+    background: var(--am-switch-background, @color-fill-primary);
+  }
+  .a-switch-checkbox.a-switch-checkbox:checked ~ .checkbox::after {
+    transform: translateX(40 * @pixelSize);
+  }
+  &.a-switch-android .a-switch-checkbox.a-switch-checkbox:checked ~ .checkbox::after {
+    transform: translateX(70 * @pixelSize);
   }
 }

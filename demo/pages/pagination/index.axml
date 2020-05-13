@@ -14,12 +14,12 @@
   </pagination>
 </view>
 
-<view style="margin-top: 20px;">正常翻页样式</view>
+<view style="margin-top: 24rpx;padding-bottom: 16rpx;font-weight: bold;">正常翻页样式</view>
 <view style="padding: 20px 20px 0;background-color: #f8f8ba;">
   <pagination currentPage="{{3}}" max="{{10}}" height="200px" />
 </view>
 
-<view style="margin-top: 20px;">反白翻页样式</view>
+<view style="margin-top: 24rpx;padding-bottom: 16rpx;font-weight: bold;">反白翻页样式</view>
 <view style="padding: 20px 20px 0;background-color: #0e98d8;">
   <pagination currentPage="{{5}}" white="true" />
 </view>

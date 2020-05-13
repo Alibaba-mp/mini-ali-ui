@@ -24,8 +24,6 @@
     min-height: @size-12;
     min-height: var(--am-input-line-min-height, @size-12);
     overflow: hidden;
-    font-size: @font-size-list;
-    font-size: var(--am-input-font-size, @font-size-list);
   }
 
   &-label {
@@ -33,6 +31,8 @@
     min-width: @size-20;
     min-width: var(--am-input-label-min-width, @size-20);
     margin-right: 2px;
+    font-size: @font-size-list;
+    font-size: var(--am-input-label-font-size, @font-size-list);
     color: @color-text-title;
     color: var(--am-input-item-label-color, @color-text-title);
   }
@@ -42,11 +42,14 @@
     flex: 1;
     &-vertical {
       flex-direction: column;
-      padding: 12px 0;
+      padding: @v-spacing-large 0;
+      padding: var(--am-input-vlabel-paddingTB, @v-spacing-large) 0;
       .am-input-label {
         align-self: flex-start;
         font-size: @font-size-subtitle;
+        font-size: var(--am-input-vlabel-font-size, @font-size-subtitle);
         color: @color-text-subtitle;
+        color: var(--am-input-vlabel-color, @color-text-subtitle);
       }
       .a-input-placeholder {
         margin-left: -3px;
@@ -57,10 +60,12 @@
   &-content {
     flex: 1;
     display: flex;
-    color: @color-text-title;
-    color: var(--am-input-item-label-color, @color-text-title);
-    text-align: left;
     padding: 0;
+    font-size: @font-size-list;
+    font-size: var(--am-input-font-size, @font-size-list);
+    text-align: left;
+    color: @color-text-title;
+    color: var(--am-input-item-color, @color-text-title);
   }
 
   &-content .a-input-wrap {
