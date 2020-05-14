@@ -1,4 +1,5 @@
 import fmtClass from '../_util/fmtClass';
+import fmtEvent from '../_util/fmtEvent';
 
 const SUPPORT_COMPONENT2 = my.canIUse('component2');
 const prefixCls = 'am-button';
@@ -85,8 +86,9 @@ Component({
       });
       return ret;
     },
-    onButtonTap(...args) {
-      this.props.onTap(...args);
+    onButtonTap(e) {
+      const event = fmtEvent(this.props, e);
+      this.props.onTap(event);
     },
     propsChange(prevProps, nextProps) {
       const pProps = Object.getOwnPropertyNames(prevProps);
