@@ -23,23 +23,21 @@ Component({
     swipeitem: null,
     height: 0,
     enableNew: true,
+    swipeWidth: '',
   },
   didMount() {
-    const { enableNew } = this.props;
+    const { enableNew, swipeWidth } = this.props;
     const useV2 = isV2 && enableNew;
-    this.btnWidth = 0;
     this.setData({
       useV2,
     });
+    if (swipeWidth.match(/%/)) {
+      this.setData({
+        swipeWidth: '',
+      });
+    }
     this.setBtnWidth();
     this.getSwipeHeight();
-    if (useV2) {
-      setTimeout(() => {
-        this.setData({
-          transitionVal: 'transform 100ms linear',
-        });
-      }, 500);
-    }
   },
   didUpdate(_prevProps, prevData) {
     const { restore } = this.props;
@@ -189,13 +187,11 @@ Component({
         });
       }
     },
-    onChange(e) {
-      this.setData({
-        cellWidth: e.detail.x,
-      });
+    onChange() {
       if (!this.data.swiping) {
         this.setData({
           swiping: true,
+          transitionVal: 'transform 100ms linear',
         });
       }
     },

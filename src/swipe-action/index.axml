@@ -1,6 +1,13 @@
-<view a:if={{!useV2}} class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}">
+<view a:if={{!useV2}}
+      class="am-swipe {{swiping ? 'am-swiping' : ''}} {{className}}"
+      style="{{swipeWidth ? 'width: ' + swipeWidth + ';' : ''}}"
+>
   <block a:if="{{right.length > 0}}">
-    <view class="am-swipe-right am-swipe-right-{{$id}} {{borderRadius?'am-swipe-right-radius':''}}" style="{{borderRadius?'right: ' + radiusItemSpace + ';':'right: 0;'}}width: {{actionWidth - cellWidth}}px;">
+    <view class="am-swipe-right am-swipe-right-{{$id}} {{borderRadius?'am-swipe-right-radius':''}}"
+          style="
+                {{borderRadius ? 'transform: translateX(-' + radiusItemSpace + ');' : 'transform: translateX(0);'}}
+                {{leftPos < 0 ? 'right: 0;' : 'right: 1px;'}}"
+    >
       <view a:if="{{borderRadius}}" style="width: {{radiusItemSpace}};height: 100%;"></view>
       <block a:for="{{right}}">
         <view
@@ -29,16 +36,23 @@
 </view>
 <view
   class="am-swipe am-swipe-{{$id}} {{className}}"
-  style="width: {{viewWidth}}px; {{height?'height: ' + height + 'px;':'height: auto;'}}"
+style="width: {{swipeWidth ? swipeWidth : viewWidth + 'px'}}; {{height?'height: ' + height + 'px;':'height: auto;'}}"
   key="{{$id}}"
   a:else
 >
   <movable-area
     class="am-swipe-movable-area"
-    style="width: {{ viewWidth + actionWidth}}px;{{height?'height: ' + height + 'px;':'height: auto;'}}left: -{{actionWidth}}px;"
+    style="{{swipeWidth ? 'width: calc(' + swipeWidth + ' + ' + actionWidth + 'px);' : 'width: ' + (viewWidth + actionWidth) + 'px;'}}
+          {{height ? 'height: ' + height + 'px;' : 'height: auto;'}}
+          transform: translateX(-{{actionWidth}}px);"
   >
     <block a:if="{{right.length > 0}}">
-      <view class="am-swipe-right am-swipe-right-{{$id}} {{borderRadius?'am-swipe-right-radius':''}}" style="{{borderRadius?'right: ' + radiusItemSpace + ';':'right: 0;'}}width: {{actionWidth - cellWidth}}px;">
+      <view
+        class="am-swipe-right am-swipe-right-{{$id}} {{borderRadius?'am-swipe-right-radius':''}}"
+        style="width: {{cellWidth}}px;
+              {{borderRadius ? 'transform: translateX(-' + radiusItemSpace + ');' : 'transform: translateX(0);'}}
+              {{x > 0 ? 'right: 1px;' : 'right: 0;'}}"
+      >
         <view a:if="{{borderRadius}}" style="width: {{radiusItemSpace}};height: 100%;"></view>
         <block a:for="{{right}}">
           <view
@@ -46,7 +60,8 @@
             onTap="onItemClick"
             data-index="{{index}}"
             key="swipe-item-{{index}}"
-            style="{{item.bgColor?'background-color:' + item.bgColor + ';':''}} {{item.fColor?'color: ' + item.fColor + ';':''}}"
+            style="{{item.bgColor?'background-color:' + item.bgColor + ';':''}}
+                  {{item.fColor?'color: ' + item.fColor + ';':''}}"
           >
             <text class="am-swipe-btn-text">{{item.text}}</text>
           </view>
@@ -55,16 +70,18 @@
     </block>
     <movable-view
       class="am-swipe-content"
-      onTap="onSwipeTap"
-      onTouchStart="onSwipeStart"
-      direction="horizontal"
       data-type="content"
-      style="width: {{viewWidth}}px;{{height?'height: ' + height + 'px;':'height: auto;'}} transition: {{transitionVal}};"
-      x="{{x}}"
+      style="width: {{swipeWidth ? swipeWidth : viewWidth + 'px'}};
+            {{height ? 'height: ' + height + 'px;' : 'height: auto;'}}
+            transition: {{transitionVal}};"
       onChange="onChange"
       onChangeEnd="onChangeEnd"
+      onTap="onSwipeTap"
+      onTouchStart="onSwipeStart"
+      x="{{x}}"
       damping="30"
       friction="5"
+      direction="horizontal"
     >
       <view class="am-swipe-movable-area-{{$id}}"><slot /></view>
     </movable-view>

@@ -169,7 +169,7 @@ Component({
         }, 300);
         my.pageScrollTo({
           scrollTop: Math.ceil(floor),
-          duration: 300,
+          duration: 1,
         });
       }
     },

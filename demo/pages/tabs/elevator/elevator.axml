@@ -17,10 +17,13 @@
       <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:elif="{{index === 2}}">
         <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
       </tab-content>
+      <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:elif="{{index >= 6}}">
+        <view class="tab-content" style="height: 300rpx;">改变 tab-content 高度为 300rpx {{item.title}}</view>
+      </tab-content>
       <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:else>
         <view class="tab-content">content of {{item.title}}</view>
       </tab-content>
     </block>
   </tabs>
 </view>
-<view style="height: 500px;background-color: #ccc;">有 500px 高度的一个 view</view>
+<view style="height: 50px;background-color: #ccc;">有 50px 高度的一个 view</view>
