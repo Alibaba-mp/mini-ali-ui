@@ -42,6 +42,8 @@ Component({
     tabBarUnderlineWidth: '',
     // 选中选项卡下划线高度
     tabBarUnderlineHeight: '',
+    // 电梯组件 tab-content 距离顶部高度
+    elevatorContentTop: 0,
   },
   data: {
     windowWidth,
@@ -79,8 +81,17 @@ Component({
         my.createSelectorQuery()
           .select(`#am-tabs-elevator-pane-${i}`)
           .boundingClientRect()
+          .select('.am-tabs-bar-sticky')
+          .boundingClientRect()
           .exec((ret) => {
-            this.props.floorNumber[i] = ((<my.IBoundingClientRect>ret[0]).top);
+            const { elevatorTop, elevatorContentTop } = this.props;
+            let tabContentDistance = 0;
+            if (elevatorTop.match(/\d+px/)) {
+              tabContentDistance = parseInt(elevatorTop, 10);
+            } else {
+              tabContentDistance = parseInt(elevatorContentTop, 10);
+            }
+            this.props.floorNumber[i] = (<my.IBoundingClientRect>ret[0]).top - ret[1].height - tabContentDistance;
             this.setData({
               floorNumber: this.props.floorNumber,
             });

@@ -9,16 +9,17 @@
     hasSubTitle="{{false}}"
     showPlus="{{false}}"
     elevator="{{true}}"
+    elevatorTop="50px"
   >
     <block a:for="{{tabs}}">
       <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:if="{{index === 0}}">
-        <view class="tab-content" style="height: 300px;">高度为 300px {{item.title}}</view>
+        <view class="tab-content" style="height: 300px;background: #e0e0e0;">高度为 300px {{item.title}}</view>
       </tab-content>
       <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:elif="{{index === 2}}">
-        <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
+        <view class="tab-content" style="height: 200px;background: #e5c8ff;">改变 tab-content 高度为 200px {{item.title}}</view>
       </tab-content>
       <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:elif="{{index >= 6}}">
-        <view class="tab-content" style="height: 300rpx;">改变 tab-content 高度为 300rpx {{item.title}}</view>
+        <view class="tab-content" style="height: 300rpx;background: #feffc9;">改变 tab-content 高度为 300rpx {{item.title}}</view>
       </tab-content>
       <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:else>
         <view class="tab-content">content of {{item.title}}</view>

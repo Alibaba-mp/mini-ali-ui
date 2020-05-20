@@ -12,7 +12,7 @@
     onBlur="handleBlur"
     onCancel="handleCancel"
     onSubmit="handleSubmit"
-    showCancelButton="{{false}}" />
+    showCancelButton="{{true}}" />
 </view>
 <view style="padding: 24rpx">
   <checkbox onChange='onChange' id="showVoice"/><label for="showVoice">是否展示Voice图标</label>

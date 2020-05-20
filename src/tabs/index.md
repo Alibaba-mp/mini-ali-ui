@@ -45,6 +45,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | hasSubTitle | Boolean | false | - | 是否有副标题（描述）内容 | - | - |
 | elevator | Boolean | false | - | 是否电梯组件 | - | - |
 | elevatorTop | String | 0px | - | 电梯组件中 tab 置顶时的位置控制 | - | - |
+| elevatorContentTop | Number | 0 | - | 电梯组件中 tab-content 距离顶部的位置 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | onPlusClick | EventHandle | () => {} | - | + icon 被点击时的回调 | - | - |
 | onTabClick | EventHandle | (index: Number) => void | - | tab 被点击的回调 | - | - |
 | onChange | EventHandle | (index: Number) => void | - | tab 变化时触发 | - | - |
@@ -71,6 +72,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
   * 可同时添加 `badge: { arrow: true, stroke: true, }` 控制 badge 的样式；
   * `arrow` 可展示有箭头的 badge，箭头仅有左方向；
   * `stroke` 可展示有描边的 badge；
+* 当 `elevatorTop` 的值为 px 单位时，`elevatorContentTop` 距离顶部的高度则是 `elevatorTop` + tab 选项卡的高度；
 
 ### tab-content 高度自适应说明
 
