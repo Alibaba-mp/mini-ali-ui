@@ -1,3 +1,19 @@
+## 1.0.10
+`2020-05-21`
+* **Add**
+  * swipe-action 组件新增宽度设置；
+  * tabs 选项卡新增选中态下滑线可配置；
+* **Enhance**
+  * tabs 电梯组件 tab-content 距离顶部的位置；
+* **Fixed**
+  * list-item 中 arrow 对齐像素偏差；
+  * input-item/picker-item 在主题配置方面的 token 处理；
+  * am-switch 在 rpx 模式中的兼容问题 [#23](https://github.com/Alibaba-mp/mini-ali-ui/issues/23)；
+  * button 组件获取 data-xxx 的值 [#13](https://github.com/Alibaba-mp/mini-ali-ui/issues/13)；
+  * swipe-action 组件加载时闪动；
+  * tab 电梯组件点击高亮不准；
+  * search-bar 组件中 clear icon 可能无法点击问题；
+
 ## 1.0.9
 `2020-05-07`
 * **Add**
