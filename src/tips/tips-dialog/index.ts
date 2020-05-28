@@ -1,3 +1,5 @@
+import fmtEvent from '../../_util/fmtEvent';
+
 Component({
   props: {
     show: true,
@@ -10,11 +12,12 @@ Component({
     arrowColor: '000',
   },
   methods: {
-    onCloseTap() {
+    onCloseTap(e) {
       const { onCloseTap } = this.props;
+      const event = fmtEvent(this.props, e);
 
       if (onCloseTap) {
-        onCloseTap();
+        onCloseTap(event);
       }
     },
   },

@@ -1,6 +1,6 @@
 # am-checkBox 复选框
 
-复选框。 对齐ant design checkbox的设计，当checked===undefined(默认)时am-checkbox是非受控组件，否则是一个受控组件
+复选框。 对齐 ant design checkbox 的设计，当 `ctrlChecked === undefined` (默认)时 am-checkbox 是非受控组件，否则是一个受控组件。
 
 ## 截图
 <img src="https://gw.alipayobjects.com/mdn/rms_a02d41/afts/img/A*f3-xS7ChP58AAAAAAAAAAABkARQnAQ"/>
@@ -17,7 +17,7 @@
 | checked | Boolean | false | true,false | 默认是否选中 | - |
 | disabled | Boolean | false | true,false | 是否禁用 | - |
 | onChange | (e: Object) => void |  | - | change 事件触发的回调函数 | - |
-| id | String | - | - | 与label组件的for属性组合使用 | - |
+| id | String | - | - | 与 label 组件的 for 属性组合使用 | - |
 
 ## 示例
 

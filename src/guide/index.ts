@@ -1,3 +1,5 @@
+import fmtEvent from '../_util/fmtEvent';
+
 Component({
   props: {
     btn_next: '下一步',
@@ -45,7 +47,8 @@ Component({
       this.props.show = false;
       const { onGuideOver } = this.props;
       if (onGuideOver !== '' && typeof onGuideOver === 'function') {
-        onGuideOver(e);
+        const event = fmtEvent(this.props, e);
+        onGuideOver(event);
       }
     },
   },

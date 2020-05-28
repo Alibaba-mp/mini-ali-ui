@@ -1,3 +1,5 @@
+import fmtEvent from '../_util/fmtEvent';
+
 Component({
   props: {
     maskZindex: '',
@@ -7,10 +9,11 @@ Component({
     show: true,
   },
   methods: {
-    onMaskClick() {
+    onMaskClick(e) {
       const { onMaskTap } = this.props;
       if (onMaskTap !== '' && typeof onMaskTap === 'function') {
-        onMaskTap();
+        const event = fmtEvent(this.props, e);
+        onMaskTap(event);
       }
     },
   },

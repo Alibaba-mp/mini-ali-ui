@@ -1,3 +1,5 @@
+import fmtEvent from '../_util/fmtEvent';
+
 const noop = () => { };
 const canIUseTransitionEnd = my.canIUse('view.onTransitionEnd');
 
@@ -176,24 +178,27 @@ Component({
       }
     },
 
-    onNoticeTap() {
+    onNoticeTap(e) {
       const { capsule, mode, action, actionLeft, onClick } = this.props;
+      const event = fmtEvent(this.props, e);
       if ((capsule && typeof onClick === 'function') || (mode === 'link' && actionLeft === '' && action === '' && typeof onClick === 'function')) {
-        onClick();
+        onClick(event);
       }
     },
 
-    onOperationTap() {
+    onOperationTap(e) {
       const { mode, action, onClick } = this.props;
+      const event = fmtEvent(this.props, e);
       if ((mode || action !== '') && typeof onClick === 'function') {
-        onClick();
+        onClick(event);
       }
     },
 
-    onActionLeftTap() {
+    onActionLeftTap(e) {
       const { actionLeft, onClickLeft } = this.props;
+      const event = fmtEvent(this.props, e);
       if (actionLeft !== '' && typeof onClickLeft === 'function') {
-        onClickLeft();
+        onClickLeft(event);
       }
     },
   },
