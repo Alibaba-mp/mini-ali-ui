@@ -6,6 +6,7 @@
   btn_jump="直接关闭，不看跳过"
   btn_over="看完了😀啊"
   onGuideOver="closeGuide"
+  maskClick="{{true}}"
 ></guide>
 
 <button size="default" type="primary" onTap="onShowJumpGuide">查看可跳过的引导图</button>

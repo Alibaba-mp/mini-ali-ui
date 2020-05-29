@@ -1,5 +1,5 @@
 <view
-  class="am-mask {{type === 'market'?'am-mask__m':''}}"
+  class="am-mask {{type === 'market'?'am-mask__m':''}} {{fixMaskFull ? 'am-mask__fix' : ''}}"
   style="{{show?'':'display: none;'}}{{maskZindex?'z-index: ' + maskZindex + ';':''}}"
   onTap="onMaskClick"
 ></view>

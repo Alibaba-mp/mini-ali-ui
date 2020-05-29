@@ -5,6 +5,7 @@ Component({
     type: 'product',
     onMaskTap: () => { },
     show: true,
+    fixMaskFull: false,
   },
   methods: {
     onMaskClick() {

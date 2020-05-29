@@ -19,6 +19,7 @@
 | maskZindex| Number | - | - | 自定义蒙层的 `z-index` 层级 | - | - |
 | show | Boolean | true | - | 是否显示蒙层 | - | - |
 | onMaskTap | EventHandle | () => { } | - | 蒙层点击事件 | - | - |
+| fixMaskFull | Boolean | false | - | 用以解决遮罩层受到 `transform` 影响而显示不全的问题 | [1.0.11](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ## 代码示例
 ```json

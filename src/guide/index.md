@@ -21,6 +21,7 @@
 | show | Boolean | false | - | 是否显示 guide 遮罩引导模块 | - | - |
 | guideList | Array | [] | - | guide 模块中的内容 | - | true |
 | onGuideOver | EventHandle | () => { } | - | 跳过/关闭 guide 遮罩引导按钮的事件 | - | - |
+| maskClick | Boolean | false | - | 是否可通过点击遮罩触发事件 | [1.0.11](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ## Bug & Tip
 * `hasJump` 如为 `false`，guide 引导中的按钮只会显示一个 `btn_next` 按钮；
@@ -51,6 +52,7 @@
   btn_jump="直接关闭，不看跳过"
   btn_over="看完了😀啊"
   onGuideOver="closeGuide"
+  maskClick="{{true}}"
 ></guide>
 
 <button size="default" type="primary" onTap="onShowJumpGuide">查看可跳过的引导图</button>

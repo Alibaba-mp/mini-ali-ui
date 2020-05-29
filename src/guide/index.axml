@@ -17,8 +17,8 @@
           <button shape="capsule" class="am-guide-btn-item" onTap="onGuideClick">{{btn_over}}</button>
         </block>
       </view>
+      <mask show="{{hasJump && show}}" onMaskTap="onMaskTap"></mask>
     </view>
-    <mask show="{{hasJump && show}}"></mask>
   </view>
   <view class="am-guide" style="{{guideZindex?'z-index: '+ guideZindex + ';':'z-index: 1000;'}}" a:else>
     <view class="am-guide-content">
@@ -36,7 +36,7 @@
           <button shape="capsule" type="ghost" class="am-guide-btn-item" onTap="onGuideClick">{{btn_over}}</button>
         </block>
       </view>
+      <mask show="{{!hasJump && show}}" onMaskTap="onMaskTap"></mask>
     </view>
-    <mask show="{{!hasJump && show}}"></mask>
   </view>
 </block>

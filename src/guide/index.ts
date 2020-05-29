@@ -7,6 +7,7 @@ Component({
     show: false,
     guideList: [],
     onGuideOver: () => { },
+    maskClick: false,
   },
   data: {
     guideNumber: 1,
@@ -46,6 +47,16 @@ Component({
       const { onGuideOver } = this.props;
       if (onGuideOver !== '' && typeof onGuideOver === 'function') {
         onGuideOver(e);
+      }
+    },
+    onMaskTap(e) {
+      const { maskClick } = this.props;
+      if (maskClick === true) {
+        if (this.data.guideCurrent > this.data.guideLast) {
+          this.onBtnClick(e);
+        } else {
+          this.onGuideClick(e);
+        }
       }
     },
   },

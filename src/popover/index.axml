@@ -4,7 +4,7 @@
   <!-- 弹窗层 -->
   <view class="am-popover-container" a:if="{{show}}">
     <!-- 蒙层 -->
-    <view class="am-popover-mask" a:if="{{showMask}}" onTap="onMaskClick"></view>
+    <mask show="{{showMask}}" fixMaskFull="{{fixMaskFull}}" maskZindex="{{99}}" onMaskTap="onMaskClick"></mask>
     <!-- 弹窗内容 -->
     <view class="am-popover-content am-popover-placement-{{position}} border-{{!showMask}}">
       <!-- 箭头 -->

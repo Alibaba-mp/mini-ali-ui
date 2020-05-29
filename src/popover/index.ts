@@ -4,6 +4,7 @@ Component({
     className: '',
     showMask: true,
     position: 'bottomRight',
+    fixMaskFull: false,
   },
   methods: {
     onMaskClick() {

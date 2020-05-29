@@ -20,6 +20,7 @@
 | show      | Boolean | false       | -                                                            | 气泡是否展示   | -        | true |
 | showMask  | Boolean | true        | -                                                            | 蒙层是否展示   | -        | -    |
 | position  | String  | bottomRight | `top`<br/>`topRight`<br/>`topLeft`<br/> `bottom`<br/>`bottomLeft`<br/>`bottomRight`<br/>`right`<br/>`rightTop`<br/>`rightBottom`<br/>`left`<br/>`leftBottom`<br/> `leftTop` | 气泡位置       | -        | -    |
+| fixMaskFull | Boolean | false | - | 用以解决遮罩层受到 `transform` 影响而显示不全的问题 | [1.0.11](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ## popover-item 属性
 
