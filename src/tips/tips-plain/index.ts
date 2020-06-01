@@ -6,6 +6,7 @@ Component({
     className: '',
     time: 5000,
     onClose: () => {},
+    onTimeOut: () => {},
   },
   didMount() {
     const { time } = this.props;
@@ -13,6 +14,7 @@ Component({
       this.setData({
         show: false,
       });
+      this.onTimeOut();
     }, time);
   },
   didUnmount() {
@@ -23,7 +25,13 @@ Component({
       this.setData({
         show: false,
       });
+      clearTimeout(this._timer);
       this.props.onClose();
+    },
+    onTimeOut() {
+      if (this.props.onTimeOut && typeof this.props.onTimeOut === 'function') {
+        this.props.onTimeOut();
+      }
     },
   },
 });

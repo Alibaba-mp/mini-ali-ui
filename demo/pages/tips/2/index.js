@@ -5,7 +5,12 @@ Page({
   },
   onClose() {
     my.alert({
-      title: '12321',
+      title: '主动关闭 tips',
+    });
+  },
+  onTimeOut() {
+    my.alert({
+      title: '时间到了，关闭 tips',
     });
   },
 });

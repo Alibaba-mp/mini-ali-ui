@@ -33,6 +33,7 @@
 | className | String |  |  | 自定义class |  | false |
 | time | Number | 5000(ms) |  | 自动关闭时间(单位毫秒) |  | false |
 | onClose | () => void |  |  | 回调并关闭提示框 |  | false |
+| onTimeOut | () => void |  |  | 倒计时结束时关闭回调 | [1.0.11](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | false |
 
 
 ## 示例
@@ -142,19 +143,24 @@ Page({
 ### tips-plain
 
 ```xml
-<tips-plain onClose="onClose" time="{{time}}">{{content}}</tips-plain>
+<tips-plain onClose="onClose" onTimeOut="onTimeOut" time="{{time}}">{{content}}</tips-plain>
 ```
 
 ```javascript
 Page({
   data: {
-    content: '我知道了',
+    content: '我知道了(2秒后消失)',
     time: 2000,
   },
   onClose() {
     my.alert({
-      title: '12321'
+      title: '主动关闭 tips',
     });
-  }
+  },
+  onTimeOut() {
+    my.alert({
+      title: '时间到了，关闭 tips',
+    });
+  },
 });
 ```
