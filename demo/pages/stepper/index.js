@@ -2,8 +2,8 @@ Page({
   data: {
     value: 8,
   },
-  callBackFn(value) {
-    console.log(value);
+  callBackFn(value, mode) {
+    console.log(value, mode);
   },
   modifyValue() {
     this.setData({

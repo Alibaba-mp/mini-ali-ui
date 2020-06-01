@@ -58,7 +58,7 @@ Component({
           opaAdd,
           opaReduce,
         });
-        onChange(value);
+        onChange(value, 'click');
       }
     },
     onInput(e) {
@@ -70,7 +70,7 @@ Component({
           value: max,
         });
       }
-      this.resetFn(value);
+      this.resetFn(Number(value), 'input');
     },
     onBlur(event) {
       const { value } = event.detail;
@@ -81,9 +81,9 @@ Component({
           value: max,
         });
       }
-      this.resetFn(value);
+      this.resetFn(Number(value), 'input');
     },
-    resetFn(value) {
+    resetFn(value, mode) {
       const { max, min, onChange } = this.props;
       let calculatedVal = value;
       let opaAdd = 1;
@@ -100,7 +100,7 @@ Component({
         opaAdd,
         opaReduce,
       });
-      onChange(calculatedVal);
+      onChange(calculatedVal, mode);
     },
     getCalculateValue(type, arg1, arg2) {
       const numFloat = arg1.toString().split('.')[1] || '';
