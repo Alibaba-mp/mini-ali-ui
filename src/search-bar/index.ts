@@ -4,6 +4,7 @@ Component({
     placeholder: '',
     focus: false,
     showVoice: false,
+    borderColor: '#1677ff',
   },
   data: {
     _value: '',

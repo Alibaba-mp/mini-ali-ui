@@ -30,6 +30,7 @@
 | disabled | Boolean | false |true,false | - | 设置禁用 |
 | maxLength | Number | - | - | - | 最多允许输入的字符个数 |
 | showCancelButton | Boolean | false | true,false | - | 是否一直显示取消按钮 |
+| borderColor | String | #1677ff | - | - | 搜索输入框边框色 |
 
 ## 示例
 

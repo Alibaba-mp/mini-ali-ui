@@ -5,8 +5,6 @@
   display: flex;
   align-items: center;
   padding: 0 0 0 @size-3;
-  background: @color-fill-grey-inverse;
-  background: var(--am-search-background, @color-fill-grey-inverse);
   overflow: hidden;
 
   &-input {
@@ -16,10 +14,13 @@
     line-height: 60 * @pixelSize;
     flex: 1;
     box-sizing: border-box;
-    border-radius: @corner-radius-circle;
-    border-radius: var(--am-search-corner-radius, @corner-radius-circle);
-    border: @border-width-standard solid @color-fill-primary;
-    border: var(--am-search-borderwidth, @border-width-standard) solid var(--am-search-border-color, @color-fill-primary);
+    border-radius: @corner-radius-md-plus;
+    border-radius: var(--am-search-corner-radius, @corner-radius-md-plus);
+    border-width: @border-width-standard;
+    border-width: var(--am-search-borderwidth, @border-width-standard);
+    border-style: solid;
+    background: @color-fill-grey-inverse;
+    background: var(--am-search-background, @color-fill-grey-inverse);
   }
 
   &-synthetic {
@@ -86,8 +87,8 @@
     &-font {
       font-size: @font-size-subtitle;
       font-size: var(--am-search-iconsize, @font-size-subtitle);
-      color: @color-text-primary;
-      color: var(--am-search-vocieicon-color, @color-text-primary);
+      color: @color-text-subtitle;
+      color: var(--am-search-vocieicon-color, @color-text-subtitle);
     }
   }
 

@@ -1,5 +1,5 @@
 <view class="am-search {{className}}">
-  <view class="am-search-input">
+  <view class="am-search-input" style="border-color: {{borderColor}};">
     <view class="am-search-synthetic">
         <am-icon type='search' class="am-search-synthetic-icon"></am-icon>
         <text class="am-search-synthetic-placeholder" style="{{ visibility: !focus && _value.length === 0 ? 'visible': 'hidden'}}">{{placeholder}}</text>
