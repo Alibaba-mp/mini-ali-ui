@@ -1,3 +1,5 @@
+import fmtEvent from '../_util/fmtEvent';
+
 const SUPPORT_COMPONENT2 = my.canIUse('component2');
 const TYPE_MAP = {
   success: 'check_',
@@ -37,11 +39,13 @@ Component({
     }
   },
   methods: {
-    tapMain() {
-      this.props.onTapMain();
+    tapMain(e) {
+      const event = fmtEvent(this.props, e);
+      this.props.onTapMain(event);
     },
-    tapSub() {
-      this.props.onTapSub();
+    tapSub(e) {
+      const event = fmtEvent(this.props, e);
+      this.props.onTapSub(event);
     },
     setType(type) {
       const realType = TYPE_MAP[type] || 'check_';

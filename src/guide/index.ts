@@ -1,3 +1,5 @@
+import fmtEvent from '../_util/fmtEvent';
+
 Component({
   props: {
     btn_next: '下一步',
@@ -46,16 +48,18 @@ Component({
       this.props.show = false;
       const { onGuideOver } = this.props;
       if (onGuideOver !== '' && typeof onGuideOver === 'function') {
-        onGuideOver(e);
+        const event = fmtEvent(this.props, e);
+        onGuideOver(event);
       }
     },
     onMaskTap(e) {
       const { maskClick } = this.props;
+      const event = fmtEvent(this.props, e);
       if (maskClick === true) {
         if (this.data.guideCurrent > this.data.guideLast) {
-          this.onBtnClick(e);
+          this.onBtnClick();
         } else {
-          this.onGuideClick(e);
+          this.onGuideClick(event);
         }
       }
     },

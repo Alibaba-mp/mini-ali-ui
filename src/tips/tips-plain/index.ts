@@ -1,3 +1,5 @@
+import fmtEvent from '../../_util/fmtEvent';
+
 Component({
   data: {
     show: true,
@@ -21,16 +23,18 @@ Component({
     clearTimeout(this._timer);
   },
   methods: {
-    onClose() {
+    onClose(e) {
+      const event = fmtEvent(this.props, e);
       this.setData({
         show: false,
       });
       clearTimeout(this._timer);
-      this.props.onClose();
+      this.props.onClose(event);
     },
-    onTimeOut() {
+    onTimeOut(e) {
+      const event = fmtEvent(this.props, e);
       if (this.props.onTimeOut && typeof this.props.onTimeOut === 'function') {
-        this.props.onTimeOut();
+        this.props.onTimeOut(event);
       }
     },
   },
