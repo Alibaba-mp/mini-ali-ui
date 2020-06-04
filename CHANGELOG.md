@@ -1,3 +1,14 @@
+## 1.0.11
+`2020-06-04`
+* **Enhance**
+  * **search-bar** 组件新增 `borderColor`；
+  * tips 组件中的 tips-plain 新增倒计时后的回调 `onTimeout()`；
+  * 部分组件新增对 `data-xxx` 的传值；
+  * **guide** 组件可通过点击遮罩来实现引导跳转；
+  * **stepper** 组件新增 `onchange` 事件触发类型返回值；
+* **Fixed**
+  * **popover** 组件中遮罩由于 `transform` 导致覆盖不全 [#20](https://github.com/Alibaba-mp/mini-ali-ui/issues/20)；
+
 ## 1.0.10
 `2020-05-21`
 * **Add**
