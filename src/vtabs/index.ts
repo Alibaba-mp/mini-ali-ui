@@ -146,5 +146,12 @@ Component({
         this.isScrolling = true;
       }
     },
+    onTabFirstShow(e) {
+      // SDKversion 最低要求 1.9.4
+      const { index, anchor } = e.target.dataset;
+      if (this.props.onTabFirstAppear) {
+        this.props.onTabFirstAppear({ index, anchor });
+      }
+    },
   },
 });
