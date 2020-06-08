@@ -24,6 +24,7 @@
               data-floor="{{floorNumber[index]}}"
               key="tabs-item-{{index}}"
               onTap="handleTabClick"
+              onFirstAppear="onTabFirstShow"
               style="color: {{ !hasSubTitle && capsule?
                 (index === activeTab ? capsuleTabBarActiveTextColor: tabBarInactiveTextColor)
                 :

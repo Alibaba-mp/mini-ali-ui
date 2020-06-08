@@ -200,5 +200,11 @@ Component({
         });
       }
     },
+    onTabFirstShow(e) {
+      const { index  } = e.target.dataset;
+      if (this.props.onTabFirstAppear) {
+        this.props.onTabFirstAppear({ index });
+      }
+    },
   },
 });
