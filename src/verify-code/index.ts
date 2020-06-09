@@ -74,27 +74,29 @@ Component({
       this.props.onClear(event);
     },
     onTapSend(e) {
-      this.setData({
-        _actionActive: false,
-      });
-      this._timeout = setInterval(() => {
-        const subOne = this.data._countDown - 1;
-        if (subOne <= 0) {
-          clearInterval(this._timeout);
-          this.setData({
-            _actionActive: true,
-            resend: true,
-            _countDown: this.props.countDown,
-            actedBefore: true,
-          });
-        } else {
-          this.setData({
-            _countDown: subOne,
-          });
-        }
-      }, 1000);
-      const event = fmtEvent(this.props, e);
-      this.props.onSend(event);
+      if (this.data._actionActive) {
+        this.setData({
+          _actionActive: false,
+        });
+        this._timeout = setInterval(() => {
+          const subOne = this.data._countDown - 1;
+          if (subOne <= 0) {
+            clearInterval(this._timeout);
+            this.setData({
+              _actionActive: true,
+              resend: true,
+              _countDown: this.props.countDown,
+              actedBefore: true,
+            });
+          } else {
+            this.setData({
+              _countDown: subOne,
+            });
+          }
+        }, 1000);
+        const event = fmtEvent(this.props, e);
+        this.props.onSend(event);
+      }
     },
   },
 });
