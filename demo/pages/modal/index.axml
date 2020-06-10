@@ -32,7 +32,7 @@
 		onModalClose="onModalClose21"
 		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">带图弹窗</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
 		<view slot="footer">我知道了</view>
 	</modal>
@@ -43,8 +43,9 @@
     showClose="{{true}}"
 		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">带图弹窗-关闭icon</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
+		<am-icon type="question" color="red" />
 		<view slot="footer">我知道了</view>
 	</modal>
 	<modal
@@ -55,7 +56,7 @@
 		topImageSize="lg"
 		closeType="1"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">带图弹窗-大图</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
 		<view slot="footer">我知道了</view>
 	</modal>
@@ -66,7 +67,7 @@
 		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
 		topImageSize="sm"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">带图弹窗-小图</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
 		<view slot="footer">我知道了</view>
 	</modal>
@@ -77,7 +78,7 @@
 		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
 		topImageSize="md"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">带图弹窗-中图</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
 		<view slot="footer">我知道了</view>
 	</modal>
@@ -121,7 +122,7 @@
     onButtonClick="onButtonClick5"
     buttons="{{buttons5}}"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">双按钮弹框</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
 	</modal>
   <modal
@@ -131,7 +132,7 @@
     buttonsLayout="vertical"
     buttons="{{buttons6}}"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">双按钮弹框-竖排</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
 	</modal>
   <modal
@@ -142,7 +143,7 @@
     topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"
 		topImageSize="lg"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">弹框自定义按钮样式</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
 	</modal>
   <modal
@@ -151,14 +152,14 @@
     onButtonClick="onButtonClick8"
     buttons="{{buttons8}}"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">三按钮弹框</view>
 		说明当前状态、提示用户解决方案，最好不要超过两行。
 	</modal>
   <modal
 		show="{{modalOpened9}}"
     showClose="{{false}}"
 	>
-		<view slot="header">标题单行</view>
+		<view slot="header">自定义弹框内容</view>
 		<view>说明当前状态、提示用户解决方案，最好不要超过两行。</view>
     <view style="margin-top:10px;padding-bottom:10px">
       <slider value="5" step="5"/>
