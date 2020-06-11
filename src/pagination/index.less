@@ -10,6 +10,9 @@
     top: 0;
     left: 0;
     width: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   &Wrap {
     position: absolute;
@@ -17,60 +20,53 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 10 * @pixelSize;
+    height: 6 * @pixelSize;
     z-index: 2;
     pointer-events: none;
   }
   &Area {
     position: absolute;
     left: 50%;
-    height: 18 * @pixelSize;
-    width: 100 * @pixelSize;
+    width: 52 * @pixelSize;
+    height: 6 * @pixelSize;
     overflow: hidden;
-    transform: translateX(-50%) scale(0.5);
-    background-repeat: no-repeat;
+    border-radius: @corner-radius-sm;
+    transform: translateX(-50%);
   }
   &Move {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    width: 360 * @pixelSize;
-    height: 360 * @pixelSize;
-    margin-left: -180 * @pixelSize;
+    left: 0;
+    width: 26 * @pixelSize;
+    height: 6 * @pixelSize;
     transition: all 100ms linear;
-    border-radius: 50%;
-  }
-  &Inner {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-100%);
-    height: 18 * @pixelSize;
-    width: 50 * @pixelSize;
-    background-repeat: no-repeat;
+    border-radius: @corner-radius-sm;
   }
 }
 .am-pager {
   display: flex;
   justify-content: center;
-  transform: scale(0.5);
   &-number {
-    flex: 0 0 12 * @pixelSize;
-    height: 12 * @pixelSize;
+    flex: 0 0 6 * @pixelSize;
+    height: 6 * @pixelSize;
     overflow: hidden;
-    margin-right: 12 * @pixelSize;
+    margin-right: 6 * @pixelSize;
     margin-bottom: @v-spacing-standard;
-    border-radius: 50%;
+    border-radius: @corner-radius-sm;
     background-color: #ddd;
     &_white {
-      background-color: rgba(255, 255, 255, @opacity-disabled);
+      background-color: rgba(221, 221, 221, @opacity-disabled);
     }
   }
   &-current {
-    width: 48 * @pixelSize;
-    height: 14 * @pixelSize;
-    margin-right: 12 * @pixelSize;
-    background-repeat: no-repeat;
+    width: 26 * @pixelSize;
+    height: 6 * @pixelSize;
+    margin-right: 6 * @pixelSize;
+    border-radius: @corner-radius-sm;
+    background-color: #f00;
+    &_white {
+      background-color: #fff;
+    }
   }
   &-lastChild {
     margin-right: 0;
