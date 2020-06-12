@@ -77,6 +77,55 @@ Component({
       this.setData({
         swipeable: false,
       });
+      // 记录电梯组件总高度，并写入 data
+      my.createSelectorQuery()
+        .select('#am-tabs-elevator-content')
+        .boundingClientRect()
+        .exec((ret) => {
+          this.setData({
+            elevatorHeight: ret[0].height,
+          });
+        });
+      // 获取电梯组件每个 pane 的 top 值
+      this.getElevatorHeight(tabs);
+    }
+  },
+  didUpdate(prevProps, prevData) {
+    const { tabs, elevator } = this.props;
+    if (prevProps.tabs.length !== tabs.length) {
+      this.setData({
+        tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
+      });
+    }
+    if (elevator) {
+      // 当 didUpdate 时判断电梯组件总高度是否发生变化
+      my.createSelectorQuery()
+        .select('#am-tabs-elevator-content')
+        .boundingClientRect()
+        .exec((ret) => {
+          if (ret[0].height !== this.data.elevatorHeight) {
+            // 如高度变化将页面滚动至顶部，重新设置电梯总高度
+            my.pageScrollTo({
+              scrollTop: 0,
+            });
+            this.setData({
+              elevatorHeight: ret[0].height,
+            });
+            // 总高度变化后，重新获取电梯组件每个 pane 的 top 值
+            this.getElevatorHeight(tabs);
+          }
+        });
+      this.$page.data.floorNumber = this.data.floorNumber;
+      if (this.$page.data.getFloorNumber >= 0) {
+        this.setData({
+          tabViewNum: this.$page.data.getFloorNumber,
+          prevTabViewNum: prevData.tabViewNum,
+        });
+      }
+    }
+  },
+  methods: {
+    getElevatorHeight(tabs) {
       for (let i = 0; i < tabs.length; i++) {
         my.createSelectorQuery()
           .select(`#am-tabs-elevator-pane-${i}`)
@@ -100,26 +149,7 @@ Component({
       setTimeout(() => {
         this.$page.data.floorNumber = this.data.floorNumber;
       }, 100);
-    }
-  },
-  didUpdate(prevProps, prevData) {
-    const { tabs, elevator } = this.props;
-    if (prevProps.tabs.length !== tabs.length) {
-      this.setData({
-        tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
-      });
-    }
-    if (elevator) {
-      this.$page.data.floorNumber = this.data.floorNumber;
-      if (this.$page.data.getFloorNumber >= 0) {
-        this.setData({
-          tabViewNum: this.$page.data.getFloorNumber,
-          prevTabViewNum: prevData.tabViewNum,
-        });
-      }
-    }
-  },
-  methods: {
+    },
     handleSwiperChange(e) {
       const { current } = e.detail;
       const { tabsName } = e.target.dataset;

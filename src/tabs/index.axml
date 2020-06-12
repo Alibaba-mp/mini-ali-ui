@@ -70,7 +70,7 @@
       </view>
     </view>
     <block a:if="{{elevator}}">
-      <view class="am-tabs-elevator-content">
+      <view class="am-tabs-elevator-content" id="am-tabs-elevator-content">
         <slot></slot>
       </view>
     </block>
