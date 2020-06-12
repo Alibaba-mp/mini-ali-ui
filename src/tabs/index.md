@@ -40,7 +40,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | showPlus | Boolean | false | - | 是否显示 + icon | - | - |
 | swipeable | Boolean | true | - | tabs 内容区是否可拖动 | - | - |
 | animation | Boolean | true | - | 选项卡切换时滑动动画 | - | - |
-| duration | Number | 500 | - | 当 swipeable 为 true 时，tabs 内容区切换动画时长 | - | - |
+| duration | Number | 500 | - | tabs 内容区切换动画时长 | - | - |
 | capsule | Boolean | false | - | 是否为胶囊 tab | - | - |
 | hasSubTitle | Boolean | false | - | 是否有副标题（描述）内容 | - | - |
 | elevator | Boolean | false | - | 是否电梯组件 | - | - |

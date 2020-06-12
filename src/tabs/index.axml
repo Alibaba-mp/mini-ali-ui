@@ -90,7 +90,10 @@
       </block>
       <block a:else>
         <view class="am-tabs-content-wrap {{util.compareVersion(version) >= 0 ? 'fix' : ''}}">
-          <view class="am-tabs-slides" style="{{ transform: 'translate3d(' +(-activeTab * 100) + '%, 0, 0)' }}">
+          <view class="am-tabs-slides" style="
+            transform: translate3d({{-activeTab * 100}}%, 0, 0);
+            transition-duration: {{duration}}ms;
+          ">
             <slot></slot>
           </view>
         </view>
