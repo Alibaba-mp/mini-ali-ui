@@ -74,6 +74,10 @@ Component({
       this.props.onClear(event);
     },
     onTapSend(e) {
+      const { _actionActive } = this.data;
+      if (_actionActive === false){
+        return false;
+      }
       this.setData({
         _actionActive: false,
       });
