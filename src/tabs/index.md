@@ -33,6 +33,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | tabBarUnderlineColor | String | #1677FF | - | 选中选项卡下划线颜色 | - | - |
 | tabBarActiveTextColor | String | #1677FF | - | 选中选项卡字体颜色 | - | - |
 | capsuleTabBarActiveTextColor | String | #ffffff | - | 胶囊选中选项卡字体颜色 | - | - |
+| capsuleTabBarBackgroundColor | String | #e5e5e5 | - | 胶囊未选中的背景色 | [1.0.12](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | tabBarInactiveTextColor | String | #333333 | - | 未选中选项卡字体颜色 | - | - |
 | tabBarSubTextColor | String | #999999 | - | 未选中描述字体颜色 | - | - |
 | tabBarActiveSubTextColor | String | #ffffff | - | 选中描述字体颜色 | - | - |

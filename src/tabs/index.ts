@@ -9,7 +9,7 @@ Component({
     activeCls: '',
     // tabbar的自定义样式class
     tabBarCls: '',
-    // 选中选项卡下划线颜色
+    // 选中选项卡下划线颜色 & 胶囊选中背景色
     tabBarUnderlineColor: '#1677FF',
     // 选中选项卡字体颜色
     tabBarActiveTextColor: '#1677FF',
@@ -23,6 +23,8 @@ Component({
     tabBarActiveSubTextColor: '#ffffff',
     // 选项卡背景颜色
     tabBarBackgroundColor: '#ffffff',
+    // 胶囊选项卡未选中的背景色
+    capsuleTabBarBackgroundColor: '#e5e5e5',
     showPlus: false,
     // tabs 内容区是否可拖动，true 可拖动，内容区固定高度 false 不可拖动，内容区自适应高度
     swipeable: true,
