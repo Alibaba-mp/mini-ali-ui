@@ -201,9 +201,10 @@ Component({
       }
     },
     onTabFirstShow(e) {
-      const { index  } = e.target.dataset;
+      // SDKversion 最低要求 1.9.4
+      const { index, tabsName } = e.target.dataset;
       if (this.props.onTabFirstAppear) {
-        this.props.onTabFirstAppear({ index });
+        this.props.onTabFirstAppear({ index, tabsName });
       }
     },
   },

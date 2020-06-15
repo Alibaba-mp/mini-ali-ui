@@ -52,6 +52,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | tabsName | String | - | - | tab 选项卡的名字，与 `activeTab` 的 key 值相同 | - | true |
 | tabBarUnderlineWidth | String | 100% | - | 设置 tab 选项卡选中态的下划线宽度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | tabBarUnderlineHeight | String | 2px | - | 设置 tab 选项卡选中态的下划线高度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| onTabFirstShow | EventHandle | (index: Number, tabsName: String) => {} | - | tab 选项卡首次出现时的回调 | [1.0.12](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### tab-content
 
