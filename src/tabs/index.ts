@@ -230,5 +230,12 @@ Component({
         });
       }
     },
+    onTabFirstShow(e) {
+      // SDKversion 最低要求 1.9.4
+      const { index, tabsName } = e.target.dataset;
+      if (this.props.onTabFirstShow) {
+        this.props.onTabFirstShow({ index, tabsName });
+      }
+    },
   },
 });
