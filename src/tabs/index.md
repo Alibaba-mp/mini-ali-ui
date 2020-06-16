@@ -48,8 +48,8 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | elevatorTop | String | 0px | - | 电梯组件中 tab 置顶时的位置控制 | - | - |
 | elevatorContentTop | Number | 0 | - | 电梯组件中 tab-content 距离顶部的位置 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | onPlusClick | EventHandle | () => {} | - | + icon 被点击时的回调 | - | - |
-| onTabClick | EventHandle | (index: Number) => void | - | tab 被点击的回调 | - | - |
-| onChange | EventHandle | (index: Number) => void | - | tab 变化时触发 | - | - |
+| onTabClick | EventHandle | (index: Number, tabsName: String) => void | - | tab 被点击的回调 | - | - |
+| onChange | EventHandle | (index: Number, tabsName: String) => void | - | tab 变化时触发 | - | - |
 | tabsName | String | - | - | tab 选项卡的名字，与 `activeTab` 的 key 值相同 | - | true |
 | tabBarUnderlineWidth | String | 100% | - | 设置 tab 选项卡选中态的下划线宽度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | tabBarUnderlineHeight | String | 2px | - | 设置 tab 选项卡选中态的下划线高度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
