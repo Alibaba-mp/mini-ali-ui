@@ -24,6 +24,12 @@ Component({
       _checked: checked,
     });
   },
+  didMount() {
+    const { checked } = this.props;
+    this.setData({
+      _checked: checked,
+    });
+  },
   // props 改变时
   deriveDataFromProps(nextProps) {
     const { _checked } = this.data;

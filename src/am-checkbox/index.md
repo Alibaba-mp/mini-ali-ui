@@ -13,7 +13,7 @@
 | 属性名 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | value | String | - | - | 组件值，选中时 change 事件会携带的 value | - |
-| ctrlChecked | Boolean | undefined | true,false | 当 ctrlChecked 不等于 undefined 时 am-checkbox 是受控组件 | - |
+| ctrlChecked | Boolean | undefined | true,false | 当 ctrlChecked 不等于 undefined 时 am-checkbox 是受控组件。需要启用 component2 编译。 | - |
 | checked | Boolean | false | true,false | 默认是否选中 | - |
 | disabled | Boolean | false | true,false | 是否禁用 | - |
 | onChange | (e: Object) => void |  | - | change 事件触发的回调函数 | - |
