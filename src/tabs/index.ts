@@ -91,6 +91,37 @@ Component({
       // 获取电梯组件每个 pane 的 top 值
       this.getElevatorHeight(tabs);
     }
+
+    // 初始状态下，如果 activeTab 数值较大，会将后面的 tab 前移
+    let boxWidth = 0;
+    let elWidth = 0;
+    let elLeft = 0;
+
+    my.createSelectorQuery()
+      .select(`#tabs-item-${this.props.tabsName}-${this.props.activeTab}`)
+      .boundingClientRect()
+      .exec((ret) => {
+        elWidth = (<my.IBoundingClientRect>ret[0]).width;
+        elLeft = (<my.IBoundingClientRect>ret[0]).left;
+        this.setData({
+          elWidth,
+          elLeft,
+        });
+      });
+    my.createSelectorQuery()
+      .select(`#am-tabs-bar-${this.props.tabsName}-content`)
+      .boundingClientRect()
+      .exec((ret) => {
+        boxWidth = (<my.IBoundingClientRect>ret[0]).width;
+        this.setData({
+          boxWidth,
+        });
+        setTimeout(() => {
+          this.setData({
+            viewScrollLeft: Math.floor(this.data.elWidth + this.data.elLeft - this.data.boxWidth),
+          });
+        }, 300);
+      });
   },
   didUpdate(prevProps, prevData) {
     const { tabs, elevator } = this.props;
