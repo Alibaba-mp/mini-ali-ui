@@ -30,7 +30,7 @@ Component({
 
       if (viewWidth) {
         infinitePageNumber[e.currentTarget.dataset.id] = {
-          pageDeg: (((scrollLeft + viewWidth) / scrollWidth) * 26 - 13) < 0 ? 0 : ((scrollLeft + viewWidth) / scrollWidth) * 13,
+          pageDeg: Math.ceil(scrollLeft / (scrollWidth - viewWidth) * 100),
         };
 
         this.setData({

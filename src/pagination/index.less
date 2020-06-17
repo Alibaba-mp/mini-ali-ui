@@ -30,7 +30,7 @@
     width: 52 * @pixelSize;
     height: 6 * @pixelSize;
     overflow: hidden;
-    border-radius: @corner-radius-sm;
+    border-radius: @corner-radius-sm / 2;
     transform: translateX(-50%);
   }
   &Move {
@@ -40,7 +40,7 @@
     width: 26 * @pixelSize;
     height: 6 * @pixelSize;
     transition: all 100ms linear;
-    border-radius: @corner-radius-sm;
+    border-radius: @corner-radius-sm / 2;
   }
 }
 .am-pager {
@@ -52,7 +52,9 @@
     overflow: hidden;
     margin-right: 6 * @pixelSize;
     margin-bottom: @v-spacing-standard;
-    border-radius: @corner-radius-sm;
+    font-size: 0;
+    line-height: 0;
+    border-radius: @corner-radius-sm / 2;
     background-color: #ddd;
     &_white {
       background-color: rgba(221, 221, 221, @opacity-disabled);
@@ -61,8 +63,11 @@
   &-current {
     width: 26 * @pixelSize;
     height: 6 * @pixelSize;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
     margin-right: 6 * @pixelSize;
-    border-radius: @corner-radius-sm;
+    border-radius: @corner-radius-sm / 2;
     background-color: #f00;
     &_white {
       background-color: #fff;

@@ -4,10 +4,10 @@
   </scroll-view>
   <view class="am-pageInfiniteWrap">
     <view a:if="{{white}}" class="am-pageInfiniteArea" style="background-color: rgba(221, 221, 221, .4);">
-      <view class="am-pageInfiniteMove" style="background-color: #fff; transform: translateX({{pageDeg}}px);"></view>
+      <view class="am-pageInfiniteMove" style="background-color: #fff; transform: translateX({{pageDeg}}%);"></view>
     </view>
     <view a:else class="am-pageInfiniteArea" style="{{fillColor?'background-color:' + fillColor : ''}}">
-      <view class="am-pageInfiniteMove" style="background-color: {{frontColor}}; transform: translateX({{pageDeg}}px);"></view>
+      <view class="am-pageInfiniteMove" style="background-color: {{frontColor}}; transform: translateX({{pageDeg}}%);"></view>
     </view>
   </view>
 </view>
