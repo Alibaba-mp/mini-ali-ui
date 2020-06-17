@@ -12,5 +12,9 @@ Page({
       verifyCode: e.detail.value,
     });
   },
-  onClear() {},
+  onClear() {
+    this.setData({
+      verifyCode: '',
+    });
+  },
 });

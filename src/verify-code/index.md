@@ -35,6 +35,7 @@
 | onFocus          | (e: Object) => void |        | -                           | 聚焦时触发                                                |          | 否   |
 | onBlur           | (e: Object) => void |        | -                           | 失去焦点时触发                                            |          | 否   |
 | onClear          | () => void          |        | -                           | 点击清除icon时触发                                        |          | 否   |
+| verifyTip | String | '请输入验证码' | - | 验证码为空时的提示文案 | [1.0.12](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
 
 ## 示例
 

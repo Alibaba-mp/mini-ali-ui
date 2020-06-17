@@ -28,6 +28,7 @@ Component({
     onBlur: () => {},
     onClear: () => {},
     onSend: () => {},
+    verifyTip: '验证码不能为空',
   },
   data: {
     _focus: false,
@@ -74,7 +75,12 @@ Component({
       this.props.onClear(event);
     },
     onTapSend(e) {
-      if (this.data._actionActive) {
+      const { value, verifyTip, countDown, onSend } = this.props;
+      if (value === '' && value.length <= 0 && this.data._actionActive) {
+        my.alert({
+          title: verifyTip,
+        });
+      } else if (this.data._actionActive) {
         this.setData({
           _actionActive: false,
         });
@@ -85,7 +91,7 @@ Component({
             this.setData({
               _actionActive: true,
               resend: true,
-              _countDown: this.props.countDown,
+              _countDown: countDown,
               actedBefore: true,
             });
           } else {
@@ -95,7 +101,7 @@ Component({
           }
         }, 1000);
         const event = fmtEvent(this.props, e);
-        this.props.onSend(event);
+        onSend(event);
       }
     },
   },
