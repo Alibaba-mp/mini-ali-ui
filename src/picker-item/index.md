@@ -19,6 +19,7 @@
 | placeholder | String |  |  | 占位符 |  |  |
 | onPickerTap | (e: Object) => void |  |  | 点击pickeritem时触发 |  |  |
 | layer | String | '' | vertical | 文本输入框是否为垂直排列，`vertical` 时为垂直排列，空值为横向排列 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
+| iconType | String | 'right' | - | 更改 picker-item 的 icon 类型，参考 am-icon 的 type 值 | [1.0.12](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### slots
 

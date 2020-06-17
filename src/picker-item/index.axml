@@ -1,6 +1,6 @@
-<view class="am-picker-item {{last ? 'last': ''}} {{className}}">
+<view class="am-picker-item {{last ? 'last': ''}} {{className}}" onTap="onPickerTap">
   <view class="am-picker-line">
-    <view class="am-picker-layer {{layer === 'vertical'?'am-picker-layer-vertical':'am-picker-layer-normal'}}" onTap="onPickerTap">
+    <view class="am-picker-layer {{layer === 'vertical'?'am-picker-layer-vertical':'am-picker-layer-normal'}}">
       <view a:if="{{$slots.$default}}" 
         class="am-picker-label {{labelCls}}">
         <slot />
@@ -12,7 +12,7 @@
       </view>
     </view>
     <am-icon class="am-picker-arrow" 
-      type="right" 
+      type="{{iconType}}"
       size="18" 
       color="#ccc" />
     <slot name="extra" />

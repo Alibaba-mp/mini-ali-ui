@@ -9,6 +9,7 @@ Component({
     labelCls: '',
     pickerCls: '',
     layer: '', // 表单排列位置，当为空时默认横向排列， vertical 为竖向排列
+    iconType: 'right',
   },
   methods: {
     onPickerTap(e) {
