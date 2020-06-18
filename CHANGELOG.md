@@ -1,3 +1,21 @@
+## 1.0.12
+`2020-06-18`
+* **Feature**
+  * 添加 tab 首次出现的回调；
+  * 分页符组件的样式优化调整；
+* **Fixed**
+  * 胶囊形式的 tab 可配置背景色；
+  * 电梯组件中高度改变后的 `floorNumber` 值的变化；
+  * `duration` 为 0 时对 tab-content 的影响；
+  * collapse 组件初始状态可能报错的问题；
+  * modal 组件中由于 am-icon 而导致的报错；
+  * “发送验证码”可重复点击的错误；
+  * search-bar 的语音 icon 可能无法显示的问题；
+  * am-checkbox 默认状态无法选中的问题；
+  * verify-code 组件未输入值情况下的验证提示；
+  * pick-item 的点击区域加大以及 icon 可更换；
+  * 完整展示 tabs 选项卡的 activeTab；
+
 ## 1.0.11
 `2020-06-04`
 * **Enhance**
