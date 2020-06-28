@@ -35,6 +35,7 @@
 <view
   a:else 
   class="am-grid am-grid-{{columnNum}}
+    {{multiLine ? 'am-grid-5__wrap' : ''}}
     {{columnNum === 5?'am-grid-5__overHide':''}}
     {{hasLine ? '' : 'am-grid-no-line'}}">
   <block a:for="{{list}}">
@@ -63,7 +64,7 @@
             >
           </view>
           <block a:if="{{columnNum === 5 && list.length > 5}}">
-            <view class="am-grid-icon am-grid-icon-{{columnNum}}" a:if="{{index === 4}}">
+            <view class="am-grid-icon am-grid-icon-{{columnNum}}" a:if="{{index === 4 && multiLine === false}}">
               <am-icon type="more-1" size="28" color="#999" />
             </view>
             <view

@@ -11,6 +11,7 @@ Component({
     onGridItemClick: () => {},
     hasLine: true,
     infinite: false,
+    multiLine: false,
     infiniteHeight: fmtUnit('90px'),
     gridName: '',
   },

@@ -11,9 +11,28 @@ Component({
     white: false,
     max: 5,
     currentPage: 1,
+    current: 0, // 兼容 mini-antui 而添加的属性
+    total: 0, // 兼容 mini-antui 而添加的属性
+  },
+
+  didMount() {
+    this.compatAntui();
+  },
+  didUpdate() {
+    this.compatAntui();
   },
 
   methods: {
+    compatAntui() {
+      // 兼容 mini-antui 升级到 mini-ali-ui 后分页符的页数使用
+      const { current, total } = this.props;
+      if (current !== 0 || total !== 0) {
+        this.setData({
+          currentPage: current,
+          max: total,
+        });
+      }
+    },
     clacWidth(pagerName) {
       my.createSelectorQuery()
         .select(`#${pagerName}`)

@@ -4,6 +4,7 @@ const SUPPORT_COMPONENT2 = my.canIUse('component2');
 const TYPE_MAP = {
   success: 'check_',
   fail: 'close_',
+  cancel: 'close_',
   info: 'help_',
   warn: 'warn_',
   waiting: 'time-5_',

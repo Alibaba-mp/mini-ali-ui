@@ -21,6 +21,7 @@
 | onGridItemClick | EventHandle | (index: Number) => void | - | 点击宫格项回调 | - | - |
 | hasLine | Boolean | true | - | 3 列宫格时才有的间隔线 | - | - |
 | infinite | Boolean | false | - | 5 列宫格时是否为无限滚动模式 | - | - |
+| multiLine | Boolean | false | - | 5 列宫格时是否以多行形式展示 | [1.1.0](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | infiniteHeight | String | 90px | - | 无限滚动模式时的宫格整体高度 | - | - |
 | gridName | String | - | - | 无限滚动宫格的名称 | - | - |
 
@@ -28,7 +29,7 @@
 * `hasLine` 仅在 3 列宫格中才有效果；
 * `circular` 圆角仅在 4/5 列宫格中才有效果；
 * `infinite` 无限滚动模式的宫格仅在 5 列宫格，且列数超过 5 条之后才会有效果；
-* 5 列宫格仅会显示一行，如果超过五个，且未设置 `infinite` 的话，最后一个将会改变 icon 的表现形式；
+* `multiLine` 为 `true` 时，且未设置 `infinite` 的话，宫格最终会以 5 列多行的形式展示数据；
 * 如在一个页面中有多个无限滚动的 5 列宫格，建议增加使用 `gridName` 属性，避免分页符表现错误；
 * 当使用 5 列的无限滚动时，需要同时引入 **pagination** 组件；
 

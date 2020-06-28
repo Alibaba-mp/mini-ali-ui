@@ -5,7 +5,11 @@
 	onTap="onItemTap" 
 	data-index="{{index}}">
 	<view class="am-list-prefix">
-		<view a:if={{$slots.supporting}} class="am-list-supporting">
+		<!-- 兼容 mini-antui 中使用 prefix 的 slot -->
+		<view a:if="{{$slots.prefix && !$slots.supporting}}" class="am-list-supporting">
+			<slot name="prefix" />
+		</view>
+		<view a:if="{{$slots.supporting}}" class="am-list-supporting">
 			<slot name="supporting" />
 		</view>
 		<auto-sizer a:if="{{thumb}}" 
@@ -16,7 +20,7 @@
 		<view class="am-list-content">
 			<view a:if="{{titlePosition === 'top'}}" 
 				class="am-list-content-title">
-				<view class="am-list-text-wrapper">
+				<view class="am-list-text-wrapper {{$slots.afterTitle ? '' : 'am-list-text-wrapper__fix'}}">
 					<slot />
 				</view>
 				<slot name="afterTitle" />

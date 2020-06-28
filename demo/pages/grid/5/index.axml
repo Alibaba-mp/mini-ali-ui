@@ -10,3 +10,6 @@
 
 <view style="margin-top: 10px;" />
 <grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{list55}}" />
+
+<view style="margin-top: 10px;" />
+<grid onGridItemClick="onItemClick" columnNum="{{5}}" list="{{list55}}" multiLine="{{true}}" />
