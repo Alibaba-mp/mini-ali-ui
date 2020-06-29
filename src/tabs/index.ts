@@ -231,7 +231,7 @@ Component({
             }, 300);
           }
         });
-      if (this.props.onTabClick) {
+      if (this.props.onTabClick && !this.props.elevator) {
         this.props.onTabClick({ index, tabsName });
       }
       if (this.props.onTabClick && this.props.elevator) {
