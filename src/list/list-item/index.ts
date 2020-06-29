@@ -7,6 +7,7 @@ Component({
     wrap: false,
     enforceExtra: false,
     titlePosition: 'top',
+    last: false,
   },
   didMount() {
     this._updateDataSet();

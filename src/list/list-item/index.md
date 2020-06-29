@@ -21,8 +21,10 @@
 | titlePosition | String  | top    | top<br/> middle<br/>bottom | 主标题位置                                         | -        | -              |
 | thumbSize     | String  | 40px | - | 缩略图大小 | - | 有缩略图时必填 |
 | onClick       | Function| -      | -                          | 点击列表项事件                                       | -        | -              |
+| last | Boolean | false | - | 用于处理下划线是否显示 | [1.1.0](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
-
+### Tips & Bug
+* 如要删除最后一个 list-item 的下划线，可以通过 list 长度判断，将最后一个 list-item 的 `last` 属性设为 `true` 即可；
 
 ## Slot
 

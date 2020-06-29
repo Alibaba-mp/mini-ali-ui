@@ -1,15 +1,15 @@
-<list a:for="{{componentList}}">
+<list a:for="{{componentList}}" key="componentList">
   <view slot="header">{{item.components[0].type}}</view>
-  <block a:for="{{item.components[0].list}}">
-    <navigator url="{{item.path}}" key="items-{{item.name}}"  >
+  <block a:for="{{item.components[0].list}}" a:for-item="itemList">
+    <navigator url="{{itemList.path}}" key="itemLists-{{itemList.name}}"  >
       <list-item arrow="{{true}}" 
         multipleLine="{{true}}" 
-        upperSubtitle="{{item.nameZN}}"
-        lowerSubtitle="{{item.updateDesc}}"
-        last="{{index===components.length - 1}}">
-        {{item.name}}
-        <tag size="sm" slot="afterTitle" type="{{item.tagType}}">{{item.tag}}</tag>
-        <view style="margin-left: 10rpx;display: flex;" slot="afterTitle" a:if="{{item.update}}">
+        upperSubtitle="{{itemList.nameZN}}"
+        lowerSubtitle="{{itemList.updateDesc}}"
+        last="{{index===item.components[0].list.length - 1}}">
+        {{itemList.name}}
+        <tag size="sm" slot="afterTitle" type="{{itemList.tagType}}">{{itemList.tag}}</tag>
+        <view style="margin-left: 10rpx;display: flex;" slot="afterTitle" a:if="{{itemList.update}}">
           <tag size="sm" type="primary">Update</tag>
         </view>
       </list-item>
