@@ -33,6 +33,12 @@ Page({
       },
     ],
     activeTab: 0,
+    contentHeight: 200,
+  },
+  changeHeight() {
+    this.setData({
+      contentHeight: this.data.contentHeight + 200,
+    });
   },
   onLoad() {},
   handleTabClick({ index, tabsName }) {
@@ -41,13 +47,20 @@ Page({
     });
   },
   onPageScroll({ scrollTop }) {
-    // 电梯组件时需要添加，计算页面滚动时，tab 的切换；
-    for (let i = 0; i <= this.data.floorNumber.length; i++) {
-      if (scrollTop >= this.data.floorNumber[i]) {
-        this.setData({
-          activeTab: i,
-          getFloorNumber: i,
-        });
+    if (scrollTop === 0) {
+      this.setData({
+        activeTab: 0,
+        getFloorNumber: 0,
+      });
+    } else {
+      // 电梯组件时需要添加，计算页面滚动时，tab 的切换；
+      for (let i = 0; i <= this.data.floorNumber.length; i++) {
+        if (scrollTop >= this.data.floorNumber[i]) {
+          this.setData({
+            activeTab: i,
+            getFloorNumber: i,
+          });
+        }
       }
     }
   },
