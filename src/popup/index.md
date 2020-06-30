@@ -19,7 +19,7 @@
 | mask | 是否显示mask，不显示时点击外部不会触发onClose | Boolean| true | true |
 | position | 控制从什么方向弹出菜单，bottom表示底部，left表示左侧，top表示顶部，right表示右侧 | String | bottom | true |
 | disableScroll | 展示mask时是否禁止页面滚动 | Boolean | true | - |
-| zIndex | 定义popup的层级 | Number | 0 | - |
+| zIndex | 定义popup的层级 | Number | - | - |
 
 ### slots
 
