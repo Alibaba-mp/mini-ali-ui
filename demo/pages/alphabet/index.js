@@ -1,16 +1,6 @@
 Page({
   data: {
-    alphabet: [],
-  },
-  onLoad() {
-    const charCode = 65;
-    const charList = [];
-    for (let i = 0; i < 26; i++) {
-      charList.push(String.fromCharCode(charCode + i));
-    }
-    this.setData({
-      alphabet: charList,
-    });
+    alphabet: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
   },
   onAlphabetClick(ev) {
     my.alert({
