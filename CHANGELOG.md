@@ -1,3 +1,12 @@
+## 1.1.0
+`2020-07-02`
+* **Fixed**
+  * mini-antui 转 mini-ali-ui 的兼容处理（footer、grid、list-item、pagination、message）；
+  * list-item 中可通过 last 属性删除下划线；
+  * 电梯组件中 `onTabClick` 回调两次触发；
+  * 由于 `padding` 导致 popup 的定位偏差；
+  * tabs 和 vtabs 中的交互细节；
+
 ## 1.0.13
 `2020-06-18`
 * **Fixed** 删除 verify-code 组件中未输入值的验证提示；
