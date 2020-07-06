@@ -1,6 +1,5 @@
 import fmtUnit from '../_util/fmtUnit';
 
-const { windowWidth } = my.getSystemInfoSync();
 const isV2 = my.canIUse('movable-view.onTouchStart');
 
 Component({
@@ -8,7 +7,7 @@ Component({
     leftPos: 0,
     swiping: false,
     holdSwipe: true,
-    viewWidth: windowWidth,
+    viewWidth: 0,
     x: 0,
     actionWidth: 0,
     transitionVal: 'none',
@@ -24,6 +23,15 @@ Component({
     height: 0,
     enableNew: true,
     swipeWidth: '',
+  },
+  onInit() {
+    my.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          windowWidth: res.windowWidth,
+        });
+      },
+    });
   },
   didMount() {
     const { enableNew, swipeWidth } = this.props;

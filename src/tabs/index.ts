@@ -1,7 +1,5 @@
 import fmtUnit from '../_util/fmtUnit';
 
-const { windowWidth } = my.getSystemInfoSync();
-
 Component({
   props: {
     className: '',
@@ -48,7 +46,7 @@ Component({
     elevatorContentTop: 0,
   },
   data: {
-    windowWidth,
+    windowWidth: 0,
     tabWidth: 0.25,
     autoplay: false,
     animation: false,
@@ -61,6 +59,15 @@ Component({
     elWidth: 0,
     tabFontSize15: fmtUnit('15px'),
     tabFontSize13: fmtUnit('13px'),
+  },
+  onInit() {
+    my.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          windowWidth: res.windowWidth,
+        });
+      },
+    });
   },
   didMount() {
     const { tabs, animation, hasSubTitle, elevator } = this.props;
