@@ -24,15 +24,6 @@ Component({
     enableNew: true,
     swipeWidth: '',
   },
-  onInit() {
-    my.getSystemInfo({
-      success: (res) => {
-        this.setData({
-          windowWidth: res.windowWidth,
-        });
-      },
-    });
-  },
   didMount() {
     const { enableNew, swipeWidth } = this.props;
     const useV2 = isV2 && enableNew;
@@ -46,6 +37,7 @@ Component({
     }
     this.setBtnWidth();
     this.getSwipeHeight();
+    this.setWindowWidth();
   },
   didUpdate(_prevProps, prevData) {
     const { restore } = this.props;
@@ -67,6 +59,15 @@ Component({
     }
   },
   methods: {
+    setWindowWidth() {
+      my.getSystemInfo({
+        success: (res) => {
+          this.setData({
+            windowWidth: res.windowWidth,
+          });
+        },
+      });
+    },
     setBtnWidth() {
       my.createSelectorQuery()
         .select(`.am-swipe-right-${this.$id}`)

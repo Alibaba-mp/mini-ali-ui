@@ -60,17 +60,10 @@ Component({
     tabFontSize15: fmtUnit('15px'),
     tabFontSize13: fmtUnit('13px'),
   },
-  onInit() {
-    my.getSystemInfo({
-      success: (res) => {
-        this.setData({
-          windowWidth: res.windowWidth,
-        });
-      },
-    });
-  },
   didMount() {
     const { tabs, animation, hasSubTitle, elevator } = this.props;
+
+    this.setWindowWidth();
 
     if (hasSubTitle) {
       this.setData({
@@ -165,6 +158,15 @@ Component({
     }
   },
   methods: {
+    setWindowWidth() {
+      my.getSystemInfo({
+        success: (res) => {
+          this.setData({
+            windowWidth: res.windowWidth,
+          });
+        },
+      });
+    },
     getElevatorHeight(tabs) {
       for (let i = 0; i < tabs.length; i++) {
         my.createSelectorQuery()
