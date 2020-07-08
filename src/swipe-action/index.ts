@@ -1,6 +1,5 @@
 import fmtUnit from '../_util/fmtUnit';
 
-const { windowWidth } = my.getSystemInfoSync();
 const isV2 = my.canIUse('movable-view.onTouchStart');
 
 Component({
@@ -8,7 +7,7 @@ Component({
     leftPos: 0,
     swiping: false,
     holdSwipe: true,
-    viewWidth: windowWidth,
+    viewWidth: 0,
     x: 0,
     actionWidth: 0,
     transitionVal: 'none',
@@ -36,8 +35,7 @@ Component({
         swipeWidth: '',
       });
     }
-    this.setBtnWidth();
-    this.getSwipeHeight();
+    this.setWindowWidth();
   },
   didUpdate(_prevProps, prevData) {
     const { restore } = this.props;
@@ -59,6 +57,17 @@ Component({
     }
   },
   methods: {
+    setWindowWidth() {
+      my.getSystemInfo({
+        success: (res) => {
+          this.setData({
+            viewWidth: res.windowWidth,
+          });
+          this.setBtnWidth();
+          this.getSwipeHeight();
+        },
+      });
+    },
     setBtnWidth() {
       my.createSelectorQuery()
         .select(`.am-swipe-right-${this.$id}`)
