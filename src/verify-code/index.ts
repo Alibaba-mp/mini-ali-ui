@@ -28,6 +28,9 @@ Component({
     onBlur: () => {},
     onClear: () => {},
     onSend: () => {},
+    txtSend: '发送验证码',
+    txtSendAgain: '重发验证码',
+    txtCountDown: '秒后重试',
   },
   data: {
     _focus: false,

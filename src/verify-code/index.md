@@ -35,6 +35,9 @@
 | onFocus          | (e: Object) => void |        | -                           | 聚焦时触发                                                |          | 否   |
 | onBlur           | (e: Object) => void |        | -                           | 失去焦点时触发                                            |          | 否   |
 | onClear          | () => void          |        | -                           | 点击清除icon时触发                                        |          | 否   |
+| txtSend | String | '发送验证码' | - | 发送按钮的默认文案 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
+| txtSendAgain | String | '重发验证码' | - | 重发按钮的默认文案 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
+| txtCountDown | String | '秒后重试' | - | 按钮倒计时的默认文案（不包含倒计时） | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
 
 ## 示例
 
