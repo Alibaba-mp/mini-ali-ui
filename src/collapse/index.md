@@ -43,8 +43,9 @@ Collapse 折叠面板主要是有 `<collapse>` 和 `<collapse-item>` 两部分�
 
 ## Bug & Tip
 
-当页面中存在多个 collapse 组件时，collapse 所对应的collapse-item 的 collapseKey 属性为必选值并且必须相等；
-当页面中只有一个 collapse 组件时，collapseKey 不需要提供。
+* 当页面中存在多个 collapse 组件时，collapse 所对应的collapse-item 的 collapseKey 属性为必选值并且必须相等；
+* 当页面中只有一个 collapse 组件时，collapseKey 不需要提供；
+* 如 `accordion` 为 `true` 时，`activeKey` 传值仅为**字符串**，如果传数组将导致取值错误，展示默认的第一个；
 
 ## 代码示例
 
@@ -89,7 +90,7 @@ Collapse 折叠面板主要是有 `<collapse>` 和 `<collapse-item>` 两部分�
   <collapse
     className="demo-collapse"
     collapseKey="collapse2"
-    activeKey="{{['item-21', 'item-23']}}"
+    activeKey="item-22"
     onChange="onChange"
     accordion="{{true}}"
   >

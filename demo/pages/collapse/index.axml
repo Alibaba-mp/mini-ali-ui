@@ -28,7 +28,7 @@
   <collapse
     className="demo-collapse"
     collapseKey="collapse2"
-    activeKey="{{['item-21', 'item-23']}}"
+    activeKey="item-22"
     onChange="onChange"
     accordion="{{true}}"
   >
