@@ -44,6 +44,8 @@ Component({
     tabBarUnderlineHeight: '',
     // 电梯组件 tab-content 距离顶部高度
     elevatorContentTop: 0,
+    // 通过接收外部传值，动态控制 tab-content 在 swiper 下的高度
+    tabContentHeight: '',
   },
   data: {
     windowWidth: 0,

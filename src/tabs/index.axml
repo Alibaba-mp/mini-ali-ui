@@ -77,6 +77,7 @@
     </block>
     <block a:else>
       <block a:if="{{swipeable}}">
+        <view style="{{tabContentHeight ? `height: ${tabContentHeight};`: ''}}">
         <swiper
           circular="{{false}}"
           current="{{activeTab}}"
@@ -86,9 +87,10 @@
           duration="{{duration}}"
           onChange="handleSwiperChange"
           disable-update-direction="{{true}}"
-          class="am-tabs-content-wrap {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
+          class="am-tabs-content-wrap {{tabContentHeight ? 'am-tabs-content-wrap_H100': ''}} {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
           <slot></slot>
         </swiper>
+        </view>
       </block>
       <block a:else>
         <view class="am-tabs-content-wrap {{util.compareVersion(version) >= 0 ? 'fix' : ''}}">
