@@ -29,7 +29,7 @@
 | className   | String     | -      | -      | 单项样式     | -        | -    |
 | onItemClick | () => void | -      | -      | 单项点击事件 | -        | -    |
 | iconType | String | - | 参考 icon 组件 | 所有的 type 值均来自 icon 组件 | - | - |
-| icon | String | - | 图片的URL | 图片的URL | - | - |
+| iconURL | String | - | - | 图片的URL | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 
 ## 示例
@@ -56,7 +56,7 @@
   >
     <view class="demo-popover-btn" onTap="onShowPopoverTap">点击{{show ? '隐藏' : '显示'}}</view>
     <view slot="items">
-      <popover-item onItemClick="itemTap1" icon="{{showIcon ? 'https://gw.alipayobjects.com/mdn/rms_7246c5/afts/img/A*1kKIQpySw9MAAAAAAAAAAABkARQnAQ' : ''}}" data-direction="{{position}}">
+      <popover-item onItemClick="itemTap1" iconURL="{{showIcon ? 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*XMCgSYx3f50AAAAAAAAAAABkARQnAQ' : ''}}" data-direction="{{position}}">
         <text>{{position}}</text>
       </popover-item>
       <popover-item onItemClick="itemTap2" iconType="{{showIcon ? 'qr' : ''}}" data-index="{{2}}">

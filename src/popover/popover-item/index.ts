@@ -3,7 +3,7 @@ import fmtEvent from '../../_util/fmtEvent';
 Component({
   props: {
     className: '',
-    icon: '',
+    iconURL: '',
     iconType: '',
   },
   methods: {

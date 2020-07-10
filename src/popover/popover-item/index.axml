@@ -5,14 +5,14 @@
   onTap="onItemClick">
   <view class="am-popover-item-wrapper">
     <view class="am-popover-item-icon-holder am-popover-item-ver-center" 
-      a:if="{{iconType || icon}}">
+      a:if="{{iconType || iconURL}}">
       <am-icon type="{{iconType}}" 
         a:if="{{iconType}}"
         size="22" />
       <image 
         class="am-popover-item-icon-holder"
-        a:elif="{{icon}}" 
-        src="{{icon}}"
+        a:elif="{{iconURL}}"
+        src="{{iconURL}}"
         mode='aspectFit'
       />
     </view>
