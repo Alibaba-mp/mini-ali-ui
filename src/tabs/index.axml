@@ -78,18 +78,18 @@
     <block a:else>
       <block a:if="{{swipeable}}">
         <view style="{{tabContentHeight ? `height: ${tabContentHeight};`: ''}}">
-        <swiper
-          circular="{{false}}"
-          current="{{activeTab}}"
-          data-tabsName="{{tabsName}}"
-          interval="99999999"
-          autoplay="{{autoplay}}"
-          duration="{{duration}}"
-          onChange="handleSwiperChange"
-          disable-update-direction="{{true}}"
-          class="am-tabs-content-wrap {{tabContentHeight ? 'am-tabs-content-wrap_H100': ''}} {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
-          <slot></slot>
-        </swiper>
+          <swiper
+            circular="{{false}}"
+            current="{{activeTab}}"
+            data-tabsName="{{tabsName}}"
+            interval="99999999"
+            autoplay="{{autoplay}}"
+            duration="{{duration}}"
+            onChange="handleSwiperChange"
+            disable-update-direction="{{true}}"
+            class="am-tabs-content-wrap {{tabContentHeight ? 'am-tabs-content-wrap_H100': ''}} {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
+            <slot></slot>
+          </swiper>
         </view>
       </block>
       <block a:else>

@@ -54,6 +54,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | tabBarUnderlineWidth | String | 100% | - | 设置 tab 选项卡选中态的下划线宽度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | tabBarUnderlineHeight | String | 2px | - | 设置 tab 选项卡选中态的下划线高度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | onTabFirstShow | EventHandle | (index: Number, tabsName: String) => {} | - | tab 选项卡首次出现时的回调 | [1.0.12](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| tabContentHeight | String | '' | - | 当 `swipeable` 为 `true` 时，可通过该属性值重设高度强制让 swiper 组件支持“自适应”高度的行为 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### tab-content
 
@@ -80,7 +81,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 
 tabs 组件内容区域高度是否能够自适应，需要注意 `swipeable` 的值：
 
-* `swipeable='{{true}}'`：内容区域可滑动，且相对应 tab 标签卡；但**内容区域高度为固定值**，需要在 acss 文件中设定 `height` 值，否则高度会异常；
+* `swipeable='{{true}}'`：内容区域可滑动，且相对应 tab 标签卡；但**内容区域高度为固定值**，需要在 acss 文件中设定 `height` 值，否则高度会异常；如需要自适应高度的话，那么请使用 `tabContentHeight` 重设高度，**实现方法**：点击不同 tab 标签卡，获取当前 tab-content 的高度，赋值给 `tabContentHeight` 即可；
 * `swipeable='{{false}}'`：内容区域不可滑动，此时高度表现形式有两种，且可以不需要在 acss 文件设定 `height` 值；
   * `<tab-content>` 中**无** `tabId` 和 `activeTab` 两个属性，此时的高度将以所有内容区域中最高的为基准展示；
   * `<tab-content>` 中**包含** `tabId` 和 `activeTab` 两个属性时 `tabId="{{index}}" activeTab="{{activeTab}}"`，内容区域所展示的高度将会随着不同模块的高度而改变；
