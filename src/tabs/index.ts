@@ -142,12 +142,14 @@ Component({
             // 如高度变化将页面滚动至顶部，重新设置电梯总高度
             my.pageScrollTo({
               scrollTop: 0,
+              success: () => {
+                this.setData({
+                  elevatorHeight: ret[0].height,
+                });
+                // 总高度变化后，重新获取电梯组件每个 panel 的 top 值
+                this.getElevatorHeight(tabs);
+              },
             });
-            this.setData({
-              elevatorHeight: ret[0].height,
-            });
-            // 总高度变化后，重新获取电梯组件每个 pane 的 top 值
-            this.getElevatorHeight(tabs);
           }
         });
       this.$page.data.floorNumber = this.data.floorNumber;
