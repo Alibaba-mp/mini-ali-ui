@@ -28,6 +28,7 @@
   <view style="margin-top: 10px;" />
 	<modal
 		show="{{modalOpened21}}"
+		onMaskClick="onMaskClick21"
 		onModalClick="onModalClick21"
 		onModalClose="onModalClose21"
 		topImage="https://gw.alipayobjects.com/zos/rmsportal/yFeFExbGpDxvDYnKHcrs.png"

@@ -76,6 +76,11 @@ Page({
       modalOpened21: false,
     });
   },
+  onMaskClick21() {
+    this.setData({
+      modalOpened21: false,
+    });
+  },
   /* 带图弹窗-小图 */
   openModal22() {
     this.setData({
