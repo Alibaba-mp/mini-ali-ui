@@ -1,12 +1,16 @@
+## 1.1.2
+`2020-07-16`
+* **Fixed**：npm 包中 `px` 与 `rpx` 版本修正；
+
 ## 1.1.1
 `2020-07-16`
-* ***Fixed**
+* **Fixed**
   * modal 组件蒙层点击时间回调；
   * collapse 箭头方向调整；
   * verify-code 可配置文案；
   * tabs 组件可通过配置强制调整 tab-content 中的 swiper 高度；
   * tabs、swipe-action 中调整 `getSystemInfo`，优化性能（[#34](https://github.com/Alibaba-mp/mini-ali-ui/pull/34)）；
-* ***Feature**
+* **Feature**
   * popover 图标可配置图片（[#32](https://github.com/Alibaba-mp/mini-ali-ui/pull/32)）；
   * steps 可使用数字序号；
 
