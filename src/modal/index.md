@@ -13,24 +13,24 @@
 
 
 ## 属性介绍
-| 属性 | 类型 | 默认值 | 可选值 | 描述 | 必填 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| className | String | - | - | 自定义class | - |
-| show | Boolean | false | true, false | 是否展示`modal` | - |
-| showClose | Boolean | false | true, false | 是否渲染`关闭` | - |
-| mask | Boolean | true | true, false | 是否展示蒙层 | - |
-| closeType | String | 0 | 0, 1 | 关闭图表类型 0：灰色图标 1：白色图标 | - |
-| onModalClick | EventHandle | () => void | - | 选择区间时的回调 | - |
-| onModalClose | EventHandle | () => void | - | 点击`关闭`的回调, `showClose`为false时无需设置 | - |
-| topImage | String | - | - | 顶部图片 | - |
-| topImageSize | String | md | lg, md, sm | 顶部图片规则 | - |
-| buttons | Array\<Object\> | md | - | 底部自定义多按钮, 详情见buttons配置 | - |
-| onButtonClick | EventHandle | (e: Object) => void | - | 点击`buttons`部分的回调 | - |
-| buttonsLayout | String | horizontal | horizontal, vertical | 设置`buttons`的对齐方式 | - |
-| advice | Boolean | false | true, false | 是否是运营类弹窗 | - |
-| zIndex | String\|Number | - | - | 设置弹框层级 | - |
-| disableScroll | Boolean | false | true, false | modal展示时是否禁止页面滚动（**以真机效果为准**） | - |
-| onMaskClick | EventHandle | () => void | - | 点击遮罩层时的回调 | - |
+| 属性 | 类型 | 默认值 | 可选值 | 描述 | 最低版本 | 必填 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| className | String | - | - | 自定义class | - | - |
+| show | Boolean | false | true, false | 是否展示`modal` | - | - |
+| showClose | Boolean | false | true, false | 是否渲染`关闭` | - | - |
+| mask | Boolean | true | true, false | 是否展示蒙层 | - | - |
+| closeType | String | 0 | 0, 1 | 关闭图表类型 0：灰色图标 1：白色图标 | - | - |
+| onModalClick | EventHandle | () => void | - | 选择区间时的回调 | - | - |
+| onModalClose | EventHandle | () => void | - | 点击`关闭`的回调, `showClose`为false时无需设置 | - | - |
+| topImage | String | - | - | 顶部图片 | - | - |
+| topImageSize | String | md | lg, md, sm | 顶部图片规则 | - | - |
+| buttons | Array\<Object\> | md | - | 底部自定义多按钮, 详情见buttons配置 | - | - |
+| onButtonClick | EventHandle | (e: Object) => void | - | 点击`buttons`部分的回调 | - | - |
+| buttonsLayout | String | horizontal | horizontal, vertical | 设置`buttons`的对齐方式 | - | - |
+| advice | Boolean | false | true, false | 是否是运营类弹窗 | - | - |
+| zIndex | String\|Number | - | - | 设置弹框层级 | - | - |
+| disableScroll | Boolean | false | true, false | modal展示时是否禁止页面滚动（**以真机效果为准**） | - | - |
+| onMaskClick | EventHandle | () => void | - | 点击遮罩层时的回调 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ## buttons
 提供按钮组配置，每一项表示一个按钮，每一项的属性为
