@@ -28,8 +28,10 @@
     // .hairline("bottom", #eee);
   }
   &-icon-holder {
-    height: 22px;
-    width: 22px;
+    height: @icon-size-sm;
+    height: var(--am-popover-item-icon-size, @icon-size-sm);
+    width: @icon-size-sm;
+    width: var(--am-popover-item-icon-size, @icon-size-sm);
   }
   &-ver-center {
     display: flex;

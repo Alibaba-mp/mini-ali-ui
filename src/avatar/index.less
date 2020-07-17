@@ -5,8 +5,8 @@
 @avatar-lg-size: @size-15;  // 120rpx
 @avatar-content-between-space: @h-spacing-large; /* 头像与内容间隔 */
 @avatar-desc-between-space: @v-spacing-standard / 2; /* 姓名与摘要间隔 */
-@avatar-fontSize-0: 24rpx;
-@avatar-fontSize-1: 28rpx;
+// @avatar-fontSize-0: 24rpx;
+// @avatar-fontSize-1: 28rpx;
 @avatar-fontSize-2: @font-size-subtitle;  // 30rpx
 @avatar-fontSize-3: @font-size-list;      // 34rpx
 @avatar-fontSize-4: @font-size-title;     // 36rpx
@@ -16,20 +16,28 @@
   align-items: center;
   &-img {
     width: @avatar-md-size;
+    width: var(--am-avatar-size-md, @avatar-md-size);
     height: @avatar-md-size;
+    height: var(--am-avatar-size-md, @avatar-md-size);
     border-radius: @corner-radius-circle;
     /* 头像大小设置 */
     &-sm {
       width: @avatar-sm-size;
+      width: var(--am-avatar-size-sm, @avatar-sm-size);
       height: @avatar-sm-size;
+      height: var(--am-avatar-size-sm, @avatar-sm-size);
     }
     &-md {
       width: @avatar-md-size;
+      width: var(--am-avatar-size-md, @avatar-md-size);
       height: @avatar-md-size;
+      height: var(--am-avatar-size-md, @avatar-md-size);
     }
     &-lg {
       width: @avatar-lg-size;
+      width: var(--am-avatar-size-lg, @avatar-lg-size);
       height: @avatar-lg-size;
+      height: var(--am-avatar-size-lg, @avatar-lg-size);
     }
     /* 头像形状设置 */
     &-square {
@@ -38,18 +46,25 @@
   }
   &-content {
     margin-left: @avatar-content-between-space;
+    margin-left: var(--am-avatar-content-marginL, @avatar-content-between-space);
   }
   &-name {
     font-size: @avatar-fontSize-3;
+    font-size: var(--am-avatar-name-size, @avatar-fontSize-3);
     color: @color-text-title;
+    color: var(--am-avatar-name-color, @color-text-title);
     &-lg {
       font-size: @avatar-fontSize-4;
+      font-size: var(--am-avatar-name-size-lg, @avatar-fontSize-4);
     }
   }
   &-desc {
     margin-top: @avatar-desc-between-space;
+    margin-top: var(--am-avatar-desc-marginT, @avatar-desc-between-space);
     font-size: @avatar-fontSize-2;
+    font-size: var(--am-avatar-desc-fontSize, @avatar-fontSize-2);
     color: @color-text-subtitle;
+    color: var(--am-avatar-desc-color, @color-text-subtitle);
     &-sm {
       display: none;
     }
