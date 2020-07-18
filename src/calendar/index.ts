@@ -2,6 +2,7 @@
 /* eslint max-depth: [2, 7] */
 const leapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const commonYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const weeks = ['日', '一', '二', '三', '四', '五', '六'];
 const FIRST_MONTH = 0;
 const LAST_MONTH = 11;
 const DAYS_PER_ROW = 7;
@@ -36,18 +37,21 @@ function prefixNum(num) {
   }
 }
 
+
 Component({
   data: {
     selectedYear: 0,
     selectedMonth: 0,
     currentDate: null,
     dates: [],
+    headers: weeks,
     blockType: 1, // 1.没有待办纯数字 2.有待办 用于区分不同类型日期块的样式。
   },
   props: {
     className: '',
     tagData: [],
     type: 'single',
+    firstDayOfWeek: 0,
     haveYear: false,
     prevMonthDisable: false,
     prevYearDisable: false,
@@ -63,8 +67,9 @@ Component({
     date.setMilliseconds(0);
     const year = date.getFullYear();
     const month = date.getMonth();
-
+    const firstDay = this.props.firstDayOfWeek;
     this.setData({
+      headers: firstDay == 0 ? weeks : weeks.slice(firstDay, 7).concat(weeks.slice(0, firstDay)),
       selectedYear: year,
       selectedMonth: month,
       currentDate: date,
@@ -184,10 +189,15 @@ Component({
         this.refreshdates(month, year);
       }
     },
+    prefixLen(month, year, index) {
+      const firstDay = this.props.firstDayOfWeek;
+      const wkday = getDay(month, year, index); // frist Date
+      return wkday >= firstDay ? wkday - firstDay : 7 - firstDay + wkday;
+    },
     refreshdates(month, year) {
       this.tapTimes = 1;
       const { selectedYear, selectedMonth, currentDate } = this.data;
-      const firstDay = getDay(month, year, 1);
+      const firstDay = this.prefixLen(month, year, 1);
       const days = getMonthLength(month, year);
       const datesArray = [];
       const currentDateTimeStamp = +currentDate;
