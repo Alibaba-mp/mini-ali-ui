@@ -25,8 +25,8 @@ Page({
       description: '这是步骤3',
     }, {
       title: '步骤4',
-      description: '不超过六个字',
     }],
+    showNumberSteps: true,
   },
   nextStep() {
     this.setData({
@@ -56,6 +56,11 @@ Page({
   setIconSizeReduce() {
     this.setData({
       size: this.data.size > 15 ? this.data.size - 1 : 15,
+    });
+  },
+  showNumberList() {
+    this.setData({
+      showNumberSteps: !this.data.showNumberSteps,
     });
   },
 });

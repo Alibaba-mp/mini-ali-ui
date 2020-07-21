@@ -14,6 +14,7 @@ Component({
     mask: true,
     buttonsLayout: 'horizontal',
     disableScroll: true,
+    maskClick: false,
   },
   didMount() {
     const { buttons, buttonsLayout } = this.props;
@@ -48,6 +49,15 @@ Component({
       const { onModalClose } = this.props;
       if (onModalClose) {
         onModalClose();
+      }
+    },
+    // mask 遮罩层点击
+    _onMaskTap() {
+      const { onMaskClick } = this.props;
+      if (typeof onMaskClick === 'function') {
+        onMaskClick();
+      } else {
+        return false;
       }
     },
   },

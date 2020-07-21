@@ -18,7 +18,7 @@
       <am-icon
         a:if="{{showArrow}}"
         class="am-collapse-item-title-arrow"
-        type="{{isActive ? 'down' : 'up'}}"
+        type="{{isActive ? 'up' : 'down'}}"
       />
     </view>
   </view>

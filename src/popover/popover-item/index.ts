@@ -3,6 +3,8 @@ import fmtEvent from '../../_util/fmtEvent';
 Component({
   props: {
     className: '',
+    iconURL: '',
+    iconType: '',
   },
   methods: {
     onItemClick(e) {

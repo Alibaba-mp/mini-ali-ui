@@ -210,3 +210,27 @@
   background-color: @color-fill-grey-light;
   background-color: var(--am-steps-bg-color, @color-fill-grey-light);
 }
+
+.am-vertical-step-number {
+  display: flex;
+  width: @size-5;
+  height: @size-5;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-size: @font-size-weak;
+  background-color: @color-fill-grey-light;
+  background-color: var(--am-steps-bg-color, @color-fill-grey-light);
+}
+.am-vertical-step-number.is-active {
+  font-weight: bold;
+  color: @color-text-base;
+  background-color: @color-fill-primary;
+  background-color: var(--am-steps-color, @color-fill-primary);
+}
+.am-vertical-step-number.is-fail {
+  font-weight: bold;
+  color: @color-text-base;
+  background-color: @color-text-warning;
+  background-color: var(--am-steps-vertical-warning-color, @color-text-warning);
+}

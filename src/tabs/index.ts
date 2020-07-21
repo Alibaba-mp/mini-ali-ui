@@ -44,6 +44,8 @@ Component({
     tabBarUnderlineHeight: '',
     // 电梯组件 tab-content 距离顶部高度
     elevatorContentTop: 0,
+    // 通过接收外部传值，动态控制 tab-content 在 swiper 下的高度
+    tabContentHeight: '',
   },
   data: {
     windowWidth: 0,
@@ -140,12 +142,14 @@ Component({
             // 如高度变化将页面滚动至顶部，重新设置电梯总高度
             my.pageScrollTo({
               scrollTop: 0,
+              success: () => {
+                this.setData({
+                  elevatorHeight: ret[0].height,
+                });
+                // 总高度变化后，重新获取电梯组件每个 panel 的 top 值
+                this.getElevatorHeight(tabs);
+              },
             });
-            this.setData({
-              elevatorHeight: ret[0].height,
-            });
-            // 总高度变化后，重新获取电梯组件每个 pane 的 top 值
-            this.getElevatorHeight(tabs);
           }
         });
       this.$page.data.floorNumber = this.data.floorNumber;

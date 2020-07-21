@@ -35,8 +35,6 @@ Component({
         swipeWidth: '',
       });
     }
-    this.setBtnWidth();
-    this.getSwipeHeight();
     this.setWindowWidth();
   },
   didUpdate(_prevProps, prevData) {
@@ -63,8 +61,10 @@ Component({
       my.getSystemInfo({
         success: (res) => {
           this.setData({
-            windowWidth: res.windowWidth,
+            viewWidth: res.windowWidth,
           });
+          this.setBtnWidth();
+          this.getSwipeHeight();
         },
       });
     },

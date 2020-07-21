@@ -6,6 +6,7 @@ Component({
     size: 0,
     direction: 'horizontal',
     items: [],
+    showStepNumber: false,
   },
 });
 

@@ -22,6 +22,16 @@
 | direction   | String                                              | horizontal | vertical <br/> horizontal | 显示方向，可选值：`vertical`、`horizontal` | -        | false |
 | size        | Number                                              | 0          | -                         | 统一的icon大小，单位为px                   | -        | false |
 | items       | Array[{title, description, icon, activeIcon, size}] | []         | -                         | 步骤详情                                   | -        | true  |
+| showStepNumber | Boolean | false | - | 是否以数字序列展示步骤 icon | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+
+### slot
+steps 组件中的 slot 插槽可根据具体的步骤数设置，如有 4 个步骤点，那么可插入 4 个 slot。
+
+slot 名称的格式为：`desc_1`、`desc_2`、`desc_n`...以此类推，将 n 修改为指定 items 的序列即可。如下列代码将会第 4 个 items 中没有 description 值的时候显示 slot 内容。
+
+```xml
+<view slot="desc_4">当前 item 没有 <text style="color: green;">description</text> 时，使用 slot 内容。</view>
+```
 
 ### items属性
 
@@ -33,6 +43,9 @@
 | items.activeIcon  | String | -      | -      | 已到达步骤的icon(只在vertical模式下生效)                   | -        | true |
 | items.size        | Number | -      | -      | 已到达步骤icon的图标大小，单位为px(只在vertical模式下生效) | -        | true |
 
+### tips
+* 当 `showStepNumber` 为 `true` 时将会忽略 items 属性中 icon 相关属性，仅以数字序列方式展示；
+* slot 中的数字与 items 的序列相对应，将会在 items 属性中没有 description 时展示；
 
 
 ## 示例
@@ -46,7 +59,6 @@
   }
 }
 ```
-
 
 ### axml
 ```xml
@@ -67,7 +79,10 @@
   activeIndex="{{activeIndex}}"
   items="{{items2}}"
   size="{{size}}"
-/>
+  showStepNumber="{{showNumberSteps}}"
+>
+  <view slot="desc_4">当前 item 没有 <text style="color: green;">description</text> 时，使用 slot 内容。</view>
+</steps>
 <view class="demo-btn-container">
   <button class="demo-btn" onTap="preStep">上一步</button>
   <button class="demo-btn" onTap="nextStep">下一步</button>
@@ -80,6 +95,7 @@
   <button class="demo-btn" onTap="setIconSizeAdd">设置图标大小+</button>
   <button class="demo-btn" onTap="setIconSizeReduce">设置图标大小-</button>
 </view>
+<button type="primary" onTap="showNumberList">以{{!showNumberSteps?'数字':'图片/icon'}}方式展示步骤序列</button>
 ```
 
 
@@ -112,8 +128,8 @@ Page({
       description: '这是步骤3',
     }, {
       title: '步骤4',
-      description: '不超过六个字',
     }],
+    showNumberSteps: true,
   },
   nextStep() {
     this.setData({
@@ -145,7 +161,26 @@ Page({
       size: this.data.size > 15 ? this.data.size - 1 : 15,
     });
   },
+  showNumberList() {
+    this.setData({
+      showNumberSteps: !this.data.showNumberSteps,
+    });
+  },
 });
-
 ```
 
+### acss
+```css
+.demo-steps-class {
+  margin: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.demo-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.demo-btn {
+  width: 47%;
+}
+```
