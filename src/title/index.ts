@@ -18,9 +18,9 @@ Component({
   didUnmount() {},
   methods: {
     onClick(e) {
-      const { type, onActionTap } = this.props;
+      const { onActionTap } = this.props;
       const event = fmtEvent(this.props, e);
-      if ((type === 'arrow' || type === 'more' || type === 'close') && typeof onActionTap === 'function') {
+      if (typeof onActionTap === 'function') {
         onActionTap(event);
       }
     },
