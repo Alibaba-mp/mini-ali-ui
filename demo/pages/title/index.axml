@@ -23,6 +23,7 @@
   hasLine="true"
   iconURL="https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*wiFYTo5I0m8AAAAAAAAAAABjAQAAAQ/original"
   onActionTap="titleGo"
+  type="custom"
   >
     <view>内部标题可跳转</view>
     <view slot="operation">自定义跳转></view>
