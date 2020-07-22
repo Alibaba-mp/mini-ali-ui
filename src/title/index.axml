@@ -8,4 +8,7 @@
   <view class="am-title-operation" a:if="{{ type==='arrow' || type==='close' || type==='more' }}" onTap="onClick">
     <am-icon type="{{type === 'arrow'?'right':type}}" class="am-title-operation-icon"></am-icon>
   </view>
+  <view a:elif="{{ type==='custom'}}" onTap="onClick">
+    <slot name="operation"></slot>
+  </view>
 </view>
