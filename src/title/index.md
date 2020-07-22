@@ -19,7 +19,7 @@
 | className | String| - | - | 自定义class | - | - |
 | hasLine | Boolean| false | - | 是否有下划线 | - | - |
 | iconURL | String | - | - | 标题旁边的 icon URL | - | - |
-| type | String| - | arrow、close、more | 标题可操作区域类型，包含：`arrow`：箭头；`close`：关闭；`more`：更多；默认为空。 | - | - |
+| type | String| - | arrow、close、more、custom | 标题可操作区域类型，包含：`arrow`：箭头；`close`：关闭；`more`：更多；`custom`：自定义内容，需要传递名为operation的具名插槽；默认为空。 | - | - |
 | onActionTap | EventHandle | () => {} | - | type 属性有具体值时可点击事件 | - | - |
 
 ## Bug & Tip
