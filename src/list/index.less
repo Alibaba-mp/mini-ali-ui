@@ -42,22 +42,30 @@
     align-items: center;
     background: @color-fill-grey-inverse;
     background: var(--am-list-background, @color-fill-grey-inverse);
-    padding: 12px;
-    font-size: 15px;
-    line-height: 1.4;
+    padding: @v-spacing-large;
+    padding: var(--am-list-load-padding, @v-spacing-large);
+    font-size: @font-size-subtitle;
+    font-size: var(--am-list-load-fontSize, @font-size-subtitle);
+    line-height: @line-height-paragraph;
+    line-height: var(--am-list-load-lineHeight, @line-height-paragraph);
     color: @color-fill-grey-dark;
     color: var(--am-list-load-more-color, @color-fill-grey-dark);
     &-txt {
-      padding: 0 8px;
-      color: #999;
+      padding: 0 @h-spacing-standard;
+      padding: 0 var(--am-list-load-txt-paddingLR, @h-spacing-standard);
+      color: @color-text-subtitle;
+      color: var(--am-list-load-txt-color, @color-text-subtitle);
     }
   }
   &-load-over {
     display: block;
-    padding: 12px;
-    font-size: 10px;
+    padding: @v-spacing-large;
+    padding: var(--am-list-load-over-padding, @v-spacing-large);
+    font-size: @font-size-weak;
+    font-size: var(--am-list-load-over-fontSize, @font-size-weak);
     text-align: center;
-    color: #ccc;
+    color: @color-text-weak;
+    color: var(--am-list-load-over-color, @color-text-weak);
     text-shadow: 1px 1px #f0f0f0;
   }
 }

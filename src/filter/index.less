@@ -20,11 +20,13 @@
 
   &-mask {
     bottom: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: @color-product-mask;
+    background: var(--am-filter-mask, @color-product-mask);
   }
 
   &-content {
-    background: #fff;
+    background: @color-fill-grey-inverse;
+    background: var(--am-filter-content-bgc, @color-fill-grey-inverse);
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -50,8 +52,10 @@
 
   &-default, &-primary {
     flex: 1;
-    height: 96 * @pixelSize;
-    font-size: 36 * @pixelSize;
+    height: @size-12;
+    height: var(--am-filter-button-height, @size-12);
+    font-size: @font-size-title;
+    font-size: var(--am-filter-button-fontSize, @font-size-title);
     box-sizing: border-box;
     width: 50%;
     border: 0;
