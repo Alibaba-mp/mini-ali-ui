@@ -22,6 +22,7 @@ Component({
     enableNative: false, // 兼容安卓input的输入bug
     countDown: 60,
     isInitialActive: true,
+    initActive: false, // 是否自动触发点击发送事件
     onInput: () => {},
     onConfirm: () => {},
     onFocus: () => {},
@@ -45,6 +46,14 @@ Component({
       _countDown: this.props.countDown,
       actedBefore: false,
     });
+    // 在组件加载的时候是否主动触发点击发送验证码事件
+    if (this.props.initActive) {
+      this.onTapSend();
+    } else {
+      this.setData({
+        _actionActive: !this.props.initActive,
+      });
+    }
   },
   didUnmount() {
     clearInterval(this._timeout);

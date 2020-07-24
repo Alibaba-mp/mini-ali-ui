@@ -54,7 +54,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | tabBarUnderlineWidth | String | 100% | - | 设置 tab 选项卡选中态的下划线宽度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | tabBarUnderlineHeight | String | 2px | - | 设置 tab 选项卡选中态的下划线高度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | onTabFirstShow | EventHandle | (index: Number, tabsName: String) => {} | - | tab 选项卡首次出现时的回调 | [1.0.12](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
-| tabContentHeight | String | '' | - | 当 `swipeable` 为 `true` 时，可通过该属性值重设高度强制让 swiper 组件支持“自适应”高度的行为 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| tabContentHeight | String | '' | - | 当 `swipeable` 为 `true` 时，可通过该属性值重设高度强制让 swiper 组件支持“自适应”高度的行为 | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### tab-content
 

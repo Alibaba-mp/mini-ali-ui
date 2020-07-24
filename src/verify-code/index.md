@@ -36,9 +36,10 @@
 | onBlur           | (e: Object) => void |        | -                           | 失去焦点时触发                                            |          | 否   |
 | onClear          | () => void          |        | -                           | 点击清除icon时触发                                        |          | 否   |
 | countDown | Number | 60 | - | 发送倒计时时间，单位秒 | - | 否 |
-| txtSend | String | '发送验证码' | - | 发送按钮的默认文案 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
-| txtSendAgain | String | '重发验证码' | - | 重发按钮的默认文案 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
-| txtCountDown | String | '秒后重试' | - | 按钮倒计时的默认文案（不包含倒计时） | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
+| txtSend | String | '发送验证码' | - | 发送按钮的默认文案 | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
+| txtSendAgain | String | '重发验证码' | - | 重发按钮的默认文案 | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
+| txtCountDown | String | '秒后重试' | - | 按钮倒计时的默认文案（不包含倒计时） | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
+| initActive | Boolean | false | - | 是否主动触发发送按钮 | [1.1.3](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
 
 ## 示例
 

@@ -22,7 +22,7 @@
 | direction   | String                                              | horizontal | vertical <br/> horizontal | 显示方向，可选值：`vertical`、`horizontal` | -        | false |
 | size        | Number                                              | 0          | -                         | 统一的icon大小，单位为px                   | -        | false |
 | items       | Array[{title, description, icon, activeIcon, size}] | []         | -                         | 步骤详情                                   | -        | true  |
-| showStepNumber | Boolean | false | - | 是否以数字序列展示步骤 icon | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| showStepNumber | Boolean | false | - | 是否以数字序列展示步骤 icon | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### slot
 steps 组件中的 slot 插槽可根据具体的步骤数设置，如有 4 个步骤点，那么可插入 4 个 slot。
