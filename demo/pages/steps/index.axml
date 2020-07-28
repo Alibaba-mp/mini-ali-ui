@@ -1,13 +1,21 @@
 <steps 
   className="demo-steps-class"
   activeIndex="{{activeIndex}}"
+  failIndex="{{failIndex}}"
   items="{{items}}"
-/>
+>
+  <view slot="title_2" style="color: green; font-weight: bold;">titile 的内容</view>
+</steps>
 <steps 
   className="demo-steps-class"
   activeIndex="{{activeIndex}}"
+  failIndex="{{failIndex}}"
+  horizHighlight="{{true}}"
   items="{{items2}}"
-/>
+>
+  <view slot="title_2" style="color: green; font-weight: bold;">titile 的内容</view>
+  <view slot="desc_4">当前 item 没有 <text style="color: green;">description</text> 时，使用 slot 内容。</view>
+</steps>
 <steps 
   className="demo-steps-class"
   direction="vertical"
@@ -17,6 +25,7 @@
   size="{{size}}"
   showStepNumber="{{showNumberSteps}}"
 >
+  <view slot="title_2" style="color: green; font-weight: bold;">titile 的内容</view>
   <view slot="desc_4">当前 item 没有 <text style="color: green;">description</text> 时，使用 slot 内容。</view>
 </steps>
 <view class="demo-btn-container">

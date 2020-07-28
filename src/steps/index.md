@@ -23,15 +23,24 @@
 | size        | Number                                              | 0          | -                         | 统一的icon大小，单位为px                   | -        | false |
 | items       | Array[{title, description, icon, activeIcon, size}] | []         | -                         | 步骤详情                                   | -        | true  |
 | showStepNumber | Boolean | false | - | 是否以数字序列展示步骤 icon | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| horizHighlight | Boolean | false | - | 用于控制水平方向是否启用高亮展示 title | [1.1.3](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### slot
 steps 组件中的 slot 插槽可根据具体的步骤数设置，如有 4 个步骤点，那么可插入 4 个 slot。
 
-slot 名称的格式为：`desc_1`、`desc_2`、`desc_n`...以此类推，将 n 修改为指定 items 的序列即可。如下列代码将会第 4 个 items 中没有 description 值的时候显示 slot 内容。
+slot 名称的格式为：`desc_1`、`desc_2`、`desc_n`...以此类推，将 n 修改为指定 items 的序列即可。如下列代码将会第 4 个 items 中没有 description 值的时候显示 slot 内容。为了满足需求，当 title 部分没有值时，也可以通过类似方式插入 slot 内容。水平方向与垂直方向的 steps 组件都可以使用这两个 slot。
 
 ```xml
+<view slot="title_2" style="color: green; font-weight: bold;">titile 的内容</view>
 <view slot="desc_4">当前 item 没有 <text style="color: green;">description</text> 时，使用 slot 内容。</view>
 ```
+
+> 下表中的 n 代表从 1 开始累加的数字
+
+| slotName | 说明 |
+| ---- | ---- |
+| desc_n | 当无 description 值时可展示的 slot |
+| title_n | 当无 title 值时可展示的 slot |
 
 ### items属性
 
@@ -55,7 +64,8 @@ slot 名称的格式为：`desc_1`、`desc_2`、`desc_n`...以此类推，将 n 
 {
   "defaultTitle": "Steps",
   "usingComponents": {
-    "steps": "mini-ali-ui/es/steps/index"
+    "steps": "mini-ali-ui/es/steps/index",
+    "button": "mini-ali-ui/es/button/index"
   }
 }
 ```
@@ -65,13 +75,21 @@ slot 名称的格式为：`desc_1`、`desc_2`、`desc_n`...以此类推，将 n 
 <steps 
   className="demo-steps-class"
   activeIndex="{{activeIndex}}"
+  failIndex="{{failIndex}}"
   items="{{items}}"
-/>
+>
+  <view slot="title_2" style="color: green; font-weight: bold;">titile 的内容</view>
+</steps>
 <steps 
   className="demo-steps-class"
   activeIndex="{{activeIndex}}"
+  failIndex="{{failIndex}}"
+  horizHighlight="{{true}}"
   items="{{items2}}"
-/>
+>
+  <view slot="title_2" style="color: green; font-weight: bold;">titile 的内容</view>
+  <view slot="desc_4">当前 item 没有 <text style="color: green;">description</text> 时，使用 slot 内容。</view>
+</steps>
 <steps 
   className="demo-steps-class"
   direction="vertical"
@@ -81,19 +99,20 @@ slot 名称的格式为：`desc_1`、`desc_2`、`desc_n`...以此类推，将 n 
   size="{{size}}"
   showStepNumber="{{showNumberSteps}}"
 >
+  <view slot="title_2" style="color: green; font-weight: bold;">titile 的内容</view>
   <view slot="desc_4">当前 item 没有 <text style="color: green;">description</text> 时，使用 slot 内容。</view>
 </steps>
 <view class="demo-btn-container">
-  <button class="demo-btn" onTap="preStep">上一步</button>
-  <button class="demo-btn" onTap="nextStep">下一步</button>
+  <button class="demo-btn" onTap="preStep">上一步</button>
+  <button class="demo-btn" onTap="nextStep">下一步</button>
 </view>
 <view class="demo-btn-container">
-  <button class="demo-btn" onTap="setFailIndex">设置错误项</button>
-  <button class="demo-btn" onTap="cancelFailIndex">取消错误项</button>
+  <button class="demo-btn" onTap="setFailIndex">设置错误项</button>
+  <button class="demo-btn" onTap="cancelFailIndex">取消错误项</button>
 </view>
 <view class="demo-btn-container">
-  <button class="demo-btn" onTap="setIconSizeAdd">设置图标大小+</button>
-  <button class="demo-btn" onTap="setIconSizeReduce">设置图标大小-</button>
+  <button class="demo-btn" onTap="setIconSizeAdd">设置图标大小+</button>
+  <button class="demo-btn" onTap="setIconSizeReduce">设置图标大小-</button>
 </view>
 <button type="primary" onTap="showNumberList">以{{!showNumberSteps?'数字':'图片/icon'}}方式展示步骤序列</button>
 ```
@@ -108,18 +127,15 @@ Page({
     size: 0,
     items: [{
       title: '步骤1',
-    }, {
-      title: '步骤2',
-    }, {
+    }, { }, {
       title: '步骤3',
     }],
     items2: [{
-      title: '步骤1',
+      title: '步骤1 如果标题足够长的话也会换行的',
       description: '这是步骤1的描述文档，文字足够多的时候会换行，设置了成功的icon',
       activeIcon: 'https://i.alipayobjects.com/common/favicon/favicon.ico',
       size: 20,
     }, {
-      title: '步骤2 如果标题足够长的话也会换行的',
       description: '这是步骤2，同时设置了两种状态的icon',
       icon: 'https://gw.alipayobjects.com/mdn/miniProgram_mendian/afts/img/A*lVojToO-qZIAAAAAAAAAAABjAQAAAQ/original',
       activeIcon: 'https://i.alipayobjects.com/common/favicon/favicon.ico',

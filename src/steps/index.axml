@@ -1,15 +1,31 @@
 <!-- 横向 -->
 <view class="am-hor-steps {{className}}" a:if="{{direction == 'horizontal'}}">
   <view class="am-hor-step" a:for="{{items}}" style="{{width: 100 / (items.length - 1) + '%'}}">
-    <view class="am-hor-step-line {{index < activeIndex - 1 ? 'is-active' : ''}} {{index >= items.length - 1 ? 'is-last' : ''}}">
-      <view class="am-hor-step-icon {{index <= activeIndex - 1 ? 'is-active' : ''}}"></view>
+    <view class="am-hor-step-line
+            {{index < activeIndex - 1 ? 'is-active' : ''}}
+            {{index >= items.length - 1 ? 'is-last' : ''}}">
+      <view class="am-hor-step-icon
+              {{index <= activeIndex - 1 ? 'is-active' : ''}}
+              {{horizHighlight && index == failIndex - 1 ? 'is-fail' : ''}}"></view>
     </view>
     <view class="am-hor-step-text">
-      <view class="am-hor-step-title">
-        <text>{{item.title}}</text>
+      <view class="am-hor-step-title
+              {{horizHighlight && index <= activeIndex - 1 ? 'is-active' : ''}}
+              {{horizHighlight && index == failIndex - 1 ? 'is-fail' : ''}}">
+        <block a:if="{{item.title}}">
+          <text>{{item.title}}</text>
+        </block>
+        <block a:else>
+          <slot name="title_{{index + 1}}" />
+        </block>
       </view>
       <view class="am-hor-step-description">
-        <text>{{item.description}}</text>
+        <block a:if="{{item.description}}">
+          <text>{{item.description}}</text>
+        </block>
+        <block a:else>
+          <slot name="desc_{{index + 1}}" />
+        </block>
       </view>
     </view>
   </view>
@@ -49,7 +65,12 @@
     </view>
     <view class="am-vertical-step-right {{index === items.length - 1 ? 'am-vertical-step-right-last': ''}}">
       <view class="am-vertical-step-title {{index <= activeIndex - 1 ? 'is-active' : ''}} {{index == failIndex - 1 ? 'is-fail' : ''}}">
-        <text class="am-vertical-step-item__title">{{item.title}}</text>
+        <block a:if="{{item.title}}">
+          <text class="am-vertical-step-item__title">{{item.title}}</text>
+        </block>
+        <block a:else>
+          <slot name="title_{{index + 1}}" />
+        </block>
       </view>
       <view class="am-vertical-step-description">
         <block a:if="{{item.description}}">

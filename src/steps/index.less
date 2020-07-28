@@ -52,6 +52,21 @@
   background-color: var(--am-steps-color, @color-fill-primary);
 }
 
+.am-hor-step-title.is-active {
+  color: @color-text-primary;
+  color: var(--am-steps-horizontal-title-active-color, @color-text-primary);
+}
+
+.am-hor-step-title.is-fail {
+  color: @color-text-warning;
+  color: var(--am-steps-horizontal-warning-color, @color-text-warning);
+}
+
+.am-hor-step-icon.is-fail {
+  background-color: @color-text-warning;
+  background-color: var(--am-steps-horizontal-warning-color, @color-text-warning);
+}
+
 .am-hor-step-text {
   margin-top: 12px;
   padding: 0 5px;
