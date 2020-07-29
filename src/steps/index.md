@@ -103,16 +103,16 @@ slot 名称的格式为：`desc_1`、`desc_2`、`desc_n`...以此类推，将 n 
   <view slot="desc_4">当前 item 没有 <text style="color: green;">description</text> 时，使用 slot 内容。</view>
 </steps>
 <view class="demo-btn-container">
-  <button class="demo-btn" onTap="preStep">上一步</button>
-  <button class="demo-btn" onTap="nextStep">下一步</button>
+  <button class="demo-btn" onTap="preStep">上一步</button>
+  <button class="demo-btn" onTap="nextStep">下一步</button>
 </view>
 <view class="demo-btn-container">
-  <button class="demo-btn" onTap="setFailIndex">设置错误项</button>
-  <button class="demo-btn" onTap="cancelFailIndex">取消错误项</button>
+  <button class="demo-btn" onTap="setFailIndex">设置错误项</button>
+  <button class="demo-btn" onTap="cancelFailIndex">取消错误项</button>
 </view>
 <view class="demo-btn-container">
-  <button class="demo-btn" onTap="setIconSizeAdd">设置图标大小+</button>
-  <button class="demo-btn" onTap="setIconSizeReduce">设置图标大小-</button>
+  <button class="demo-btn" onTap="setIconSizeAdd">设置图标大小+</button>
+  <button class="demo-btn" onTap="setIconSizeReduce">设置图标大小-</button>
 </view>
 <button type="primary" onTap="showNumberList">以{{!showNumberSteps?'数字':'图片/icon'}}方式展示步骤序列</button>
 ```

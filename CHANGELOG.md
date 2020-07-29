@@ -1,3 +1,15 @@
+## 1.1.3
+`2020-07-30`
+* **Fixed**
+  * steps 组件水平方向新增高亮以及支持更多的 slot；
+  * button组件胶囊圆角调整；
+  * amount-input 组件的清除 icon 控制方式调整；
+  * 对 list 组件中的 loading 组件源码做调整；
+  * verify-code 组件可设置加载时主动触发发送按钮；
+  * CSS token 优化调整；
+* **Feature**
+  * title support custom operation ([#39](https://github.com/Alibaba-mp/mini-ali-ui/pull/39))
+
 ## 1.1.2
 `2020-07-16`
 * **Fixed**：npm 包中 `px` 与 `rpx` 版本修正；
