@@ -67,7 +67,17 @@
       <view
       class="am-tabs-plus {{showPlus ? 'show' : ''}}"
       onTap="handlePlusClick" hover-class="am-tabs-bar-tab__hover" hover-start-time="0" hover-stay-time="0">
-        <am-icon type="add" size="16"></am-icon>
+        <!-- 如果没有图片 url，将采用 icon 来展示 -->
+        <am-icon
+          type="{{plusIcon}}"
+          size="{{plusIconSize}}"
+          color="{{plusIconColor}}"
+          a:if="{{plusImg === ''}}"></am-icon>
+        <image
+          src="{{plusImg}}"
+          style="width: {{plusImgWidth}}; height: {{plusImgHeight}};"
+          mode="scaleToFill"
+          a:else />
       </view>
     </view>
     <block a:if="{{elevator}}">

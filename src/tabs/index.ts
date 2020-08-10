@@ -46,6 +46,14 @@ Component({
     elevatorContentTop: 0,
     // 通过接收外部传值，动态控制 tab-content 在 swiper 下的高度
     tabContentHeight: '',
+    // plus icon 类型更多的支持
+    plusIcon: 'add',
+    plusIconSize: 16,
+    plusIconColor: '',
+    // plus icon 使用 image 的方式
+    plusImg: '',
+    plusImgWidth: '',
+    plusImgHeight: '',
   },
   data: {
     windowWidth: 0,
