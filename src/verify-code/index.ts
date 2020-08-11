@@ -48,7 +48,7 @@ Component({
     });
     // 在组件加载的时候是否主动触发点击发送验证码事件
     if (this.props.initActive) {
-      this.onTapSend();
+      this.noSendCountDown();
     } else {
       this.setData({
         _actionActive: !this.props.initActive,
@@ -109,6 +109,30 @@ Component({
         }, 1000);
         const event = fmtEvent(this.props, e);
         onSend(event);
+      }
+    },
+    noSendCountDown() {
+      const { countDown } = this.props;
+      if (this.data._actionActive) {
+        this.setData({
+          _actionActive: false,
+        });
+        this._timeout = setInterval(() => {
+          const subOne = this.data._countDown - 1;
+          if (subOne <= 0) {
+            clearInterval(this._timeout);
+            this.setData({
+              _actionActive: true,
+              resend: true,
+              _countDown: countDown,
+              actedBefore: true,
+            });
+          } else {
+            this.setData({
+              _countDown: subOne,
+            });
+          }
+        }, 1000);
       }
     },
   },

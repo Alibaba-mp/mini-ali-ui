@@ -14,8 +14,7 @@
 | labelCls | String |  |  | 自定义label的class |  |  |
 | pickerCls | String |  |  | 自定义选择区域的class |  |  |
 | last | Boolean | false |  | 是否最后一行 |  |  |
-| value | String |  |  | 初始内容 |  |  |
-| name | String |  |  | 组件名字，用于表单提交获取数据 |  |  |
+| value | String |  |  | picker-item 的值 |  |  |
 | placeholder | String |  |  | 占位符 |  |  |
 | onPickerTap | (e: Object) => void |  |  | 点击pickeritem时触发 |  |  |
 | layer | String | '' | vertical | 文本输入框是否为垂直排列，`vertical` 时为垂直排列，空值为横向排列 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |

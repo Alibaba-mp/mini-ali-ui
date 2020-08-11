@@ -41,6 +41,9 @@
 | txtCountDown | String | '秒后重试' | - | 按钮倒计时的默认文案（不包含倒计时） | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
 | initActive | Boolean | false | - | 是否主动触发发送按钮 | [1.1.3](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | 否 |
 
+## Bug & Tip
+* 当 `initActive` 为 `true` 时，组件在初次加载后就会自动进入倒计时状态；如需要在该状态下有提示信息展示，需自行处理；
+
 ## 示例
 
 ### json
@@ -64,6 +67,7 @@
     onClear="onClear" 
     last="{{true}}" 
     countDown="{{10}}" 
+    initActive="{{false}}"
     onSend="onSend"></verify-code>
 </view>
 ```
