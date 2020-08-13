@@ -1,3 +1,12 @@
+## 1.1.4
+`2020-08-13`
+* **Fixed**
+  * verify-code 组件初次加载可直接进入倒计时模式
+  * swipe-action 可能会露出 1px 的底部按钮颜色
+  * Message icon 跳变 ([#36](https://github.com/Alibaba-mp/mini-ali-ui/issues/36))
+* **Feature**
+  * Tabs 的 plus icon 支持自定义 ([#40](https://github.com/Alibaba-mp/mini-ali-ui/issues/40))
+
 ## 1.1.3
 `2020-07-30`
 * **Fixed**
