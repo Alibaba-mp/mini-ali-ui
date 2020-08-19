@@ -26,6 +26,7 @@
 | onSelect | EventHandle | ([startDate, endDate]) => void | - | 选择区间时的回调 | - | - |
 | onMonthChange | EventHandle | (currentMonth, prevMonth) => void | - | 点击切换月份时回调，带两个参数currentMonth切换后月份和prevMonth切换前月份 | - | - |
 | onYearChange | EventHandle | (currentYear, prevYear) => void | - | 点击切换年份时回调，带两个参数currentYear切换后年份和prevYear切换前年份 | - | - |
+| onChange | EventHandle | (current, prev) => void | - | 年/月变化时回调，带两个对象，每个均携带year和month信息 | - | - |
 | onSelectHasDisableDate | EventHandle | (currentMonth, prevMonth) => void | - | 选择区间包含不可用的日期 | - | - |
 
 ## Bug & Tip
@@ -58,6 +59,7 @@
     onSelect="handleSelect"
     onMonthChange="onMonthChange"
     onYearChange="onYearChange"
+    onChange="onChange"
     onSelectHasDisableDate="onSelectHasDisableDate" />
 </view>
 ```
@@ -77,6 +79,7 @@ Page({
   handleSelect() {},
   onMonthChange() {},
   onYearChange() {},
+  onChange() {},
   onSelectHasDisableDate() {
     my.alert({
       content: 'SelectHasDisableDate',

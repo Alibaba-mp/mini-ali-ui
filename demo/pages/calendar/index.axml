@@ -6,5 +6,6 @@
     onSelect="handleSelect"
     onMonthChange="onMonthChange"
     onYearChange="onYearChange"
+    onChange="onChange"
     onSelectHasDisableDate="onSelectHasDisableDate" />
 </view>
