@@ -24,6 +24,7 @@ Component({
   },
   didMount() {
     this.isScrolling = false;
+    this.onlyChangeTab = false;
     this.timerId = null;
     this.calcHeight();
   },
@@ -46,6 +47,11 @@ Component({
       this.indexMap = {};
       this.wrapHeight = 0;
       this.scrollWrapHeight = 0;
+
+      this.setData({
+        currentBefore: activeTab - 1,
+        currentAfter: activeTab + 1,
+      });
 
       my.createSelectorQuery()
         .select(`.am-vtabs-slides-${this.$id}`)
@@ -78,7 +84,7 @@ Component({
     handleTabClick(e) {
       const { anchor, index } = e.target.dataset;
 
-      if (!this.isScrolling || !this.props.swipeable) {
+      if (!this.isScrolling || !this.props.swipeable || this.onlyChangeTab) {
         if (this.props.activeTab !== index) {
           this.props.onTabClick(index);
         }
@@ -144,6 +150,7 @@ Component({
     onWrapTouchMove() {
       if (this.props.swipeable) {
         this.isScrolling = true;
+        this.onlyChangeTab = true;
       }
     },
     onTabFirstShow(e) {
