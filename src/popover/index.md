@@ -29,7 +29,7 @@
 | className   | String     | -      | -      | 单项样式     | -        | -    |
 | onItemClick | () => void | -      | -      | 单项点击事件 | -        | -    |
 | iconType | String | - | 参考 icon 组件 | 所有的 type 值均来自 icon 组件 | - | - |
-| iconURL | String | - | - | 图片的URL | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| iconURL | String | - | - | 图片的URL | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 
 ## 示例

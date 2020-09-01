@@ -60,9 +60,11 @@
     }
     &__active {
       font-size: @font-size-subtitle;
+      font-size: var(--am-vtabs-fontSize-active, @font-size-subtitle);
     }
     &__same {
       font-size: @font-size-content;
+      font-size: var(--am-vtabs-fontSize-same, @font-size-content);
     }
   }
 
@@ -76,6 +78,7 @@
     flex: 1;
     height: 100%;
     background-color: @color-fill-grey-inverse;
+    background-color: var(--am-vtabs-content-bgc, @color-fill-grey-inverse);
   }
 
   &-slides {

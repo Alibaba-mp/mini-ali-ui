@@ -54,7 +54,13 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | tabBarUnderlineWidth | String | 100% | - | 设置 tab 选项卡选中态的下划线宽度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | tabBarUnderlineHeight | String | 2px | - | 设置 tab 选项卡选中态的下划线高度 | [1.0.10](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | onTabFirstShow | EventHandle | (index: Number, tabsName: String) => {} | - | tab 选项卡首次出现时的回调 | [1.0.12](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
-| tabContentHeight | String | '' | - | 当 `swipeable` 为 `true` 时，可通过该属性值重设高度强制让 swiper 组件支持“自适应”高度的行为 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| tabContentHeight | String | '' | - | 当 `swipeable` 为 `true` 时，可通过该属性值重设高度强制让 swiper 组件支持“自适应”高度的行为 | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| plusIcon | String | add | icon 类型可参考 [am-icon 类型](https://opendocs.alipay.com/mini/component-ext/am-icon#type%20%E6%9C%89%E6%95%88%E5%80%BC) | 改变 icon 类型 | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| plusIconSize | Number | 16 | - | 改变 icon 大小 | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| plusIconColor | String | '' | - | 改变 icon 颜色 | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| plusImg | String | '' | - | 使用图片替换 icon | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| plusImgWidth | String | '' | - | 设置替换 icon 后的图片宽度 | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| plusImgHeight | String | '' | - | 设置替换 icon 后的图片高度 | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### tab-content
 
@@ -76,6 +82,9 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
   * `arrow` 可展示有箭头的 badge，箭头仅有左方向；
   * `stroke` 可展示有描边的 badge；
 * 当 `elevatorTop` 的值为 px 单位时，`elevatorContentTop` 距离顶部的高度则是 `elevatorTop` + tab 选项卡的高度；
+* 当 `plusImg` 的值为空时才可以使用 `plusIcon`、`plusIconSize` 以及 `plusIconColor` 这三个值；
+* 当 `plusImg` 的值为空时，`plusImgWidth` 和 `plusImgHeight` 设置将无效；
+* 如果 `plusIcon` 为空，`plusIconSize` 和 `plusIconColor` 修改的是默认的 icon 大小以及颜色；
 
 ### tab-content 高度自适应说明
 

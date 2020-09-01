@@ -42,22 +42,39 @@
     align-items: center;
     background: @color-fill-grey-inverse;
     background: var(--am-list-background, @color-fill-grey-inverse);
-    padding: 12px;
-    font-size: 15px;
-    line-height: 1.4;
+    padding: @v-spacing-large;
+    padding: var(--am-list-load-padding, @v-spacing-large);
+    font-size: @font-size-subtitle;
+    font-size: var(--am-list-load-fontSize, @font-size-subtitle);
+    line-height: @line-height-paragraph;
+    line-height: var(--am-list-load-lineHeight, @line-height-paragraph);
     color: @color-fill-grey-dark;
     color: var(--am-list-load-more-color, @color-fill-grey-dark);
     &-txt {
-      padding: 0 8px;
-      color: #999;
+      padding: 0 @h-spacing-standard;
+      padding: 0 var(--am-list-load-txt-paddingLR, @h-spacing-standard);
+      color: @color-text-subtitle;
+      color: var(--am-list-load-txt-color, @color-text-subtitle);
     }
   }
   &-load-over {
     display: block;
-    padding: 12px;
-    font-size: 10px;
+    padding: @v-spacing-large;
+    padding: var(--am-list-load-over-padding, @v-spacing-large);
+    font-size: @font-size-weak;
+    font-size: var(--am-list-load-over-fontSize, @font-size-weak);
     text-align: center;
-    color: #ccc;
+    color: @color-text-weak;
+    color: var(--am-list-load-over-color, @color-text-weak);
     text-shadow: 1px 1px #f0f0f0;
   }
+}
+.am-loading {
+  display: inline-block;
+  width: 200 * @pixelSize;
+  height: 200 * @pixelSize;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%20140%20140%22%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2270%22%20r%3D%2230%22%20stroke%3D%22%231677ff%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%20transform%3D%22rotate\(0%2070%2070\)%22%3E%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20repeatCount%3D%22indefinite%22%20dur%3D%221.5s%22%20values%3D%22-90%2070%2070%3B%2015%2070%2070%3B270%2070%2070%22%20keyTimes%3D%220%3B0.5%3B1%22%3E%3C%2FanimateTransform%3E%3Canimate%20attributeName%3D%22stroke-dasharray%22%20repeatCount%3D%22indefinite%22%20dur%3D%221.5s%22%20values%3D%221%20200%3B50%20200%3B1%20200%22%20keyTimes%3D%220%3B0.5%3B1%22%3E%3C%2Fanimate%3E%3C%2Fcircle%3E%3Ccircle%20cx%3D%2270%22%20cy%3D%2270%22%20r%3D%2250%22%20stroke%3D%22%231677ff%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%20transform%3D%22rotate\(0%2070%2070\)%22%3E%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20repeatCount%3D%22indefinite%22%20dur%3D%221.5s%22%20values%3D%22180%2070%2070%3B360%2070%2070%3B900%2070%2070%22%20keyTimes%3D%220%3B0.5%3B1%22%3E%3C%2FanimateTransform%3E%3Canimate%20attributeName%3D%22stroke-dasharray%22%20repeatCount%3D%22indefinite%22%20dur%3D%221.5s%22%20values%3D%2225%20500%3B70%20500%3B25%20500%22%20keyTimes%3D%220%3B0.5%3B1%22%3E%3C%2Fanimate%3E%3C%2Fcircle%3E%3C%2Fsvg%3E);
 }

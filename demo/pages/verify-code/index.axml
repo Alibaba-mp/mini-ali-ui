@@ -8,5 +8,6 @@
     onClear="onClear" 
     last="{{true}}" 
     countDown="{{10}}" 
+    initActive="{{false}}"
     onSend="onSend"></verify-code>
 </view>

@@ -1,6 +1,7 @@
 {
   "defaultTitle": "Steps",
   "usingComponents": {
-    "steps": "../../es/steps/index"
+    "steps": "../../es/steps/index",
+    "button": "../../es/button/index"
   }
 }
