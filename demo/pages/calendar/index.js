@@ -31,6 +31,7 @@ Page({
   handleSelect() {},
   onMonthChange() {},
   onYearChange() {},
+  onChange() {},
   onSelectHasDisableDate() {
     my.alert({
       content: 'SelectHasDisableDate',
