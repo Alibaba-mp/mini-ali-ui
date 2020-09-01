@@ -38,6 +38,7 @@
   * `5`: #999,
 * `prevMonthDisable`、`prevYearDisable`、`nextvMonthDisable` 以及 `nextYearDisable` 四个主要控制日历上的箭头是否可点击使用，可根据实际业务场景来使用；
 * `tagData` 中的 `disable` 是可选项，如某日期需要提示禁用不可点时才需要增加，当不可用时，`tag` 以及 `tagColor` 将不会展示；
+* 月份计数从 0 开始，即 0 代表 1 月份，以此类推，月份返回值 11 代表 12 月份；
 
 ## 代码示例
 
