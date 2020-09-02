@@ -54,6 +54,8 @@ Component({
     plusImg: '',
     plusImgWidth: '',
     plusImgHeight: '',
+    // tab-bar 是否滚动定位在顶部的判断
+    stickyBar: false,
   },
   data: {
     windowWidth: 0,

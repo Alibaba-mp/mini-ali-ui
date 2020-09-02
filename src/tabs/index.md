@@ -61,6 +61,7 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 | plusImg | String | '' | - | 使用图片替换 icon | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | plusImgWidth | String | '' | - | 设置替换 icon 后的图片宽度 | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | plusImgHeight | String | '' | - | 设置替换 icon 后的图片高度 | [1.1.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| stickyBar | Boolean | false | - | tabBar 是否在页面滚动的时候定位在顶部的某个位置，可结合 `elevatorTop` 设置距离顶部的位置 | [1.1.5](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ### tab-content
 
@@ -119,6 +120,7 @@ tabs 组件内容区域高度是否能够自适应，需要注意 `swipeable` �
   capsule="{{false}}"
   hasSubTitle="{{false}}"
   tabBarUnderlineWidth="20px"
+  stickyBar="{{true}}"
 >
   <block a:for="{{tabs2}}">
     <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:if="{{index === 0}}">
@@ -228,5 +230,7 @@ Page({
   box-sizing: border-box;
   /* 如果 swipeable="{{true}}"，需要增加 height */
   /* height: 350px; */
+  /* 为了体现 stickyBar 的作用而增加的 tab-content 的高度 */
+  height: 100vh;
 }
 ```

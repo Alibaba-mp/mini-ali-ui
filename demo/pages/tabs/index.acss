@@ -6,6 +6,8 @@
   box-sizing: border-box;
   /* 如果 swipeable="{{true}}"，需要增加 height */
   /* height: 350px; */
+  /* 为了体现 stickyBar 的作用而增加的 tab-content 的高度 */
+  height: 100vh;
 }
 .radio-group {
   padding: 30rpx 40rpx 0;

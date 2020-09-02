@@ -11,6 +11,7 @@
     capsule="{{typeCapsule}}"
     hasSubTitle="{{typeHasSubTitle}}"
     tabBarUnderlineWidth="20px"
+    stickyBar="{{true}}"
   >
     <block a:for="{{tabs}}">
       <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 0}}">
