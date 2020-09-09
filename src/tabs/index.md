@@ -77,6 +77,8 @@ tabs 横向选项卡主要是由 `<tabs>` 和 `<tab-content>` 两个标签组成
 * `hasSubTitle` 为 `true` 时，tab 选项卡会显示带有描述的模式，但如果 `tabs` 数据中的 `subTitle` 为空，将不会显示描述文案；
 * 当 tabs 选项卡为胶囊模式时，会根据 `tabs` 数据中的 `number` 值显示数字；
 * 如 `elevator` 为 `true`，则为电梯组件，`<tab-content>` 将竖排展示，自动计算每个 `<tab-content>` 的坐标后，根据索引值定位指向；
+  * 在 `elevator` 模式中，`this.data.floorNumber` 将会根据所有 **tab-content** 的高度计算所得，无需修改；
+  * 电梯组件需要考虑页面滚动时判断每个 **tab-content** 的位置，因此需要在页面级别中加入 `onPageScroll({ scrollTop }) {}`，具体可参考代码示例中的代码；
 * `tabsName` 是为了能更好获取到当前 tab 选项卡的名称进行识别，值需要与 `activeTab` 的 key 值相同，如：`activeTab="{{activeTab2}}"`，那么 `tabsName="activeTab2"`；
 * `tabs` 中的 `showBadge` 为 `true` 时，`number` 中的值会以 badge 形式展示，并且不受 tab 类型影响，否则 `number` 中的值仅在胶囊 tab 中有效；
   * 可同时添加 `badge: { arrow: true, stroke: true, }` 控制 badge 的样式；
@@ -208,13 +210,25 @@ Page({
     });
   },
   onPageScroll({ scrollTop }) {
-    // 电梯组件时需要添加，计算页面滚动时，tab 的切换；
-    for (let i = 0; i <= this.data.floorNumber.length; i++) {
-      if (scrollTop >= this.data.floorNumber[i]) {
-        this.setData({
-          activeTab: i,
-          getFloorNumber: i,
-        });
+    // onPageScroll 主要是用于电梯组件（elevator 模式）滚动时的高度计算；
+    // activeTab 被触发高亮的 tab；
+    // getFloorNumber 当前 tab-content 所在的索引值；
+    // this.data.floorNumber 将会有组件内部根据 tab-content 的高度计算；
+    // ※※※ 当使用 elevator 模式的 tabs 组件时，这部分的代码请直接 copy 使用 ※※※
+    if (scrollTop === 0) {
+      this.setData({
+        activeTab: 0,
+        getFloorNumber: 0,
+      });
+    } else {
+      // 电梯组件时需要添加，计算页面滚动时，tab 的切换；
+      for (let i = 0; i <= this.data.floorNumber.length; i++) {
+        if (scrollTop >= this.data.floorNumber[i]) {
+          this.setData({
+            activeTab: i,
+            getFloorNumber: i,
+          });
+        }
       }
     }
   },

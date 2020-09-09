@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "小程序 mini-ali-ui 库",
+  "defaultTitle": "tabs elevator 模式",
   "usingComponents":{
     "tabs":"../../../es/tabs/index",
     "tab-content": "../../../es/tabs/tab-content/index"
