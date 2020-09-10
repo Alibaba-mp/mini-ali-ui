@@ -1,3 +1,13 @@
+## 1.1.5
+`2020-09-10`
+* **Feature**
+  * tabs 组件新增非 elevator 模式下的吸顶功能
+  * 日历 onChange 回调，解决月份切换导致年份变化不进行回调的问题 ([#44](https://github.com/Alibaba-mp/mini-ali-ui/pull/44))
+* **Fixed**
+  * vtabs 组件中 vtab-content 高度不够时的 tab 高亮展示
+  * popup 组件的 z-index 层级问题
+  * page-result 组件中按钮在 iOS10.3 内位置偏移
+
 ## 1.1.4
 `2020-08-13`
 * **Fixed**
