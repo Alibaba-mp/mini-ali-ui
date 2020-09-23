@@ -5,6 +5,7 @@ Component({
     tabTop: 0,
     wrapScrollTop: 0,
     besideRadius: fmtUnit('8px'),
+    scrollType: 'tap',
   },
   props: {
     activeTab: 0,
@@ -89,6 +90,7 @@ Component({
           this.props.onTabClick(index);
         }
         this.setData({
+          scrollType: 'tap',
           wrapScrollTop: this.anchorMap[anchor],
         });
         this.moveScrollBar(index);
@@ -96,12 +98,13 @@ Component({
     },
     moveScrollBar(current) {
       let tabTop;
-
+      // tabTop 用来控制侧边 tab 的 scroll-view 滚动位置
       if (current < 6) {
         tabTop = 0;
       } else {
         tabTop = (current - 5) * 55;
       }
+      // tab-content 滚动时，对侧边 tab 的影响
       if (this.props.activeTab !== current) {
         if (this.props.onChange) {
           this.props.onChange(current);
@@ -119,6 +122,11 @@ Component({
     onScroll(e) {
       const { scrollTop } = e.detail;
       const keys = Object.keys(this.anchorMap);
+
+      this.setData({
+        wrapScrollTop: scrollTop,
+        scrollType: 'scroll',
+      });
 
       if (this.timerId) {
         clearTimeout(this.timerId);
@@ -138,8 +146,9 @@ Component({
             break;
           }
         }
-        if (scrollTop >= Math.floor(this.anchorMap[keys[i]]) && scrollTop < Math.floor(this.anchorMap[keys[i + 1]])) {
-          // 如果没个vtab-content高度小于scroll-view高度，到达底部后就不需要根据scrollTop再去判断左侧的选择项
+        if (scrollTop >= Math.floor(this.anchorMap[keys[i]]) &&
+            scrollTop < Math.floor(this.anchorMap[keys[i + 1]])) {
+          // 如果每个vtab-content高度小于scroll-view高度，到达底部后就不需要根据scrollTop再去判断左侧的选择项
           if (scrollTop + this.wrapHeight < this.scrollWrapHeight) {
             this.moveScrollBar(i);
           }
