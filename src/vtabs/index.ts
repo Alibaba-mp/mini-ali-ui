@@ -5,7 +5,6 @@ Component({
     tabTop: 0,
     wrapScrollTop: 0,
     besideRadius: fmtUnit('8px'),
-    scrollType: 'tap',
   },
   props: {
     activeTab: 0,
@@ -23,11 +22,14 @@ Component({
     onTabClick: () => {},
     onScrollBar: () => {},
   },
-  didMount() {
+  async didMount() {
     this.isScrolling = false;
     this.onlyChangeTab = false;
     this.timerId = null;
-    this.calcHeight();
+    await this.calcHeight();
+    this.setData({
+      wrapScrollTop: this.anchorMap[this.props.tabs[this.props.activeTab].anchor],
+    });
   },
   didUpdate(prevProps) {
     const { activeTab } = this.props;
@@ -42,8 +44,8 @@ Component({
     }
   },
   methods: {
-    calcHeight() {
-      const { tabs, activeTab } = this.props;
+    async calcHeight() {
+      const { activeTab } = this.props;
       this.anchorMap = {};
       this.indexMap = {};
       this.wrapHeight = 0;
@@ -54,32 +56,33 @@ Component({
         currentAfter: activeTab + 1,
       });
 
-      my.createSelectorQuery()
-        .select(`.am-vtabs-slides-${this.$id}`)
-        .boundingClientRect()
-        .exec((ret) => {
-          this.wrapHeight = (<my.IBoundingClientRect>ret[0]).height;
-        });
-
-
-      let cacheHeight = 0;
-      for (let i = 0; i < tabs.length; i++) {
-        const { anchor } = tabs[i];
-        /* eslint-disable no-loop-func */
+      await new Promise((resolve) => {
         my.createSelectorQuery()
-          .select(`#am-vtab-slide-${anchor}`)
+          .select(`.am-vtabs-slides-${this.$id}`)
           .boundingClientRect()
           .exec((ret) => {
-            this.anchorMap[anchor] = cacheHeight;
-            this.indexMap[i] = cacheHeight;
-            if (activeTab === i) {
-              this.setData({
-                wrapScrollTop: this.indexMap[i],
-              });
-            }
-            cacheHeight += (<my.IBoundingClientRect>ret[0]).height;
-            this.scrollWrapHeight = cacheHeight;
+            this.wrapHeight = (<my.IBoundingClientRect>ret[0]).height;
+            resolve();
           });
+      });
+
+      const tabs = this.props.tabs || [];
+      const rects = await new Promise((resolve) => {
+        my.createSelectorQuery()
+          .selectAll(
+            tabs.map(tab => `#am-vtab-slide-${tab.anchor}`).join(',')
+          )
+          .boundingClientRect()
+          .exec(res => resolve((res[0] as any).sort((a, b) => a.top - b.top)));
+      });
+
+      let prevHeight = 0;
+      for (let i = 0; i < tabs.length; i += 1) {
+        const { height } = rects[i];
+        this.anchorMap[tabs[i].anchor] = prevHeight;
+        this.indexMap[i] = height;
+        prevHeight += height;
+        this.scrollWrapHeight = prevHeight;
       }
     },
     handleTabClick(e) {
@@ -90,7 +93,6 @@ Component({
           this.props.onTabClick(index);
         }
         this.setData({
-          scrollType: 'tap',
           wrapScrollTop: this.anchorMap[anchor],
         });
         this.moveScrollBar(index);
@@ -123,11 +125,6 @@ Component({
       const { scrollTop } = e.detail;
       const keys = Object.keys(this.anchorMap);
 
-      this.setData({
-        wrapScrollTop: scrollTop,
-        scrollType: 'scroll',
-      });
-
       if (this.timerId) {
         clearTimeout(this.timerId);
         this.timerId = null;
@@ -146,8 +143,8 @@ Component({
             break;
           }
         }
-        if (scrollTop >= Math.floor(this.anchorMap[keys[i]]) &&
-            scrollTop < Math.floor(this.anchorMap[keys[i + 1]])) {
+        if (scrollTop >= this.anchorMap[keys[i]] &&
+            scrollTop < this.anchorMap[keys[i + 1]]) {
           // 如果每个vtab-content高度小于scroll-view高度，到达底部后就不需要根据scrollTop再去判断左侧的选择项
           if (scrollTop + this.wrapHeight < this.scrollWrapHeight) {
             this.moveScrollBar(i);
