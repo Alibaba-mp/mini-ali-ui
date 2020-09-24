@@ -1,9 +1,45 @@
 @import (reference) "../style/themes/default.less";
 
 .am-loading {
-  width: 200 * @pixelSize;
-  height: 200 * @pixelSize;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--am-loading-paddingTB, @v-spacing-standard) 0;
+  &-item {
+    flex: 0 0 var(--am-loading-item-size, @size-1);
+    width: var(--am-loading-item-size, @size-1);
+    height: var(--am-loading-item-size, @size-1);
+    overflow: hidden;
+    margin-right: var(--am-loading-marginR, @h-spacing-standard);
+    border-radius: var(--am-loading-item-radius, calc(@corner-radius-sm / 2));
+    background-color: var(--am-color-text-subtitle, @color-text-subtitle);
+    animation: loading 1000ms 0s infinite linear;
+    &__2 {
+      animation-delay: 150ms;
+    }
+    &__3 {
+      margin-right: 0;
+      animation-delay: 300ms;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  12% {
+    transform: translate3d(0, -150%, 0);
+  }
+  40% {
+    transform: translate3d(0, 110%, 0);
+  }
+  55% {
+    transform: translate3d(0, -10%, 0);
+  }
+  60% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }

@@ -1,4 +1,3 @@
 <loading />
-<loading size="50px" />
-<loading size="400rpx" color="red" />
-<loading size="{{loadSize}}" color="#f00" />
+<loading color="rgba(255, 0, 0, .3)" />
+<loading color="#1677ff" />

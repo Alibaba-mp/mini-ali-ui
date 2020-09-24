@@ -176,7 +176,7 @@
 			</block>
 		</list>
 		<list loadMore="{{loadMore}}" 
-			loadContent="{{loadContent}}" loadingSize="60rpx">
+			loadContent="{{loadContent}}">
 			<view slot="header">
 				无限滚动列表
 			</view>

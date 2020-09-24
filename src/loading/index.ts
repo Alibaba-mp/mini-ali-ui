@@ -1,9 +1,7 @@
-import fmtUnit from '../_util/fmtUnit';
-
 Component({
   props: {
-    size: fmtUnit('100px'),
+    size: '',
     className: '',
-    color: '#1677ff',
+    color: '#999',
   },
 });
