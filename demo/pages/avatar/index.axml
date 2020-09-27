@@ -1,23 +1,32 @@
 <view class="demo-avatar">
 	<view style="margin-top: 10px;" />
-  <view class="demo-avatar-size-intro">三种尺寸</view>
+  <view class="demo-avatar-size-intro">四种尺寸</view>
   <view class="demo-avatar-size">
     <view class="demo-avatar-size-container">
-      <avatar size="lg"/>
+      <avatar size="lg" shape="standard"/>
+      <text>lg</text>
     </view>
     <view class="demo-avatar-size-container">
-      <avatar/>
+      <avatar shape="standard"/>
+      <text>默认值：md</text>
     </view>
     <view class="demo-avatar-size-container">
-      <avatar size="sm"/>
+      <avatar size="sm" shape="standard"/>
+      <text>sm</text>
+    </view>
+    <view class="demo-avatar-size-container">
+      <avatar size="xs" shape="standard"/>
+      <text>xs</text>
     </view>
   </view>
   <view style="margin-top: 20px;" />
   <view class="demo-avatar-content">
-    <avatar mode="widthFix" name="用户名" desc="摘要信息" size="sm"/>
+    <avatar mode="widthFix" name="用户名 xs" desc="摘要信息" size="xs" shape="standard"/>
     <view style="margin-top: 20px;" />
-    <avatar name="用户名" desc="摘要信息" size="md"/>
+    <avatar name="用户名 sm" desc="摘要信息" size="sm" shape="standard"/>
     <view style="margin-top: 20px;" />
-    <avatar name="用户名" desc="摘要信息" size="lg"/>
+    <avatar name="用户名 md" desc="摘要信息" size="md" shape="standard"/>
+    <view style="margin-top: 20px;" />
+    <avatar name="用户名 lg" desc="摘要信息" size="lg" shape="standard"/>
   </view>
 </view>

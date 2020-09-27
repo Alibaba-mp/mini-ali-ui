@@ -1,7 +1,8 @@
 @import (reference) "../style/themes/default.less";
 
-@avatar-sm-size: @size-9;   // 72rpx
-@avatar-md-size: @size-13;  // 102rpx
+@avatar-xs-size: @size-10;   // 80rpx
+@avatar-sm-size: @size-11;   // 88rpx
+@avatar-md-size: @size-13;  // 104rpx
 @avatar-lg-size: @size-15;  // 120rpx
 @avatar-content-between-space: @h-spacing-large; /* 头像与内容间隔 */
 @avatar-desc-between-space: @v-spacing-standard / 2; /* 姓名与摘要间隔 */
@@ -10,6 +11,7 @@
 @avatar-fontSize-2: @font-size-subtitle;  // 30rpx
 @avatar-fontSize-3: @font-size-list;      // 34rpx
 @avatar-fontSize-4: @font-size-title;     // 36rpx
+@avatar-corner: @corner-radius-md;  // 头像圆角 8px
 
 .am-avatar {
   display: flex;
@@ -19,8 +21,15 @@
     width: var(--am-avatar-size-md, @avatar-md-size);
     height: @avatar-md-size;
     height: var(--am-avatar-size-md, @avatar-md-size);
-    border-radius: @corner-radius-circle;
+    border-radius: @avatar-corner;
+    border-radius: var(--am-avatar-corner, @avatar-corner);
     /* 头像大小设置 */
+    &-xs {
+      width: @avatar-xs-size;
+      width: var(--am-avatar-size-xs, @avatar-xs-size);
+      height: @avatar-xs-size;
+      height: var(--am-avatar-size-xs, @avatar-xs-size);
+    }
     &-sm {
       width: @avatar-sm-size;
       width: var(--am-avatar-size-sm, @avatar-sm-size);
@@ -42,6 +51,9 @@
     /* 头像形状设置 */
     &-square {
       border-radius: 0;
+    }
+    &-circle {
+      border-radius: 50%;
     }
   }
   &-content {
@@ -65,7 +77,7 @@
     font-size: var(--am-avatar-desc-fontSize, @avatar-fontSize-2);
     color: @color-text-subtitle;
     color: var(--am-avatar-desc-color, @color-text-subtitle);
-    &-sm {
+    &-xs {
       display: none;
     }
   }

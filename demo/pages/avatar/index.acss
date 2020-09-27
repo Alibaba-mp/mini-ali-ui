@@ -1,5 +1,6 @@
 .demo-avatar {
   padding: 30rpx;
+  background-color: #fff;
 }
 .demo-avatar-size {
   display: flex;
@@ -9,7 +10,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+}
+.demo-avatar-size-container text {
+  padding-top: 16rpx;
+  font-size: 26rpx;
 }
 .demo-avatar-size-intro {
   margin-bottom: 20rpx;

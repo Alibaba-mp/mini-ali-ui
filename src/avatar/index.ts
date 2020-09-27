@@ -3,7 +3,7 @@ Component({
     className: '',
     shape: 'circle',
     size: 'md',
-    src: 'https://gw.alipayobjects.com/mdn/rms_349abe/afts/img/A*5VvARpvk39QAAAAAAAAAAABkARQnAQ',
+    src: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*2iXlQLntttsAAAAAAAAAAAAAARQnAQ',
     name: '',
     desc: '',
   },
