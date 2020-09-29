@@ -26,6 +26,9 @@
 | ---- | ---- |
 | inner | 可选，badge作为wrapper时，用于渲染内部的区域 |
 
+## Bug & Tip
+* 当使用 slot 时，且 `withArrow` 为 `true` 的情况下使用 `direction` 时，`right`、`left` 以及 `middle` 所代表是的箭头的方向，同时会改变 badge 在 slot 中的位置；
+
 ## 示例
 
 ```json

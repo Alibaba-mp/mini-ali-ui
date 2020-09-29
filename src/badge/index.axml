@@ -1,14 +1,17 @@
 <view class="am-badge {{className}} {{!$slots.inner ? 'am-badge-not-a-wrapper' : ''}}">
   <view
     class="am-badge-text
-    {{ text.toString().length > 1 ? 'am-badge-double' : ''}}
-    {{direction ==='right' ? 'am-badge-text-arrow-right' : ''}}
-    {{direction ==='left' ? 'am-badge-text-arrow-left' : ''}}
+    {{text.toString().length > 1 ? 'am-badge-double' : ''}}
+    {{withArrow && direction === 'right' ? 'am-badge-text-arrow-right am-badge-text-right' : ''}}
+    {{withArrow && direction === 'left' ? 'am-badge-text-arrow-left am-badge-text-left' : ''}}
+    {{withArrow && direction === 'middle' ? 'am-badge-text-middle' : ''}}
+    {{!withArrow || direction === '' ? 'am-badge-text-left' : ''}}
     {{stroke?'am-badge-stroke':''}}"
     a:if="{{!dot}}">
     <text class="am-badge-text-inner">{{typeof text === 'number' && text > overflowCount ? overflowCount + '+' : text }}</text>
+    <view a:if="{{withArrow && direction ==='middle'}}" class="am-badge-arrow {{stroke?'am-badge-stroke':''}}"/>
   </view>
-  <view class="am-badge-text is-dot {{stroke?'am-badge-stroke':''}}" a:if="{{dot}}"></view>
+  <view class="am-badge-text is-dot am-badge-text-left {{stroke?'am-badge-stroke':''}}" a:if="{{dot}}"></view>
   <slot name="inner" />
-  <view a:if="{{withArrow && direction ==='middle'}}" class="am-badge-arrow {{stroke?'am-badge-stroke':''}}"/>
+  <view a:if="{{!$slots.inner && withArrow && direction ==='middle'}}" class="am-badge-arrow {{stroke?'am-badge-stroke':''}}"/>
 </view>

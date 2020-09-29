@@ -12,8 +12,6 @@
     position: absolute;
     align-items: center;
     justify-content: center;
-    right: 0;
-    transform: translate(50%, -50%);
     top: 0;
     min-width: 16px;
     padding: 0;
@@ -26,6 +24,19 @@
     color: @color-text-base;
     color: var(--am-badge-font-color, @color-text-base);
     z-index: 1;
+
+    &-left {
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+    &-right {
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+    &-middle {
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
 
     &-padding {
       font-size: 10px;
