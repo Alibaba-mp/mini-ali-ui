@@ -23,12 +23,15 @@ Component({
     defaultSize: fmtUnit(18),
     maxSize: fmtUnit(22),
     valueUnit: fmtUnit('px'),
+    isCustomLinkHandler: false,
   },
   didMount() {
     this.compatAntui();
+    this.checkCustomLinkHandler();
   },
   didUpdate() {
     this.compatAntui();
+    this.checkCustomLinkHandler();
   },
   methods: {
     compatAntui() {
@@ -53,6 +56,12 @@ Component({
         });
       }
     },
+    checkCustomLinkHandler() {
+      const { onLinkTap } = this.props;
+      this.setData({
+        isCustomLinkHandler: typeof onLinkTap === 'function',
+      });
+    },
     onBrandClick(e) {
       const brandLink = e.currentTarget.dataset.url;
       const { onBrandTap, extend } = this.props;
@@ -64,6 +73,11 @@ Component({
       if (onBrandTap !== '' && !brandLink && typeof onBrandTap === 'function') {
         onBrandTap(extend[e.currentTarget.dataset.index]);
       }
+    },
+    onLinkTap(e) {
+      const item = e.currentTarget.dataset.item;
+      const { onLinkTap } = this.props;
+      onLinkTap(item);
     },
   },
 });
