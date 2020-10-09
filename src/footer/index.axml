@@ -6,7 +6,12 @@
   </view>
   <view a:if="{{type === 'link'}}" class="am-footer-extend am-footer-extend__{{type}}">
     <block a:for="{{extend}}">
-      <navigator hover-class="am-footer-link__hover" hover-start-time="0" hover-stay-time="0" class="am-footer-link" url="{{item.link}}">{{item.text}}</navigator>
+      <block a:if="{{isCustomLinkHandler}}">
+        <text class="am-footer-link" data-item="{{item}}" onTap="onLinkTap">{{item.text}}</text>
+      </block>
+      <block a:else>
+        <navigator hover-class="am-footer-link__hover" hover-start-time="0" hover-stay-time="0" class="am-footer-link" url="{{item.link}}">{{item.text}}</navigator>
+      </block>
       <text class="am-footer-link__line" a:if="{{index < extend.length -1}}">|</text>
     </block>
   </view>
@@ -16,13 +21,13 @@
       <view class="am-footer-end__text" a:if="{{showEndIcon}}">
         <am-icon
         a:if="{{!iconURL}}"
-          type="{{iconName?iconName:'selected'}}" 
-          size="{{iconSize?(iconSize > maxSize?maxSize:iconSize):defaultSize}}" 
+          type="{{iconName?iconName:'selected'}}"
+          size="{{iconSize?(iconSize > maxSize?maxSize:iconSize):defaultSize}}"
           color="#999"
         />
         <image
           a:else
-          src="{{iconURL}}" 
+          src="{{iconURL}}"
           style="
             width: {{iconSize?(iconSize > maxSize?maxSize:iconSize):defaultSize}}{{valueUnit}};
             height: {{iconSize?(iconSize > maxSize?maxSize:iconSize):defaultSize}}{{valueUnit}};
