@@ -22,8 +22,12 @@
 | direction   | String                                              | horizontal | vertical <br/> horizontal | 显示方向，可选值：`vertical`、`horizontal` | -        | false |
 | size        | Number                                              | 0          | -                         | 统一的icon大小，单位为px                   | -        | false |
 | items       | Array[{title, description, icon, activeIcon, size}] | []         | -                         | 步骤详情                                   | -        | true  |
-| showStepNumber | Boolean | false | - | 是否以数字序列展示步骤 icon | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
-| horizHighlight | Boolean | false | - | 用于控制水平方向是否启用高亮展示 title | [1.1.3](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| showStepNumber | Boolean | false | - | 是否以数字序列展示步骤 icon | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | false |
+| horizHighlight | Boolean | false | - | 用于控制水平方向是否启用高亮展示 title | [1.1.3](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | false |
+| iconFail | String | close | 参考 [am-icon](https://opendocs.alipay.com/mini/component-ext/am-icon) 的 `type` 值 | 设置失败步骤的 icon 类型 | [1.1.7](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | false |
+| iconSuccess | String | check | 参考 [am-icon](https://opendocs.alipay.com/mini/component-ext/am-icon) 的 `type` 值 | 设置已激活步骤的 icon 类型 | [1.1.7](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | false |
+| iconSuccessBg | String |  | 参考 CSS 中的颜色值描述方式 | 当前激活步骤的 icon 背景色 | [1.1.7](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | false |
+| iconSuccessColor | String |  | 参考 CSS 中的颜色值描述方式 | 当前激活步骤的 icon 文本颜色 | [1.1.7](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | false |
 
 ### slot
 steps 组件中的 slot 插槽可根据具体的步骤数设置，如有 4 个步骤点，那么可插入 4 个 slot。
@@ -55,6 +59,10 @@ slot 名称的格式为：`desc_1`、`desc_2`、`desc_n`...以此类推，将 n 
 ### tips
 * 当 `showStepNumber` 为 `true` 时将会忽略 items 属性中 icon 相关属性，仅以数字序列方式展示；
 * slot 中的数字与 items 的序列相对应，将会在 items 属性中没有 description 时展示；
+* `iconSuccessBg` 改变的不仅仅是当前已激活的步骤背景色，同时也将会修改线条颜色；如果 `items.activeIcon` 所使用的图片是含有透明背景的图片时，背景颜色也将会显示；
+* 当使用的 icon 非图片形式时，`iconSuccessColor` 可修改 icon 的颜色以及数字序列的数字文本颜色；
+* `iconSuccessBg` 和 `iconSuccessColor` 仅修改当前已激活的步骤，尚未达到的步骤保持灰色模式，且不可配置；
+* 步骤中失败的提示仅提供修改 icon 类型，无修改颜色的配置；
 
 
 ## 示例
