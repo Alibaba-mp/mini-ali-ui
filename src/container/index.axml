@@ -1,5 +1,21 @@
 <view class="am-container {{className}}">
-  <slot name="header"></slot>
+  <block a:if="{{title !== ''}}">
+    <title slot="header"
+      hasLine="true"
+      showIcon="{{thumb !== ''? true : false}}"
+      iconURL="{{thumb}}"
+      type="{{icon === '' ? 'custom' : icon}}"
+      onActionTap="onTitleClick"
+    >
+      {{title}}
+      <view a:if="{{icon === ''}}" slot="operation">
+        <slot name="operation">{{custom}}</slot>
+      </view>
+    </title>
+  </block>
+  <block a:else>
+    <slot name="header"></slot>
+  </block>
   <view class="am-container-content-box">
     <view a:if="{{type === 'line'}}" class="am-container-content">
       <slot></slot>

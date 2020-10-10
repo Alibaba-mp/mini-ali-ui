@@ -1,4 +1,50 @@
 <view className="container">
+  <container className="container-item"
+    title="带有 title 标题，可自定义设置"
+    thumb="https://img.alicdn.com/tfs/TB1Go8lh9R26e4jSZFEXXbwuXXa-84-84.png"
+    onActionTap="titleClick"
+  >
+    <view slot="operation" style="color: red;">is slot</view>
+    <view class="item">container 组件自带的 title 属性值效果。icon 无值或者为空时，可插入一个名为 operation 的 slot 元素。</view>
+  </container>
+
+  <container className="container-item"
+    title="带有 title 标题，箭头"
+    icon="arrow"
+    thumb="https://img.alicdn.com/tfs/TB1Q19sTNv1gK0jSZFFXXb0sXXa-112-112.png"
+    onActionTap="titleClick"
+  >
+    <view class="item">container 组件自带的 title 属性值效果</view>
+  </container>
+
+  <container className="container-item"
+    title="带有 title 标题，关闭"
+    icon="close"
+    thumb="https://img.alicdn.com/tfs/TB1Go8lh9R26e4jSZFEXXbwuXXa-84-84.png"
+    onActionTap="titleClick"
+  >
+    <view class="item">container 组件自带的 title 属性值效果</view>
+  </container>
+
+  <container className="container-item"
+    title="带有 title 标题，更多"
+    icon="more"
+    thumb="https://img.alicdn.com/tfs/TB1Q19sTNv1gK0jSZFFXXb0sXXa-112-112.png"
+    onActionTap="titleClick"
+  >
+    <view class="item">container 组件自带的 title 属性值效果</view>
+  </container>
+
+  <container className="container-item"
+    title="带有 title 标题，无"
+    thumb="https://img.alicdn.com/tfs/TB1Go8lh9R26e4jSZFEXXbwuXXa-84-84.png"
+    onActionTap="titleClick"
+  >
+    <view class="item">container 组件自带的 title 属性值效果</view>
+  </container>
+</view>
+
+<view className="container">
   <container className="container-item">
     <view class="item">a1</view>
   </container>

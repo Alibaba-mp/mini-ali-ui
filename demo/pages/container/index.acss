@@ -17,6 +17,7 @@
   background: #eeeeee;
   text-align: center;
   height: 200rpx;
+  padding-top: 20rpx;
 }
 
 .grid-item {
