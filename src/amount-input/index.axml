@@ -1,5 +1,6 @@
 <view class="am-amount {{className}}">
   <view class="am-amount-title">{{title}}</view>
+<view class="am-amount-unit" style="{{_unit === '' ? 'border-left: 0 none;' : ''}}">{{_unit}}</view>
   <view class="am-amount-input">
     <view class="am-amount-symbol">¥</view>
     <input controlled="{{true}}" 

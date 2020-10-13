@@ -39,8 +39,6 @@
 
   &-input {
     box-sizing: content-box;
-    margin-top: @size-6;
-    margin-top: var(--am-amount-value-margin-top, @size-6);
     padding-bottom: @v-spacing-standard;
     padding-bottom: var(--am-amount-input-padding-bottom, @v-spacing-standard);
     display: flex;
@@ -140,5 +138,17 @@
     line-height: var(--am-amount-btn-line-height, @line-height-base);
     font-size: @font-size-subtitle;
     font-size: var(--am-amount-btn-font-size, @font-size-subtitle);
+  }
+
+  &-unit {
+    height: @font-size-subtitle;
+    padding-left: @size-1;
+    margin-left: @size-6;
+    margin-top: @size-6;
+    margin-top: var(--am-amount-value-margin-top, @size-6);
+    font-size: @font-size-subtitle;
+    line-height: @line-height-base;
+    color: @color-text-subtitle;
+    border-left: 1px solid @color-text-subtitle;
   }
 }
