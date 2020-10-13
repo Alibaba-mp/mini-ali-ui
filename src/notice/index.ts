@@ -54,11 +54,11 @@ Component({
   },
 
   didUpdate() {
-    if (this.props.type === 'active' && this.props.transparent) {
+    if (this.props.type === 'active' && this.props.transparent && this.data.showShadow === true) {
       this.setData({
         showShadow: false,
       });
-    } else {
+    } else if (this.data.showShadow === false) {
       this.setData({
         showShadow: true,
       });
@@ -72,7 +72,7 @@ Component({
       this._startAnimation();
     } else {
       // 当通过脚本切换 show 的值时（true or false），导致跑马灯动画效果失效的 bug 处理
-      if (!this.props.show) {
+      if (!this.props.show && this.data.marqueeStyle !== '') {
         this.setData({ marqueeStyle: '' });
       }
       this._measureText(this.startMarquee.bind(this));
@@ -95,7 +95,9 @@ Component({
       const { leading = 500 } = this.props.marqueeProps;
       const { duration, overflowWidth } = this.data;
       const marqueeStyle = `transform: translateX(${-overflowWidth}px); transition: ${duration}s all linear ${typeof leading === 'number' ? `${leading / 1000}s` : '0s'};`;
-      this.setData({ marqueeStyle });
+      if (this.data.marqueeStyle !== marqueeStyle) {
+        this.setData({ marqueeStyle });
+      }
     },
 
     onTransitionEnd() {
