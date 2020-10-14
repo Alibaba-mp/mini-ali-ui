@@ -75,7 +75,7 @@ Component({
       }
     },
     onLinkTap(e) {
-      const item = e.currentTarget.dataset.item;
+      const { item } = e.currentTarget.dataset;
       const { onLinkTap } = this.props;
       onLinkTap(item);
     },

@@ -1,3 +1,13 @@
+## 1.1.7
+`2020-10-15`
+* **Fixed**
+  * tabs 组件iOS样式兼容
+  * notice组件中didUpdate判断机制优化
+  * vtabs滚动与点击tab 的同步
+* **Feature**
+  * steps 组件可修改步骤的 icon 的类型以及颜色
+  * footer 组件支持自定义处理链接点击事件 ([#45](https://github.com/Alibaba-mp/mini-ali-ui/pull/45))
+
 ## 1.1.6
 `2020-09-24`
 * **Fixed**
