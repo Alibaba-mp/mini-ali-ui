@@ -83,4 +83,10 @@ Page({
       content: '这个品牌 logo 没有链接，可通过 js 自定义点击事件。',
     });
   },
+  linkTap(e) {
+    my.alert({
+      title: 'onLinkTap 回调',
+      content: e,
+    });
+  },
 });
