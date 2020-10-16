@@ -10,7 +10,7 @@ Component({
     hasDesc: false,
   },
   data: {
-    showBtn: true,
+    disabled: false,
     status: 0,
     agreeBtnAttr: {},
     cancelBtnAttr: {},
@@ -32,15 +32,15 @@ Component({
     }, cancelBtn) : {};
     if ((agreeBtnCfg.checked && related) || !related) {
       this.setData({
-        showBtn: false,
-        status: 1,
+        disabled: false,
+        status: true,
         agreeBtnAttr: agreeBtnCfg,
         cancelBtnAttr: cancelBtnCfg,
       });
     } else {
       this.setData({
-        showBtn: true,
-        status: 0,
+        disabled: true,
+        status: false,
         agreeBtnAttr: agreeBtnCfg,
         cancelBtnAttr: cancelBtnCfg,
       });
@@ -56,9 +56,9 @@ Component({
       const isSeleted = e.detail.value;
 
       if (related && isSeleted) {
-        this.setData({ showBtn: false, status: 1 });
+        this.setData({ disabled: false, status: true });
       } else {
-        this.setData({ showBtn: true, status: 0 });
+        this.setData({ disabled: true, status: false });
       }
     },
   },
