@@ -113,21 +113,23 @@ Component({
     _measureText(callback = noop) {
       const { fps = 40 } = this.props.marqueeProps;
       // 计算文本所占据的宽度，计算需要滚动的宽度
-      my.createSelectorQuery()
-        .select(`.am-notice-marquee-${this.$id}`)
-        .boundingClientRect()
-        .select(`.am-notice-content-${this.$id}`)
-        .boundingClientRect()
-        .exec((ret) => {
-          const overflowWidth = (ret && ret[0] && ret[1] && (ret[0].width - ret[1].width)) || 0;
-          if (overflowWidth > 0) {
-            this.setData({
-              overflowWidth,
-              duration: (overflowWidth / fps),
-            });
-            callback();
-          }
-        });
+      setTimeout(() => {
+        my.createSelectorQuery()
+          .select(`.am-notice-marquee-${this.$id}`)
+          .boundingClientRect()
+          .select(`.am-notice-content-${this.$id}`)
+          .boundingClientRect()
+          .exec((ret) => {
+            const overflowWidth = (ret && ret[0] && ret[1] && (ret[0].width - ret[1].width)) || 0;
+            if (overflowWidth > 0) {
+              this.setData({
+                overflowWidth,
+                duration: (overflowWidth / fps),
+              });
+              callback();
+            }
+          });
+      }, 0);
     },
 
     _startAnimation() {
