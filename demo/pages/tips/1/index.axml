@@ -32,8 +32,7 @@
       <view class="row">
         <view class="row-title">箭头位置</view>
         <view class="row-extra">当前选择：{{arrowPositions[arrowPosIndex]}}</view>
-        <am-icon type="right" 
-          size="13" />
+        <am-icon type="right" />
       </view>
     </picker>
     <list-item>

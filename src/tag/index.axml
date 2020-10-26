@@ -1,7 +1,7 @@
 <view class="am-tag {{size === 'sm' ? 'am-tag-sm': 'am-tag-lg'}} {{iconType ? 'am-tag-with-icon' : ''}} {{className}} {{iconType && !ghost ? iconClass[type]: ghost? '' : 'am-tag-text-plain'}} {{ghost ? `${ghostClass[type]} am-tag-ghost` : bgClass[type]}}">
   <am-icon a:if="{{iconType}}" 
     type="{{iconType}}" 
-    size="{{size === 'sm' ? 10 : 12}}" 
+    size="{{size === 'sm' ? iconSizeSm : iconSize}}" 
     class="am-tag-icon" />
   <view class="am-tag-text ">
     <slot></slot>

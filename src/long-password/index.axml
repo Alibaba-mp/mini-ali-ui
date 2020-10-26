@@ -20,7 +20,7 @@
       controlled />
     <view class="am-long-password-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
       onTap="onClear" a:if="{{clear}}">
-      <am-icon size="18" 
+      <am-icon size="{{iconSizeClose}}" 
         class="am-long-password-clear-icon"
         type="close_"
         color="#ccc" />
@@ -29,7 +29,7 @@
       onTap="onSwitchVisible">
       <am-icon type="{{!visible ? 'eye-close' : 'eye_'}}" 
         class="am-long-password-eye-icon"
-        size="22" 
+        size="{{iconSizeEye}}" 
         color="#1677ff"></am-icon>
     </view>
     <view class="am-long-password-line-bottom" />

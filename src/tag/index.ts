@@ -1,3 +1,5 @@
+import fmtUnit from '../_util/fmtUnit';
+
 Component({
   props: {
     type: 'primary',
@@ -24,6 +26,8 @@ Component({
       success: 'am-tag-ghost-success',
       danger: 'am-tag-ghost-danger',
     },
+    iconSizeSm: fmtUnit(10),
+    iconSize: fmtUnit(12),
   },
   didMount() {},
   didUpdate() {},

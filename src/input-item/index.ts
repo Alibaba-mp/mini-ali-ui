@@ -1,4 +1,5 @@
 import fmtEvent from '../_util/fmtEvent';
+import fmtUnit from '../_util/fmtUnit';
 
 Component({
   props: {
@@ -29,6 +30,7 @@ Component({
   },
   data: {
     _focus: false,
+    iconSize: fmtUnit(18),
   },
   didMount() {
     this.setData({

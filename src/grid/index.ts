@@ -3,6 +3,7 @@ import fmtUnit from '../_util/fmtUnit';
 Component({
   data: {
     getColumnBorderIndex: 0,
+    iconSize: fmtUnit(28),
   },
   props: {
     columnNum: 3,

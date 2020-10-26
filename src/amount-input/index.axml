@@ -20,7 +20,7 @@
       <am-icon class="am-amount-clear-icon" 
         type="delete_" 
         color="#ccc" 
-        size="22" />
+        size="{{iconSize}}" />
     </view>
   </view>
   <view class="am-amount-footer">

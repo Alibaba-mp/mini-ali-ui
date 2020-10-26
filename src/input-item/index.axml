@@ -26,7 +26,7 @@
     </view>
     <view class="am-input-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
       onTap="onClear" a:if="{{clear}}">
-      <am-icon size="18" 
+      <am-icon size="{{iconSize}}"
         class="am-input-clear-icon" 
         type="close_" 
         color="#ccc" />

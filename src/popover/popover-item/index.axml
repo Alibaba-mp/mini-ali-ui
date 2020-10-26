@@ -8,7 +8,7 @@
       a:if="{{iconType || iconURL}}">
       <am-icon type="{{iconType}}" 
         a:if="{{iconType}}"
-        size="22" />
+        size="{{iconSize}}" />
       <image 
         class="am-popover-item-icon-holder"
         a:elif="{{iconURL}}"

@@ -65,7 +65,7 @@
           </view>
           <block a:if="{{columnNum === 5 && list.length > 5}}">
             <view class="am-grid-icon am-grid-icon-{{columnNum}}" a:if="{{index === 4 && multiLine === false}}">
-              <am-icon type="more-1" size="28" color="#999" />
+              <am-icon type="more-1" size="{{iconSize}}" color="#999" />
             </view>
             <view
               a:else

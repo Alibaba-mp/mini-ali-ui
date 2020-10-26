@@ -1,3 +1,5 @@
+import fmtUnit from '../../_util/fmtUnit';
+
 Component({
   props: {
     className: '',
@@ -8,6 +10,9 @@ Component({
     enforceExtra: false,
     titlePosition: 'top',
     last: false,
+  },
+  data: {
+    iconSize: fmtUnit(18),
   },
   didMount() {
     this._updateDataSet();

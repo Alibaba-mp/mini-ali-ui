@@ -1,10 +1,14 @@
 import fmtEvent from '../../_util/fmtEvent';
+import fmtUnit from '../../_util/fmtUnit';
 
 Component({
   props: {
     className: '',
     iconURL: '',
     iconType: '',
+  },
+  data: {
+    iconSize: fmtUnit(22),
   },
   methods: {
     onItemClick(e) {

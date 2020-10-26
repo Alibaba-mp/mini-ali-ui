@@ -1,4 +1,5 @@
 import fmtEvent from '../../_util/fmtEvent';
+import fmtUnit from '../../_util/fmtUnit';
 
 Component({
   props: {
@@ -10,6 +11,7 @@ Component({
   },
   data: {
     arrowColor: '000',
+    iconSizeClose: fmtUnit(18),
   },
   methods: {
     onCloseTap(e) {

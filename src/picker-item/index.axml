@@ -13,7 +13,7 @@
     </view>
     <am-icon class="am-picker-arrow" 
       type="{{iconType}}"
-      size="18" 
+      size="{{iconSize}}" 
       color="#ccc" />
     <slot name="extra" />
     <view class="am-picker-line-bottom" />
