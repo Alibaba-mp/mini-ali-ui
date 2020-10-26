@@ -46,6 +46,16 @@ Component({
     elevatorContentTop: 0,
     // 通过接收外部传值，动态控制 tab-content 在 swiper 下的高度
     tabContentHeight: '',
+    // plus icon 类型更多的支持
+    plusIcon: 'add',
+    plusIconSize: 16,
+    plusIconColor: '',
+    // plus icon 使用 image 的方式
+    plusImg: '',
+    plusImgWidth: '',
+    plusImgHeight: '',
+    // tab-bar 是否滚动定位在顶部的判断
+    stickyBar: false,
   },
   data: {
     windowWidth: 0,
@@ -53,6 +63,7 @@ Component({
     autoplay: false,
     animation: false,
     showLeftShadow: false,
+    showRightShadow: true,
     version: my.SDKVersion,
     viewScrollLeft: 0,
     tabViewNum: 0,
@@ -266,13 +277,25 @@ Component({
       }
     },
     showLeftShadow(e) {
-      if (e.detail.scrollLeft > 0) {
+      const { scrollLeft, scrollWidth } = e.detail;
+      // 判断是否隐藏左边的阴影
+      if (scrollLeft > 0) {
         this.setData({
           showLeftShadow: true,
         });
       } else {
         this.setData({
           showLeftShadow: false,
+        });
+      }
+      // 判断是否隐藏右边的阴影
+      if (scrollLeft + this.data.boxWidth >= scrollWidth - 8) {
+        this.setData({
+          showRightShadow: false,
+        });
+      } else {
+        this.setData({
+          showRightShadow: true,
         });
       }
     },

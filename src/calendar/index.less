@@ -120,7 +120,8 @@
 
   &-date {
     text-align: center;
-    line-height: 1;
+    line-height: @line-height-base;
+    line-height: var(--am-calendar-date-lineHeight, @line-height-base);
     font-size: @font-size-title;
     font-size: var(--am-calendar-date-fontSize, @font-size-title);
     color: @color-text-title;
@@ -133,7 +134,8 @@
     width: 100%;
     overflow: hidden;
     text-overflow: hidden;
-    line-height: 1;
+    line-height: @line-height-base;
+    line-height: var(--am-calendar-tag-lineHeight, @line-height-base);
     white-space: nowrap;
     font-size: @font-size-weak;
     font-size: var(--am-calendar-tag-fontSize, @font-size-weak);

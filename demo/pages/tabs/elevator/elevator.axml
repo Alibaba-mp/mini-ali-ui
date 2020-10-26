@@ -1,4 +1,7 @@
-<view style="height: 300px;background-color: #ccc;">有 300px 高度的一个 view</view>
+<view style="height: 300px;background-color: #ccc;">
+  <text>有 300px 高度的一个 view</text>
+  <navigator url="../index" style="padding-top: 20rpx;" open-type="redirect">点击进入 tabs 选项卡</navigator>
+</view>
 <view style="padding: 12px;">
   <tabs
     tabs="{{tabs}}"

@@ -30,7 +30,7 @@
 | advice | Boolean | false | true, false | 是否是运营类弹窗 | - | - |
 | zIndex | String\|Number | - | - | 设置弹框层级 | - | - |
 | disableScroll | Boolean | false | true, false | modal展示时是否禁止页面滚动（**以真机效果为准**） | - | - |
-| onMaskClick | EventHandle | () => void | - | 点击遮罩层时的回调 | [1.1.1](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
+| onMaskClick | EventHandle | () => void | - | 点击遮罩层时的回调 | [1.1.2](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 
 ## buttons
 提供按钮组配置，每一项表示一个按钮，每一项的属性为

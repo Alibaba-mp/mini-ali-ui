@@ -102,6 +102,10 @@ Component({
           this.props.onYearChange(year, selectedYear);
         }
 
+        if (this.props.onChange) {
+          this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
+        }
+
         this.setData({
           selectedYear: year,
         });
@@ -121,6 +125,10 @@ Component({
 
         if (this.props.onYearChange) {
           this.props.onYearChange(year, selectedYear);
+        }
+
+        if (this.props.onChange) {
+          this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
         }
 
         this.setData({
@@ -149,6 +157,10 @@ Component({
           this.props.onMonthChange(month, selectedMonth);
         }
 
+        if (this.props.onChange) {
+          this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
+        }
+
         this.setData({
           selectedYear: year,
           selectedMonth: month,
@@ -174,6 +186,10 @@ Component({
 
         if (this.props.onMonthChange) {
           this.props.onMonthChange(month, selectedMonth);
+        }
+
+        if (this.props.onChange) {
+          this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
         }
 
         this.setData({

@@ -1,8 +1,11 @@
+@import (reference) "../../style/themes/default.less";
+
 .am-flexbox-item {
   box-sizing: border-box;
   flex: 1;
-  min-width: 20 * @pixelSize;
-  margin-left: 16 * @pixelSize;
+  min-width: @size-3;
+  margin-left: @h-spacing-standard;
+  margin-left: var(--am-flexbox-item-marginL, @h-spacing-standard);
 
   &:first-child {
     margin-left: 0;

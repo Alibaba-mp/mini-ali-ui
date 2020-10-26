@@ -1,6 +1,3 @@
 {
-  "component": true,
-  "usingComponents": {
-    "loading": "../loading/index"
-  }
+  "component": true
 }

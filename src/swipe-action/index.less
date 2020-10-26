@@ -1,3 +1,5 @@
+@import (reference) '../style/themes/default.less';
+
 .am-swipe {
   position: relative;
   overflow: hidden;
@@ -9,34 +11,40 @@
 
   &-right {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 1px;
+    bottom: 1px;
     display: flex;
-    right: 0;
+    right: 4px;
     transition: all 100ms 0s ease-out;
   }
 
   &-btn {
-    padding: 0 24 * @pixelSize;
+    padding: 0 @h-spacing-large;
+    padding: 0 var(--am-swipeAction-btn-paddingLR, @h-spacing-large);
     justify-content: center;
     align-items: center;
     display: flex;
-    color: #fff;
+    color: @color-text-base;
+    color: var(--am-swipeAction-btn-color, @color-text-base);
     &-text {
       height: 1em;
       overflow: hidden;
-      line-height: 1;
+      line-height: @line-height-base;
+      line-height: var(--am-swipeAction-btn-lineHeight, @line-height-base);
     }
 
     &-delete {
-      background-color: #FF3B30;
+      background-color: @color-fill-warning;
+      background-color: var(--am-swipeAction-delete, @color-fill-warning);
     }
 
     &-edit {
-      background-color: #CCC;
+      background-color: @color-fill-grey-base;
+      background-color: var(--am-swipeAction-edit, @color-fill-grey-base);
     }
     &-other {
-      background-color: #1677FF;
+      background-color: @color-fill-primary;
+      background-color: var(--am-swipeAction-other, @color-fill-primary);
     }
   }
 
@@ -45,14 +53,17 @@
     .am-swipe-btn {
       margin-right: 2 * @pixelSize;
       &:nth-child(2) {
-        border-radius: 16 * @pixelSize 0 0 16 * @pixelSize;
+        border-radius: @corner-radius-lg 0 0 @corner-radius-lg;
+        border-radius: var(--am-swipeAction-item-radius, @corner-radius-lg) 0 0 var(--am-swipeAction-item-radius, @corner-radius-lg);
       }
       &:last-child {
         margin-right: 0;
-        border-radius: 0 16 * @pixelSize 16 * @pixelSize 0;
+        border-radius: 0 @corner-radius-lg @corner-radius-lg 0;
+        border-radius: 0 var(--am-swipeAction-item-radius, @corner-radius-lg) var(--am-swipeAction-item-radius, @corner-radius-lg) 0;
       }
       &:nth-child(2):last-child {
-        border-radius: 16 * @pixelSize;
+        border-radius: @corner-radius-lg;
+        border-radius: var(--am-swipeAction-item-radius, @corner-radius-lg);
       }
     }
   }

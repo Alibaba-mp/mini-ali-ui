@@ -21,12 +21,12 @@
   type="{{footerInfo5.type}}" 
   content="{{footerInfo5.content}}"
   extend="{{footerInfo5.extend}}"
-  onBrandTap="brandClick"
 />
 <footer 
   type="{{footerInfo6.type}}" 
   content="{{footerInfo6.content}}"
   extend="{{footerInfo6.extend}}"
+  onLinkTap="linkTap"
 />
 <footer 
   type="{{footerInfo7.type}}" 

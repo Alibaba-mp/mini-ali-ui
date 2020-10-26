@@ -11,6 +11,7 @@
     capsule="{{typeCapsule}}"
     hasSubTitle="{{typeHasSubTitle}}"
     tabBarUnderlineWidth="20px"
+    stickyBar="{{true}}"
   >
     <block a:for="{{tabs}}">
       <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 0}}">
@@ -25,6 +26,9 @@
     </block>
   </tabs>
 </view>
+
+<view class="demo-title">elevator 模式: </view>
+<navigator url="./elevator/elevator" open-type="redirect" style="padding: 24rpx 40rpx;">点击进入 elevator 电梯组件模式</navigator>
 
 <view class="demo-title">tab 类型: </view>
 <radio-group class="radio-group" onChange="typeChange" name="type">

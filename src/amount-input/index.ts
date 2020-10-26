@@ -8,6 +8,8 @@ Component({
     placeholder: '',
     value: '',
     controlled: false,
+    showClear: false,
+    focusAfterClear: true,
   },
   data: {
     _focus: false,
@@ -57,17 +59,17 @@ Component({
       this.setData({
         _focus: false,
       });
-      // my.alert({ content: '_focus: ' + this.data._focus });
       const event = fmtEvent(this.props, e);
       if (this.props.onBlur) {
         this.props.onBlur(event);
       }
     },
     onClearTap() {
-      // my.alert({ content: 'manually focus' });
-      this.setData({
-        _focus: true,
-      });
+      if (this.props.focusAfterClear) {
+        this.setData({
+          _focus: true,
+        });
+      }
       if (this.props.onClear) {
         this.props.onClear();
       }

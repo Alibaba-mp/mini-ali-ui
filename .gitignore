@@ -30,3 +30,4 @@ node_modules
 demo/es/
 dist/
 es/
+.kaitian

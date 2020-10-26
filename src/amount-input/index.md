@@ -26,6 +26,8 @@
 | onButtonClick | () => void |  |  | 点击右下角按钮时触发 |  | false |
 | maxLength | Number |  |  | 最多允许输入的字符个数 |  | false |
 | controlled | Boolean | false |  | 是否为受控组件。为 true时，value内容会完全受setData控制 |  | false |
+| showClear | Boolean | false |  | 是否一直显示清除 icon | [1.1.3](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) |  |
+| focusAfterClear | Boolean | true |  | 清除 icon 触发后，输入框是否获得焦点 | [1.1.3](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) |  |
 
 
 ## 代码示例

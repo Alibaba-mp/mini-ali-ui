@@ -19,7 +19,10 @@ Component({
     onTapSub: () => {},
   },
   data: {
+    // message 的 icon 图标样式
     iconType: 'check_',
+    // message 的 icon 类型（颜色）
+    iconType_: 'success',
   },
   onInit() {
     this.setType(this.props.type);
@@ -50,7 +53,11 @@ Component({
     },
     setType(type) {
       const realType = TYPE_MAP[type] || 'check_';
-      this.setData({ iconType: realType });
+      // 根据 props 中的 type 值选择 icon 的图标以及颜色
+      this.setData({
+        iconType: realType,
+        iconType_: type,
+      });
     },
   },
 });

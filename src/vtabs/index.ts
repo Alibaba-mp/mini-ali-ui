@@ -22,10 +22,14 @@ Component({
     onTabClick: () => {},
     onScrollBar: () => {},
   },
-  didMount() {
+  async didMount() {
     this.isScrolling = false;
+    this.onlyChangeTab = false;
     this.timerId = null;
-    this.calcHeight();
+    await this.calcHeight();
+    this.setData({
+      wrapScrollTop: this.anchorMap[this.props.tabs[this.props.activeTab].anchor],
+    });
   },
   didUpdate(prevProps) {
     const { activeTab } = this.props;
@@ -40,45 +44,51 @@ Component({
     }
   },
   methods: {
-    calcHeight() {
-      const { tabs, activeTab } = this.props;
+    async calcHeight() {
+      const { activeTab } = this.props;
       this.anchorMap = {};
       this.indexMap = {};
       this.wrapHeight = 0;
       this.scrollWrapHeight = 0;
 
-      my.createSelectorQuery()
-        .select(`.am-vtabs-slides-${this.$id}`)
-        .boundingClientRect()
-        .exec((ret) => {
-          this.wrapHeight = (<my.IBoundingClientRect>ret[0]).height;
-        });
+      this.setData({
+        currentBefore: activeTab - 1,
+        currentAfter: activeTab + 1,
+      });
 
-
-      let cacheHeight = 0;
-      for (let i = 0; i < tabs.length; i++) {
-        const { anchor } = tabs[i];
-        /* eslint-disable no-loop-func */
+      await new Promise((resolve) => {
         my.createSelectorQuery()
-          .select(`#am-vtab-slide-${anchor}`)
+          .select(`.am-vtabs-slides-${this.$id}`)
           .boundingClientRect()
           .exec((ret) => {
-            this.anchorMap[anchor] = cacheHeight;
-            this.indexMap[i] = cacheHeight;
-            if (activeTab === i) {
-              this.setData({
-                wrapScrollTop: this.indexMap[i],
-              });
-            }
-            cacheHeight += (<my.IBoundingClientRect>ret[0]).height;
-            this.scrollWrapHeight = cacheHeight;
+            this.wrapHeight = (<my.IBoundingClientRect>ret[0]).height;
+            resolve();
           });
+      });
+
+      const tabs = this.props.tabs || [];
+      const rects = await new Promise((resolve) => {
+        my.createSelectorQuery()
+          .selectAll(
+            tabs.map(tab => `#am-vtab-slide-${tab.anchor}`).join(',')
+          )
+          .boundingClientRect()
+          .exec(res => resolve((res[0] as any).sort((a, b) => a.top - b.top)));
+      });
+
+      let prevHeight = 0;
+      for (let i = 0; i < tabs.length; i += 1) {
+        const { height } = rects[i];
+        this.anchorMap[tabs[i].anchor] = prevHeight;
+        this.indexMap[i] = height;
+        prevHeight += height;
+        this.scrollWrapHeight = prevHeight;
       }
     },
     handleTabClick(e) {
       const { anchor, index } = e.target.dataset;
 
-      if (!this.isScrolling || !this.props.swipeable) {
+      if (!this.isScrolling || !this.props.swipeable || this.onlyChangeTab) {
         if (this.props.activeTab !== index) {
           this.props.onTabClick(index);
         }
@@ -90,12 +100,13 @@ Component({
     },
     moveScrollBar(current) {
       let tabTop;
-
+      // tabTop 用来控制侧边 tab 的 scroll-view 滚动位置
       if (current < 6) {
         tabTop = 0;
       } else {
         tabTop = (current - 5) * 55;
       }
+      // tab-content 滚动时，对侧边 tab 的影响
       if (this.props.activeTab !== current) {
         if (this.props.onChange) {
           this.props.onChange(current);
@@ -132,8 +143,9 @@ Component({
             break;
           }
         }
-        if (scrollTop >= Math.floor(this.anchorMap[keys[i]]) && scrollTop < Math.floor(this.anchorMap[keys[i + 1]])) {
-          // 如果没个vtab-content高度小于scroll-view高度，到达底部后就不需要根据scrollTop再去判断左侧的选择项
+        if (scrollTop >= this.anchorMap[keys[i]] &&
+            scrollTop < this.anchorMap[keys[i + 1]]) {
+          // 如果每个vtab-content高度小于scroll-view高度，到达底部后就不需要根据scrollTop再去判断左侧的选择项
           if (scrollTop + this.wrapHeight < this.scrollWrapHeight) {
             this.moveScrollBar(i);
           }
@@ -144,6 +156,7 @@ Component({
     onWrapTouchMove() {
       if (this.props.swipeable) {
         this.isScrolling = true;
+        this.onlyChangeTab = true;
       }
     },
     onTabFirstShow(e) {

@@ -20,6 +20,7 @@
 | content | String | - | - | 页脚文本内容 | - | - |
 | extend | Array | - | - | 页脚部分的链接、logo 等信息 | - | - |
 | onBrandTap | EventHandle | () => {} | - | 品牌 logo 事件回调 | - | - |
+| onLinkTap | EventHandle | () => {} | - | 链接事件回调 | [1.1.7](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | showEndIcon | Boolean | false | - | type="end" 时的 footer 组件是否以 icon 方式展示，为 true 将不会显示 `content` 的文本内容 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | iconName | String | selected | - | 使用 am-icon，具体的值可参考 am-icon 的 type 值 | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | iconURL | String | - | - | 使用网络图片。当确定使用网络图片后，`iconName` 将失效；且 网络图片目前仅支持宽高相同且小于等于 44rpx； | [1.0.4](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
@@ -29,6 +30,7 @@
 
 ## Bug & Tip
 * `onBrandTap` 仅在 `type: brand` 中有效，且是无链接的品牌 logo；
+* `onLinkTap` 仅在 `type: link` 中有效，用于点击链接时进行自定义处理，参数为当前 extend item；
 * 当选择不同的 `type` 时，`extend` 中的值也将会有所不同；
   * `normal`：无 `extend`；
   * `guide`：`extend` 的值为 `[{ link: '', text: '',},]`；
@@ -75,12 +77,12 @@
   type="{{footerInfo5.type}}" 
   content="{{footerInfo5.content}}"
   extend="{{footerInfo5.extend}}"
-  onBrandTap="brandClick"
 />
 <footer 
   type="{{footerInfo6.type}}" 
   content="{{footerInfo6.content}}"
   extend="{{footerInfo6.extend}}"
+  onLinkTap="linkTap"
 />
 <footer 
   type="{{footerInfo7.type}}" 
@@ -192,6 +194,12 @@ Page({
   brandClick() {
     my.alert({
       content: '这个品牌 logo 没有链接，可通过 js 自定义点击事件。',
+    });
+  },
+  linkTap(e) {
+    my.alert({
+      title: 'onLinkTap 回调',
+      content: e,
     });
   },
 });

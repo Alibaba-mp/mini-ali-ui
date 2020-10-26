@@ -52,6 +52,21 @@
   background-color: var(--am-steps-color, @color-fill-primary);
 }
 
+.am-hor-step-title.is-active {
+  color: @color-text-primary;
+  color: var(--am-steps-horizontal-title-active-color, @color-text-primary);
+}
+
+.am-hor-step-title.is-fail {
+  color: @color-text-warning;
+  color: var(--am-steps-horizontal-warning-color, @color-text-warning);
+}
+
+.am-hor-step-icon.is-fail {
+  background-color: @color-text-warning;
+  background-color: var(--am-steps-horizontal-warning-color, @color-text-warning);
+}
+
 .am-hor-step-text {
   margin-top: 12px;
   padding: 0 5px;
@@ -134,6 +149,7 @@
 .am-vertical-step-image {
   width: 24px;
   /* height: 24px; */
+  padding: @size-1;
   border-radius: @corner-radius-circle;
   border-radius: var(--am-steps-icon-border-radius, @corner-radius-circle);
 }
@@ -233,4 +249,20 @@
   color: @color-text-base;
   background-color: @color-text-warning;
   background-color: var(--am-steps-vertical-warning-color, @color-text-warning);
+}
+
+.am-vertical-step-icon_aliui {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: @size-1;
+  border-radius: 50%;
+}
+.am-vertical-step-icon_aliui.is-fail {
+  background-color: @color-text-warning;
+  background-color: var(--am-steps-vertical-warning-color, @color-text-warning);
+}
+.am-vertical-step-icon_aliui.is-active {
+  background-color: @color-text-primary;
+  background-color: var(--am-steps-vertical-title-active-color, @color-text-primary);
 }

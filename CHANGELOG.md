@@ -1,3 +1,50 @@
+## 1.1.7
+`2020-10-15`
+* **Fixed**
+  * tabs 组件iOS样式兼容
+  * notice组件中didUpdate判断机制优化
+  * vtabs滚动与点击tab 的同步
+* **Feature**
+  * steps 组件可修改步骤的 icon 的类型以及颜色
+  * footer 组件支持自定义处理链接点击事件 ([#45](https://github.com/Alibaba-mp/mini-ali-ui/pull/45))
+
+## 1.1.6
+`2020-09-24`
+* **Fixed**
+  * vtabs 组件在 iOS 中闪屏跳动;
+  * terms 组件按钮点击后 name 传值;
+
+## 1.1.5
+`2020-09-10`
+* **Feature**
+  * tabs 组件新增非 elevator 模式下的吸顶功能
+  * 日历 onChange 回调，解决月份切换导致年份变化不进行回调的问题 ([#44](https://github.com/Alibaba-mp/mini-ali-ui/pull/44))
+* **Fixed**
+  * vtabs 组件中 vtab-content 高度不够时的 tab 高亮展示
+  * popup 组件的 z-index 层级问题
+  * page-result 组件中按钮在 iOS10.3 内位置偏移
+
+## 1.1.4
+`2020-08-13`
+* **Fixed**
+  * verify-code 组件初次加载可直接进入倒计时模式
+  * swipe-action 可能会露出 1px 的底部按钮颜色
+  * Message icon 跳变 ([#36](https://github.com/Alibaba-mp/mini-ali-ui/issues/36))
+* **Feature**
+  * Tabs 的 plus icon 支持自定义 ([#40](https://github.com/Alibaba-mp/mini-ali-ui/issues/40))
+
+## 1.1.3
+`2020-07-30`
+* **Fixed**
+  * steps 组件水平方向新增高亮以及支持更多的 slot；
+  * button组件胶囊圆角调整；
+  * amount-input 组件的清除 icon 控制方式调整；
+  * 对 list 组件中的 loading 组件源码做调整；
+  * verify-code 组件可设置加载时主动触发发送按钮；
+  * CSS token 优化调整；
+* **Feature**
+  * title support custom operation ([#39](https://github.com/Alibaba-mp/mini-ali-ui/pull/39))
+
 ## 1.1.2
 `2020-07-16`
 * **Fixed**：npm 包中 `px` 与 `rpx` 版本修正；

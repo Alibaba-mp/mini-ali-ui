@@ -1,15 +1,34 @@
 <!-- 横向 -->
 <view class="am-hor-steps {{className}}" a:if="{{direction == 'horizontal'}}">
   <view class="am-hor-step" a:for="{{items}}" style="{{width: 100 / (items.length - 1) + '%'}}">
-    <view class="am-hor-step-line {{index < activeIndex - 1 ? 'is-active' : ''}} {{index >= items.length - 1 ? 'is-last' : ''}}">
-      <view class="am-hor-step-icon {{index <= activeIndex - 1 ? 'is-active' : ''}}"></view>
+    <view class="am-hor-step-line
+            {{index < activeIndex - 1 ? 'is-active' : ''}}
+            {{index >= items.length - 1 ? 'is-last' : ''}}"
+      style="{{index >= items.length - 1 ? '' : ((index < activeIndex - 1 && iconSuccessBg !== '') ? `background-color: ${iconSuccessBg};` : '')}}"
+    >
+      <view class="am-hor-step-icon
+              {{index <= activeIndex - 1 ? 'is-active' : ''}}
+              {{horizHighlight && index == failIndex - 1 ? 'is-fail' : ''}}"
+            style="{{horizHighlight && index == failIndex - 1 ? '' : ((index <= activeIndex - 1 && iconSuccessBg !== '') ? `background-color: ${iconSuccessBg};` : '')}}"></view>
     </view>
     <view class="am-hor-step-text">
-      <view class="am-hor-step-title">
-        <text>{{item.title}}</text>
+      <view class="am-hor-step-title
+              {{horizHighlight && index <= activeIndex - 1 ? 'is-active' : ''}}
+              {{horizHighlight && index == failIndex - 1 ? 'is-fail' : ''}}">
+        <block a:if="{{item.title}}">
+          <text>{{item.title}}</text>
+        </block>
+        <block a:else>
+          <slot name="title_{{index + 1}}" />
+        </block>
       </view>
       <view class="am-hor-step-description">
-        <text>{{item.description}}</text>
+        <block a:if="{{item.description}}">
+          <text>{{item.description}}</text>
+        </block>
+        <block a:else>
+          <slot name="desc_{{index + 1}}" />
+        </block>
       </view>
     </view>
   </view>
@@ -22,34 +41,52 @@
       <view 
         class="am-vertical-step-line am-vertical-step-line-top {{index < activeIndex ? 'is-active' : ''}}"
         a:if="{{index < items.length - 1}}"
+        style="{{(index < activeIndex && iconSuccessBg !== '') ? `background-color: ${iconSuccessBg};` : ''}}"
       ></view>
       <view 
         class="am-vertical-step-line am-vertical-step-line-bottom {{index < activeIndex - 1 || (index === activeIndex - 1 && index === failIndex - 2) ? 'is-active' : ''}}"
         a:if="{{index < items.length - 1}}"
+        style="{{(iconSuccessBg !== '' && index < activeIndex - 1 || (index === activeIndex - 1 && index === failIndex - 2)) ? `background-color: ${iconSuccessBg};` : ''}}"
       ></view>
       <block a:if="{{showStepNumber}}">
         <view class="am-vertical-step-icon am-vertical-step-number
-        {{index == failIndex - 1 ? 'is-fail' : (index <= activeIndex - 1 ? 'is-active': '')}}">
-          <text class="am-vertical-step-number__txt">{{index + 1}}</text>
+          {{index == failIndex - 1 ? 'is-fail' : (index <= activeIndex - 1 ? 'is-active': '')}}"
+          style="{{index == failIndex - 1 ? '' : ((index <= activeIndex - 1 && iconSuccessBg !== '') ? `background-color: ${iconSuccessBg};` : '')}}"
+        >
+          <text class="am-vertical-step-number__txt"
+            style="{{index == failIndex - 1 ? '' : ((index <= activeIndex - 1 && iconSuccessColor !== '') ? `color: ${iconSuccessColor};` : '')}}"
+          >{{index + 1}}</text>
         </view>
       </block>
       <block a:else>
         <view class="am-vertical-step-icon is-fail" a:if="{{index == failIndex - 1}}">
-          <icon type="cancel" size="{{item.size || size || 20}}"/>
+          <view class="am-vertical-step-icon_aliui is-fail"
+            style="width: {{item.size || size || __size12}}{{valueUnit}}; height: {{item.size || size || __size12}}{{valueUnit}};">
+            <am-icon type="{{iconFail}}" size="{{item.size || size || __size12}}" color="#fff" />
+          </view>
         </view>
         <view class="am-vertical-step-icon is-active" a:elif="{{index <= activeIndex - 1}}">
-          <image mode="widthFix" class="am-vertical-step-active-image" a:if="{{item.activeIcon}}" src="{{item.activeIcon}}" style="width: {{item.size || size || 20}}px;"/>
-          <icon a:else type="success" size="{{item.size || size || 20}}"/>
+          <image mode="widthFix" class="am-vertical-step-active-image" a:if="{{item.activeIcon}}" src="{{item.activeIcon}}"
+            style="width: {{item.size || size || __size12}}{{valueUnit}}; {{iconSuccessBg !== '' ? `background-color: ${iconSuccessBg};` : ''}}"/>
+          <view a:else class="am-vertical-step-icon_aliui is-active"
+            style="{{iconSuccessBg !== '' ? `background-color: ${iconSuccessBg};` : ''}} width: {{item.size || size || __size12}}{{valueUnit}}; height: {{item.size || size || __size12}}{{valueUnit}};">
+            <am-icon type="{{iconSuccess}}" size="{{item.size || size || __size12}}" color="{{iconSuccessColor === '' ? '#fff' : iconSuccessColor}}" />
+          </view>
         </view>
         <view a:else>
-          <image mode="widthFix" class="am-vertical-step-icon am-vertical-step-image" a:if="{{item.icon}}" src="{{item.icon}}" style="width: {{item.size || size || 20}}px;"/>
-          <view class="am-vertical-step-icon is-normal" a:else style="width: {{item.size || size || 8}}px; height: {{item.size || size || 8}}px;"></view>
+          <image mode="widthFix" class="am-vertical-step-icon am-vertical-step-image" a:if="{{item.icon}}" src="{{item.icon}}" style="width: {{item.size || size || __size12}}{{valueUnit}};"/>
+          <view class="am-vertical-step-icon is-normal" a:else style="width: {{item.size || size || __size8}}{{valueUnit}}; height: {{item.size || size || __size8}}{{valueUnit}};"></view>
         </view>
       </block>
     </view>
     <view class="am-vertical-step-right {{index === items.length - 1 ? 'am-vertical-step-right-last': ''}}">
       <view class="am-vertical-step-title {{index <= activeIndex - 1 ? 'is-active' : ''}} {{index == failIndex - 1 ? 'is-fail' : ''}}">
-        <text class="am-vertical-step-item__title">{{item.title}}</text>
+        <block a:if="{{item.title}}">
+          <text class="am-vertical-step-item__title">{{item.title}}</text>
+        </block>
+        <block a:else>
+          <slot name="title_{{index + 1}}" />
+        </block>
       </view>
       <view class="am-vertical-step-description">
         <block a:if="{{item.description}}">

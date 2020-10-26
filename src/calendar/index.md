@@ -26,6 +26,7 @@
 | onSelect | EventHandle | ([startDate, endDate]) => void | - | 选择区间时的回调 | - | - |
 | onMonthChange | EventHandle | (currentMonth, prevMonth) => void | - | 点击切换月份时回调，带两个参数currentMonth切换后月份和prevMonth切换前月份 | - | - |
 | onYearChange | EventHandle | (currentYear, prevYear) => void | - | 点击切换年份时回调，带两个参数currentYear切换后年份和prevYear切换前年份 | - | - |
+| onChange | EventHandle | (current, prev) => void | - | 年/月变化时回调，带两个对象，每个均携带year和month信息 | [1.1.5](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
 | onSelectHasDisableDate | EventHandle | (currentMonth, prevMonth) => void | - | 选择区间包含不可用的日期 | - | - |
 
 ## Bug & Tip
@@ -37,6 +38,7 @@
   * `5`: #999,
 * `prevMonthDisable`、`prevYearDisable`、`nextvMonthDisable` 以及 `nextYearDisable` 四个主要控制日历上的箭头是否可点击使用，可根据实际业务场景来使用；
 * `tagData` 中的 `disable` 是可选项，如某日期需要提示禁用不可点时才需要增加，当不可用时，`tag` 以及 `tagColor` 将不会展示；
+* 月份计数从 0 开始，即 0 代表 1 月份，以此类推，月份返回值 11 代表 12 月份；
 
 ## 代码示例
 
@@ -58,6 +60,7 @@
     onSelect="handleSelect"
     onMonthChange="onMonthChange"
     onYearChange="onYearChange"
+    onChange="onChange"
     onSelectHasDisableDate="onSelectHasDisableDate" />
 </view>
 ```
@@ -77,6 +80,7 @@ Page({
   handleSelect() {},
   onMonthChange() {},
   onYearChange() {},
+  onChange() {},
   onSelectHasDisableDate() {
     my.alert({
       content: 'SelectHasDisableDate',
