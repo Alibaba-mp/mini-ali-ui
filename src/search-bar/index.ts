@@ -5,6 +5,7 @@ Component({
     focus: false,
     showVoice: false,
     borderColor: '#1677ff',
+    enableNative: true, // false 处理 fixed 定位后输入框内容闪动的问题
   },
   data: {
     _value: '',

@@ -15,6 +15,7 @@
       onFocus="handleFocus"
       onConfirm="handleConfirm"
       sync-input="{{true}}"
+      enableNative="{{enableNative}}"
       onBlur="handleBlur" />
     <view class="am-search-clear {{ _value.length > 0 && focus ? 'am-search-clear-show' : '' }}" onTap="handleClear">
       <am-icon type='close_' class="am-search-clear-font"></am-icon>
