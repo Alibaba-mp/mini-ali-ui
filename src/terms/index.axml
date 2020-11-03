@@ -8,7 +8,7 @@
   </view>
   <view class="am-terms-body">
     <button type="{{agreeBtnAttr.type}}"  shape="{{shape}}" capsuleSize="{{capsuleSize}}"
-      capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" dataName="{{agreeBtnAttr.data}}"
+      capsuleMinWidth="{{capsuleMinWidth}}" onTap="onTap" data-name="{{agreeBtnAttr.data}}"
       subtitle="{{agreeBtnAttr.subtitle}}" disabled="{{disabled}}">{{agreeBtnAttr.title}}</button>
     <block a:if="{{cancelBtnAttr.title}}">
       <button type="{{cancelBtnAttr.type}}" shape="{{shape}}" capsuleSize="{{capsuleSize}}"

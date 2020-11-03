@@ -3,9 +3,11 @@ const cfg = {
     related: false,
     agreeBtn: {
       title: '同意协议并开通',
+      data: 'custom data 1',
     },
     cancelBtn: {
       title: '暂不开通，仅手动缴费',
+      data: 'custom data 2',
     },
     hasDesc: false,
   },
