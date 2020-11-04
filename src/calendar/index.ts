@@ -102,7 +102,7 @@ Component({
           this.props.onYearChange(year, selectedYear);
         }
 
-        if(this.props.onChange){
+        if (this.props.onChange) {
           this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
         }
 
@@ -127,7 +127,7 @@ Component({
           this.props.onYearChange(year, selectedYear);
         }
 
-        if(this.props.onChange){
+        if (this.props.onChange) {
           this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
         }
 
@@ -157,7 +157,7 @@ Component({
           this.props.onMonthChange(month, selectedMonth);
         }
 
-        if(this.props.onChange){
+        if (this.props.onChange) {
           this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
         }
 
@@ -187,8 +187,12 @@ Component({
         if (this.props.onMonthChange) {
           this.props.onMonthChange(month, selectedMonth);
         }
-        
-        if(this.props.onChange){
+
+        if (this.props.onChange) {
+          this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
+        }
+
+        if (this.props.onChange) {
           this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
         }
 

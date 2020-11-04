@@ -2,10 +2,12 @@
 
 <view class="am-tabs {{className}}">
   <view class="am-tabs-tab-bar-wrap">
-    <view class="am-tabs-bar {{capsule?'am-tabs-bar-capsule':''}} {{elevator?'am-tabs-bar-sticky':''}}"
-      style="background-color: {{tabBarBackgroundColor}};{{elevator && elevatorTop ? `top: ${elevatorTop};` : ''}}"
+    <view class="am-tabs-bar {{capsule?'am-tabs-bar-capsule':''}} {{(elevator || stickyBar)?'am-tabs-bar-sticky':''}}"
+      style="background-color: {{tabBarBackgroundColor}};{{(elevator || stickyBar) && elevatorTop ? `top: ${elevatorTop};` : ''}}"
     >
       <view class="am-tabs-bar-content-wrap">
+        <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"  style="background-color: {{tabBarBackgroundColor}};"></view>
+        <view a:if="{{showRightShadow}}" class="am-tabs-scroll-right"  style="background-color: {{tabBarBackgroundColor}};"></view>
         <scroll-view
           scroll-left="{{viewScrollLeft}}"
           scroll-into-view="tabs-item-{{tabsName?tabsName+'-':''}}{{tabViewNum}}"
@@ -14,8 +16,6 @@
           onScroll="showLeftShadow"
           class="am-tabs-bar-content"
           id="am-tabs-bar-{{tabsName?tabsName+'-':''}}content">
-          <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"  style="background-color: {{tabBarBackgroundColor}};"></view>
-          <view class="am-tabs-scroll-right"  style="background-color: {{tabBarBackgroundColor}};"></view>
           <block a:for="{{tabs}}">
             <view
               id="tabs-item-{{tabsName?tabsName+'-':''}}{{index}}"

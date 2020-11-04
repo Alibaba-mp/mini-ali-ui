@@ -1,3 +1,29 @@
+## 1.1.7
+`2020-10-15`
+* **Fixed**
+  * tabs 组件iOS样式兼容
+  * notice组件中didUpdate判断机制优化
+  * vtabs滚动与点击tab 的同步
+* **Feature**
+  * steps 组件可修改步骤的 icon 的类型以及颜色
+  * footer 组件支持自定义处理链接点击事件 ([#45](https://github.com/Alibaba-mp/mini-ali-ui/pull/45))
+
+## 1.1.6
+`2020-09-24`
+* **Fixed**
+  * vtabs 组件在 iOS 中闪屏跳动;
+  * terms 组件按钮点击后 name 传值;
+
+## 1.1.5
+`2020-09-10`
+* **Feature**
+  * tabs 组件新增非 elevator 模式下的吸顶功能
+  * 日历 onChange 回调，解决月份切换导致年份变化不进行回调的问题 ([#44](https://github.com/Alibaba-mp/mini-ali-ui/pull/44))
+* **Fixed**
+  * vtabs 组件中 vtab-content 高度不够时的 tab 高亮展示
+  * popup 组件的 z-index 层级问题
+  * page-result 组件中按钮在 iOS10.3 内位置偏移
+
 ## 1.1.4
 `2020-08-13`
 * **Fixed**
