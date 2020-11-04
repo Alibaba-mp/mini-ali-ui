@@ -192,10 +192,6 @@ Component({
           this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
         }
 
-        if (this.props.onChange) {
-          this.props.onChange({ year, month }, { year: selectedYear, month: selectedMonth });
-        }
-
         this.setData({
           selectedYear: year,
           selectedMonth: month,
