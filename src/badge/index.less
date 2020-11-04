@@ -13,12 +13,13 @@
     align-items: center;
     justify-content: center;
     top: 0;
-    min-width: 16px;
+    min-width: 28 * @pixelSize;
     padding: 0;
-    min-height: 16px;
+    height: 28 * @pixelSize;
     text-align: center;
-    background-color: @color-fill-warning;
-    background-color: var(--am-badge-bg-color, @color-fill-warning);
+    font-size: 18 * @pixelSize;
+    background-color: #FF411C;
+    background-color: var(--am-badge-bg-color, #FF411C);
     border-radius: @corner-radius-circle;
     border-radius: var(--am-badge-border-radius, @corner-radius-circle);
     color: @color-text-base;
@@ -35,23 +36,23 @@
     }
     &-middle {
       right: 50%;
-      transform: translate(50%, -50%);
+      transform: translate(50%, -100%);
     }
 
     &-padding {
-      font-size: 10px;
+      font-size: 20 * @pixelSize;
       opacity: 0;
     }
 
     &-inner {
       position: relative;
       z-index: 2;
-      font-size: @font-size-weak;
+      font-size: 18 * @pixelSize;
       white-space: nowrap;
     }
 
     &.am-badge-double {
-      padding: 0 4px;
+      padding: 0 8 * @pixelSize;
     }
   }
 
@@ -64,20 +65,20 @@
 
   &-text.is-dot {
     padding: 0;
-    width: 10px;
-    min-width: 10px;
-    height: 10px;
-    min-height: 10px;
+    width: 20 * @pixelSize;
+    min-width: 20 * @pixelSize;
+    height: 20 * @pixelSize;
+    min-height: 20 * @pixelSize;
     border-radius: @corner-radius-circle;
     border-radius: var(--am-badge-border-radius, @corner-radius-circle);
   }
   &-arrow {
     position: absolute;
-    height: 8px;
-    width: 8px;
-    bottom: -2px;
+    height: 8 * @pixelSize;
+    width: 8 * @pixelSize;
+    bottom: -4 * @pixelSize;
     left: 50%;
-    margin-left: -4px;
+    margin-left: -4 * @pixelSize;
     transform: rotate(45deg);
     z-index: 1;
     border-radius: 50vh 0 0;
@@ -87,19 +88,6 @@
       border: 0 none;
       filter: drop-shadow(@border-width-standard @border-width-standard 0 @color-fill-grey-inverse);
     }
-    // &-left {
-    //   left: 2px;
-    //   margin-left: 0;
-    //   bottom: 0;
-    //   transform: skew(0, -20deg);
-    // }
-    // &-right {
-    //   right: 2px;
-    //   left: auto;
-    //   margin-left: 0;
-    //   bottom: 0;
-    //   transform: skew(0, 20deg);
-    // }
   }
   &-text-arrow-right {
     border-radius: @corner-radius-lg @corner-radius-lg 0 @corner-radius-lg;

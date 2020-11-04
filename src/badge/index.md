@@ -15,7 +15,7 @@
 | className     | String          | ''       | -      | 类名称                                | -        | -    |
 | text          | String / Number | ''       | -      | 展示的数字或文案                      | -        | -    |
 | dot           | Boolean         | false    | -      | 不展示数字，只有一个小红点            | -        | -    |
-| overflowCount | Number          | 99       | -      | 展示封顶的数字值，超出部分用“+”号表示 | -        | -    |
+| overflowCount | Number          | 99       | -      | 展示封顶的数字值，超出部分用“···”号表示 | -        | -    |
 | withArrow     | Boolean         | false    | -      | 是否使用箭头                          | -        | -    |
 | direction     | String          | 'middle' | middle<br/> left<br/> right | 箭头方向                              | -        | -    |
 | stroke | Boolean | false | - | 是否带描边的气泡 | [1.0.6](https://www.npmjs.com/package/mini-ali-ui?activeTab=versions) | - |
