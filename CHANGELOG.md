@@ -1,3 +1,20 @@
+## 1.2.0
+`2020-11-12`
+* **Feature**
+  * loading、avatar 样式更新；
+  * container 组件增加 title 属性功能；
+  * amount-input 新增金额长度标识；
+* **Fixed**
+  * badge 中使用 slot 时箭头位置优化；
+  * 组件初始情况 rpx 模式 icon size 过小；
+  * notice 组件偶现无法滚动（[#48](https://github.com/Alibaba-mp/mini-ali-ui/pull/48)）；
+  * 处理 searchBar 组件的闪动现象；
+  * list 组件 worker render 的报错；
+  * Terms checkbox 默认选中不生效（[#56](https://github.com/Alibaba-mp/mini-ali-ui/pull/56)）；
+  * 部分组件的样式细节优化调整；
+* **Chore**
+  * 添加 babel/runtime；
+
 ## 1.1.7
 `2020-10-15`
 * **Fixed**
