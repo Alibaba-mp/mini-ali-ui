@@ -72,72 +72,79 @@ Component({
     elWidth: 0,
     tabFontSize15: fmtUnit('15px'),
     tabFontSize13: fmtUnit('13px'),
+    _showPlus: false,
   },
   didMount() {
-    const { tabs, animation, hasSubTitle, elevator } = this.props;
-
-    this.setWindowWidth();
-
-    if (hasSubTitle) {
+    const { tabs, animation, hasSubTitle, elevator, showPlus } = this.props;
+    if (tabs.length !== 0 || !tabs) {
       this.setData({
-        capsule: true,
+        _showPlus: showPlus,
       });
-    }
-    this.setData({
-      tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
-      animation,
-      autoplay: true,
-    });
-    if (elevator) {
+      this.setWindowWidth();
+
+      if (hasSubTitle) {
+        this.setData({
+          capsule: true,
+        });
+      }
       this.setData({
-        swipeable: false,
+        tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
+        animation,
+        autoplay: true,
       });
-      // 记录电梯组件总高度，并写入 data
+      if (elevator) {
+        this.setData({
+          swipeable: false,
+        });
+        // 记录电梯组件总高度，并写入 data
+        my.createSelectorQuery()
+          .select('#am-tabs-elevator-content')
+          .boundingClientRect()
+          .exec((ret) => {
+            this.setData({
+              elevatorHeight: ret[0].height,
+            });
+          });
+        // 获取电梯组件每个 pane 的 top 值
+        this.getElevatorHeight(tabs);
+      }
+
+      // 初始状态下，如果 activeTab 数值较大，会将后面的 tab 前移
+      let boxWidth = 0;
+      let elWidth = 0;
+      let elLeft = 0;
       my.createSelectorQuery()
-        .select('#am-tabs-elevator-content')
+        .select(`#tabs-item-${this.props.tabsName}-${this.props.activeTab}`)
         .boundingClientRect()
         .exec((ret) => {
+          elWidth = (<my.IBoundingClientRect>ret[0]).width;
+          elLeft = (<my.IBoundingClientRect>ret[0]).left;
           this.setData({
-            elevatorHeight: ret[0].height,
+            elWidth,
+            elLeft,
           });
         });
-      // 获取电梯组件每个 pane 的 top 值
-      this.getElevatorHeight(tabs);
+      my.createSelectorQuery()
+        .select(`#am-tabs-bar-${this.props.tabsName}-content`)
+        .boundingClientRect()
+        .exec((ret) => {
+          boxWidth = (<my.IBoundingClientRect>ret[0]).width;
+          this.setData({
+            boxWidth,
+          });
+          setTimeout(() => {
+            this.setData({
+              viewScrollLeft: Math.floor(this.data.elWidth + this.data.elLeft - this.data.boxWidth),
+            });
+          }, 300);
+        });
     }
-
-    // 初始状态下，如果 activeTab 数值较大，会将后面的 tab 前移
-    let boxWidth = 0;
-    let elWidth = 0;
-    let elLeft = 0;
-
-    my.createSelectorQuery()
-      .select(`#tabs-item-${this.props.tabsName}-${this.props.activeTab}`)
-      .boundingClientRect()
-      .exec((ret) => {
-        elWidth = (<my.IBoundingClientRect>ret[0]).width;
-        elLeft = (<my.IBoundingClientRect>ret[0]).left;
-        this.setData({
-          elWidth,
-          elLeft,
-        });
-      });
-    my.createSelectorQuery()
-      .select(`#am-tabs-bar-${this.props.tabsName}-content`)
-      .boundingClientRect()
-      .exec((ret) => {
-        boxWidth = (<my.IBoundingClientRect>ret[0]).width;
-        this.setData({
-          boxWidth,
-        });
-        setTimeout(() => {
-          this.setData({
-            viewScrollLeft: Math.floor(this.data.elWidth + this.data.elLeft - this.data.boxWidth),
-          });
-        }, 300);
-      });
   },
   didUpdate(prevProps, prevData) {
-    const { tabs, elevator } = this.props;
+    const { tabs, elevator, showPlus } = this.props;
+    this.setData({
+      _showPlus: showPlus,
+    });
     if (prevProps.tabs.length !== tabs.length) {
       this.setData({
         tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
