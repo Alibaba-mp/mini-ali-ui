@@ -12,7 +12,7 @@
     margin-right: var(--am-loading-marginR, @h-spacing-standard);
     border-radius: var(--am-loading-item-radius, calc(@corner-radius-sm / 2));
     background-color: var(--am-color-text-subtitle, @color-text-subtitle);
-    animation: loading 1000ms 0s infinite linear;
+    animation: aliui_loading_animation 1s 0s infinite linear;
     &__2 {
       animation-delay: 150ms;
     }
@@ -23,7 +23,7 @@
   }
 }
 
-@keyframes loading {
+@keyframes aliui_loading_animation {
   0% {
     transform: translate3d(0, 0, 0);
   }
