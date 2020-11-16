@@ -1,5 +1,5 @@
 <view class="am-avatar {{className}}">
-  <image class="am-avatar-img am-avatar-img-{{size}} am-avatar-img-{{shape}}" src="{{src}}" onError="_onError"/>
+  <image class="am-avatar-img am-avatar-img-{{size}} am-avatar-img-{{shape}}" src="{{src}}" lazy-load="{{lazyLoad}}" onError="_onError"/>
   <view class="am-avatar-content" a:if="{{name || desc}}">
     <view class="am-avatar-name am-avatar-name-{{size}}" a:if="{{name}}">
       {{name}}

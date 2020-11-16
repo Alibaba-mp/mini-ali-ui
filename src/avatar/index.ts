@@ -6,6 +6,7 @@ Component({
     src: 'https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*2iXlQLntttsAAAAAAAAAAAAAARQnAQ',
     name: '',
     desc: '',
+    lazyLoad: false,
   },
   didMount() {
     const { name, desc } = this.props;
