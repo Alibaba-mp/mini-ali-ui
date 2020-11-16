@@ -18,7 +18,7 @@
       onConfirm="onConfirm" 
       onFocus="onFocus" 
       onBlur="onBlur" 
-      controlled />
+      controlled="{{controlled}}" />
     <view class="am-verify-code-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
       onTap="onClear" a:if="{{clear}}">
       <am-icon size="{{iconSize}}" 

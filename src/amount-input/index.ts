@@ -8,9 +8,10 @@ Component({
     focus: false,
     placeholder: '',
     value: '',
-    controlled: false,
+    controlled: true,
     showClear: false,
     focusAfterClear: true,
+    enableNative: undefined, // 兼容安卓input的输入
   },
   data: {
     _focus: false,

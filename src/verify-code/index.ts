@@ -20,7 +20,8 @@ Component({
     focus: false,
     clear: true, // 默认有清除功能
     syncInput: false,
-    enableNative: false, // 兼容安卓input的输入bug
+    controlled: true,
+    enableNative: undefined, // 兼容安卓input的输入bug
     countDown: 60,
     isInitialActive: true,
     initActive: false, // 是否自动触发点击发送事件

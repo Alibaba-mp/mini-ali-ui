@@ -3,7 +3,8 @@
 <view class="am-amount-unit" style="{{_unit === '' ? 'border-left: 0 none;' : ''}}">{{_unit}}</view>
   <view class="am-amount-input">
     <view class="am-amount-symbol">¥</view>
-    <input controlled="{{true}}" 
+    <input controlled="{{controlled}}"
+      enableNative="{{enableNative}}"
       type="{{type === 'digit' ? 'digit' : 'number'}}" 
       maxlength="{{maxLength}}" 
       placeholder="{{placeholder}}" 

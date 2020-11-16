@@ -19,7 +19,8 @@ Component({
     autoHeight: false,
     focus: false,
     syncInput: false,
-    enableNative: false, // 兼容安卓input的输入bug
+    controlled: true,
+    enableNative: undefined, // 兼容安卓input的输入bug
     onInput: () => {},
     onConfirm: () => {},
     onFocus: () => {},

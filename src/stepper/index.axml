@@ -16,7 +16,8 @@
     onInput="onInput"
     disabled="{{disabled || readOnly}}"
     type="number"
-    controlled="true"
+    controlled="{{controlled}}"
+    enableNative="{{enableNative}}"
   />
   <view class="am-stepper-option am-stepper-add" style="opacity:{{opaAdd}}" data-type="add" onTap="changeFn">
     <am-icon type="add" />
