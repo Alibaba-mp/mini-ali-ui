@@ -8,7 +8,8 @@
     {{!withArrow || direction === '' ? 'am-badge-text-left' : ''}}
     {{stroke?'am-badge-stroke':''}}"
     a:if="{{!dot}}">
-    <text class="am-badge-text-inner">{{typeof text === 'number' && text > overflowCount ? '···' : text }}</text>
+    <text class="am-badge-text-inner am-badge-text-inner-absolute">{{typeof text === 'number' && text > overflowCount ? '···' : text }}</text>
+    <text class="am-badge-text-inner am-badge-text-inner-opacity">{{typeof text === 'number' && text > overflowCount ? '···' : text }}</text>
     <view a:if="{{withArrow && direction ==='middle'}}" class="am-badge-arrow {{stroke?'am-badge-stroke':''}}"/>
   </view>
   <view class="am-badge-text is-dot am-badge-text-left {{stroke?'am-badge-stroke':''}}" a:if="{{dot}}"></view>

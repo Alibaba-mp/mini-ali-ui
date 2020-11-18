@@ -4,8 +4,8 @@
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  line-height: @line-height-paragraph;
-  line-height: var(--am-badge-line-height, @line-height-paragraph);
+  // line-height: @line-height-paragraph;
+  // line-height: var(--am-badge-line-height, @line-height-paragraph);
 
   &-text {
     display: flex;
@@ -17,7 +17,7 @@
     padding: 0;
     height: 28 * @pixelSize;
     text-align: center;
-    font-size: 18 * @pixelSize;
+    font-size: 24.5 * @pixelSize;
     background-color: #FF411C;
     background-color: var(--am-badge-bg-color, #FF411C);
     border-radius: @corner-radius-circle;
@@ -47,8 +47,17 @@
     &-inner {
       position: relative;
       z-index: 2;
-      font-size: 18 * @pixelSize;
+      font-size: 24.5 * @pixelSize;
       white-space: nowrap;
+    }
+    &-inner-absolute {
+      position: absolute;
+      transform: scale(0.75);
+    }
+    &-inner-opacity {
+      transform: scale(1);
+      zoom: 0.75;
+      opacity: 0;
     }
 
     &.am-badge-double {
