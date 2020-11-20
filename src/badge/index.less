@@ -52,7 +52,10 @@
     }
     &-inner-absolute {
       position: absolute;
-      transform: scale(0.75);
+      left: 50%;
+      transform-origin: 0 center;
+      transform: scale(0.75) translate3d(-50%, 0, 0);
+      z-index: 3;
     }
     &-inner-opacity {
       transform: scale(1);
