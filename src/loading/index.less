@@ -3,16 +3,26 @@
 .am-loading {
   display: flex;
   justify-content: center;
+  padding: @v-spacing-standard 0;
   padding: var(--am-loading-paddingTB, @v-spacing-standard) 0;
   &-item {
+    flex: 0 0 @size-1;
     flex: 0 0 var(--am-loading-item-size, @size-1);
+    width: @size-1;
     width: var(--am-loading-item-size, @size-1);
+    height: @size-1;
     height: var(--am-loading-item-size, @size-1);
     overflow: hidden;
+    margin-right: @h-spacing-standard;
     margin-right: var(--am-loading-marginR, @h-spacing-standard);
+    border-radius: @corner-radius-sm / 2;
     border-radius: var(--am-loading-item-radius, calc(@corner-radius-sm / 2));
+    background-color: @color-text-subtitle;
     background-color: var(--am-color-text-subtitle, @color-text-subtitle);
     animation: aliui_loading_animation 1s 0s infinite linear;
+    &__1 {
+      animation-delay: 0s;
+    }
     &__2 {
       animation-delay: 150ms;
     }

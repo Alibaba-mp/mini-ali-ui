@@ -1,11 +1,20 @@
 <view class="am-loading {{className ? className : ''}}">
-  <view class="am-loading-item am-loading-item__1"
-        style="{{color ? `background-color: ${color};` : ''}}
-              {{size ? `flex-basis: ${size}; width: ${size}; height: ${size};` : ''}}"></view>
-  <view class="am-loading-item am-loading-item__2"
-        style="{{color ? `background-color: ${color};` : ''}}
-              {{size ? `flex-basis: ${size}; width: ${size}; height: ${size};` : ''}}"></view>
-  <view class="am-loading-item am-loading-item__3"
-        style="{{color ? `background-color: ${color};` : ''}}
-              {{size ? `flex-basis: ${size}; width: ${size}; height: ${size};` : ''}}"></view>
+  <view
+    class="am-loading-item am-loading-item__1"
+    style="
+      {{color ? `background-color: ${color};` : ''}}
+      {{size ? `flex-basis: ${size}; width: ${size}; height: ${size};` : ''}}
+    "></view>
+  <view
+    class="am-loading-item am-loading-item__2"
+    style="
+      {{color ? `background-color: ${color};` : ''}}
+      {{size ? `flex-basis: ${size}; width: ${size}; height: ${size};` : ''}}
+    "></view>
+  <view
+    class="am-loading-item am-loading-item__3"
+    style="
+      {{color ? `background-color: ${color};` : ''}}
+      {{size ? `flex-basis: ${size}; width: ${size}; height: ${size};` : ''}}
+    "></view>
 </view>
