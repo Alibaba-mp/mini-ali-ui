@@ -2,21 +2,16 @@
 
 loading 加载动画。
 
-## 截图
-![loading 加载动画](https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*yGirSonwGzAAAAAAAAAAAABkARQnAQ)
-
 ## 扫码体验
 
 ![image](http://mdn.alipayobjects.com/afts/img/A*8spKR7IFKE0AAAAAAAAAAABkAa8wAA/original?bz=openpt_doc&t=4jH-vtQojHPwBwOHtiLKtwAAAABkMK8AAAAA)
-
-
 
 ## 属性介绍
 
 | 属性名 | 类型 | 默认值 | 可选项 | 描述 | 最低版本 | 必填 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | className | String| - | - | 自定义class | - | - |
-| size | String | 100px | - | 设置 loading 尺寸大小 | - | - |
+| size | String | - | - | 设置 loading 尺寸大小 | - | - |
 | color | String | #1677ff | - | 设置 loading 的颜色 | - | - |
 
 ## Bug & Tip
@@ -35,16 +30,6 @@ loading 加载动画。
 
 ```xml
 <loading />
-<loading size="50px" />
-<loading size="400rpx" color="red" />
-<loading size="{{loadSize}}" color="#f00" />
-```
-
-```javascript
-Page({
-  data: {
-    loadSize: '180rpx',
-  },
-  onLoad() {},
-});
+<loading color="rgba(255, 0, 0, .3)" />
+<loading color="#1677ff" />
 ```
