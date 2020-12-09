@@ -46,6 +46,9 @@
 
 **注**：`type` 的属性值影响的是真机中的键盘类型，在模拟器中并不一定会有效果。
 
+### bug & tips
+* input-item 组件的特性主要来源于 [input](https://opendocs.alipay.com/mini/component/input)，当有光标或者文字输入相关疑惑，可查阅 [input](https://opendocs.alipay.com/mini/component/input) 相关介绍，或查阅[表单组件常见问题](https://opensupport.alipay.com/support/helpcenter/144/201602630402)
+
 ## slots
 
 | slotname | 说明 |

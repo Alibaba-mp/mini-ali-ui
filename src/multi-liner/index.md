@@ -34,6 +34,8 @@
 | onFocus | (e: Object) => void |  |  | 聚焦时触发 |  |  |
 | onBlur | (e: Object) => void |  |  | 失去焦点时触发 |  |  |
 
+### bug & tips
+* multi-liner 组件的特性主要来源于 [textarea](https://opendocs.alipay.com/mini/component/textarea)，当有光标或者文字输入相关疑惑，可查阅 [textarea](https://opendocs.alipay.com/mini/component/textarea) 相关介绍，或查阅[表单组件常见问题](https://opensupport.alipay.com/support/helpcenter/144/201602630402)
 
 ## 示例代码
 
