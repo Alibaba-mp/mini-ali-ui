@@ -1,3 +1,16 @@
-<loading />
-<loading color="rgba(255, 0, 0, .3)" />
-<loading color="#1677ff" />
+加载中<loading size="80rpx" className="inlineBlock" />
+<container hasTitle='{{true}}' title='loading size="6rpx"'>
+  <loading size="6rpx" color="red" />
+</container>
+<container hasTitle='{{true}}' title='loading height="36rpx"'>
+  <loading height="36rpx" color="red" />
+</container>
+<container hasTitle='{{true}}' title='loading height="36rpx" size="6rpx"'>
+  <loading height="36rpx" size="6rpx" color="red" />
+</container>
+<container hasTitle='{{true}}' title='loading size="100px"'>
+  <loading size="100px" color="red" />
+</container>
+<container hasTitle='{{true}}' title='loading'>
+  <loading color="blue" />
+</container>

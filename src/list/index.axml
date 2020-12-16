@@ -5,7 +5,7 @@
   <view class="am-list-body">
     <slot />
   </view>
-  <view class="am-list-load-more" a:if="{{loadMore === 'load'}}"><text class="am-list-load-more-txt">{{loadContent[0]?loadContent[0]:''}}</text><loading size="{{loadingSize}}" color="{{loadingColor}}" /></view>
+  <view class="am-list-load-more" a:if="{{loadMore === 'load'}}"><text class="am-list-load-more-txt">{{loadContent[0]?loadContent[0]:''}}</text><loading size="{{loadingSize}}" color="{{loadingColor}}" height="{{loadingHeight}}" /></view>
   <view class="am-list-load-over" a:if="{{loadMore === 'over'}}">{{loadContent[1]?loadContent[1]:''}}</view>
   <view class="am-list-footer" a:if="{{$slots.footer}}">
     <slot name="footer" />

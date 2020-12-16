@@ -1,3 +1,5 @@
+import fmtUnit from '../_util/fmtUnit';
+
 Component({
   props: {
     className: '',
@@ -6,8 +8,9 @@ Component({
       '',
       '',
     ],
-    loadingSize: '',
+    loadingSize: fmtUnit('16px'),
     loadingColor: '',
+    loadingHeight: 'auto',
   },
   data: {
     loadContent: [

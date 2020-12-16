@@ -3,15 +3,19 @@
 .am-loading {
   display: flex;
   justify-content: center;
-  padding: @v-spacing-standard 0;
-  padding: var(--am-loading-paddingTB, @v-spacing-standard) 0;
+  align-items: center;
+  width: @size-1;
+  width: var(--am-loading-item-size, @size-1);
+  height: @size-1;
+  height: var(--am-loading-item-size, @size-1);
+  min-width: 66 * @pixelSize;
+  min-height: 66 * @pixelSize;
   &-item {
-    flex: 0 0 @size-1;
-    flex: 0 0 var(--am-loading-item-size, @size-1);
-    width: @size-1;
-    width: var(--am-loading-item-size, @size-1);
-    height: @size-1;
-    height: var(--am-loading-item-size, @size-1);
+    flex: 0 0 8 * @pixelSize;
+    min-width: 6 * @pixelSize;
+    min-height: 6 * @pixelSize;
+    max-width: 8 * @pixelSize;
+    max-height: 8 * @pixelSize;
     overflow: hidden;
     margin-right: @h-spacing-standard;
     margin-right: var(--am-loading-marginR, @h-spacing-standard);

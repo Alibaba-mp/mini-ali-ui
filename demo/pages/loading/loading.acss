@@ -1,0 +1,4 @@
+.inlineBlock {
+  display: inline-block;
+  vertical-align: middle;
+}

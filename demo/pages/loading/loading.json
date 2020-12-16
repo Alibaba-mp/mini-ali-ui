@@ -1,6 +1,7 @@
 {
   "defaultTitle": "Loading",
   "usingComponents":{
-    "loading":"../../es/loading/index"
+    "loading":"../../es/loading/index",
+    "container": "../../es/container/index"
   }
 }
