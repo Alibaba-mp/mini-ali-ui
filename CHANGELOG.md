@@ -1,8 +1,13 @@
+## 1.2.4
+`2020-12-21`
+* **Fixed**
+  * 修复 multi-liner 中所依赖的 textarea 样式问题；
+
 ## 1.2.3
 `2020-12-21`
 * **Fixed**
   * loading 组件的 `size` 问题修复；
-  * textarea 组件 `enableNative` 默认值修复；
+  * multi-liner 组件 `enableNative` 默认值修复；
 
 > **Note：** mini-ali-ui **1.2.3** 版本中修复了 **1.2.0** 引入的 loading 组件 `size` 属性不正常的 bug，回归到与 **1.1.\*** 行为一致（`size` 指定 loading 组件的宽度）。考虑到部分应用已因适配 **1.2.0** 的问题而变更了 `size` 设置，在 **1.2.3** 里我们对 `size` 的取值范围做了简单限定，以保证基本可接受的外观。建议受影响的这部分应用开发者再进行人工检查和校正。
 
