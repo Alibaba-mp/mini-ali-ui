@@ -31,7 +31,7 @@
 | maxLength | Number | - | - | - | 最多允许输入的字符个数 |
 | showCancelButton | Boolean | false | true,false | - | 是否一直显示取消按钮 |
 | borderColor | String | #1677ff | - | - | 搜索输入框边框色 |
-| enableNative | Boolean | true | - | - | 如为 false 可处理 fixed 定位后输入框内容闪动的问题 |
+| enableNative | Boolean | false | - | - | 如为 false 可处理 fixed 定位后输入框内容闪动的问题 |
 
 ### tips & bug
 * searchBar 输入框在个别情况下会出现闪动的情况，需要使用 `enableNative` 进行处理，具体可参考 [input 输入框的使用限制](https://opendocs.alipay.com/mini/component/input#%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6)说明，以及 [FAQ](https://opendocs.alipay.com/mini/component/input#FAQ) 部分的说明；
@@ -58,8 +58,6 @@
     placeholder="搜索"
     onInput="handleInput"
     onClear="handleClear"
-    onFocus="handleFocus"
-    onBlur="handleBlur"
     onCancel="handleCancel"
     onSubmit="handleSubmit"
     showCancelButton="{{false}}" />
@@ -85,8 +83,6 @@ Page({
       value: '',
     });
   },
-  handleFocus() {},
-  handleBlur() {},
   handleCancel() {
     this.setData({
       value: '',

@@ -6,7 +6,7 @@ Component({
     showVoice: false,
     borderColor: '#1677ff',
     controlled: true,
-    enableNative: undefined, // false 处理 fixed 定位后输入框内容闪动的问题
+    enableNative: false, // false 处理 fixed 定位后输入框内容闪动的问题
   },
   data: {
     _value: '',

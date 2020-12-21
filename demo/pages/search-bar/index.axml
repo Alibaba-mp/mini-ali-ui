@@ -8,8 +8,6 @@
     placeholder="搜索"
     onInput="handleInput"
     onClear="handleClear"
-    onFocus="handleFocus"
-    onBlur="handleBlur"
     onCancel="handleCancel"
     onSubmit="handleSubmit"
     showCancelButton="{{true}}" />

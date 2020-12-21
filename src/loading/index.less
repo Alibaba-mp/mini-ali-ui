@@ -1,15 +1,16 @@
 @import (reference) "../style/themes/default.less";
-
 .am-loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: @size-1;
-  width: var(--am-loading-item-size, @size-1);
-  height: @size-1;
-  height: var(--am-loading-item-size, @size-1);
-  min-width: 66 * @pixelSize;
-  min-height: 66 * @pixelSize;
+  &-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: @size-1;
+    width: var(--am-loading-item-size, @size-1);
+    height: @size-1;
+    height: var(--am-loading-item-size, @size-1);
+    min-width: 66 * @pixelSize;
+    min-height: 66 * @pixelSize;
+  }
   &-item {
     flex: 0 0 8 * @pixelSize;
     min-width: 6 * @pixelSize;

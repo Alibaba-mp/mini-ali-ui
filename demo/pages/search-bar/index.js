@@ -13,8 +13,6 @@ Page({
       value: '',
     });
   },
-  handleFocus() {},
-  handleBlur() {},
   handleCancel() {
     this.setData({
       value: '',
