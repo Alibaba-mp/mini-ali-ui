@@ -1,6 +1,6 @@
 App({
   globalData: {
-    miniAliUiLang: 'en-US',
+    // miniAliUiLang: 'en-US',
   },
   onLaunch() { },
   onShow() { },
