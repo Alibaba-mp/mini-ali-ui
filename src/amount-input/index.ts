@@ -1,5 +1,8 @@
 import fmtEvent from '../_util/fmtEvent';
 import fmtUnit from '../_util/fmtUnit';
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().amountInput;
 
 Component({
   props: {
@@ -87,31 +90,31 @@ Component({
       const value = Math.floor(inputValue);
       if (value > 999.99 && value <= 10000) {
         this.setData({
-          _unit: '千',
+          _unit: i18n.thousand,
         });
       } else if (value > 9999.99 && value <= 100000) {
         this.setData({
-          _unit: '万',
+          _unit: i18n.tenThousand,
         });
       } else if (value > 99999.99 && value <= 1000000) {
         this.setData({
-          _unit: '十万',
+          _unit: i18n.hundredThousand,
         });
       } else if (value > 999999.99 && value <= 10000000) {
         this.setData({
-          _unit: '百万',
+          _unit: i18n.million,
         });
       } else if (value > 9999999.99 && value <= 100000000) {
         this.setData({
-          _unit: '千万',
+          _unit: i18n.tenMillion,
         });
       } else if (value > 99999999.99 && value <= 1000000000) {
         this.setData({
-          _unit: '亿',
+          _unit: i18n.hundredMillion,
         });
       } else if (value > 999999999.99 && value <= 10000000000) {
         this.setData({
-          _unit: '十亿',
+          _unit: i18n.billion,
         });
       } else {
         this.setData({

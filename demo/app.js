@@ -1,5 +1,8 @@
 App({
-  onLaunch() {},
-  onShow() {},
-  onHide() {},
+  globalData: {
+    miniAliUiLang: 'en-US',
+  },
+  onLaunch() { },
+  onShow() { },
+  onHide() { },
 });

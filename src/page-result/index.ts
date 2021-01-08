@@ -1,4 +1,8 @@
-const defaultEvent = () => {};
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().pageResult;
+
+const defaultEvent = () => { };
 const COUNT_DOWN_TIMES = 10;
 
 Component({
@@ -10,26 +14,26 @@ Component({
     onTapLeft: defaultEvent,
     onTapRight: defaultEvent,
     isCountDown: false,
-    countDownText: '重新刷新',
+    countDownText: i18n.refresh,
   },
   data: {
     defaultTitle: {
-      network: '网络不给力',
-      error: '页面遇到一些小问题',
-      busy: '请稍等哦，马上出来',
-      empty: '什么都没有',
-      logoff: '此用户已注销',
-      payment: '付款没成功',
-      redpacket: '什么都没有',
+      network: i18n.networkTitle,
+      error: i18n.errorTitle,
+      busy: i18n.busyTitle,
+      empty: i18n.emptyTitle,
+      logoff: i18n.logoffTitle,
+      payment: i18n.paymentTitle,
+      redpacket: i18n.redpacketTitle,
     },
     defaultBrief: {
-      network: '世界上最遥远的距离莫过于此',
-      error: '请稍后刷新',
-      busy: '前面还有很多朋友在排队',
-      empty: '前不见古人，后不见来者',
-      logoff: '',
-      payment: '请重新付款',
-      redpacket: '红包已领空',
+      network: i18n.networkBrief,
+      error: i18n.errorBrief,
+      busy: i18n.busyBrief,
+      empty: i18n.emptyBrief,
+      logoff: i18n.logoffBrief,
+      payment: i18n.paymentBrief,
+      redpacket: i18n.redpacketBrief,
     },
     countDownTitle: '',
   },
@@ -42,7 +46,7 @@ Component({
     this._timer = null;
     const execCountDown = () => {
       this.setData({
-        countDownTitle: `${countDownTimes} 秒后${countDownText}`,
+        countDownTitle: `${countDownTimes} ${i18n.timeOut} ${countDownText}`,
       });
       countDownTimes -= 1;
       if (countDownTimes < 0) {

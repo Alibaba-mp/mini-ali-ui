@@ -2,9 +2,6 @@
   show="{{guideShow}}"
   hasJump="{{guideJump}}"
   guideList="{{list}}"
-  btn_next="看下一张引导图"
-  btn_jump="直接关闭，不看跳过"
-  btn_over="看完了😀啊"
   onGuideOver="closeGuide"
   maskClick="{{true}}"
 ></guide>

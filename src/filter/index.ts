@@ -1,9 +1,14 @@
 import lifecycle from './mixins/lifecycle';
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().filter;
 
 Component({
   mixins: [lifecycle],
   data: {
     maxHeight: 0,
+    _i18nReset: i18n.reset,
+    _i18nConfirm: i18n.confirm,
   },
   props: {
     className: '',

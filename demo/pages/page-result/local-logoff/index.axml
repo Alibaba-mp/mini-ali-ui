@@ -2,7 +2,7 @@
   <page-result
     type="logoff"
     local="{{true}}"
-    brief="此用户已注销" />
+    brief="此用户已注销（自定义文案）" />
   <view style="height: 150px; margin: 10px; background: #dddddd;" />
   <view style="height: 150px; margin: 10px; background: #dddddd;" />
 </view>

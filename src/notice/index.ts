@@ -1,4 +1,7 @@
 import fmtEvent from '../_util/fmtEvent';
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().notice;
 
 const noop = () => { };
 const canIUseTransitionEnd = my.canIUse('view.onTransitionEnd');
@@ -32,6 +35,7 @@ Component({
     marqueeStyle: '',
     canIUseTransitionEnd,
     showShadow: true,
+    _i18nDetail: i18n.detail,
   },
   didMount() {
     if (this.props.enableMarquee) {

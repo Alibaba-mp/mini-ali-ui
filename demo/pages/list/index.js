@@ -268,7 +268,6 @@ Page({
       },
     ],
     loadMore: '',
-    loadContent: ['马不停蹄加载更多数据中...', '-- 已经到底了，加不了咯 --'],
     maxList: 5,
     switchValues: {
       // switch: true,

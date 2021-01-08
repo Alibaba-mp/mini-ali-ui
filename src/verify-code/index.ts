@@ -1,18 +1,21 @@
 import fmtEvent from '../_util/fmtEvent';
 import fmtUnit from '../_util/fmtUnit';
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().verifyCode;
 
 Component({
   props: {
     className: '',
     labelCls: '',
-    label: '验证码',
+    label: i18n.label,
     inputCls: '',
     last: false,
     value: '',
     name: '',
     type: 'text',
     password: false,
-    placeholder: '请输入验证码',
+    placeholder: i18n.placeholder,
     placeholderClass: '',
     placeholderStyle: '',
     disabled: false,
@@ -31,9 +34,9 @@ Component({
     onBlur: () => {},
     onClear: () => {},
     onSend: () => {},
-    txtSend: '发送验证码',
-    txtSendAgain: '重发验证码',
-    txtCountDown: '秒后重试',
+    txtSend: i18n.sendBtn,
+    txtSendAgain: i18n.sendAgainBtn,
+    txtCountDown: i18n.countDown,
   },
   data: {
     _focus: false,

@@ -3,32 +3,18 @@
     <view class="am-verify-code-label {{labelCls}}">
       {{label}}
     </view>
-    <input enableNative="{{enableNative}}" 
-      sync-input="{{syncInput}}" 
-      class="am-verify-code-content {{inputCls}}" 
-      value="{{value}}" 
-      name="{{name}}" 
-      placeholder="{{placeholder}}" 
-      placeholderClass="am-verify-code-placeholder-base {{placeholderClass}}" 
-      placeholderStyle="{{placeholderStyle}}" 
-      disabled="{{disabled}}" 
-      maxlength="{{maxlength}}" 
-      focus="{{focus}}" 
-      onInput="onInput" 
-      onConfirm="onConfirm" 
-      onFocus="onFocus" 
-      onBlur="onBlur" 
-      controlled="{{controlled}}" />
-    <view class="am-verify-code-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}" 
+    <input enableNative="{{enableNative}}" sync-input="{{syncInput}}" class="am-verify-code-content {{inputCls}}"
+      value="{{value}}" name="{{name}}" placeholder="{{placeholder}}"
+      placeholderClass="am-verify-code-placeholder-base {{placeholderClass}}" placeholderStyle="{{placeholderStyle}}"
+      disabled="{{disabled}}" maxlength="{{maxlength}}" focus="{{focus}}" onInput="onInput" onConfirm="onConfirm"
+      onFocus="onFocus" onBlur="onBlur" controlled="{{controlled}}" />
+    <view class="am-verify-code-clear {{clear && value.length > 0 && !disabled && _focus ? 'show' : 'hidden'}}"
       onTap="onClear" a:if="{{clear}}">
-      <am-icon size="{{iconSize}}" 
-        type="close_"
-        class="am-verify-code-clear-icon"
-        color="#ccc" />
+      <am-icon size="{{iconSize}}" type="close_" class="am-verify-code-clear-icon" color="#ccc" />
     </view>
-    <view class="am-verify-code-action {{_actionActive ? 'active' : 'inactive'}}" 
+    <view class="am-verify-code-action {{_actionActive ? 'active' : 'inactive'}}"
       onTap="{{_actionActive ? 'onTapSend' : ''}}">{{
-        _actionActive ? (actedBefore ? txtSendAgain : txtSend) : `${_countDown}${txtCountDown}`
+        _actionActive ? (actedBefore ? txtSendAgain : txtSend) : `${_countDown} ${txtCountDown}`
       }}</view>
     <view class="am-verify-code-line-bottom" />
   </view>

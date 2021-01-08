@@ -2,8 +2,6 @@
   <page-result
     type="redpacket"
     local="{{true}}"
-    title="什么都没有"
-    brief="红包已领空"
   />
 </view>
 

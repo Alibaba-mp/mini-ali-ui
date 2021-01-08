@@ -1,4 +1,7 @@
 import fmtUnit from '../_util/fmtUnit';
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().list;
 
 Component({
   props: {
@@ -14,8 +17,8 @@ Component({
   },
   data: {
     loadContent: [
-      '加载更多...',
-      '-- 数据加载完了 --',
+      i18n.loadMore,
+      i18n.loadOver,
     ],
   },
   didMount() {

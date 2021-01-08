@@ -73,6 +73,31 @@ $ npm install mini-ali-ui-rpx --save
 
 详细使用说明请参照官方文档[使用自定义组件](https://docs.alipay.com/mini/framework/use-custom-component)
 
+## 国际化多语种的支持
+对组件内部的文案进行梳理，将内部的文案提取后，并翻译。目前支持的语种如下：
+* [中文](./src/_lang/zh-CN.ts)
+* [en-US](./src/_lang/en-US.ts)
+
+默认为**中文**。
+
+### 使用方式
+在小程序中如需要使用非中文语种时，需要在 **app.js** 中的 `globalData` 加入指定 key 和 value。
+
+| key           | value       |
+| ------------- | ----------- |
+| miniAliUiLang | ''、'en-US' |
+
+`miniAliUiLang` 为空或者未定义，将作为以中文展示组件内部的默认文案。
+
+```javascript
+App({
+  globalData: {
+    miniAliUiLang: 'en-US',
+  },
+  onLaunch() {},
+});
+```
+
 ## 贡献
 
 如果你有好的意见或建议，欢迎给我们提 [issue](https://github.com/Alibaba-mp/mini-ali-ui/issues)。

@@ -1,3 +1,7 @@
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().coupon;
+
 Component({
   props: {
     title: '',
@@ -5,7 +9,7 @@ Component({
     onCouponClick: () => {},
     // 票券的扩展类型
     extra: true,
-    moreBtn: '规则详情',
+    moreBtn: i18n.ruleBtn,
     moreHide: true,
   },
   methods: {

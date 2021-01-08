@@ -1,10 +1,13 @@
 import fmtEvent from '../_util/fmtEvent';
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().guide;
 
 Component({
   props: {
-    btn_next: '下一步',
-    btn_jump: '跳过',
-    btn_over: '知道了',
+    btn_next: i18n.nextBtn,
+    btn_jump: i18n.jumpBtn,
+    btn_over: i18n.overBtn,
     hasJump: false,
     show: false,
     guideList: [],

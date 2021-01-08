@@ -1,3 +1,7 @@
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().avatar;
+
 Component({
   props: {
     className: '',
@@ -11,7 +15,7 @@ Component({
   didMount() {
     const { name, desc } = this.props;
     if (!name && desc) {
-      console.error('Avatar: 不允许设置 desc 但不定义 name');
+      console.error(i18n.error);
     }
   },
   methods: {

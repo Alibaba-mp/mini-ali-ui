@@ -1,3 +1,7 @@
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().calendar;
+
 /* eslint-disable complexity, no-param-reassign */
 /* eslint max-depth: [2, 7] */
 const leapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -43,6 +47,15 @@ Component({
     currentDate: null,
     dates: [],
     blockType: 1, // 1.没有待办纯数字 2.有待办 用于区分不同类型日期块的样式。
+    _i18nYear: i18n.year,
+    _i18nMonth: i18n.month,
+    _i18nWeekSun: i18n.sunday,
+    _i18nWeekMon: i18n.monday,
+    _i18nWeekTue: i18n.tuesday,
+    _i18nWeekWed: i18n.wednesday,
+    _i18nWeekThu: i18n.thursday,
+    _i18nWeekFri: i18n.friday,
+    _i18nWeekSat: i18n.saturday,
   },
   props: {
     className: '',

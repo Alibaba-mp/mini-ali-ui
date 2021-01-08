@@ -1,3 +1,7 @@
+import getI18n from '../_util/getI18n';
+
+const i18n = getI18n().searchBar;
+
 Component({
   props: {
     className: '',
@@ -11,6 +15,7 @@ Component({
   data: {
     _value: '',
     focus: false,
+    _i18nCancel: i18n.cancel,
   },
   didMount() {
     this.setData({
