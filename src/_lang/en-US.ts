@@ -69,10 +69,10 @@ const I18n_enUS = {
   },
   verifyCode: {
     label: 'Ver. Code' || I18n_zhCN.verifyCode.label,
-    placeholder: 'Enter the verification code we just sent.' || I18n_zhCN.verifyCode.placeholder,
+    placeholder: 'Verification Code' || I18n_zhCN.verifyCode.placeholder,
     sendBtn: 'Send' || I18n_zhCN.verifyCode.sendBtn,
     sendAgainBtn: 'Resend Now' || I18n_zhCN.verifyCode.sendAgainBtn,
-    countDown: 'Resend Later' || I18n_zhCN.verifyCode.countDown,
+    countDown: 's to Resend' || I18n_zhCN.verifyCode.countDown,
   },
 };
 export default I18n_enUS;
