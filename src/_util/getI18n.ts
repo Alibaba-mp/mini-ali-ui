@@ -4,9 +4,13 @@ import I18n_enUS from '../_lang/en-US';
 export default function getI18n() {
   /* global getApp */
   /* eslint no-undef: "error" */
-  const app = getApp() || null;
-  if (app.globalData?.miniAliUiLang === 'en-US') {
-    return I18n_enUS;
+  const appMiniAliUI = getApp() || null;
+  if (appMiniAliUI) {
+    if (appMiniAliUI.globalData?.miniAliUiLang === 'en-US') {
+      return I18n_enUS;
+    } else {
+      return I18n_zhCN;
+    }
   } else {
     return I18n_zhCN;
   }
