@@ -1,5 +1,10 @@
 @import "../style/mixins/hairline.less";
 
+@font-face {
+  font-family: "DINPro";
+  src: url('https://resource/DINPro-Medium.ttf?v=202100204') format('truetype');
+}
+
 .am-amount {
   box-sizing: border-box;
   width: 100%;
@@ -9,8 +14,9 @@
   background: var(--am-amount-background, @color-fill-grey-inverse);
 
   .a-input-content {
+    height: 120rpx;
     /* stylelint-disable-next-line */
-    font-family: @font-family-alipay-number, DIN Alternate;
+    font-family: 'DINPro';
     font-size: @font-size-amount-largenumber;
     font-size: var(--am-amount-content-font-size, @font-size-amount-largenumber);
     line-height: @line-height-base;
@@ -44,7 +50,8 @@
     display: flex;
     align-items: baseline;
     width: 100%;
-    height: 50px;
+    height: 100rpx;
+    overflow: hidden;
     position: relative;
     font-size: @font-size-amount-core;
     line-height: @line-height-base;
@@ -62,7 +69,7 @@
     color: @color-text-title;
     color: var(--am-amount-symbol-color, @color-text-title);
     align-self: flex-start;
-    margin-top: 17px;
+    margin-top: 36rpx;
   }
 
   &-placeholder {
@@ -72,30 +79,22 @@
     font-size: var(--am-amount-placeholder-font-size, @font-size-amount-large);
     line-height: @line-height-base;
     line-height: var(--am-amount-symbol-line-height, @line-height-base);
-    font-family: PingFang;
-    position: absolute;
-    top: 15px;
-    left: 0;
-    height: @font-size-amount-large;
-    height: var(--am-amount-placeholder-font-size, @font-size-amount-large);
     display: flex;
-    z-index: 0;
     align-items: flex-end;
   }
 
   &-value {
     box-sizing: border-box;
     z-index: 2;
-    height: 100%;
+    height: 100rpx;
     vertical-align: middle;
     background-color: transparent;
-    font-weight: 250;
   }
 
   &-clear {
     visibility: hidden;
-    width: 28px;
-    height: 28px;
+    width: 56rpx;
+    height: 56rpx;
     align-self: center;
     margin-top: @v-spacing-standard;
 
