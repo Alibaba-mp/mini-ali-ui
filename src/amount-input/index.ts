@@ -88,31 +88,31 @@ Component({
     },
     getMoneyUnit(inputValue) {
       const value = Math.floor(inputValue);
-      if (value > 999.99 && value <= 10000) {
+      if (value > 999.99 && value < 10000) {
         this.setData({
           _unit: i18n.thousand,
         });
-      } else if (value > 9999.99 && value <= 100000) {
+      } else if (value > 9999.99 && value < 100000) {
         this.setData({
           _unit: i18n.tenThousand,
         });
-      } else if (value > 99999.99 && value <= 1000000) {
+      } else if (value > 99999.99 && value < 1000000) {
         this.setData({
           _unit: i18n.hundredThousand,
         });
-      } else if (value > 999999.99 && value <= 10000000) {
+      } else if (value > 999999.99 && value < 10000000) {
         this.setData({
           _unit: i18n.million,
         });
-      } else if (value > 9999999.99 && value <= 100000000) {
+      } else if (value > 9999999.99 && value < 100000000) {
         this.setData({
           _unit: i18n.tenMillion,
         });
-      } else if (value > 99999999.99 && value <= 1000000000) {
+      } else if (value > 99999999.99 && value < 1000000000) {
         this.setData({
           _unit: i18n.hundredMillion,
         });
-      } else if (value > 999999999.99 && value <= 10000000000) {
+      } else if (value > 999999999.99 && value < 10000000000) {
         this.setData({
           _unit: i18n.billion,
         });

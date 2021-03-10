@@ -1,8 +1,9 @@
 @import "../style/mixins/hairline.less";
 
 @font-face {
+  // 仅针对支付宝端内小程序的字体使用，具体可参考：https://antd-mobile.alipay.com/wiki/din
   font-family: "DINPro";
-  src: url('https://resource/DINPro-Medium.ttf?v=202100204') format('truetype');
+  src: url('https://resource/DINPro-Medium.ttf') format('truetype');
 }
 
 .am-amount {
@@ -16,7 +17,7 @@
   .a-input-content {
     height: 120rpx;
     /* stylelint-disable-next-line */
-    font-family: 'DINPro';
+    font-family: 'DINPro', 'DIN Alternate';
     font-size: @font-size-amount-largenumber;
     font-size: var(--am-amount-content-font-size, @font-size-amount-largenumber);
     line-height: @line-height-base;
