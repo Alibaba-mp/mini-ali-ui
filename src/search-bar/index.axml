@@ -1,31 +1,36 @@
 <view class="am-search {{className}}">
-  <view class="am-search-input" style="border-color: {{borderColor}};">
+  <view class="am-search-input"
+    style="border-color: {{borderColor}};">
     <view class="am-search-synthetic">
-        <am-icon type='search' class="am-search-synthetic-icon"></am-icon>
-        <text class="am-search-synthetic-placeholder" style="{{ visibility: !focus && _value.length === 0 ? 'visible': 'hidden'}}">{{placeholder}}</text>
+      <am-icon type='search'
+        class="am-search-synthetic-icon"></am-icon>
     </view>
-    <input
-      class="am-search-value"
+    <input class="am-search-value"
       confirm-type="search"
       value="{{_value}}"
       focus="{{focus}}"
       maxlength="{{maxLength}}"
       disabled="{{disabled}}"
       onInput="handleInput"
+      placeholder="{{placeholder}}"
       onFocus="handleFocus"
       onConfirm="handleConfirm"
       sync-input="{{true}}"
       enableNative="{{enableNative}}"
       controlled="{{controlled}}"
       onBlur="handleBlur" />
-    <view class="am-search-clear {{ _value.length > 0 && focus ? 'am-search-clear-show' : '' }}" onTap="handleClear">
-      <am-icon type='close_' class="am-search-clear-font"></am-icon>
+    <view class="am-search-clear {{ _value.length > 0 && focus ? 'am-search-clear-show' : '' }}"
+      onTap="handleClear">
+      <am-icon type='close_'
+        class="am-search-clear-font"></am-icon>
     </view>
-    <view a:if="{{showVoice && !_value.length}}" class="am-search-voice" onTap="handleVoice">
-      <am-icon type='microphone_' class='am-search-voice-font'></am-icon>
+    <view a:if="{{showVoice && !_value.length}}"
+      class="am-search-voice"
+      onTap="handleVoice">
+      <am-icon type='microphone_'
+        class='am-search-voice-font'></am-icon>
     </view>
   </view>
-  <view
-    class="am-search-cancel {{ showCancelButton ? 'am-search-repos' : '' }}"
+  <view class="am-search-cancel {{ showCancelButton ? 'am-search-repos' : '' }}"
     onTap="handleCancel">{{_i18nCancel}}</view>
 </view>
