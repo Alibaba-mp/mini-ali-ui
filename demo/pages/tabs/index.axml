@@ -1,6 +1,5 @@
 <view style="padding: 24rpx;">
-  <tabs
-    tabs="{{tabs}}"
+  <tabs tabs="{{tabs}}"
     tabsName="activeTab"
     onTabClick="handleTabClick"
     onChange="handleTabChange"
@@ -11,16 +10,27 @@
     capsule="{{typeCapsule}}"
     hasSubTitle="{{typeHasSubTitle}}"
     tabBarUnderlineWidth="20px"
-    stickyBar="{{true}}"
-  >
+    tabContentHeight="{{activeTab === 0 ? '130px' : activeTab === 2 ? '200px' : '50vh'}}"
+    stickyBar="{{true}}">
     <block a:for="{{tabs}}">
-      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 0}}">
-        <view class="tab-content" style="height: 130px;">高度为 130px {{item.title}}</view>
+      <tab-content key="{{index}}"
+        tabId="{{index}}"
+        activeTab="{{activeTab}}"
+        a:if="{{index === 0}}">
+        <view class="tab-content"
+          style="height: 130px;">高度为 130px {{item.title}}</view>
       </tab-content>
-      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 2}}">
-        <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
+      <tab-content key="{{index}}"
+        tabId="{{index}}"
+        activeTab="{{activeTab}}"
+        a:elif="{{index === 2}}">
+        <view class="tab-content"
+          style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
       </tab-content>
-      <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:else>
+      <tab-content key="{{index}}"
+        tabId="{{index}}"
+        activeTab="{{activeTab}}"
+        a:else>
         <view class="tab-content">content of {{item.title}}</view>
       </tab-content>
     </block>
@@ -28,28 +38,45 @@
 </view>
 
 <view class="demo-title">elevator 模式: </view>
-<navigator url="./elevator/elevator" open-type="redirect" style="padding: 24rpx 40rpx;">点击进入 elevator 电梯组件模式</navigator>
+<navigator url="./elevator/elevator"
+  open-type="redirect"
+  style="padding: 24rpx 40rpx;">点击进入 elevator 电梯组件模式</navigator>
 
 <view class="demo-title">tab 类型: </view>
-<radio-group class="radio-group" onChange="typeChange" name="type">
-  <label class="radio" a:for="{{type}}" key="label-{{index}}">
-    <radio value="{{item.name}}" checked="{{item.checked}}" />
+<radio-group class="radio-group"
+  onChange="typeChange"
+  name="type">
+  <label class="radio"
+    a:for="{{type}}"
+    key="label-{{index}}">
+    <radio value="{{item.name}}"
+      checked="{{item.checked}}" />
     <text class="radio-text">{{item.value}}</text>
   </label>
 </radio-group>
 
 <view class="demo-title">是否有 ➕icon: </view>
-<radio-group class="radio-group" onChange="plusChange" name="plus">
-  <label class="radio" a:for="{{plus}}" key="label-{{index}}">
-    <radio value="{{item.name}}" checked="{{item.checked}}" />
+<radio-group class="radio-group"
+  onChange="plusChange"
+  name="plus">
+  <label class="radio"
+    a:for="{{plus}}"
+    key="label-{{index}}">
+    <radio value="{{item.name}}"
+      checked="{{item.checked}}" />
     <text class="radio-text">{{item.value}}</text>
   </label>
 </radio-group>
 
 <view class="demo-title">tabs选项数量: </view>
-<radio-group class="radio-group" onChange="tabsNumberChange" name="tabsNumber">
-  <label class="radio" a:for="{{tabsNumber}}" key="label-{{index}}">
-    <radio value="{{item.name}}" checked="{{item.checked}}" />
+<radio-group class="radio-group"
+  onChange="tabsNumberChange"
+  name="tabsNumber">
+  <label class="radio"
+    a:for="{{tabsNumber}}"
+    key="label-{{index}}">
+    <radio value="{{item.name}}"
+      checked="{{item.checked}}" />
     <text class="radio-text">{{item.value}}</text>
   </label>
 </radio-group>

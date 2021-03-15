@@ -1,13 +1,20 @@
 <block a:if="{{elevator}}">
-  <view id="am-tabs-elevator-pane-{{tabId}}" class="am-tabs-elevator-pane">
+  <view id="am-tabs-elevator-pane-{{tabId}}"
+    class="am-tabs-elevator-pane">
     <slot></slot>
   </view>
 </block>
 <block a:else>
-  <view a:if="{{style}}" style="{{style}}" class="am-tabs-pane-wrap am-tabs-pane-swiper-item" key="tabs-pane-{{key}}">
+  <view a:if="{{style}}"
+    style="{{style}}"
+    class="am-tabs-pane-wrap am-tabs-pane-swiper-item"
+    key="tabs-pane-{{key}}">
     <slot></slot>
   </view>
-  <view a:else style="{{tabId !== '' && activeTab !== '' ? tabId === activeTab?'':'height: 0px;' : ''}}" class="am-tabs-pane-wrap" key="tabs-pane-{{key}}">
+  <view a:else
+    style="{{tabId !== '' && activeTab !== '' ? tabId === activeTab ? '' : 'height: 0px;' : ''}}"
+    class="am-tabs-pane-wrap {{tabId === activeTab ? 'am-tabs-pane-swiper-item am-tabs-pane-swiper-item-position' : ''}}"
+    key="tabs-pane-{{key}}">
     <slot></slot>
   </view>
 </block>

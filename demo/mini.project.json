@@ -1,4 +1,5 @@
 {
   "component2": true,
-  "axmlStrictCheck": true
+  "axmlStrictCheck": true,
+  "enableAppxNg": false
 }
