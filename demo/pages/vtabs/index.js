@@ -9,6 +9,7 @@ Page({
       { title: '选项五', anchor: 'e' },
       { title: '选项六', anchor: 'f' },
     ],
+    tabItemHeight: 50,
   },
   handleChange(index) {
     this.setData({
@@ -18,6 +19,11 @@ Page({
   onChange(index) {
     this.setData({
       activeTab: index,
+    });
+  },
+  changeHeight() {
+    this.setData({
+      tabItemHeight: this.data.tabItemHeight + 5,
     });
   },
 });

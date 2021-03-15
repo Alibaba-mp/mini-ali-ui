@@ -1,16 +1,24 @@
-<vtabs
-  tabs="{{tabs}}"
+<vtabs tabs="{{tabs}}"
   onTabClick="handleChange"
   onChange="onChange"
   activeTab="{{activeTab}}"
   sameFontSize="{{false}}"
-  tabBarlineShow="{{false}}"
->
+  tabBarlineShow="{{false}}">
   <block a:for="{{tabs}}">
-    <vtab-content anchor="{{item.anchor}}">
-      <view style="height: {{item.anchor === 'b'?'50vh':'100vh'}};background-color: {{item.anchor === 'b'?'#ccc':''}};">
-        <text>content of {{item.title}}</text>
-      </view>
-    </vtab-content>
+    <block a:if="{{item.anchor === 'b'}}">
+      <vtab-content anchor="{{item.anchor}}">
+        <view onTap="changeHeight"
+          style="height: {{tabItemHeight}}vh;background-color: #ccc;">
+          <text>content of {{item.title}}</text>
+        </view>
+      </vtab-content>
+    </block>
+    <block a:else>
+      <vtab-content anchor="{{item.anchor}}">
+        <view style="height: 100vh;">
+          <text>content of {{item.title}}</text>
+        </view>
+      </vtab-content>
+    </block>
   </block>
 </vtabs>

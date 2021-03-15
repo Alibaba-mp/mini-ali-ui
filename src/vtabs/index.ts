@@ -19,8 +19,8 @@ Component({
     tabBarlineColor: '#1677FF',
     sameFontSize: true,
     tabBarlineShow: true,
-    onTabClick: () => {},
-    onScrollBar: () => {},
+    onTabClick: () => { },
+    onScrollBar: () => { },
   },
   async didMount() {
     this.isScrolling = false;
@@ -31,11 +31,12 @@ Component({
       wrapScrollTop: this.anchorMap[this.props.tabs[this.props.activeTab].anchor],
     });
   },
-  didUpdate(prevProps) {
+  async didUpdate(prevProps) {
     const { activeTab } = this.props;
     if (this.props.tabs.length !== prevProps.tabs.length || activeTab !== prevProps.activeTab) {
       this.calcHeight();
     }
+    await this.calcHeight();
   },
   didUnmount() {
     if (this.timerId) {
@@ -144,7 +145,7 @@ Component({
           }
         }
         if (scrollTop >= this.anchorMap[keys[i]] &&
-            scrollTop < this.anchorMap[keys[i + 1]]) {
+          scrollTop < this.anchorMap[keys[i + 1]]) {
           // 如果每个vtab-content高度小于scroll-view高度，到达底部后就不需要根据scrollTop再去判断左侧的选择项
           if (scrollTop + this.wrapHeight < this.scrollWrapHeight) {
             this.moveScrollBar(i);
