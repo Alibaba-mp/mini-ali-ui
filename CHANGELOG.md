@@ -1,3 +1,11 @@
+## 1.3.3
+`2021-03-16`
+* **Fixed**：
+  * search-bar 组件的 placeholder 显示异常；
+  * tabs 组件在 appx2.0 中使用 swipeable 时高度异常；
+  * vtabs 组件高度计算问题优化；
+  * guide 组件中 CSS 自定义属性权重调整；
+
 ## 1.3.2
 `2021-03-10`
 * **Fixed**：amount-input 组件中细节问题；
