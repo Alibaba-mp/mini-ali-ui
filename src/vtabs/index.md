@@ -57,20 +57,28 @@ vtabs 纵向选项卡包含了 `<vtabs>` 和 `<vtab-content>` 两部分。
 ```
 
 ```xml
-<vtabs
-  tabs="{{tabs}}"
+<vtabs tabs="{{tabs}}"
   onTabClick="handleChange"
   onChange="onChange"
   activeTab="{{activeTab}}"
   sameFontSize="{{false}}"
-  tabBarlineShow="{{false}}"
->
+  tabBarlineShow="{{false}}">
   <block a:for="{{tabs}}">
-    <vtab-content anchor="{{item.anchor}}">
-      <view style="height: {{item.anchor === 'b'?'50vh':'100vh'}};background-color: {{item.anchor === 'b'?'#ccc':''}};">
-        <text>content of {{item.title}}</text>
-      </view>
-    </vtab-content>
+    <block a:if="{{item.anchor === 'b'}}">
+      <vtab-content anchor="{{item.anchor}}">
+        <view onTap="changeHeight"
+          style="height: {{tabItemHeight}}vh;background-color: #ccc;">
+          <text>content of {{item.title}}</text>
+        </view>
+      </vtab-content>
+    </block>
+    <block a:else>
+      <vtab-content anchor="{{item.anchor}}">
+        <view style="height: 100vh;">
+          <text>content of {{item.title}}</text>
+        </view>
+      </vtab-content>
+    </block>
   </block>
 </vtabs>
 ```
@@ -87,6 +95,7 @@ Page({
       { title: '选项五', anchor: 'e' },
       { title: '选项六', anchor: 'f' },
     ],
+    tabItemHeight: 50,
   },
   handleChange(index) {
     this.setData({
@@ -96,6 +105,11 @@ Page({
   onChange(index) {
     this.setData({
       activeTab: index,
+    });
+  },
+  changeHeight() {
+    this.setData({
+      tabItemHeight: this.data.tabItemHeight + 5,
     });
   },
 });

@@ -111,27 +111,38 @@ tabs 组件内容区域高度是否能够自适应，需要注意 `swipeable` �
 ```
 
 ```xml
-<tabs
-  tabs="{{tabs2}}"
-  tabsName="activeTab2"
+<tabs tabs="{{tabs2}}"
+  tabsName="activeTab"
   onTabClick="handleTabClick"
   onChange="handleTabChange"
   onPlusClick="handlePlusClick"
-  activeTab="{{activeTab2}}"
-  showPlus="{{true}}"
-  capsule="{{false}}"
-  hasSubTitle="{{false}}"
+  activeTab="{{activeTab}}"
+  showPlus="{{hasPlus}}"
+  swipeable="{{false}}"
+  capsule="{{typeCapsule}}"
+  hasSubTitle="{{typeHasSubTitle}}"
   tabBarUnderlineWidth="20px"
-  stickyBar="{{true}}"
->
+  tabContentHeight="{{activeTab === 0 ? '130px' : activeTab === 2 ? '200px' : '50vh'}}"
+  stickyBar="{{true}}">
   <block a:for="{{tabs2}}">
-    <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:if="{{index === 0}}">
-      <view class="tab-content" style="height: 300px;">高度为 300px {{item.title}}</view>
+    <tab-content key="{{index}}"
+      tabId="{{index}}"
+      activeTab="{{activeTab}}"
+      a:if="{{index === 0}}">
+      <view class="tab-content"
+        style="height: 130px;">高度为 130px {{item.title}}</view>
     </tab-content>
-    <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:elif="{{index === 2}}">
-      <view class="tab-content" style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
+    <tab-content key="{{index}}"
+      tabId="{{index}}"
+      activeTab="{{activeTab}}"
+      a:elif="{{index === 2}}">
+      <view class="tab-content"
+        style="height: 200px;">改变 tab-content 高度为 200px {{item.title}}</view>
     </tab-content>
-    <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab2}}" a:else>
+    <tab-content key="{{index}}"
+      tabId="{{index}}"
+      activeTab="{{activeTab}}"
+      a:else>
       <view class="tab-content">content of {{item.title}}</view>
     </tab-content>
   </block>
@@ -245,6 +256,6 @@ Page({
   /* 如果 swipeable="{{true}}"，需要增加 height */
   /* height: 350px; */
   /* 为了体现 stickyBar 的作用而增加的 tab-content 的高度 */
-  height: 100vh;
+  height: 50vh;
 }
 ```
