@@ -28,15 +28,14 @@ Component({
     this.timerId = null;
     await this.calcHeight();
     this.setData({
-      wrapScrollTop: this.anchorMap[this.props.tabs[this.props.activeTab].anchor],
+      wrapScrollTop: { _v: this.anchorMap[this.props.tabs[this.props.activeTab].anchor] },
     });
   },
-  async didUpdate(prevProps) {
+  didUpdate(prevProps) {
     const { activeTab } = this.props;
     if (this.props.tabs.length !== prevProps.tabs.length || activeTab !== prevProps.activeTab) {
       this.calcHeight();
     }
-    await this.calcHeight();
   },
   didUnmount() {
     if (this.timerId) {
@@ -45,10 +44,14 @@ Component({
     }
   },
   methods: {
+    async onWrapTouch() {
+      await this.calcHeight();
+    },
     async calcHeight() {
       const { activeTab } = this.props;
       this.anchorMap = {};
       this.indexMap = {};
+      this.indexTop = {};
       this.wrapHeight = 0;
       this.scrollWrapHeight = 0;
 
@@ -82,19 +85,26 @@ Component({
         const { height } = rects[i];
         this.anchorMap[tabs[i].anchor] = prevHeight;
         this.indexMap[i] = height;
-        prevHeight += height;
+
+        if (i === 0) {
+          this.indexTop[0] = 0;
+        } else {
+          this.indexTop[i] = this.indexTop[i - 1] + Math.floor((<my.IBoundingClientRect>rects[i - 1])?.height);
+        }
+
+        prevHeight += Math.floor(height);
         this.scrollWrapHeight = prevHeight;
       }
     },
     handleTabClick(e) {
-      const { anchor, index } = e.target.dataset;
+      const { index } = e.target.dataset;
 
       if (!this.isScrolling || !this.props.swipeable || this.onlyChangeTab) {
         if (this.props.activeTab !== index) {
           this.props.onTabClick(index);
         }
         this.setData({
-          wrapScrollTop: this.anchorMap[anchor],
+          wrapScrollTop: { _v: this.indexTop[index] },
         });
         this.moveScrollBar(index);
       }
