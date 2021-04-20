@@ -37,6 +37,12 @@
   </tabs>
 </view>
 
+<filter show="{{true}}" max="{{1}}" equalRows="{{3}}" onMaskTap="closeFilter">
+  <block a:for="{{tabs}}">
+    <filter-item value="{{item.title}}" id="{{index}}" onChange="changeActiveTab" selected="{{item.selected}}" key="{{index}}" />
+  </block>
+</filter>
+
 <view class="demo-title">elevator 模式: </view>
 <navigator url="./elevator/elevator"
   open-type="redirect"

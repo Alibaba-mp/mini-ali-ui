@@ -50,7 +50,7 @@
       <view class="am-vtabs-slides am-vtabs-slides-{{$id}} {{animated ? 'animate' : ''}}"
         onTouchStart="onWrapTouch"
         onTouchEnd="onWrapTouch"
-        style="{{ transform: 'translate3d(0, ' +(-wrapScrollTop) + 'px, 0)' }}">
+        style="{{ transform: 'translate3d(0, ' +(-wrapScrollTop._v) + 'px, 0)' }}">
         <slot></slot>
       </view>
     </block>

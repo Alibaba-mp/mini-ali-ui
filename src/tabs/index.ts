@@ -73,6 +73,7 @@ Component({
     tabFontSize15: fmtUnit('15px'),
     tabFontSize13: fmtUnit('13px'),
     _showPlus: false,
+    tabsWidthArr: [],
   },
   didMount() {
     const { tabs, animation, hasSubTitle, elevator, showPlus } = this.props;
@@ -141,7 +142,7 @@ Component({
     }
   },
   didUpdate(prevProps, prevData) {
-    const { tabs, elevator, showPlus } = this.props;
+    const { tabs, elevator, showPlus, activeTab: currentActiveTab, tabsName } = this.props;
     this.setData({
       _showPlus: showPlus,
     });
@@ -177,6 +178,65 @@ Component({
           prevTabViewNum: prevData.tabViewNum,
         });
       }
+    }
+
+    if (currentActiveTab !== prevProps.activeTab) {
+      let boxWidth = 0;
+      let elWidth = 0;
+      let elLeft = 0;
+      const className = `am-tabs-bar-tab ${!this.props.hasSubTitle && this.props.capsule ? 'am-tabs-bar-tab-capsule' : ''} ${this.props.hasSubTitle ? 'am-tabs-bar-tab__hasSubTitle' : ''} ${this.props.tabBarCls}`;
+
+      my.createSelectorQuery().selectAll(`.${className}`).boundingClientRect().exec((ret) => {
+        this.setData({
+          tabsWidthArr: ret[0].map(item => item.width),
+        });
+      });
+
+
+      my.createSelectorQuery()
+        .select(`#tabs-item-${tabsName}-${currentActiveTab}`)
+        .boundingClientRect()
+        .exec((ret) => {
+          elWidth = (<my.IBoundingClientRect>ret[0]).width;
+          elLeft = (<my.IBoundingClientRect>ret[0]).left;
+          this.setData({
+            elWidth,
+            elLeft,
+          });
+        });
+
+      my.createSelectorQuery()
+        .select(`#am-tabs-bar-${tabsName}-content`)
+        .boundingClientRect()
+        .exec((ret) => {
+          boxWidth = (<my.IBoundingClientRect>ret[0]).width;
+          this.setData({
+            boxWidth,
+          });
+
+          // mock el.offsetLeft
+          const elOffeseLeft = this.data.tabsWidthArr.reduce((prev, cur, index) => {
+            if (index < this.props.activeTab) {
+              // eslint-disable-next-line no-param-reassign
+              prev += cur;
+            }
+            return prev;
+          }, 0);
+
+          if (this.data.elWidth > this.data.boxWidth / 2) {
+            setTimeout(() => {
+              this.setData({
+                viewScrollLeft: elOffeseLeft - 40,
+              });
+            }, 300);
+          } else {
+            setTimeout(() => {
+              this.setData({
+                viewScrollLeft: elOffeseLeft - Math.floor(this.data.boxWidth / 2),
+              });
+            }, 300);
+          }
+        });
     }
   },
   methods: {
@@ -228,40 +288,6 @@ Component({
     },
     handleTabClick(e) {
       const { index, tabsName, floor } = e.target.dataset;
-      let boxWidth = 0;
-      let elWidth = 0;
-
-      my.createSelectorQuery()
-        .select(`#${e.currentTarget.id}`)
-        .boundingClientRect()
-        .exec((ret) => {
-          elWidth = (<my.IBoundingClientRect>ret[0]).width;
-          this.setData({
-            elWidth,
-          });
-        });
-      my.createSelectorQuery()
-        .select(`#am-tabs-bar-${tabsName}-content`)
-        .boundingClientRect()
-        .exec((ret) => {
-          boxWidth = (<my.IBoundingClientRect>ret[0]).width;
-          this.setData({
-            boxWidth,
-          });
-          if (this.data.elWidth > this.data.boxWidth / 2) {
-            setTimeout(() => {
-              this.setData({
-                viewScrollLeft: e.currentTarget.offsetLeft - 40,
-              });
-            }, 300);
-          } else {
-            setTimeout(() => {
-              this.setData({
-                viewScrollLeft: e.currentTarget.offsetLeft - Math.floor(this.data.boxWidth / 2),
-              });
-            }, 300);
-          }
-        });
       if (this.props.onTabClick && !this.props.elevator) {
         this.props.onTabClick({ index, tabsName });
       }

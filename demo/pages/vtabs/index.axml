@@ -3,6 +3,7 @@
   onChange="onChange"
   activeTab="{{activeTab}}"
   sameFontSize="{{false}}"
+  swipeable="{{false}}"
   tabBarlineShow="{{false}}">
   <block a:for="{{tabs}}">
     <block a:if="{{item.anchor === 'b'}}">

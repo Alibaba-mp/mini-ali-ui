@@ -2,6 +2,8 @@
   "defaultTitle": "Tabs",
   "usingComponents":{
     "tabs":"../../es/tabs/index",
-    "tab-content": "../../es/tabs/tab-content/index"
+    "tab-content": "../../es/tabs/tab-content/index",
+    "filter": "../../es/filter/index",
+    "filter-item": "../../es/filter/filter-item/index"
   }
 }

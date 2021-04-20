@@ -235,6 +235,12 @@ Page({
   //     });
   //   }
   // },
+
+  changeActiveTab(e) {
+    this.setData({
+      activeTab: e[0].id,
+    });
+  },
   handleTabClick({ index, tabsName }) {
     this.setData({
       [tabsName]: index,
