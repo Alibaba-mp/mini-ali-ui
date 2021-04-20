@@ -37,16 +37,22 @@
   </tabs>
 </view>
 
-<filter show="{{true}}" max="{{1}}" equalRows="{{3}}" onMaskTap="closeFilter">
-  <block a:for="{{tabs}}">
-    <filter-item value="{{item.title}}" id="{{index}}" onChange="changeActiveTab" selected="{{item.selected}}" key="{{index}}" />
-  </block>
-</filter>
-
 <view class="demo-title">elevator 模式: </view>
 <navigator url="./elevator/elevator"
   open-type="redirect"
   style="padding: 24rpx 40rpx;">点击进入 elevator 电梯组件模式</navigator>
+
+<view class="demo-title">activeTab: {{activeTab}}</view>
+<radio-group class="radio-group"
+  onChange="activeTabChange"
+  name="type">
+  <label class="radio"
+    a:for="{{tabs}}"
+    key="label-{{index}}">
+    <radio value="{{index}}" />
+    <text class="radio-text">{{item.title}}</text>
+  </label>
+</radio-group>
 
 <view class="demo-title">tab 类型: </view>
 <radio-group class="radio-group"
