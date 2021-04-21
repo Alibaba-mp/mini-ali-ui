@@ -1,3 +1,9 @@
+## 1.3.5
+`2021-04-22`
+* **Fixed**：
+  * vtabs 组件的 swipeable 为false时，点击事件失效
+  * tabs 组件的 activeTab 值更新，组件切换异常
+
 ## 1.3.4
 `2021-03-23`
 * **Fixed**：vtabs 改变 tab 时的状态优化；
