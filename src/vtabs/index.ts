@@ -3,7 +3,7 @@ import fmtUnit from '../_util/fmtUnit';
 Component({
   data: {
     tabTop: 0,
-    wrapScrollTop: 0,
+    wrapScrollTop: { _v: 0 },
     besideRadius: fmtUnit('8px'),
   },
   props: {

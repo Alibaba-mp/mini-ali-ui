@@ -3,6 +3,7 @@
   onChange="onChange"
   activeTab="{{activeTab}}"
   sameFontSize="{{false}}"
+  swipeable="{{swipeable}}"
   tabBarlineShow="{{false}}">
   <block a:for="{{tabs}}">
     <block a:if="{{item.anchor === 'b'}}">
@@ -10,6 +11,14 @@
         <view onTap="changeHeight"
           style="height: {{tabItemHeight}}vh;background-color: #ccc;">
           <text>content of {{item.title}}</text>
+        </view>
+      </vtab-content>
+    </block>
+        <block a:if="{{item.anchor === 'a'}}">
+      <vtab-content anchor="{{item.anchor}}">
+        <view onTap="changeHeight"
+          style="height: 100vh;">
+          <button size="default" type="primary" onTap="changeSwipeable">{{swipeable? 'swipeable: true' : ' swipeable:false'}}</button>
         </view>
       </vtab-content>
     </block>

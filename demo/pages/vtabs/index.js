@@ -1,6 +1,7 @@
 Page({
   data: {
     activeTab: 2,
+    swipeable: true,
     tabs: [
       { title: '选项二', anchor: 'a', number: '6' },
       { title: '选项', anchor: 'b', number: '66' },
@@ -24,6 +25,11 @@ Page({
   changeHeight() {
     this.setData({
       tabItemHeight: this.data.tabItemHeight + 5,
+    });
+  },
+  changeSwipeable() {
+    this.setData({
+      swipeable: !this.data.swipeable,
     });
   },
 });

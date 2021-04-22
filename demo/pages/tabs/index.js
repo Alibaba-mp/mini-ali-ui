@@ -75,6 +75,7 @@ Page({
       { name: '3', value: '三条' },
       { name: '-1', value: '很多', checked: true },
     ],
+    isShowFilter: false,
   },
   tabsNumberChange(e) {
     if (e.detail.value === '1') {
@@ -235,6 +236,12 @@ Page({
   //     });
   //   }
   // },
+
+  changeActiveTab(e) {
+    this.setData({
+      activeTab: e[0].id,
+    });
+  },
   handleTabClick({ index, tabsName }) {
     this.setData({
       [tabsName]: index,
@@ -248,6 +255,11 @@ Page({
   handlePlusClick() {
     my.alert({
       content: 'plus clicked',
+    });
+  },
+  activeTabChange(e) {
+    this.setData({
+      activeTab: e.detail.value,
     });
   },
 });
