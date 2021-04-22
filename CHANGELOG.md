@@ -3,6 +3,7 @@
 * **Fixed**：
   * vtabs 组件的 swipeable 为false时，点击事件失效
   * tabs 组件的 activeTab 值更新，组件切换异常
+  * swipe-action 组件的数值检测
 
 ## 1.3.4
 `2021-03-23`
