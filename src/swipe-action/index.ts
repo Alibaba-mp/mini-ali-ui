@@ -92,6 +92,7 @@ Component({
           .select(`.am-swipe-movable-area-${this.$id}`)
           .boundingClientRect()
           .exec((ret) => {
+            if (!ret) return;
             this.setData({
               height: parseInt(ret[0].height, 0),
             });
