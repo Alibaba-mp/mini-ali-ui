@@ -23,7 +23,7 @@
         <button size="default" onTap="changeHeight" type="primary">高度增加</button>
       </tab-content>
       <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:elif="{{index >= 6}}">
-        <view class="tab-content" style="height: 300rpx;background: #feffc9;">改变 tab-content 高度为 300rpx {{item.title}}</view>
+        <view class="tab-content" style="height: 500rpx;background: #feffc9;">改变 tab-content 高度为 300rpx {{item.title}}</view>
       </tab-content>
       <tab-content elevator="{{true}}" key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" data-floornumber="{{floorNumber[index]}}" a:else>
         <view class="tab-content">content of {{item.title}}</view>

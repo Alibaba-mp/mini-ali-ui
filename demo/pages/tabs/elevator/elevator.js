@@ -32,7 +32,7 @@ Page({
         subTitle: '描述',
       },
     ],
-    activeTab: 0,
+    activeTab: 5,
     contentHeight: 200,
   },
   changeHeight() {
@@ -40,7 +40,8 @@ Page({
       contentHeight: this.data.contentHeight + 200,
     });
   },
-  onLoad() {},
+  onLoad() {
+  },
   handleTabClick({ index, tabsName }) {
     this.setData({
       [tabsName]: index,
