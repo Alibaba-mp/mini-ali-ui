@@ -75,7 +75,7 @@ Component({
     _showPlus: false,
     tabsWidthArr: [],
   },
-  didMount() {
+  async didMount() {
     const { tabs, animation, hasSubTitle, elevator, showPlus } = this.props;
     if (tabs.length !== 0 || !tabs) {
       this.setData({
@@ -107,7 +107,12 @@ Component({
             });
           });
         // 获取电梯组件每个 pane 的 top 值
-        this.getElevatorHeight(tabs);
+        const floorNumber = await this.getElevatorHeight(tabs);
+        // 滚动到指定是初始位置
+        my.pageScrollTo({
+          scrollTop: Math.ceil(floorNumber[this.props.activeTab]),
+          duration: 1,
+        });
       }
 
       // 初始状态下，如果 activeTab 数值较大，会将后面的 tab 前移
@@ -151,6 +156,7 @@ Component({
         tabWidth: tabs.length > 3 ? 0.25 : 1 / tabs.length,
       });
     }
+
     if (elevator) {
       // 当 didUpdate 时判断电梯组件总高度是否发生变化
       my.createSelectorQuery()
@@ -178,9 +184,19 @@ Component({
           prevTabViewNum: prevData.tabViewNum,
         });
       }
-    }
 
-    if (currentActiveTab !== prevProps.activeTab) {
+      if (currentActiveTab !== prevProps.activeTab) {
+        this.setData({
+          tabViewNum: currentActiveTab,
+          prevTabViewNum: prevData.tabViewNum,
+        });
+
+        my.pageScrollTo({
+          scrollTop: Math.ceil(this.data.floorNumber[currentActiveTab]),
+          duration: 1,
+        });
+      }
+    } else if (currentActiveTab !== prevProps.activeTab) {
       let boxWidth = 0;
       let elWidth = 0;
       let elLeft = 0;
@@ -250,29 +266,34 @@ Component({
       });
     },
     getElevatorHeight(tabs) {
-      for (let i = 0; i < tabs.length; i++) {
-        my.createSelectorQuery()
-          .select(`#am-tabs-elevator-pane-${i}`)
-          .boundingClientRect()
-          .select('.am-tabs-bar-sticky')
-          .boundingClientRect()
-          .exec((ret) => {
-            const { elevatorTop, elevatorContentTop } = this.props;
-            let tabContentDistance = 0;
-            if (elevatorTop.match(/\d+px/)) {
-              tabContentDistance = parseInt(elevatorTop, 10);
-            } else {
-              tabContentDistance = parseInt(elevatorContentTop, 10);
-            }
-            this.props.floorNumber[i] = (<my.IBoundingClientRect>ret[0]).top - ret[1].height - tabContentDistance;
-            this.setData({
-              floorNumber: this.props.floorNumber,
+      return new Promise((resolve) => {
+        for (let i = 0; i < tabs.length; i++) {
+          my.createSelectorQuery()
+            .select(`#am-tabs-elevator-pane-${i}`)
+            .boundingClientRect()
+            .select('.am-tabs-bar-sticky')
+            .boundingClientRect()
+            .exec((ret) => {
+              const { elevatorTop, elevatorContentTop } = this.props;
+              let tabContentDistance = 0;
+              if (elevatorTop.match(/\d+px/)) {
+                tabContentDistance = parseInt(elevatorTop, 10);
+              } else {
+                tabContentDistance = parseInt(elevatorContentTop, 10);
+              }
+              this.props.floorNumber[i] = (<my.IBoundingClientRect>ret[0]).top - ret[1].height - tabContentDistance;
+              this.setData({
+                floorNumber: this.props.floorNumber,
+              });
+              if (i === tabs.length - 1) {
+                resolve(this.props.floorNumber);
+              }
             });
-          });
-      }
-      setTimeout(() => {
-        this.$page.data.floorNumber = this.data.floorNumber;
-      }, 100);
+        }
+        setTimeout(() => {
+          this.$page.data.floorNumber = this.data.floorNumber;
+        }, 100);
+      });
     },
     handleSwiperChange(e) {
       const { current } = e.detail;
