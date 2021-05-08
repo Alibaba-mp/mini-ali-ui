@@ -49,9 +49,9 @@ Page({
       },
       { title: '15 Tab',
         subTitle: '描述',
-      },
-    ],
+      }],
     activeTab: 0,
+    isSwipeable: false,
     type: [
       { name: 'normal', value: '普通', checked: true },
       { name: 'capsule', value: '胶囊' },
@@ -62,6 +62,10 @@ Page({
     plus: [
       { name: 'has', value: '是', checked: true },
       { name: 'hasnt', value: '否' },
+    ],
+    swipeable: [
+      { name: '是', value: '是' },
+      { name: '否', value: '否', checked: true },
     ],
     hasPlus: true,
     contentHeight: [
@@ -222,6 +226,17 @@ Page({
     } else {
       this.setData({
         hasPlus: true,
+      });
+    }
+  },
+  swipeableChange(e) {
+    if (e.detail.value === '是') {
+      this.setData({
+        isSwipeable: true,
+      });
+    } else {
+      this.setData({
+        isSwipeable: false,
       });
     }
   },

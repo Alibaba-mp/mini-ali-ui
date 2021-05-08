@@ -38,7 +38,9 @@ Component({
         .select(`#${pagerName}`)
         .boundingClientRect()
         .exec((ret) => {
-          this.wrapWidth = (<my.IBoundingClientRect>ret[0]).width;
+          if (ret && ret[0]) {
+            this.wrapWidth = (<my.IBoundingClientRect>ret[0]).width;
+          }
         });
       return this.wrapWidth;
     },

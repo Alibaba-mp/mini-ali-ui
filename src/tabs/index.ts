@@ -102,9 +102,11 @@ Component({
           .select('#am-tabs-elevator-content')
           .boundingClientRect()
           .exec((ret) => {
-            this.setData({
-              elevatorHeight: ret[0].height,
-            });
+            if (ret && ret[0]) {
+              this.setData({
+                elevatorHeight: ret[0].height,
+              });
+            }
           });
         // 获取电梯组件每个 pane 的 top 值
         const floorNumber = await this.getElevatorHeight(tabs);
@@ -123,31 +125,35 @@ Component({
         .select(`#tabs-item-${this.props.tabsName}-${this.props.activeTab}`)
         .boundingClientRect()
         .exec((ret) => {
-          elWidth = (<my.IBoundingClientRect>ret[0]).width;
-          elLeft = (<my.IBoundingClientRect>ret[0]).left;
-          this.setData({
-            elWidth,
-            elLeft,
-          });
+          if (ret && ret[0]) {
+            elWidth = (<my.IBoundingClientRect>ret[0]).width;
+            elLeft = (<my.IBoundingClientRect>ret[0]).left;
+            this.setData({
+              elWidth,
+              elLeft,
+            });
+          }
         });
       my.createSelectorQuery()
         .select(`#am-tabs-bar-${this.props.tabsName}-content`)
         .boundingClientRect()
         .exec((ret) => {
-          boxWidth = (<my.IBoundingClientRect>ret[0]).width;
-          this.setData({
-            boxWidth,
-          });
-          setTimeout(() => {
+          if (ret && ret[0]) {
+            boxWidth = (<my.IBoundingClientRect>ret[0]).width;
             this.setData({
-              viewScrollLeft: Math.floor(this.data.elWidth + this.data.elLeft - this.data.boxWidth),
+              boxWidth,
             });
-          }, 300);
+            setTimeout(() => {
+              this.setData({
+                viewScrollLeft: Math.floor(this.data.elWidth + this.data.elLeft - this.data.boxWidth),
+              });
+            }, 300);
+          }
         });
     }
   },
   didUpdate(prevProps, prevData) {
-    const { tabs, elevator, showPlus, activeTab: currentActiveTab, tabsName } = this.props;
+    const { tabs, elevator, showPlus, activeTab: currentActiveTab, tabsName, swipeable } = this.props;
     this.setData({
       _showPlus: showPlus,
     });
@@ -163,7 +169,7 @@ Component({
         .select('#am-tabs-elevator-content')
         .boundingClientRect()
         .exec((ret) => {
-          if (ret[0].height !== this.data.elevatorHeight) {
+          if (ret && ret[0].height !== this.data.elevatorHeight) {
             // 如高度变化将页面滚动至顶部，重新设置电梯总高度
             my.pageScrollTo({
               scrollTop: 0,
@@ -203,9 +209,11 @@ Component({
       const className = `am-tabs-bar-tab ${!this.props.hasSubTitle && this.props.capsule ? 'am-tabs-bar-tab-capsule' : ''} ${this.props.hasSubTitle ? 'am-tabs-bar-tab__hasSubTitle' : ''} ${this.props.tabBarCls}`;
 
       my.createSelectorQuery().selectAll(`.${className}`).boundingClientRect().exec((ret) => {
-        this.setData({
-          tabsWidthArr: ret[0].map(item => item.width),
-        });
+        if (ret && ret[0]) {
+          this.setData({
+            tabsWidthArr: ret[0].map(item => item.width),
+          });
+        }
       });
 
 
@@ -213,44 +221,48 @@ Component({
         .select(`#tabs-item-${tabsName}-${currentActiveTab}`)
         .boundingClientRect()
         .exec((ret) => {
-          elWidth = (<my.IBoundingClientRect>ret[0]).width;
-          elLeft = (<my.IBoundingClientRect>ret[0]).left;
-          this.setData({
-            elWidth,
-            elLeft,
-          });
+          if (ret && ret[0]) {
+            elWidth = (<my.IBoundingClientRect>ret[0]).width;
+            elLeft = (<my.IBoundingClientRect>ret[0]).left;
+            this.setData({
+              elWidth,
+              elLeft,
+            });
+          }
         });
 
       my.createSelectorQuery()
         .select(`#am-tabs-bar-${tabsName}-content`)
         .boundingClientRect()
         .exec((ret) => {
-          boxWidth = (<my.IBoundingClientRect>ret[0]).width;
-          this.setData({
-            boxWidth,
-          });
+          if (ret && ret[0]) {
+            boxWidth = (<my.IBoundingClientRect>ret[0]).width;
+            this.setData({
+              boxWidth,
+            });
 
-          // mock el.offsetLeft
-          const elOffeseLeft = this.data.tabsWidthArr.reduce((prev, cur, index) => {
-            if (index < this.props.activeTab) {
+            // mock el.offsetLeft
+            const elOffeseLeft = this.data.tabsWidthArr.reduce((prev, cur, index) => {
+              if (index < this.props.activeTab) {
               // eslint-disable-next-line no-param-reassign
-              prev += cur;
-            }
-            return prev;
-          }, 0);
+                prev += cur;
+              }
+              return prev;
+            }, 0);
 
-          if (this.data.elWidth > this.data.boxWidth / 2) {
-            setTimeout(() => {
-              this.setData({
-                viewScrollLeft: elOffeseLeft - 40,
-              });
-            }, 300);
-          } else {
-            setTimeout(() => {
-              this.setData({
-                viewScrollLeft: elOffeseLeft - Math.floor(this.data.boxWidth / 2),
-              });
-            }, 300);
+            if (this.data.elWidth > this.data.boxWidth / 2) {
+              setTimeout(() => {
+                this.setData({
+                  viewScrollLeft: elOffeseLeft - 40,
+                });
+              }, 300);
+            } else {
+              setTimeout(() => {
+                this.setData({
+                  viewScrollLeft: swipeable ? elOffeseLeft : elOffeseLeft - Math.floor(this.data.boxWidth / 2),
+                });
+              }, 300);
+            }
           }
         });
     }
@@ -274,19 +286,21 @@ Component({
             .select('.am-tabs-bar-sticky')
             .boundingClientRect()
             .exec((ret) => {
-              const { elevatorTop, elevatorContentTop } = this.props;
-              let tabContentDistance = 0;
-              if (elevatorTop.match(/\d+px/)) {
-                tabContentDistance = parseInt(elevatorTop, 10);
-              } else {
-                tabContentDistance = parseInt(elevatorContentTop, 10);
-              }
-              this.props.floorNumber[i] = (<my.IBoundingClientRect>ret[0]).top - ret[1].height - tabContentDistance;
-              this.setData({
-                floorNumber: this.props.floorNumber,
-              });
-              if (i === tabs.length - 1) {
-                resolve(this.props.floorNumber);
+              if (ret && ret[0]) {
+                const { elevatorTop, elevatorContentTop } = this.props;
+                let tabContentDistance = 0;
+                if (elevatorTop.match(/\d+px/)) {
+                  tabContentDistance = parseInt(elevatorTop, 10);
+                } else {
+                  tabContentDistance = parseInt(elevatorContentTop, 10);
+                }
+                this.props.floorNumber[i] = (<my.IBoundingClientRect>ret[0]).top - ret[1].height - tabContentDistance;
+                this.setData({
+                  floorNumber: this.props.floorNumber,
+                });
+                if (i === tabs.length - 1) {
+                  resolve(this.props.floorNumber);
+                }
               }
             });
         }
