@@ -65,8 +65,10 @@ Component({
           .select(`.am-vtabs-slides-${this.$id}`)
           .boundingClientRect()
           .exec((ret) => {
-            this.wrapHeight = (<my.IBoundingClientRect>ret[0]).height;
-            resolve();
+            if (ret && ret[0]) {
+              this.wrapHeight = (<my.IBoundingClientRect>ret[0]).height;
+              resolve();
+            }
           });
       });
 
@@ -77,7 +79,12 @@ Component({
             tabs.map(tab => `#am-vtab-slide-${tab.anchor}`).join(',')
           )
           .boundingClientRect()
-          .exec(res => resolve((res[0] as any).sort((a, b) => a.top - b.top)));
+          .exec((res) => {
+            if (res && res[0]) {
+              resolve((res[0] as any).sort((a, b) => a.top - b.top));
+            }
+          }
+          );
       });
 
       let prevHeight = 0;
