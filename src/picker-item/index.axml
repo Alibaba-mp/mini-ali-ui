@@ -11,11 +11,11 @@
         </text>
       </view>
     </view>
+    <slot name="extra" />
     <am-icon class="am-picker-arrow" 
       type="{{iconType}}"
       size="{{iconSize}}" 
       color="#ccc" />
-    <slot name="extra" />
     <view class="am-picker-line-bottom" />
   </view>
 </view>

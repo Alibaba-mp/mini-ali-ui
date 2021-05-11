@@ -90,6 +90,14 @@ Component({
       const event = fmtEvent(this.props, e);
       this.props.onTap(event);
     },
+    onGetAuthorize(e) {
+      const event = fmtEvent(this.props, e);
+      this.props.onGetAuthorize(event);
+    },
+    onError(e) {
+      const event = fmtEvent(this.props, e);
+      this.props.onError(event);
+    },
     propsChange(prevProps, nextProps) {
       const pProps = Object.getOwnPropertyNames(prevProps);
       const nProps = Object.getOwnPropertyNames(nextProps);
