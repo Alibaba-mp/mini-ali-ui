@@ -1,8 +1,8 @@
-import fmtClass from '../_util/fmtClass';
-import fmtEvent from '../_util/fmtEvent';
+import fmtClass from "../_util/fmtClass";
+import fmtEvent from "../_util/fmtEvent";
 
-const SUPPORT_COMPONENT2 = my.canIUse('component2');
-const prefixCls = 'am-button';
+const SUPPORT_COMPONENT2 = my.canIUse("component2");
+const prefixCls = "am-button";
 const noop = () => {};
 Component({
   mixins: [],
@@ -10,20 +10,20 @@ Component({
     baseClass: prefixCls,
   },
   props: {
-    className: '',
-    type: '',
-    dataName: '',
+    className: "",
+    type: "",
+    dataName: "",
     disabled: false,
-    subtitle: '',
+    subtitle: "",
     onTap: noop,
     capsuleMinWidth: false,
     showLoading: false,
   },
   onInit() {
     if (!this.props.hoverClass) {
-      this.props.hoverClass = 'am-button-active';
-      if (this.props.type === 'text') {
-        this.props.hoverClass = 'am-button-active-text';
+      this.props.hoverClass = "am-button-active";
+      if (this.props.type === "text") {
+        this.props.hoverClass = "am-button-active-text";
       }
     }
     this.setData({
@@ -39,9 +39,9 @@ Component({
   didMount() {
     if (!SUPPORT_COMPONENT2) {
       if (!this.props.hoverClass) {
-        this.props.hoverClass = 'am-button-active';
-        if (this.props.type === 'text') {
-          this.props.hoverClass = 'am-button-active-text';
+        this.props.hoverClass = "am-button-active";
+        if (this.props.type === "text") {
+          this.props.hoverClass = "am-button-active-text";
         }
       }
       this.setData({
@@ -63,24 +63,24 @@ Component({
         disabled,
         subtitle,
         shape,
-        capsuleSize = 'medium',
+        capsuleSize = "medium",
         capsuleMinWidth,
       } = props;
-      let capsuleMinWidthCls = '';
+      let capsuleMinWidthCls = "";
       if (capsuleMinWidth) {
         capsuleMinWidthCls = `${prefixCls}-capsule-${capsuleSize}-minwidth`;
       }
 
       const ret = fmtClass({
         [`${prefixCls}`]: true,
-        [`${prefixCls}-primary`]: type === 'primary',
-        [`${prefixCls}-ghost`]: type === 'ghost',
-        [`${prefixCls}-warn`]: type === 'warn',
-        [`${prefixCls}-warn-ghost`]: type === 'warn-ghost',
-        [`${prefixCls}-text`]: type === 'text',
-        [`${prefixCls}-light`]: type === 'light',
+        [`${prefixCls}-primary`]: type === "primary",
+        [`${prefixCls}-ghost`]: type === "ghost",
+        [`${prefixCls}-warn`]: type === "warn",
+        [`${prefixCls}-warn-ghost`]: type === "warn-ghost",
+        [`${prefixCls}-text`]: type === "text",
+        [`${prefixCls}-light`]: type === "light",
         [`${prefixCls}-capsule ${prefixCls}-capsule-${capsuleSize} ${capsuleMinWidthCls}`]:
-          shape === 'capsule',
+          shape === "capsule",
         [`${prefixCls}-disabled`]: disabled,
         [`${prefixCls}-subtitle`]: subtitle,
       });
@@ -89,6 +89,14 @@ Component({
     onButtonTap(e) {
       const event = fmtEvent(this.props, e);
       this.props.onTap(event);
+    },
+    onGetAuthorize(e) {
+      const event = fmtEvent(this.props, e);
+      this.props.onGetAuthorize(event);
+    },
+    onError(e) {
+      const event = fmtEvent(this.props, e);
+      this.props.onError(event);
     },
     propsChange(prevProps, nextProps) {
       const pProps = Object.getOwnPropertyNames(prevProps);
