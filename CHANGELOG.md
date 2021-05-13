@@ -1,3 +1,13 @@
+## 1.3.7
+* **Fixed**：
+  * button 组件的 onGetAuthorize 与 onError方法添加
+  * picker-item 组件的 extra 位置修复
+
+## 1.3.6
+* **Fixed**：
+  * tabs 组件的 swipeable 为 ture 时滚动bug修复
+  * 组件库中变量空值判定添加
+
 ## 1.3.5
 `2021-04-22`
 * **Fixed**：
