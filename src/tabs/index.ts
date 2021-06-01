@@ -196,11 +196,6 @@ Component({
           tabViewNum: currentActiveTab,
           prevTabViewNum: prevData.tabViewNum,
         });
-
-        my.pageScrollTo({
-          scrollTop: Math.ceil(this.data.floorNumber[currentActiveTab]),
-          duration: 1,
-        });
       }
     } else if (currentActiveTab !== prevProps.activeTab) {
       let boxWidth = 0;
@@ -268,6 +263,13 @@ Component({
     }
   },
   methods: {
+    // 此方法供用户以ref方式调用
+    scrollTo(activeTab: number) {
+      my.pageScrollTo({
+        scrollTop: Math.ceil(this.data.floorNumber[activeTab]),
+        duration: 1,
+      });
+    },
     setWindowWidth() {
       my.getSystemInfo({
         success: (res) => {
