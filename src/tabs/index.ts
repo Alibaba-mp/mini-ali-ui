@@ -206,7 +206,7 @@ Component({
       let boxWidth = 0;
       let elWidth = 0;
       let elLeft = 0;
-      const className = `am-tabs-bar-tab ${!this.props.hasSubTitle && this.props.capsule ? 'am-tabs-bar-tab-capsule' : ''} ${this.props.hasSubTitle ? 'am-tabs-bar-tab__hasSubTitle' : ''} ${this.props.tabBarCls}`;
+      const className = `am-tabs-bar-tab${!this.props.hasSubTitle && this.props.capsule ? '.am-tabs-bar-tab-capsule' : ''}${this.props.hasSubTitle ? '.am-tabs-bar-tab__hasSubTitle' : ''}${this.props.tabBarCls ? ('.' + this.props.tabBarCls) : ''}`;
 
       my.createSelectorQuery().selectAll(`.${className}`).boundingClientRect().exec((ret) => {
         if (ret && ret[0]) {
