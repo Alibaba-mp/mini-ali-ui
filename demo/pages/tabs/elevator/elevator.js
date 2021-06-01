@@ -32,7 +32,7 @@ Page({
         subTitle: '描述',
       },
     ],
-    activeTab: 5,
+    activeTab: 0,
     contentHeight: 200,
   },
   changeHeight() {
@@ -40,7 +40,17 @@ Page({
       contentHeight: this.data.contentHeight + 200,
     });
   },
+  saveRef(ref) {
+    this.ref = ref;
+  },
   onLoad() {
+    setTimeout(() => {
+      this.setData({
+        activeTab: 5,
+      });
+      // 需要手动调用scrollTo方法使tab和相应页面保持一致
+      this.ref.scrollTo(5);
+    }, 1000);
   },
   handleTabClick({ index, tabsName }) {
     this.setData({

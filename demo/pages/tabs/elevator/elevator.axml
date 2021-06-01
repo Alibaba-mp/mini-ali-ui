@@ -4,6 +4,7 @@
 </view>
 <view style="padding: 12px;">
   <tabs
+    ref="saveRef"
     tabs="{{tabs}}"
     tabsName="activeTab"
     onTabClick="handleTabClick"
