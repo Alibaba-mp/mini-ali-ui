@@ -1,5 +1,5 @@
 function store() {
-  let _windowWidth;
+  let _windowWidth: number;
   return {
     getWindowWidth(): number {
       return _windowWidth;
