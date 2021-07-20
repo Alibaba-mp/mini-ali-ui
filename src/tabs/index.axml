@@ -1,0 +1,97 @@
+<import-sjs name="util" from="./util.sjs" />
+
+<view class="am-tabs {{className}}">
+  <view class="am-tabs-tab-bar-wrap">
+    <view class="am-tabs-bar {{capsule?'am-tabs-bar-capsule':''}} {{(elevator || stickyBar)?'am-tabs-bar-sticky':''}}"
+      style="background-color: {{tabBarBackgroundColor}};{{(elevator || stickyBar) && elevatorTop ? `top: ${elevatorTop};` : ''}}">
+      <view class="am-tabs-bar-content-wrap">
+        <view a:if="{{showLeftShadow}}" class="am-tabs-scroll-left"
+          style="background-color: {{tabBarBackgroundColor}};"></view>
+        <view a:if="{{showRightShadow}}" class="am-tabs-scroll-right"
+          style="background-color: {{tabBarBackgroundColor}};"></view>
+        <scroll-view scroll-left="{{viewScrollLeft}}"
+          scroll-into-view="tabs-item-{{tabsName?tabsName+'-':''}}{{tabViewNum}}" scroll-x="{{true}}"
+          scroll-with-animation="{{animation}}" onScroll="showLeftShadow" class="am-tabs-bar-content"
+          id="am-tabs-bar-{{tabsName?tabsName+'-':''}}content">
+          <block a:for="{{tabs}}">
+            <view id="tabs-item-{{tabsName?tabsName+'-':''}}{{index}}" data-index="{{index}}"
+              data-tabsName="{{tabsName}}" data-floor="{{floorNumber[index]}}" key="tabs-item-{{index}}"
+              onTap="handleTabClick" onFirstAppear="onTabFirstShow" style="color: {{ !hasSubTitle && capsule?
+                (index === activeTab ? capsuleTabBarActiveTextColor: tabBarInactiveTextColor)
+                :
+                (index === activeTab ? tabBarActiveTextColor: tabBarInactiveTextColor) }}"
+              class="am-tabs-bar-tab {{ !hasSubTitle && capsule?'am-tabs-bar-tab-capsule':''}} {{ hasSubTitle?'am-tabs-bar-tab__hasSubTitle':''}} {{tabBarCls}}"
+              hover-class="{{index === activeTab?'':!hasSubTitle && capsule?'am-tabs-bar-tab-capsule__hover':'am-tabs-bar-tab__hover'}}"
+              hover-start-time="0" hover-stay-time="0">
+              <view class="
+                am-tabs-bar-title
+                {{ hasSubTitle ? 'am-tabs-bar-title__hasSubTitle' : ''}}
+                {{ index === activeTab ? activeCls : '' }}
+                {{ !hasSubTitle && capsule?'am-tabs-bar-capsule-title':''}}
+                {{tabs.length - 1 === index?'am-tabs-bar-title__noMargin':''}}
+                " style="{{!hasSubTitle && capsule? (tabs.length <= 3?'font-size: ' + tabFontSize15 + ';':'font-size: ' + tabFontSize13 + ';'):''}}
+                  {{hasSubTitle?
+                    '':
+                  (!hasSubTitle && capsule?
+                  (index === activeTab ? 'background-color:' + tabBarUnderlineColor + ';' : 'background-color: ' + capsuleTabBarBackgroundColor + ';')
+                  :'') }}">
+                <view a:if="{{ !hasSubTitle && !capsule && index === activeTab}}" class="am-tabs-bar-title-underline"
+                  style="background-color: {{tabBarUnderlineColor}};
+                    {{tabBarUnderlineWidth?`width: ${tabBarUnderlineWidth};`:''}}
+                    {{tabBarUnderlineHeight?`height: ${tabBarUnderlineHeight};`:''}}"></view>
+                <view class="am-tabs-bar-tab-mainTitle" style="{{index === activeTab?'font-weight: bold;':''}}">
+                  {{item.title}}
+                  <badge className="am-tabs-bar-tab-badge" a:if="{{item.showBadge}}"
+                    dot="{{item.number ? false : true}}" text="{{item.number}}"
+                    withArrow="{{item.badge.arrow ? item.badge.arrow : false}}"
+                    direction="{{item.badge.arrow ? 'left' : ''}}"
+                    stroke="{{item.badge.stroke ? item.badge.stroke : false}}"></badge>
+                </view>
+                <text a:if="{{!hasSubTitle && capsule && item.number && !item.showBadge}}"
+                  class="am-tabs-bar-tab-number {{ index === activeTab ?'am-tabs-bar-tab-number_active':''}}">({{item.number}})</text>
+                <text class="am-tabs-bar-tab-subTitle" a:if="{{hasSubTitle && item.subTitle}}" style="
+                  {{index === activeTab ? 'background-color:' + tabBarUnderlineColor + '; color: ' + tabBarActiveSubTextColor + ';' : 'color: ' + tabBarSubTextColor + ';'}}
+                ">{{item.subTitle}}</text>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class="am-tabs-plus {{showPlus && _showPlus ? 'show' : ''}}" onTap="handlePlusClick"
+        hover-class="am-tabs-bar-tab__hover" hover-start-time="0" hover-stay-time="0">
+        <!-- 如果没有图片 url，将采用 icon 来展示 -->
+        <am-icon type="{{plusIcon}}" size="{{plusIconSize}}" color="{{plusIconColor}}" a:if="{{plusImg === ''}}">
+        </am-icon>
+        <image src="{{plusImg}}" style="width: {{plusImgWidth}}; height: {{plusImgHeight}};" mode="scaleToFill"
+          a:else />
+      </view>
+    </view>
+    <block a:if="{{elevator}}">
+      <view class="am-tabs-elevator-content" id="am-tabs-elevator-content">
+        <slot></slot>
+      </view>
+    </block>
+    <block a:else>
+      <block a:if="{{swipeable}}">
+        <view style="{{tabContentHeight ? `height: ${tabContentHeight};`: ''}}">
+          <swiper circular="{{false}}" current="{{activeTab}}" data-tabsName="{{tabsName}}" interval="99999999"
+            autoplay="{{autoplay}}" duration="{{duration}}" onChange="handleSwiperChange"
+            disable-update-direction="{{true}}"
+            class="am-tabs-content-wrap {{tabContentHeight ? 'am-tabs-content-wrap_H100': ''}} {{util.compareVersion(version) < 0 ? 'fix' : ''}}">
+            <slot></slot>
+          </swiper>
+        </view>
+      </block>
+      <block a:else>
+        <view class="am-tabs-content-wrap {{util.compareVersion(version) >= 0 ? 'fix' : ''}}">
+          <view class="am-tabs-slides" style="
+            transform: translate3d({{-activeTab * 100}}%, 0, 0);
+            transition-duration: {{duration}}ms;
+          ">
+            <slot></slot>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>
