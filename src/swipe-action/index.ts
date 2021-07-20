@@ -1,8 +1,7 @@
 import fmtUnit from '../_util/fmtUnit';
-import store from './store';
 
 const isV2 = my.canIUse('movable-view.onTouchStart');
-
+let _windowWidth: number;
 Component({
   data: {
     leftPos: 0,
@@ -61,14 +60,14 @@ Component({
   },
   methods: {
     setWindowWidth() {
-      if (!store.getWindowWidth()) {
+      if (!_windowWidth) {
         const sysInfo = my.getSystemInfoSync();
         if (sysInfo) {
+          _windowWidth = sysInfo.windowWidth;
           this.realSetWindowWidth(sysInfo.windowWidth);
-          store.setWindowWidth(sysInfo.windowWidth);
         }
       } else {
-        this.realSetWindowWidth(store.getWindowWidth());
+        this.realSetWindowWidth(_windowWidth);
       }
     },
     realSetWindowWidth(windowWidth: number): void {
