@@ -1,3 +1,7 @@
+## 1.3.8
+* **Fixed**：
+  * swipe-action 组件 JSAPI 查询次数降低
+
 ## 1.3.7
 * **Fixed**：
   * button 组件的 onGetAuthorize 与 onError方法添加
