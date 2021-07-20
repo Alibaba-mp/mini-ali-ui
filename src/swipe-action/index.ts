@@ -41,8 +41,10 @@ Component({
   didUpdate(_prevProps, prevData) {
     const { restore } = this.props;
     const { holdSwipe, useV2 } = this.data;
-    if ((restore === true && _prevProps.restore !== restore) ||
-      (prevData.holdSwipe === true && holdSwipe === false)) {
+    if (
+      (restore === true && _prevProps.restore !== restore) ||
+      (prevData.holdSwipe === true && holdSwipe === false)
+    ) {
       this.setData({
         leftPos: 0,
         swiping: false,
@@ -59,13 +61,12 @@ Component({
   },
   methods: {
     setWindowWidth() {
-      if (store.getWindowWidth() === 0) {
-        my.getSystemInfo({
-          success: (res) => {
-            this.realSetWindowWidth(res.windowWidth);
-            store.setWindowWidth(res.windowWidth);
-          },
-        });
+      if (!store.getWindowWidth()) {
+        const sysInfo = my.getSystemInfoSync();
+        if (sysInfo) {
+          this.realSetWindowWidth(sysInfo.windowWidth);
+          store.setWindowWidth(sysInfo.windowWidth);
+        }
       } else {
         this.realSetWindowWidth(store.getWindowWidth());
       }
@@ -171,7 +172,7 @@ Component({
         // 左划
         if (distance < 0) {
           newLeftPos = Math.max(distance, -this.btnWidth);
-        // 右划
+          // 右划
         } else {
           newLeftPos = 0;
         }
@@ -195,7 +196,7 @@ Component({
         let newLeftPos = leftPos;
         if (distance < 0) {
           if (Math.abs(distance + leftPos) > this.btnWidth * 0.7) {
-            newLeftPos = (-this.btnWidth);
+            newLeftPos = -this.btnWidth;
           } else {
             newLeftPos = 0;
           }
@@ -217,23 +218,29 @@ Component({
     onChangeEnd(e) {
       const { actionWidth } = this.data;
       const { x } = e.detail;
-      this.setData({
-        x: x < actionWidth / 2 ? -1 : actionWidth - 1,
-        swiping: false,
-      }, () => {
-        this.setData({
-          x: this.data.x === -1 ? 0 : actionWidth,
-        });
-      });
+      this.setData(
+        {
+          x: x < actionWidth / 2 ? -1 : actionWidth - 1,
+          swiping: false,
+        },
+        () => {
+          this.setData({
+            x: this.data.x === -1 ? 0 : actionWidth,
+          });
+        }
+      );
     },
     done() {
-      this.setData({
-        holdSwipe: true,
-      }, () => {
-        this.setData({
-          holdSwipe: false,
-        });
-      });
+      this.setData(
+        {
+          holdSwipe: true,
+        },
+        () => {
+          this.setData({
+            holdSwipe: false,
+          });
+        }
+      );
     },
     onItemClick(e) {
       const { onRightItemClick } = this.props;

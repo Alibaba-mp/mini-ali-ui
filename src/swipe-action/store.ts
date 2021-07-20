@@ -1,17 +1,13 @@
-class Store {
-    private windowWidth: number
-
-    constructor() {
-      this.windowWidth = 0;
-    }
-
+function store() {
+  let _windowWidth;
+  return {
     getWindowWidth(): number {
-      return this.windowWidth;
-    }
-
-    setWindowWidth(windowWidth: number): void{
-      this.windowWidth = windowWidth;
-    }
+      return _windowWidth;
+    },
+    setWindowWidth(windowWidth: number): void {
+      _windowWidth = windowWidth;
+    },
+  };
 }
 
-export default new Store();
+export default store();
