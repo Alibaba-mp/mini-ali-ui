@@ -1,3 +1,6 @@
+## 1.4.0
+* **Fixed**：
+  * Tab 组件 swiper-item 问题修复
 ## 1.3.8
 * **Fixed**：
   * swipe-action 组件 JSAPI 查询次数降低
