@@ -13,7 +13,7 @@
   </view>
   <view a:else
     style="{{tabId !== '' && activeTab !== '' ? tabId === activeTab ? '' : 'height: 0px;' : ''}}"
-    class="am-tabs-pane-wrap am-tabs-pane-wrap-swiper-item {{tabId === activeTab ? 'am-tabs-pane-swiper-item am-tabs-pane-swiper-item-position' : ''}}"
+    class="am-tabs-pane-wrap {{tabId === activeTab ? 'am-tabs-pane-swiper-item am-tabs-pane-swiper-item-position' : ''}}"
     key="tabs-pane-{{key}}">
     <slot></slot>
   </view>

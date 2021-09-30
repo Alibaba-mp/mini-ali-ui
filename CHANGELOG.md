@@ -1,3 +1,6 @@
+## 1.4.1
+* **Fixed**：
+  * tabs 组件 修复滑动 bug
 ## 1.4.0
 * **Fixed**：
   * Tab 组件 swiper-item 问题修复
