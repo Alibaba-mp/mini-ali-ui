@@ -1,3 +1,6 @@
+## 1.4.1
+* **Fixed**：
+  * tabs 组件 修复滑动 bug
 ## 1.3.8
 * **Fixed**：
   * swipe-action 组件 JSAPI 查询次数降低
