@@ -2,6 +2,10 @@
   <img src="https://gw.alipayobjects.com/mdn/rms_ce4c6f/afts/img/A*gWo-TLFGp38AAAAAAAAAAABkARQnAQ" style="zoom: 0.5;">
 </p>
 
+```
+🔥 mini-ali-ui 已停止维护更新，品牌升级为 [Ant Design Mini](https://github.com/ant-design/ant-design-mini)，小程序组件库正式加入 Ant Design 大家庭。
+```
+
 
 # Mini Ali UI
 
