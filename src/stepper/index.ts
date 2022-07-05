@@ -60,7 +60,7 @@ Component({
           opaAdd,
           opaReduce,
         });
-        onChange(value, 'click');
+        onChange(value, 'click', this.props);
       }
     },
     onInput(e) {
@@ -102,7 +102,7 @@ Component({
         opaAdd,
         opaReduce,
       });
-      onChange(calculatedVal, mode);
+      onChange(calculatedVal, mode, this.props);
     },
     getCalculateValue(type, arg1, arg2) {
       const numFloat = arg1.toString().split('.')[1] || '';
